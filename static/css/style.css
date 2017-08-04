@@ -51,7 +51,7 @@ html {
 	margin-top: 3em;
 }
 
-.footnote > a {
+.footnote > p > a {
 	color: #999;
 }
 
