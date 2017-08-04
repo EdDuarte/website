@@ -131,14 +131,15 @@ of cores available in the machine where Vokter was deployed to.
 # Caveats / Future Work
 
 Despite every part of its architecture having been optimized to accommodate to
-a massive amount of parallel tasks, Vokter has only been used in a production
-environment for academic projects and has yet to be battle-tested in high-usage
-consumer software. If you're using Vokter in your projects, let me know :)
+a massive amount of parallel tasks, Vokter has only been used in a academic
+environment and has yet to be battle-tested in high-usage consumer software. If
+you're using Vokter in your projects, let me know :D
 
-There is however some room for improvement, particularly with two main issues:
-web crawling functionality and timeout of matching jobs.
+Regardless, there is always room for improvement, and I feel that there are
+currently two main issues that should be addressed with higher priority: i) web
+crawling functionality and ii) timeout of jobs when clients are missing.
 
-## 1) Web crawling
+## i) Web crawling
 
 One way to improve user experience is by integrating web crawling in Reader
 modules, allowing users to set their visit policy (e.g. number of nested
@@ -156,7 +157,7 @@ detected in B, both clients of A & B are notified. This implies a more
 optimized architecture that has the potential of significantly reducing the
 total number of simultaneous jobs.
 
-## 2) Fault-tolerance and timeout of matching jobs
+## ii) Fault-tolerance and timeout of matching jobs
 
 Only detection jobs can be timed-out after failing too many times to load a new
 snapshot of the document. However, sending a response to the client can fail
