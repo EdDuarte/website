@@ -17,7 +17,7 @@ slug: protbox
 ---
 
 - Paper - [Scopus](http://www.scopus.com/inward/record.url?eid=2-s2.0-84919383572&partnerID=tZOtx3y1) | [LNI](http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html) | [arXiv](http://arxiv.org/abs/1501.03139)
-- Slides - [PDF](/openidentity2014/slides.pdf) | [SlideShare](http://www.slideshare.net/EduardoDuarte33/oid2014presentation)
+- Slides - [PDF]({{ "/openidentity2014/slides.pdf" | relURL }}) | [SlideShare](http://www.slideshare.net/EduardoDuarte33/oid2014presentation)
 - [Source code](https://github.com/edduarte/protbox)
 
 # Abstract

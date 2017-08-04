@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 <title>{{ .Title }} - Eduardo Duarte</title>
 <div class="homelink">
-	<a href="https://edduarte.com">edduarte.com</a>
+	<a href="{{ .Site.BaseURL }}">edduarte.com</a>
 </div>
 <!-- <nav>
 	<ul class="menu">
@@ -21,7 +21,11 @@
 <p class="authors">
 {{ $len := (len $authorList) }}
 {{ $linkList := .Params.authorlinks }}
+{{ if eq $len 1 }}
+<a href="{{ index $linkList 0 }}" target="_blank">{{ index $authorList 0 }}</a>
+{{ else }}
 {{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $link := index $linkList $i }}{{ if $link }}<a href="{{ $link }}" target="_blank">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}
+{{ end }}
 </p>
 {{ end }}
 </header>

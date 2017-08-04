@@ -5,15 +5,22 @@
 {{ partial "intro.html" . }}
 {{ else }}
 <title>{{ .Title }} - Eduardo Duarte</title>
+<div class="homelink">
+	<a href="{{ .Site.BaseURL }}">edduarte.com</a>
+</div>
 <h1>{{ .Title }}</h1>
 {{ end }}
 
 
-<ul style="list-style-type: none; padding: 0; margin: 0; font-size: 0.9em">
+<ul class="list">
 {{ range (where .Data.Pages "Section" "!=" "") }}
 <li>
-<span class="date">{{ .Date.Format "2006 Jan 02" }}</span> | {{ .Section }} | 
-<a href="{{ .URL }}">{{ .Title }}</a>
+<div class="table">
+<div class="col1" style="font-size: 0.8em;">
+<span class="date">{{ .Date.Format "2006 Jan 02" }}</span> | {{ .Section }}
+</div>
+<div class="col2"><a href="{{ .URL }}">{{ .Title }}</a></div>
+</div>
 </li>
 {{ end }}
 </ul>

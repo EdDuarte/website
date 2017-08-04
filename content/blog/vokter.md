@@ -1,7 +1,6 @@
 ---
 title: "Vokter, a Java library that detects and notifies changes in web
 documents"
-
 date: '2016-06-19'
 medium: https://medium.com/@edduarte/vokter
 slug: vokter
@@ -31,7 +30,7 @@ It optionally supports multi-language stopword filtering, to ignore changes in
 common words with no important significance, and stemming to detect changes in
 lexically derived words. Appropriate stopword filtering and stemming algorithms
 are picked based on the inferred language of the document, using a [N-grams
-Naïve Bayesian classifier](https://github.com/optimaize/language- detector).
+Naïve Bayesian classifier](https://github.com/optimaize/language-detector).
 
 # Job Management
 

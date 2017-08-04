@@ -1,10 +1,10 @@
 body {
-	max-width: 700px;
+	max-width: 600px;
 	margin: auto;
 	padding: 1em;
 }
 
-html {
+html, .table > div {
 	font-family: '', 'Droid Serif', Georgia, 'Times New Roman', Times, Serif;
 	font-size:1em;
 	line-height: 2.5em;
@@ -13,7 +13,7 @@ html {
 
 .title,.subtitle,h1,h2,h3,h4,h5,h6{font-weight:400;}
 
-.title, .subtitle, .menu, footer { 
+.title, .subtitle, .table, footer { 
 	font-family: 'Lato', Helvetica, Arial;
 }
 
@@ -85,17 +85,17 @@ summary {
 }
 
 a {
-	color: #0d0d0d;
+	color: #0366D6;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 
 .homelink{
 	font-weight: bold;
-}
-
-
-.homelink > a {
-	color:#1f1f1f;
 }
 
 ul {
@@ -105,23 +105,33 @@ ul {
 }
 
 /* header and footer areas */
-.menu li {
+.table li {
 	display: inline-block;
 	padding: 5px;
 }
-.article-meta, .homelink a, .menu a {
-	text-decoration: none;
-}
-footer {
-	font-size: 0.8em;
-}
-footer a, .myname a {
-	text-decoration: none;
+.myname a {
 	font-weight: bold;
 }
-footer a:hover, .myname a:hover {
+.article-meta, .homelink a, footer a, .myname a {
+	color: #1f1f1f;
+	text-decoration: none;
+}
+.homelink a:hover, .table a:hover, footer a:hover, .myname a:hover {
 	text-decoration: underline;
 }
+
+.list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	/*font-size: 0.9em;*/
+}
+
+footer {
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
 hr {
 	border-style: solid;
 	color: transparent;
@@ -213,5 +223,45 @@ img.centered:empty {
 @media screen and (orientation: landscape) {
 	img.centered {
 			max-height: 90%;
+	}
+}
+
+.table {
+	margin: 0;
+	margin-bottom: 1em;
+	padding: 0;
+	display: flex;
+	flex-flow: row;
+}
+
+.table > div {
+	line-height: 1.5em;
+}
+
+.table > .col1 {
+	margin: 0;
+	padding: 0;
+	flex: 2 1 24%;
+	order: 1;
+}
+
+.table > .col2 {
+	margin: 0;
+	padding: 0;
+	flex: 1 6 76%;
+	order: 3;
+}
+@media all and (max-width: 600px) {
+	.table {
+		flex-direction: column;
+		margin-bottom: 1.5em;
+	}
+
+	footer > .table {
+		text-align: center;
+	}
+
+	.table > .col1, .table > .col2 {
+		order: 0;
 	}
 }
