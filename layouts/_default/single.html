@@ -11,26 +11,28 @@
 	</ul>
 </nav> -->
 
+<main>
 <article>
-	<div class="article-meta">
-		<p class="title">{{ .Title }}</p>
-		<p class="subtitle">{{ .Params.subtitle }}</p>
-		{{ $authorList := .Params.authors }}
-		{{ if $authorList }}
-		<p class="authors">
-			{{ $len := (len $authorList) }}
-			{{ $linkList := .Params.authorlinks }}
-			{{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $link := index $linkList $i }}{{ if $link }}<a href="{{ $link }}" target="_blank">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}
-		</p>
-		{{ end }}
-	</div>
+<header class="article-meta">
+<p class="title">{{ .Title }}</p>
+<p class="subtitle">{{ .Params.subtitle }}</p>
+{{ $authorList := .Params.authors }}
+{{ if $authorList }}
+<p class="authors">
+{{ $len := (len $authorList) }}
+{{ $linkList := .Params.authorlinks }}
+{{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $link := index $linkList $i }}{{ if $link }}<a href="{{ $link }}" target="_blank">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}
+</p>
+{{ end }}
+</header>
 
-	<main>
-		{{ .Content }}
-	</main>
+{{ .Content }}
 </article>
+<main>
 
-{{ if .Params.date }}<p class="footnote">Published on {{ .Date.Format "02 January 2006" }}</p>{{ end }}
-{{ with .Params.medium }}<p class="footnote">This post is also available on <a href="{{ . }}">Medium</a>.</p>{{ end }}
+<div class="footnote">
+{{ if .Params.date }}<p>Published on {{ .Date.Format "02 January 2006" }}</p>{{ end }}
+{{ with .Params.medium }}<p>This post is also available on <a href="{{ . }}">Medium</a>.</p>{{ end }}
+</div>
 
 {{ partial "footer.html" . }}

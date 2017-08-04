@@ -23,13 +23,27 @@ slug: living-globe
 
 # Abstract
 
-In this paper we showcase Living Globe, a web application for tri-dimensional worldwide demographical data visualization. It allows the simultaneous representation of multiple indicators, like total population, density, population-growth, life expectancy, net migration, crude birth rate, crude death rate and the ratio between the last two. The mapping of data to the provided visual structures is configurable by the user, introducing an aspect of customization which encourages a more immediate, visual-only interpretation of the data. Additionally, the represented data is normalized within an adjustable scale. This can be used to filter out extremely high or extremely low samples, uniforming the remaining data and improving its visibility.
+In this paper we showcase Living Globe, a web application for tri-dimensional
+worldwide demographical data visualization. It allows the simultaneous
+representation of multiple indicators, like total population, density,
+population-growth, life expectancy, net migration, crude birth rate, crude
+death rate and the ratio between the last two. The mapping of data to the
+provided visual structures is configurable by the user, introducing an aspect
+of customization which encourages a more immediate, visual-only interpretation
+of the data. Additionally, the represented data is normalized within an
+adjustable scale. This can be used to filter out extremely high or extremely
+low samples, uniforming the remaining data and improving its visibility.
 
-The usability of this tool was tested by agnostic individuals, and the results indicate that the data filtering and customizable mapping features encourage a faster interpretation of relational information. Moreover, this tool improves on previous state-of-the-art work by implementing interaction capabilities like selection, search and filtering.
+The usability of this tool was tested by agnostic individuals, and the results
+indicate that the data filtering and customizable mapping features encourage a
+faster interpretation of relational information. Moreover, this tool improves
+on previous state-of-the-art work by implementing interaction capabilities like
+selection, search and filtering.
 
 # Bibtex reference
 
-E. Duarte, P. Bordonhos, P. Dias, B. S. Santos, *Living Globe: Tridimensional Interactive Visualization of World Demographic Data*
+E. Duarte, P. Bordonhos, P. Dias, B. S. Santos, *Living Globe: Tridimensional
+   Interactive Visualization of World Demographic Data*
 
 ```
 @Inbook{Duarte2016,

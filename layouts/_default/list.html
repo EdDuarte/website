@@ -9,7 +9,7 @@
 {{ end }}
 
 
-<ul style="list-style-type: none; padding: 0; margin: 0;">
+<ul style="list-style-type: none; padding: 0; margin: 0; font-size: 0.9em">
 {{ range (where .Data.Pages "Section" "!=" "") }}
 <li>
 <span class="date">{{ .Date.Format "2006 Jan 02" }}</span> | {{ .Section }} | 

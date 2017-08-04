@@ -35,9 +35,15 @@ different protection features:
   authentication of people, using the nowadays widespread electronic, personal
   identity tokens (eIDs for short).
 
-Many governments worldwide have been or are introducing eIDs to allow the identification of people in the scope of Internet interactions. Unfortunately, there are several kinds of eID types being deployed, which reduces the possibilities of using all of them in a single system requiring the authentication of persons. In our system we considered the case of the Portuguese eID (Cartão de Cidadão).
+Many governments worldwide have been or are introducing eIDs to allow the
+identification of people in the scope of Internet interactions. Unfortunately,
+there are several kinds of eID types being deployed, which reduces the
+possibilities of using all of them in a single system requiring the
+authentication of persons. In our system we considered the case of the
+Portuguese eID (Cartão de Cidadão).
 
-Comparing Protbox with similar solutions, it has two main distinctive characteristics:
+Comparing Protbox with similar solutions, it has two main distinctive
+characteristics:
 
 - the key distribution between file sharing persons is performed by means of
   special files exchanged through the exact same cloud storage space used for
@@ -46,12 +52,26 @@ Comparing Protbox with similar solutions, it has two main distinctive characteri
 - the files exposed to others by means of cloud sharing are protected from
   malicious or involuntary tampering or removal.
 
-Protbox has just two requirements regarding a cloud storage solution for folders and files:
+Protbox has just two requirements regarding a cloud storage solution for
+folders and files:
 
 - it should allow the sharing of folders by many persons;
 - it should allow client operating systems to have a local mount point of the
   shared folder.
 
-Nowadays, most file- oriented cloud storage solutions, if not all, fulfill these requirements; in our experiments we managed to explore it successfully with Dropbox, SkyDrive, Google Drive and SugarSync.
+Nowadays, most file- oriented cloud storage solutions, if not all, fulfill
+these requirements; in our experiments we managed to explore it successfully
+with Dropbox, SkyDrive, Google Drive and SugarSync.
 
-We developed an open-source prototype in Java, [available here](https://github.com/edduarte/protbox). It runs on any operating system with a suitable Java Virtual Machine (JVM) and is capable of recognizing any file system. It features a background folder synchronization engine and a graphical user interface for dealing with key distribution requests. Protbox randomly generates and uses a key per folder to protect all its contents, including files and sub-directories. Files are encrypted with AES and their integrity is ensured with HMAC-SHA1. Encrypted file names, which contain bytes that are not acceptable for naming files in existing file systems, are coded in a modified Base64 alphabet, which should work in most file systems. The prototype was successfully experimented in Windows, Mac OS X and Linux with all of the above referred cloud storage providers.
+We developed an open-source prototype in Java, [available
+here](https://github.com/edduarte/protbox). It runs on any operating system
+with a suitable Java Virtual Machine (JVM) and is capable of recognizing any
+file system. It features a background folder synchronization engine and a
+graphical user interface for dealing with key distribution requests. Protbox
+randomly generates and uses a key per folder to protect all its contents,
+including files and sub-directories. Files are encrypted with AES and their
+integrity is ensured with HMAC-SHA1. Encrypted file names, which contain bytes
+that are not acceptable for naming files in existing file systems, are coded in
+a modified Base64 alphabet, which should work in most file systems. The
+prototype was successfully experimented in Windows, Mac OS X and Linux with all
+of the above referred cloud storage providers.
