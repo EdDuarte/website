@@ -1,0 +1,36 @@
+{{ partial "header.html" . }}
+<title>{{ .Title }} - Eduardo Duarte</title>
+<div class="homelink">
+	<a href="https://edduarte.com">edduarte.com</a>
+</div>
+<!-- <nav>
+	<ul class="menu">
+		{{ range .Site.Menus.main }}
+		<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+		{{ end }}
+	</ul>
+</nav> -->
+
+<article>
+	<div class="article-meta">
+		<p class="title">{{ .Title }}</p>
+		<p class="subtitle">{{ .Params.subtitle }}</p>
+		{{ $authorList := .Params.authors }}
+		{{ if $authorList }}
+		<p class="authors">
+			{{ $len := (len $authorList) }}
+			{{ $linkList := .Params.authorlinks }}
+			{{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $link := index $linkList $i }}{{ if $link }}<a href="{{ $link }}" target="_blank">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}
+		</p>
+		{{ end }}
+	</div>
+
+	<main>
+		{{ .Content }}
+	</main>
+</article>
+
+{{ if .Params.date }}<p class="footnote">Published on {{ .Date.Format "02 January 2006" }}</p>{{ end }}
+{{ with .Params.medium }}<p class="footnote">This post is also available on <a href="{{ . }}">Medium</a>.</p>{{ end }}
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,20 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "Eduardo Duarte"
+googleAnalytics = "UA-103779128-1"
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+preserveTaxonomyNames = true
+footnotereturnlinkcontents = "↩"
+disableKinds = ["tags", "categories"]
+
+[taxonomies]
+  category = ""
+  tags = ""
+
+[permalinks]
+    blog = "/:slug/"
+    talk = "/:slug/"
+    paper = "/:slug/"
+
+[params]
+    description = "Junior Software Developer. Philonoist, over-thinker, cinephile and music junkie."
