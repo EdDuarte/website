@@ -1,19 +1,35 @@
-body {
-	max-width: 600px;
-	margin: auto;
-	padding: 1em;
-}
 
 html, .table > div {
 	font-family: '', 'Droid Serif', Georgia, 'Times New Roman', Times, Serif;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%
 	font-size:1em;
+	font-weight: 200;
 	line-height: 2.5em;
 	color:#1f1f1f;
 }
 
+body {
+	max-width: 80ch;
+	margin: auto;
+	padding: 1em;
+}
+
+b, strong {
+	font-weight:700
+}
+
+dfn {
+	font-style:italic
+}
+
+small {
+	font-size:80%
+}
+
 .title,.subtitle,h1,h2,h3,h4,h5,h6{font-weight:400;}
 
-.title, .subtitle, .table, footer { 
+.title, .subtitle, .table, footer, .myname { 
 	font-family: 'Lato', Helvetica, Arial;
 }
 
@@ -62,6 +78,7 @@ html, .table > div {
 h1 {
 	font-size: 1.6em;
 	margin-top: 1.5em;
+	/*margin:.67em 0*/
 }
 
 h2 {
@@ -80,9 +97,19 @@ h4, summary {
 	margin-top: 3.2em;
 }
 
-summary {
-	/*text-align: center;*/
-}
+/*summary, .content {
+	text-align: justify;
+	text-justify: inter-word;
+	-ms-word-break: normal;
+	word-break: normal;
+
+	word-break: break-word;
+
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}*/
 
 a {
 	color: #0366D6;
@@ -148,9 +175,9 @@ pre {
 	line-height: 1.5em;
 }
 
-code {
+code,kbd,pre,samp {
 	font-family: "Consolas", Monaco, monospace;
-	font-size: 0.8em;
+	font-size:1em
 }
 
 pre code {
@@ -160,7 +187,6 @@ pre code {
 /* misc elements */
 iframe, video { max-width: 100%; }
 main {
-	hyphens: auto;
 	margin-bottom: 40px;
 }
 blockquote {
@@ -210,10 +236,6 @@ img.centered:empty {
 		transform: translate(-50%, 0%);
 }
 
-@media (max-width: 450px) {
-
-}
-
 @media screen and (orientation: portrait) {
 	img.centered {
 			max-width: 90%;
@@ -241,17 +263,18 @@ img.centered:empty {
 .table > .col1 {
 	margin: 0;
 	padding: 0;
-	flex: 2 1 24%;
+	flex: 2 1 20%;
 	order: 1;
 }
 
 .table > .col2 {
 	margin: 0;
 	padding: 0;
-	flex: 1 6 76%;
+	flex: 1 6 80%;
 	order: 3;
 }
 @media all and (max-width: 600px) {
+
 	.table {
 		flex-direction: column;
 		margin-bottom: 1.5em;
