@@ -293,7 +293,8 @@ img.centered:empty {
 }
 @media all and (max-width: 600px) {
 	html, .table > div {
-		font-size: 13px;
+		font-size: 14px;
+		font-weight: 400;
 	}
 
 	.table {
