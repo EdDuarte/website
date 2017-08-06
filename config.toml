@@ -6,6 +6,7 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
 disableKinds = ["tags", "categories"]
+pluralizelisttitles = "false"
 
 [taxonomies]
   category = ""
