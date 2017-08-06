@@ -30,15 +30,15 @@
 {{ end }}
 </header>
 
+<div class="footnote">
+{{ if .Params.date }}<p>{{ .Date.Format "02 January 2006" }}</p>{{ end }}
+{{ with .Params.medium }}<p>This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
+</div>
+
 <div class="content">
 {{ .Content }}
 </div>
 </article>
 <main>
-
-<div class="footnote">
-{{ if .Params.date }}<p>Published on {{ .Date.Format "02 January 2006" }}</p>{{ end }}
-{{ with .Params.medium }}<p>This post is also available on <a href="{{ . }}">Medium</a>.</p>{{ end }}
-</div>
 
 {{ partial "footer.html" . }}
