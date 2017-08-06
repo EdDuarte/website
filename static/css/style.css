@@ -254,6 +254,7 @@ img.centered:empty {
 	padding: 0;
 	display: flex;
 	flex-flow: row;
+	align-items: center;
 }
 
 .table > div {
@@ -263,20 +264,21 @@ img.centered:empty {
 .table > .col1 {
 	margin: 0;
 	padding: 0;
-	flex: 2 1 20%;
+	flex: 2 1 21%;
 	order: 1;
 }
 
 .table > .col2 {
 	margin: 0;
 	padding: 0;
-	flex: 1 6 80%;
+	flex: 1 6 79%;
 	order: 3;
 }
 @media all and (max-width: 600px) {
 
 	.table {
 		flex-direction: column;
+		align-items: normal;
 		margin-bottom: 1.5em;
 	}
 
