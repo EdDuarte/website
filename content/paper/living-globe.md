@@ -1,6 +1,6 @@
 ---
 title: "Tridimensional interactive visualization of world demographic data"
-subtitle: "Presented at HCI International 2016, The Westin Harbour Castle Hotel, Toronto, Canada, 17 - 22 July 2016"
+subtitle: "HCI International 2016, The Westin Harbour Castle Hotel, Toronto, Canada"
 authors:
     - Eduardo Duarte
     - Pedro Bordonhos
@@ -17,7 +17,7 @@ slug: living-globe
 ---
 
 - Paper - [Springer](https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2) | [arXiv](https://arxiv.org/abs/1607.05946)
-- Slides - [PDF]({{ "/hcii2016/slides.pdf" | relURL }}) | [SlideShare](http://www.slideshare.net/EduardoDuarte33/hcii2016slides-v3)
+- Slides - [PDF](/hcii2016/slides.pdf) | [SlideShare](http://www.slideshare.net/EduardoDuarte33/hcii2016slides-v3)
 - [Demo](https://edduarte.github.io/living-globe)
 - [Source code](https://github.com/edduarte/living-globe)
 
