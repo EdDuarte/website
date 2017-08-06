@@ -1,5 +1,5 @@
 
-# Experience
+## Experience
 
 Recently finished my internship at Ubiwhere, where I worked as a backend
 developer (business process modeling and integration platform) and a mobile
@@ -18,7 +18,7 @@ with a bioinformatics research team; published three papers in fields such as
 Information Security and Information Visualization; and spoken at various
 conferences around the globe.
 
-# Ethos
+## Ethos
 
 More than simply focusing on coding, I have always pushed myself to research
 best practices and bleeding edge methods in order to complete my tasks with a
@@ -32,7 +32,7 @@ of the development stack: from web & mobile frontend coding, to UI/UX design
 and prototyping, to middleware implementation (fully baked platforms or
 brokers) to RESTful services deployment.
 
-# Work with me
+## Work with me
 
 I am not currently looking for a job, as I am working on my Master's thesis at
 the University of Aveiro, but feel free to [send me an
