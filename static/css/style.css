@@ -294,12 +294,28 @@ img.centered:empty {
 }
 @media all and (max-width: 735px) {
 	html, .table > div {
-		font-size: 14px;
+		font-size: 15px;
 		font-weight: 400;
 	}
 
+	.title {
+		font-size: 1.8em;
+	}
+	
+	h1, .subtitle {
+		font-size: 1.6em;
+	}
+	
+	h2 {
+		font-size: 1.4em;
+	}
+
+	h3 {
+		font-size: 1.2em;
+	}
+
 	footer {
-		font-size: 0.8em;
+		font-size: 1em;
 	}
 
 	.table {
