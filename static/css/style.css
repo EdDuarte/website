@@ -292,6 +292,9 @@ img.centered:empty {
 	order: 3;
 }
 @media all and (max-width: 600px) {
+	html, .table > div {
+		font-size: 13px;
+	}
 
 	.table {
 		flex-direction: column;
