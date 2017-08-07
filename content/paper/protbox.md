@@ -1,6 +1,6 @@
 ---
 title: "Secure and trustworthy file sharing over cloud storage using eID tokens"
-subtitle: "Open Identity Summit (OID 2014), Fraunhofer IAO Institute Center, Stuttgart, Germany"
+subtitle: "Open Identity Summit 2014, Fraunhofer IAO Institute Center, Stuttgart, Germany"
 authors:
     - Eduardo Duarte
     - Filipe Pinheiro

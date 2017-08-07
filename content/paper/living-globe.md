@@ -1,5 +1,5 @@
 ---
-title: "Tridimensional interactive visualization of world demographic data"
+title: "Living Globe: Tridimensional interactive visualization of world demographic data"
 subtitle: "HCI International 2016, The Westin Harbour Castle Hotel, Toronto, Canada"
 authors:
     - Eduardo Duarte

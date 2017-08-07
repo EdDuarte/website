@@ -7,7 +7,8 @@ html, .table > div {
 	font-weight: 700;
 	line-height: 2em;
 	letter-spacing: -.02em;
-	color:#333;
+	color:#FDFAFC;
+	background-color: #181A20;
 }
 
 body {
@@ -31,7 +32,7 @@ footer {
 }
 
 .article-meta, .homelink a, footer a, .myname a {
-	color: #333;
+	color: #FDFAFC;
 	text-decoration: none;
 }
 .homelink a:hover, .table a:hover, footer a:hover, .myname a:hover {
@@ -107,24 +108,24 @@ h4, .authors {
 	line-height: 1.7em;
 	margin-top: 0.8em;
 	margin-bottom: -0.6em;
-	color: #333;
+	color: #FDFAFC;
 }
 
 .authors > a {
-	color: #333;
+	color: #FDFAFC;
 	text-decoration: underline;
 }
 
 .footnote {
 	font-size: 1em;
-	color: #999;
+	color: #C1C1C4;
 	line-height: 0.8em;
 	margin-top: 1.7em;
 	margin-bottom: 1.5em;
 }
 
 .footnote > p > a {
-	color: #999;
+	color: #C1C1C4;
 	text-decoration: underline;
 }
 
@@ -143,8 +144,7 @@ h4, .authors {
 }*/
 
 a {
-	color: #0366D6;
-	text-decoration: none;
+	color: #9597A0;
 }
 
 a:hover {
@@ -174,7 +174,7 @@ hr {
 /* code */
 pre {
 	margin: 0;
-	background-color: #050505;
+	background-color: #040404;
 	border-radius: 10px;
 	color: #fff;
 	padding: 1em;
@@ -202,7 +202,7 @@ blockquote {
 	margin: 0;
 	padding: 0;
 	padding-left: 1em;
-	border-left: 4px solid #333;
+	border-left: 4px solid #FDFAFC;
 	border-radius: 4px;
 	font-style: italic;
 }
@@ -212,9 +212,9 @@ table {
 	border-top: 1px solid #666;
 	border-bottom: 1px solid #666;
 }
-table thead th { border-bottom: 1px solid #ddd; }
+table thead th { border-bottom: 1px solid #FDFAFC; }
 th, td { padding: 5px; }
-tr:nth-child(even) { background: #eee }
+tr:nth-child(even) { background: #FDFAFC }
 
 img.myphoto {
 	max-width: 100px;
@@ -272,7 +272,6 @@ img.centered:empty {
 }
 
 .table > div {
-	font-size: 0.8em;
 	letter-spacing: -.035em;
 	line-height: 1.5em;
 }
@@ -280,20 +279,33 @@ img.centered:empty {
 .table > .col1 {
 	margin: 0;
 	padding: 0;
-	flex: 2 1 21%;
+	flex: 2 1 23%;
 	order: 1;
 }
 
 .table > .col2 {
 	margin: 0;
 	padding: 0;
-	flex: 1 6 79%;
+	flex: 1 6 77%;
 	order: 3;
 }
+
+.table > .list-meta {
+	font-size: 0.83em;
+}
+
+.table > div > a {
+	text-decoration: none;
+}
+
 @media all and (max-width: 735px) {
 	html {
 		font-size: 15px;
 		font-weight: 400;
+	}
+
+	.title, .subtitle, h1, h2, h3, h4, h5, h6, footer, .skills, .table, .table > .list-meta {
+		font-weight:400;
 	}
 
 	.table > div {
@@ -324,6 +336,11 @@ img.centered:empty {
 		flex-direction: column;
 		align-items: normal;
 		margin-bottom: 1.5em;
+	}
+
+	.table > .list-meta {
+		font-size: 0.9em;
+		margin-bottom: 0.3em;
 	}
 
 	footer > .table {
