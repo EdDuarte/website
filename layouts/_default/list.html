@@ -17,9 +17,11 @@
 <li>
 <div class="table">
 <div class="col1 list-meta">
-<span class="date">{{ .Date.Format "2006 Jan 02" }}</span> | {{ .Section }}
+	<span class="date">{{ .Date.Format "2006 Jan 02" }}</span> | {{ .Section }}
 </div>
-<div class="col2"><a href="{{ .URL }}">{{ .Title }}</a></div>
+<div class="col2">
+	<a href="{{ .URL }}">{{ .Title }}</a>
+</div>
 </div>
 </li>
 {{ end }}

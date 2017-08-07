@@ -1,10 +1,13 @@
 ---
 title: "Vokter, a Java library that detects and notifies changes in web
-documents"
+documents using LSH, DiffMatchPatch and Bloom Filters"
 date: '2016-06-19'
 medium: https://medium.com/@edduarte/vokter
 slug: vokter
 ---
+
+**Vokter core library and related projects on Github:**
+[https://github.com/vokter](https://github.com/vokter)
 
 What started as a simple project called Argus (from [*Argus
 Panoptes*](https://en.wikipedia.org/wiki/Argus_Panoptes), the all-seeing giant
@@ -23,20 +26,20 @@ or removed.
 
 At a basic level, Vokter fetches web documents on a periodic basis and performs
 **detection** (comparison of occurrences between two snapshots of the same
-document) and **matching** (sending of messages to attached consumers when a
-detected difference matches a registered keyword).
+document) and **matching** (finding out if one of the detected differences
+matches a registered keyword, sending messages to attached consumers if so).
 
 It optionally supports multi-language stopword filtering, to ignore changes in
-common words with no important significance, and stemming to detect changes in
-lexically derived words. Appropriate stopword filtering and stemming algorithms
-are picked based on the inferred language of the document, using a [N-grams
-Naïve Bayesian classifier](https://github.com/optimaize/language-detector).
+common words with no important significance, and
+[stemming](http://snowball.tartarus.org/) to detect changes in lexically
+derived words. Appropriate stopword filtering and stemming algorithms are
+picked based on the inferred language of the document, using a [N-grams Naïve
+Bayesian classifier](https://github.com/optimaize/language-detector).
 
 # Job Management
 
 There are two types of jobs, concurrently executed and scheduled periodically
-(using Quartz Scheduler): difference detection jobs and difference matching
-jobs.
+(using Quartz Scheduler): detection jobs and matching jobs.
 
 The detection job is responsible for fetching a new document and comparing it
 with the previous document, detecting textual differences between the two. To
@@ -47,15 +50,16 @@ with specific requested keywords.
 
 Harmonization of keywords-to-differences is performed passing the differences
 through a Bloom filter, to remove differences that do not have the specified
-keywords, and a character-by-character comparator on the remaining differences,
-to ensure that the difference contains any of the keywords.
+keywords, and a exact (character-by-character) comparator on the remaining
+differences, to ensure that the difference contains any of the keywords.
 
 Since the logic of difference retrieval is spread between two jobs, one that is
 agnostic of requests and one that is specific to the request and its keywords,
-Vokter reduces workload by scheduling only one difference detection job per
-watched web-page. For this, jobs are grouped into clusters, where its unique
-identifier is the document URL. In other words each cluster imperatively
-contains a single scheduled detection job and one or more matching jobs.
+Vokter reduces workload by scheduling only one detection job per watched web-
+page. For this, jobs are grouped into clusters, where its unique identifier is
+the document URL. This means that each cluster imperatively contains a single
+scheduled detection job and one or more matching jobs. In other words, When two
+clients watch the same page, only one detection job for that page is active.
 
 # Scaling
 
