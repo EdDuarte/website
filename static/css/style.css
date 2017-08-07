@@ -7,8 +7,8 @@ html, .table > div {
 	font-weight: 700;
 	line-height: 2em;
 	letter-spacing: -.02em;
-	color:#FDFAFC;
-	background-color: #181A20;
+	color:#F8F5F4;
+	background-color: #101010;
 }
 
 body {
@@ -32,7 +32,7 @@ footer {
 }
 
 .article-meta, .homelink a, footer a, .myname a {
-	color: #FDFAFC;
+	color: #F8F5F4;
 	text-decoration: none;
 }
 .homelink a:hover, .table a:hover, footer a:hover, .myname a:hover {
@@ -108,24 +108,24 @@ h4, .authors {
 	line-height: 1.7em;
 	margin-top: 0.8em;
 	margin-bottom: -0.6em;
-	color: #FDFAFC;
+	color: #F8F5F4;
 }
 
 .authors > a {
-	color: #FDFAFC;
+	color: #F8F5F4;
 	text-decoration: underline;
 }
 
 .footnote {
 	font-size: 1em;
-	color: #C1C1C4;
+	color: #BDBBBA;
 	line-height: 0.8em;
 	margin-top: 1.7em;
 	margin-bottom: 1.5em;
 }
 
 .footnote > p > a {
-	color: #C1C1C4;
+	color: #BDBBBA;
 	text-decoration: underline;
 }
 
@@ -202,7 +202,7 @@ blockquote {
 	margin: 0;
 	padding: 0;
 	padding-left: 1em;
-	border-left: 4px solid #FDFAFC;
+	border-left: 4px solid #F8F5F4;
 	border-radius: 4px;
 	font-style: italic;
 }
@@ -212,9 +212,9 @@ table {
 	border-top: 1px solid #666;
 	border-bottom: 1px solid #666;
 }
-table thead th { border-bottom: 1px solid #FDFAFC; }
+table thead th { border-bottom: 1px solid #F8F5F4; }
 th, td { padding: 5px; }
-tr:nth-child(even) { background: #FDFAFC }
+tr:nth-child(even) { background: #F8F5F4 }
 
 img.myphoto {
 	max-width: 100px;
