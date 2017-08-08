@@ -12,9 +12,12 @@ html, .table > div {
 }
 
 body {
-	max-width: 700px;
 	margin: auto;
 	padding: 1em;
+}
+
+body, img {
+	max-width: 700px;
 }
 
 b, strong {
@@ -106,7 +109,7 @@ h4, .authors {
 
 .authors {
 	line-height: 1.7em;
-	margin-top: 0.8em;
+	margin-top: 1.3em;
 	margin-bottom: -0.6em;
 	color: #F8F5F4;
 }

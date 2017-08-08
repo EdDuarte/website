@@ -16,6 +16,8 @@ medium: https://medium.com/@edduarte/living-globe
 slug: living-globe
 ---
 
+[![Current prototype of Living Globe](https://raw.githubusercontent.com/edduarte/living-globe/master/screenshot.png)](https://edduarte.github.io/living-globe)
+
 - Paper - [Springer](https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2) | [arXiv](https://arxiv.org/abs/1607.05946)
 - Slides - [PDF](/hcii2016/slides.pdf) | [SlideShare](http://www.slideshare.net/EduardoDuarte33/hcii2016slides-v3)
 - [Demo](https://edduarte.github.io/living-globe)
