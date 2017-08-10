@@ -25,9 +25,9 @@
 {{ $len := (len $authorList) }}
 {{ $authorUrlList := .Params.authorUrls }}
 {{ if eq $len 1 }}
-<a href="{{ index $authorUrlList 0 }}" target="_blank">{{ index $authorList 0 }}</a>
+<a href="{{ index $authorUrlList 0 }}">{{ index $authorList 0 }}</a>
 {{ else }}
-{{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $link := index $authorUrlList $i }}{{ if $link }}<a href="{{ $link }}" target="_blank">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}
+{{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $link := index $authorUrlList $i }}{{ if $link }}<a href="{{ $link }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}
 {{ end }}
 </p>
 {{ end }}
@@ -42,7 +42,7 @@
 {{ if $linkList }}
 <ul class="links">
 {{ $linkUrlList := .Params.linkUrls }}
-{{ range $i, $temp := $linkList }}{{ $link := index $linkUrlList $i }}{{ if $link }}<li><a href="{{ $link }}" target="_blank">{{ . }}</a></li>{{ else }}<li>{{ . }}</li>{{ end }}{{ end }}
+{{ range $i, $temp := $linkList }}{{ $link := index $linkUrlList $i }}{{ if $link }}<li><a href="{{ $link }}">{{ . }}</a></li>{{ else }}<li>{{ . }}</li>{{ end }}{{ end }}
 </ul>
 {{ end }}
 
