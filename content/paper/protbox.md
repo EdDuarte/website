@@ -1,5 +1,6 @@
 ---
-title: "Secure and trustworthy file sharing over cloud storage using eID tokens"
+title: "Secure and trustworthy file sharing over cloud storage using eID
+tokens"
 subtitle: "Open Identity Summit 2014, Fraunhofer IAO Institute Center, Stuttgart, Germany"
 description: "Open-source & cross-platform app that performs file encryption
 and user authentication on existing cloud storage services using eID tokens."
@@ -22,13 +23,15 @@ links:
     - Slides (SlideShare)
 linkUrls:
     - https://github.com/edduarte/protbox
-    - http://www.scopus.com/inward/record.url?eid=2-s2.0-84919383572&partnerID=tZOtx3y1
+    - http://www.scopus.com/inward/record.url?eid=2-s2.0-84919383572&partnerID=
+          tZOtx3y1
     - http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html
     - http://arxiv.org/abs/1501.03139
     - /openidentity2014/slides.pdf
     - http://www.slideshare.net/EduardoDuarte33/oid2014presentation
 date: '2014-11-05'
-medium: https://medium.com/@edduarte/protbox
+medium: https://medium.com/@edduarte/secure-and-trustworthy-file-sharing-over-
+cloud-storage-using-eid-tokens-d8546a4e5a00
 slug: protbox
 ---
 

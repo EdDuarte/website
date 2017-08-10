@@ -29,7 +29,6 @@ linkUrls:
     - /hcii2016/slides.pdf
     - http://www.slideshare.net/EduardoDuarte33/hcii2016slides-v3
 date: '2016-07-17'
-medium: https://medium.com/@edduarte/living-globe
 slug: living-globe
 ---
 
