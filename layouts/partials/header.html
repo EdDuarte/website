@@ -8,14 +8,16 @@
 <meta name="author" content="Eduardo Duarte">
 
 <meta name="twitter:title" content="{{ .Site.Title }}">
+<meta name="twitter:description" content="{{ .Site.Params.description }}">
 <meta name="twitter:site" content="@_edduarte">
 <meta name="twitter:creator" content="@_edduarte">
 <meta name="twitter:card" content="summary">
 
+<meta property="og:title" content="{{ .Site.Title }}">
+<meta property="og:description" content="{{ .Site.Params.description }}">
+<meta property="og:site_name" content="edduarte">
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="{{ .Site.Title }}">
-<meta property="og:site_name" content="edduarte">
 
 <link href="https://fonts.googleapis.com/css?family=Martel:400,700,900|Work+Sans:400,600" rel="stylesheet">
 <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
