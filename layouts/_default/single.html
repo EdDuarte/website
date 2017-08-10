@@ -20,20 +20,28 @@
 {{ if $authorList }}
 <p class="authors">
 {{ $len := (len $authorList) }}
-{{ $linkList := .Params.authorlinks }}
+{{ $authorUrlList := .Params.authorUrls }}
 {{ if eq $len 1 }}
-<a href="{{ index $linkList 0 }}" target="_blank">{{ index $authorList 0 }}</a>
+<a href="{{ index $authorUrlList 0 }}" target="_blank">{{ index $authorList 0 }}</a>
 {{ else }}
-{{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $link := index $linkList $i }}{{ if $link }}<a href="{{ $link }}" target="_blank">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}
+{{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $link := index $authorUrlList $i }}{{ if $link }}<a href="{{ $link }}" target="_blank">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}
 {{ end }}
 </p>
 {{ end }}
 </header>
 
 <div class="footnote">
-{{ if .Params.date }}<p>{{ .Date.Format "02 January 2006" }}</p>{{ end }}
-{{ with .Params.medium }}<p>This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
+{{ if .Params.date }}{{ .Date.Format "02 January 2006" }}{{ end }}
+{{ with .Params.medium }}<br/>This post can also be read on <a href="{{ . }}">Medium</a>.{{ end }}
 </div>
+
+{{ $linkList := .Params.links }}
+{{ if $linkList }}
+<ul class="links">
+{{ $linkUrlList := .Params.linkUrls }}
+{{ range $i, $temp := $linkList }}{{ $link := index $linkUrlList $i }}{{ if $link }}<li><a href="{{ $link }}" target="_blank">{{ . }}</a></li>{{ else }}<li>{{ . }}</li>{{ end }}{{ end }}
+</ul>
+{{ end }}
 
 <div class="content">
 {{ .Content }}

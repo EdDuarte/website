@@ -4,6 +4,12 @@ prediction in Erlang"
 date: '2015-05-31'
 medium: https://medium.com/@edduarte/erlang-poker-ml
 slug: erlang-poker-ml
+links:
+    - Check this project on
+    - Github
+linkUrls:
+    - 
+    - https://github.com/edduarte/erlang-poker-ml
 ---
 
 For a University class project we were asked to implement a decision-tree

@@ -6,22 +6,31 @@ authors:
     - Pedro Bordonhos
     - Paulo Dias
     - Beatriz Sousa Santos
-authorlinks:
+authorUrls:
     - https://edduarte.com
     - 
     - http://sweet.ua.pt/paulo.dias/
     - http://sweet.ua.pt/bss/
+links:
+    - Demo
+    - Github
+    - Paper (Springer)
+    - Paper (arXiv)
+    - Slides (PDF)
+    - Slides (SlideShare)
+linkUrls:
+    - https://edduarte.github.io/living-globe
+    - https://github.com/edduarte/living-globe
+    - https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2
+    - https://arxiv.org/abs/1607.05946
+    - /hcii2016/slides.pdf
+    - http://www.slideshare.net/EduardoDuarte33/hcii2016slides-v3
 date: '2016-07-17'
 medium: https://medium.com/@edduarte/living-globe
 slug: living-globe
 ---
 
 [![Current prototype of Living Globe](https://raw.githubusercontent.com/edduarte/living-globe/master/screenshot.png)](https://edduarte.github.io/living-globe)
-
-- Paper - [Springer](https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2) | [arXiv](https://arxiv.org/abs/1607.05946)
-- Slides - [PDF](/hcii2016/slides.pdf) | [SlideShare](http://www.slideshare.net/EduardoDuarte33/hcii2016slides-v3)
-- [Demo](https://edduarte.github.io/living-globe)
-- [Source code](https://github.com/edduarte/living-globe)
 
 # Abstract
 

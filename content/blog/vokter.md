@@ -4,10 +4,13 @@ documents using LSH, DiffMatchPatch and Bloom Filters"
 date: '2016-06-19'
 medium: https://medium.com/@edduarte/vokter
 slug: vokter
+links:
+    - Check this project on
+    - Github
+linkUrls:
+    - 
+    - https://github.com/vokter
 ---
-
-**Vokter core library and related projects on Github:**
-[https://github.com/vokter](https://github.com/vokter)
 
 What started as a simple project called Argus (from [*Argus
 Panoptes*](https://en.wikipedia.org/wiki/Argus_Panoptes), the all-seeing giant

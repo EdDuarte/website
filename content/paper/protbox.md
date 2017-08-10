@@ -6,19 +6,29 @@ authors:
     - Filipe Pinheiro
     - André Zúquete
     - Hélder Gomes
-authorlinks:
+authorUrls:
     - https://edduarte.com
     - 
     - http://sweet.ua.pt/andre.zuquete/public_html/
     - http://wiki.ieeta.pt/wiki/index.php/Hélder_Gomes
+links:
+    - Github
+    - Paper (Scopus)
+    - Paper (LNI)
+    - Paper (arXiv)
+    - Slides (PDF)
+    - Slides (SlideShare)
+linkUrls:
+    - https://github.com/edduarte/protbox
+    - http://www.scopus.com/inward/record.url?eid=2-s2.0-84919383572&partnerID=tZOtx3y1
+    - http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html
+    - http://arxiv.org/abs/1501.03139
+    - /openidentity2014/slides.pdf
+    - http://www.slideshare.net/EduardoDuarte33/oid2014presentation
 date: '2014-11-05'
 medium: https://medium.com/@edduarte/protbox
 slug: protbox
 ---
-
-- Paper - [Scopus](http://www.scopus.com/inward/record.url?eid=2-s2.0-84919383572&partnerID=tZOtx3y1) | [LNI](http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html) | [arXiv](http://arxiv.org/abs/1501.03139)
-- Slides - [PDF](/openidentity2014/slides.pdf) | [SlideShare](http://www.slideshare.net/EduardoDuarte33/oid2014presentation)
-- [Source code](https://github.com/edduarte/protbox)
 
 # Abstract
 
