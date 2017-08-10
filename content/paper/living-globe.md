@@ -1,6 +1,9 @@
 ---
 title: "Living Globe: Tridimensional interactive visualization of world demographic data"
 subtitle: "HCI International 2016, The Westin Harbour Castle Hotel, Toronto, Canada"
+description: "Open-source WebGL app for tri-dimensional worldwide data
+visualization, with customizable data-to-visual mapping and filtering with
+adjustable scales."
 authors:
     - Eduardo Duarte
     - Pedro Bordonhos
@@ -34,16 +37,16 @@ slug: living-globe
 
 # Abstract
 
-In this paper we showcase Living Globe, a web application for tri-dimensional
-worldwide demographical data visualization. It allows the simultaneous
-representation of multiple indicators, like total population, density,
-population-growth, life expectancy, net migration, crude birth rate, crude
-death rate and the ratio between the last two. The mapping of data to the
-provided visual structures is configurable by the user, introducing an aspect
-of customization which encourages a more immediate, visual-only interpretation
-of the data. Additionally, the represented data is normalized within an
-adjustable scale. This can be used to filter out extremely high or extremely
-low samples, uniforming the remaining data and improving its visibility.
+In this paper we showcase Living Globe, a WebGL application for tri-dimensional
+worldwide data visualization. It allows the simultaneous representation of
+multiple indicators, like total population, density, population-growth, life
+expectancy, net migration, crude birth rate, crude death rate and the ratio
+between the last two. The mapping of data to the provided visual structures is
+configurable by the user, introducing an aspect of customization which
+encourages a more immediate, visual-only interpretation of the data.
+Additionally, the represented data is normalized within an adjustable scale.
+This can be used to filter out extremely high or extremely low samples,
+uniforming the remaining data and improving its visibility.
 
 The usability of this tool was tested by agnostic individuals, and the results
 indicate that the data filtering and customizable mapping features encourage a

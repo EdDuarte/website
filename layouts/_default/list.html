@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 {{ if .IsHome }}
-<title>Eduardo Duarte</title>
+<title>{{ .Title }}</title>
 </head>
 
 <body>
@@ -13,7 +13,7 @@
 <div class="homelink">
 	<a href="{{ .Site.BaseURL }}">edduarte.com</a>
 </div>
-<h1>{{ .Title }}</h1>
+<h1 style="margin-bottom: 15px;">{{ .Title }}</h1>
 {{ end }}
 
 

@@ -1,3 +1,7 @@
+---
+title: "Eduardo Duarte"
+description: "Junior Software Developer & Researcher. Philonoist, over-thinker, cinephile and music junkie."
+---
 
 ## Experience
 

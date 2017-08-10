@@ -1,6 +1,8 @@
 ---
 title: "Secure and trustworthy file sharing over cloud storage using eID tokens"
 subtitle: "Open Identity Summit 2014, Fraunhofer IAO Institute Center, Stuttgart, Germany"
+description: "Open-source & cross-platform app that performs file encryption
+and user authentication on existing cloud storage services using eID tokens."
 authors:
     - Eduardo Duarte
     - Filipe Pinheiro
@@ -32,7 +34,7 @@ slug: protbox
 
 # Abstract
 
-In this paper we present Protbox, an open-source application, cross-platform
+In this paper we present Protbox, an open-source, cross-platform
 application for securely sharing files among strongly authenticated people
 through many different cloud storage services. The secure sharing includes four
 different protection features:

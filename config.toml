@@ -16,6 +16,3 @@ pluralizelisttitles = "false"
     blog = "/:slug/"
     talk = "/:slug/"
     paper = "/:slug/"
-
-[params]
-    description = "Junior Software Developer. Philonoist, over-thinker, cinephile and music junkie."
