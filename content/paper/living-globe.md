@@ -35,8 +35,6 @@ slug: living-globe
 
 [![Current prototype of Living Globe](https://raw.githubusercontent.com/edduarte/living-globe/master/screenshot.png)](https://edduarte.github.io/living-globe)
 
-# Abstract
-
 In this paper we showcase Living Globe, a WebGL application for tri-dimensional
 worldwide data visualization. It allows the simultaneous representation of
 multiple indicators, like total population, density, population-growth, life

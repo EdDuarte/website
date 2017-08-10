@@ -32,8 +32,6 @@ medium: https://medium.com/@edduarte/protbox
 slug: protbox
 ---
 
-# Abstract
-
 In this paper we present Protbox, an open-source, cross-platform
 application for securely sharing files among strongly authenticated people
 through many different cloud storage services. The secure sharing includes four
