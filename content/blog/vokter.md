@@ -2,14 +2,16 @@
 title: "Vokter, a Java library that detects changes in web documents"
 description: "High-performant library that uses LSH, DiffMatchPatch and Bloom
 filters to detect and notify textual changes in web documents."
-date: '2016-06-19'
-slug: vokter
 links:
     - Check this project on
     - Github
 linkUrls:
     - 
     - https://github.com/vokter
+date: '2016-06-19'
+medium: "https://medium.com/@edduarte/vokter-a-java-library-that-detects-
+changes-in-web-documents-c4d3d399046d"
+slug: vokter
 ---
 
 What started as a simple project called Argus (from [*Argus
