@@ -34,16 +34,48 @@ slug: living-globe
 
 [![Current prototype of Living Globe](https://raw.githubusercontent.com/edduarte/living-globe/master/screenshot.png)](https://edduarte.github.io/living-globe)
 
-In this paper we showcase Living Globe, a WebGL application for tri-dimensional
-worldwide data visualization. It allows the simultaneous representation of
-multiple indicators, like total population, density, population-growth, life
-expectancy, net migration, crude birth rate, crude death rate and the ratio
-between the last two. The mapping of data to the provided visual structures is
-configurable by the user, introducing an aspect of customization which
+Living Globe is a WebGL application for tri-dimensional worldwide data
+visualization. It allows the simultaneous representation of multiple indicators
+as spatial structures (bars and other objects located in a specific latitude-
+longitude on the globe). The mapping of data to the provided visual structures
+is configurable by the user, introducing an aspect of customization which
 encourages a more immediate, visual-only interpretation of the data.
 Additionally, the represented data is normalized within an adjustable scale.
 This can be used to filter out extremely high or extremely low samples,
 uniforming the remaining data and improving its visibility.
+
+Our prototype was developed with demographic data in mind, like like total
+population, density, population-growth, life expectancy, net migration, crude
+birth rate, crude death rate and the ratio between the last two. However, today
+it actually allows the visual exploration of the any kind of numerical data
+structured in JSON by year and by country. We provide two example input files:
+“input.json” (containing demographic data between the years 1960 and 2014) and
+“input_alt.json” (containing miscellaneous data regarding finance, demography
+and employment between the years 1960 and 2014).
+
+While offering inexperienced users a default mapping of these data variables
+into visual variables, Living Globe allows more advanced users to select the
+mapping they intent to use. This means that these users have the possibility of
+control over an earlier stage of the visualization reference model (Riccardo
+Mazza. Introduction to information visualization. Springer-Verlag London, 1,
+2009) making Living Globe a more flexible tool.
+
+In order to support this feature, three visual variables may be selected to map
+a data type: i) height of vertical bars (directly proportional to the data
+value) ii) color of vertical bars (in a color scale ranging from blue to
+yellow) and iii) color of the countries on the globe (in a scale ranging from
+red to green). An adequate selection of the data variables and their mapping to
+the visual variables may help the identification and study of potential
+relations among data variables. The time interval may be selected using a
+slider.
+
+Living Globe also offers the following functionality: i) textual search, with
+dynamic suggestion of the countries names; ii) country selection; and iii)
+configuration of minimum and maximum data values; This last feature, which
+filters out countries that do not match the minimum and maximum values and
+normalizes the remaining data set, can potentially lead to improvements in the
+interpretation of data in countries with small samples (eg. Portugal) by
+filtering out countries with large samples (e.g. China).
 
 The usability of this tool was tested by agnostic individuals, and the results
 indicate that the data filtering and customizable mapping features encourage a
