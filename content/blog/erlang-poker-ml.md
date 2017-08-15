@@ -123,8 +123,11 @@ below), where we can obtain the number of wins attained with the
 CurrentHand, but also the possible hands that can be obtained in future rounds
 knowing the CurrentHand. So:
 
-`$$P(Round(N), CurrentHand) = \frac{winCountCurrentHand}{totalMatchesCount} =
-\\ = \sum \left ( \frac{winCountPossibleHand(x)}{totalMatchesCount} + \\ \left
+`$$P(Round(N), CurrentHand) = \frac{winCountCurrentHand}{totalMatchesCount}$$`
+
+which is equivalent to
+
+`$$ = \sum \left ( \frac{winCountPossibleHand(x)}{totalMatchesCount} + \\ \left
 ( PossibleHand(x) of Round(N+1) | CurrentHand \right ) \right )$$`
 
 Once all of the expected profits are calculated, the action that the user
