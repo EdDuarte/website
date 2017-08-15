@@ -27,7 +27,7 @@ collected over time is sent between functions in a stateless manner and
 persisted to disk using Eresye.
 
 With this, I developed a Erlang application with a CLI interface that collects
-game data and sends win-lose percentages at each round. It works by prompting
+game data and sends win-lose percentages on each round. It works by prompting
 the user to fill the card in his/her hand and table for each round, and
 whenever the user won or lost each match. The probabilities of occurrence for
 each card per round, along with the probability of winning or losing the match

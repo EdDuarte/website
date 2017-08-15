@@ -46,7 +46,7 @@ Additionally, the represented data is normalized within an adjustable scale.
 This can be used to filter out extremely high or extremely low samples,
 uniforming the remaining data and improving its visibility.
 
-Our prototype was developed with demographic data in mind, like like total
+Our prototype was developed with demographic data in mind, like total
 population, density, population-growth, life expectancy, net migration, crude
 birth rate, crude death rate and the ratio between the last two. However, today
 it actually allows the visual exploration of the any kind of numerical data
