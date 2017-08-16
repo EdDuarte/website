@@ -6,22 +6,24 @@ date: '2017-08-16'
 
 ## Experience
 
-Recently finished my internship at Ubiwhere, where I worked as a backend
-developer (business process modeling and integration platform) and a mobile
-developer (Android and iOS applications for various brands brands like
-Vodafone, Anacom and Prio).
+Recently finished my internship at [Ubiwhere](http://www.ubiwhere.com/en/),
+where I worked as a backend developer (business process modeling and
+integration platform for [University of Coimbra](http://www.uc.pt/en)) and a
+mobile developer (Android and iOS applications for various brands brands like
+Vodafone, [Anacom](http://www.netmede.pt/app),
+[Prio](https://app.prioenergy.com/), [Bikemotion](http://www.bikeemotion.com/)
+and [Citibrain](http://www.citibrain.com/en/)).
 
 I have co-founded two tech startups where I had the chance to act both as a
-creative director and a lead developer, guiding co-workers in the development
-and advertising of mobile apps, overseeing the interactive design of the final
-product and devising unique interactive and interface ideas in the consumer
-space.
+creative director and a technical lead, guiding co-workers in the development
+and marketing of mobile apps, overseeing the interactive design of the final
+product, and devising unique ideas in the consumer space.
 
 I also have a strong background in academia: earned a Bachelor in Information
 Technology (currently finishing up my Master's in Software Engineering); worked
-with a bioinformatics research team; published three papers in fields such as
-Information Security and Information Visualization; and spoken at various
-conferences around the globe.
+with a bioinformatics research team; published three papers in various fields,
+such as Information Security and Information Visualization; and spoken at
+various conferences around the globe.
 
 ## Ethos
 

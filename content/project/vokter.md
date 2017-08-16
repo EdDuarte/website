@@ -1,5 +1,6 @@
 ---
-title: "Vokter, a Java library that detects changes in web documents"
+title: "Vokter, a Java library that detects and notifies changes in web
+documents"
 description: "High-performant library that uses LSH, DiffMatchPatch and Bloom
 filters to detect and notify textual changes in web documents."
 links:

@@ -2,27 +2,29 @@
 {{ if .IsHome }}
 <title>{{ .Title }}</title>
 </head>
-
 <body>
 {{ partial "intro.html" . }}
 {{ else }}
 <title>{{ .Title }} - Eduardo Duarte</title>
 </head>
-
 <body>
 <div class="homelink">
 	<a href="{{ .Site.BaseURL }}">edduarte.com</a>
 </div>
-<h1 style="margin-bottom: 15px;">{{ .Title }}</h1>
+<h1 style="margin-bottom: 1em;">{{ .Title }}</h1>
 {{ end }}
-
 
 <ul class="list">
 {{ range (where .Data.Pages "Section" "!=" "") }}
 <li>
 <div class="table" style="margin-bottom: 1em;">
+{{ if $.IsHome }}
 <div class="col1 list-meta">
-	<span class="date">{{ .Date.Format "2006 Jan 02" }}</span> &nbsp;{{ .Section }}
+{{ else }}
+<div class="col1 list-meta" style="margin-top:0.3em;">
+{{ end }}
+{{ if .IsHome }} a {{ end }}
+<span class="date">{{ .Date.Format "2006 Jan 02" }}</span>{{ if $.IsHome }} <a href="/{{ .Section }}">{{ .Section }}</a>{{ end }}
 </div>
 <div class="col2 list-title">
 	<a href="{{ .URL }}">{{ .Title }}</a>
