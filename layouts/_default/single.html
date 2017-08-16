@@ -33,7 +33,7 @@
 {{ end }}
 </header>
 
-<div class="footnote">
+<div class="metadata">
 {{ if .Params.date }}{{ .Date.Format "02 January 2006" }}{{ end }}
 {{ with .Params.medium }}<br/>This post can also be read on <a href="{{ . }}">Medium</a>.{{ end }}
 </div>
@@ -50,6 +50,6 @@
 {{ .Content }}
 </div>
 </article>
-<main>
+</main>
 
 {{ partial "footer.html" . }}

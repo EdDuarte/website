@@ -43,7 +43,7 @@ different protection features:
 
 - confidentiality, to prevent non-authorized readings;
 - integrity control, to detect malicious tampering;
-- protection against un- wanted file removals, either by malicious or
+- protection against un-wanted file removals, either by malicious or
   legitimate persons;
 - access control to the shared data based on strong identification and
   authentication of people, using the nowadays widespread electronic, personal

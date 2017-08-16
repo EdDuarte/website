@@ -8,10 +8,8 @@ date: '2015-05-31'
 medium: "https://medium.com/@edduarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
 slug: erlang-poker-ml
 links:
-    - Check this project on
     - Github
 linkUrls:
-    - 
     - https://github.com/edduarte/erlang-poker-ml
 ---
 

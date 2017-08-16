@@ -20,11 +20,11 @@
 <ul class="list">
 {{ range (where .Data.Pages "Section" "!=" "") }}
 <li>
-<div class="table">
+<div class="table" style="margin-bottom: 1em;">
 <div class="col1 list-meta">
 	<span class="date">{{ .Date.Format "2006 Jan 02" }}</span> | {{ .Section }}
 </div>
-<div class="col2">
+<div class="col2 list-title">
 	<a href="{{ .URL }}">{{ .Title }}</a>
 </div>
 </div>
