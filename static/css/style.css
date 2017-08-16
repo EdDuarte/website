@@ -261,6 +261,7 @@ img.myphoto {
 	min-width: 100px;
 	min-height: 100px;
 	border-radius: 100px;
+	margin: 0;
 	margin-top: 15vw;
 	margin-bottom: 1vw;
 }
