@@ -1,5 +1,5 @@
 ---
-title: "Developing a knowledge management system for Texas Hold'em outcome
+title: "Developing a knowledge-based system for Texas Hold'em outcome
 prediction in Erlang"
 description: "Implementation of a decision-tree classifier and a disk
 persistence module to evaluate win-lose probabilities over a Poker Texas
@@ -123,10 +123,13 @@ knowing the CurrentHand. So:
 
 `$$P(Round(N), CurrentHand) = \frac{winCountCurrentHand}{totalMatchesCount}$$`
 
-which is equivalent to
+Assuming that the variable *T* represents the **total number of matches**
+recorded in history, the variable *W* represents the **win count** for any of
+the possible hands, and the variable *NR* represents a possible hand in the
+**next round**, then the above expression can be resolved into the following:
 
-`$$ = \sum \left ( \frac{winCountPossibleHand(x)}{totalMatchesCount} + \\ \left
-( PossibleHand(x) of Round(N+1) | CurrentHand \right ) \right )$$`
+`$$ = \sum \left ( \frac{W(x)}{T} + \left
+( NR | CurrentHand \right ) \right )$$`
 
 Once all of the expected profits are calculated, the action that the user
 should take corresponds to the one that has the higher expected profit.

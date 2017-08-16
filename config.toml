@@ -6,13 +6,12 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
 disableKinds = ["tags", "categories"]
-pluralizelisttitles = "false"
 
 [taxonomies]
   category = ""
   tags = ""
 
 [permalinks]
-    blog = "/:slug/"
-    talk = "/:slug/"
+    essay = "/:slug/"
+    project = "/:slug/"
     paper = "/:slug/"
