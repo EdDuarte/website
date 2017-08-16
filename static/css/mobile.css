@@ -36,6 +36,10 @@ h3 {
 	font-size: 1.2em;
 }
 
+a {
+	background-size: 5px 1px;
+}
+
 footer {
 	font-size: 0.8em;
 }
