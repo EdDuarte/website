@@ -159,7 +159,7 @@ h4 {
 .metadata {
 	font-size: 1em;
 	color: #737477;
-	line-height: 1.4em;
+	line-height: 1.8em;
 	letter-spacing: -.04em;
 	margin-top: 0;
 	margin-bottom: 0.9em;
@@ -167,7 +167,7 @@ h4 {
 
 .metadata > p {
 	margin: 0;
-	margin-bottom: 0.5em;
+	margin-bottom: 0.1em;
 }
 
 a {
@@ -181,9 +181,11 @@ a {
 }
 
 .table > .list-title > a {
-	color: #69B9B7;
+	/*color: #69B9B7;
 	text-decoration: none;
-	background-image: none;
+	background-image: none;*/
+	background-size: 5px 2px;
+	background-position: 0 1.41em;
 }
 
 a:has(> img) {
