@@ -39,8 +39,13 @@ body {
 	padding: 1em;
 }
 
-body, img {
+body {
 	max-width: 622px;
+}
+
+img {
+	max-width: 120%;
+	margin-left: -10%;
 }
 
 footer {
@@ -346,7 +351,7 @@ img.centered:empty {
 	font-size: 16px;
 }
 
-@media all and (max-width: 670px) {
+@media all and (max-width: 825px) {
 	html {
 		font-size: 15px;
 		font-weight: 400;
@@ -354,6 +359,7 @@ img.centered:empty {
 
 	img {
 		max-width: 100%;
+		margin-left: 0;
 	}
 
 	.title, h1, h2, h3, h4, h5, h6, footer {

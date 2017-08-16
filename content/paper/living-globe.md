@@ -34,7 +34,7 @@ visualization-of-world-demographic-data-c3eeb1845c51"
 slug: living-globe
 ---
 
-[![Current prototype of Living Globe](/hcii2016/living-globe-v3-8-small.png)](https://edduarte.github.io/living-globe)
+[![Current prototype of Living Globe](/hcii2016/screenshot.png)](https://edduarte.github.io/living-globe)
 
 Living Globe is a WebGL application for tri-dimensional worldwide data
 visualization. It allows the simultaneous representation of multiple indicators
