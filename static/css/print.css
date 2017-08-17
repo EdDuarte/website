@@ -4,7 +4,9 @@ html
 	background-color: #fff
 }
 
-.myname a,
+.myname,
+.myemail a,
+.mylinks a,
 .title,
 h1,
 h2,
@@ -22,29 +24,31 @@ h6
 	background-image: linear-gradient(to right, #111 50%, #111 50%)
 }
 
+a,
 .homelink a,
-.table>.list-meta>a,
-.table>.list-title>a,
+.table > .list-meta > a,
+.table > .list-title > a,
 footer a,
 html
 {
 	color: #333
 }
 
+.myemail a:hover,
+.mylinks a:hover,
 .homelink a:hover,
 .table>.list-meta>a:hover,
-.table>.list-title>a:hover,
 footer a:hover
 {
-	background-image: linear-gradient(to right, #333 50%, #333 50%)
+	background-image: none
 }
 
-.links>li>a
+.links > li > a
 {
 	border: 1px solid #e5e5e5
 }
 
-.links>li>a:hover
+.links > li > a:hover
 {
 	background: #e5e5e5
 }

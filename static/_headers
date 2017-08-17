@@ -1,0 +1,9 @@
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: origin-when-cross-origin
+  Cache-Control: public, max-age=360000
+/
+  Link: </{{ "css/style.css" | relURL }}>; rel=preload; as=stylesheet
+  Link: </{{ "css/mobile.css" | relURL }}>; rel=preload; as=stylesheet
