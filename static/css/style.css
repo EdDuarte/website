@@ -63,6 +63,7 @@ h6
 .metadata,
 .skills,
 .subtitle,
+.table > .list-title,
 footer
 {
 	font-weight: 400
@@ -213,8 +214,13 @@ h1
 .subtitle
 {
 	line-height: 1.2em;
-	margin: .2em 0 .3em;
-	color: #fe5f55
+	margin: .2em 0 .3em
+}
+
+.subtitle,
+.subtitle a
+{
+	color: #fe5f55;
 }
 
 h2
@@ -251,7 +257,7 @@ h4
 	line-height: 1.8em;
 	letter-spacing: -.04em;
 	margin-top: 0;
-	margin-bottom: .9em
+	margin-bottom: .5em
 }
 
 .metadata > p
@@ -261,16 +267,22 @@ h4
 
 .date,
 .metadata,
-.skills,
-a
+.metadata a,
+.skills
 {
 	color: #737477
+}
+
+.metadata a
+{
+	background-image: linear-gradient(to right, #737477 50%, #737477 50%);
 }
 
 a
 {
 	text-decoration: none;
-	background-image: linear-gradient(to right, #737477 50%, #737477 50%);
+	color: #8fd694;
+	background-image: linear-gradient(to right, #8fd694 50%, #8fd694 50%);
 	background-position: 0 1.38em;
 	background-repeat: repeat-x;
 	background-size: 5px 2px;
@@ -279,7 +291,6 @@ a
 
 .homelink a,
 .table > .list-meta > a,
-.table > .list-title > a,
 footer a
 {
 	color: #daddd8;
@@ -292,12 +303,17 @@ footer a
 }
 
 .homelink a:hover,
-.table > .list-title > a:hover,
 footer a:hover
 {
 	background-image: linear-gradient(to right, #daddd8 50%, #daddd8 50%);
 	background-repeat: repeat-x;
 	background-origin: border-box
+}
+
+.table > .list-title > a
+{
+	background-position: 0 1.45em;
+	background-size: 5px 1px
 }
 
 .homelink a:hover,
@@ -310,11 +326,6 @@ footer a:hover
 {
 	background-position: 0 1.2em;
 	background-size: 5px 1px
-}
-
-.table > .list-title > a:hover
-{
-	background-position: 0 1.37em
 }
 
 ul
@@ -366,7 +377,7 @@ hr
 
 pre
 {
-	margin: 0;
+	margin: 0 0 2em 0;
 	background-color: #0b0c0f;
 	border-radius: 6px;
 	color: #fff;

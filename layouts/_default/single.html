@@ -4,7 +4,7 @@
 
 <body>
 <div class="homelink"><a href="{{ .Site.BaseURL }}">edduarte.com</a></div>
-<main>
+
 <article>
 <header>
 <p class="title">{{ .Title }}</p>
@@ -23,6 +23,7 @@
 {{ end }}
 </p>
 {{ end }}
+{{ if .Params.date }}<p>{{ .Date.Format "02 January 2006" }}</p>{{ end }}
 </div>
 
 {{ $linkList := .Params.links }}
@@ -34,15 +35,13 @@
 {{ end }}
 </header>
 
-<div class="content">
+<section class="content">
 {{ .Content }}
-</div>
+</section>
 </article>
-</main>
 
 <div class="metadata">
 {{ with .Params.medium }}<p>This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
-{{ if .Params.date }}<p>{{ .Date.Format "02 January 2006" }}</p>{{ end }}
 </div>
 
 {{ partial "footer.html" . }}
