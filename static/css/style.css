@@ -95,12 +95,12 @@ footer
 
 summary
 {
-	margin-top: 2em
+	margin-top: 1em
 }
 
 .skills
 {
-	margin-top: 1em
+	margin-top: 0.5em
 }
 
 blockquote,
@@ -120,13 +120,35 @@ small
 	letter-spacing: -.045em
 }
 
+.myname,
+.myemail,
+.mylinks
+{
+	margin-bottom: 0;
+	letter-spacing: -.06em
+}
+
 .myname
 {
-	letter-spacing: -.06em
+	margin-top: 0
+}
+
+.myemail
+{
+	margin-top: 0.5em
+}
+
+.mylinks
+{
+	margin-top: 0.7em;
+	color: #fe5f55
 }
 
 .myname,
 .myname a,
+.myemail,
+.myemail a,
+.mylinks a,
 .title,
 .title a,
 h1,
@@ -146,6 +168,8 @@ h6 a
 }
 
 .myname a:hover,
+.myemail a:hover,
+.mylinks a:hover,
 .title a:hover,
 h1 a:hover,
 h2 a:hover,
