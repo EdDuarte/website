@@ -164,6 +164,7 @@ h5 a,
 h6,
 h6 a
 {
+	background-image: none;
 	color: #f8f5f4
 }
 
@@ -281,8 +282,12 @@ footer a
 	background-image: none
 }
 
+.table > .list-meta > a:hover
+{
+	text-decoration: underline;
+}
+
 .homelink a:hover,
-.table > .list-meta > a:hover,
 .table > .list-title > a:hover,
 footer a:hover
 {

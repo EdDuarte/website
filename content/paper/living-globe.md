@@ -34,8 +34,6 @@ visualization-of-world-demographic-data-c3eeb1845c51"
 slug: living-globe
 ---
 
-![Current prototype of Living Globe](/hcii2016/screenshot.png)
-
 Living Globe is a WebGL application for tri-dimensional worldwide data
 visualization. It allows the simultaneous representation of multiple indicators
 as spatial structures (bars and other objects located in a specific latitude-
@@ -45,6 +43,10 @@ encourages a more immediate, visual-only interpretation of the data.
 Additionally, the represented data is normalized within an adjustable scale.
 This can be used to filter out extremely high or extremely low samples,
 uniforming the remaining data and improving its visibility.
+
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+ data-src="/hcii2016/screenshot.png"
+ alt="Current prototype of Living Globe" />
 
 Our prototype was developed with demographic data in mind, like total
 population, density, population-growth, life expectancy, net migration, crude
