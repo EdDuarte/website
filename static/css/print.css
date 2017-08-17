@@ -1,28 +1,29 @@
 html {
-	color: #daddd8;
-	background-color: #0E1115;
+	color: #333;
+	background-color: #fff
 }
 
 .title, h1, h2, h3, h4, h5, h6, .myname a {
-	color: #F8F5F4;
+	color: #111;
+	font-weight:400
 }
 
 .myname a:hover {
-	background-image: linear-gradient(to right, #F8F5F4 50%, #F8F5F4 50%);
+	background-image: linear-gradient(to right, #111 50%, #111 50%)
 }
 
 .homelink a, footer a, .table > .list-meta > a, .table > .list-title > a {
-	color: #daddd8;
+	color: #333
 }
 
 .homelink a:hover, footer a:hover, .table > .list-meta > a:hover, .table > .list-title > a:hover {
-	background-image: linear-gradient(to right, #daddd8 50%, #daddd8 50%);
+	background-image: linear-gradient(to right, #333 50%, #333 50%)
 }
 
 .links > li > a {
-    border: 1px solid #2F2F2F;
+    border: 1px solid #E5E5E5
 }
 
 .links > li > a:hover {
-    background: #2F2F2F;
+    background: #E5E5E5
 }
