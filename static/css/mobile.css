@@ -74,6 +74,11 @@ footer
 	margin-bottom: .9em
 }
 
+.table li
+{
+	padding: 5px 0px 5px 0px
+}
+
 .table>.list-meta
 {
 	margin-top: 1em;

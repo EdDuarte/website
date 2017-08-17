@@ -9,7 +9,6 @@
 <header>
 <p class="title">{{ .Title }}</p>
 <p class="subtitle">{{ .Params.subtitle }}</p>
-</header>
 
 <div class="metadata">
 {{ $authorList := .Params.authors }}
@@ -24,8 +23,6 @@
 {{ end }}
 </p>
 {{ end }}
-{{ with .Params.medium }}<p>This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
-{{ if .Params.date }}<p>{{ .Date.Format "02 January 2006" }}</p>{{ end }}
 </div>
 
 {{ $linkList := .Params.links }}
@@ -35,11 +32,17 @@
 {{ range $i, $temp := $linkList }}{{ $link := index $linkUrlList $i }}{{ if $link }}<li><a href="{{ $link }}">{{ . }}</a></li>{{ else }}<li>{{ . }}</li>{{ end }}{{ end }}
 </ul>
 {{ end }}
+</header>
 
 <div class="content">
 {{ .Content }}
 </div>
 </article>
 </main>
+
+<div class="metadata">
+{{ with .Params.medium }}<p>This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
+{{ if .Params.date }}<p>{{ .Date.Format "02 January 2006" }}</p>{{ end }}
+</div>
 
 {{ partial "footer.html" . }}

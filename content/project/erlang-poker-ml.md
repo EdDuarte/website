@@ -4,13 +4,15 @@ prediction in Erlang"
 description: "Implementation of a decision-tree classifier and a disk
 persistence module to evaluate win-lose probabilities over a Poker Texas
 Hold'em game."
+links:
+    - Check this project on
+    - Github
+linkUrls:
+    - 
+    - https://github.com/edduarte/erlang-poker-ml
 date: '2015-05-31'
 medium: "https://medium.com/@edduarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
 slug: erlang-poker-ml
-links:
-    - Github
-linkUrls:
-    - https://github.com/edduarte/erlang-poker-ml
 ---
 
 For a University class project we were asked to implement a decision-tree
