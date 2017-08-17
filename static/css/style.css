@@ -56,7 +56,10 @@ footer {
 
 summary {
 	margin-top: 2em;
-	margin-bottom: 1em;
+}
+
+.skills {
+	margin-top: 1em;
 }
 
 dfn {
@@ -69,13 +72,17 @@ small {
 
 .homelink {
 	margin: 0;
+	letter-spacing: -.045em;
+}
+
+.myname {
 	letter-spacing: -.060em;
 }
 
 .title {
 	font-size: 2em;
 	line-height: 1.22em;
-	letter-spacing: -.060em;
+	letter-spacing: -.025em;
 	margin: 0;
 	margin-top: 0.1em;
 	margin-bottom: 0;
@@ -120,13 +127,8 @@ h4 {
 	margin-top: 2.17em;
 }
 
-
-.skills {
-	margin-bottom: 1.5em;
-}
-
-.date {
-	color: #fe5f55;
+.skills, .date {
+	color: #737477;
 }
 
 .metadata {
@@ -170,16 +172,16 @@ a:has(> img) {
 	background-origin: border-box;
 }
 
-.table > .list-title > a {
-	color: #737477;
-	background-image: none;
+.table > .list-meta > a:hover {
+	background-size: 5px 1px;
 }
 
-.table > .list-title > a:hover {
-	background-image: linear-gradient(to right, #737477 50%, #737477 50%);
-	background-position: 0 1.1em;
+.table > .list-title > a {
+	color: #333;
+	background-image: linear-gradient(to right, #333 50%, #333 50%);
+	background-position: 0 1.35em;
 	background-repeat: repeat-x;
-	background-size: 5px 2px;
+	background-size: 5px 1px;
 	background-origin: border-box;
 }
 
@@ -189,10 +191,6 @@ footer a:hover {
 
 .table > .list-meta > a:hover {
 	background-position: 0 1.2em;
-}
-
-.table > .list-title > a:hover {
-	background-position: 0 1.3em;
 }
 
 ul {
@@ -309,11 +307,12 @@ img.centered:empty {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-	margin-top: 2em;
+	margin-top: 1.5em;
 }
 
 .table {
 	margin: 0;
+	margin-bottom: 0.9em;
 	padding: 0;
 	display: flex;
 	flex-flow: row;

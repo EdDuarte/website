@@ -3,7 +3,7 @@ html {
 	background-color: #0E1115;
 }
 
-.title, .skills, h1, h2, h3, h4, h5, h6, .myname a {
+.title, h1, h2, h3, h4, h5, h6, .myname a {
 	color: #F8F5F4;
 }
 
@@ -16,6 +16,11 @@ html {
 }
 
 .homelink a:hover, footer a:hover, .table > .list-meta > a:hover {
+	background-image: linear-gradient(to right, #daddd8 50%, #daddd8 50%);
+}
+
+.table > .list-title > a {
+	color: #daddd8;
 	background-image: linear-gradient(to right, #daddd8 50%, #daddd8 50%);
 }
 

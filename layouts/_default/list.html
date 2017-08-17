@@ -14,18 +14,14 @@
 <ul class="list">
 {{ range (where .Data.Pages "Section" "!=" "") }}
 <li>
-<div class="table" style="margin-bottom: 1em;">
-{{ if $.IsHome }}
+<div class="table">
 <div class="col1 list-meta">
-{{ else }}
-<div class="col1 list-meta" style="margin-top:0.3em;">
-{{ end }}
 {{ if .IsHome }} a {{ end }}
 <span class="date">{{ .Date.Format "2006 Jan 02" }}</span>
 {{ if $.IsHome }}
-<!-- <a href="/{{ .Section }}" class="category"> -->
+<a href="/{{ .Section }}" class="category">
 {{ .Section }}
-<!-- </a> -->
+</a>
 {{ end }}
 </div>
 <div class="col2 list-title">
