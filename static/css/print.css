@@ -1,29 +1,50 @@
-html {
+
+html
+{
 	color: #333;
 	background-color: #fff
 }
 
-.title, h1, h2, h3, h4, h5, h6, .myname a {
+.title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.myname a
+{
 	color: #111;
-	font-weight:400
+	font-weight: 400
 }
 
-.myname a:hover {
+.myname a:hover
+{
 	background-image: linear-gradient(to right, #111 50%, #111 50%)
 }
 
-.homelink a, footer a, .table > .list-meta > a, .table > .list-title > a {
+.homelink a,
+footer a,
+.table > .list-meta > a,
+.table > .list-title > a
+{
 	color: #333
 }
 
-.homelink a:hover, footer a:hover, .table > .list-meta > a:hover, .table > .list-title > a:hover {
+.homelink a:hover,
+footer a:hover,
+.table > .list-meta > a:hover,
+.table > .list-title > a:hover
+{
 	background-image: linear-gradient(to right, #333 50%, #333 50%)
 }
 
-.links > li > a {
+.links > li > a
+{
     border: 1px solid #E5E5E5
 }
 
-.links > li > a:hover {
+.links > li > a:hover
+{
     background: #E5E5E5
 }
