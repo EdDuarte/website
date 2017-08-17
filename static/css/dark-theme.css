@@ -11,16 +11,11 @@ html {
 	background-image: linear-gradient(to right, #F8F5F4 50%, #F8F5F4 50%);
 }
 
-.homelink a, footer a, .table > .list-meta > a {
+.homelink a, footer a, .table > .list-meta > a, .table > .list-title > a {
 	color: #daddd8;
 }
 
-.homelink a:hover, footer a:hover, .table > .list-meta > a:hover {
-	background-image: linear-gradient(to right, #daddd8 50%, #daddd8 50%);
-}
-
-.table > .list-title > a {
-	color: #daddd8;
+.homelink a:hover, footer a:hover, .table > .list-meta > a:hover, .table > .list-title > a:hover {
 	background-image: linear-gradient(to right, #daddd8 50%, #daddd8 50%);
 }
 

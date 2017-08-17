@@ -47,12 +47,13 @@ footer {
 .table {
 	flex-direction: column;
 	align-items: normal;
-	margin-bottom: 1.5em;
+	margin-bottom: 0.9em;
 }
 
 .table > .list-meta {
 	margin-top: 1em;
-	margin-bottom: 0.1em;
+	margin-bottom: 0.3em;
+	font-size: 0.8em;
 }
 
 .table > .list-title {
