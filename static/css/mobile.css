@@ -1,8 +1,7 @@
 
 html
 {
-	font-size: 15px;
-	font-weight: 400
+	font-size: 15px
 }
 
 img
@@ -17,21 +16,21 @@ h2,
 h3,
 h4,
 h5,
-h6
+h6,
+html
 {
-	font-weight:400
+	font-weight: 400
 }
 
 code,
 kbd,
 pre,
-samp,
-.table > .list-title
+samp
 {
-	font-size: 0.85em
+	font-size: .85em
 }
 
-.table > div
+.table>div
 {
 	font-size: 1em
 }
@@ -41,8 +40,8 @@ samp,
 	font-size: 1.8em
 }
 
-h1,
-.subtitle
+.subtitle,
+h1
 {
 	font-size: 1.6em
 }
@@ -57,6 +56,7 @@ h3
 	font-size: 1.2em
 }
 
+.table>.list-title>a:hover,
 a
 {
 	background-size: 5px 1px
@@ -64,40 +64,35 @@ a
 
 footer
 {
-	font-size: 0.8em
+	font-size: .8em
 }
 
 .table
 {
 	flex-direction: column;
 	align-items: normal;
-	margin-bottom: 0.9em
+	margin-bottom: .9em
 }
 
-.table > .list-meta
+.table>.list-meta
 {
 	margin-top: 1em;
-	margin-bottom: 0.4em;
-	font-size: 0.7em
+	margin-bottom: .4em;
+	font-size: .7em
 }
 
-.table > .list-title
+.table>.list-title
 {
-	font-size: 0.9em
+	font-size: .9em
 }
 
-.table > .list-title > a:hover
-{
-	background-size: 5px 1px
-}
-
-footer > .table
+footer>.table
 {
 	text-align: center
 }
 
-.table > .col1,
-.table > .col2
+.table>.col1,
+.table>.col2
 {
 	order: 0
 }

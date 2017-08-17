@@ -12,13 +12,13 @@ html
 	background-color: #0e1115
 }
 
+.table > .list-meta,
 code,
 kbd,
 pre,
-samp,
-.table > .list-meta
+samp
 {
-	font-family: 'Oxygen Mono',monospace;
+	font-family: 'Oxygen Mono', monospace;
 	font-weight: 200;
 	line-height: 1.5em;
 	letter-spacing: 0
@@ -32,18 +32,18 @@ samp
 	font-size: .88em
 }
 
-.title,
 .homelink,
-.subtitle,
 .links,
 .skills,
+.subtitle,
+.title,
+footer,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-footer
+h6
 {
 	font-family: 'Varela Round', 'Work Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', Arial, sans-serif
 }
@@ -103,7 +103,8 @@ summary
 	margin-top: 1em
 }
 
-blockquote, dfn
+blockquote,
+dfn
 {
 	font-style: italic
 }
@@ -176,8 +177,8 @@ h4
 	margin: .1em 0 0
 }
 
-h1,
-.subtitle
+.subtitle,
+h1
 {
 	margin: 1em 0 -.3em;
 	font-size: 1.8em;
@@ -207,6 +208,7 @@ h3
 	margin-top: 1.75em
 }
 
+.metadata,
 h4
 {
 	font-size: 1em;
@@ -217,7 +219,6 @@ h4
 
 .metadata
 {
-	font-size: 1em;
 	line-height: 1.8em;
 	letter-spacing: -.04em;
 	margin-top: 0;
@@ -229,10 +230,10 @@ h4
 	margin: 0 0 .1em
 }
 
-a,
 .date,
 .metadata,
-.skills
+.skills,
+a
 {
 	color: #737477
 }
@@ -248,29 +249,25 @@ a
 }
 
 .homelink a,
-footer a,
 .table > .list-meta > a,
-.table > .list-title > a
+.table > .list-title > a,
+footer a
 {
 	color: #daddd8;
 	background-image: none
 }
 
 .homelink a:hover,
-footer a:hover,
 .table > .list-meta > a:hover,
-.table > .list-title > a:hover
+.table > .list-title > a:hover,
+footer a:hover
 {
 	background-image: linear-gradient(to right, #daddd8 50%, #daddd8 50%);
 	background-repeat: repeat-x;
 	background-origin: border-box
 }
 
-.homelink a:hover
-{
-	background-position: 0 1.1em
-}
-
+.homelink a:hover,
 footer a:hover
 {
 	background-position: 0 1.1em
@@ -381,8 +378,8 @@ table thead th
 	border-bottom: 1px solid #daddd8
 }
 
-th,
-td
+td,
+th
 {
 	padding: 5px
 }
