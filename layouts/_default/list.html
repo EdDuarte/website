@@ -1,17 +1,14 @@
 {{ partial "header.html" . }}
-{{ if .IsHome }}
 <title>{{ .Title }}</title>
 </head>
 <body>
+{{ if .IsHome }}
 {{ partial "intro.html" . }}
 {{ else }}
-<title>{{ .Title }} - Eduardo Duarte</title>
-</head>
-<body>
 <div class="homelink">
 	<a href="{{ .Site.BaseURL }}">edduarte.com</a>
 </div>
-<h1 style="margin-bottom: 1em;">{{ .Title }}</h1>
+<div class="content">{{ .Content }}</div>
 {{ end }}
 
 <ul class="list">
@@ -24,7 +21,12 @@
 <div class="col1 list-meta" style="margin-top:0.3em;">
 {{ end }}
 {{ if .IsHome }} a {{ end }}
-<span class="date">{{ .Date.Format "2006 Jan 02" }}</span>{{ if $.IsHome }} <a href="/{{ .Section }}">{{ .Section }}</a>{{ end }}
+<span class="date">{{ .Date.Format "2006 Jan 02" }}</span>
+{{ if $.IsHome }}
+<!-- <a href="/{{ .Section }}" class="category"> -->
+{{ .Section }}
+<!-- </a> -->
+{{ end }}
 </div>
 <div class="col2 list-title">
 	<a href="{{ .URL }}">{{ .Title }}</a>
@@ -34,8 +36,8 @@
 {{ end }}
 </ul>
 
-<div class="content">
-{{ .Content }}
-</div>
+{{ if .IsHome }}
+<div class="content">{{ .Content }}</div>
+{{ end }}
 
 {{ partial "footer.html" . }}

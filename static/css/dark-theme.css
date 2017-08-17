@@ -7,12 +7,16 @@ html {
 	color: #F8F5F4;
 }
 
-.article-meta, .homelink a, footer a, .table > .list-meta > a {
+.myname a:hover {
+	background-image: linear-gradient(to right, #F8F5F4 50%, #F8F5F4 50%);
+}
+
+.homelink a, footer a, .table > .list-meta > a {
 	color: #daddd8;
 }
 
-.homelink a:hover, footer a:hover, .myname a:hover, .table > .list-meta > a:hover {
-	background-image: linear-gradient(to right, #F8F5F4 50%, #F8F5F4 50%);
+.homelink a:hover, footer a:hover, .table > .list-meta > a:hover {
+	background-image: linear-gradient(to right, #daddd8 50%, #daddd8 50%);
 }
 
 .links > li > a {
