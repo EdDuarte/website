@@ -1,7 +1,6 @@
 
-html, .myname
+html
 {
-	color: #333;
 	background-color: #fff
 }
 
@@ -24,9 +23,50 @@ a,
 .table > .list-meta > a,
 .table > .list-title > a,
 footer a,
-html
+html,
+.myname,
+.myname a,
+.myemail,
+.myemail a,
+.mylinks a,
+.title,
+.title a,
+h1,
+h1 a,
+h2,
+h2 a,
+h3,
+h3 a,
+h4,
+h4 a,
+h5,
+h5 a,
+h6,
+h6 a
 {
 	color: #333
+}
+
+a,
+.homelink a,
+.myemail a,
+.mylinks a,
+.table > .list-meta > a,
+.table > .list-title > a,
+footer a,
+.myname a,
+.myemail a,
+.mylinks a,
+.title a,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a
+{
+	text-decoration: underline;
+	background-image: none
 }
 
 .links > li > a

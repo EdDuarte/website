@@ -34,8 +34,20 @@
 	ga('create', 'UA-103779128-1', 'auto');
 	ga('send', 'pageview');
 </script>
-<script type="text/javascript">
+<noscript id="deferred-styles">
+	<link rel="stylesheet"
+		  href="{{ "/css/print.css" | relURL }}"
+		  type="text/css"
+		  media="only print" />
+</noscript>
+<script type="text/javascript" async>
 	var init = function() {
+
+		var addStylesNode = document.getElementById("deferred-styles");
+		var replacement = document.createElement("div");
+		replacement.innerHTML = addStylesNode.textContent;
+		document.body.appendChild(replacement)
+		addStylesNode.parentElement.removeChild(addStylesNode);
 
 		var imgDefer = document.getElementsByTagName('img');
 		for (var i=0; i<imgDefer.length; i++) {
