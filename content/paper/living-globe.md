@@ -44,10 +44,6 @@ Additionally, the represented data is normalized within an adjustable scale.
 This can be used to filter out extremely high or extremely low samples,
 uniforming the remaining data and improving its visibility.
 
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
- data-src="/hcii2016/screenshot-compressed.png"
- alt="Current prototype of Living Globe" />
-
 Our prototype was developed with demographic data in mind, like total
 population, density, population-growth, life expectancy, net migration, crude
 birth rate, crude death rate and the ratio between the last two. However, today
@@ -56,6 +52,10 @@ structured in JSON by year and by country. We provide two example input files:
 “input.json” (containing demographic data between the years 1960 and 2014) and
 “input_alt.json” (containing miscellaneous data regarding finance, demography
 and employment between the years 1960 and 2014).
+
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+ data-src="/hcii2016/screenshot-compressed.png"
+ alt="Current prototype of Living Globe" />
 
 While offering inexperienced users a default mapping of these data variables
 into visual variables, Living Globe allows more advanced users to select the
