@@ -9,8 +9,6 @@
 
 <noscript id="deferred-styles">
 	<link rel="stylesheet"
-		  href="{{ "/css/style.css" | relURL }}"/>
-	<link rel="stylesheet"
 		  href="https://fonts.googleapis.com/css?family=Martel:700,900">
 <!-- 	<link rel="stylesheet"
 		  href="{{ "/css/style.css" | relURL }}"
@@ -34,7 +32,7 @@
 	ga('create', 'UA-103779128-1', 'auto');
 	ga('send', 'pageview');
 </script>
-<script type="text/javascript">
+<script type="text/javascript" async>
 	var init = function() {
 		var addStylesNode = document.getElementById("deferred-styles");
 		var replacement = document.createElement("div");
@@ -52,7 +50,7 @@
 	};
 	var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 	webkitRequestAnimationFrame || msRequestAnimationFrame;
-	if (raf) raf(function() { window.setTimeout(init, 0); });
+	if (raf) raf(function() { window.setTimeout(init, 1); });
 	else window.addEventListener('load', init);
 </script>
 </body>
