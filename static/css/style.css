@@ -4,18 +4,12 @@ html
 	font-family: 'Martel', 'Lucida Bright', 'Georgia', "Times New Roman", Times, serif;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	font-size: 16.7px;
-	font-weight: 400;
-	line-height: 1.8em;
-	letter-spacing: -.015em;
-	color: #daddd8;
-	background-color: #0e1115
-}
-
-.wf-active {
 	font-size: 16px;
+	font-weight: 400;
 	line-height: 2em;
 	letter-spacing: -.02em;
+	color: #daddd8;
+	background-color: #0e1115
 }
 
 .table > .list-meta,
@@ -51,7 +45,7 @@ h4,
 h5,
 h6
 {
-	font-family: 'Varela Round', 'Work Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', Arial, sans-serif
+	font-family: 'Varela Round', 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', Arial, sans-serif
 }
 
 .title,
@@ -97,7 +91,7 @@ img
 footer
 {
 	font-size: .8em;
-	margin: 0 0 -1em 0
+	margin: 0 0 -1em
 }
 
 summary
@@ -212,7 +206,6 @@ h4
 .subtitle,
 h1
 {
-	margin: 1em 0 -.3em;
 	font-size: 1.8em;
 	letter-spacing: -.045em
 }
@@ -227,6 +220,11 @@ h1
 .subtitle a
 {
 	color: #fe5f55;
+}
+
+h1
+{
+	margin: 1em 0 -.3em
 }
 
 h2
@@ -284,15 +282,27 @@ h4
 	background-image: linear-gradient(to right, #737477 50%, #737477 50%);
 }
 
+a,
+.homelink a:hover,
+footer a:hover
+{
+	background-repeat: repeat-x;
+	background-origin: border-box
+}
+
 a
 {
 	text-decoration: none;
 	color: #8fd694;
 	background-image: linear-gradient(to right, #8fd694 50%, #8fd694 50%);
 	background-position: 0 1.38em;
-	background-repeat: repeat-x;
-	background-size: 5px 2px;
-	background-origin: border-box
+	background-size: 5px 2px
+}
+
+.homelink a:hover,
+footer a:hover
+{
+	background-image: linear-gradient(to right, #daddd8 50%, #daddd8 50%)
 }
 
 .homelink a,
@@ -306,14 +316,8 @@ footer a
 .table > .list-meta > a:hover
 {
 	text-decoration: underline;
-}
-
-.homelink a:hover,
-footer a:hover
-{
-	background-image: linear-gradient(to right, #daddd8 50%, #daddd8 50%);
-	background-repeat: repeat-x;
-	background-origin: border-box
+	background-position: 0 1.2em;
+	background-size: 5px 1px
 }
 
 .table > .list-title > a
@@ -325,12 +329,6 @@ footer a:hover
 footer a:hover
 {
 	background-position: 0 1.1em
-}
-
-.table > .list-meta > a:hover
-{
-	background-position: 0 1.2em;
-	background-size: 5px 1px
 }
 
 ul
@@ -382,7 +380,7 @@ hr
 
 pre
 {
-	margin: 0 0 2em 0;
+	margin: 0 0 2em;
 	background-color: #0b0c0f;
 	border-radius: 6px;
 	color: #fff;
@@ -514,12 +512,6 @@ img.centered:empty
 	order: 2
 }
 
-.table > .list-title
-{
-	font-size: .92em;
-	letter-spacing: -.02em
-}
-
 .table > .list-meta
 {
 	font-size: .7em;
@@ -534,4 +526,44 @@ img.centered:empty
 .mjx-math
 {
 	font-size: 16px
+}
+
+.content > p,
+article > .content > p,
+summary
+{
+	font-size: 103.5%;
+	line-height: 1.92em;
+	letter-spacing: -.015em
+}
+
+.table > .list-title
+{
+	font-size: .95em;
+	letter-spacing: -.02em
+}
+
+.wf-loading > body > .content > p,
+.wf-loading > body > article > .content > p,
+.wf-loading > body > summary,
+.wf-loading > body > .list > li > .table > .list-title
+{
+	visibility: hidden
+}
+
+.wf-active > body > .content > p,
+.wf-active > body > article > .content > p,
+.wf-active > body > summary
+{
+	font-size: 100%;
+	line-height: 2em;
+	letter-spacing: -.02em;
+	visibility: visible
+}
+
+.wf-active > body > .list > li > .table > .list-title
+{
+	font-size: .92em;
+	letter-spacing: -.02em;
+	visibility: visible
 }
