@@ -33,7 +33,6 @@ samp
 }
 
 .homelink,
-.links,
 .skills,
 .subtitle,
 .title,
@@ -45,7 +44,12 @@ h4,
 h5,
 h6
 {
-	font-family: 'Varela Round', 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', Arial, sans-serif
+	font-family: 'Nunito', 'Lucida Sans Unicode', 'Geneva', Arial, sans-serif
+}
+
+.links
+{
+	font-family: 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', Arial, sans-serif
 }
 
 .title,
@@ -54,17 +58,17 @@ h2,
 h3,
 h4,
 h5,
-h6
+h6,
+footer
 {
-	font-weight: 400 /* TODO: Should be 600, but Varela Round 600 looks bad */
+	font-weight: 600
 }
 
 .links,
 .metadata,
 .skills,
 .subtitle,
-.table > .list-title,
-footer
+.table > .list-title
 {
 	font-weight: 400
 }
@@ -101,7 +105,7 @@ summary
 
 .skills
 {
-	margin-top: 0.5em
+	margin-top: 0.8em
 }
 
 blockquote,
@@ -199,21 +203,21 @@ h4
 .title
 {
 	font-size: 2em;
-	letter-spacing: -.052em;
+	letter-spacing: -.024em;
 	margin: 0
 }
 
 .subtitle,
 h1
 {
-	font-size: 1.8em;
-	letter-spacing: -.045em
+	font-size: 1.7em;
+	letter-spacing: -.035em
 }
 
 .subtitle
 {
-	line-height: 1.2em;
-	margin: .2em 0 .3em
+	line-height: 1.25em;
+	margin: .2em 0 .15em
 }
 
 .subtitle,
