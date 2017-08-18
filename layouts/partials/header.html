@@ -31,8 +31,51 @@ Parse, Firebase, Quartz, Semantic Web, JavaScript, jQuery, HTML">
 
 html
 {
+	font-family: 'Martel', 'Cambria', "Times New Roman", Times, serif;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 2em;
+	letter-spacing: -.02em;
+	color: #daddd8;
+	background-color: #0e1115
+}
+
+.table > .list-meta,
+code,
+kbd,
+pre,
+samp
+{
+	font-family: 'Oxygen Mono', monospace;
+	font-weight: 200;
+	line-height: 1.5em;
+	letter-spacing: 0
+}
+
+code,
+kbd,
+pre,
+samp
+{
+	font-size: .88em
+}
+
+.homelink,
+.links,
+.skills,
+.subtitle,
+.title,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	font-family: 'Varela Round', 'Work Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', Arial, sans-serif
 }
 
 .title,
@@ -56,20 +99,80 @@ footer
 	font-weight: 400
 }
 
-footer
+b,
+strong
 {
-	color: #daddd8;
-	margin-left: 0
+	font-weight: 900
 }
 
-footer a
+body
 {
-	color: #daddd8
+	margin: auto;
+	padding: 1em;
+	max-width: 622px
+}
+
+img
+{
+	max-width: 120%;
+	margin-left: -10%
+}
+
+footer
+{
+	font-size: .8em;
+	margin: 0 0 -1em 0
+}
+
+summary
+{
+	margin-top: 1em
+}
+
+.skills
+{
+	margin-top: 0.5em
+}
+
+blockquote,
+dfn
+{
+	font-style: italic
 }
 
 small
 {
 	font-size: 80%
+}
+
+.homelink
+{
+	margin: 0;
+	letter-spacing: -.045em
+}
+
+.myname,
+.myemail,
+.mylinks
+{
+	margin-bottom: 0;
+	letter-spacing: -.06em
+}
+
+.myname
+{
+	margin-top: 0
+}
+
+.myemail
+{
+	margin-top: 0.5em
+}
+
+.mylinks
+{
+	margin-top: 0.8em;
+	color: #fe5f55
 }
 
 .myname,
@@ -93,6 +196,7 @@ h6,
 h6 a
 {
 	background-image: none;
+	color: #f8f5f4
 }
 
 .myname a:hover,
@@ -106,12 +210,97 @@ h4 a:hover,
 h5 a:hover,
 h6 a:hover
 {
-	text-decoration: none;
 	background-image: linear-gradient(to right, #f8f5f4 50%, #f8f5f4 50%);
 	background-position: 0 1.1em;
 	background-repeat: repeat-x;
 	background-size: 5px 2px;
 	background-origin: border-box
+}
+
+.title,
+h1,
+h2,
+h3,
+h4
+{
+	line-height: 1.2em
+}
+
+.title
+{
+	font-size: 2em;
+	letter-spacing: -.052em;
+	margin: 0
+}
+
+.subtitle,
+h1
+{
+	margin: 1em 0 -.3em;
+	font-size: 1.8em;
+	letter-spacing: -.045em
+}
+
+.subtitle
+{
+	line-height: 1.2em;
+	margin: .2em 0 .3em
+}
+
+.subtitle,
+.subtitle a
+{
+	color: #fe5f55;
+}
+
+h2
+{
+	font-size: 1.5em;
+	letter-spacing: -.038em;
+	margin-bottom: -.4em;
+	margin-top: 1.2em
+}
+
+h3
+{
+	font-size: 1.2em;
+	letter-spacing: -.031em;
+	margin-bottom: -.6em;
+	margin-top: 1.75em
+}
+
+.metadata,
+h4
+{
+	font-size: 1em
+}
+
+h4
+{
+	letter-spacing: -.025em;
+	margin-bottom: -.8em;
+	margin-top: 2.17em
+}
+
+.metadata
+{
+	line-height: 1.8em;
+	letter-spacing: -.04em;
+	margin-top: 0;
+	margin-bottom: .5em
+}
+
+.metadata > p
+{
+	margin: 0 0 .1em
+}
+
+.date,
+.metadata,
+.metadata a,
+.skills
+{
+	color: #737477
 }
 
 .metadata a
@@ -122,6 +311,7 @@ h6 a:hover
 a
 {
 	text-decoration: none;
+	color: #8fd694;
 	background-image: linear-gradient(to right, #8fd694 50%, #8fd694 50%);
 	background-position: 0 1.38em;
 	background-repeat: repeat-x;
@@ -133,6 +323,7 @@ a
 .table > .list-meta > a,
 footer a
 {
+	color: #daddd8;
 	background-image: none
 }
 
@@ -164,6 +355,21 @@ footer a:hover
 {
 	background-position: 0 1.2em;
 	background-size: 5px 1px
+}
+
+ul
+{
+	margin: -1.5em 0 -.6em .2em;
+	padding: 15px
+}
+
+.links
+{
+	padding: 0;
+	margin: 0;
+	font-size: 13px;
+	letter-spacing: 0;
+	font-style: normal
 }
 
 .links > li
@@ -198,9 +404,38 @@ hr
 	color: transparent
 }
 
+pre
+{
+	margin: 0 0 2em 0;
+	background-color: #0b0c0f;
+	border-radius: 6px;
+	color: #fff;
+	padding: .7em;
+	overflow-x: auto
+}
+
 pre code
 {
 	background: 0 0
+}
+
+iframe,
+video
+{
+	max-width: 100%
+}
+
+main
+{
+	margin-bottom: 40px
+}
+
+blockquote
+{
+	margin: 0;
+	padding: 0 0 0 1em;
+	border-left: 4px solid #daddd8;
+	border-radius: 4px
 }
 
 table
@@ -232,6 +467,40 @@ img.myphoto
 	max-height: 100px;
 	min-width: 100px;
 	min-height: 100px;
+	border-radius: 100px;
+	margin: 0;
+	margin-top: 15vw;
+	margin-bottom: 1vw
+}
+
+.centered
+{
+	text-align: center
+}
+
+img.centered
+{
+	position: relative;
+	top: 10%;
+	left: 10%
+}
+
+img.centered:empty
+{
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0%);
+	-moz-transform: translate(-50%, 0%);
+	-ms-transform: translate(-50%, 0%);
+	-o-transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%)
+}
+
+.list
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 1.5em 0 0
 }
 
 .table
@@ -248,6 +517,12 @@ img.myphoto
 	padding: 0px 10px 0px 0px
 }
 
+.table > div
+{
+	letter-spacing: -.035em;
+	line-height: 1.5em
+}
+
 .table > .col1,
 .table > .col2
 {
@@ -261,6 +536,18 @@ img.myphoto
 {
 	flex: 1 6 85%;
 	order: 2
+}
+
+.table > .list-title
+{
+	font-size: .92em;
+	letter-spacing: -.02em
+}
+
+.table > .list-meta
+{
+	font-size: .7em;
+	margin-top: 0
 }
 
 .table > div > a
