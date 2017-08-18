@@ -1,15 +1,21 @@
 
 html
 {
-	font-family: 'Martel', 'Cambria', "Times New Roman", Times, serif;
+	font-family: 'Martel', 'Lucida Bright', 'Georgia', "Times New Roman", Times, serif;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	font-size: 16px;
+	font-size: 16.8px;
 	font-weight: 400;
-	line-height: 2em;
-	letter-spacing: -.02em;
+	line-height: 1.8em;
+	letter-spacing: -.015em;
 	color: #daddd8;
 	background-color: #0e1115
+}
+
+.wf-active {
+	font-size: 16px;
+	line-height: 2em;
+	letter-spacing: -.02em;
 }
 
 .table > .list-meta,

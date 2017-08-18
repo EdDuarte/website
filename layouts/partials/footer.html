@@ -30,12 +30,6 @@
 </script>
 <script type="text/javascript">
 	var init = function() {
-		// var addStylesNode = document.getElementById("deferred-styles");
-		// var replacement = document.createElement("div");
-		// replacement.innerHTML = addStylesNode.textContent;
-		// document.body.appendChild(replacement)
-		// addStylesNode.parentElement.removeChild(addStylesNode);
-
 		var imgDefer = document.getElementsByTagName('img');
 		for (var i=0; i<imgDefer.length; i++) {
 			if(imgDefer[i].getAttribute('data-src')) {
@@ -46,7 +40,7 @@
 	};
 	var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 	webkitRequestAnimationFrame || msRequestAnimationFrame;
-	if (raf) raf(function() { window.setTimeout(init, 1); });
+	if (raf) raf(function() { window.setTimeout(init, 0); });
 	else window.addEventListener('load', init);
 </script>
 </body>

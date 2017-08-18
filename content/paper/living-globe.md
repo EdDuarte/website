@@ -45,7 +45,7 @@ This can be used to filter out extremely high or extremely low samples,
 uniforming the remaining data and improving its visibility.
 
 <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
- data-src="/hcii2016/screenshot.png"
+ data-src="/hcii2016/screenshot-compressed.png"
  alt="Current prototype of Living Globe" />
 
 Our prototype was developed with demographic data in mind, like total
