@@ -1,108 +1,97 @@
-
-html
-{
-	font-size: 15px
+html {
+    font-size: 15px
 }
 
-img
-{
-	max-width: 100%;
-	margin-left: 0
+img {
+    max-width: 100%;
+    margin-left: 0
 }
 
-.title,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-html
-{
-	font-weight: 400
+.table > .list-title,p,summary,ul {
+    letter-spacing: -.04em
 }
 
-code,
-kbd,
-pre,
-samp
-{
-	font-size: .85em
+.fonts-loaded .table > .list-title,.fonts-loaded p,.fonts-loaded summary,.fonts-loaded ul {
+    font-family: 'MartelMobile','Lucida Bright','Georgia',"Times New Roman",Times,serif;
+    font-weight: 400
 }
 
-.table>div
-{
-	font-size: 1em
+.title,footer > ul > li,h1,h2,h3,h4,h5,h6 {
+    font-weight: 400
 }
 
-.title
-{
-	font-size: 1.6em
+.fonts-loaded .title,.fonts-loaded footer > ul > li,.fonts-loaded h1,.fonts-loaded h2,.fonts-loaded h3,.fonts-loaded h4,.fonts-loaded h5,.fonts-loaded h6 {
+    font-family: 'NunitoRegular','Lucida Sans Unicode','Geneva',Arial,sans-serif;
+    font-weight: 400
 }
 
-.subtitle,
-h1
-{
-	font-size: 1.5em
+code,kbd,pre,samp {
+    font-size: .9em
 }
 
-h2
-{
-	font-size: 1.4em
+.fonts-loaded code,.fonts-loaded kbd,.fonts-loaded pre,.fonts-loaded samp {
+    font-size: .85em
 }
 
-h3
-{
-	font-size: 1.2em
+.table > div {
+    font-size: 1em
 }
 
-a
-{
-	background-size: 5px 1px
+.title {
+    font-size: 1.6em;
+    letter-spacing: -.071em
 }
 
-footer
-{
-	font-size: .8em
+.subtitle,h1 {
+    font-size: 1.5em;
+    letter-spacing: -.02em
 }
 
-.table
-{
-	flex-direction: column;
-	align-items: normal;
-	margin-bottom: .9em
+h2 {
+    font-size: 1.4em
 }
 
-.table li
-{
-	padding: 5px 0px 5px 0px
+h3 {
+    font-size: 1.2em
 }
 
-.table>.list-meta
-{
-	margin-top: 1em;
-	margin-bottom: 0em;
-	font-size: .7em
+a {
+    background-size: 5px 1px
 }
 
-.table>.list-title
-{
-	font-size: .9em
+footer {
+    font-size: .8em
 }
 
-footer>.table
-{
-	text-align: center
+.table {
+    flex-direction: column;
+    align-items: normal;
+    margin-bottom: .9em
 }
 
-.table>.col1,
-.table>.col2
-{
-	order: 0
+.table li {
+    padding: 5px 0
 }
 
-.mjx-math
-{
-	font-size: 13px;
-	margin: 0
+.table > .list-meta {
+    margin-top: 1em;
+    margin-bottom: 0;
+    font-size: .7em
+}
+
+.table > .list-title {
+    font-size: .9em
+}
+
+footer > .table {
+    text-align: center
+}
+
+.table > .col1,.table > .col2 {
+    order: 0
+}
+
+.mjx-math {
+    font-size: 13px;
+    margin: 0
 }
