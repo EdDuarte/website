@@ -3,7 +3,7 @@
 	font-family: 'MartelMobile';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Martel'),local('Martel-Regular'),url(http://fonts.gstatic.com/s/martel/v1/UqHF0_T0x2A12j9bgYu4DQ.woff2) format('woff2');
+	src: local('Martel'),local('Martel-Regular'),url(https://fonts.gstatic.com/s/martel/v1/UqHF0_T0x2A12j9bgYu4DQ.woff2) format('woff2');
 	unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215
 }
 
@@ -11,7 +11,7 @@
 	font-family:'MartelRegular';
 	font-style:normal;
 	font-weight:700;
-	src:local('Martel Bold'),local('Martel-Bold'),url(http://fonts.gstatic.com/s/martel/v1/M6dENUXta91OJwGwgjQHf1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+	src:local('Martel Bold'),local('Martel-Bold'),url(https://fonts.gstatic.com/s/martel/v1/M6dENUXta91OJwGwgjQHf1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
 	unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215
 }
 
@@ -19,7 +19,7 @@
 	font-family:'MartelBold';
 	font-style:normal;
 	font-weight:900;
-	src:local('Martel Heavy'),local('Martel-Heavy'),url(http://fonts.gstatic.com/s/martel/v1/6qlcTvSyKvyk4OhhaCbMtltXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+	src:local('Martel Heavy'),local('Martel-Heavy'),url(https://fonts.gstatic.com/s/martel/v1/6qlcTvSyKvyk4OhhaCbMtltXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
 	unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215
 }
 
@@ -27,7 +27,7 @@
 	font-family:'OxygenMono';
 	font-style:normal;
 	font-weight:400;
-	src:local('Oxygen Mono'),local('OxygenMono-Regular'),url(http://fonts.gstatic.com/s/oxygenmono/v4/BzV4DVOwAgGelLT9EC5xyo4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+	src:local('Oxygen Mono'),local('OxygenMono-Regular'),url(https://fonts.gstatic.com/s/oxygenmono/v4/BzV4DVOwAgGelLT9EC5xyo4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
 	unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215
 }
 
@@ -35,7 +35,7 @@
 	font-family:'NunitoRegular';
 	font-style:normal;
 	font-weight:400;
-	src:local('Nunito Regular'),local('Nunito-Regular'),url(http://fonts.gstatic.com/s/nunito/v8/cSNs3NwpEgPVRQzvkh3NeQ.woff2) format('woff2');
+	src:local('Nunito Regular'),local('Nunito-Regular'),url(https://fonts.gstatic.com/s/nunito/v8/cSNs3NwpEgPVRQzvkh3NeQ.woff2) format('woff2');
 	unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215
 }
 
@@ -43,7 +43,7 @@
 	font-family:'NunitoBold';
 	font-style:normal;
 	font-weight:600;
-	src:local('Nunito SemiBold'),local('Nunito-SemiBold'),url(http://fonts.gstatic.com/s/nunito/v8/NcqjkPJTQZlJIFxZdZcTe1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+	src:local('Nunito SemiBold'),local('Nunito-SemiBold'),url(https://fonts.gstatic.com/s/nunito/v8/NcqjkPJTQZlJIFxZdZcTe1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
 	unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215
 }
 
