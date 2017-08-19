@@ -1,82 +1,58 @@
 
+@font-face {
+  font-family: 'MartelMobile';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Martel'), local('Martel-Regular'), url(http://fonts.gstatic.com/s/martel/v1/UqHF0_T0x2A12j9bgYu4DQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'MartelRegular';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Martel Bold'), local('Martel-Bold'), url(http://fonts.gstatic.com/s/martel/v1/M6dENUXta91OJwGwgjQHf1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'MartelBold';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Martel Heavy'), local('Martel-Heavy'), url(http://fonts.gstatic.com/s/martel/v1/6qlcTvSyKvyk4OhhaCbMtltXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'OxygenMono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen Mono'), local('OxygenMono-Regular'), url(http://fonts.gstatic.com/s/oxygenmono/v4/BzV4DVOwAgGelLT9EC5xyo4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'NunitoRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Regular'), local('Nunito-Regular'), url(http://fonts.gstatic.com/s/nunito/v8/cSNs3NwpEgPVRQzvkh3NeQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'NunitoBold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url(http://fonts.gstatic.com/s/nunito/v8/NcqjkPJTQZlJIFxZdZcTe1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
 html
 {
-	font-family: 'Martel', 'Lucida Bright', 'Georgia', "Times New Roman", Times, serif;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 2em;
-	letter-spacing: -.02em;
 	color: #daddd8;
 	background-color: #0e1115
-}
-
-.table > .list-meta,
-code,
-kbd,
-pre,
-samp
-{
-	font-family: 'Oxygen Mono', monospace;
-	font-weight: 200;
-	line-height: 1.5em;
-	letter-spacing: 0
-}
-
-code,
-kbd,
-pre,
-samp
-{
-	font-size: .88em
-}
-
-.homelink,
-.skills,
-.subtitle,
-.title,
-footer,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
-{
-	font-family: 'Nunito', 'Lucida Sans Unicode', 'Geneva', Arial, sans-serif
-}
-
-.links
-{
-	font-family: 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', Arial, sans-serif
-}
-
-.title,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-footer
-{
-	font-weight: 600
-}
-
-.links,
-.metadata,
-.skills,
-.subtitle,
-.table > .list-title
-{
-	font-weight: 400
-}
-
-b,
-strong
-{
-	font-weight: 900
 }
 
 body
@@ -86,26 +62,193 @@ body
 	max-width: 622px
 }
 
+b,
+strong
+{
+	font-weight: 900
+}
+
+p,
+summary,
+.table > .list-title,
+ul
+{
+	font-family: 'Lucida Bright', 'Georgia', "Times New Roman", Times, serif;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 1.93em
+}
+
+p
+{
+	margin-top: 0.9em;
+	letter-spacing: -.029em;
+}
+
+summary
+{
+	letter-spacing: -.027em
+}
+
+ul
+{
+	letter-spacing: -.027em;
+	margin: -1.5em 0 -.6em .2em;
+	padding: 15px
+}
+
+
+.table > .list-title
+{
+	font-size: .91em;
+	letter-spacing: -.023em;
+	line-height: 1.45em;
+}
+
+.fonts-loaded p
+{
+	margin-top: 1em;
+}
+
+.fonts-loaded p,
+.fonts-loaded summary,
+.fonts-loaded ul,
+.fonts-loaded .table > .list-title
+{
+	font-family: 'MartelRegular', 'Lucida Bright', 'Georgia', "Times New Roman", Times, serif;
+	font-weight: 700;
+	font-size: 16px;
+	letter-spacing: -.02em;
+}
+
+.fonts-loaded p,
+.fonts-loaded summary,
+.fonts-loaded ul
+{
+	line-height: 2em;
+}
+
+.fonts-loaded .table > .list-title
+{
+	font-size: .92em;
+	line-height: 1.5em;
+}
+
+.table > .list-meta
+{
+	font-family: monospace;
+	font-size: 0.76em;
+	line-height: 1.2em
+}
+
+.fonts-loaded .table > .list-meta
+{
+	font-family: 'OxygenMono', monospace;
+	font-weight: 200;
+	font-size: .7em;
+	letter-spacing: 0;
+	line-height: 1.5em;
+}
+
+code,
+kbd,
+pre,
+samp
+{
+	font-size: 1.04em;
+	line-height: 1.5em;
+	letter-spacing: -0.02em;
+}
+
+.fonts-loaded code,
+.fonts-loaded kbd,
+.fonts-loaded pre,
+.fonts-loaded samp
+{
+	font-family: 'OxygenMono', monospace;
+	font-size: .88em;
+	line-height: 1.5em;
+	letter-spacing: 0
+}
+
+.links
+{
+	padding: 0;
+	margin: 0;
+	letter-spacing: 0;
+	font-style: normal
+}
+
+.links > li
+{
+	letter-spacing: 0;
+	line-height: 42px;
+	margin-right: .5em;
+	display: inline-block;
+	position: relative
+}
+
+.links > li > a
+{
+	font-size: 13px;
+	text-decoration: none;
+	background-image: none;
+	padding: 8px;
+	border: 1px solid #2f2f2f;
+	border-radius: .3em;
+	cursor: pointer;
+	color: inherit
+}
+
+.links > li > a:hover
+{
+	text-decoration: none;
+	background: #2f2f2f
+}
+
+.links, .fonts-loaded .links
+{
+	font-family: 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', Arial, sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+footer > ul > li
+{
+	font-size: .8em;
+	letter-spacing: -.064em;
+	margin: 0 0 -1em
+}
+
+.fonts-loaded footer > ul > li
+{
+	font-size: .8em;
+	letter-spacing: 0em;
+	margin: 0 0 -1em
+}
+
 img
 {
 	max-width: 120%;
 	margin-left: -10%
 }
 
-footer
-{
-	font-size: .8em;
-	margin: 0 0 -1em
-}
-
 summary
 {
-	margin-top: 1em
+	margin-top: 2vw;
 }
 
 .skills
 {
-	margin-top: 0.8em
+	font-size: .88em;
+	margin-top: 1.2em;
+	margin-bottom: 2em;
+}
+
+.fonts-loaded .skills
+{
+	font-size: 0.95em;
+	margin-top: 1em;
 }
 
 blockquote,
@@ -114,39 +257,64 @@ dfn
 	font-style: italic
 }
 
-small
-{
-	font-size: 80%
-}
-
 .homelink
 {
 	margin: 0;
+	font-size: .92em;
+	letter-spacing: -.05em
+}
+
+.fonts-loaded .homelink
+{
+	margin: 0;
+	font-size: 1em;
 	letter-spacing: -.045em
 }
 
-.myname,
-.myemail,
-.mylinks
+.title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+footer > ul > li
 {
-	margin-bottom: 0;
-	letter-spacing: -.06em
+	font-family: 'Lucida Sans Unicode', 'Geneva', Arial, sans-serif;
+	font-weight: 400
 }
 
-.myname
+.fonts-loaded .title,
+.fonts-loaded h1,
+.fonts-loaded h2,
+.fonts-loaded h3,
+.fonts-loaded h4,
+.fonts-loaded h5,
+.fonts-loaded h6,
+.fonts-loaded footer > ul > li
 {
-	margin-top: 0
+	font-family: 'NunitoBold', 'Lucida Sans Unicode', 'Geneva', Arial, sans-serif;
+	font-weight: 600
 }
 
-.myemail
+.subtitle,
+.homelink,
+.skills,
+.metadata,
+.subtitle
 {
-	margin-top: 0.5em
+	font-family: 'Lucida Sans Unicode', 'Geneva', Arial, sans-serif;
+	font-weight: 400
 }
 
-.mylinks
+.fonts-loaded .subtitle,
+.fonts-loaded .homelink,
+.fonts-loaded .skills,
+.fonts-loaded .metadata,
+.fonts-loaded .subtitle
 {
-	margin-top: 0.8em;
-	color: #fe5f55
+	font-family: 'NunitoRegular', 'Lucida Sans Unicode', 'Geneva', Arial, sans-serif;
+	font-weight: 400
 }
 
 .myname,
@@ -203,12 +371,27 @@ h4
 .title
 {
 	font-size: 2em;
+	letter-spacing: -.064em;
+	margin: 0;
+	margin-top: 0.1em;
+}
+
+.fonts-loaded .title
+{
 	letter-spacing: -.024em;
-	margin: 0
+	margin: 0;
+	margin-top: 0.1em;
 }
 
 .subtitle,
 h1
+{
+	font-size: 1.7em;
+	letter-spacing: -.072em
+}
+
+.fonts-loaded .subtitle,
+.fonts-loaded h1
 {
 	font-size: 1.7em;
 	letter-spacing: -.035em
@@ -233,44 +416,102 @@ h1
 
 h2
 {
-	font-size: 1.5em;
+	font-size: 1.4em;
 	letter-spacing: -.038em;
 	margin-bottom: -.4em;
+	margin-top: 1.4em
+}
+
+.fonts-loaded h2
+{
+	font-size: 1.5em;
 	margin-top: 1.2em
 }
 
 h3
 {
 	font-size: 1.2em;
-	letter-spacing: -.031em;
+	letter-spacing: -.08em;
 	margin-bottom: -.6em;
 	margin-top: 1.75em
 }
 
-.metadata,
-h4
+.fonts-loaded h3
 {
-	font-size: 1em
+	letter-spacing: -.031em;
 }
+
+/*
+	font-size: 16.6px;
+	letter-spacing: -.03em;*/
 
 h4
 {
+	font-size: 0.9em;
 	letter-spacing: -.025em;
 	margin-bottom: -.8em;
-	margin-top: 2.17em
+	margin-top: 2.52em
 }
 
 .metadata
 {
-	line-height: 1.8em;
-	letter-spacing: -.04em;
 	margin-top: 0;
 	margin-bottom: .5em
 }
 
 .metadata > p
 {
+	font-size: 1.05em;
+	line-height: 1.68em;
+	letter-spacing: -.035em;
 	margin: 0 0 .1em
+}
+
+.fonts-loaded .metadata,
+.fonts-loaded h4
+{
+	font-size: 1em
+}
+
+.fonts-loaded .metadata > p
+{
+	font-size: 1em;
+	line-height: 1.8em;
+	letter-spacing: -.03em;
+}
+
+.fonts-loaded h4
+{
+	margin-top: 2.17em
+}
+
+.myname,
+.myemail,
+.mylinks
+{
+	margin-bottom: 0;
+	letter-spacing: -.06em
+}
+
+.myname, .fonts-loaded .myname
+{
+	margin-top: 1vw
+}
+
+.myemail
+{
+	margin-top: 0.5em
+}
+
+.mylinks
+{
+	margin-top: 1em;
+	color: #fe5f55
+}
+
+.fonts-loaded .mylinks
+{
+	margin-top: 0.8em;
 }
 
 .date,
@@ -299,8 +540,13 @@ a
 	text-decoration: none;
 	color: #8fd694;
 	background-image: linear-gradient(to right, #8fd694 50%, #8fd694 50%);
-	background-position: 0 1.38em;
+	background-position: 0 1.08em;
 	background-size: 5px 2px
+}
+
+.fonts-loaded a
+{
+	background-position: 0 1.38em;
 }
 
 .homelink a:hover,
@@ -320,11 +566,14 @@ footer a
 .table > .list-meta > a:hover
 {
 	text-decoration: underline;
-	background-position: 0 1.2em;
-	background-size: 5px 1px
 }
 
 .table > .list-title > a
+{
+	background-position: 0 1em
+}
+
+.fonts-loaded .table > .list-title > a
 {
 	background-position: 0 1.45em
 }
@@ -333,47 +582,6 @@ footer a
 footer a:hover
 {
 	background-position: 0 1.1em
-}
-
-ul
-{
-	margin: -1.5em 0 -.6em .2em;
-	padding: 15px
-}
-
-.links
-{
-	padding: 0;
-	margin: 0;
-	font-size: 13px;
-	letter-spacing: 0;
-	font-style: normal
-}
-
-.links > li
-{
-	letter-spacing: 0;
-	line-height: 42px;
-	margin-right: .5em;
-	display: inline-block;
-	position: relative
-}
-
-.links > li > a
-{
-	text-decoration: none;
-	background-image: none;
-	padding: 8px;
-	border: 1px solid #2f2f2f;
-	border-radius: .3em;
-	cursor: pointer;
-	color: inherit
-}
-
-.links > li > a:hover
-{
-	text-decoration: none;
-	background: #2f2f2f
 }
 
 hr
@@ -448,7 +656,7 @@ img.myphoto
 	border-radius: 100px;
 	margin: 0;
 	margin-top: 15vw;
-	margin-bottom: 1vw
+	margin-bottom: 0.5em
 }
 
 .centered
@@ -495,12 +703,6 @@ img.centered:empty
 	padding: 0px 10px 0px 0px
 }
 
-.table > div
-{
-	letter-spacing: -.035em;
-	line-height: 1.5em
-}
-
 .table > .col1,
 .table > .col2
 {
@@ -516,12 +718,6 @@ img.centered:empty
 	order: 2
 }
 
-.table > .list-meta
-{
-	font-size: .7em;
-	margin-top: 0
-}
-
 .table > div > a
 {
 	text-decoration: none
@@ -530,44 +726,4 @@ img.centered:empty
 .mjx-math
 {
 	font-size: 16px
-}
-
-.content > p,
-article > .content > p,
-summary
-{
-	font-size: 103.5%;
-	line-height: 1.92em;
-	letter-spacing: -.015em
-}
-
-.table > .list-title
-{
-	font-size: .95em;
-	letter-spacing: -.02em
-}
-
-.wf-loading > body > .content > p,
-.wf-loading > body > article > .content > p,
-.wf-loading > body > summary,
-.wf-loading > body > .list > li > .table > .list-title
-{
-	visibility: hidden
-}
-
-.wf-active > body > .content > p,
-.wf-active > body > article > .content > p,
-.wf-active > body > summary
-{
-	font-size: 100%;
-	line-height: 2em;
-	letter-spacing: -.02em;
-	visibility: visible
-}
-
-.wf-active > body > .list > li > .table > .list-title
-{
-	font-size: .92em;
-	letter-spacing: -.02em;
-	visibility: visible
 }
