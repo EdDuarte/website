@@ -1,80 +1,38 @@
 
-html
-{
-	background-color: #fff
+html,pre {
+    background-color: #fff
 }
 
-.myname,
-.title,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
-{
-	font-weight: 400
+.myname,.title,h1,h2,h3,h4,h5,h6 {
+    font-weight: 400
 }
 
-a,
-.homelink a,
-.myemail a,
-.mylinks a,
-.table > .list-meta > a,
-.table > .list-title > a,
-footer a,
-html,
-.myname,
-.myname a,
-.myemail,
-.myemail a,
-.mylinks a,
-.title,
-.title a,
-h1,
-h1 a,
-h2,
-h2 a,
-h3,
-h3 a,
-h4,
-h4 a,
-h5,
-h5 a,
-h6,
-h6 a
-{
-	color: #333
+.homelink a,.myemail,.myemail a,.mylinks a,.myname,.myname a,.table>.list-meta>a,.table>.list-title>a,.title,.title a,a,footer a,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,html {
+    color: #333
 }
 
-a,
-.homelink a,
-.myemail a,
-.mylinks a,
-.table > .list-meta > a,
-.table > .list-title > a,
-footer a,
-.myname a,
-.myemail a,
-.mylinks a,
-.title a,
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a
-{
-	text-decoration: underline;
-	background-image: none
+.homelink a,.metadata a,.myemail a,.mylinks a,.myname a,.subtitle a,.table>.list-meta>a,.table>.list-title>a,.title a,a,footer a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+    text-decoration: underline;
+    background-image: none
 }
 
-.links > li > a
-{
-	border: 1px solid #e5e5e5
+.links>li>a {
+    border: 1px solid #e5e5e5
 }
 
-.links > li > a:hover
-{
-	background: #e5e5e5
+.links>li>a:hover {
+    background: #e5e5e5
+}
+
+pre {
+    color: #333;
+    border-radius: 0;
+    overflow-x: initial;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    margin: 0 0 2em;
+    padding: .7em
 }
