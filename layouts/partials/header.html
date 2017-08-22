@@ -86,7 +86,7 @@ body {
     padding:1em
 }
 
-.table>.list-title,p,summary,ul {
+.table>.list-title,p,summary,ul,ol {
     font-family:'Lucida Bright',Georgia,"Times New Roman",Times,serif;
     font-weight:400
 }
@@ -97,7 +97,7 @@ body {
     font-size:15.4px
 }
 
-p,summary,ul {
+p,summary,ul,ol {
     font-size:17px;
     line-height:1.93em
 }
@@ -107,7 +107,7 @@ p {
     letter-spacing:-.031em
 }
 
-summary,ul {
+summary,ul,ol {
     letter-spacing:-.027em
 }
 
@@ -116,7 +116,7 @@ img {
     margin-left:-10%
 }
 
-.fonts-loaded .table>.list-title,.fonts-loaded p,.fonts-loaded summary,.fonts-loaded ul {
+.fonts-loaded .table>.list-title,.fonts-loaded p,.fonts-loaded summary,.fonts-loaded ul,.fonts-loaded ol {
     font-family:MartelRegular,'Lucida Bright',Georgia,"Times New Roman",Times,serif;
     font-weight:700;
     letter-spacing:-.02em;
@@ -129,7 +129,7 @@ img {
     font-weight:700
 }
 
-.fonts-loaded p,.fonts-loaded summary,.fonts-loaded ul {
+.fonts-loaded p,.fonts-loaded summary,.fonts-loaded ul,.fonts-loaded ol {
     font-size:16px;
     line-height:2em
 }
@@ -193,7 +193,7 @@ h4 {
     margin-top:1em
 }
 
-ul {
+ul,ol {
     margin:-1.5em 0 -.6em .2em;
     padding:15px
 }
@@ -365,13 +365,13 @@ blockquote,dfn {
 }
 
 .metadata>p {
-    font-size:1.05em;
+    font-size:16.71px;
     line-height:1.68em;
     margin:0 0 .1em
 }
 
 .fonts-loaded .metadata {
-    font-size:1em
+    font-size:16px
 }
 
 .fonts-loaded .metadata>p {
@@ -585,8 +585,8 @@ img.centered:empty {
     font-size:16px
 }
 
-/* MOBILE */
-@media screen and (max-width: 825px) {
+/* MOBILE & PRINT */
+@media screen and (max-width: 825px),print {
 
     @font-face {
         font-family: 'MartelMobile';
@@ -604,12 +604,30 @@ img.centered:empty {
         unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215
     }
 
+    .fonts-loaded .table>.list-title,.fonts-loaded p,.fonts-loaded summary,.fonts-loaded ul,.fonts-loaded ol,.fonts-loaded footer>ul>li {
+        font-family: 'MartelMobile','Lucida Bright','Georgia',"Times New Roman",Times,serif;
+        font-weight: 400;
+    }
+
+    .title,footer>ul>li,h1,h2,h3,h4,h5,h6 {
+        font-weight: 400
+    }
+
+    .fonts-loaded .homelink,.fonts-loaded .title,.fonts-loaded footer>ul>li,.fonts-loaded h1,.fonts-loaded h2,.fonts-loaded h3,.fonts-loaded h4,.fonts-loaded h5,.fonts-loaded h6 {
+        font-family: 'NunitoRegular','Lucida Sans Unicode','Geneva',Arial,sans-serif;
+        font-weight: 400
+    }
+}
+
+/* MOBILE ONLY */
+@media screen and (max-width: 825px) {
+
     img {
         max-width: 100%;
         margin-left: 0
     }
 
-    .table>.list-title,p,summary,ul {
+    .table>.list-title,p,summary,ul,ol {
         letter-spacing: -.04em;
         font-size: 16px
     }
@@ -618,12 +636,7 @@ img.centered:empty {
         font-size: 15.4px;
     }
 
-    .fonts-loaded .table>.list-title,.fonts-loaded p,.fonts-loaded summary,.fonts-loaded ul,.fonts-loaded footer>ul>li {
-        font-family: 'MartelMobile','Lucida Bright','Georgia',"Times New Roman",Times,serif;
-        font-weight: 400;
-    }
-
-    .fonts-loaded .table>.list-title,.fonts-loaded p,.fonts-loaded summary,.fonts-loaded ul {
+    .fonts-loaded .table>.list-title,.fonts-loaded p,.fonts-loaded summary,.fonts-loaded ul,.fonts-loaded ol {
         letter-spacing: -.02em;
         font-size: 15px;
         line-height: 2em
@@ -632,10 +645,6 @@ img.centered:empty {
     .fonts-loaded .table>.list-title {
         font-size: 14.4px;
         line-height: 1.5em
-    }
-
-    .title,footer>ul>li,h1,h2,h3,h4,h5,h6 {
-        font-weight: 400
     }
 
     .fonts-loaded .title {
@@ -757,9 +766,13 @@ img.centered:empty {
     }
 
     .metadata>p {
-        font-size:1.015em;
+        font-size:15.4px;
         line-height:1.68em;
         margin:0 0 .1em
+    }
+
+    .fonts-loaded .metadata {
+        font-size:15px
     }
 
     .metadata a {
@@ -799,16 +812,11 @@ img.centered:empty {
     .homelink {
         letter-spacing:-.043em;
     }
-
-    .fonts-loaded .homelink,.fonts-loaded .title,.fonts-loaded footer>ul>li,.fonts-loaded h1,.fonts-loaded h2,.fonts-loaded h3,.fonts-loaded h4,.fonts-loaded h5,.fonts-loaded h6 {
-        font-family: 'NunitoRegular','Lucida Sans Unicode','Geneva',Arial,sans-serif;
-        font-weight: 600
-    }
 }
 
 </style>
 
-<script>
+<script type="text/javascript">
 (function() {
 
 // Optimization for Repeat Views
@@ -846,10 +854,7 @@ Promise.all([fontA.load(), fontB.load(), fontC.load(), fontD.load(), fontE.load(
     sessionStorage.foutFontsLoaded = true;
 });
 })();
+
+loadCSS('{{ "/css/print.css" | relURL }}', "", 'only print');
+
 </script>
-
-<script>
-    loadCSS('{{ "/css/print.css" | relURL }}', "", 'only print');
-</script>
-
-
