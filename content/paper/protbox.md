@@ -24,8 +24,7 @@ links:
     - Slides (SlideShare)
 linkUrls:
     - https://github.com/edduarte/protbox
-    - http://www.scopus.com/inward/record.url?eid=2-s2.0-84919383572&partnerID=
-          tZOtx3y1
+    - "https://www.scopus.com/record/display.uri?eid=2-s2.0-84919383572&origin=inward&txGid=1ca0335b4c696f3c89c8f47f269f70ee"
     - http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html
     - http://arxiv.org/abs/1501.03139
     - /openidentity2014/slides.pdf

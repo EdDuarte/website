@@ -28,7 +28,7 @@ linkUrls:
     - https://arxiv.org/abs/1607.05946
     - /hcii2016/slides.pdf
     - http://www.slideshare.net/EduardoDuarte33/hcii2016slides-v3
-date: '2016-07-17'
+date: '2016-06-21'
 medium: "https://medium.com/@edduarte/living-globe-tridimensional-interactive-
 visualization-of-world-demographic-data-c3eeb1845c51"
 slug: living-globe
