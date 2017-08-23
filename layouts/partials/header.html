@@ -32,102 +32,7 @@
 </script>
 <style type="text/css">
 
-@font-face {
-  font-family: 'MartelMobile';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../fonts/martel-v1-latin-600.eot'); /* IE9 Compat Modes */
-  src: local('Martel DemiBold'), local('Martel-DemiBold'),
-       url('../fonts/martel-v1-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/martel-v1-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/martel-v1-latin-600.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/martel-v1-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/martel-v1-latin-600.svg#Martel') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-    font-family:'MartelRegular';
-    font-style:normal;
-    font-weight:400;
-    src:url('../fonts/martel-v1-latin-700.eot'); /* IE9 Compat Modes */
-    src:local('Martel Bold'), local('Martel-Bold'),
-    url('../fonts/martel-v1-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/martel-v1-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/martel-v1-latin-700.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/martel-v1-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/martel-v1-latin-700.svg#Martel') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-    font-family:'MartelBold';
-    font-style:normal;
-    font-weight:900;
-    src:url('../fonts/martel-v1-latin-900.eot'); /* IE9 Compat Modes */
-    src:local('Martel Heavy'), local('Martel-Heavy'),
-    url('../fonts/martel-v1-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/martel-v1-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/martel-v1-latin-900.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/martel-v1-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/martel-v1-latin-900.svg#Martel') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-    font-family:'NunitoMobile';
-    font-style:normal;
-    font-weight:400;
-    src:url('../fonts/nunito-v8-latin-regular.eot'); /* IE9 Compat Modes */
-    src:local('Nunito Regular'), local('Nunito-Regular'),
-    url('../fonts/nunito-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/nunito-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/nunito-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/nunito-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/nunito-v8-latin-regular.svg#Nunito') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-    font-family:'NunitoRegular';
-    font-style:normal;
-    font-weight:600;
-    src:url('../fonts/nunito-v8-latin-600.eot'); /* IE9 Compat Modes */
-    src:local('Nunito SemiBold'), local('Nunito-SemiBold'),
-    url('../fonts/nunito-v8-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/nunito-v8-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/nunito-v8-latin-600.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/nunito-v8-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/nunito-v8-latin-600.svg#Nunito') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-    font-family:'NunitoBold';
-    font-style:normal;
-    font-weight:700;
-    src:url('../fonts/nunito-v8-latin-700.eot'); /* IE9 Compat Modes */
-    src:local('Nunito Bold'), local('Nunito-Bold'),
-    url('../fonts/nunito-v8-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/nunito-v8-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/nunito-v8-latin-700.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/nunito-v8-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/nunito-v8-latin-700.svg#Nunito') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-    font-family:'OxygenMono';
-    font-style:normal;
-    font-weight:400;
-    src:url('../fonts/oxygen-mono-v4-latin-regular.eot'); /* IE9 Compat Modes */
-    src:local('Oxygen Mono'), local('OxygenMono-Regular'),
-    url('../fonts/oxygen-mono-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/oxygen-mono-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/oxygen-mono-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/oxygen-mono-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/oxygen-mono-v4-latin-regular.svg#OxygenMono') format('svg'); /* Legacy iOS */
-}
-
 html {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -moz-font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
     color: #daddd8;
     background-color: #0e1115
 }
@@ -141,6 +46,18 @@ body {
 .table>.list-title,ol,p,summary,ul {
     font-family: TimesNewRoman,"Times New Roman",Times,serif;
     font-weight: 400
+}
+
+.homelink,.metadata,.skills,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,.fonts-loaded-1 .links,.links {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    font-weight: 400
+}
+
+.table>.list-meta {
+    font-family: monospace;
+    font-size: 12px;
+    letter-spacing: .005em;
+    line-height: 1.35em
 }
 
 .table>.list-title {
@@ -177,32 +94,6 @@ img {
     margin-left: -5%
 }
 
-.fonts-loaded-1 .table>.list-title,.fonts-loaded-1 ol,.fonts-loaded-1 p,.fonts-loaded-1 summary,.fonts-loaded-1 ul {
-    font-family: MartelRegular,TimesNewRoman,"Times New Roman",Times,serif;
-    font-weight: 400;
-}
-
-.fonts-loaded-1 .table>.list-title {
-    letter-spacing: -.02em;
-    font-size: 14.7px;
-    line-height: 1.4em
-}
-
-.fonts-loaded-1 ol,.fonts-loaded-1 p,.fonts-loaded-1 summary,.fonts-loaded-1 ul {
-    letter-spacing: -.03em;
-    font-size: 16.5px;
-    line-height: 1.88em
-}
-
-.fonts-loaded-1 summary {
-    line-height: 2em
-}
-
-.fonts-loaded-2 .homelink,.fonts-loaded-2 .title,.fonts-loaded-2 footer>ul>li,.fonts-loaded-2 h1,.fonts-loaded-2 h2,.fonts-loaded-2 h3,.fonts-loaded-2 h4,.fonts-loaded-2 h5,.fonts-loaded-2 h6 {
-    font-family: NunitoBold,"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-    font-weight: 700
-}
-
 .title {
     font-size: 2em;
     letter-spacing: -.055em;
@@ -225,23 +116,11 @@ h2 {
     margin-bottom: -.55em
 }
 
-.fonts-loaded-2 h2 {
-    font-size: 1.5em;
-    letter-spacing: -.032em;
-    margin-top: 1.2em;
-    margin-bottom: -.5em
-}
-
 h3,h4 {
     font-size: 1.2em;
     letter-spacing: -.08em;
     margin-top: 1.75em;
     margin-bottom: -.7em
-}
-
-.fonts-loaded-2 h3 {
-    font-size: 1.2em;
-    letter-spacing: -.031em
 }
 
 h4 {
@@ -250,13 +129,7 @@ h4 {
     margin-top: 2.54em
 }
 
-.fonts-loaded-2 h4 {
-    margin-top: 2.17em;
-    font-size: 1em;
-    letter-spacing: -.025em
-}
-
-.fonts-loaded-1 p,summary {
+summary {
     margin-top: 1em
 }
 
@@ -265,37 +138,10 @@ ol,ul {
     padding: 15px
 }
 
-.table>.list-meta {
-    font-family: monospace;
-    font-size: 12px;
-    letter-spacing: .005em;
-    line-height: 1.35em
-}
-
-.fonts-loaded-2 .table>.list-meta {
-    font-family: OxygenMono,monospace;
-    font-weight: 200;
-    font-size: 11px;
-    letter-spacing: 0;
-    line-height: 1.5em
-}
-
 code,kbd,pre,samp {
     font-size: 14px;
     line-height: 1.5em;
     letter-spacing: -.01em
-}
-
-.fonts-loaded-2 code,.fonts-loaded-2 kbd,.fonts-loaded-2 pre,.fonts-loaded-2 samp {
-    font-family: OxygenMono,monospace;
-    font-size: 12.6px;
-    line-height: 1.7em;
-    letter-spacing: 0
-}
-
-.fonts-loaded-2 b,.fonts-loaded-2 strong {
-    font-family: MartelBold,TimesNewRoman,"Times New Roman",Times,serif;
-    font-weight: 700
 }
 
 .links {
@@ -315,7 +161,6 @@ code,kbd,pre,samp {
 .links>li>a {
     font-size: 13px;
     text-decoration: none;
-    background-image: none;
     border: 1px solid #2f2f2f;
     border-radius: .3em;
     cursor: pointer;
@@ -328,25 +173,9 @@ code,kbd,pre,samp {
     background: #2f2f2f
 }
 
-.fonts-loaded-1 .links,.links {
-    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-    font-weight: 400;
-    font-size: 1em
-}
-
 footer>ul>li {
     font-size: 13px;
     letter-spacing: -.027em
-}
-
-.fonts-loaded-1 footer>ul>li {
-    font-size: 13px;
-    letter-spacing: 0
-}
-
-.fonts-loaded-1 footer>ul>li,footer>ul>li {
-    line-height: 3em;
-    margin: 0 0 -1em
 }
 
 .links,.links>li {
@@ -360,13 +189,6 @@ footer>ul>li {
     margin-bottom: -.34em
 }
 
-.fonts-loaded-1 .skills {
-    font-size: .95em;
-    letter-spacing: -.02em;
-    margin-top: 1em;
-    margin-bottom: 0
-}
-
 blockquote,dfn {
     font-style: italic
 }
@@ -377,49 +199,13 @@ blockquote,dfn {
     margin: 0
 }
 
-.fonts-loaded-1 .homelink {
-    font-size: 16px;
-    letter-spacing: -.045em;
-    margin: 0
-}
-
-.homelink,.metadata,.skills,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6 {
-    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-    font-weight: 400
-}
-
-.fonts-loaded-1 .metadata,.fonts-loaded-1 .skills,.fonts-loaded-1 .subtitle {
-    font-family: NunitoRegular,"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-    font-weight: 600
-}
-
-.myemail,.myemail a,.mylinks a,.myname,.myname a,.title,.title a,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
-    background-image: none;
-}
-
-.myemail,.myemail a,.mylinks a,.myname,.myname a,.title,.title a,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,b,strong {
+.myemail,.myemail a,.mylinks a,.myname,.myname a,.title,.title a,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,b,strong,.table>.list-meta a,footer a {
+    text-decoration: none;
     color: #f8f5f4
-}
-
-.myemail a:hover,.mylinks a:hover,.myname a:hover,.title a:hover,h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover {
-    background-image: linear-gradient(to right,#f8f5f4 50%,#f8f5f4 50%);
-    background-position: 0 1.1em;
-    background-repeat: repeat-x;
-    background-size: 5px 2px;
-    background-origin: border-box
 }
 
 .title,h1,h2,h3,h4 {
     line-height: 1.2em
-}
-
-.fonts-loaded-1 .title {
-    letter-spacing: -.03em;
-    margin: .05em 0 0
-}
-
-.fonts-loaded-1 .subtitle,.fonts-loaded-1 h1,.metadata>p {
-    letter-spacing: -.035em
 }
 
 .subtitle {
@@ -442,17 +228,6 @@ blockquote,dfn {
     margin: -.2em 0 .1em
 }
 
-.fonts-loaded-1 .metadata {
-    font-size: 16px
-}
-
-.fonts-loaded-1 .metadata>p {
-    font-size: 1em;
-    letter-spacing: -.03em;
-    line-height: 1.83em;
-    margin: 0
-}
-
 .metadata,.myemail,.myname {
     margin-bottom: 0
 }
@@ -462,17 +237,9 @@ blockquote,dfn {
     letter-spacing: -.031em
 }
 
-.fonts-loaded-2 .myname {
-    margin-top: .35em
-}
-
 .myemail {
     letter-spacing: -.06em;
     margin-top: .53em
-}
-
-.fonts-loaded-2 .myemail {
-    margin-top: 1.2em
 }
 
 .mylinks {
@@ -482,88 +249,28 @@ blockquote,dfn {
     margin-bottom: 1em
 }
 
-.fonts-loaded-2 .mylinks {
-    margin-top: .7em;
-    margin-bottom: 1em
-}
-
 .date,.metadata,.metadata a,.skills,footer,footer a {
-    color: #787878;
-    background-image: none
-}
-
-.metadata a {
-    background-image: linear-gradient(to right,#787878 50%,#787878 50%)
+    color: #787878
 }
 
 a {
-    text-decoration: none;
-    color: #8fd694;
-    background-image: linear-gradient(to right,#8fd694 50%,#8fd694 50%);
-    background-position: 0 1.04em;
-    background-size: 5px 2px
-}
-
-.fonts-loaded-1 a {
-    background-position: 0 1.38em
-}
-
-.homelink a:hover,a,footer a:hover {
-    background-repeat: repeat-x;
-    background-origin: border-box
-}
-
-.homelink a:hover {
-    background-image: linear-gradient(to right,#daddd8 50%,#daddd8 50%);
-    background-position: 0 1.1em
-}
-
-footer a:hover {
-    background-image: linear-gradient(to right,#787878 50%,#787878 50%);
-    background-position: 0 1.2em
+    text-decoration: underline;
+    color: #8fd694
 }
 
 .homelink a,.table>.list-meta>a {
-    color: #daddd8;
-    background-image: none
-}
-
-.table>.list-meta>a:hover {
-    text-decoration: underline
-}
-
-.table>.list-title>a {
-    background-position: 0 1em
-}
-
-.fonts-loaded-1 .table>.list-title>a {
-    background-position: 0 1.45em
-}
-
-hr {
-    color: transparent;
-    border-style: solid
+    color: #daddd8
 }
 
 pre {
-    background-color: #0b0c0f;
-    border-radius: 6px;
-    color: #fff;
+    font-family: monospace;
     overflow-x: auto;
     margin: 0 0 2em;
     padding: .7em
 }
 
-pre code {
-    background: 0 0
-}
-
 iframe,video {
     max-width: 100%
-}
-
-main {
-    margin-bottom: 40px
 }
 
 blockquote {
@@ -573,29 +280,9 @@ blockquote {
     padding: 0 0 0 1em
 }
 
-table {
-    border-top: 1px solid #666;
-    border-bottom: 1px solid #666;
-    margin: auto
-}
-
-table thead th {
-    border-bottom: 1px solid #daddd8
-}
-
-td,th {
-    padding: 5px
-}
-
-tr:nth-child(even) {
-    background: #daddd8
-}
-
 img.myphoto {
-    max-width: 100px;
-    max-height: 100px;
-    min-width: 100px;
-    min-height: 100px;
+    width: 100px;
+    height: 100px;
     border-radius: 100px;
     margin: 15vw 0 .5em
 }
@@ -650,26 +337,12 @@ img.centered:empty {
     order: 2
 }
 
-.table>div>a {
-    text-decoration: none
-}
-
 .mjx-math {
     font-size: 16px
 }
 
 @media screen and (max-width:690px),print {
-    .fonts-loaded-1 .table>.list-title,.fonts-loaded-1 ol,.fonts-loaded-1 p,.fonts-loaded-1 summary,.fonts-loaded-1 ul {
-        font-family: MartelMobile,TimesNewRoman,"Times New Roman",Times,serif;
-        font-weight: 400
-    }
-
     .title,footer>ul>li,h1,h2,h3,h4,h5,h6 {
-        font-weight: 400
-    }
-
-    .fonts-loaded-1 .homelink,.fonts-loaded-1 .title,.fonts-loaded-1 footer>ul>li,.fonts-loaded-1 h1,.fonts-loaded-1 h2,.fonts-loaded-1 h3,.fonts-loaded-1 h4,.fonts-loaded-1 h5,.fonts-loaded-1 h6 {
-        font-family: NunitoMobile,"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
         font-weight: 400
     }
 }
@@ -703,42 +376,9 @@ img.centered:empty {
         line-height: 1.2em
     }
 
-    .fonts-loaded-1 .table>.list-title {
-        letter-spacing: -.02em;
-        font-size: 14.4px;
-        line-height: 1.5em
-    }
-
-    .fonts-loaded-1 ol,.fonts-loaded-1 p,.fonts-loaded-1 summary,.fonts-loaded-1 ul {
-        letter-spacing: 0em;
-        font-size: 15px;
-        line-height: 2em
-    }
-
-    .fonts-loaded-1 .title {
-        font-family: NunitoRegular,"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-        font-weight: 600
-    }
-
     code,kbd,pre,samp {
         font-size: 13px;
         letter-spacing: -.017em
-    }
-
-    .fonts-loaded-1 code,.fonts-loaded-1 kbd,.fonts-loaded-1 pre,.fonts-loaded-1 samp {
-        font-size: 11.6px
-    }
-
-    .table>div {
-        font-size: 1em
-    }
-
-    a {
-        background-size: 5px 1px
-    }
-
-    footer {
-        font-size: .8em
     }
 
     .table {
@@ -751,24 +391,8 @@ img.centered:empty {
         padding: 5px 0
     }
 
-    .table>.list-meta {
-        font-size: 11.3px;
-        line-height: 1.2em
-    }
-
-    .fonts-loaded-1 .table>.list-meta {
-        font-size: .7em;
-        letter-spacing: 0;
-        line-height: 1.8em;
-        margin-top: -.2em
-    }
-
     footer>.table {
         text-align: center
-    }
-
-    .table>.col1,.table>.col2 {
-        order: 0
     }
 
     .mjx-math {
@@ -797,24 +421,11 @@ img.centered:empty {
         margin-bottom: -.65em
     }
 
-    .fonts-loaded-1 h2 {
-        font-size: 1.3em;
-        letter-spacing: -.032em;
-        margin-top: 1.2em;
-        margin-bottom: -.6em
-    }
-
     .fonts-loaded-1 h4,h3 {
         font-size: 1.2em;
         letter-spacing: -.08em;
         margin-bottom: -.8em;
         margin-top: 1.85em
-    }
-
-    .fonts-loaded-1 h3 {
-        font-size: 1.2em;
-        letter-spacing: -.031em;
-        margin-top: 1.65em
     }
 
     h4 {
@@ -825,13 +436,6 @@ img.centered:empty {
         font-weight: 700
     }
 
-    .fonts-loaded-1 h4 {
-        font-size: 1em;
-        letter-spacing: -.025em;
-        margin-top: 2.54em;
-        font-weight: 700
-    }
-
     .metadata>p {
         font-size: 18.4px;
         letter-spacing: -.025em;
@@ -839,24 +443,8 @@ img.centered:empty {
         margin: 0 0 .1em
     }
 
-    .fonts-loaded-1 .metadata {
-        font-size: 15px
-    }
-
-    .metadata a {
-        background-position: 0 1.03em
-    }
-
-    .fonts-loaded-1 .metadata a {
-        background-position: 0 1.3em
-    }
-
     .myname {
         letter-spacing: -.061em
-    }
-
-    .fonts-loaded-1 .myname {
-        margin-top: .43em
     }
 
     .myemail {
@@ -864,17 +452,9 @@ img.centered:empty {
         margin-top: .45em
     }
 
-    .fonts-loaded-1 .myemail {
-        margin-top: 1.15em
-    }
-
     .mylinks {
         margin-top: .86em;
         letter-spacing: -.04em
-    }
-
-    .fonts-loaded-1 .mylinks {
-        margin-top: .7em
     }
 
     .homelink {
@@ -885,13 +465,19 @@ img.centered:empty {
 </style>
 
 <script type="text/javascript">
+
+// setTimeout(function(){
+loadCSS('{{ "/css/main.css" | relURL }}');
+// }, 1000);
+loadCSS('{{ "/css/print.css" | relURL }}', "", 'only print');
+
 (function() {
 
 // Optimization for Repeat Views
 if( sessionStorage.fontsLoaded ) {
     // setTimeout(function(){
     document.documentElement.className += " fonts-loaded-1 fonts-loaded-2";
-    // }, 1000);
+    // }, 2000);
     return;
 }
 
@@ -927,8 +513,5 @@ Promise.all([fontA.load(), fontB.load(), fontC.load()]).then(function () {
     });
 });
 })();
-
-// loadCSS('{{ "/css/print.css" | relURL }}');
-loadCSS('{{ "/css/print.css" | relURL }}', "", 'only print');
 
 </script>

@@ -1,35 +1,35 @@
 <footer>
 <ul class="table">
-	<li>&copy; Eduardo Duarte 2015-2017</li>
-	<li><a href="mailto:hi@edduarte.com">hi@edduarte.com</a></li>
-	<li><a href="https://github.com/edduarte" target="_blank">Github</a></li>
-	<li><a href="https://twitter.com/_edduarte" target="_blank">Twitter</a></li>
+    <li>&copy; Eduardo Duarte 2015-2017</li>
+    <li><a href="mailto:hi@edduarte.com">hi@edduarte.com</a></li>
+    <li><a href="https://github.com/edduarte" target="_blank">Github</a></li>
+    <li><a href="https://twitter.com/_edduarte" target="_blank">Twitter</a></li>
 </ul>
 </footer>
 
-<script>
+<script type="text/javascript">
+
+var init = function() {
+    var imgDefer = document.getElementsByTagName('img');
+    for (var i=0; i<imgDefer.length; i++) {
+        if(imgDefer[i].getAttribute('data-src')) {
+            imgDefer[i].setAttribute('src',imgDefer[i]
+                .getAttribute('data-src'));
+        }
+    }
+};
+
+var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+webkitRequestAnimationFrame || msRequestAnimationFrame;
+if (raf) raf(function() { window.setTimeout(init, 0); });
+else window.addEventListener('load', init);
+
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 ga('create', 'UA-103779128-1', 'auto');
 ga('send', 'pageview');
+
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-<script type="text/javascript">
-	var init = function() {
-
-		var imgDefer = document.getElementsByTagName('img');
-		for (var i=0; i<imgDefer.length; i++) {
-			if(imgDefer[i].getAttribute('data-src')) {
-				imgDefer[i].setAttribute('src',imgDefer[i]
-					.getAttribute('data-src'));
-			}
-		}
-	};
-	var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-	webkitRequestAnimationFrame || msRequestAnimationFrame;
-	if (raf) raf(function() { window.setTimeout(init, 0); });
-	else window.addEventListener('load', init);
-</script>
 
 </body>
 </html>
