@@ -154,7 +154,7 @@ ol,p,summary,ul {
 
 p {
     margin-top: .84em;
-    letter-spacing: -.018em
+    letter-spacing: -.017em
 }
 
 ol,summary,ul {
@@ -187,7 +187,7 @@ img {
 }
 
 .fonts-loaded-1 ol,.fonts-loaded-1 p,.fonts-loaded-1 summary,.fonts-loaded-1 ul {
-    letter-spacing: -.034em;
+    letter-spacing: -.03em;
     font-size: 16.5px;
     line-height: 1.88em
 }
@@ -203,7 +203,7 @@ img {
 
 .title {
     font-size: 2em;
-    letter-spacing: -.058em;
+    letter-spacing: -.055em;
     margin: .05em 0 0
 }
 
@@ -877,9 +877,9 @@ img.centered:empty {
 
 // Optimization for Repeat Views
 if( sessionStorage.fontsLoaded ) {
-    // setTimeout(function(){
+    setTimeout(function(){
     document.documentElement.className += " fonts-loaded-1 fonts-loaded-2";
-    // }, 1000);
+    }, 1000);
     return;
 }
 
