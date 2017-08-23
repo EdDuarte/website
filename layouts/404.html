@@ -1,8 +1,114 @@
-{{ partial "header.html" . }}
-<div class="homelink">
-	<a href="{{ .Site.BaseURL }}">edduarte.com</a>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+<title>Page not found - Eduardo Duarte</title>
+
+<style type="text/css">
+
+@font-face {
+    font-family:'NunitoBold';
+    font-style:normal;
+    font-weight:700;
+    src:url('../fonts/nunito-v8-latin-700.eot'); /* IE9 Compat Modes */
+    src:local('Nunito Bold'), local('Nunito-Bold'),
+    url('../fonts/nunito-v8-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/nunito-v8-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/nunito-v8-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/nunito-v8-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/nunito-v8-latin-700.svg#Nunito') format('svg'); /* Legacy iOS */
+}
+
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    color: #daddd8;
+    background-color: #0e1115;
+    font-family: NunitoBold,"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+}
+
+.container {
+  text-align: center;
+  height: 100%;
+}
+
+@media (max-width: 480px) {
+    .container {
+        position: relative;
+        top: 50%;
+        height: initial;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+.container h1 {
+    margin: 0;
+    font-size: 130px;
+    font-weight: 300;
+}
+
+@media (min-width: 480px) {
+    .container h1 {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+@media (min-width: 768px) {
+    .container h1 {
+        font-size: 220px;
+    }
+}
+
+.link {
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    margin: 0;
+}
+
+@media (min-width: 480px) {
+    .link {
+        position: absolute;
+        width: 100%;
+        bottom: 30px;
+    }
+}
+
+.link a {
+    color: #fff;
+    text-decoration: none;
+    background-image: linear-gradient(to right,#fff 50%,#fff 50%);
+    background-position: 0 1.3em;
+    background-size: 5px 2px;
+    background-repeat: repeat-x;
+    background-origin: border-box
+}
+
+.link a:hover {
+    border-bottom-color: #fff;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>404</h1>
+<p class="link">Back to <a href="/">edduarte.com</a></p>
 </div>
 
-<p class="centered">404 NOT FOUND</p>
-
-{{ partial "footer.html" . }}
+</body>
+</html>
