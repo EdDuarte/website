@@ -27,17 +27,37 @@ html, body {
     color: #daddd8;
     background-color: #0e1115;
     font-family: NunitoBold,"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    font-weight: 700;
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-body {
-}
-
 .container {
   text-align: center;
   height: 100%;
+}
+
+.container h1 {
+    margin: 0;
+    font-size: 130px;
+    font-weight: 300;
+}
+
+.homelink {
+    font-size: 16px;
+    letter-spacing: -.045em;
+    margin: 0;
+}
+
+.homelink a {
+    color: #daddd8;
+    text-decoration: none;
+    background-image: linear-gradient(to right,#daddd8 50%,#daddd8 50%);
+    background-position: 0 1.1em;
+    background-size: 5px 2px;
+    background-repeat: repeat-x;
+    background-origin: border-box
 }
 
 @media (max-width: 480px) {
@@ -51,10 +71,10 @@ body {
     }
 }
 
-.container h1 {
-    margin: 0;
-    font-size: 130px;
-    font-weight: 300;
+@media (min-width: 768px) {
+    .container h1 {
+        font-size: 220px;
+    }
 }
 
 @media (min-width: 480px) {
@@ -65,40 +85,12 @@ body {
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
     }
-}
-
-@media (min-width: 768px) {
-    .container h1 {
-        font-size: 220px;
-    }
-}
-
-.link {
-    font-weight: 400;
-    letter-spacing: -0.04em;
-    margin: 0;
-}
-
-@media (min-width: 480px) {
-    .link {
+    
+    .homelink {
         position: absolute;
         width: 100%;
         bottom: 30px;
     }
-}
-
-.link a {
-    color: #fff;
-    text-decoration: none;
-    background-image: linear-gradient(to right,#fff 50%,#fff 50%);
-    background-position: 0 1.1em;
-    background-size: 5px 2px;
-    background-repeat: repeat-x;
-    background-origin: border-box
-}
-
-.link a:hover {
-    border-bottom-color: #fff;
 }
 
 </style>
@@ -107,7 +99,7 @@ body {
 
 <div class="container">
 <h1>404</h1>
-<p class="link">Back to <a href="/">edduarte.com</a></p>
+<p class="homelink">Back to <a href="/">edduarte.com</a></p>
 </div>
 
 </body>
