@@ -137,24 +137,24 @@ body {
 }
 
 .table>.list-title,ol,p,summary,ul {
-    font-family: "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    font-family: TimesNewRoman,"Times New Roman",Times,serif;
     font-weight: 400
 }
 
 .table>.list-title {
-    letter-spacing: -.032em;
-    line-height: 1.1em;
-    font-size: 17.4px
+    letter-spacing: -.005em;
+    line-height: 1em;
+    font-size: 18px
 }
 
 ol,p,summary,ul {
-    font-size: 18.5px;
-    line-height: 1.68em
+    font-size: 19.5px;
+    line-height: 1.6em
 }
 
 p {
     margin-top: .84em;
-    letter-spacing: -.017em
+    letter-spacing: 0.002em
 }
 
 ol,summary,ul {
@@ -162,8 +162,8 @@ ol,summary,ul {
 }
 
 summary {
-    letter-spacing: -.022em;
-    line-height: 1.78em
+    letter-spacing: 0.001em;
+    line-height: 1.6em
 }
 
 ol>li,ul>li {
@@ -176,7 +176,7 @@ img {
 }
 
 .fonts-loaded-1 .table>.list-title,.fonts-loaded-1 ol,.fonts-loaded-1 p,.fonts-loaded-1 summary,.fonts-loaded-1 ul {
-    font-family: MartelRegular,"Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, Cambria, serif;
+    font-family: MartelRegular,TimesNewRoman,"Times New Roman",Times,serif;
     font-weight: 400;
 }
 
@@ -292,7 +292,7 @@ code,kbd,pre,samp {
 }
 
 .fonts-loaded-2 b,.fonts-loaded-2 strong {
-    font-family: MartelBold,"Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    font-family: MartelBold,TimesNewRoman,"Times New Roman",Times,serif;
     font-weight: 700
 }
 
@@ -434,10 +434,10 @@ blockquote,dfn {
 }
 
 .metadata>p {
-    font-size: 17.41px;
-    letter-spacing: -.013em;
-    line-height: 1.68em;
-    margin: 0 0 .1em
+    font-size: 18.5px;
+    letter-spacing: 0;
+    line-height: 1.7em;
+    margin: -.2em 0 .1em
 }
 
 .fonts-loaded-1 .metadata {
@@ -446,8 +446,9 @@ blockquote,dfn {
 
 .fonts-loaded-1 .metadata>p {
     font-size: 1em;
-    line-height: 1.8em;
-    letter-spacing: -.03em
+    letter-spacing: -.03em;
+    line-height: 1.83em;
+    margin: 0
 }
 
 .metadata,.myemail,.myname {
@@ -497,7 +498,7 @@ a {
     text-decoration: none;
     color: #8fd694;
     background-image: linear-gradient(to right,#8fd694 50%,#8fd694 50%);
-    background-position: 0 1.06em;
+    background-position: 0 1.04em;
     background-size: 5px 2px
 }
 
@@ -657,7 +658,7 @@ img.centered:empty {
 
 @media screen and (max-width:690px),print {
     .fonts-loaded-1 .table>.list-title,.fonts-loaded-1 ol,.fonts-loaded-1 p,.fonts-loaded-1 summary,.fonts-loaded-1 ul {
-        font-family: MartelMobile,"Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+        font-family: MartelMobile,TimesNewRoman,"Times New Roman",Times,serif;
         font-weight: 400
     }
 
@@ -677,18 +678,27 @@ img.centered:empty {
         margin-left: 0
     }
 
-    .table>.list-title,ol,p,summary,ul {
-        letter-spacing: -.017em
+    ol,p,summary,ul {
+        font-size: 20px;
+        line-height: 1.45em;
     }
 
-    ol,p,summary,ul {
-        font-size: 17.6px
+    .table>.list-title,ol,p,ul {
+        letter-spacing: -.032em
+    }
+
+    summary {
+        letter-spacing: -.02em
+    }
+
+    ol>li,ul>li {
+        margin-top: 14px;
     }
 
     .table>.list-title {
-        font-size: 16.2px;
-        letter-spacing: -.02em;
-        line-height: 1.3em
+        font-size: 17.2px;
+        letter-spacing: 0;
+        line-height: 1.2em
     }
 
     .fonts-loaded-1 .table>.list-title {
@@ -740,8 +750,8 @@ img.centered:empty {
     }
 
     .table>.list-meta {
-        font-size: 12.3px;
-        line-height: 1.1em
+        font-size: 11.3px;
+        line-height: 1.2em
     }
 
     .fonts-loaded-1 .table>.list-meta {
@@ -821,9 +831,9 @@ img.centered:empty {
     }
 
     .metadata>p {
-        font-size: 16.4px;
+        font-size: 18.4px;
         letter-spacing: -.025em;
-        line-height: 1.68em;
+        line-height: 1.4em;
         margin: 0 0 .1em
     }
 
@@ -897,10 +907,9 @@ var fontC = new FontFaceObserver('NunitoRegular', {
     weight: 400
 });
 
-console.log("a");
 Promise.all([fontA.load(), fontB.load(), fontC.load()]).then(function () {
     document.documentElement.className += " fonts-loaded-1";
-    console.log("b");
+
     // fonts-stage-2
     var fontD = new FontFaceObserver('OxygenMono');
     var fontE = new FontFaceObserver('MartelBold', {
@@ -911,7 +920,6 @@ Promise.all([fontA.load(), fontB.load(), fontC.load()]).then(function () {
     });
 
     Promise.all([fontD.load(), fontE.load(), fontF.load()]).then(function () {
-        console.log("c");
         document.documentElement.className += " fonts-loaded-2";
         sessionStorage.fontsLoaded = true;
     });
