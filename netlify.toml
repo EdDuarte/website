@@ -1,5 +1,7 @@
 [context.deploy-preview.environment]
-  BRANCH = "dev"
+  HUGO_VERSION = "0.25"
+
+[context.branch-deploy.environment]
   HUGO_VERSION = "0.25"
 
 [context.production.environment]
