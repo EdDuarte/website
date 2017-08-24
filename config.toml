@@ -7,6 +7,9 @@ preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
 disableKinds = ["tags", "categories"]
 
+[outputs]
+home = ["HTML", "RSS"]
+
 [taxonomies]
   category = ""
   tags = ""
