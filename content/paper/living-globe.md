@@ -53,9 +53,14 @@ structured in JSON by year and by country. We provide two example input files:
 “input_alt.json” (containing miscellaneous data regarding finance, demography
 and employment between the years 1960 and 2014).
 
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
- data-src="/hcii2016/screenshot-compressed.png"
- alt="Current prototype of Living Globe" />
+<img class="js-lazy-image"
+    data-src="/hcii2016/screenshot-compressed.png"
+    alt="Current prototype of Living Globe"/>
+<noscript>
+<img 
+    src="/hcii2016/screenshot-compressed.png"
+    alt="Current prototype of Living Globe"/>
+</noscript>
 
 While offering inexperienced users a default mapping of these data variables
 into visual variables, Living Globe allows more advanced users to select the

@@ -10,13 +10,34 @@
 <script type="text/javascript">
 
 var init = function() {
-    var imgDefer = document.getElementsByTagName('img');
-    for (var i=0; i<imgDefer.length; i++) {
-        if(imgDefer[i].getAttribute('data-src')) {
-            imgDefer[i].setAttribute('src',imgDefer[i]
-                .getAttribute('data-src'));
-        }
+const images = document.querySelectorAll('.js-lazy-image');
+const config = {
+    rootMargin: '50px 0px',
+    threshold: 0.01
+};
+
+if (!('IntersectionObserver' in window)) {
+    Array.from(images).forEach(image => loadImg(image));
+} else {
+    let observer = new IntersectionObserver(function(entries){
+        entries.forEach(entry => {
+            if (entry.intersectionRatio > 0) {
+                observer.unobserve(entry.target);
+                loadImg(entry.target);
+            }
+        });
+    }, config);
+    images.forEach(image => {
+        observer.observe(image);
+    });
+};
+
+function loadImg(i) {
+    var dataSrc = i.getAttribute('data-src');
+    if(dataSrc) {
+        i.setAttribute('src',dataSrc);
     }
+}
 };
 
 var raf = requestAnimationFrame || mozRequestAnimationFrame ||
