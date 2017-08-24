@@ -110,19 +110,6 @@
     url('../fonts/nunito-v8-latin-700.svg#Nunito') format('svg'); /* Legacy iOS */
 }
 
-@font-face {
-    font-family:'OxygenMono';
-    font-style:normal;
-    font-weight:400;
-    src:url('../fonts/oxygen-mono-v4-latin-regular.eot'); /* IE9 Compat Modes */
-    src:local('Oxygen Mono'), local('OxygenMono-Regular'),
-    url('../fonts/oxygen-mono-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/oxygen-mono-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/oxygen-mono-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/oxygen-mono-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/oxygen-mono-v4-latin-regular.svg#OxygenMono') format('svg'); /* Legacy iOS */
-}
-
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -577,6 +564,11 @@ img.centered:empty {
     line-height: 2em
 }
 
+.fonts-loaded-1 .homelink,.fonts-loaded-1 .title,.fonts-loaded-1 footer>ul>li,.fonts-loaded-1 h1,.fonts-loaded-1 h2,.fonts-loaded-1 h3,.fonts-loaded-1 h4,.fonts-loaded-1 h5,.fonts-loaded-1 h6 {
+    font-family: NunitoRegular,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    font-weight: 700;
+}
+
 .fonts-loaded-2 .homelink,.fonts-loaded-2 .title,.fonts-loaded-2 footer>ul>li,.fonts-loaded-2 h1,.fonts-loaded-2 h2,.fonts-loaded-2 h3,.fonts-loaded-2 h4,.fonts-loaded-2 h5,.fonts-loaded-2 h6 {
     font-family: NunitoBold,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
     font-weight: 700
@@ -602,21 +594,6 @@ img.centered:empty {
 
 .fonts-loaded-1 p {
     margin-top: 1em
-}
-
-.fonts-loaded-2 .table>.list-meta {
-    font-family: OxygenMono,monospace;
-    font-weight: 200;
-    font-size: 11px;
-    letter-spacing: 0;
-    line-height: 1.5em
-}
-
-.fonts-loaded-2 code,.fonts-loaded-2 kbd,.fonts-loaded-2 pre,.fonts-loaded-2 samp {
-    font-family: OxygenMono,monospace;
-    font-size: 12.6px;
-    line-height: 1.7em;
-    letter-spacing: 0
 }
 
 .fonts-loaded-2 b,.fonts-loaded-2 strong {
@@ -822,10 +799,10 @@ tr:nth-child(even) {
         font-size: .8em
     }
 
-    .fonts-loaded-1 .table>.list-meta {
-        font-size: .7em;
+    .table>.list-meta {
+        font-size: .83em;
         letter-spacing: 0;
-        line-height: 1.8em;
+        line-height: 1.5em;
         margin-top: -.2em
     }
 
@@ -890,9 +867,6 @@ tr:nth-child(even) {
 
 <script type="text/javascript">
 
-// setTimeout(function(){
-// loadCSS('{{ "/css/main.css" | relURL }}');
-// }, 1000);
 loadCSS('{{ "/css/print.css" | relURL }}', "", 'only print');
 
 (function() {
@@ -901,7 +875,7 @@ loadCSS('{{ "/css/print.css" | relURL }}', "", 'only print');
 if( sessionStorage.fontsLoaded ) {
     // setTimeout(function(){
     document.documentElement.className += " fonts-loaded-1 fonts-loaded-2";
-    // }, 2000);
+    // }, 1000);
     return;
 }
 
@@ -923,16 +897,17 @@ Promise.all([fontA.load(), fontB.load(), fontC.load()]).then(function () {
     document.documentElement.className += " fonts-loaded-1";
 
     // fonts-stage-2
-    var fontD = new FontFaceObserver('OxygenMono');
-    var fontE = new FontFaceObserver('MartelBold', {
+    var fontD = new FontFaceObserver('MartelBold', {
         weight: 900
     });
-    var fontF = new FontFaceObserver('NunitoBold', {
+    var fontE = new FontFaceObserver('NunitoBold', {
         weight: 600
     });
 
-    Promise.all([fontD.load(), fontE.load(), fontF.load()]).then(function () {
+    Promise.all([fontD.load(), fontE.load()]).then(function () {
+        // setTimeout(function(){
         document.documentElement.className += " fonts-loaded-2";
+        // }, 1000);
         sessionStorage.fontsLoaded = true;
     });
 });
