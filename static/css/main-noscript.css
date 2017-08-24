@@ -1,53 +1,53 @@
 
-.fonts-loaded-1 .table>.list-title,.fonts-loaded-1 ol,.fonts-loaded-1 p,.fonts-loaded-1 summary,.fonts-loaded-1 ul {
+.table>.list-title,ol,p,summary,ul {
     font-family: MartelRegular,TimesNewRoman,"Times New Roman",Times,serif;
     font-weight: 400;
 }
 
-.fonts-loaded-1 .table>.list-title {
+.table>.list-title {
     letter-spacing: -.02em;
     font-size: 14.7px;
     line-height: 1.4em
 }
 
-.fonts-loaded-1 ol,.fonts-loaded-1 p,.fonts-loaded-1 summary,.fonts-loaded-1 ul {
+ol,p,summary,ul {
     letter-spacing: -.03em;
     font-size: 16.5px;
     line-height: 1.88em
 }
 
-.fonts-loaded-1 summary {
+summary {
     line-height: 2em
 }
 
-.fonts-loaded-2 .homelink,.fonts-loaded-2 .title,.fonts-loaded-2 footer>ul>li,.fonts-loaded-2 h1,.fonts-loaded-2 h2,.fonts-loaded-2 h3,.fonts-loaded-2 h4,.fonts-loaded-2 h5,.fonts-loaded-2 h6 {
+.homelink,.title,footer>ul>li,h1,h2,h3,h4,h5,h6 {
     font-family: NunitoBold,"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
     font-weight: 700
 }
 
-.fonts-loaded-2 h2 {
+h2 {
     font-size: 1.5em;
     letter-spacing: -.032em;
     margin-top: 1.2em;
     margin-bottom: -.5em
 }
 
-.fonts-loaded-2 h3 {
+h3 {
     font-size: 1.2em;
     letter-spacing: -.031em
 }
 
-.fonts-loaded-2 h4 {
+h4 {
     margin-top: 2.17em;
     font-size: 1em;
     letter-spacing: -.025em
 }
 
-.fonts-loaded-1 p {
+p {
     margin-top: 1em
 }
 
-.fonts-loaded-2 .table>.list-meta {
+.table>.list-meta {
     font-family: OxygenMono,monospace;
     font-weight: 200;
     font-size: 11px;
@@ -55,14 +55,14 @@
     line-height: 1.5em
 }
 
-.fonts-loaded-2 code,.fonts-loaded-2 kbd,.fonts-loaded-2 pre,.fonts-loaded-2 samp {
+code,kbd,pre,samp {
     font-family: OxygenMono,monospace;
     font-size: 12.6px;
     line-height: 1.7em;
     letter-spacing: 0
 }
 
-.fonts-loaded-2 b,.fonts-loaded-2 strong {
+b,strong {
     font-family: MartelBold,TimesNewRoman,"Times New Roman",Times,serif;
     font-weight: 700
 }
@@ -71,30 +71,30 @@
     background-image: none;
 }
 
-.fonts-loaded-1 footer>ul>li {
+footer>ul>li {
     font-size: 13px;
     letter-spacing: 0
 }
 
-.fonts-loaded-1 footer>ul>li,footer>ul>li {
+footer>ul>li,footer>ul>li {
     line-height: 3em;
     margin: 0 0 -1em
 }
 
-.fonts-loaded-1 .skills {
+.skills {
     font-size: .95em;
     letter-spacing: -.02em;
     margin-top: 1em;
     margin-bottom: 0
 }
 
-.fonts-loaded-1 .homelink {
+.homelink {
     font-size: 16px;
     letter-spacing: -.045em;
     margin: 0
 }
 
-.fonts-loaded-1 .metadata,.fonts-loaded-1 .skills,.fonts-loaded-1 .subtitle {
+.metadata,.skills,.subtitle {
     font-family: NunitoRegular,"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
     font-weight: 600
 }
@@ -111,35 +111,35 @@
     background-origin: border-box
 }
 
-.fonts-loaded-1 .title {
+.title {
     letter-spacing: -.03em;
     margin: .05em 0 0
 }
 
-.fonts-loaded-1 .subtitle,.fonts-loaded-1 h1,.metadata>p {
+.subtitle,h1,.metadata>p {
     letter-spacing: -.035em
 }
 
-.fonts-loaded-1 .metadata {
+.metadata {
     font-size: 16px
 }
 
-.fonts-loaded-1 .metadata>p {
+.metadata>p {
     font-size: 1em;
     letter-spacing: -.03em;
     line-height: 1.83em;
     margin: 0
 }
 
-.fonts-loaded-2 .myname {
+.myname {
     margin-top: .35em
 }
 
-.fonts-loaded-2 .myemail {
+.myemail {
     margin-top: 1.2em
 }
 
-.fonts-loaded-2 .mylinks {
+.mylinks {
     margin-top: .7em;
     margin-bottom: 1em
 }
@@ -159,7 +159,7 @@ a {
     background-size: 5px 2px
 }
 
-.fonts-loaded-1 a {
+a {
     background-position: 0 1.38em
 }
 
@@ -190,7 +190,7 @@ footer a:hover {
     background-position: 0 1em
 }
 
-.fonts-loaded-1 .table>.list-title>a {
+.table>.list-title>a {
     background-position: 0 1.45em
 }
 
@@ -237,12 +237,12 @@ tr:nth-child(even) {
 
 @media screen and (max-width:690px),print {
 
-    .fonts-loaded-1 .table>.list-title,.fonts-loaded-1 ol,.fonts-loaded-1 p,.fonts-loaded-1 summary,.fonts-loaded-1 ul {
+    .table>.list-title,ol,p,summary,ul {
         font-family: MartelMobile,TimesNewRoman,"Times New Roman",Times,serif;
         font-weight: 400
     }
 
-    .fonts-loaded-1 .homelink,.fonts-loaded-1 .title,.fonts-loaded-1 footer>ul>li,.fonts-loaded-1 h1,.fonts-loaded-1 h2,.fonts-loaded-1 h3,.fonts-loaded-1 h4,.fonts-loaded-1 h5,.fonts-loaded-1 h6 {
+    .homelink,.title,footer>ul>li,h1,h2,h3,h4,h5,h6 {
         font-family: NunitoMobile,"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
         font-weight: 400
     }
@@ -251,24 +251,24 @@ tr:nth-child(even) {
 
 @media screen and (max-width:690px) {
 
-    .fonts-loaded-1 .table>.list-title {
+    .table>.list-title {
         letter-spacing: -.02em;
         font-size: 14.4px;
         line-height: 1.5em
     }
 
-    .fonts-loaded-1 ol,.fonts-loaded-1 p,.fonts-loaded-1 summary,.fonts-loaded-1 ul {
+    ol,p,summary,ul {
         letter-spacing: 0em;
         font-size: 15px;
         line-height: 2em
     }
 
-    .fonts-loaded-1 .title {
+    .title {
         font-family: NunitoRegular,"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
         font-weight: 600
     }
 
-    .fonts-loaded-1 code,.fonts-loaded-1 kbd,.fonts-loaded-1 pre,.fonts-loaded-1 samp {
+    code,kbd,pre,samp {
         font-size: 11.6px
     }
 
@@ -289,7 +289,7 @@ tr:nth-child(even) {
         line-height: 1.2em
     }*/
 
-    .fonts-loaded-1 .table>.list-meta {
+    .table>.list-meta {
         font-size: .7em;
         letter-spacing: 0;
         line-height: 1.8em;
@@ -300,34 +300,34 @@ tr:nth-child(even) {
         order: 0
     }
 
-    .fonts-loaded-1 h2 {
+    h2 {
         font-size: 1.3em;
         letter-spacing: -.032em;
         margin-top: 1.2em;
         margin-bottom: -.6em
     }
 
-    .fonts-loaded-1 h4 {
+    h4 {
         font-size: 1.2em;
         letter-spacing: -.08em;
         margin-bottom: -.8em;
         margin-top: 1.85em
     }
 
-    .fonts-loaded-1 h3 {
+    h3 {
         font-size: 1.2em;
         letter-spacing: -.031em;
         margin-top: 1.65em
     }
 
-    .fonts-loaded-1 h4 {
+    h4 {
         font-size: 1em;
         letter-spacing: -.025em;
         margin-top: 2.54em;
         font-weight: 700
     }
 
-    .fonts-loaded-1 .metadata {
+    .metadata {
         font-size: 15px
     }
 
@@ -335,19 +335,19 @@ tr:nth-child(even) {
         background-position: 0 1.03em
     }
 
-    .fonts-loaded-1 .metadata a {
+    .metadata a {
         background-position: 0 1.3em
     }
 
-    .fonts-loaded-1 .myname {
+    .myname {
         margin-top: .43em
     }
 
-    .fonts-loaded-1 .myemail {
+    .myemail {
         margin-top: 1.15em
     }
 
-    .fonts-loaded-1 .mylinks {
+    .mylinks {
         margin-top: .7em
     }
 }
