@@ -156,13 +156,13 @@ order.
 
 Let's imagine an example where a job 1 watches document A and a job 2 watches
 document B, where A has a link to B. In this case, job 2 does not need to exist
-as there would be redundancy between a subset of 1 and the entirety of 2.
+as there would be redundancy of detection jobs and index storage for document
+B. Instead, job 1 should trigger clients linked to A and B:
+- when differences are detected in A, only clients of A are notified;
+- when differences are detected in B, both clients of A & B are notified.
 
-Instead, job 1 should trigger clients associated with A and B. When differences
-are detected in A, only clients of A are notified, but when differences are
-detected in B, both clients of A & B are notified. This implies a more
-optimized architecture that has the potential of significantly reducing the
-total number of simultaneous jobs.
+This implies a more optimized architecture that has the potential of
+significantly reducing the total number of simultaneous jobs.
 
 ## ii) Fault-tolerance and timeout of matching jobs
 
