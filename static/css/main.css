@@ -148,10 +148,6 @@
     background-image: none
 }
 
-.metadata a {
-    background-image: linear-gradient(to right,#787878 50%,#787878 50%)
-}
-
 a {
     text-decoration: none;
     background-image: linear-gradient(to right,#8fd694 50%,#8fd694 50%);
@@ -173,8 +169,11 @@ a {
     background-position: 0 1.1em
 }
 
+.metadata a,footer a:hover {
+    background-image: linear-gradient(to right,#7d7d7d 50%,#7d7d7d 50%)
+}
+
 footer a:hover {
-    background-image: linear-gradient(to right,#787878 50%,#787878 50%);
     background-position: 0 1.2em
 }
 
