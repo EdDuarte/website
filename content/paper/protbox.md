@@ -29,7 +29,7 @@ linkUrls:
     - http://arxiv.org/abs/1501.03139
     - /openidentity2014/slides.pdf
     - http://www.slideshare.net/EduardoDuarte33/oid2014presentation
-date: '2014-11-05'
+date: '2014-11-05 11:03:00+01:00'
 medium: "https://medium.com/@edduarte/secure-and-trustworthy-file-sharing-over-
 cloud-storage-using-eid-tokens-d8546a4e5a00"
 slug: protbox

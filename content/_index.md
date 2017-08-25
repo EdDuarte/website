@@ -1,7 +1,7 @@
 ---
 title: "Eduardo Duarte"
 description: "Junior Software Developer & Researcher. Philonoist, over-thinker, cinephile and music junkie."
-date: '2017-08-16'
+date: '2017-08-25 02:08:00+01:00'
 ---
 
 ## Experience

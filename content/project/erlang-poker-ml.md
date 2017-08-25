@@ -4,11 +4,7 @@ prediction in Erlang"
 description: "Implementation of a decision-tree classifier and a disk
 persistence module to evaluate win-lose probabilities over a Poker Texas
 Hold'em game."
-links:
-    - Github
-linkUrls:
-    - https://github.com/edduarte/erlang-poker-ml
-date: '2015-05-31'
+date: '2015-03-31 17:25:00+01:00'
 medium: "https://medium.com/@edduarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
 slug: erlang-poker-ml
 ---
@@ -18,31 +14,30 @@ classifier and to use a rule engine in order to develop a a recommender system
 for hands and outcomes in Poker Texas Hold'em matches. An additional challenge
 to this was to make it in a functional language like Erlang, where no variable
 state is persisted in memory for long periods of time. Instead, the objective
-was to use a rule engine (in this case
-[Eresye](http://sourceforge.net/projects/eresye/)) more-or-less like a disk
-database, using its API for storing and querying. All of the historical data
-collected over time is sent between functions in a stateless manner and
-persisted to disk using Eresye.
+was to use a rule engine more-or-less like a disk database. All of the
+historical data collected over time is sent between functions in a stateless
+manner and persisted to disk using the rule engine.
 
-With this, I developed a Erlang application with a CLI interface that collects
-game data and sends win-lose percentages on each round. It works by prompting
-the user to fill the card in his/her hand and table for each round, and
-whenever the user won or lost each match. The probabilities of occurrence for
-each card per round, along with the probability of winning or losing the match
-with the current cards, are recalculated at the end of every match and
-organized into a Decision tree. Each round the probability of getting a good
-hand and win the match is queried from the Decision tree and printed to the
-user, suggesting him to either raise, call or fold.
+With this, I developed [a Erlang application](https://github.com/edduarte
+/erlang-poker-ml) with a CLI interface that collects game data and sends win-
+lose percentages on each round. It works by prompting the user to fill the card
+in his/her hand and table for each round, and whenever the user won or lost
+each match. The probabilities of occurrence for each card per round, along with
+the probability of winning or losing the match with the current cards, are
+recalculated at the end of every match and organized into a Decision tree. Each
+round the probability of getting a good hand and win the match is queried from
+the Decision tree and printed to the user, suggesting him to either raise, call
+or fold.
 
-The application is [fully open-source](https://github.com/edduarte/erlang-
-poker-ml) and uses only a single file ('poker.erl'). A trained model containing
-an history of matches and ranked hands is also provided ('storage' file), so
-you can start testing the application immediately.
+The application is fully open-source and only uses a single file ('poker.erl').
+A trained model containing an history of matches and ranked hands is also
+provided ('storage' file), so you can start testing the application
+immediately.
 
 This application is composed of three modules:
 
-- a main module, which uses Eresye to store Texas Hold'em rules and hand
-  rankings;
+- a main module, which uses [Eresye](http://sourceforge.net/projects/eresye/)
+  to store Texas Hold'em rules and hand rankings;
 - a history module, which stores the number of occurrences and the ranking of
   hands;
 - a tree module, that implements the decision tree and the probability

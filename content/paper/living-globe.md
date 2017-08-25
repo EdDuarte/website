@@ -28,7 +28,7 @@ linkUrls:
     - https://arxiv.org/abs/1607.05946
     - /hcii2016/slides.pdf
     - http://www.slideshare.net/EduardoDuarte33/hcii2016slides-v3
-date: '2016-06-21'
+date: '2016-06-21 19:58:00+01:00'
 medium: "https://medium.com/@edduarte/living-globe-tridimensional-interactive-
 visualization-of-world-demographic-data-c3eeb1845c51"
 slug: living-globe
@@ -54,6 +54,7 @@ structured in JSON by year and by country. We provide two example input files:
 and employment between the years 1960 and 2014).
 
 <img class="js-lazy-image"
+    src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
     data-src="/hcii2016/screenshot-compressed.png"
     alt="Current prototype of Living Globe"/>
 <noscript>

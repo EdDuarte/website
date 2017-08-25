@@ -3,11 +3,7 @@ title: "Vokter, a Java library that detects and notifies changes in web
 documents"
 description: "High-performant library that uses LSH, DiffMatchPatch and Bloom
 filters to detect and notify textual changes in web documents."
-links:
-    - Github
-linkUrls:
-    - https://github.com/vokter
-date: '2016-06-19'
+date: '2016-06-19 19:26:00+01:00'
 medium: "https://medium.com/@edduarte/vokter-a-java-library-that-detects-
 changes-in-web-documents-c4d3d399046d"
 slug: vokter
@@ -52,18 +48,20 @@ do that, the robust DiffMatchPatch algorithm is used.
 The matching job is responsible for querying the list of detected differences
 with specific requested keywords.
 
-Harmonization of keywords-to-differences is performed passing the differences
-through a Bloom filter, to remove differences that do not have the specified
-keywords, and a exact (character-by-character) comparator on the remaining
-differences, to ensure that the difference contains any of the keywords.
+Harmonization of keywords-to-differences is performed by using a Bloom filter,
+removing differences that have a very low chance of containing the specified
+keywords, before using a exact comparator (character-by-character) on the
+remaining differences, to ensure that the detected changes contains any of the
+keywords.
 
 Since the logic of difference retrieval is spread between two jobs, one that is
-agnostic of requests and one that is specific to the request and its keywords,
-Vokter reduces workload by scheduling only one detection job per watched web-
-page. For this, jobs are grouped into clusters, where its unique identifier is
-the document URL. This means that each cluster imperatively contains a single
-scheduled detection job and one or more matching jobs. In other words, When two
-clients watch the same page, only one detection job for that page is active.
+agnostic of requests and one that is specific to the client and its keywords,
+Vokter reduces workload by scheduling only one detection job per watched
+webpage. For this, jobs are grouped into clusters, where its unique identifier
+is the document URL. This means that each cluster imperatively contains a
+single scheduled detection job and one or more matching jobs. In other words,
+When two clients watch the same page, only one detection job for that page is
+active.
 
 # Scaling
 
@@ -93,8 +91,8 @@ avoid multiple bulk operations on the database, every query (document, tokens,
 occurrences and differences) is covered by memory cache with an expiry duration
 between 20 seconds and 1 minute.
 
-Persistence of difference-detection jobs and difference-matching jobs is also
-covered, using a custom MongoDB Job Store by Michael Klishin and Alex Petrov.
+Persistence of detection and matching jobs is also covered, using a custom
+MongoDB Job Store by Michael Klishin and Alex Petrov.
 
 # OSGi-based architecture
 
@@ -151,13 +149,13 @@ crawling functionality and ii) timeout of jobs when clients are missing.
 One way to improve user experience is by integrating web crawling in Reader
 modules, allowing users to set their visit policy (e.g. number of nested
 documents accessed). Within the current architecture where there is a unique
-detection job per document, detection jobs must be organized by link hierarchy
-order.
+detection job per document, detection jobs must be sorted by link hierarchy.
 
 Let's imagine an example where a job 1 watches document A and a job 2 watches
 document B, where A has a link to B. In this case, job 2 does not need to exist
 as there would be redundancy of detection jobs and index storage for document
 B. Instead, job 1 should trigger clients linked to A and B:
+
 - when differences are detected in A, only clients of A are notified;
 - when differences are detected in B, both clients of A & B are notified.
 
