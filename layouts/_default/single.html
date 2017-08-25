@@ -3,7 +3,11 @@
 </head>
 
 <body>
-<div class="homelink"><a href="{{ .Site.BaseURL }}">edduarte.com</a></div>
+<div class="logo">
+<span class="home-link"><a href="{{ .Site.BaseURL }}">edduarte</a></span>
+&nbsp;&raquo;&nbsp;
+<span class="section-link"><a href="/{{.Section}}">{{.Section}}s</a></span>
+</div>
 
 <article>
 <header>
@@ -13,7 +17,7 @@
 <div class="metadata">
 {{ $authorList := .Params.authors }}
 {{ if $authorList }}
-<p>
+<p class="authors">
 {{ $len := (len $authorList) }}
 {{ $authorUrlList := .Params.authorUrls }}
 {{ if eq $len 1 }}
@@ -23,6 +27,7 @@
 {{ end }}
 </p>
 {{ end }}
+<p>{{ if .Params.date }}<span class="date">{{ .Date.Format "02 January 2006" }}</span>{{ end }}</p>
 </div>
 
 {{ $linkList := .Params.links }}
@@ -42,7 +47,6 @@
 <div class="metadata">
 {{ with .Params.medium }}<p class="medium">This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
 {{ with .Params.hn }}<p class="hn">Discussion on <a href="{{ . }}">Hacker News</a>.</p>{{ end }}
-{{ if .Params.date }}<p class="date">Published on {{ .Date.Format "02 January 2006" }}.</p>{{ end }}
 </div>
 
 {{ partial "footer.html" . }}

@@ -5,8 +5,10 @@
 {{ if .IsHome }}
 {{ partial "intro.html" . }}
 {{ else }}
-<div class="homelink">
-<a href="{{ .Site.BaseURL }}">edduarte.com</a>
+<div class="logo">
+<span class="home-link">
+<a href="{{ .Site.BaseURL }}">edduarte</a>
+</span>
 </div>
 <div class="content">{{ .Content }}</div>
 {{ end }}
