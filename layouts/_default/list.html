@@ -17,7 +17,7 @@
 <div class="table">
 <div class="col1 list-meta">
 {{ if .IsHome }} a {{ end }}
-<span class="date">{{ .Date.Format "2006 Jan 02" }}</span>
+<span class="list-meta-date">{{ .Date.Format "2006 Jan 02" }}</span>
 {{ if $.IsHome }}
 <a href="/{{ .Section }}" class="category">
 {{ .Section }}

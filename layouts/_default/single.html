@@ -23,7 +23,6 @@
 {{ end }}
 </p>
 {{ end }}
-{{ if .Params.date }}<p>Published on {{ .Date.Format "02 January 2006" }}</p>{{ end }}
 </div>
 
 {{ $linkList := .Params.links }}
@@ -41,8 +40,9 @@
 </article>
 
 <div class="metadata">
-{{ with .Params.medium }}<p>This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
-{{ with .Params.hn }}<p>Discussion on <a href="{{ . }}">Hacker News</a>.</p>{{ end }}
+{{ with .Params.medium }}<p class="medium">This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
+{{ with .Params.hn }}<p class="hn">Discussion on <a href="{{ . }}">Hacker News</a>.</p>{{ end }}
+{{ if .Params.date }}<p class="date">Published on {{ .Date.Format "02 January 2006" }}.</p>{{ end }}
 </div>
 
 {{ partial "footer.html" . }}
