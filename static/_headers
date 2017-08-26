@@ -3,4 +3,12 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Referrer-Policy: origin-when-cross-origin
-  Link: <{{ "/css/main.css" | relURL }}>; rel=preload; as=style
+  Link: </css/main.css>; rel=preload; as=stylesheet
+  Cache-Control: private,max-age=0
+
+/*.jpg
+  Cache-Control: max-age=31536000, public
+/*.png
+  Cache-Control: max-age=31536000, public
+/*.css
+  Cache-Control: max-age=31536000, public
