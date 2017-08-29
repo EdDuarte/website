@@ -1175,9 +1175,9 @@ loadCSS('{{ "/css/print.css" | relURL }}', "", 'only print');
 
 // Optimization for Repeat Views
 if( sessionStorage.fontsLoaded ) {
-    setTimeout(function(){
+    // setTimeout(function(){
     document.documentElement.className += " fonts-loaded-1 fonts-loaded-2";
-    }, 1000);
+    // }, 1000);
     return;
 }
 
