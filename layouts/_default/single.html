@@ -11,10 +11,10 @@
 
 <article>
 <header>
-<div class="title">{{ .Title }}</div>
-<div class="subtitle">{{ .Params.subtitle }}</div>
+<div class="title centered">{{ .Title }}</div>
+<div class="subtitle centered">{{ .Params.subtitle }}</div>
 
-<div class="metadata">
+<div class="metadata centered">
 {{ $authorList := .Params.authors }}
 {{ if $authorList }}
 <p class="authors">
@@ -30,23 +30,28 @@
 <p>{{ if .Params.date }}<span class="date">{{ .Date.Format "02 January 2006" }}</span>{{ end }}</p>
 </div>
 
+</header>
+
+<div class="content">
 {{ $linkList := .Params.links }}
 {{ if $linkList }}
+<section>
 <ul class="links">
 {{ $linkUrlList := .Params.linkUrls }}
 {{ range $i, $temp := $linkList }}{{ $link := index $linkUrlList $i }}{{ if $link }}<li><a href="{{ $link }}">{{ . }}</a></li>{{ else }}<li>{{ . }}</li>{{ end }}{{ end }}
 </ul>
+</section>
 {{ end }}
-</header>
 
-<section class="content">
+<section>
 {{ .Content }}
 </section>
-</article>
 
-<div class="metadata">
+<section class="footnote">
 {{ with .Params.medium }}<p class="medium">This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
 {{ with .Params.hn }}<p class="hn">Discussion on <a href="{{ . }}">Hacker News</a>.</p>{{ end }}
+</section>
 </div>
+</article>
 
 {{ partial "footer.html" . }}

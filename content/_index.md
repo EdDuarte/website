@@ -1,7 +1,7 @@
 ---
 title: "Eduardo Duarte"
 description: "Junior Software Developer & Researcher. Philonoist, over-thinker, cinephile and music junkie."
-date: '2017-08-25 02:08:00+01:00'
+date: '2017-08-28 15:56:00+01:00'
 ---
 
 ## Experience
@@ -14,16 +14,17 @@ Vodafone, [Anacom](http://www.netmede.pt/app),
 [Prio](https://app.prioenergy.com/), [Bikemotion](http://www.bikeemotion.com/)
 and [Citibrain](http://www.citibrain.com/en/)).
 
-I have co-founded two tech startups where I had the chance to act both as a
-creative director and a technical lead, guiding co-workers in the development
-and marketing of mobile apps, overseeing the interactive design of the final
-product, and devising unique ideas in the consumer space.
+I have co-founded two tech startups ([Thumbeo](http://www.thumbeo.com/en/) and
+YouClap) where I had the chance to act both as a creative director and a
+technical lead, guiding co-workers in the development and marketing of mobile
+apps, overseeing the interactive design of the final product, and devising
+unique ideas in the consumer space.
 
-I also have a strong background in academia: earned a Bachelor in Information
-Technology (currently finishing up my Master's in Software Engineering); worked
-with a bioinformatics research team; published three papers in various fields,
-such as Information Security and Information Visualization; and spoken at
-various conferences around the globe.
+I also have a strong background in academia: currently working on my Master's
+in Software Engineering; earned a Bachelor in Information Technology (with a
+thesis graded 19 out of 20); worked with a bioinformatics research team;
+published three papers in various fields, such as Information Security and
+Information Visualization; and spoken at various conferences around the globe.
 
 ## Ethos
 
@@ -32,12 +33,11 @@ best practices and bleeding edge methods in order to complete my tasks with a
 high standard of quality and polish. I am enthusiastic about re-thinking and
 over-thinking systems, and achieving unique and optimized solutions.
 
-Throughout the few years of professional experience that I've had, I have
-actively looked for a wide variety of projects so as to improve my versatility.
-I have done research and implementation of scalable software ranging all ends
-of the development stack: from web & mobile frontend coding, to UI/UX design
-and prototyping, to middleware implementation (fully baked platforms or
-brokers) to RESTful services deployment.
+Throughout the few years of professional experience that I've had, I have done
+research and implementation of scalable software ranging all ends of the
+development stack, from web & mobile frontend coding, to UI/UX design and
+prototyping, to middleware implementation (fully baked platforms or brokers) to
+RESTful services deployment.
 
 ## Work with me
 
