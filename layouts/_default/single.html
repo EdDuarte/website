@@ -11,10 +11,10 @@
 
 <article>
 <header>
-<div class="title centered">{{ .Title }}</div>
-<div class="subtitle centered">{{ .Params.subtitle }}</div>
+<div class="title">{{ .Title }}</div>
+<div class="subtitle">{{ .Params.subtitle }}</div>
 
-<div class="metadata centered">
+<div class="metadata">
 {{ $authorList := .Params.authors }}
 {{ if $authorList }}
 <p class="authors">

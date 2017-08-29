@@ -22,6 +22,13 @@
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 <meta property="og:type" content="article">
 
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0e1115">
+<meta name="theme-color" content="#0e1115">
+
 <script type="text/javascript">
     // https://github.com/filamentgroup/loadCSS
     !function(e){"use strict"
@@ -122,19 +129,34 @@ html {
 
 body {
     margin: 0;
-    padding: 0
+    padding: 0;
+    font-variant-ligatures: common-ligatures;
+    font-feature-settings: "liga","clig"
 }
 
 header, .list {
     max-width: 830px;
-    margin: auto;
+    margin: 0;
     padding-left: 1em;
     padding-right: 1em
 }
 
+header {
+    margin-left: calc(50% - 34em);
+}
+
+.list {
+    margin-left: calc(50% - 29.5em);
+}
+
+.fonts-loaded-1 .list {
+    margin-left: calc(50% - 35em);
+}
+
 .content {
     max-width: 622px;
-    margin: auto;
+    margin: 0;
+    margin-left: calc(50% - 34em);
     padding: 1em
 }
 
@@ -167,7 +189,7 @@ header, .list {
 }
 
 .fonts-loaded-1 .table>.list-title {
-    font-size: 14.7px;
+    font-size: 14.5px;
     letter-spacing: -.02em;
     line-height: 1.45em
 }
@@ -316,8 +338,7 @@ code,kbd,ol,pre,samp,ul {
 
 code {
     font-size: 18px;
-    font-weight: bold;
-    color: #fff
+    font-weight: bold
 }
 
 kbd,pre>code,samp {
@@ -384,6 +405,7 @@ blockquote,dfn {
 .logo {
     font-size: 15px;
     letter-spacing: -.04em;
+    margin-left: calc(50% - 36.2em);
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 0.85em
@@ -392,15 +414,17 @@ blockquote,dfn {
 .fonts-loaded-1 .logo {
     font-size: 16px;
     letter-spacing: -.045em;
+    margin-left: calc(50% - 34em);
     padding-top: 0.7em
 }
 
 footer {
+    margin-left: calc(50% - 34em);
     padding-left: 1em;
     padding-right: 1em
 }
 
-.myemail,.myemail a,.mylinks a,.myname,.myname a,.table>.list-meta a,.title,.title a,b,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,strong {
+.home-link,.home-link a,.myemail,.myemail a,.mylinks a,.myname,.myname a,.table>.list-meta a,.title,.title a,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,b,strong,code,pre>code {
     text-decoration: none;
     color: #f8f5f4
 }
@@ -445,7 +469,7 @@ a,footer a {
 
 .skills {
     font-size: .93em;
-    letter-spacing: -.017em;
+    letter-spacing: -.02em;
     margin-top: 1.2em;
     margin-bottom: -.22em
 }
@@ -458,7 +482,7 @@ a,footer a {
 }
 
 .list-meta-date,.metadata,.metadata a,.footnote,.footnote a,.skills,footer,footer a {
-    color: rgb(136, 136, 136)
+    color: #888
 }
 
 a {
@@ -494,7 +518,7 @@ a {
     background-position: 0 1.44em
 }
 
-.logo a,.table>.list-meta>a {
+.table>.list-meta>a {
     text-decoration: none;
     color: #caccc8
 }
@@ -510,7 +534,7 @@ pre {
     padding: .7em;
     background-color: #0b0c0f;
     border-radius: 6px;
-    color: #fff
+    color: #caccc8
 }
 
 iframe,video {
@@ -728,7 +752,7 @@ img.centered:empty {
 }
 
 .metadata a,.footnote a,footer a:hover {
-    background-image: linear-gradient(to right,rgb(136, 136, 136) 50%,rgb(136, 136, 136) 50%)
+    background-image: linear-gradient(to right,#888 50%,#888 50%)
 }
 
 footer a:hover {
@@ -778,9 +802,66 @@ tr:nth-child(even) {
     text-decoration: none
 }
 
-@media screen and (max-width:950px) {
+@media screen and (max-width:1280px) {
+    .list {
+        max-width: 622px;
+        margin: 0;
+        margin-left: calc(50% - 25.6em);
+        padding-left: 1em;
+        padding-right: 1em
+    }
+
+    .fonts-loaded-1 .list {
+        margin-left: calc(50% - 30.2em);
+    }
+
+    .list>li>.table {
+        flex-direction: column;
+        align-items: normal;
+        margin-bottom: .9em
+    }
+
+    .list>li>.table>.col1,.list>li>.table>.col2 {
+        order: 0
+    }
+
+    .list>li>.table>.col1 {
+        text-align: left
+    }
+
+    .list>li>.table>.list-meta {
+        margin-bottom: .2em;
+    }
+}
+
+@media screen and (max-width:1110px) {
     header {
         max-width: 622px;
+        margin: auto;
+        padding-left: 1em;
+        padding-right: 1em
+    }
+    .content {
+        max-width: 622px;
+        margin: auto;
+        padding: 1em
+    }
+    .logo {
+        max-width: 622px;
+        margin: auto
+    }
+    .fonts-loaded-1 .logo {
+        margin: auto
+    }
+    footer {
+        max-width: 622px;
+        margin: auto
+    }
+    .list {
+        margin: auto
+    }
+    .fonts-loaded-1 .list {
+        margin: auto
     }
     .title {
         font-size: 2.2em
@@ -793,27 +874,6 @@ tr:nth-child(even) {
     }
     .fonts-loaded-1 .subtitle {
         font-size: 1.8em
-    }
-
-    .list {
-        max-width: 622px;
-        margin: auto;
-        padding-left: 1em;
-        padding-right: 1em
-    }
-
-    .table {
-        flex-direction: column;
-        align-items: normal;
-        margin-bottom: .9em
-    }
-
-    .table>.col1,.table>.col2 {
-        order: 0
-    }
-
-    .table>.col1 {
-        text-align: left
     }
 }
 
@@ -842,11 +902,11 @@ tr:nth-child(even) {
     ol,p,summary,ul {
         font-size: 19px;
         letter-spacing: -.0034em;
-        line-height: 1.65em
+        line-height: 1.6em
     }
 
     summary {
-        letter-spacing: -.032em
+        letter-spacing: -.03em
     }
 
     .fonts-loaded-1 ol,.fonts-loaded-1 p,.fonts-loaded-1 summary,.fonts-loaded-1 ul {
@@ -917,12 +977,12 @@ tr:nth-child(even) {
     }
 
     .subtitle {
-        margin-top: .4em
+        margin-top: .1em
     }
 
     .fonts-loaded-1 .subtitle {
         letter-spacing: -.05em;
-        margin-top: .4em
+        margin-top: .1em
     }
 
     h1 {
@@ -952,7 +1012,11 @@ tr:nth-child(even) {
     }
 
     .metadata,.footnote {
-        margin-top: .6em
+        margin-top: .25em
+    }
+
+    .fonts-loaded-1 .metadata,.fonts-loaded-1 .footnote {
+        margin-top: .1em
     }
 
     .metadata>p,.footnote>p {
@@ -972,6 +1036,11 @@ tr:nth-child(even) {
         line-height: 1.55em;
         margin-top: .3em;
         margin-bottom: .3em
+    }
+
+    .list {
+        margin:0;
+        padding: 1em
     }
 
     .links {
@@ -1047,13 +1116,6 @@ tr:nth-child(even) {
         font-size: .8em
     }
 
-    .table>.list-meta {
-        font-size: .83em;
-        letter-spacing: 0;
-        line-height: 1.5em;
-        margin-top: -.2em
-    }
-
     .fonts-loaded-1 h2 {
         font-size: 1.3em;
         margin-top: 1.2em;
@@ -1080,6 +1142,20 @@ tr:nth-child(even) {
     .fonts-loaded-1 .metadata a,.fonts-loaded-1 .footnote a {
         background-position: 0 1.3em
     }
+
+    footer>.table {
+        flex-direction: column;
+        align-items: normal;
+        margin-bottom: .9em
+    }
+
+    footer>.table>.col1,footer>.table>.col2 {
+        order: 0
+    }
+
+    footer>.table>.col1 {
+        text-align: left
+    }
 }
 
 </style>
@@ -1099,9 +1175,9 @@ loadCSS('{{ "/css/print.css" | relURL }}', "", 'only print');
 
 // Optimization for Repeat Views
 if( sessionStorage.fontsLoaded ) {
-    // setTimeout(function(){
+    setTimeout(function(){
     document.documentElement.className += " fonts-loaded-1 fonts-loaded-2";
-    // }, 1000);
+    }, 1000);
     return;
 }
 
