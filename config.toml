@@ -1,7 +1,6 @@
 languageCode = "en"
 title = "Eduardo Duarte"
-baseurl = "https://edduarte.com/"
-googleAnalytics = "UA-103779128-1"
+baseurl = "https://www.edduarte.com"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
