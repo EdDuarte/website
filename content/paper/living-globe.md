@@ -92,25 +92,3 @@ indicate that the data filtering and customizable mapping features encourage a
 faster interpretation of relational information. Moreover, this tool improves
 on previous state-of-the-art work by implementing interaction capabilities like
 selection, search and filtering.
-
-# Bibtex reference
-
-E. Duarte, P. Bordonhos, P. Dias, B. S. Santos, *Living Globe: Tridimensional
-   Interactive Visualization of World Demographic Data*
-
-```
-@Inbook{Duarte2016,
-    author="Duarte, Eduardo and Bordonhos, Pedro and Dias, Paulo and Santos, Beatriz Sousa",
-    editor="Yamamoto, Sakae",
-    title="Living Globe: Tridimensional Interactive Visualization of World Demographic Data",
-    bookTitle="Human Interface and the Management of Information:Information, Design and Interaction: 18th International Conference, HCI International 2016 Toronto, Canada, July 17-22, 2016, Proceedings, Part I",
-    year="2016",
-    publisher="Springer International Publishing",
-    address="Cham",
-    pages="14--24",
-    isbn="978-3-319-40349-6",
-    doi="10.1007/978-3-319-40349-6_2",
-    url="http://dx.doi.org/10.1007/978-3-319-40349-6_2"
-}
-```
-

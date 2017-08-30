@@ -123,41 +123,55 @@ html {
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
      text-rendering: optimizeLegibility;
-    color: #caccc8;
+    color: rgba(255, 255, 255, 0.882);
     background-color: #0e1115
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-variant-ligatures: common-ligatures;
-    font-feature-settings: "liga","clig"
+    font-feature-settings: "liga","clig";
+    max-width: 933px;
+    margin:auto;
+    padding: 0
+}
+
+.list-page {
+    max-width: 622px
 }
 
 header, .list {
-    max-width: 830px;
-    margin: 0;
     padding-left: 1em;
     padding-right: 1em
 }
 
-header {
-    margin-left: calc(50% - 34em);
+.article-table {
+    display: flex;
+    flex-flow: row;
+    padding: 0
 }
 
-.list {
-    margin-left: calc(50% - 29.5em);
-}
-
-.fonts-loaded-1 .list {
-    margin-left: calc(50% - 35em);
-}
-
-.content {
-    max-width: 622px;
+.article-table>.col1,.article-table>.col2,.article-table>.col3 {
     margin: 0;
-    margin-left: calc(50% - 34em);
+    padding: 0
+}
+
+.article-table>.col1 {
+    order: 1;
+}
+
+.article-table>.col2 {
+    order: 2
+}
+
+main {
+    max-width: 622px;
     padding: 1em
+}
+
+aside {
+    max-width: 278px;
+    padding: 0em;
+    padding-top: 1.5em
 }
 
 .table>.list-title,ol,p,summary,ul {
@@ -170,8 +184,11 @@ header {
     font-weight: 400
 }
 
+.table>.list-meta,pre {
+    font-family: "Monaco", "Consolas", monospace;
+}
+
 .table>.list-meta {
-    font-family: monospace;
     font-size: 12px;
     letter-spacing: .005em;
     line-height: 1.167em;
@@ -237,13 +254,18 @@ p {
 }
 
 ol,ul {
-    line-height: 1.55;
-    margin: -1.5em 0 -.8em .2em;
+    list-style-type: none;
+    line-height: 1.55em;
+    margin: -1em 0 -.8em .25em;
     padding: 15px
 }
 
+.content>ul {
+    list-style-type: disc
+}
+
 .fonts-loaded-1 ol,.fonts-loaded-1 ul {
-    line-height: 1.58
+    line-height: 1.58em
 }
 
 .fonts-loaded-1 ol>li,.fonts-loaded-1 ul>li {
@@ -256,27 +278,27 @@ img {
 }
 
 .title {
-    font-size: 2.75em;
+    font-size: 2.95em;
     letter-spacing: -.065em;
     margin: 10px 0 0
 }
 
 .fonts-loaded-1 .title {
-    font-size: 2.7em;
+    font-size: 2.9em;
     letter-spacing: -.03em;
     line-height: 1.2em;
     margin: .2em 0 0
 }
 
 .subtitle {
-    font-size: 2.25em;
+    font-size: 2.55em;
     line-height: 1.35em;
     letter-spacing: -.045em;
     margin-top: .15em
 }
 
 .fonts-loaded-1 .subtitle {
-    font-size: 2.4em;
+    font-size: 2.7em;
     line-height: 1.25em;
     margin-top: .15em
 }
@@ -334,6 +356,10 @@ h4 {
 
 code,kbd,ol,pre,samp,ul {
     letter-spacing: -.01em
+}
+
+code,kbd,pre,samp {
+    letter-spacing: 0
 }
 
 code {
@@ -405,7 +431,6 @@ blockquote,dfn {
 .logo {
     font-size: 15px;
     letter-spacing: -.04em;
-    margin-left: calc(50% - 36.2em);
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 0.85em
@@ -414,21 +439,27 @@ blockquote,dfn {
 .fonts-loaded-1 .logo {
     font-size: 16px;
     letter-spacing: -.045em;
-    margin-left: calc(50% - 34em);
     padding-top: 0.7em
 }
 
 footer {
-    margin-left: calc(50% - 34em);
     padding-left: 1em;
     padding-right: 1em
 }
 
-.home-link,.home-link a,.myemail,.myemail a,.mylinks a,.myname,.myname a,.table>.list-meta a,.title,.title a,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,b,strong,code,pre>code {
+.list-page>.logo,.list-page>footer {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.home-link,.home-link a,.myname,.myname a,.table>.list-meta a,.title,.title a,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,b,strong,code,pre>code {
     text-decoration: none;
     color: #f8f5f4
 }
-
+.myemail,.myemail a,.mylinks a,.skills {
+    text-decoration: none;
+    color: #A4A4A4;
+}
 a,footer a {
     text-decoration: none
 }
@@ -481,12 +512,12 @@ a,footer a {
     margin-bottom: 0
 }
 
-.list-meta-date,.metadata,.metadata a,.footnote,.footnote a,.skills,footer,footer a {
-    color: #888
+aside a,.list-meta-date,.metadata,.metadata a,.footnote,.footnote a,footer,footer a {
+    color: rgb(136, 136, 136)
 }
 
 a {
-    color: #caccc8;
+    color: rgba(255, 255, 255, 0.882);
     background-image: linear-gradient(to right,#fe5f55 50%,#fe5f55 50%);
     background-position: 0 1.04em;
     background-size: 5px 2px;
@@ -494,9 +525,6 @@ a {
     hyphens:manual;
 /*    display: inline;
     box-sizing: border-box;
-    list-style-image:none;
-    list-style-position:outside;
-    list-style-type:none;
     font-feature-settings:'liga' 1, 'clig' 1;
     font-variant-ligatures:common-ligatures;
     text-decoration-line:none;
@@ -520,7 +548,7 @@ a {
 
 .table>.list-meta>a {
     text-decoration: none;
-    color: #caccc8
+    color: rgba(255, 255, 255, 0.882)
 }
 
 .table>.list-title>a {
@@ -528,13 +556,12 @@ a {
 }
 
 pre {
-    font-family: monospace;
     overflow-x: auto;
     margin: 0 0 2em;
     padding: .7em;
     background-color: #0b0c0f;
     border-radius: 6px;
-    color: #caccc8
+    color: rgba(255, 255, 255, 0.882)
 }
 
 iframe,video {
@@ -542,7 +569,7 @@ iframe,video {
 }
 
 blockquote {
-    border-left: 4px solid #caccc8;
+    border-left: 4px solid rgba(255, 255, 255, 0.882);
     border-radius: 4px;
     margin: 0;
     padding: 0 0 0 1em
@@ -576,8 +603,10 @@ img.centered:empty {
 }
 
 .list {
-    list-style-type: none;
-    padding: 0
+    padding: 0;
+    margin-top:2em;
+    margin-bottom: 2em;
+    margin-left:-100px
 }
 
 .table {
@@ -598,19 +627,14 @@ img.centered:empty {
 }
 
 .table>.col1 {
-    flex: 2 1 10.75%;
+    flex: 2 1 12%;
     order: 1;
     padding-right: 15px
 }
 
 .table>.col2 {
-    flex: 1 6 78.5%;
+    flex: 1 6 88%;
     order: 2
-}
-
-.table>.col3 {
-    flex: 2 1 10.75%;
-    order: 3
 }
 
 .mjx-math {
@@ -747,12 +771,12 @@ img.centered:empty {
 }
 
 .logo a:hover {
-    background-image: linear-gradient(to right,#caccc8 50%,#caccc8 50%);
+    background-image: linear-gradient(to right,rgba(255, 255, 255, 0.882) 50%,rgba(255, 255, 255, 0.882) 50%);
     background-position: 0 1.1em
 }
 
-.metadata a,.footnote a,footer a:hover {
-    background-image: linear-gradient(to right,#888 50%,#888 50%)
+.metadata a,.footnote a,footer a:hover,aside a:hover {
+    background-image: linear-gradient(to right,rgb(136, 136, 136) 50%,rgb(136, 136, 136) 50%)
 }
 
 footer a:hover {
@@ -776,10 +800,6 @@ pre code {
     background: 0 0
 }
 
-main {
-    margin-bottom: 40px
-}
-
 table {
     border-top: 1px solid #666;
     border-bottom: 1px solid #666;
@@ -787,7 +807,7 @@ table {
 }
 
 table thead th {
-    border-bottom: 1px solid #caccc8
+    border-bottom: 1px solid rgba(255, 255, 255, 0.882)
 }
 
 td,th {
@@ -795,24 +815,31 @@ td,th {
 }
 
 tr:nth-child(even) {
-    background: #caccc8
+    background: rgba(255, 255, 255, 0.882)
 }
 
 .table>div>a {
     text-decoration: none
 }
 
-@media screen and (max-width:1280px) {
-    .list {
-        max-width: 622px;
-        margin: 0;
-        margin-left: calc(50% - 25.6em);
-        padding-left: 1em;
-        padding-right: 1em
-    }
+aside a {
+    background-image: none
+}
 
-    .fonts-loaded-1 .list {
-        margin-left: calc(50% - 30.2em);
+aside li {
+    font-size: 14px;
+    letter-spacing: -0.03em;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0
+}
+
+@media screen and (max-width:880px) {
+    .list {
+        max-width: 655px;
+        margin: 0;
+        margin-top: 2em;
+        margin-bottom: 2em
     }
 
     .list>li>.table {
@@ -834,46 +861,36 @@ tr:nth-child(even) {
     }
 }
 
-@media screen and (max-width:1110px) {
-    header {
+@media screen and (max-width:960px),print {
+    body {
+        max-width: 655px;
+    }
+    .list-page {
         max-width: 622px;
-        margin: auto;
         padding-left: 1em;
         padding-right: 1em
     }
-    .content {
-        max-width: 622px;
-        margin: auto;
-        padding: 1em
-    }
-    .logo {
-        max-width: 622px;
-        margin: auto
-    }
-    .fonts-loaded-1 .logo {
-        margin: auto
-    }
-    footer {
-        max-width: 622px;
-        margin: auto
-    }
-    .list {
-        margin: auto
-    }
-    .fonts-loaded-1 .list {
-        margin: auto
-    }
     .title {
-        font-size: 2.2em
+        font-size: 2em
+    }
+    .fonts-loaded-1 .title {
+        font-size: 2em
     }
     .subtitle {
         font-size: 1.7em
     }
-    .fonts-loaded-1 .title {
-        font-size: 2.2em
-    }
     .fonts-loaded-1 .subtitle {
-        font-size: 1.8em
+        font-size: 1.9em
+    }
+    .metadata>p {
+        font-size: 1em
+    }
+    .fonts-loaded-1 .metadata>p {
+        font-size: 1em
+    }
+    aside {
+        display: none;
+        width: 0;
     }
 }
 
@@ -1040,7 +1057,7 @@ tr:nth-child(even) {
 
     .list {
         margin:0;
-        padding: 1em
+        padding: 0;
     }
 
     .links {

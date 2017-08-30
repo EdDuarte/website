@@ -32,7 +32,8 @@
 
 </header>
 
-<div class="content">
+<div class="article-table">
+<main>
 {{ $linkList := .Params.links }}
 {{ if $linkList }}
 <section>
@@ -43,7 +44,7 @@
 </section>
 {{ end }}
 
-<section>
+<section class="content">
 {{ .Content }}
 </section>
 
@@ -51,7 +52,13 @@
 {{ with .Params.medium }}<p class="medium">This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
 {{ with .Params.hn }}<p class="hn">Discussion on <a href="{{ . }}">Hacker News</a>.</p>{{ end }}
 </section>
+</main>
+
+<aside>
+{{.TableOfContents}}
+</aside>
 </div>
+
 </article>
 
 {{ partial "footer.html" . }}

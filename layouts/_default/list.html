@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 <title>{{ .Title }}</title>
 </head>
-<body>
+<body class="list-page">
 {{ if .IsHome }}
 {{ partial "intro.html" . }}
 {{ else }}
@@ -10,7 +10,9 @@
 <a href="{{ .Site.BaseURL }}">edduarte</a>
 </span>
 </div>
-<div class="content">{{ .Content }}</div>
+<section class="content">
+{{ .Content }}
+</section>
 {{ end }}
 
 <ul class="list">
@@ -29,15 +31,15 @@
 <div class="col2 list-title">
 <a href="{{ .URL }}">{{ .Title }}</a>
 </div>
-<div class="col3">
-</div>
 </div>
 </li>
 {{ end }}
 </ul>
 
 {{ if .IsHome }}
-<div class="content">{{ .Content }}</div>
+<section class="content">
+{{ .Content }}
+</section>
 {{ end }}
 
 {{ partial "footer.html" . }}
