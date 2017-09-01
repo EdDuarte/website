@@ -11,7 +11,7 @@ where I worked as a backend developer (business process modeling and
 integration platform for [University of Coimbra](http://www.uc.pt/en)) and a
 mobile developer (Android and iOS applications for various brands brands like
 Vodafone, [Anacom](http://www.netmede.pt/app),
-[Prio](https://app.prioenergy.com/), [Bikemotion](http://www.bikeemotion.com/)
+[Prio](https://app.prioenergy.com/), [Bikeemotion](http://www.bikeemotion.com/)
 and [Citibrain](http://www.citibrain.com/en/)).
 
 I have co-founded two tech startups ([Thumbeo](http://www.thumbeo.com/en/) and
