@@ -23,7 +23,7 @@
 {{ if .IsHome }} a {{ end }}
 <span class="list-meta-date">{{ .Date.Format "2006 Jan 02" }}</span>
 {{ if $.IsHome }}
-<a href="/{{ .Section }}" class="category">
+<a href="{{ (.Section | urlize) | absLangURL }}" class="category">
 {{ .Section }}
 </a>
 {{ end }}

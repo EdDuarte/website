@@ -33,6 +33,8 @@ date: '2014-11-05 11:03:00+01:00'
 medium: "https://medium.com/@edduarte/secure-and-trustworthy-file-sharing-over-
 cloud-storage-using-eid-tokens-d8546a4e5a00"
 slug: protbox
+aliases:
+    - protbox
 ---
 
 In this paper we present Protbox, an open-source, cross-platform

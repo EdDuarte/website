@@ -5,15 +5,33 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
 disableKinds = ["tags", "categories"]
+enableRobotsTXT = true
+disableAliases = false
 
 [outputs]
-home = ["HTML", "RSS"]
+home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+
+[mediaTypes."text/netlify"]
+suffix = ""
+delimiter = ""
+
+[outputFormats.HEADERS]
+mediatype = "text/netlify"
+baseName = "_headers"
+isPlainText = true
+notAlternative = true
+
+[outputFormats.REDIRECTS]
+mediatype = "text/netlify"
+baseName = "_redirects"
+isPlainText = true
+notAlternative = true
 
 [taxonomies]
   category = ""
   tags = ""
 
 [permalinks]
-    essay = "/:slug/"
-    project = "/:slug/"
-    paper = "/:slug/"
+    essay = "/:title/"
+    project = "/:title/"
+    paper = "/:title/"
