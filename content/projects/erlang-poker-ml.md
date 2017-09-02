@@ -6,9 +6,12 @@ persistence module to evaluate win-lose probabilities over a Poker Texas
 Hold'em game."
 date: '2015-03-31 17:25:00+01:00'
 medium: "https://medium.com/@edduarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
+type: project
 slug: erlang-poker-ml
 aliases:
     - erlang-poker-ml
+    - poker-ml
+    - poker
 ---
 
 For a University class project we were asked to implement a decision-tree

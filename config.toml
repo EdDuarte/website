@@ -32,6 +32,6 @@ notAlternative = true
   tags = ""
 
 [permalinks]
-    essay = "/:title/"
-    project = "/:title/"
-    paper = "/:title/"
+    essays = "/:title/"
+    projects = "/:title/"
+    papers = "/:title/"

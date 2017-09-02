@@ -32,6 +32,7 @@ linkUrls:
 date: '2014-11-05 11:03:00+01:00'
 medium: "https://medium.com/@edduarte/secure-and-trustworthy-file-sharing-over-
 cloud-storage-using-eid-tokens-d8546a4e5a00"
+type: paper
 slug: protbox
 aliases:
     - protbox
