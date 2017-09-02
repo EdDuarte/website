@@ -10,8 +10,8 @@ Recently finished my internship at [Ubiwhere](http://www.ubiwhere.com/en/),
 where I worked as a backend developer (business process modeling and
 integration platform for [University of Coimbra](http://www.uc.pt/en)) and a
 mobile developer (Android and iOS applications for various brands brands like
-Vodafone, [Anacom](http://www.netmede.pt/app),
-[Prio](https://app.prioenergy.com/), [Bikeemotion](http://www.bikeemotion.com/)
+Vodafone, [Prio](https://app.prioenergy.com/), [Anacom
+Netmede](http://www.netmede.pt/app), [Bikeemotion](http://www.bikeemotion.com/)
 and [Citibrain](http://www.citibrain.com/en/)).
 
 I have co-founded two tech startups ([Thumbeo](http://www.thumbeo.com/en/) and
@@ -43,5 +43,4 @@ RESTful services deployment.
 
 I am not currently looking for a job, as I am working on my Master's thesis at
 the University of Aveiro, but feel free to [send me an
-email](mailto:hi@edduarte.com) or find me elsewhere on the web with the
-username 'edduarte'.
+email](mailto:hi@edduarte.com).
