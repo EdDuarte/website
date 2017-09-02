@@ -82,7 +82,7 @@ resource-consumption, both in memory as well as in the database:
 1. if the difference detection job fails to fetch content from a specific URL
    after 10 consecutive attempts, the entire cluster for that URL is expired.
    When expiring a cluster, all of the associated client REST APIs receive a
-   time-out call.
+   time-out call;
 2. every time a matching job is canceled by its client, Vokter checks if there
    are still matching-jobs in its cluster, and if not, the cluster is cleared
    from the workspace.
@@ -99,12 +99,13 @@ MongoDB Job Store by Michael Klishin and Alex Petrov.
 
 # OSGi-based architecture
 
-Vokter support for reading of a given MediaType is provided by Reader modules,
-where raw content is converted into a clean string filtered of non-informative
-data (e.g. XML tags). These modules are loaded in a OSGi-based architecture,
-meaning that compiled Reader classes can be loaded or unloaded without
-requiring a reboot. When needed, usually when reading a new document or
-snapshot, Vokter will query for available Readers by Content-Type supported.
+Vokter support for reading of a given ``MediaType`` is provided by Reader
+modules, where raw content is converted into a clean string filtered of non-
+informative data (e.g. XML tags). These modules are loaded in a OSGi-based
+architecture, meaning that compiled Reader classes can be loaded or unloaded
+without requiring a reboot. When needed, usually when reading a new document or
+snapshot, Vokter will query for available Readers by ``Content-Type``
+supported.
 
 This same plugin-like architecture is implemented for Stemmer modules. Using a
 language detection prediction model, Vokter determines the most probable
@@ -125,8 +126,8 @@ snapshot.
 
 Because different documents can have different languages, which require
 specialized stemmers and stop-word filters to be used, the language must be
-obtained. Unlike the Content-Type, which is often provided as a HTTP header
-when fetching the document, the Accept-Language is not for the most part.
+obtained. Unlike the ``Content-Type``, which is often provided as a HTTP header
+when fetching the document, the ``Accept-Language`` is not for the most part.
 Instead, Vokter infers the language from the document content using a language
 detector algorithm based on Bayesian probabilistic models and N-Grams,
 developed by Nakatani Shuyo, Fabian Kessler, Francois Roland and Robert Theis.

@@ -23,7 +23,7 @@ was to use a rule engine more-or-less like a disk database. All of the
 historical data collected over time is sent between functions in a stateless
 manner and persisted to disk using the rule engine.
 
-With this, I developed [a Erlang application](https://github.com/edduarte
+With this, I developed a [Erlang application](https://github.com/edduarte
 /erlang-poker-ml) with a CLI interface that collects game data and sends win-
 lose percentages on each round. It works by prompting the user to fill the card
 in his/her hand and table for each round, and whenever the user won or lost

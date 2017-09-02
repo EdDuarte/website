@@ -10,13 +10,13 @@ authors:
     - Paulo Dias
     - Beatriz Sousa Santos
 authorUrls:
-    - https://edduarte.com
+    - https://www.edduarte.com
     - 
     - http://sweet.ua.pt/paulo.dias/
     - http://sweet.ua.pt/bss/
 links:
     - Demo
-    - Github
+    - GitHub
     - Paper (Springer)
     - Paper (arXiv)
     - Slides (PDF)

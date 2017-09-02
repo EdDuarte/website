@@ -11,12 +11,12 @@ authors:
     - André Zúquete
     - Hélder Gomes
 authorUrls:
-    - https://edduarte.com
+    - https://www.edduarte.com
     - 
     - http://sweet.ua.pt/andre.zuquete/public_html/
     - http://wiki.ieeta.pt/wiki/index.php/Hélder_Gomes
 links:
-    - Github
+    - GitHub
     - Paper (Scopus)
     - Paper (LNI)
     - Paper (arXiv)

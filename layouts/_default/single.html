@@ -34,15 +34,6 @@
 
 <div class="article-table">
 <main>
-{{ $linkList := .Params.links }}
-{{ if $linkList }}
-<section>
-<ul class="links">
-{{ $linkUrlList := .Params.linkUrls }}
-{{ range $i, $temp := $linkList }}{{ $link := index $linkUrlList $i }}{{ if $link }}<li><a href="{{ $link }}">{{ . }}</a></li>{{ else }}<li>{{ . }}</li>{{ end }}{{ end }}
-</ul>
-</section>
-{{ end }}
 
 <section class="content">
 {{ .Content }}
@@ -55,7 +46,20 @@
 </main>
 
 <aside>
+{{ $linkList := .Params.links }}
+{{ if $linkList }}
+<section>
+<ul class="links">
+{{ $linkUrlList := .Params.linkUrls }}
+{{ range $i, $temp := $linkList }}{{ $link := index $linkUrlList $i }}{{ if $link }}<li><a href="{{ $link }}">{{ . }}</a></li>{{ else }}<li>{{ . }}</li>{{ end }}{{ end }}
+</ul>
+</section>
+{{ end }}
+
+<section class="toc">
 {{.TableOfContents}}
+</section>
+
 </aside>
 </div>
 
