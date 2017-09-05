@@ -11,7 +11,6 @@ slug: erlang-poker-ml
 aliases:
     - erlang-poker-ml
     - poker-ml
-    - poker
 ---
 
 For a University class project we were asked to implement a decision-tree
