@@ -20,7 +20,6 @@
 <li>
 <div class="table">
 <div class="col1 list-meta">
-{{ if .IsHome }} a {{ end }}
 <span class="list-meta-date">{{ .Date.Format "2006 Jan 02" }}</span>
 {{ if $.IsHome }}
 <a href="{{ (.Section | urlize) | absLangURL }}" class="category">
@@ -29,7 +28,7 @@
 {{ end }}
 </div>
 <div class="col2 list-title">
-<a href="{{ .URL }}">{{ .Title }}</a>
+<a href="{{ .Permalink }}">{{ .Title }}</a>
 </div>
 </div>
 </li>

@@ -1,4 +1,5 @@
-languageCode = "en"
+languageCode = "en-us"
+languageLang = "en"
 title = "Eduardo Duarte"
 baseurl = "https://www.edduarte.com"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
