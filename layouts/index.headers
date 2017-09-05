@@ -4,7 +4,6 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: origin-when-cross-origin
   Cache-Control: private,max-age=0
-  Link: </css/main.css>; rel=preload; as=style
   Link: </css/print.css>; rel=preload; as=style
 
 /*.jpg
