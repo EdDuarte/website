@@ -7,7 +7,7 @@ preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
 disableKinds = ["tags", "categories"]
 enableRobotsTXT = true
-disableAliases = false
+disableAliases = true
 
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]

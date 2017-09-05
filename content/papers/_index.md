@@ -1,5 +1,7 @@
 ---
 title: "Papers - Eduardo Duarte"
+aliases:
+    - paper
 ---
 
 # Papers & Talks
