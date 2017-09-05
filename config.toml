@@ -10,17 +10,11 @@ enableRobotsTXT = true
 disableAliases = false
 
 [outputs]
-home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+home = ["HTML", "RSS", "REDIRECTS"]
 
 [mediaTypes."text/netlify"]
 suffix = ""
 delimiter = ""
-
-[outputFormats.HEADERS]
-mediatype = "text/netlify"
-baseName = "_headers"
-isPlainText = true
-notAlternative = true
 
 [outputFormats.REDIRECTS]
 mediatype = "text/netlify"
