@@ -39,10 +39,6 @@
 {{ .Content }}
 </section>
 
-<section class="footnote">
-{{ with .Params.medium }}<p class="medium">This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
-{{ with .Params.hn }}<p class="hn">Discussion on <a href="{{ . }}">Hacker News</a>.</p>{{ end }}
-</section>
 </main>
 
 <aside>
@@ -58,6 +54,11 @@
 
 <section class="toc">
 {{.TableOfContents}}
+</section>
+
+<section class="footnote">
+{{ with .Params.medium }}<p class="medium">This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
+{{ with .Params.hn }}<p class="hn">Discussion on <a href="{{ . }}">Hacker News</a>.</p>{{ end }}
 </section>
 
 </aside>

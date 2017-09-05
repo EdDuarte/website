@@ -3,17 +3,16 @@
     "short_name": "edduarte",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png",
+            "src": "/android-chrome-192x192.png?v=m2lRoRYepw",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-256x256.png",
+            "src": "/android-chrome-256x256.png?v=m2lRoRYepw",
             "sizes": "256x256",
             "type": "image/png"
         }
     ],
-    "theme_color": "#0e1115",
-    "background_color": "#0e1115",
-    "display": "standalone"
+    "theme_color": "#fe5f55",
+    "background_color": "#ffffff"
 }

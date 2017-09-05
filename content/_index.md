@@ -6,6 +6,11 @@ date: '2017-08-28 15:56:00+01:00'
 
 ## Experience
 
+I have worked on multiple projects that extensively used languages like Java,
+Kotlin, Objective-C, Swift and Javascript ES6, and technologies / frameworks
+like Spring, Jetty, Tomcat, Socket.io, Websocket, MQTT, Redis, Hazelcast,
+Cassandra, MongoDB, Android and iOS, among others.
+
 Recently finished my internship at [Ubiwhere](http://www.ubiwhere.com/en/),
 where I worked as a backend developer (business process modeling and
 integration platform for [University of Coimbra](http://www.uc.pt/en)) and a
