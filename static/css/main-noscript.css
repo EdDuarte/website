@@ -1,3 +1,24 @@
+
+.toc {
+    margin-left: -1.2em;
+    padding-top: .4em
+}
+
+.toc ul {
+    margin-top: -1em
+}
+
+.toc li {
+    letter-spacing: -.03em;
+    line-height: 1.5em
+}
+
+.footnote>p,.toc li {
+    font-size: 14px;
+    margin: 1em 0 0;
+    padding: 0
+}
+
 .table>.list-meta {
     line-height: 1.3em
 }
@@ -21,23 +42,30 @@ ol>li,ul>li {
 }
 
 .title {
-    font-size: 2.9em;
-    letter-spacing: -.03em;
+    font-size: 3em;
     line-height: 1.2em;
-    margin: .2em 0 0
+    margin: .1em 0 0
+}
+
+.subtitle,.title,h1,ol,p,summary,ul {
+    letter-spacing: -.03em
+}
+
+h1 {
+    padding-top: .53em
 }
 
 .subtitle {
     font-size: 2.7em;
-    line-height: 1.25em;
+    line-height: 1.22em;
     margin-top: .15em
 }
 
 h2 {
-    margin-bottom: -.25em;
     font-size: 1.5em;
     letter-spacing: -.032em;
-    margin-top: 1.2em
+    padding-top: .76em;
+    margin-bottom: -.25em
 }
 
 h3 {
@@ -45,19 +73,17 @@ h3 {
     letter-spacing: -.031em
 }
 
+.links>li,.myname,h2,h4 {
+    margin-top: 0
+}
+
 h4 {
     font-size: 1em;
     letter-spacing: -.025em;
-    margin-top: 2.4em
-}
-
-.links {
-    margin-top: -.24em;
-    margin-bottom: 1.2em
+    padding-top: 1.7em
 }
 
 .links>li {
-    margin-top: 0;
     margin-bottom: 0;
     line-height: 42px
 }
@@ -69,17 +95,19 @@ h4 {
 }
 
 .myname {
-    margin-top: .35em
+    padding-top: .4em;
+    letter-spacing: -.816px
 }
 
 .myemail {
-    margin-top: .4em
+    padding-top: .35em;
+    letter-spacing: -.035em
 }
 
 .mylinks {
-    letter-spacing: -.016em;
-    margin-top: 1.35em;
-    margin-bottom: 1em
+    letter-spacing: -.005em;
+    margin-bottom: 1em;
+    padding-top: 1.35em
 }
 
 .skills {
@@ -93,16 +121,10 @@ h4 {
     background-position: 0 1.44em
 }
 
-.table>.list-title,ol,p,summary,ul {
-    font-family: MartelRegular,TimesNewRoman,"Times New Roman",Times,serif;
-    font-weight: 400
-}
-
 ol,p,summary,ul {
     --x-height-multiplier: 0.35;
     --baseline-multiplier: 0.179;
     font-size: 18px;
-    letter-spacing: -.03em;
     line-height: 1.88em
 }
 
@@ -110,13 +132,23 @@ summary {
     line-height: 2em
 }
 
-.home-link,.title,b,footer>ul>li,h1,h2,h3,h4,h5,h6,strong {
+.home-link {
+    font-family: NunitoRegular,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    font-weight: 700
+}
+
+.title,b,footer>ul>li,h1,h2,h3,h4,h5,h6,strong {
     font-family: NunitoBold,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
     font-weight: 700
 }
 
 b,strong {
     font-family: MartelBold,TimesNewRoman,"Times New Roman",Times,serif
+}
+
+.table>.list-title,ol,p,summary,ul {
+    font-family: MartelRegular,TimesNewRoman,"Times New Roman",Times,serif;
+    font-weight: 400
 }
 
 footer>ul>li {
@@ -126,12 +158,7 @@ footer>ul>li {
     margin: 0 0 -1em
 }
 
-.section-link {
-    font-family: NunitoMobile,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-    font-weight: 400
-}
-
-.links,.skills,.subtitle {
+.links,.section-link,.skills,.subtitle {
     font-family: NunitoRegular,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
     font-weight: 400
 }
@@ -140,29 +167,30 @@ footer>ul>li {
     font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif
 }
 
-.subtitle,h1 {
-    letter-spacing: -.04em
+.metadata {
+    margin-top: .9em
 }
 
-.footnote,.metadata {
-    margin-top: .7em;
-    margin-bottom: .55em
+.footnote {
+    margin-top: 1em
 }
 
 .footnote>p,.metadata>p {
     letter-spacing: -.025em;
-    line-height: 1.53em;
-    margin-top: .3em;
-    margin-bottom: .2em
+    line-height: 1.53em
 }
 
 .metadata>p {
     font-size: 20px
 }
 
-@media screen and (max-width:960px),print {
+@media screen and (max-width:980px),print {
     .title {
         font-size: 2em
+    }
+
+    .metadata {
+        margin-top: .6em
     }
 
     .subtitle {
@@ -174,24 +202,27 @@ footer>ul>li {
     }
 }
 
-@media screen and (max-width:690px),print {
+@media screen and (max-width:700px) {
     .table>.list-title,ol,p,summary,ul {
         font-family: MartelMobile,TimesNewRoman,"Times New Roman",Times,serif;
         font-weight: 400
     }
 
-    .logo,.title,footer>ul>li,h1,h2,h3,h4,h5,h6 {
+    .logo,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6 {
         font-family: NunitoMobile,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
         font-weight: 400
     }
-}
 
-@media screen and (max-width:690px) {
     ol,p,summary,ul {
         font-size: 15px;
         letter-spacing: 0;
-        line-height: 2em;
-        margin-top: 1em
+        line-height: 2em
+    }
+
+    .table>.list-title {
+        font-size: 14.4px;
+        letter-spacing: -.02em;
+        line-height: 1.5em
     }
 
     .logo {
@@ -200,29 +231,35 @@ footer>ul>li {
 
     .title {
         font-size: 1.7em;
-        letter-spacing: -.02em;
-        margin-top: .4em
+        letter-spacing: -.02em
     }
 
     .subtitle,h1 {
         font-size: 1.5em;
-        line-height: 1.3em;
+        line-height: 1.3em
+    }
+
+    .subtitle {
         letter-spacing: -.05em
     }
 
-    h1 {
-        letter-spacing: -.09em
+    h2 {
+        font-size: 1.35em
+    }
+
+    h3,h4 {
+        letter-spacing: -.031em
+    }
+
+    h3 {
+        font-size: 1.2em
     }
 
     h4 {
-        margin-bottom: -.8em;
-        font-size: 1em;
-        letter-spacing: -.025em;
-        margin-top: 2.54em;
-        font-weight: 700
+        font-size: 1em
     }
 
-    .footnote,.metadata,.subtitle {
+    .metadata {
         margin-top: .1em
     }
 
@@ -231,57 +268,14 @@ footer>ul>li {
     }
 
     .footnote>p,.metadata>p {
-        line-height: 1.55em;
-        margin-top: .3em;
-        margin-bottom: .3em
-    }
-
-    .links {
-        margin-top: -.05em
-    }
-
-    .myemail,.myname {
-        letter-spacing: -.02em;
-        margin-top: .4em
-    }
-
-    .mylinks {
-        margin-top: 1.6em
-    }
-
-    .table>.list-title {
-        letter-spacing: -.02em;
-        font-size: 14.4px;
-        line-height: 1.5em
-    }
-
-    .title {
-        font-family: NunitoRegular,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-        font-weight: 600
-    }
-
-    .subtitle {
-        font-family: NunitoMobile,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-        font-weight: 400
+        line-height: 1.7em
     }
 
     .table>.list-title>a {
         background-position: 0 1.48em
     }
 
-    h2 {
-        font-size: 1.3em;
-        margin-top: 1.2em;
-        margin-bottom: -.6em
-    }
-
-    h3 {
-        font-size: 1.2em;
-        letter-spacing: -.031em;
-        margin-top: 1.65em
-    }
-
     .footnote a,.metadata a {
-        background-position: 0 1.3em
+        background-position: 0 1.5em
     }
 }
