@@ -5,6 +5,9 @@
   Referrer-Policy: origin-when-cross-origin
   Cache-Control: private,max-age=0
   Link: </css/print.css>; rel=preload; as=style
+  Link: </apple-touch-icon.png?v=m2lRoRYepw>; rel=preload; as=image
+  Link: </favicon-32x32.png?v=m2lRoRYepw>; rel=preload; as=image
+  Link: </favicon-16x16.png?v=m2lRoRYepw>; rel=preload; as=image
 
 /*.jpg
   Cache-Control: max-age=31536000, public
