@@ -14,7 +14,7 @@ aliases:
 ---
 
 For a University class project we were asked to implement a decision-tree
-classifier and to use a rule engine in order to develop a a recommender system
+classifier and to use a rule engine in order to develop a recommender system
 for hands and outcomes in Poker Texas Hold'em matches. An additional challenge
 to this was to make it in a functional language like Erlang, where no variable
 state is persisted in memory for long periods of time. Instead, the objective
