@@ -6,13 +6,15 @@
 {{ partial "intro.html" . }}
 {{ else }}
 <div class="logo">
-<span class="home-link">
-<a href="{{ .Site.BaseURL }}">edduarte</a>
-</span>
+<span class="home-link"><a href="{{ .Site.BaseURL }}">edduarte</a></span>
 </div>
+
+<header>
 <section class="content">
 {{ .Content }}
 </section>
+</header>
+
 {{ end }}
 
 <ul class="list">

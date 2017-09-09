@@ -5,7 +5,7 @@
 <body>
 <div class="logo">
 <span class="home-link"><a href="{{ .Site.BaseURL }}">edduarte</a></span>
-&nbsp;&raquo;&nbsp;
+&nbsp;•&nbsp;
 <span class="section-link"><a href="/{{.Section}}">{{.Section}}</a></span>
 </div>
 
@@ -27,12 +27,13 @@
 {{ end }}
 </p>
 {{ end }}
-<p>{{ if .Params.date }}<span class="date">{{ .Date.Format "02 January 2006" }}</span>{{ end }}</p>
+<p>{{ if .Params.date }}<span class="date">{{ .Date.Format "January 2, 2006" }}</span>{{ end }}</p>
 </div>
 
 </header>
 
 <div class="article-table">
+
 <main>
 
 <section class="content">
@@ -62,6 +63,7 @@
 </section>
 
 </aside>
+
 </div>
 
 </article>

@@ -40,8 +40,8 @@ aliases:
 
 Living Globe is a WebGL application for tri-dimensional worldwide data
 visualization. It allows the simultaneous representation of multiple indicators
-as spatial structures (bars and other objects located in a specific latitude-
-longitude on the globe). The mapping of data to the provided visual structures
+as spatial structures (bars and other objects located in a specific latitude-longitude
+on the globe). The mapping of data to the provided visual structures
 is configurable by the user, introducing an aspect of customization which
 encourages a more immediate, visual-only interpretation of the data.
 Additionally, the represented data is normalized within an adjustable scale.
