@@ -55,6 +55,19 @@
 <style type="text/css">
 
 @font-face {
+    font-family:'edduarte-content-mobile';
+    font-style:normal;
+    font-weight:400;
+    src: url('../fonts/martel-v1-latin-600.eot'); /* IE9 Compat Modes */
+    src: local('Martel DemiBold'), local('Martel-DemiBold'),
+    url('../fonts/martel-v1-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/martel-v1-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/martel-v1-latin-600.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/martel-v1-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/martel-v1-latin-600.svg#Martel') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
     font-family:'edduarte-content-regular';
     font-style:normal;
     font-weight:400;
@@ -68,6 +81,19 @@
 }
 
 @font-face {
+    font-family:'edduarte-content-bold'; 
+    font-style:normal;
+    font-weight:700;
+    src:url('../fonts/martel-v1-latin-900.eot'); /* IE9 Compat Modes */
+    src:local('Martel Heavy'), local('Martel-Heavy'),
+    url('../fonts/martel-v1-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/martel-v1-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/martel-v1-latin-900.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/martel-v1-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/martel-v1-latin-900.svg#Martel') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
     font-family:'edduarte-headings-regular';
     font-style:normal;
     font-weight:400;
@@ -78,6 +104,19 @@
        url('../fonts/heebo-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('../fonts/heebo-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/heebo-v2-latin-regular.svg#Heebo') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family:'edduarte-headings-bold';
+    font-style:normal;
+    font-weight:700;
+    src: url('../fonts/heebo-v2-latin-500.eot'); /* IE9 Compat Modes */
+    src: local('Heebo Bold'), local('Heebo-Bold'),
+    url('../fonts/heebo-v2-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/heebo-v2-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/heebo-v2-latin-500.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/heebo-v2-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/heebo-v2-latin-500.svg#Heebo') format('svg'); /* Legacy iOS */
 }
 
 html {
@@ -866,38 +905,12 @@ pre>code {
     color: #fff
 }
 
-@font-face {
-    font-family:'edduarte-content-bold'; 
-    font-style:normal;
-    font-weight:700;
-    src:url('../fonts/martel-v1-latin-900.eot'); /* IE9 Compat Modes */
-    src:local('Martel Heavy'), local('Martel-Heavy'),
-    url('../fonts/martel-v1-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/martel-v1-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/martel-v1-latin-900.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/martel-v1-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/martel-v1-latin-900.svg#Martel') format('svg'); /* Legacy iOS */
-}
-
 .font-load-bold b,.font-load-bold strong {
     font-family: "edduarte-content-bold",TimesNewRoman,"Times New Roman",Times,serif;
     font-weight: 700
 }
 
 @media screen and (min-width:700px) {
-
-    @font-face {
-        font-family:'edduarte-headings-bold';
-        font-style:normal;
-        font-weight:700;
-        src: url('../fonts/heebo-v2-latin-500.eot'); /* IE9 Compat Modes */
-        src: local('Heebo Bold'), local('Heebo-Bold'),
-        url('../fonts/heebo-v2-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/heebo-v2-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/heebo-v2-latin-500.woff') format('woff'), /* Modern Browsers */
-        url('../fonts/heebo-v2-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('../fonts/heebo-v2-latin-500.svg#Heebo') format('svg'); /* Legacy iOS */
-    }
 
     .font-load-bold .logo,.font-load-bold .subtitle,.font-load-bold .title,.font-load-bold footer>ul>li,.font-load-bold h1,.font-load-bold h2,.font-load-bold h3,.font-load-bold h4,.font-load-bold h5,.font-load-bold h6 {
         font-family: "edduarte-headings-bold","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
@@ -1060,19 +1073,6 @@ pre>code {
 }
 
 @media screen and (max-width:700px) {
-
-    @font-face {
-        font-family:'edduarte-content-mobile';
-        font-style:normal;
-        font-weight:400;
-        src: url('../fonts/martel-v1-latin-600.eot'); /* IE9 Compat Modes */
-        src: local('Martel DemiBold'), local('Martel-DemiBold'),
-        url('../fonts/martel-v1-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/martel-v1-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/martel-v1-latin-600.woff') format('woff'), /* Modern Browsers */
-        url('../fonts/martel-v1-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('../fonts/martel-v1-latin-600.svg#Martel') format('svg'); /* Legacy iOS */
-    }
 
     body {
         text-rendering: optimizeSpeed
