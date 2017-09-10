@@ -51,36 +51,6 @@
     return t?d=t:(r=(f.body||f.getElementsByTagName("head")[0]).childNodes,d=r[r.length-1]),a=f.styleSheets,s.rel="stylesheet",s.href=n,s.media="only x",i(function(){d.parentNode.insertBefore(s,t?d:d.nextSibling)}),l=function(e){for(var n=s.href,t=a.length;t--;)if(a[t].href===n)return e()
     setTimeout(function(){l(e)})},s.addEventListener&&s.addEventListener("load",function(){this.media=u}),s.onloadcssdefined=l,l(function(){s.media!==u&&(s.media=u)}),s}
     "undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this)
-
-    /*! onloadCSS. (onload callback for loadCSS) [c]2017 Filament Group, Inc. MIT License */
-    /* global navigator */
-    /* exported onloadCSS */
-    function onloadCSS( ss, callback ) {
-        var called;
-        function newcb(){
-                if( !called && callback ){
-                    called = true;
-                    callback.call( ss );
-                }
-        }
-        if( ss.addEventListener ){
-            ss.addEventListener( "load", newcb );
-        }
-        if( ss.attachEvent ){
-            ss.attachEvent( "onload", newcb );
-        }
-
-        // This code is for browsers that don’t support onload
-        // No support for onload (it'll bind but never fire):
-        //  * Android 4.3 (Samsung Galaxy S4, Browserstack)
-        //  * Android 4.2 Browser (Samsung Galaxy SIII Mini GT-I8200L)
-        //  * Android 2.3 (Pantech Burst P9070)
-
-        // Weak inference targets Android < 4.4
-        if( "isApplicationInstalled" in navigator && "onloadcssdefined" in ss ) {
-            ss.onloadcssdefined( newcb );
-        }
-    }
 </script>
 <style type="text/css">
 
@@ -909,6 +879,73 @@ pre>code {
     color: #fff
 }
 
+@font-face {
+    font-family:'edduarte-content-bold'; 
+    font-style:normal;
+    font-weight:700;
+    src:url('../fonts/martel-v1-latin-900.eot'); /* IE9 Compat Modes */
+    src:local('Martel Heavy'), local('Martel-Heavy'),
+    url('../fonts/martel-v1-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/martel-v1-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/martel-v1-latin-900.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/martel-v1-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/martel-v1-latin-900.svg#Martel') format('svg'); /* Legacy iOS */
+}
+
+.font-stage-2 b,.font-stage-2 strong {
+    font-family: "edduarte-content-bold",TimesNewRoman,"Times New Roman",Times,serif;
+    font-weight: 700
+}
+
+@media screen and (min-width:700px) {
+
+    @font-face {
+        font-family:'edduarte-headings-bold';
+        font-style:normal;
+        font-weight:700;
+        src: url('../fonts/heebo-v2-latin-500.eot'); /* IE9 Compat Modes */
+        src: local('Heebo Bold'), local('Heebo-Bold'),
+        url('../fonts/heebo-v2-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/heebo-v2-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../fonts/heebo-v2-latin-500.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/heebo-v2-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/heebo-v2-latin-500.svg#Heebo') format('svg'); /* Legacy iOS */
+    }
+
+    .font-stage-2 .logo,.font-stage-2 .subtitle,.font-stage-2 .title,.font-stage-2 footer>ul>li,.font-stage-2 h1,.font-stage-2 h2,.font-stage-2 h3,.font-stage-2 h4,.font-stage-2 h5,.font-stage-2 h6 {
+        font-family: "edduarte-headings-bold","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+        font-weight: 700
+    }
+
+    .font-stage-2 .myname {
+        letter-spacing: -.68px;
+        margin-top: 0;
+        padding-top: .36em
+    }
+
+    .font-stage-2 .myemail {
+        letter-spacing: -.035em
+    }
+
+    .font-stage-2 .mylinks {
+        letter-spacing: -.005em;
+        padding-top: 1.35em;
+        margin-bottom: 1em
+    }
+
+    .font-stage-2 .title {
+        letter-spacing: -.03em
+    }
+
+    .font-stage-2 .subtitle {
+        letter-spacing: -.035em
+    }
+
+    .font-stage-2 h2 {
+        margin-bottom: -.25em
+    }
+}
+
 @media screen and (max-width:880px),print {
     .list {
         max-width: 655px;
@@ -984,6 +1021,10 @@ pre>code {
 
     .font-stage-1 .title {
         font-size: 2em
+    }
+
+    .font-stage-2 .title {
+        letter-spacing: -.028em
     }
 
     .subtitle {
@@ -1119,7 +1160,7 @@ pre>code {
         margin-top: .1em
     }
 
-    .font-stage-1 .title {
+    .font-stage-1 .title,.font-stage-2 .title {
         font-size: 1.7em;
         letter-spacing: -.02em
     }
