@@ -98,12 +98,12 @@
     font-style:normal;
     font-weight:400;
     src: url('../fonts/heebo-v2-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Heebo'), local('Heebo-Regular'),
-       url('../fonts/heebo-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/heebo-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/heebo-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/heebo-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/heebo-v2-latin-regular.svg#Heebo') format('svg'); /* Legacy iOS */
+    src: local('Heebo'), local('Heebo-Regular'),
+    url('../fonts/heebo-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/heebo-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/heebo-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/heebo-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/heebo-v2-latin-regular.svg#Heebo') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
@@ -310,9 +310,9 @@ ol>li,ul>li {
 
 summary {
     letter-spacing: -.008em;
+    line-height: 1.7em;
     margin-top: .1em;
-    margin-bottom: .1em;
-    line-height: 1.7em
+    margin-bottom: .1em
 }
 
 .font-load-regular p {
@@ -373,15 +373,15 @@ header {
 
 .subtitle {
     font-size: 2.7em;
-    line-height: 1.25em;
     letter-spacing: -.06em;
+    line-height: 1.25em;
     margin-top: .18em
 }
 
 .font-load-regular .subtitle {
     font-size: 2.8em;
-    line-height: 1.22em;
     letter-spacing: -.03em;
+    line-height: 1.22em;
     margin-top: .17em
 }
 
@@ -412,9 +412,9 @@ header {
 }
 
 .metadata>p {
+    font-size: 24px;
     margin-top: .3em;
-    margin-bottom: .2em;
-    font-size: 24px
+    margin-bottom: .2em
 }
 
 .font-load-regular .footnote>p,.font-load-regular .metadata>p {
@@ -1161,11 +1161,6 @@ pre>code {
         margin-top: .1em
     }
 
-    .font-load-regular .title,.font-load-bold .title {
-        font-size: 1.7em;
-        letter-spacing: -.02em
-    }
-
     .title {
         font-size: 1.6em;
         letter-spacing: -.035em;
@@ -1173,19 +1168,24 @@ pre>code {
         margin-top: .2em
     }
 
+    .font-load-regular .title,.font-load-bold .title {
+        font-size: 1.7em;
+        letter-spacing: -.02em
+    }
+
     .subtitle {
-        letter-spacing: -.1em;
+        letter-spacing: -.072em;
         margin-top: .1em
     }
 
     .font-load-regular .subtitle {
-        margin-top: .1em;
-        letter-spacing: -.025em
+        letter-spacing: -.02em;
+        margin-top: .1em
     }
 
     .font-load-regular .subtitle,.subtitle,h1 {
-        line-height: 1.3em;
-        font-size: 1.6em
+        font-size: 1.6em;
+        line-height: 1.3em
     }
 
     .font-load-regular h2 {
