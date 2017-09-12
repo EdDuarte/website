@@ -1,10 +1,8 @@
 ---
-title: "Papers - Eduardo Duarte"
+title: "Papers"
 aliases:
     - paper
 ---
-
-# Papers & Talks
 
 Below are some of the papers I've authored, covering various fields like
 Information Visualization and Information Security. You can also view my

@@ -45,19 +45,28 @@
 <link rel="preconnect" href="https://cloud.netlifyusercontent.com/" />
 
 <script type="text/javascript">
-    // https://github.com/filamentgroup/loadCSS
-    !function(e){"use strict"
-    var n=function(n,t,o){function i(e){return f.body?e():void setTimeout(function(){i(e)})}var d,r,a,l,f=e.document,s=f.createElement("link"),u=o||"all"
-    return t?d=t:(r=(f.body||f.getElementsByTagName("head")[0]).childNodes,d=r[r.length-1]),a=f.styleSheets,s.rel="stylesheet",s.href=n,s.media="only x",i(function(){d.parentNode.insertBefore(s,t?d:d.nextSibling)}),l=function(e){for(var n=s.href,t=a.length;t--;)if(a[t].href===n)return e()
-    setTimeout(function(){l(e)})},s.addEventListener&&s.addEventListener("load",function(){this.media=u}),s.onloadcssdefined=l,l(function(){s.media!==u&&(s.media=u)}),s}
-    "undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this)
+  // https://github.com/filamentgroup/loadCSS
+  !function(e){"use strict"
+  var n=function(n,t,o){function i(e){return f.body?e():void setTimeout(function(){i(e)})}var d,r,a,l,f=e.document,s=f.createElement("link"),u=o||"all"
+  return t?d=t:(r=(f.body||f.getElementsByTagName("head")[0]).childNodes,d=r[r.length-1]),a=f.styleSheets,s.rel="stylesheet",s.href=n,s.media="only x",i(function(){d.parentNode.insertBefore(s,t?d:d.nextSibling)}),l=function(e){for(var n=s.href,t=a.length;t--;)if(a[t].href===n)return e()
+  setTimeout(function(){l(e)})},s.addEventListener&&s.addEventListener("load",function(){this.media=u}),s.onloadcssdefined=l,l(function(){s.media!==u&&(s.media=u)}),s}
+  "undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this)
+
+  (function(d) {
+    var config = {
+      kitId: 'zyx8skf',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
 </script>
 <style type="text/css">
 
 @font-face {
     font-family:'edduarte-content-mobile';
     font-style:normal;
-    font-weight:400;
+    font-weight:300;
     src: url('../fonts/martel-v1-latin-600.eot'); /* IE9 Compat Modes */
     src: local('Martel DemiBold'), local('Martel-DemiBold'),
     url('../fonts/martel-v1-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -126,12 +135,13 @@ html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    color: rgba(14,17,21,.8)
+    color: rgb(47, 34, 48)
 }
 
 body {
     font-variant-ligatures: common-ligatures;
     font-feature-settings: "liga","clig";
+    text-align: left;
     max-width: 933px;
     margin: auto;
     padding: 0 1em
@@ -162,12 +172,12 @@ body {
 }
 
 .table>.list-title,ol,p,summary,ul {
-    font-family: TimesNewRoman,"Times New Roman",Times,serif;
+    font-family: Times,"Times New Roman",serif;
     font-weight: 400
 }
 
 .font-load-regular .table>.list-title,.font-load-regular b,.font-load-regular ol,.font-load-regular p,.font-load-regular strong,.font-load-regular summary,.font-load-regular ul {
-    font-family: "edduarte-content-regular",TimesNewRoman,"Times New Roman",Times,serif;
+    font-family: "yrsa","edduarte-content-regular",Times,"Times New Roman",serif;
     font-weight: 400
 }
 
@@ -217,14 +227,24 @@ aside {
     margin-left: 2em
 }
 
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 7px
+}
+
+.font-load-regular .sticky {
+    top: 8px
+}
+
 .toc {
     margin-left: -1.2em;
-    padding-top: .1em
+    padding-top: 0em
 }
 
 .font-load-regular .toc {
     margin-left: -1.2em;
-    padding-top: .4em
+    padding-top: .3em
 }
 
 .toc ul {
@@ -242,8 +262,7 @@ aside {
 }
 
 .footnote>p,.toc li {
-    font-size: 17.6px;
-    padding: 0
+    font-size: 17.6px
 }
 
 .font-load-regular .toc li {
@@ -253,8 +272,7 @@ aside {
 
 .font-load-regular .footnote>p,.font-load-regular .toc li {
     font-size: 14px;
-    margin: 1em 0 0;
-    padding: 0
+    margin: 1em 0 0
 }
 
 .table>.list-meta {
@@ -291,7 +309,7 @@ ol,p,summary,ul {
 }
 
 p {
-    line-height: 1.58;
+    line-height: 1.48em;
     display: block;
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
@@ -299,7 +317,8 @@ p {
     -webkit-margin-end: 0;
     word-break: break-word;
     word-wrap: break-word;
-    margin-top: .54em;
+    margin-top: .45em;
+    margin-bottom: 0;
     letter-spacing: -.007em
 }
 
@@ -316,13 +335,26 @@ summary {
 }
 
 .font-load-regular p {
-    margin-top: .6em
+    margin-top: .6em;
+    margin-bottom: 0
+}
+
+.font-load-regular ol,.font-load-regular p,.font-load-regular summary,.font-load-regular ul {
+    --x-height-multiplier: 0.35;
+    --baseline-multiplier: 0.179;
+    font-size: 18px;
+    letter-spacing: -.03em;
+    line-height: 1.76em
+}
+
+.font-load-regular summary {
+    line-height: 2em
 }
 
 ol,ul {
     list-style-type: none;
     line-height: 1.55em;
-    margin: -1.5em 0 -.8em .25em;
+    margin: -0.5em 0 -.8em .25em;
     padding: 15px
 }
 
@@ -346,11 +378,12 @@ img {
 header {
     margin-top: 4px;
     margin-bottom: 12px;
-    padding-top: 3px;
-    padding-bottom: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
     border-style: solid;
-    border-width: 4px 0 0;
-    border-color: rgba(14,17,21,.25)
+    border-width: 2px 0 0;
+    border-color: rgba(14,17,21,.25);
+    /*text-align: center;*/
 }
 
 .font-load-regular header {
@@ -372,26 +405,26 @@ header {
 }
 
 .subtitle {
-    font-size: 2.7em;
-    letter-spacing: -.06em;
-    line-height: 1.25em;
+    font-size: 2.8em;
+    letter-spacing: -.065em;
+    line-height: 1.2em;
     margin-top: .18em
 }
 
 .font-load-regular .subtitle {
     font-size: 2.8em;
-    letter-spacing: -.03em;
+    letter-spacing: -.022em;
     line-height: 1.22em;
     margin-top: .17em
 }
 
 .subtitle,.subtitle a {
-    color: #e21b2a
+    color: rgb(226, 27, 42)
 }
 
 .footnote {
-    margin-top: 1.2em;
-    margin-bottom: .55em
+    margin-top: 1.25em;
+    margin-bottom: .1em
 }
 
 .font-load-regular .footnote,.metadata {
@@ -438,90 +471,132 @@ header {
     background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%)
 }
 
-h1 {
-    font-size: 1.7em;
-    letter-spacing: -.078em;
-    margin: 0 0 -.32em;
-    padding-top: .6em
-}
-
-.font-load-regular h1 {
-    letter-spacing: -.03em;
-    margin: 0 0 -.25em;
-    padding-top: .53em
-}
-
-h2,h3,h4 {
+h1,h2,h3,h4,h5,h6 {
     margin-top: 0
 }
 
+h1 {
+    font-size: 1.987em;
+    letter-spacing: -.078em;
+    margin-bottom: -.23em
+}
+
+.font-load-regular h1 {
+    font-size: 1.987em;
+    letter-spacing: -.03em;
+    margin-bottom: -.15em
+}
+
+p + h1 {
+    padding-top: 1.2em
+}
+
+.font-load-regular p + h1 {
+    padding-top: 1.13em
+}
+
 h2 {
-    font-size: 1.4em;
-    letter-spacing: -.05em;
-    padding-top: .79em;
+    font-size: 1.732em;
+    letter-spacing: -.08em;
     margin-bottom: -.25em
 }
 
 .font-load-regular h2 {
-    font-size: 1.5em;
+    font-size: 1.732em;
     letter-spacing: -.032em;
-    margin-top: 0;
-    padding-top: .76em
+    margin-bottom: -.2em
 }
 
-h3,h4 {
-    margin-bottom: -.4em
+p + h2 {
+    padding-top: 1.05em
+}
+
+.font-load-regular p + h2 {
+    padding-top: 1em
 }
 
 h3 {
-    font-size: 1.2em;
+    font-size: 1.51em;
     letter-spacing: -.08em;
-    padding-top: 1.1em
+    margin-bottom: -.33em
 }
 
 .font-load-regular h3 {
-    font-size: 1.2em;
+    font-size: 1.51em;
     letter-spacing: -.031em;
-    padding-top: 1.25em
+    margin-bottom: -.22em
 }
 
-h4,h6 {
-    padding-top: 1.8em
+p + h3 {
+    padding-top: .95em
+}
+
+.font-load-regular p + h3 {
+    padding-top: .885em
 }
 
 h4 {
-    font-size: .9em
+    font-size: 1.316em;
+    letter-spacing: -.07em;
+    margin-bottom: -.35em
 }
 
 .font-load-regular h4 {
-    font-size: 1em;
+    font-size: 1.316em;
     letter-spacing: -.025em;
-    margin-top: 0;
-    padding-top: 1.7em
+    margin-bottom: -.25em
 }
 
-h4,ol,ul {
-    letter-spacing: -.01em
+p + h4 {
+    padding-top: .86em
 }
 
-h5,h6 {
-    font-size: .74em;
-    margin-top: 0;
-    margin-bottom: -.2em;
-    padding-top: 1.6em
+.font-load-regular p + h4 {
+    padding-top: .783em
+}
+
+h5 {
+    font-size: 1.147em;
+    letter-spacing: -.055em;
+    margin-bottom: -.65em;
 }
 
 .font-load-regular h5 {
-    font-size: .8em
+    font-size: 1.147em;
+    letter-spacing: -.01em;
+    margin-bottom: -.5em
+}
+
+p + h5 {
+    padding-top: .75em
+}
+
+.font-load-regular p + h5 {
+    padding-top: .693em
 }
 
 h6 {
-    font-size: .64em;
-    margin-bottom: -.8em
+    font-size: 1em;
+    letter-spacing: -.06em;
+    margin-bottom: -.75em;
 }
 
 .font-load-regular h6 {
-    font-size: .7em
+    font-size: 1em;
+    letter-spacing: -.01em;
+    margin-bottom: -.55em
+}
+
+p + h6 {
+    padding-top: .71em
+}
+
+.font-load-regular p + h6 {
+    padding-top: .613em
+}
+
+ol,ul {
+    letter-spacing: -.01em
 }
 
 .links,.links>li,code,kbd,pre,samp {
@@ -546,11 +621,8 @@ kbd,pre>code,samp {
 .links {
     font-style: normal;
     margin: 0;
-    padding: .5em 0 0
-}
-
-.font-load-regular .links {
-    padding-top: .45em
+    padding: 0;
+    padding-top: .5em
 }
 
 .links>li {
@@ -630,7 +702,7 @@ blockquote,dfn {
 }
 
 .table>.list-meta>a,a {
-    color: rgba(14,17,21,.8)
+    color: rgb(47, 34, 48)
 }
 
 .logo a,.table>.list-meta>a,a,footer a {
@@ -648,14 +720,14 @@ h1,h2,h3,h4 {
 }
 
 .font-load-regular .myname {
-    letter-spacing: -.6px;
+    letter-spacing: -.5px;
     margin-top: 0;
     padding-top: .36em
 }
 
 .myemail {
-    letter-spacing: -.03em;
-    padding-top: .5em
+    letter-spacing: -.06em;
+    padding-top: .45em
 }
 
 .font-load-regular .myemail,.mylinks {
@@ -664,14 +736,14 @@ h1,h2,h3,h4 {
 }
 
 .mylinks {
-    padding-top: 1.1em;
-    margin-bottom: 1.1em
+    letter-spacing: -.08em;
+    padding-top: .94em;
+    margin-bottom: .88em
 }
 
 .font-load-regular .mylinks {
-    letter-spacing: -.005em;
-    padding-top: 1em;
-    margin-bottom: 1em
+    padding-top: 1.25em;
+    margin-bottom: 1.1em
 }
 
 .skills {
@@ -693,7 +765,7 @@ h1,h2,h3,h4 {
 }
 
 a {
-    background-image: linear-gradient(to right,#e21b2a 50%,#e21b2a 50%);
+    background-image: linear-gradient(to right,rgb(226, 27, 42) 50%,rgb(226, 27, 42) 50%);
     background-position: 0 1.04em;
     background-size: 5px 2px;
     text-size-adjust: 100%;
@@ -720,10 +792,23 @@ iframe,video {
 }
 
 blockquote {
-    border-left: 4px solid rgba(14,17,21,.8);
+    border-left: 4px solid rgb(47, 34, 48);
     border-radius: 4px;
     margin: 0;
     padding: 0 0 0 1em
+}
+
+blockquote p:first-child:first-letter {
+  float: left;
+  font-size: 70px;
+  text-indent: 0;
+  padding-top: 14px;
+  padding-right: 7px;
+}
+
+.font-load-regular blockquote p:first-child:first-letter {
+  font-size: 60px;
+  padding-top: 20px;
 }
 
 img.myphoto {
@@ -796,18 +881,6 @@ img.centered:empty {
     font-size: 16px
 }
 
-.font-load-regular ol,.font-load-regular p,.font-load-regular summary,.font-load-regular ul {
-    --x-height-multiplier: 0.35;
-    --baseline-multiplier: 0.179;
-    font-size: 18px;
-    letter-spacing: -.03em;
-    line-height: 1.88em
-}
-
-.font-load-regular summary {
-    line-height: 2em
-}
-
 .links>li>a,.list-meta-date,.logo,.myemail,.myemail a,.mylinks a,.myname,.myname a,.skills,.title,.title a,footer,footer a,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
     background-image: none
 }
@@ -841,8 +914,12 @@ img.centered:empty {
 
 .logo a:hover,.myemail a:hover {
     background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%);
-    background-size: 5px 3px;
+    background-size: 5px 2px;
     background-position: 0 1.24em
+}
+
+.myemail a:hover {
+    background-size: 5px 3px
 }
 
 .mylinks a:hover {
@@ -886,7 +963,7 @@ table {
 }
 
 table thead th {
-    border-bottom: 1px solid rgba(14,17,21,.8)
+    border-bottom: 1px solid rgb(47, 34, 48)
 }
 
 td,th {
@@ -894,7 +971,7 @@ td,th {
 }
 
 tr:nth-child(even) {
-    background: rgba(14,17,21,.8)
+    background: rgb(47, 34, 48)
 }
 
 .table>div>a {
@@ -902,15 +979,15 @@ tr:nth-child(even) {
 }
 
 pre>code {
-    color: #fff
+    color: rgb(255, 255, 255)
 }
 
 .font-load-bold b,.font-load-bold strong {
-    font-family: "edduarte-content-bold",TimesNewRoman,"Times New Roman",Times,serif;
+    font-family: "yrsa","edduarte-content-bold",Times,"Times New Roman",serif;
     font-weight: 700
 }
 
-@media screen and (min-width:700px) {
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-width:700px) {
 
     .font-load-bold .logo,.font-load-bold .subtitle,.font-load-bold .title,.font-load-bold footer>ul>li,.font-load-bold h1,.font-load-bold h2,.font-load-bold h3,.font-load-bold h4,.font-load-bold h5,.font-load-bold h6 {
         font-family: "edduarte-headings-bold","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
@@ -927,22 +1004,12 @@ pre>code {
         letter-spacing: -.035em
     }
 
-    .font-load-bold .mylinks {
-        letter-spacing: -.005em;
-        padding-top: 1.35em;
-        margin-bottom: 1em
-    }
-
     .font-load-bold .title {
         letter-spacing: -.03em
     }
 
     .font-load-bold .subtitle {
-        letter-spacing: -.035em
-    }
-
-    .font-load-bold h2 {
-        margin-bottom: -.25em
+        letter-spacing: -.027em
     }
 }
 
@@ -972,6 +1039,12 @@ pre>code {
 }
 
 @media screen and (max-width:980px),print {
+
+    header {
+        padding-top: 5px;
+        padding-bottom: 0
+    }
+
     body {
         max-width: 622px
     }
@@ -1000,6 +1073,11 @@ pre>code {
         padding: 0
     }
 
+    .sticky {
+        position: unset;
+        top: 0
+    }
+
     .links,aside {
         margin: 0
     }
@@ -1014,7 +1092,7 @@ pre>code {
 
     .title {
         font-size: 1.9em;
-        letter-spacing: -.05em;
+        letter-spacing: -.045em;
         line-height: 1.23em;
         margin-top: .2em
     }
@@ -1028,16 +1106,64 @@ pre>code {
     }
 
     .subtitle {
-        font-size: 1.8em;
-        letter-spacing: -.052em;
+        font-size: 1.834em;
+        letter-spacing: -.05em;
         line-height: 1.26em;
         margin-top: .27em
     }
 
     .font-load-regular .subtitle {
-        font-size: 1.9em;
+        font-size: 1.934em;
         margin-top: .2em
     }
+
+    h1 {
+        font-size: 1.542em
+    }
+
+    .font-load-regular h1 {
+        font-size: 1.542em;
+    }
+
+    h2 {
+        font-size: 1.414em
+    }
+
+    .font-load-regular h2 {
+        font-size: 1.414em;
+    }
+
+    h3 {
+        font-size: 1.297em
+    }
+
+    .font-load-regular h3 {
+        font-size: 1.297em;
+    }
+
+    h4 {
+        font-size: 1.189em
+    }
+
+    .font-load-regular h4 {
+        font-size: 1.189em;
+    }
+
+    h5 {
+        font-size: 1.091em
+    }
+
+    .font-load-regular h5 {
+        font-size: 1.091em;
+    }
+
+/*    h6 {
+        font-size: 1em
+    }
+
+    .font-load-regular h6 {
+        font-size: 1em;
+    }*/
 
     .metadata {
         margin-top: .5em
@@ -1067,8 +1193,14 @@ pre>code {
         margin-top: -.1em
     }
 
+    .footnote {
+        margin-top: .85em;
+        margin-bottom: 1.1em
+    }
+
     .font-load-regular .footnote {
-        margin-top: 0
+        margin-top: 0;
+        margin-bottom: .95em
     }
 }
 
@@ -1080,16 +1212,22 @@ pre>code {
 
     header {
         margin-top: 3px;
-        border-width: 2px 0 0
+        border-width: 2px 0 0;
+        text-align: left
     }
 
     .font-load-regular .table>.list-title,.font-load-regular b,.font-load-regular ol,.font-load-regular p,.font-load-regular strong,.font-load-regular summary,.font-load-regular ul {
-        font-family: "edduarte-content-mobile",TimesNewRoman,"Times New Roman",Times,serif;
-        font-weight: 400
+        font-family: "yrsa","edduarte-content-mobile",Times,"Times New Roman",serif;
+        font-weight: 300
     }
 
     .font-load-regular .logo,.font-load-regular .subtitle,.font-load-regular .title,.font-load-regular footer>ul>li,.font-load-regular h1,.font-load-regular h2,.font-load-regular h3,.font-load-regular h4,.font-load-regular h5,.font-load-regular h6 {
         font-weight: 400
+    }
+
+    .font-load-bold b,.font-load-bold strong {
+        font-family: "yrsa","edduarte-content-bold",Times,"Times New Roman",serif;
+        font-weight: 700
     }
 
     img {
@@ -1101,23 +1239,22 @@ pre>code {
         letter-spacing: -.0034em
     }
 
-    h4,summary {
-        letter-spacing: -.01em
-    }
-
     ol,p,summary,ul {
         font-size: 18.8px;
-        line-height: 1.6em
+        letter-spacing: -.01em;
+        line-height: 28.98px;
+        margin-top: .5em
     }
 
-    p,summary {
-        margin-top: .4em
+    summary {
+        letter-spacing: -.005em
     }
 
     .font-load-regular ol,.font-load-regular p,.font-load-regular summary,.font-load-regular ul {
         font-size: 15px;
         letter-spacing: 0;
-        line-height: 2em
+        line-height: 28px;
+        margin-top: .45em
     }
 
     .list {
@@ -1174,64 +1311,75 @@ pre>code {
     }
 
     .subtitle {
-        letter-spacing: -.072em;
-        margin-top: .1em
+        letter-spacing: -.057em;
+        margin-top: .15em
     }
 
     .font-load-regular .subtitle {
-        letter-spacing: -.02em;
-        margin-top: .1em
+        letter-spacing: -.015em;
+        margin-top: .15em
     }
 
-    .font-load-regular .subtitle,.subtitle,h1 {
-        font-size: 1.6em;
+    .font-load-regular .subtitle,.subtitle {
+        font-size: 1.509em;
         line-height: 1.3em
     }
 
-    .font-load-regular h2 {
-        font-size: 1.35em
+    h1 {
+        font-size: 1.341em
+    }
+
+    .font-load-regular h1 {
+        font-size: 1.341em
     }
 
     h2 {
-        font-size: 1.3em;
-        letter-spacing: -.054em
+        font-size: 1.265em;
+        /*letter-spacing: -.054em*/
     }
 
-    h1,h3 {
-        letter-spacing: -.08em
+    .font-load-regular h2 {
+        font-size: 1.265em
     }
 
-    .font-load-regular h3,.font-load-regular h4 {
-        font-size: 1.2em;
-        letter-spacing: -.031em
+    h3 {
+        font-size: 1.193em
     }
 
-    .font-load-regular h4 {
-        font-size: 1em
+    .font-load-regular h3 {
+        font-size: 1.193em
     }
 
     h4 {
-        font-size: .9em
+        font-size: 1.125em
+    }
+
+    .font-load-regular h4 {
+        font-size: 1.125em
     }
 
     h5 {
-        font-size: .75em
+        font-size: 1.061em
     }
 
-    .font-load-regular h5,.font-load-regular h6 {
-        font-size: .8em
+    .font-load-regular h5 {
+        font-size: 1.061em
     }
 
     h6 {
-        font-size: .7em
+        font-size: 1em
+    }
+
+    .font-load-regular h6 {
+        font-size: 1em
     }
 
     .metadata {
-        margin-top: 0
+        margin-top: .1em
     }
 
-    .font-load-regular .metadata,h1 {
-        margin-top: .1em
+    .font-load-regular .metadata {
+        margin-top: .3em
     }
 
     .metadata>p {
@@ -1240,6 +1388,14 @@ pre>code {
 
     .font-load-regular .metadata>p {
         font-size: 15px
+    }
+
+    .footnote {
+        margin-bottom: .67em
+    }
+
+    .font-load-regular .footnote {
+        margin-bottom: .7em
     }
 
     .footnote>p,.metadata>p {
@@ -1255,11 +1411,12 @@ pre>code {
         line-height: 1.7em
     }
 
-    a {
-        background-size: 5px 1px
+    .font-load-regular a {
+        background-size: 5px 1px;
+        background-position: 0 1.4em
     }
 
-    .logo a:hover,.myemail a:hover {
+    .myemail a:hover {
         background-size: 5px 2px
     }
 
@@ -1268,15 +1425,23 @@ pre>code {
     }
 
     .footnote a,.metadata a {
-        background-position: 0 1.03em
+        background-position: 0 .98em
     }
 
     .font-load-regular .footnote a,.font-load-regular .metadata a {
-        background-position: 0 1.5em
+        background-position: 0 1.4em
     }
 
     .logo {
         padding-top: 17px
+    }
+
+    .mylinks {
+        padding-top: .8em
+    }
+
+    .font-load-regular .mylinks {
+        padding-top: 1em
     }
 
     .links>li {
@@ -1285,6 +1450,10 @@ pre>code {
 
     .font-load-regular .links>li {
         line-height: 40px
+    }
+
+    .myname {
+        letter-spacing: -.07em
     }
 }
 
