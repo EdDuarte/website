@@ -43,7 +43,6 @@
 </main>
 
 <aside>
-<div class="sticky">
 {{ $linkList := .Params.links }}
 {{ if $linkList }}
 <section>
@@ -54,19 +53,15 @@
 </section>
 {{ end }}
 
-<section class="toc">
-{{.TableOfContents}}
-</section>
-
 <section class="footnote">
-{{ if $.GitInfo }}
-{{ $.Page.Lastmod.Format "January 2, 2006" }}
-{{ end }}
 {{ with .Params.medium }}<p class="medium">This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
 {{ with .Params.hn }}<p class="hn">Discussion on <a href="{{ . }}">Hacker News</a>.</p>{{ end }}
 </section>
 
-</div>
+<section class="toc">
+{{.TableOfContents}}
+</section>
+
 </aside>
 
 </div>

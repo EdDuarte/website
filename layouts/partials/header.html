@@ -54,43 +54,19 @@
 </script>
 <style type="text/css">
 
-@font-face {
-    font-family:'edduarte-content-mobile';
-    font-style:normal;
-    font-weight:300;
-    src: url('../fonts/martel-v1-latin-600.eot'); /* IE9 Compat Modes */
-    src: local('Martel DemiBold'), local('Martel-DemiBold'),
-    url('../fonts/martel-v1-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/martel-v1-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/martel-v1-latin-600.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/martel-v1-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/martel-v1-latin-600.svg#Martel') format('svg'); /* Legacy iOS */
-}
+/* STAGE 1 FONTS */
 
 @font-face {
     font-family:'edduarte-content-regular';
     font-style:normal;
     font-weight:400;
-    src: url('../fonts/martel-v1-latin-700.eot'); /* IE9 Compat Modes */
-    src: local('Martel Bold'), local('Martel-Bold'),
-    url('../fonts/martel-v1-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/martel-v1-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/martel-v1-latin-700.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/martel-v1-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/martel-v1-latin-700.svg#Martel') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-    font-family:'edduarte-content-bold'; 
-    font-style:normal;
-    font-weight:700;
-    src:url('../fonts/martel-v1-latin-900.eot'); /* IE9 Compat Modes */
-    src:local('Martel Heavy'), local('Martel-Heavy'),
-    url('../fonts/martel-v1-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/martel-v1-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/martel-v1-latin-900.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/martel-v1-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/martel-v1-latin-900.svg#Martel') format('svg'); /* Legacy iOS */
+    src: url('../fonts/volkhov-v8-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Volkhov Regular'), local('Volkhov-Regular'),
+    url('../fonts/volkhov-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/volkhov-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/volkhov-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/volkhov-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/volkhov-v8-latin-regular.svg#Volkhov') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
@@ -106,19 +82,6 @@
     url('../fonts/heebo-v2-latin-regular.svg#Heebo') format('svg'); /* Legacy iOS */
 }
 
-@font-face {
-    font-family:'edduarte-headings-bold';
-    font-style:normal;
-    font-weight:700;
-    src: url('../fonts/heebo-v2-latin-500.eot'); /* IE9 Compat Modes */
-    src: local('Heebo Bold'), local('Heebo-Bold'),
-    url('../fonts/heebo-v2-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/heebo-v2-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/heebo-v2-latin-500.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/heebo-v2-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/heebo-v2-latin-500.svg#Heebo') format('svg'); /* Legacy iOS */
-}
-
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -132,62 +95,82 @@ html {
 body {
     font-variant-ligatures: common-ligatures;
     font-feature-settings: "liga","clig";
+    font-kerning: normal;
     text-align: left;
-    max-width: 933px;
+    max-width: 930px;
     margin: auto;
     padding: 0 1em
 }
 
+.list-page,main {
+    max-width: 620px
+}
+
+aside {
+    max-width: 280px;
+    margin-left: 30px
+}
+
 .table>.list-meta,pre {
-    font-family: "Consolas",monospace
+    font-family: "Monaco","Consolas",monospace
 }
 
-.logo,.skills,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6 {
+.logo,.skills,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,.font-load-1 .links,.links {
     font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    font-style: normal;
     font-weight: 400
 }
 
-.font-load-regular .skills {
+.font-load-1 .logo,.font-load-1 .title,.font-load-1 .subtitle,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6 {
     font-family: "edduarte-headings-regular","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-    font-weight: 400
-}
-
-.font-load-regular .logo,.font-load-regular .subtitle,.font-load-regular .title,.font-load-regular footer>ul>li,.font-load-regular h1,.font-load-regular h2,.font-load-regular h3,.font-load-regular h4,.font-load-regular h5,.font-load-regular h6 {
-    font-family: "edduarte-headings-regular","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    font-style: normal;
     font-weight: 700
 }
 
-.font-load-regular .links,.links {
-    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-    font-weight: 400
-}
-
 .table>.list-title,ol,p,summary,ul {
-    font-family: Times,"Times New Roman",serif;
+    font-family: "Times New Roman",Times,serif;
+    font-style: normal;
     font-weight: 400
 }
 
-.font-load-regular .table>.list-title,.font-load-regular b,.font-load-regular ol,.font-load-regular p,.font-load-regular strong,.font-load-regular summary,.font-load-regular ul {
-    font-family: "yrsa","edduarte-content-regular",Times,"Times New Roman",serif;
+.font-load-1 .table>.list-title,.font-load-1 b,.font-load-1 ol,.font-load-1 p,.font-load-1 strong,.font-load-1 summary,.font-load-1 ul,.font-load-1 em {
+    font-family: "edduarte-content-regular","Times New Roman",Times,serif;
+    font-style: normal;
     font-weight: 400
 }
 
-.font-load-regular b,.font-load-regular strong {
+em,blockquote,dfn,.font-load-1 em,.font-load-1 blockquote,.font-load-1 dfn {
+    font-style: italic
+}
+
+.font-load-2 em,.font-load-2 blockquote,.font-load-2 dfn {
+    font-family: "edduarte-content-regular-italic","edduarte-content-regular","Times New Roman",Times,serif;
+    font-style: normal;
+}
+
+.font-load-1 b,.font-load-1 strong {
+    font-weight: 700
+}
+
+.font-load-2 b,.font-load-2 strong {
+    font-family: "edduarte-content-bold","edduarte-content-regular","Times New Roman",Times,serif
+}
+
+.font-load-1 b em,.font-load-1 strong em {
+    font-style: italic;
+    font-weight: 700
+}
+
+.font-load-2 b em,.font-load-2 strong em {
+    font-family: "edduarte-content-bold-italic","edduarte-content-regular","Times New Roman",Times,serif;
+    font-style: normal;
     font-weight: 700
 }
 
 @-moz-document url-prefix() {
-    .font-load-regular .logo,.font-load-regular .subtitle,.font-load-regular .title,.font-load-regular footer>ul>li,.font-load-regular h1,.font-load-regular h2,.font-load-regular h3,.font-load-regular h4,.font-load-regular h5,.font-load-regular h6 {
+    .font-load-1 .logo,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6 {
         font-weight: 400
     }
-
-    .font-load-regular b,.font-load-regular strong {
-        font-weight: 400
-    }
-}
-
-.list-page,main {
-    max-width: 622px
 }
 
 .article-table>.col1,.article-table>.col2,.article-table>.col3 {
@@ -213,94 +196,79 @@ aside,main {
     padding: 0
 }
 
-aside {
-    max-width: 278px;
-    margin-left: 2em
-}
-
-.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 7px
-}
-
-.font-load-regular .sticky {
-    top: 8px
-}
-
 .toc {
-    margin-left: -1.2em;
-    padding-top: 0em
+    margin-top: 1.1em;
+    margin-left: -.65em
 }
 
-.font-load-regular .toc {
-    margin-left: -1.2em;
-    padding-top: .3em
+.font-load-1 .toc {
+    margin-top: 1em;
+    margin-left: -.7em
 }
 
 .toc ul {
-    margin-top: -.6em
+    margin: 0;
+    padding: 0
 }
 
-.font-load-regular .toc ul {
-    margin-top: -1em
+.toc ul {
+    margin-left: .5em
+}
+
+.font-load-1 .toc ul {
+    margin-left: .7em
 }
 
 .toc li {
+    font-size: 15.4px;
     letter-spacing: -.03em;
-    line-height: 1.2em;
+    line-height: 1.24em;
     margin: .77em 0 0
 }
 
-.footnote>p,.toc li {
-    font-size: 17.6px
-}
-
-.font-load-regular .toc li {
+.font-load-1 .toc li {
+    font-size: 13px;
     letter-spacing: -.03em;
-    line-height: 1.5em
-}
-
-.font-load-regular .footnote>p,.font-load-regular .toc li {
-    font-size: 14px;
-    margin: 1em 0 0
+    line-height: 1.5em;
+    margin-top: .9em
 }
 
 .table>.list-meta {
-    font-size: 12px;
+    font-size: .57em;
     letter-spacing: .005em;
     line-height: 1.167em;
     text-align: right
 }
 
-.font-load-regular .table>.list-meta {
+.font-load-1 .table>.list-meta {
+    font-size: .65em;
     line-height: 1.3em
 }
 
 .table>.list-title {
-    font-size: 17.8px;
+    font-size: .85em;
     letter-spacing: -.005em;
     line-height: 1.15em
 }
 
-.font-load-regular .table>.list-title {
-    font-size: 14.5px;
+.font-load-1 .table>.list-title {
+    font-size: .806em;
     letter-spacing: -.02em;
     line-height: 1.45em
 }
 
-.font-load-regular .table>.list-title>a {
+.font-load-1 .table>.list-title>a {
     background-position: 0 1.52em
 }
 
 ol,p,summary,ul {
     --x-height-multiplier: 0.35;
     --baseline-multiplier: 0.179;
-    font-size: 21.4px
+    font-size: 20.4px
 }
 
 p {
-    line-height: 1.48em;
+    line-height: 1.44em;
     display: block;
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
@@ -308,14 +276,14 @@ p {
     -webkit-margin-end: 0;
     word-break: break-word;
     word-wrap: break-word;
-    margin-top: .45em;
-    margin-bottom: 0;
-    letter-spacing: -.007em
+    margin-top: .5em;
+    margin-bottom: .91em;
+    letter-spacing: .02em
 }
 
 ol>li,ul>li {
-    margin-top: 15px;
-    margin-bottom: 15px
+    margin-top: .838em;
+    margin-bottom: .838em
 }
 
 summary {
@@ -325,40 +293,36 @@ summary {
     margin-bottom: .1em
 }
 
-.font-load-regular p {
+.font-load-1 p {
     margin-top: .6em;
     margin-bottom: 0
 }
 
-.font-load-regular ol,.font-load-regular p,.font-load-regular summary,.font-load-regular ul {
+.font-load-1 ol,.font-load-1 p,.font-load-1 summary,.font-load-1 ul {
     --x-height-multiplier: 0.35;
     --baseline-multiplier: 0.179;
-    font-size: 18px;
-    letter-spacing: -.03em;
-    line-height: 1.76em
+    font-size: 18.5px;
+    letter-spacing: -.02em;
+    line-height: 1.68em
 }
 
-.font-load-regular summary {
+.font-load-1 summary {
     line-height: 2em
 }
 
 ol,ul {
-    list-style-type: none;
-    line-height: 1.55em;
+    font-size: 1.3em;
+    line-height: 1.45em;
     margin: -0.5em 0 -.8em .25em;
-    padding: 15px
+    padding: .938em
 }
 
-.content>ul {
-    list-style-type: disc
+.font-load-1 ol>li,.font-load-1 ul>li {
+    margin-top: .7em
 }
 
-.content>ol {
-    list-style-type: decimal
-}
-
-.font-load-regular ol>li,.font-load-regular ul>li {
-    margin-top: 12px
+.toc ul,.list {
+    list-style-type: none
 }
 
 img {
@@ -367,32 +331,31 @@ img {
 }
 
 header {
-    margin-top: 4px;
-    margin-bottom: 12px;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    margin-top: .25em;
+    margin-bottom: .75em;
+    padding-top: 1.875em;
+    padding-bottom: 1.25em;
     border-style: solid;
     border-width: 2px 0 0;
-    border-color: rgba(14,17,21,.25);
-    /*text-align: center;*/
+    border-color: rgba(14,17,21,.25)
 }
 
-.font-load-regular header {
-    margin-top: 3px
+.font-load-1 header {
+    margin-top: .188em
 }
 
 .title {
     font-size: 3.02em;
     letter-spacing: -.07em;
     line-height: 1.19em;
-    margin: 5px 0 0
+    margin: .15em 0 0
 }
 
-.font-load-regular .title {
+.font-load-1 .title {
     font-size: 3em;
     letter-spacing: -.022em;
     line-height: 1.2em;
-    margin: 5px 0 0
+    margin: .15em 0 0
 }
 
 .subtitle {
@@ -402,7 +365,7 @@ header {
     margin-top: .18em
 }
 
-.font-load-regular .subtitle {
+.font-load-1 .subtitle {
     font-size: 2.8em;
     letter-spacing: -.022em;
     line-height: 1.22em;
@@ -414,15 +377,15 @@ header {
 }
 
 .footnote {
-    margin-top: 1.25em;
+    margin-top: 1.05em;
     margin-bottom: .1em
 }
 
-.font-load-regular .footnote,.metadata {
+.font-load-1 .footnote,.metadata {
     margin-top: 1em
 }
 
-.font-load-regular .metadata {
+.font-load-1 .metadata {
     margin-top: .99em
 }
 
@@ -432,29 +395,35 @@ header {
 }
 
 .footnote>p {
-    margin: .3em 0 .2em
+    font-size: 1em;
+    margin-top: 0
+}
+
+.font-load-1 .footnote>p {
+    font-size: .875em;
+    margin-top: 1em
 }
 
 .metadata>p {
-    font-size: 24px;
+    font-size: 1.5em;
     margin-top: .3em;
     margin-bottom: .2em
 }
 
-.font-load-regular .footnote>p,.font-load-regular .metadata>p {
+.font-load-1 .footnote>p,.font-load-1 .metadata>p {
     letter-spacing: -.025em;
     line-height: 1.53em
 }
 
-.font-load-regular .metadata>p {
-    font-size: 20px
+.font-load-1 .metadata>p {
+    font-size: 1.25em
 }
 
 .metadata a {
     background-position: 0 1em
 }
 
-.font-load-regular .footnote a,.font-load-regular .metadata a {
+.font-load-1 .footnote a,.font-load-1 .metadata a {
     background-position: 0 1.44em
 }
 
@@ -472,7 +441,7 @@ h1 {
     margin-bottom: -.23em
 }
 
-.font-load-regular h1 {
+.font-load-1 h1 {
     font-size: 1.987em;
     letter-spacing: -.03em;
     margin-bottom: -.15em
@@ -482,7 +451,7 @@ p + h1 {
     padding-top: 1.2em
 }
 
-.font-load-regular p + h1 {
+.font-load-1 p + h1 {
     padding-top: 1.13em
 }
 
@@ -492,7 +461,7 @@ h2 {
     margin-bottom: -.25em
 }
 
-.font-load-regular h2 {
+.font-load-1 h2 {
     font-size: 1.732em;
     letter-spacing: -.032em;
     margin-bottom: -.2em
@@ -502,7 +471,7 @@ p + h2 {
     padding-top: 1.05em
 }
 
-.font-load-regular p + h2 {
+.font-load-1 p + h2 {
     padding-top: 1em
 }
 
@@ -512,7 +481,7 @@ h3 {
     margin-bottom: -.33em
 }
 
-.font-load-regular h3 {
+.font-load-1 h3 {
     font-size: 1.51em;
     letter-spacing: -.031em;
     margin-bottom: -.22em
@@ -522,7 +491,7 @@ p + h3 {
     padding-top: .95em
 }
 
-.font-load-regular p + h3 {
+.font-load-1 p + h3 {
     padding-top: .885em
 }
 
@@ -532,7 +501,7 @@ h4 {
     margin-bottom: -.35em
 }
 
-.font-load-regular h4 {
+.font-load-1 h4 {
     font-size: 1.316em;
     letter-spacing: -.025em;
     margin-bottom: -.25em
@@ -542,7 +511,7 @@ p + h4 {
     padding-top: .86em
 }
 
-.font-load-regular p + h4 {
+.font-load-1 p + h4 {
     padding-top: .783em
 }
 
@@ -552,7 +521,7 @@ h5 {
     margin-bottom: -.65em;
 }
 
-.font-load-regular h5 {
+.font-load-1 h5 {
     font-size: 1.147em;
     letter-spacing: -.01em;
     margin-bottom: -.5em
@@ -562,7 +531,7 @@ p + h5 {
     padding-top: .75em
 }
 
-.font-load-regular p + h5 {
+.font-load-1 p + h5 {
     padding-top: .693em
 }
 
@@ -572,7 +541,7 @@ h6 {
     margin-bottom: -.75em;
 }
 
-.font-load-regular h6 {
+.font-load-1 h6 {
     font-size: 1em;
     letter-spacing: -.01em;
     margin-bottom: -.55em
@@ -582,7 +551,7 @@ p + h6 {
     padding-top: .71em
 }
 
-.font-load-regular p + h6 {
+.font-load-1 p + h6 {
     padding-top: .613em
 }
 
@@ -596,13 +565,17 @@ ol,ul {
 
 code {
     background-color: #f1f1f1;
-    font-size: 18px;
-    padding-left: 5px;
-    padding-right: 5px
+    font-size: .9em;
+    padding-left: .313em;
+    padding-right: .313em
+}
+
+.font-load-1 code {
+    font-size: 1.05em
 }
 
 kbd,pre>code,samp {
-    font-size: 14px;
+    font-size: .875em;
     font-weight: 400;
     line-height: 1.5em;
     padding-left: 0;
@@ -617,16 +590,16 @@ kbd,pre>code,samp {
 }
 
 .links>li {
-    margin: 0 6px 0 0;
-    line-height: 40px;
+    margin: 0 .25em 0 0;
+    line-height: 1.95em;
     display: inline-block;
     position: relative
 }
 
-.font-load-regular .links>li {
+.font-load-1 .links>li {
     margin-top: 0;
     margin-bottom: 0;
-    line-height: 41px
+    line-height: 2.3em
 }
 
 .links>li>a,pre {
@@ -639,7 +612,7 @@ kbd,pre>code,samp {
     text-decoration: none;
     border: 1px solid rgba(14,17,21,.15);
     cursor: pointer;
-    padding: 8px
+    padding: .7em
 }
 
 .links>li>a:hover {
@@ -648,25 +621,21 @@ kbd,pre>code,samp {
 }
 
 .logo {
-    font-size: 15px;
+    font-size: .94em;
     letter-spacing: -.08em;
     padding-top: 1em;
     padding-bottom: 0
 }
 
-.font-load-regular .logo {
+.font-load-1 .logo {
     letter-spacing: -.027em;
     padding-top: 1em;
     padding-bottom: .1em
 }
 
 footer>ul>li {
-    font-size: 13px;
-    letter-spacing: -.027em
-}
-
-blockquote,dfn {
-    font-style: italic
+    font-size: .7em;
+    letter-spacing: -.067em
 }
 
 .list-page>footer,.logo {
@@ -705,13 +674,13 @@ h1,h2,h3,h4 {
 }
 
 .myname {
-    letter-spacing: -2.05px;
+    letter-spacing: -.078em;
     margin-top: 0;
     padding-top: .35em
 }
 
-.font-load-regular .myname {
-    letter-spacing: -.5px;
+.font-load-1 .myname {
+    letter-spacing: -.031em;
     margin-top: 0;
     padding-top: .36em
 }
@@ -721,7 +690,7 @@ h1,h2,h3,h4 {
     padding-top: .45em
 }
 
-.font-load-regular .myemail,.mylinks {
+.font-load-1 .myemail,.mylinks {
     letter-spacing: -.03em;
     padding-top: .7em
 }
@@ -732,7 +701,7 @@ h1,h2,h3,h4 {
     margin-bottom: .88em
 }
 
-.font-load-regular .mylinks {
+.font-load-1 .mylinks {
     padding-top: 1.25em;
     margin-bottom: 1.1em
 }
@@ -744,7 +713,7 @@ h1,h2,h3,h4 {
     margin-bottom: -.42em
 }
 
-.font-load-regular .skills {
+.font-load-1 .skills {
     font-size: 1em;
     letter-spacing: -.02em;
     margin-top: 1em;
@@ -757,18 +726,18 @@ h1,h2,h3,h4 {
 
 a {
     background-image: linear-gradient(to right,rgb(226, 27, 42) 50%,rgb(226, 27, 42) 50%);
-    background-position: 0 1.04em;
+    background-position: 0 1em;
     background-size: 5px 2px;
     text-size-adjust: 100%;
     hyphens: manual
 }
 
-.font-load-regular a {
-    background-position: 0 1.44em
+.font-load-1 a {
+    background-position: 0 1.2em
 }
 
 .table>.list-title>a {
-    background-position: 0 1em
+    background-position: 0 1.04em
 }
 
 pre {
@@ -783,23 +752,24 @@ iframe,video {
 }
 
 blockquote {
-    border-left: 4px solid rgb(47, 34, 48);
-    border-radius: 4px;
+    border-left: 5px solid rgba(14,17,21,.25);
+    border-radius: 5px;
     margin: 0;
+    margin-left: -1.313em;
     padding: 0 0 0 1em
 }
 
 blockquote p:first-child:first-letter {
   float: left;
-  font-size: 70px;
+  font-size: 4.375em;
   text-indent: 0;
-  padding-top: 14px;
-  padding-right: 7px;
+  padding-top: .2em;
+  padding-right: .1em;
 }
 
-.font-load-regular blockquote p:first-child:first-letter {
-  font-size: 60px;
-  padding-top: 20px;
+.font-load-1 blockquote p:first-child:first-letter {
+  font-size: 3.75em;
+  padding-top: .3em;
 }
 
 img.myphoto {
@@ -833,11 +803,12 @@ img.centered:empty {
     padding: 0;
     margin-top: 1.78em;
     margin-bottom: 2em;
-    margin-left: -100px
+    margin-left: -4.6em
 }
 
-.font-load-regular .list {
-    margin-top: 2em
+.font-load-1 .list {
+    margin-top: 2em;
+    margin-left: -5.35em
 }
 
 .table {
@@ -849,7 +820,7 @@ img.centered:empty {
 
 .table li {
     display: inline-block;
-    padding: 0 10px 0 0
+    padding: 0 .625em 0 0
 }
 
 .table>.col1,.table>.col2,.table>.col3 {
@@ -860,7 +831,7 @@ img.centered:empty {
 .table>.col1 {
     flex: 2 1 12%;
     order: 1;
-    padding-right: 15px
+    padding-right: .938em
 }
 
 .table>.col2 {
@@ -869,7 +840,7 @@ img.centered:empty {
 }
 
 .mjx-math {
-    font-size: 16px
+    font-size: .9em
 }
 
 .links>li>a,.list-meta-date,.logo,.myemail,.myemail a,.mylinks a,.myname,.myname a,.skills,.title,.title a,footer,footer a,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
@@ -880,12 +851,12 @@ img.centered:empty {
     font-style: italic
 }
 
-.font-load-regular footer>ul>li {
-    font-size: 13px;
+.font-load-1 footer>ul>li {
+    font-size: .8em;
     letter-spacing: 0
 }
 
-.font-load-regular footer>ul>li,footer>ul>li {
+.font-load-1 footer>ul>li,footer>ul>li {
     line-height: 3em;
     margin: 0 0 -1em
 }
@@ -958,7 +929,7 @@ table thead th {
 }
 
 td,th {
-    padding: 5px
+    padding: .4em
 }
 
 tr:nth-child(even) {
@@ -970,44 +941,49 @@ tr:nth-child(even) {
 }
 
 pre>code {
+    font-size: .85em;
     color: rgb(255, 255, 255)
 }
 
-.font-load-bold b,.font-load-bold strong {
-    font-family: "yrsa","edduarte-content-bold",Times,"Times New Roman",serif;
-    font-weight: 700
+.font-load-1 pre>code {
+    font-size: .85em;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) and (min-width:700px) {
 
-    .font-load-bold .logo,.font-load-bold .subtitle,.font-load-bold .title,.font-load-bold footer>ul>li,.font-load-bold h1,.font-load-bold h2,.font-load-bold h3,.font-load-bold h4,.font-load-bold h5,.font-load-bold h6 {
-        font-family: "edduarte-headings-bold","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    .font-load-2 .logo,.font-load-2 .subtitle,.font-load-2 .title,.font-load-2 footer>ul>li,.font-load-2 h1,.font-load-2 h2,.font-load-2 h3,.font-load-2 h4,.font-load-2 h5,.font-load-2 h6 {
+        font-family: "edduarte-headings-bold","edduarte-headings-regular","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
         font-weight: 700
     }
 
-    .font-load-bold .myname {
-        letter-spacing: -.68px;
+    .font-load-2 .myname {
+        letter-spacing: -.03em;
         margin-top: 0;
         padding-top: .36em
     }
 
-    .font-load-bold .myemail {
+    .font-load-2 .myemail {
         letter-spacing: -.035em
     }
 
-    .font-load-bold .title {
-        letter-spacing: -.03em
+    .font-load-2 .title {
+        letter-spacing: -.025em
     }
 
-    .font-load-bold .subtitle {
-        letter-spacing: -.027em
+    .font-load-2 .subtitle {
+        letter-spacing: -.025em
     }
 }
 
 @media screen and (max-width:880px),print {
     .list {
-        max-width: 655px;
-        margin: 2em 0
+        max-width: 41em;
+        margin: 2em 0;
+        margin-left: 0
+    }
+
+    .font-load-1 .list {
+        margin-left: 0
     }
 
     .list>li>.table {
@@ -1032,12 +1008,12 @@ pre>code {
 @media screen and (max-width:980px),print {
 
     header {
-        padding-top: 5px;
+        padding-top: .3em;
         padding-bottom: 0
     }
 
     body {
-        max-width: 622px
+        max-width: 38.875em
     }
 
     .article-table {
@@ -1073,7 +1049,7 @@ pre>code {
         margin: 0
     }
 
-    .font-load-regular .links {
+    .font-load-1 .links {
         padding-top: 0
     }
 
@@ -1088,11 +1064,11 @@ pre>code {
         margin-top: .2em
     }
 
-    .font-load-regular .title {
+    .font-load-1 .title {
         font-size: 2em
     }
 
-    .font-load-bold .title {
+    .font-load-2 .title {
         letter-spacing: -.028em
     }
 
@@ -1103,7 +1079,7 @@ pre>code {
         margin-top: .27em
     }
 
-    .font-load-regular .subtitle {
+    .font-load-1 .subtitle {
         font-size: 1.934em;
         margin-top: .2em
     }
@@ -1112,7 +1088,7 @@ pre>code {
         font-size: 1.542em
     }
 
-    .font-load-regular h1 {
+    .font-load-1 h1 {
         font-size: 1.542em;
     }
 
@@ -1120,7 +1096,7 @@ pre>code {
         font-size: 1.414em
     }
 
-    .font-load-regular h2 {
+    .font-load-1 h2 {
         font-size: 1.414em;
     }
 
@@ -1128,7 +1104,7 @@ pre>code {
         font-size: 1.297em
     }
 
-    .font-load-regular h3 {
+    .font-load-1 h3 {
         font-size: 1.297em;
     }
 
@@ -1136,7 +1112,7 @@ pre>code {
         font-size: 1.189em
     }
 
-    .font-load-regular h4 {
+    .font-load-1 h4 {
         font-size: 1.189em;
     }
 
@@ -1144,35 +1120,35 @@ pre>code {
         font-size: 1.091em
     }
 
-    .font-load-regular h5 {
+    .font-load-1 h5 {
         font-size: 1.091em;
     }
 
-/*    h6 {
+    h6 {
         font-size: 1em
     }
 
-    .font-load-regular h6 {
+    .font-load-1 h6 {
         font-size: 1em;
-    }*/
+    }
 
     .metadata {
         margin-top: .5em
     }
 
-    .font-load-regular .metadata {
+    .font-load-1 .metadata {
         margin-top: .6em
     }
 
     .metadata a {
-        background-position: 0 .98em
+        background-position: 0 1.5em
     }
 
     .metadata>p {
         font-size: 1.22em
     }
 
-    .font-load-regular .metadata>p {
+    .font-load-1 .metadata>p {
         font-size: 1em
     }
 
@@ -1180,7 +1156,7 @@ pre>code {
         padding: 0
     }
 
-    .font-load-regular .links {
+    .font-load-1 .links {
         margin-top: -.1em
     }
 
@@ -1189,7 +1165,7 @@ pre>code {
         margin-bottom: 1.1em
     }
 
-    .font-load-regular .footnote {
+    .font-load-1 .footnote {
         margin-top: 0;
         margin-bottom: .95em
     }
@@ -1202,23 +1178,13 @@ pre>code {
     }
 
     header {
-        margin-top: 3px;
+        margin-top: .2em;
         border-width: 2px 0 0;
         text-align: left
     }
 
-    .font-load-regular .table>.list-title,.font-load-regular b,.font-load-regular ol,.font-load-regular p,.font-load-regular strong,.font-load-regular summary,.font-load-regular ul {
-        font-family: "yrsa","edduarte-content-mobile",Times,"Times New Roman",serif;
-        font-weight: 300
-    }
-
-    .font-load-regular .logo,.font-load-regular .subtitle,.font-load-regular .title,.font-load-regular footer>ul>li,.font-load-regular h1,.font-load-regular h2,.font-load-regular h3,.font-load-regular h4,.font-load-regular h5,.font-load-regular h6 {
+    .font-load-1 .logo,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6 {
         font-weight: 400
-    }
-
-    .font-load-bold b,.font-load-bold strong {
-        font-family: "yrsa","edduarte-content-bold",Times,"Times New Roman",serif;
-        font-weight: 700
     }
 
     img {
@@ -1231,20 +1197,22 @@ pre>code {
     }
 
     ol,p,summary,ul {
-        font-size: 18.8px;
-        letter-spacing: -.01em;
-        line-height: 28.98px;
+        font-size: 120%;
+        letter-spacing: 0.0115em;
+        line-height: 1.5em;
         margin-top: .5em
     }
 
     summary {
-        letter-spacing: -.005em
+        font-size: 1.25em;
+        letter-spacing: -.005em;
+        line-height: 1.4em
     }
 
-    .font-load-regular ol,.font-load-regular p,.font-load-regular summary,.font-load-regular ul {
-        font-size: 15px;
+    .font-load-1 ol,.font-load-1 p,.font-load-1 summary,.font-load-1 ul {
+        font-size: 105%;
         letter-spacing: 0;
-        line-height: 28px;
+        line-height: 1.75em;
         margin-top: .45em
     }
 
@@ -1253,28 +1221,36 @@ pre>code {
     }
 
     .table>.list-title {
-        font-size: 17.2px;
+        font-size: .92em;
         letter-spacing: 0;
         line-height: 1.2em
     }
 
-    .font-load-regular .table>.list-title {
-        font-size: 14.4px;
+    .table>.list-meta {
+        font-size: .68em;
+    }
+
+    .font-load-1 .table>.list-meta {
+        font-size: .8em;
+    }
+
+    .font-load-1 .table>.list-title {
+        font-size: .900em;
         letter-spacing: -.02em;
         line-height: 1.5em
     }
 
     code {
-        font-size: 17px
+        font-size: .9em
     }
 
     kbd,pre>code,samp {
-        font-size: 13px;
+        font-size: .6em;
         letter-spacing: -.017em
     }
 
     .mjx-math {
-        font-size: 13px;
+        font-size: .7em;
         margin: 0
     }
 
@@ -1285,10 +1261,6 @@ pre>code {
         margin-bottom: .9em
     }
 
-    .font-load-regular .logo {
-        margin-top: .1em
-    }
-
     .title {
         font-size: 1.6em;
         letter-spacing: -.035em;
@@ -1296,7 +1268,7 @@ pre>code {
         margin-top: .2em
     }
 
-    .font-load-regular .title,.font-load-bold .title {
+    .font-load-1 .title,.font-load-2 .title {
         font-size: 1.7em;
         letter-spacing: -.02em
     }
@@ -1306,12 +1278,12 @@ pre>code {
         margin-top: .15em
     }
 
-    .font-load-regular .subtitle {
+    .font-load-1 .subtitle {
         letter-spacing: -.015em;
         margin-top: .15em
     }
 
-    .font-load-regular .subtitle,.subtitle {
+    .font-load-1 .subtitle,.subtitle {
         font-size: 1.509em;
         line-height: 1.3em
     }
@@ -1320,7 +1292,7 @@ pre>code {
         font-size: 1.341em
     }
 
-    .font-load-regular h1 {
+    .font-load-1 h1 {
         font-size: 1.341em
     }
 
@@ -1329,7 +1301,7 @@ pre>code {
         /*letter-spacing: -.054em*/
     }
 
-    .font-load-regular h2 {
+    .font-load-1 h2 {
         font-size: 1.265em
     }
 
@@ -1337,7 +1309,7 @@ pre>code {
         font-size: 1.193em
     }
 
-    .font-load-regular h3 {
+    .font-load-1 h3 {
         font-size: 1.193em
     }
 
@@ -1345,7 +1317,7 @@ pre>code {
         font-size: 1.125em
     }
 
-    .font-load-regular h4 {
+    .font-load-1 h4 {
         font-size: 1.125em
     }
 
@@ -1353,7 +1325,7 @@ pre>code {
         font-size: 1.061em
     }
 
-    .font-load-regular h5 {
+    .font-load-1 h5 {
         font-size: 1.061em
     }
 
@@ -1361,7 +1333,7 @@ pre>code {
         font-size: 1em
     }
 
-    .font-load-regular h6 {
+    .font-load-1 h6 {
         font-size: 1em
     }
 
@@ -1369,23 +1341,23 @@ pre>code {
         margin-top: .1em
     }
 
-    .font-load-regular .metadata {
+    .font-load-1 .metadata {
         margin-top: .3em
     }
 
     .metadata>p {
-        font-size: 18px
+        font-size: 1.125em
     }
 
-    .font-load-regular .metadata>p {
-        font-size: 15px
+    .font-load-1 .metadata>p {
+        font-size: .938em
     }
 
     .footnote {
         margin-bottom: .67em
     }
 
-    .font-load-regular .footnote {
+    .font-load-1 .footnote {
         margin-bottom: .7em
     }
 
@@ -1394,24 +1366,24 @@ pre>code {
     }
 
     .footnote>p {
-        font-size: 17px;
+        font-size: 1.063em;
         letter-spacing: -.02em
     }
 
-    .font-load-regular .footnote>p,.font-load-regular .metadata>p {
+    .font-load-1 .footnote>p,.font-load-1 .metadata>p {
         line-height: 1.7em
     }
 
-    .font-load-regular a {
+    .font-load-1 a {
         background-size: 5px 1px;
-        background-position: 0 1.4em
+        background-position: 0 1.25em
     }
 
     .myemail a:hover {
         background-size: 5px 2px
     }
 
-    .font-load-regular .table>.list-title>a {
+    .font-load-1 .table>.list-title>a {
         background-position: 0 1.48em
     }
 
@@ -1419,33 +1391,95 @@ pre>code {
         background-position: 0 .98em
     }
 
-    .font-load-regular .footnote a,.font-load-regular .metadata a {
+    .font-load-1 .footnote a,.font-load-1 .metadata a {
         background-position: 0 1.4em
     }
 
     .logo {
-        padding-top: 17px
+        padding-top: 1.063em
     }
 
     .mylinks {
         padding-top: .8em
     }
 
-    .font-load-regular .mylinks {
+    .font-load-1 .logo {
+        margin-top: .1em
+    }
+
+    .font-load-1 .mylinks {
         padding-top: 1em
     }
 
     .links>li {
-        line-height: 38px
+        line-height: 2.1em
     }
 
-    .font-load-regular .links>li {
-        line-height: 40px
+    .font-load-1 .links>li {
+        line-height: 2.58em
     }
 
     .myname {
         letter-spacing: -.07em
     }
+
+    blockquote {
+        margin-left: 0;
+    }
+}
+
+/* STAGE 2 FONTS */
+
+@font-face {
+    font-family:'edduarte-content-regular-italic';
+    font-style:normal;
+    font-weight: 400;
+    src: url('../fonts/volkhov-v8-latin-italic.eot'); /* IE9 Compat Modes */
+    src: local('Volkhov Italic'), local('Volkhov-Italic'),
+    url('../fonts/volkhov-v8-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/volkhov-v8-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/volkhov-v8-latin-italic.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/volkhov-v8-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/volkhov-v8-latin-italic.svg#Volkhov') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family:'edduarte-content-bold'; 
+    font-style:normal;
+    font-weight:700;
+    src: url('../fonts/volkhov-v8-latin-700.eot'); /* IE9 Compat Modes */
+    src: local('Volkhov Bold'), local('Volkhov-Bold'),
+    url('../fonts/volkhov-v8-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/volkhov-v8-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/volkhov-v8-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/volkhov-v8-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/volkhov-v8-latin-700.svg#Volkhov') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family:'edduarte-content-bold-italic'; 
+    font-style:normal;
+    font-weight:700;
+    src: url('../fonts/volkhov-v8-latin-700italic.eot'); /* IE9 Compat Modes */
+    src: local('Volkhov Bold Italic'), local('Volkhov-BoldItalic'),
+    url('../fonts/volkhov-v8-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/volkhov-v8-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/volkhov-v8-latin-700italic.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/volkhov-v8-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/volkhov-v8-latin-700italic.svg#Volkhov') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family:'edduarte-headings-bold';
+    font-style:normal;
+    font-weight:700;
+    src: url('../fonts/heebo-v2-latin-500.eot'); /* IE9 Compat Modes */
+    src: local('Heebo Bold'), local('Heebo-Bold'),
+    url('../fonts/heebo-v2-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/heebo-v2-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/heebo-v2-latin-500.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/heebo-v2-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/heebo-v2-latin-500.svg#Heebo') format('svg'); /* Legacy iOS */
 }
 
 </style>
@@ -1465,12 +1499,12 @@ loadCSS('{{ "/css/print.css" | relURL }}', "", 'only print');
 
 // Optimization for Repeat Views
 if (sessionStorage.fontsLoaded) {
-    document.documentElement.className += " font-load-regular font-load-bold";
+    document.documentElement.className += " font-load-1 font-load-2";
 
     // setTimeout(function(){
-    // document.documentElement.className += " font-load-regular";
+    // document.documentElement.className += " font-load-1";
     // setTimeout(function(){
-    // document.documentElement.className += " font-load-bold";
+    // document.documentElement.className += " font-load-2";
     // }, 1000);
     // }, 1000);
 
@@ -1480,28 +1514,31 @@ if (sessionStorage.fontsLoaded) {
 // FontFaceObserver https://github.com/bramstein/fontfaceobserver
 (function(){function e(e,t){document.addEventListener?e.addEventListener("scroll",t,!1):e.attachEvent("scroll",t)}function t(e){document.body?e():document.addEventListener?document.addEventListener("DOMContentLoaded",function t(){document.removeEventListener("DOMContentLoaded",t),e()}):document.attachEvent("onreadystatechange",function n(){if("interactive"==document.readyState||"complete"==document.readyState)document.detachEvent("onreadystatechange",n),e()})}function n(e){this.a=document.createElement("div"),this.a.setAttribute("aria-hidden","true"),this.a.appendChild(document.createTextNode(e)),this.b=document.createElement("span"),this.c=document.createElement("span"),this.h=document.createElement("span"),this.f=document.createElement("span"),this.g=-1,this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;",this.b.appendChild(this.h),this.c.appendChild(this.f),this.a.appendChild(this.b),this.a.appendChild(this.c)}function r(e,t){e.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:"+t+";"}function i(e){var t=e.a.offsetWidth,n=t+100;return e.f.style.width=n+"px",e.c.scrollLeft=n,e.b.scrollLeft=e.b.scrollWidth+100,e.g!==t?(e.g=t,!0):!1}function s(t,n){function r(){var e=s;i(e)&&null!==e.a.parentNode&&n(e.g)}var s=t;e(t.b,r),e(t.c,r),i(t)}function o(e,t){var n=t||{};this.family=e,this.style=n.style||"normal",this.weight=n.weight||"normal",this.stretch=n.stretch||"normal"}function l(){if(null===a){var e=document.createElement("div");try{e.style.font="condensed 100px sans-serif"}catch(t){}a=""!==e.style.font}return a}function c(e,t){return[e.style,e.weight,l()?e.stretch:"","100px",t].join(" ")}var u=null,a=null,f=null;o.prototype.load=function(e,i){var o=this,a=e||"BESbswy",l=i||3e3,h=(new Date).getTime();return new Promise(function(e,i){null===f&&(f=!!window.FontFace);if(f){var p=new Promise(function(e,t){function n(){(new Date).getTime()-h>=l?t():document.fonts.load(c(o,o.family),a).then(function(t){1<=t.length?e():setTimeout(n,25)},function(){t()})}n()}),d=new Promise(function(e,t){setTimeout(t,l)});Promise.race([d,p]).then(function(){e(o)},function(){i(o)})}else t(function(){function t(){var t;if(t=-1!=m&&-1!=g||-1!=m&&-1!=S||-1!=g&&-1!=S)(t=m!=g&&m!=S&&g!=S)||(null===u&&(t=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),u=!!t&&(536>parseInt(t[1],10)||536===parseInt(t[1],10)&&11>=parseInt(t[2],10))),t=u&&(m==x&&g==x&&S==x||m==T&&g==T&&S==T||m==N&&g==N&&S==N)),t=!t;t&&(null!==C.parentNode&&C.parentNode.removeChild(C),clearTimeout(L),e(o))}function f(){if((new Date).getTime()-h>=l)null!==C.parentNode&&C.parentNode.removeChild(C),i(o);else{var e=document.hidden;if(!0===e||void 0===e)m=p.a.offsetWidth,g=d.a.offsetWidth,S=v.a.offsetWidth,t();L=setTimeout(f,50)}}var p=new n(a),d=new n(a),v=new n(a),m=-1,g=-1,S=-1,x=-1,T=-1,N=-1,C=document.createElement("div"),L=0;C.dir="ltr",r(p,c(o,"sans-serif")),r(d,c(o,"serif")),r(v,c(o,"monospace")),C.appendChild(p.a),C.appendChild(d.a),C.appendChild(v.a),document.body.appendChild(C),x=p.a.offsetWidth,T=d.a.offsetWidth,N=v.a.offsetWidth,f(),s(p,function(e){m=e,t()}),r(p,c(o,'"'+o.family+'",sans-serif')),s(d,function(e){g=e,t()}),r(d,c(o,'"'+o.family+'",serif')),s(v,function(e){S=e,t()}),r(v,c(o,'"'+o.family+'",monospace'))})})},"undefined"!=typeof module?module.exports=o:(window.FontFaceObserver=o,window.FontFaceObserver.prototype.load=o.prototype.load)})();
 
-var fontA = new FontFaceObserver('edduarte-content-mobile', {
+var fontA = new FontFaceObserver('edduarte-content-regular', {
     weight: 400
 });
-var fontB = new FontFaceObserver('edduarte-content-regular', {
-    weight: 400
-});
-var fontC = new FontFaceObserver('edduarte-headings-regular', {
+var fontB = new FontFaceObserver('edduarte-headings-regular', {
     weight: 400
 });
 
-Promise.all([fontA.load(), fontB.load(), fontC.load()]).then(function () {
-    document.documentElement.className += " font-load-regular";
+Promise.all([fontA.load(), fontB.load()]).then(function () {
+    document.documentElement.className += " font-load-1";
 
+    var fontC = new FontFaceObserver('edduarte-content-regular-italic', {
+        weight: 400
+    });
     var fontD = new FontFaceObserver('edduarte-content-bold', {
         weight: 700
     });
-    var fontE = new FontFaceObserver('edduarte-headings-bold', {
+    var fontE = new FontFaceObserver('edduarte-content-bold-italic', {
+        weight: 700
+    });
+    var fontF = new FontFaceObserver('edduarte-headings-bold', {
         weight: 700
     });
 
-    Promise.all([fontD.load(), fontE.load()]).then(function () {
-        document.documentElement.className += " font-load-bold";
+    Promise.all([fontC.load(), fontD.load(), fontE.load(), fontF.load()]).then(function () {
+        document.documentElement.className += " font-load-2";
         sessionStorage.fontsLoaded = true;
     });
 });
