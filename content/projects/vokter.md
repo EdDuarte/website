@@ -34,10 +34,10 @@ matches a registered keyword, sending messages to attached consumers if so).
 
 It optionally supports multi-language stopword filtering, to ignore changes in
 common words with no important significance, and
-[stemming](http://snowball.tartarus.org/) to detect changes in lexically
-derived words. Appropriate stopword filtering and stemming algorithms are
-picked based on the inferred language of the document, using a [N-grams Naïve
-Bayesian classifier](https://github.com/optimaize/language-detector).
+[stemming](http://snowball.tartarus.org/) to detect changes in lexical
+variants. Appropriate stopword filtering and stemming algorithms are picked
+based on the inferred language of the document, using a [N-grams Naïve Bayesian
+classifier](https://github.com/optimaize/language-detector).
 
 # Job Management
 
@@ -142,13 +142,13 @@ of cores available in the machine where Vokter was deployed to.
 Despite every part of its architecture having been optimized to accommodate to
 a massive amount of parallel tasks, Vokter has only been used in a academic
 environment and has yet to be battle-tested in high-usage consumer software. If
-you're using Vokter in your projects, let me know :D
+you're using Vokter in your projects, let me know! 😀
 
 Regardless, there is always room for improvement, and I feel that there are
 currently two main issues that should be addressed with higher priority: i) web
 crawling functionality and ii) timeout of jobs when clients are missing.
 
-## i) Web crawling
+## 1) Web crawling
 
 One way to improve user experience is by integrating web crawling in Reader
 modules, allowing users to set their visit policy (e.g. number of nested
@@ -166,7 +166,7 @@ B. Instead, job 1 should trigger clients linked to A and B:
 This implies a more optimized architecture that has the potential of
 significantly reducing the total number of simultaneous jobs.
 
-## ii) Fault-tolerance and timeout of matching jobs
+## 2) Fault-tolerance and timeout of matching jobs
 
 Only detection jobs can be timed-out after failing too many times to load a new
 snapshot of the document. However, sending a response to the client can fail
