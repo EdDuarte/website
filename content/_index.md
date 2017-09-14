@@ -14,7 +14,7 @@ Cassandra, MongoDB, Android and iOS, among others.
 Recently finished my internship at [Ubiwhere](http://www.ubiwhere.com/en/),
 where I worked as a backend developer (business process modeling and
 integration platform for [University of Coimbra](http://www.uc.pt/en)) and a
-mobile developer (Android and iOS applications for various brands brands like
+mobile developer (Android and iOS applications for various brands like
 Vodafone, [Prio](https://app.prioenergy.com/), [Anacom
 Netmede](http://www.netmede.pt/app), [Bikeemotion](http://www.bikeemotion.com/)
 and [Citibrain](http://www.citibrain.com/en/)).
