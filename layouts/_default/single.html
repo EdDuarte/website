@@ -27,7 +27,6 @@
 {{ end }}
 </p>
 {{ end }}
-<p>{{ if .Params.date }}<span class="date">{{ .Date.Format "January 2, 2006" }}</span>{{ end }}</p>
 </div>
 
 </header>
@@ -43,6 +42,17 @@
 </main>
 
 <aside>
+
+<section class="footnote">
+<ul class="table">
+{{ if .Params.date }}<li>
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>&nbsp;&nbsp;&nbsp;{{ .Date.Format "January 2, 2006" }}</li>{{ end }}
+<li class="reading-time"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 15 15"></polyline></svg>&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} min read</li>
+{{ with .Params.medium }}<li class="medium">Read on <a href="{{ . }}">Medium</a></li>{{ end }}
+{{ with .Params.hn }}<li class="hn">Discussion on <a href="{{ . }}">Hacker News</a></li>{{ end }}
+</ul>
+</section>
+
 {{ $linkList := .Params.links }}
 {{ if $linkList }}
 <section>
@@ -52,11 +62,6 @@
 </ul>
 </section>
 {{ end }}
-
-<section class="footnote">
-{{ with .Params.medium }}<p class="medium">This post can also be read on <a href="{{ . }}">Medium</a>.</p>{{ end }}
-{{ with .Params.hn }}<p class="hn">Discussion on <a href="{{ . }}">Hacker News</a>.</p>{{ end }}
-</section>
 
 <section class="toc">
 {{.TableOfContents}}
