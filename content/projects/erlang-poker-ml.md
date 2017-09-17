@@ -147,21 +147,24 @@ the wildcard '_' (underscore).
 
 The data in storage is structured as:
 
-- {round_number, current_ranked_hand, previous_round_ranked_hand,
-  number_of_occurrences}: the number of times the user had a ranked hand Y
+- ``{round_no, current_ranked_hand, previous_round_ranked_hand,
+  occurrence_count}``: the number of times the user had a ranked hand Y
   knowing that he/she had a ranked hand X on a previous hand (where Rank(Y) >=
   Rank(X));
 
-- {won/lost, current_ranked_hand, number_of_occurrences}: the number of times
-  the user won or lost with a specific ranked hand;
+- ``{won/lost, current_ranked_hand, occurrence_count}``: the
+  number of times the user won or lost with a specific ranked hand;
 
-- {total, number_of_total_matches}: the total number of matches that were
+- ``{total, total_matches_count}``: the total number of matches that were
   played with the application.
 
-By storing the history on the local file 'storage', we have a continually
-trained model, persistent between different application sessions.
+Note that the above data-types are identified by the first constant, so in
+practice we will have 7 data-types (4 for each of the four rounds, 2 for won or
+lost hands, and 1 for total matches count).
 
-The prediction of outcomes is based on conditional probabilities per round. For
+By storing the history on the local file 'storage', we have a continually
+trained model, persistent between different application sessions. The
+prediction of outcomes is based on conditional probabilities per round. For
 example, for the following match...
 
 - Round 0 = High Card
@@ -170,14 +173,22 @@ example, for the following match...
 - Round 3 = Two Pair
 
 ... the conditional probability for each round is calculated as follows (in
-pseudo-code, where the underscore is interpreted as a wildcard):
+pseudo-code, where the asterisk is interpreted as a wildcard):
 
-`$$Total = query(total, \_)$$`
+`$$Total = query(total, *)$$`
 
-- Round 0: `$$P(Pair | HighCard) = \frac{query(round1, pair, highCard, \_)}{Total}$$`
-- Round 1: `$$P(Pair | Pair) = \frac{query(round2, pair, pair, \_)}{Total}$$`
-- Round 2: `$$P(TwoPair | Pair) = \frac{query(round3, twoPair, pair, \_)}{Total}$$`
-\\
+- Round 0:
+
+`$$P(Pair | HighCard) = \frac{query(round1, pair, highCard, *)}{Total}$$`
+
+- Round 1:
+
+`$$P(Pair | Pair) = \frac{query(round2, pair, pair, *)}{Total}$$`
+
+- Round 2:
+
+`$$P(TwoPair | Pair) = \frac{query(round3, twoPair, pair, *)}{Total}$$`
+
 
 <script src="/js/math-code.js"></script>
 <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>

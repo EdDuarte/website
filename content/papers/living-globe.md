@@ -16,7 +16,7 @@ authorUrls:
     - http://sweet.ua.pt/bss/
 links:
     - Demo
-    - GitHub
+    - Source code
     - Paper (Springer)
     - Paper (arXiv)
     - Slides (PDF)

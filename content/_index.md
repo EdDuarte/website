@@ -6,10 +6,12 @@ date: '2017-09-05 15:17:00+01:00'
 
 ## Experience
 
-I have worked on multiple projects that extensively used languages like Java,
-Kotlin, Objective-C, Swift and Javascript ES6, and technologies / frameworks
-like Spring, Jetty, Tomcat, Socket.io, Websocket, MQTT, Redis, Hazelcast,
-Cassandra, MongoDB, Android and iOS, among others.
+Over three years of hands-on experience with Backend Architecture, Mobile
+Development, UI/UX Design and Information Retrieval. Worked on multiple
+projects that extensively used languages like Java, Kotlin, Objective-C, Swift
+and Javascript ES6, and technologies / frameworks like Spring, Jetty, Tomcat,
+Socket.io, Websocket, MQTT, Redis, Hazelcast, Cassandra, MongoDB, Android and
+iOS, among others.
 
 Recently finished my internship at [Ubiwhere](http://www.ubiwhere.com/en/),
 where I worked as a backend developer (business process modeling and
@@ -33,16 +35,16 @@ Information Visualization; and spoken at various conferences around the globe.
 
 ## Ethos
 
-More than simply focusing on coding, I have always pushed myself to research
-best practices and bleeding edge methods in order to complete my tasks with a
-high standard of quality and polish. I am enthusiastic about re-thinking and
-over-thinking systems, and achieving unique and optimized solutions.
+More than simply focusing on coding, I have always pushed myself to complete my
+tasks with a high standard of quality and polish, researching best practices
+and bleeding edge methods. I am enthusiastic about re-thinking and over-thinking
+systems, and achieving unique and optimized solutions.
 
 Throughout the few years of professional experience that I've had, I have done
 research and implementation of scalable software ranging all ends of the
 development stack, from web & mobile frontend coding, to UI/UX design and
-prototyping, to middleware implementation (fully baked platforms or brokers) to
-RESTful services deployment.
+prototyping, to middleware implementation (fully-fledged platforms or brokers)
+to RESTful services deployment.
 
 ## Work with me
 

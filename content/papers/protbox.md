@@ -16,7 +16,7 @@ authorUrls:
     - http://sweet.ua.pt/andre.zuquete/public_html/
     - http://wiki.ieeta.pt/wiki/index.php/Hélder_Gomes
 links:
-    - GitHub
+    - Source code
     - Paper (Scopus)
     - Paper (LNI)
     - Paper (arXiv)
