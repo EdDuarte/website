@@ -37,8 +37,8 @@ Information Visualization; and spoken at various conferences around the globe.
 
 More than simply focusing on coding, I have always pushed myself to complete my
 tasks with a high standard of quality and polish, researching best practices
-and bleeding edge methods. I am enthusiastic about re-thinking and over-thinking
-systems, and achieving unique and optimized solutions.
+and bleeding edge methods. I am enthusiastic about re-thinking and over-
+thinking systems to achieve optimized solutions.
 
 Throughout the few years of professional experience that I've had, I have done
 research and implementation of scalable software ranging all ends of the

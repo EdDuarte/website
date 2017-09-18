@@ -6,91 +6,9 @@
 </footer>
 
 <script type="text/javascript">
-
-function detectIE() {
-    var ua = window.navigator.userAgent;
-
-    var msie = ua.indexOf('MSIE ');
-    if (msie > 0) {
-        // IE 10 or older => return version number
-        return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-    }
-
-    var trident = ua.indexOf('Trident/');
-    if (trident > 0) {
-        // IE 11 => return version number
-        var rv = ua.indexOf('rv:');
-        return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
-    }
-
-    var edge = ua.indexOf('Edge/');
-    if (edge > 0) {
-        // Edge (IE 12+) => return version number
-        return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
-    }
-
-    // other browser
-    return false;
-}
-
-function loadImg(i) {
-    var dataSrc = i.getAttribute('data-src');
-    if(dataSrc) {
-        i.setAttribute('src',dataSrc);
-    }
-}
-
-var init = function() {
-const images = document.querySelectorAll('.js-lazy-image');
-
-var version = detectIE();
-
-if (version === false) {
-    // it's not IE nor Edge, so IntersectionObserver is supported
-    const config = {
-        rootMargin: '50px 0px',
-        threshold: 0.01
-    };
-
-    if (!('IntersectionObserver' in window)) {
-        Array.from(images).forEach(image => loadImg(image));
-    } else {
-        let observer = new IntersectionObserver(function(entries){
-            entries.forEach(entry => {
-                if (entry.intersectionRatio > 0) {
-                    observer.unobserve(entry.target);
-                    loadImg(entry.target);
-                }
-            });
-        }, config);
-        images.forEach(image => {
-            observer.observe(image);
-        });
-    }
-} else {
-    // it's IE or Edge, so load images normally
-    Array.from(images).forEach(image => loadImg(image));
-}
-
-};
-
-var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-webkitRequestAnimationFrame || msRequestAnimationFrame;
-if (raf) raf(function() { window.setTimeout(init, 0); });
-else window.addEventListener('load', init);
-
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-103779128-1', 'auto');
-ga('send', 'pageview');
-
+function detectIE(){var a=window.navigator.userAgent,b=a.indexOf('MSIE ');if(0<b)return parseInt(a.substring(b+5,a.indexOf('.',b)),10);var c=a.indexOf('Trident/');if(0<c){var d=a.indexOf('rv:');return parseInt(a.substring(d+3,a.indexOf('.',d)),10)}var e=a.indexOf('Edge/');return!!(0<e)&&parseInt(a.substring(e+5,a.indexOf('.',e)),10)}function loadImg(a){var b=a.getAttribute('data-src');b&&a.setAttribute('src',b)}var init=function(){const a=document.querySelectorAll('.js-lazy-image');var b=detectIE();if(!1===b){if(!('IntersectionObserver'in window))Array.from(a).forEach(d=>loadImg(d));else{let d=new IntersectionObserver(function(e){e.forEach(f=>{0<f.intersectionRatio&&(d.unobserve(f.target),loadImg(f.target))})},{rootMargin:'50px 0px',threshold:0.01});a.forEach(e=>{d.observe(e)})}}else Array.from(a).forEach(c=>loadImg(c))},raf=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;raf?raf(function(){window.setTimeout(init,0)}):window.addEventListener('load',init);window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create', 'UA-103779128-1', 'auto');ga('send', 'pageview');
 </script>
-
-<!--[if IE]>
-<script type="text/javascript">
-
-</script>
-<![endif]-->
-<script type="text/javascript" async src='https://www.google-analytics.com/analytics.js'></script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
 <noscript><link rel="stylesheet" href="{{ "/css/main-noscript.css" | relURL }}"></noscript>
 
 </body>

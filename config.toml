@@ -37,3 +37,4 @@ notAlternative = true
     essays = "/:title/"
     projects = "/:title/"
     papers = "/:title/"
+    talks = "/:title/"

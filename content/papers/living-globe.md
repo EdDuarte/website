@@ -48,6 +48,23 @@ Additionally, the represented data is normalized within an adjustable scale.
 This can be used to filter out extremely high or extremely low samples,
 uniforming the remaining data and improving its visibility.
 
+<figure>
+<img class="js-lazy-image"
+    src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    data-src="/hcii2016/screenshot-1-compressed.png"
+    alt="Current prototype of Living Globe"/>
+<noscript>
+<img 
+    src="/hcii2016/screenshot-1-compressed.png"
+    alt="Current prototype of Living Globe"/>
+</noscript>
+
+<figcaption>Current prototype of Living Globe, showing population growth mapped
+to the bars/pilars height, total life expectancy at birth to bar color, and
+birth/death ratio to country color.</figcaption>
+
+</figure>
+
 Our prototype was developed with demographic data in mind, like total
 population, density, population-growth, life expectancy, net migration, crude
 birth rate, crude death rate and the ratio between the last two. However, today
@@ -56,16 +73,6 @@ structured in JSON by year and by country. We provide two example input files:
 “input.json” (containing demographic data between the years 1960 and 2014) and
 “input_alt.json” (containing miscellaneous data regarding finance, demography
 and employment between the years 1960 and 2014).
-
-<img class="js-lazy-image"
-    src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-    data-src="/hcii2016/screenshot-compressed.png"
-    alt="Current prototype of Living Globe"/>
-<noscript>
-<img 
-    src="/hcii2016/screenshot-compressed.png"
-    alt="Current prototype of Living Globe"/>
-</noscript>
 
 While offering inexperienced users a default mapping of these data variables
 into visual variables, Living Globe allows more advanced users to select the
@@ -91,8 +98,27 @@ normalizes the remaining data set, can potentially lead to improvements in the
 interpretation of data in countries with small samples (eg. Portugal) by
 filtering out countries with large samples (e.g. China).
 
-The usability of this tool was tested by agnostic individuals, and the results
-indicate that the data filtering and customizable mapping features encourage a
-faster interpretation of relational information. Moreover, this tool improves
-on previous state-of-the-art work by implementing interaction capabilities like
-selection, search and filtering.
+<figure>
+<img class="js-lazy-image"
+    src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    data-src="/hcii2016/screenshot-2-compressed.png"
+    alt="Demonstration of Living Globe when using the filtering feature with
+    data normalization"/>
+<noscript>
+<img 
+    src="/hcii2016/screenshot-2-compressed.png"
+    alt="Demonstration of Living Globe when using the filtering feature with
+    data normalization"/>
+</noscript>
+
+<figcaption>Living Globe showing total population mapped to the country color:
+the data from all countries is displayed on the left, and filtering out large
+population countries (such as China and India) on the right (resulting in a
+representation with much more diverse and distinguishing colors for the
+remaining countries)</figcaption>
+
+</figure>
+
+Finally, the usability of this tool was tested by agnostic individuals, and the
+results indicate that the data filtering and customizable mapping features
+encourage a faster interpretation of relational information.

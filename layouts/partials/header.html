@@ -97,9 +97,20 @@ body {
     font-feature-settings: "liga","clig";
     font-kerning: normal;
     text-align: left;
-    max-width: 900px;
+    max-width: 910px;
     margin: auto;
     padding: 0 1em
+}
+
+.screen-reader {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    clip: rect(1px,1px,1px,1px);
+    -webkit-clip-path: polygon(0 0,0 0,0 0,0 0);
+    clip-path: polygon(0 0,0 0,0 0,0 0);
 }
 
 .table>.list-meta,pre {
@@ -112,25 +123,23 @@ summary,.skills,.logo,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,.myname,.f
     font-weight: 400
 }
 
-.font-load-1 .logo,.font-load-1 .title,.font-load-1 .subtitle,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 .myname {
-    font-family: "edduarte-headings-regular","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-    font-style: normal;
-    font-weight: 700
-}
-
-.font-load-1 summary,.font-load .skills {
+.font-load-1 .logo,.font-load-1 .title,.font-load-1 .subtitle,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 .myname,.font-load-1 summary,.font-load .skills {
     font-family: "edduarte-headings-regular","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
     font-style: normal;
     font-weight: 400
 }
 
-.table>.list-title,ol,p,ul {
+.font-load-1 .logo,.font-load-1 .title,.font-load-1 .subtitle,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 .myname {
+    font-weight: 700
+}
+
+.table>.list-title,ol,p,ul,figcaption {
     font-family: "Times New Roman",Times,serif;
     font-style: normal;
     font-weight: 400
 }
 
-.font-load-1 .table>.list-title,.font-load-1 b,.font-load-1 ol,.font-load-1 p,.font-load-1 strong,.font-load-1 ul,.font-load-1 em {
+.font-load-1 .table>.list-title,.font-load-1 b,.font-load-1 ol,.font-load-1 p,.font-load-1 strong,.font-load-1 ul,.font-load-1 figcaption,.font-load-1 em {
     font-family: "edduarte-content-regular","Times New Roman",Times,serif;
     font-style: normal;
     font-weight: 400
@@ -194,7 +203,7 @@ article aside,article main {
 }
 
 .list-page,article main {
-    max-width: 600px
+    max-width: 610px
 }
 
 aside {
@@ -257,11 +266,11 @@ summary {
 }
 
 em {
-    letter-spacing: -.03em;
+    letter-spacing: -.04em;
 }
 
 .font-load-1 em {
-    letter-spacing: -.07em;
+    letter-spacing: -.06em;
 }
 
 .font-load-2 em {
@@ -284,8 +293,24 @@ ol,ul {
 }
 
 img {
-    max-width: 110%;
-    margin-left: -5%
+    min-width: 108%;
+    max-width: 108%;
+    margin-left: -4%
+}
+
+img.myphoto {
+    min-width: 0
+}
+
+figure {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+figcaption {
+    margin-left: 6px;
+    min-width: 270px;
 }
 
 article header {
@@ -334,25 +359,25 @@ article header {
     color: rgb(226, 27, 42)
 }
 
-.footnote {
+.metadata {
     margin-top: 1.1em;
     margin-bottom: .1em
 }
 
-.font-load-1 .footnote {
+.font-load-1 .metadata {
     margin-top: 1em;
     margin-bottom: 1.2em
 }
 
-.metadata {
+.authors {
     margin-top: .62em
 }
 
-.font-load-1 .metadata {
+.font-load-1 .authors {
     margin-top: .7em
 }
 
-.metadata>p {
+.authors>p {
     font-size: 1.3em;
     letter-spacing: .03em;
     line-height: 1.5em;
@@ -360,37 +385,64 @@ article header {
     margin-bottom: .2em
 }
 
-.font-load-1 .metadata>p {
+.font-load-1 .authors>p {
     letter-spacing: -.025em;
     line-height: 1.53em
 }
 
-.font-load-1 .metadata>p {
+.font-load-1 .authors>p {
     font-size: 1.25em
 }
 
-.footnote>p,.footnote>.table {
+.metadata>p,.metadata>.table,figcaption {
     font-size: 1em;
     letter-spacing: -.01em;
-    line-height: 1.6em;
+    line-height: 1.75em
+}
+
+.metadata>p,.metadata>.table {
     margin-top: -.1em;
     margin-bottom: 0
 }
 
-.font-load-1 .footnote>p,.font-load-1 .footnote>.table {
+.font-load-1 .metadata>p,.font-load-1 .metadata>.table,.font-load-1 figcaption {
     font-size: .9em;
     letter-spacing: -.055em;
-    line-height: 1.75em;
+    line-height: 2em
+}
+
+.font-load-1 .metadata>p,.font-load-1 .metadata>.table {
     margin-top: -.1em;
     margin-bottom: 0
 }
 
-.footnote>.table li {
+.metadata>.table li {
     margin: 0
 }
 
-.font-load-2 .footnote>p {
+.font-load-2 .metadata>p {
     letter-spacing: -.025em;
+}
+
+.metadata .published-date,.metadata .reading-time {
+    display: inline-table;
+    line-height: 1.6em;
+    height: 30px
+}
+
+.font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time {
+    line-height: 1.75em;
+    height: 30.7px
+}
+
+.metadata-icon {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.metadata-title {
+    display: table-cell;
+    padding-left: 5px
 }
 
 .toc,.font-load-1 .toc {
@@ -459,19 +511,19 @@ article header {
     }
 }
 
-.metadata a {
+.authors a {
     background-position: 0 1em
 }
 
-.font-load-1 .footnote a {
+.font-load-1 .metadata a..font-load-1 figcaption a {
     background-position: 0 1.18em
 }
 
-.font-load-1 .metadata a {
+.font-load-1 .authors a {
     background-position: 0 1.15em
 }
 
-.metadata a,.toc a:hover,aside a:hover,footer a:hover {
+.authors a,.toc a:hover,aside a:hover,footer a:hover {
     background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%)
 }
 
@@ -635,7 +687,7 @@ kbd,pre code,samp {
 }
 
 .links>li {
-    margin: 0 .25em 0 0;
+    margin: 0 .18em 0 0;
     margin-top: 0;
     margin-bottom: 0;
     line-height: 1.95em;
@@ -706,11 +758,11 @@ footer>ul>li {
     color: rgba(14,17,21,.4)
 }
 
-.logo,.logo a,.metadata,.metadata a,aside,aside a,footer,footer a {
+.logo,.logo a,.authors,.authors a,aside,aside a,footer,footer a {
     color: rgba(14,17,21,.4)
 }
 
-.footnote a {
+.metadata a,figcaption a {
     background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%)
 }
 
@@ -878,7 +930,7 @@ img.centered:empty {
 .font-load-1 .table>.list-title {
     font-size: .806em;
     letter-spacing: -.03em;
-    line-height: 1.5em;
+    line-height: 1.55em;
     margin-bottom: .47em;
 }
 
@@ -910,12 +962,12 @@ img.centered:empty {
     order: 2
 }
 
-.footnote>.table {
+.metadata>.table {
     flex-direction: column;
     align-items: normal
 }
 
-.footnote>.table li {
+.metadata>.table li {
     padding: 0
 }
 
@@ -927,11 +979,11 @@ img.centered:empty {
     background-image: none
 }
 
-.footnote p,.footnote li {
+.metadata p,.metadata li {
     letter-spacing: -.02em
 }
 
-.font-load-1 .footnote p,.font-load-1 .footnote li {
+.font-load-1 .metadata p,.font-load-1 .metadata li {
     letter-spacing: -.05em
 }
 
@@ -1073,11 +1125,13 @@ pre code {
     .list {
         max-width: 100%;
         margin-top: 0;
+        margin-bottom: 1.9em;
         margin-left: 0
     }
 
     .font-load-1 .list {
-        margin-top: 1.2em;
+        margin-top: 1em;
+        margin-bottom: 2em;
         margin-left: 0
     }
 
@@ -1102,7 +1156,7 @@ pre code {
 
      .font-load-1 .table>.list-title {
         margin-top: .3em;
-        margin-bottom: .5em
+        margin-bottom: .05em
     }
 }
 
@@ -1115,7 +1169,7 @@ pre code {
     }
 
     body {
-        max-width: 600px
+        max-width: 610px
     }
 
     .article-table {
@@ -1138,7 +1192,11 @@ pre code {
     }
 
     article main {
-        margin-top: 1em
+        margin-top: .2em
+    }
+
+    .font-load-1 article main {
+        margin-top: 0
     }
 
     aside {
@@ -1163,6 +1221,22 @@ pre code {
         display: none
     }
 
+    img {
+        min-width: 0
+    }
+
+    figure {
+        margin: 0;
+        display: initial;
+        align-items: center;
+    }
+
+    figcaption {
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-bottom: 2em
+    }
+
     .title {
         font-size: 1.9em;
         letter-spacing: -.045em;
@@ -1180,7 +1254,7 @@ pre code {
 
     .subtitle {
         font-size: 1.834em;
-        letter-spacing: -.05em;
+        letter-spacing: -.045em;
         line-height: 1.26em;
         margin-top: .25em
     }
@@ -1238,33 +1312,42 @@ pre code {
         font-size: 1em;
     }
 
-    .metadata {
+    .authors {
         margin-top: .5em
     }
 
-    .font-load-1 .metadata {
+    .font-load-1 .authors {
         margin-top: .45em
     }
 
-    .metadata a {
+    .authors a {
         background-position: 0 1em
     }
 
-    .metadata p {
+    .authors p {
         font-size: 1.05em
     }
 
-    .footnote p,.footnote li {
+    .metadata .published-date,.metadata .reading-time {
+        height: 30px
+    }
+
+    .font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time {
+        height: 30.5px
+    }
+
+    .metadata p,.metadata li {
         font-size: .98em;
         letter-spacing: -.03em
     }
 
-    .font-load-1 .metadata>p,.font-load-1 .footnote p,.font-load-1 .footnote li {
+    .font-load-1 .authors>p,.font-load-1 .metadata p,.font-load-1 .metadata li {
         font-size: 1em
     }
 
     .links {
-        padding: 0
+        padding: 0;
+        margin-bottom: 0
     }
 
     .links>li {
@@ -1272,41 +1355,42 @@ pre code {
     }
 
     .font-load-1 .links {
-        margin-top: -.1em
+        margin-top: -.2em;
+        margin-bottom: .15em
     }
 
-    .footnote {
+    .metadata {
         margin-top: -.6em;
-        margin-bottom: .5em
+        margin-bottom: 0
     }
 
-    .font-load-1 .footnote {
+    .font-load-1 .metadata {
         margin-top: 0;
-        margin-bottom: .6em
+        margin-bottom: .1em
     }
 
-    .footnote>.table {
+    .metadata>.table {
         margin-top: .5em;
         line-height: 1.4em;
         display: inline-block
     }
 
-    .font-load-1 .footnote>.table {
+    .font-load-1 .metadata>.table {
         margin-top: 0;
         line-height: 1.5em;
     }
 
-    .footnote>.table li:after {
+    .metadata>.table li:after {
         display: inline-block;
         position: relative;
         padding-left: .6em;
         padding-right: .6em
     }
 
-    .footnote>.table li:after {
+    .metadata>.table li:after {
         content: "•";
     }
-    .footnote>.table li:last-child:after {
+    .metadata>.table li:last-child:after {
         content: "";
     }
 }
@@ -1314,7 +1398,8 @@ pre code {
 @media screen and (max-width:700px) {
 
     body {
-        text-rendering: optimizeSpeed
+        text-rendering: optimizeSpeed;
+        padding: 0 1.25em
     }
 
     article header {
@@ -1340,19 +1425,17 @@ pre code {
     ol,p,ul {
         font-size: 19px;
         letter-spacing: 0.0115em;
-        line-height: 1.54em;
-        margin-top: 21px
+        line-height: 1.57em
     }
 
     .font-load-1 ol,.font-load-1 p,.font-load-1 summary,.font-load-1 ul {
         font-size: 17px;
         letter-spacing: -.022em;
-        line-height: 1.75em;
-        margin-top: 21px
+        line-height: 1.75em
     }
 
     summary {
-        font-size: 15.4px;
+        font-size: 16.4px;
         line-height: 1.75em;
         letter-spacing: -.02em;
         max-width: 300px;
@@ -1378,14 +1461,16 @@ pre code {
         font-size: .92em;
         letter-spacing: 0;
         line-height: 1.2em;
-        margin-top: .1em
+        margin-top: .1em;
+        margin-bottom: .14em
     }
 
     .font-load-1 .table>.list-title {
         font-size: .900em;
         letter-spacing: -.02em;
         line-height: 1.34em;
-        margin-top: .14em
+        margin-top: .1em;
+        margin-bottom: .22em
     }
 
     .table>.list-title>a {
@@ -1393,7 +1478,7 @@ pre code {
     }
 
     .font-load-1 .table>.list-title>a {
-        background-position: 0 1.25em
+        background-position: 0 1.17em
     }
 
     code {
@@ -1445,7 +1530,7 @@ pre code {
 
     .subtitle {
         letter-spacing: -.057em;
-        margin-top: .12em
+        margin-top: .25em
     }
 
     .font-load-1 .subtitle {
@@ -1506,57 +1591,37 @@ pre code {
         font-size: 1em
     }
 
-    .metadata {
+    .authors {
+        margin-top: .2em
+    }
+
+    .font-load-1 .authors {
         margin-top: .3em
+    }
+
+    .authors>p {
+        font-size: 1.05em;
+        letter-spacing: 0;
+        line-height: 1.4em
+    }
+
+    .font-load-1 .authors>p {
+        font-size: .938em
+    }
+
+    .metadata {
+        margin-bottom: .2em
     }
 
     .font-load-1 .metadata {
-        margin-top: .3em
+        margin-bottom: .4em
     }
 
-    .metadata>p {
-        font-size: 1.02em
-    }
-
-    .font-load-1 .metadata>p {
-        font-size: .938em
-    }
-/*
-    .footnote {
-        margin-bottom: .67em
-    }
-
-    .font-load-1 .footnote {
-        margin-bottom: .7em
-    }
-
-    .footnote>p,.metadata>p {
-        line-height: 1.3em
-    }
-
-    .footnote>p {
-        font-size: 1.063em;
-        letter-spacing: -.02em
-    }
-
-    .font-load-1 .footnote>p,.font-load-1 .metadata>p {
-        line-height: 1.7em
-    }
-*/
-    a,.font-load-1 a {
-        background-size: 5px 1px;
-        background-position: 0 1.25em
-    }
-
-    .myemail a:hover {
-        background-size: 5px 2px
-    }
-
-    .footnote a,.metadata a {
+    .metadata a,.authors a,figcaption a {
         background-position: 0 .98em
     }
 
-    .font-load-1 .footnote a,.font-load-1 .metadata a {
+    .font-load-1 .metadata a,.font-load-1 .authors a,.font-load-1 figcaption a {
         background-position: 0 1.2em
     }
 
@@ -1573,7 +1638,7 @@ pre code {
     }
 
     .font-load-1 .links>li {
-        line-height: 2.58em
+        line-height: 2.38em
     }
 
     blockquote {

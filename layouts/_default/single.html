@@ -15,10 +15,10 @@
 <div class="title">{{ .Title }}</div>
 <div class="subtitle">{{ .Params.subtitle }}</div>
 
-<div class="metadata">
+<div class="authors">
 {{ $authorList := .Params.authors }}
 {{ if $authorList }}
-<p class="authors">
+<p>
 {{ $len := (len $authorList) }}
 {{ $authorUrlList := .Params.authorUrls }}
 {{ if eq $len 1 }}
@@ -44,13 +44,29 @@
 
 <aside>
 
-<section class="footnote">
+<section class="metadata">
 <ul class="table">
-{{ if .Params.date }}<li>
-<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>&nbsp;&nbsp;&nbsp;{{ .Date.Format "January 2, 2006" }}</li>{{ end }}
-<li class="reading-time"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 15 15"></polyline></svg>&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} min read</li>
-{{ with .Params.medium }}<li class="medium">Read on <a href="{{ . }}">Medium</a></li>{{ end }}
-{{ with .Params.hn }}<li class="hn">Discussion on <a href="{{ . }}">Hacker News</a></li>{{ end }}
+
+{{ if .Params.date }}<li class="published-date">
+<div class="metadata-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+<span class="screen-reader">Published on </span>
+<time class="metadata-title" datetime="{{ .Date }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+</li>{{ end }}
+
+<li class="reading-time">
+<div class="metadata-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 15 15"></polyline></svg></div>
+<span class="screen-reader">Reading time: </span>
+<span class="metadata-title">{{ .ReadingTime }} min read</span>
+</li>
+
+{{ with .Params.medium }}<li class="medium">
+Read on <a href="{{ . }}">Medium</a>
+</li>{{ end }}
+
+{{ with .Params.hn }}<li class="hn">
+Discussion on <a href="{{ . }}">Hacker News</a>
+</li>{{ end }}
+
 </ul>
 </section>
 

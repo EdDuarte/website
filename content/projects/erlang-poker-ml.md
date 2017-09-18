@@ -190,5 +190,5 @@ pseudo-code, where the asterisk is interpreted as a wildcard):
 `$$P(TwoPair | Pair) = \frac{query(round3, twoPair, pair, *)}{Total}$$`
 
 
-<script src="/js/math-code.js"></script>
+<script async src="/js/math-code.js"></script>
 <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
