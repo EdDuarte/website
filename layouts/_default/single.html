@@ -3,12 +3,13 @@
 </head>
 
 <body>
-<div class="logo">
+<header class="logo">
 <span class="home-link"><a href="{{ .Site.BaseURL }}">edduarte</a></span>
 &nbsp;•&nbsp;
 <span class="section-link"><a href="/{{.Section}}">{{.Section}}</a></span>
-</div>
+</header>
 
+<main>
 <article>
 <header>
 <div class="title">{{ .Title }}</div>
@@ -72,5 +73,6 @@
 </div>
 
 </article>
+</main>
 
 {{ partial "footer.html" . }}

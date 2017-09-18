@@ -148,7 +148,7 @@ Regardless, there is always room for improvement, and I feel that there are
 currently two main issues that should be addressed with higher priority: i) web
 crawling functionality and ii) timeout of jobs when clients are missing.
 
-## 1) Web crawling
+## Web crawling
 
 One way to improve user experience is by integrating web crawling in Reader
 modules, allowing users to set their visit policy (e.g. number of nested
@@ -166,7 +166,7 @@ B. Instead, job 1 should trigger clients linked to A and B:
 This implies a more optimized architecture that has the potential of
 significantly reducing the total number of simultaneous jobs.
 
-## 2) Fault-tolerance and timeout of matching jobs
+## Fault-tolerance and timeout of matching jobs
 
 Only detection jobs can be timed-out after failing too many times to load a new
 snapshot of the document. However, sending a response to the client can fail

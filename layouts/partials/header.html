@@ -97,7 +97,7 @@ body {
     font-feature-settings: "liga","clig";
     font-kerning: normal;
     text-align: left;
-    max-width: 940px;
+    max-width: 900px;
     margin: auto;
     padding: 0 1em
 }
@@ -181,20 +181,20 @@ em,blockquote p,dfn,.font-load-1 em,.font-load-1 blockquote p,.font-load-1 dfn {
     padding: 0
 }
 
-.article-table>main {
+article main {
     order: 1
 }
 
-.article-table>aside {
+article aside {
     order: 2
 }
 
-aside,main {
+article aside,article main {
     padding: 0
 }
 
-.list-page,main {
-    max-width: 640px
+.list-page,article main {
+    max-width: 600px
 }
 
 aside {
@@ -224,7 +224,7 @@ p {
     word-wrap: break-word;
     margin-top: .55em;
     margin-bottom: 0;
-    letter-spacing: -.005em;
+    letter-spacing: -.006em;
     hanging-punctuation: first
 }
 
@@ -283,16 +283,12 @@ ol,ul {
     margin-top: .95em
 }
 
-.toc ul,.list {
-    list-style-type: none
-}
-
 img {
     max-width: 110%;
     margin-left: -5%
 }
 
-header {
+article header {
     margin-top: .25em;
     margin-bottom: .25em;
     padding-top: 1.875em;
@@ -302,7 +298,7 @@ header {
     border-color: rgba(14,17,21,.25)
 }
 
-.font-load-1 header {
+.font-load-1 article header {
     margin-top: .188em
 }
 
@@ -397,27 +393,13 @@ header {
     letter-spacing: -.025em;
 }
 
-.toc {
-    margin-top: 1em;
-    margin-left: -.65em
-}
-
-.font-load-1 .toc {
-    margin-top: 1em;
-    margin-left: -.7em
+.toc,.font-load-1 .toc {
+    margin-top: 1em
 }
 
 .toc ul {
     margin: 0;
     padding: 0
-}
-
-.toc ul {
-    margin-left: .4em
-}
-
-.font-load-1 .toc ul {
-    margin-left: .5em
 }
 
 .toc li {
@@ -434,6 +416,49 @@ header {
     margin-top: .7em
 }
 
+.toc ul {
+    counter-reset: item;
+    position: relative;
+}
+
+.toc li>ul {
+    margin-left: -12px
+}
+
+.font-load-1 .toc li>ul {
+    margin-left: -10px
+}
+
+.toc ul > li:before {
+    color: rgba(14,17,21,.25);
+    content: counters(item, ".") ". ";
+    display: table-cell;
+    padding-right: .3rem
+}
+
+.font-load-1 .toc ul > li:before {
+    padding-right: .3rem
+}
+
+.toc ul li li:before {
+    content: counters(item, ".") " ";
+}
+
+.toc li {
+    counter-increment: item;
+    display: table;
+
+    .toc li .toc-page:before {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+
+    .toc li > a {
+        display: inline-block;
+    }
+}
+
 .metadata a {
     background-position: 0 1em
 }
@@ -446,7 +471,7 @@ header {
     background-position: 0 1.15em
 }
 
-.metadata a,aside a:hover,footer a:hover {
+.metadata a,.toc a:hover,aside a:hover,footer a:hover {
     background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%)
 }
 
@@ -816,15 +841,16 @@ img.centered:empty {
 }
 
 .list {
+    list-style-type: none;
     padding: 0;
     margin-top: 1.78em;
     margin-bottom: 2em;
-    margin-left: -98px
+    margin-left: -92px
 }
 
 .font-load-1 .list {
     margin-top: 2.2em;
-    margin-left: -98px
+    margin-left: -92px
 }
 
 .table>.list-meta {
@@ -838,22 +864,22 @@ img.centered:empty {
 
 .font-load-1 .table>.list-meta {
     font-size: 11px;
-    margin-top: -.3em
+    margin-top: .05em
 }
 
 .table>.list-title {
     font-size: .85em;
-    letter-spacing: -.01em;
-    line-height: 1em;
+    letter-spacing: -.02em;
+    line-height: 1.3em;
     margin: 0;
     padding: 0
 }
 
 .font-load-1 .table>.list-title {
     font-size: .806em;
-    letter-spacing: -.02em;
-    line-height: 1em;
-    margin-bottom: 1.03em;
+    letter-spacing: -.03em;
+    line-height: 1.5em;
+    margin-bottom: .47em;
 }
 
 .table {
@@ -1080,16 +1106,16 @@ pre code {
     }
 }
 
-@media screen and (max-width:1000px),print {
+@media screen and (max-width:980px),print {
 
-    header {
+    article header {
         padding-top: .3em;
         padding-bottom: 0;
         margin-bottom: .6em
     }
 
     body {
-        max-width: 640px
+        max-width: 600px
     }
 
     .article-table {
@@ -1098,11 +1124,11 @@ pre code {
         padding: 0
     }
 
-    .article-table>main {
+    article main {
         order: 2
     }
 
-    .article-table>aside {
+    article aside {
         order: 1
     }
 
@@ -1111,7 +1137,7 @@ pre code {
         padding-right: 1em
     }
 
-    main {
+    article main {
         margin-top: 1em
     }
 
@@ -1221,11 +1247,16 @@ pre code {
     }
 
     .metadata a {
-        background-position: 0 1.5em
+        background-position: 0 1em
     }
 
-    .metadata>p,.footnote p,.footnote li {
+    .metadata p {
         font-size: 1.05em
+    }
+
+    .footnote p,.footnote li {
+        font-size: .98em;
+        letter-spacing: -.03em
     }
 
     .font-load-1 .metadata>p,.font-load-1 .footnote p,.font-load-1 .footnote li {
@@ -1245,17 +1276,13 @@ pre code {
     }
 
     .footnote {
-        margin-top: -.5em;
+        margin-top: -.6em;
         margin-bottom: .5em
     }
 
     .font-load-1 .footnote {
         margin-top: 0;
         margin-bottom: .6em
-    }
-
-    .footnote p,.footnote li {
-        letter-spacing: -.04em
     }
 
     .footnote>.table {
@@ -1290,7 +1317,7 @@ pre code {
         text-rendering: optimizeSpeed
     }
 
-    header {
+    article header {
         margin-top: .2em;
         margin-bottom: .5em;
         border-width: 2px 0 0;
@@ -1311,10 +1338,17 @@ pre code {
     }
 
     ol,p,ul {
-        font-size: 18px;
+        font-size: 19px;
         letter-spacing: 0.0115em;
-        line-height: 1.61em;
-        margin-top: .5em
+        line-height: 1.54em;
+        margin-top: 21px
+    }
+
+    .font-load-1 ol,.font-load-1 p,.font-load-1 summary,.font-load-1 ul {
+        font-size: 17px;
+        letter-spacing: -.022em;
+        line-height: 1.75em;
+        margin-top: 21px
     }
 
     summary {
@@ -1323,13 +1357,6 @@ pre code {
         letter-spacing: -.02em;
         max-width: 300px;
         margin-top: .53em
-    }
-
-    .font-load-1 ol,.font-load-1 p,.font-load-1 summary,.font-load-1 ul {
-        font-size: 16px;
-        letter-spacing: -.02em;
-        line-height: 1.75em;
-        margin-top: .45em
     }
 
     .font-load-1 summary {
@@ -1418,7 +1445,7 @@ pre code {
 
     .subtitle {
         letter-spacing: -.057em;
-        margin-top: .15em
+        margin-top: .12em
     }
 
     .font-load-1 .subtitle {
@@ -1480,7 +1507,7 @@ pre code {
     }
 
     .metadata {
-        margin-top: .1em
+        margin-top: .3em
     }
 
     .font-load-1 .metadata {
@@ -1488,7 +1515,7 @@ pre code {
     }
 
     .metadata>p {
-        font-size: 1.125em
+        font-size: 1.02em
     }
 
     .font-load-1 .metadata>p {
@@ -1530,7 +1557,7 @@ pre code {
     }
 
     .font-load-1 .footnote a,.font-load-1 .metadata a {
-        background-position: 0 1.4em
+        background-position: 0 1.2em
     }
 
     .logo {
