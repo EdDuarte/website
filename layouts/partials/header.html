@@ -191,14 +191,12 @@ em,blockquote p,dfn,.font-load-1 em,.font-load-1 blockquote p,.font-load-1 dfn {
 }
 
 article main {
-    order: 1
+    order: 1;
+    padding: 0
 }
 
 article aside {
-    order: 2
-}
-
-article aside,article main {
+    order: 2;
     padding: 0
 }
 
@@ -215,6 +213,15 @@ ol,p,summary,ul {
     --x-height-multiplier: 0.35;
     --baseline-multiplier: 0.179;
     font-size: 20.3px
+}
+
+summary {
+    font-size: 1.3em;
+    letter-spacing: -.05em;
+    line-height: 1.79em;
+    text-align: center;
+    max-width: 360px;
+    margin: .6em auto 0
 }
 
 ol>li,ul>li {
@@ -239,52 +246,44 @@ p {
 
 .font-load-1 p {
     margin-top: .6em;
-    margin-bottom: 0
+    margin-bottom: 0;
+    font-size: 18px
 }
 
 .font-load-1 ol,.font-load-1 p,.font-load-1 summary,.font-load-1 ul {
     --x-height-multiplier: 0.35;
     --baseline-multiplier: 0.179;
-    font-size: 18px;
-    letter-spacing: -.04em;
     line-height: 1.68em
 }
 
-summary {
-    font-size: 1.3em;
-    letter-spacing: -.05em;
-    line-height: 1.79em;
-    text-align: center;
-    max-width: 360px;
-    margin: .6em auto 0 auto
+.font-load-1 ol,.font-load-1 ul {
+    letter-spacing: -.04em;
+    font-size: 18px;
+    margin-top: -18px
 }
 
 .font-load-1 summary {
     font-size: 1.4em;
-    line-height: 1.68em;
     margin-top: .5em
 }
 
-em {
-    letter-spacing: -.04em;
+.font-load-1 p,.font-load-1 summary,em {
+    letter-spacing: -.04em
 }
 
 .font-load-1 em {
-    letter-spacing: -.06em;
+    letter-spacing: -.06em
 }
 
 .font-load-2 em {
-    letter-spacing: -.03em;
+    letter-spacing: -.03em
 }
 
 ol,ul {
     line-height: 1.5em;
     margin: -20px 0 -.8em .25em;
-    padding: .938em
-}
-
-.font-load-1 ol,.font-load-1 ul {
-    margin-top: -18px
+    padding: .938em;
+    letter-spacing: -.01em
 }
 
 .font-load-1 ol>li,.font-load-1 ul>li {
@@ -298,18 +297,24 @@ img {
 }
 
 img.myphoto {
-    min-width: 0
+    min-width: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin: 15vw 0 .5em
 }
 
 figure {
-    margin: 0;
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 figcaption {
     margin-left: 6px;
     min-width: 270px;
+    font-size: 1em;
+    line-height: 1.75em;
+    letter-spacing: .025em
 }
 
 article header {
@@ -355,7 +360,7 @@ article header {
 }
 
 .subtitle,.subtitle a {
-    color: rgb(226, 27, 42)
+    color: #e21b2a
 }
 
 .metadata {
@@ -380,55 +385,44 @@ article header {
     font-size: 1.3em;
     letter-spacing: .03em;
     line-height: 1.5em;
-    margin-top: 0em;
+    margin-top: 0;
     margin-bottom: .2em
 }
 
 .font-load-1 .authors>p {
     letter-spacing: -.025em;
-    line-height: 1.53em
-}
-
-.font-load-1 .authors>p {
+    line-height: 1.53em;
     font-size: 1.25em
 }
 
-.metadata>p,.metadata>.table,figcaption {
+.metadata>.table,.metadata>p {
     font-size: 1em;
     letter-spacing: -.01em;
-    line-height: 1.75em
-}
-
-figcaption {
-    letter-spacing: .025em;
-}
-
-.metadata>p,.metadata>.table {
+    line-height: 1.75em;
     margin-top: -.1em;
     margin-bottom: 0
 }
 
-.font-load-1 .metadata>p,.font-load-1 .metadata>.table,.font-load-1 figcaption {
+.font-load-1 .metadata>.table,.font-load-1 .metadata>p {
     font-size: .9em;
     letter-spacing: -.055em;
-    line-height: 2em
+    line-height: 2em;
+    margin-top: -.1em;
+    margin-bottom: 0
 }
 
 .font-load-1 figcaption {
-    letter-spacing: -.02em;
+    font-size: .9em;
+    line-height: 2em;
+    letter-spacing: -.02em
 }
 
-.font-load-1 .metadata>p,.font-load-1 .metadata>.table {
-    margin-top: -.1em;
-    margin-bottom: 0
-}
-
-.metadata>.table li {
+.metadata>.table li,.toc ul,figure {
     margin: 0
 }
 
 .font-load-2 .metadata>p {
-    letter-spacing: -.025em;
+    letter-spacing: -.025em
 }
 
 .metadata .published-date,.metadata .reading-time {
@@ -452,13 +446,14 @@ figcaption {
     padding-left: 5px
 }
 
-.toc,.font-load-1 .toc {
+.font-load-1 .toc,.toc {
     margin-top: 1em
 }
 
 .toc ul {
-    margin: 0;
-    padding: 0
+    padding: 0;
+    counter-reset: item;
+    position: relative
 }
 
 .toc li {
@@ -475,11 +470,6 @@ figcaption {
     margin-top: .7em
 }
 
-.toc ul {
-    counter-reset: item;
-    position: relative;
-}
-
 .toc li>ul {
     margin-left: -12px
 }
@@ -488,19 +478,18 @@ figcaption {
     margin-left: -10px
 }
 
-.toc ul > li:before {
+.toc ul>li:before {
     color: rgba(14,17,21,.25);
-    content: counters(item, ".") ". ";
-    display: table-cell;
-    padding-right: .3rem
+    content: counters(item,".") ". ";
+    display: table-cell
 }
 
-.font-load-1 .toc ul > li:before {
+.font-load-1 .toc ul>li:before,.toc ul>li:before {
     padding-right: .3rem
 }
 
 .toc ul li li:before {
-    content: counters(item, ".") " ";
+    content: counters(item,".") " "
 }
 
 .toc li {
@@ -510,11 +499,11 @@ figcaption {
     .toc li .toc-page:before {
         content: '';
         display: block;
-        position: absolute;
+        position: absolute
     }
 
     .toc li > a {
-        display: inline-block;
+        display: inline-block
     }
 }
 
@@ -522,7 +511,7 @@ figcaption {
     background-position: 0 1em
 }
 
-.font-load-1 .metadata a..font-load-1 figcaption a {
+.font-load-1 .metadata a,.font-load-1 figcaption a {
     background-position: 0 1.18em
 }
 
@@ -534,133 +523,126 @@ figcaption {
     background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%)
 }
 
-h1,h2,h3,h4,h5,h6,.myname {
+h1,h2,h3,h4,h5,h6 {
     margin-top: 0
 }
 
-h1 {
+.font-load-1 h1,h1 {
     font-size: 1.987em;
     letter-spacing: -.078em;
     margin-bottom: -.28em
 }
 
 .font-load-1 h1 {
-    font-size: 1.987em;
     letter-spacing: -.03em;
     margin-top: -.1em;
     margin-bottom: -.25em
 }
 
-p + h1 {
+.font-load-1 p+h2,p+h1 {
     padding-top: 1em
 }
 
-.font-load-1 p + h1 {
+.font-load-1 p+h1 {
     padding-top: 1.13em
 }
 
-h2,.myname {
+.font-load-1 h3,h2,h3 {
+    letter-spacing: -.08em
+}
+
+.font-load-1 h3,.myname,h2,h3 {
     font-size: 1.732em;
-    letter-spacing: -.08em;
     margin-bottom: -.32em
 }
 
-.font-load-1 h2,.font-load-1 .myname {
+.font-load-1 h2 {
+    letter-spacing: -.032em
+}
+
+.font-load-1 .myname,.font-load-1 h2 {
     font-size: 1.732em;
-    letter-spacing: -.032em;
     margin-bottom: -.27em
 }
 
-p + h2 {
+p+h2 {
     padding-top: 1.05em
 }
 
-.font-load-1 p + h2 {
-    padding-top: 1em
-}
-
-h3 {
+.font-load-1 h3,h3 {
     font-size: 1.51em;
-    letter-spacing: -.08em;
     margin-bottom: -.33em
 }
 
 .font-load-1 h3 {
-    font-size: 1.51em;
     letter-spacing: -.031em;
     margin-bottom: -.3em
 }
 
-p + h3 {
+p+h3 {
     padding-top: .92em
 }
 
-.font-load-1 p + h3 {
+.font-load-1 p+h3 {
     padding-top: .885em
 }
 
-h4 {
+.font-load-1 h4,h4 {
     font-size: 1.316em;
     letter-spacing: -.07em;
     margin-bottom: -.35em
 }
 
 .font-load-1 h4 {
-    font-size: 1.316em;
     letter-spacing: -.025em;
     margin-bottom: -.3em
 }
 
-p + h4 {
+p+h4 {
     padding-top: .82em
 }
 
-.font-load-1 p + h4 {
+.font-load-1 p+h4 {
     padding-top: .783em
 }
 
 h5 {
     font-size: 1.147em;
     letter-spacing: -.055em;
-    margin-bottom: -.6em;
+    margin-bottom: -.6em
 }
 
-.font-load-1 h5 {
+.font-load-1 h5,.font-load-1 h6 {
     font-size: 1.147em;
     letter-spacing: -.01em;
     margin-bottom: -.5em
 }
 
-p + h5 {
+p+h5 {
     padding-top: .72em
 }
 
-.font-load-1 p + h5 {
+.font-load-1 p+h5 {
     padding-top: .693em
 }
 
 h6 {
     font-size: 1em;
     letter-spacing: -.06em;
-    margin-bottom: -.65em;
+    margin-bottom: -.65em
 }
 
 .font-load-1 h6 {
     font-size: 1em;
-    letter-spacing: -.01em;
     margin-bottom: -.55em
 }
 
-p + h6 {
+p+h6 {
     padding-top: .62em
 }
 
-.font-load-1 p + h6 {
+.font-load-1 p+h6 {
     padding-top: .613em
-}
-
-ol,ul {
-    letter-spacing: -.01em
 }
 
 .links,.links>li,code,kbd,pre,samp {
@@ -669,17 +651,19 @@ ol,ul {
 
 code {
     background-color: #f1f1f1;
-    font-size: 17px;
     padding-left: .313em;
     padding-right: .313em
 }
 
-.font-load-1 code {
+.font-load-1 code,code {
     font-size: 17px
 }
 
+kbd,samp {
+    font-size: .875em
+}
+
 kbd,pre code,samp {
-    font-size: .875em;
     font-weight: 400;
     line-height: 1.5em;
     padding-left: 0;
@@ -689,14 +673,11 @@ kbd,pre code,samp {
 .links {
     font-style: normal;
     margin: 0;
-    padding: 0;
-    padding-top: .5em
+    padding: .5em 0 0
 }
 
 .links>li {
     margin: 0 .18em 0 0;
-    margin-top: 0;
-    margin-bottom: 0;
     line-height: 1.95em;
     display: inline-block;
     position: relative
@@ -765,7 +746,7 @@ footer>ul>li {
     color: rgba(14,17,21,.4)
 }
 
-.logo,.logo a,.authors,.authors a,aside,aside a,footer,footer a,figcaption {
+.authors,.authors a,.logo,.logo a,aside,aside a,figcaption,footer,footer a {
     color: rgba(14,17,21,.4)
 }
 
@@ -798,7 +779,7 @@ h1,h2,h3,h4 {
     padding-top: .45em
 }
 
-.font-load-1 .myemail,.mylinks {
+.font-load-1 .myemail {
     letter-spacing: -.03em;
     padding-top: .7em
 }
@@ -814,7 +795,7 @@ h1,h2,h3,h4 {
     margin-bottom: 1.1em
 }
 
-.skills {
+.font-load-1 .skills,.skills {
     font-size: .93em;
     letter-spacing: -.02em;
     margin-top: 1.2em;
@@ -823,7 +804,6 @@ h1,h2,h3,h4 {
 
 .font-load-1 .skills {
     font-size: 1em;
-    letter-spacing: -.02em;
     margin-top: 1em;
     margin-bottom: 0
 }
@@ -834,23 +814,18 @@ h1,h2,h3,h4 {
 
 a {
     color: rgba(14,17,21,.85);
-    background-image: linear-gradient(to right,rgb(226, 27, 42) 50%,rgb(226, 27, 42) 50%);
-    background-position: 0 1em;
+    background-image: linear-gradient(to right,#e21b2a 50%,#e21b2a 50%);
     background-size: 5px 2px;
     text-size-adjust: 100%;
     hyphens: manual
 }
 
-.font-load-1 a {
+.font-load-1 .table>.list-title>a,.font-load-1 a {
     background-position: 0 1.18em
 }
 
-.table>.list-title>a {
+.table>.list-title>a,a {
     background-position: 0 1em
-}
-
-.font-load-1 .table>.list-title>a {
-    background-position: 0 1.18em
 }
 
 pre {
@@ -867,16 +842,8 @@ iframe,video {
 blockquote {
     border-left: 5px solid rgba(14,17,21,.25);
     border-radius: 5px;
-    margin: 0;
-    margin-left: -1.15em;
+    margin: 0 0 0 -1.15em;
     padding: 0 0 0 1em
-}
-
-img.myphoto {
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    margin: 15vw 0 .5em
 }
 
 .centered {
@@ -912,13 +879,16 @@ img.centered:empty {
     margin-left: -92px
 }
 
-.table>.list-meta {
-    font-size: 11px;
-    line-height: 1.3em;
+.table>.list-meta,.table>.list-title {
     letter-spacing: -.02em;
-    text-align: right;
+    line-height: 1.3em;
     margin: 0;
     padding: 0
+}
+
+.table>.list-meta {
+    text-align: right;
+    font-size: 11px
 }
 
 .font-load-1 .table>.list-meta {
@@ -927,25 +897,20 @@ img.centered:empty {
 }
 
 .table>.list-title {
-    font-size: .85em;
-    letter-spacing: -.02em;
-    line-height: 1.3em;
-    margin: 0;
-    padding: 0
+    font-size: .85em
 }
 
 .font-load-1 .table>.list-title {
     font-size: .806em;
     letter-spacing: -.03em;
     line-height: 1.55em;
-    margin-bottom: .47em;
+    margin-bottom: .47em
 }
 
 .table {
     display: flex;
     flex-flow: row;
-    margin: 0 0 .9em;
-    padding: 0
+    margin: 0 0 .9em
 }
 
 .table li {
@@ -974,7 +939,7 @@ img.centered:empty {
     align-items: normal
 }
 
-.metadata>.table li {
+.metadata>.table li,.table {
     padding: 0
 }
 
@@ -986,11 +951,11 @@ img.centered:empty {
     background-image: none
 }
 
-.metadata p,.metadata li {
+.metadata li,.metadata p {
     letter-spacing: -.02em
 }
 
-.font-load-1 .metadata p,.font-load-1 .metadata li {
+.font-load-1 .metadata li,.font-load-1 .metadata p {
     letter-spacing: -.05em
 }
 
@@ -1057,7 +1022,9 @@ hr {
 }
 
 pre code {
-    background: 0 0
+    background: 0 0;
+    font-size: 1em;
+    color: #fff
 }
 
 table {
@@ -1082,13 +1049,8 @@ tr:nth-child(even) {
     text-decoration: none
 }
 
-pre code {
-    font-size: 1em;
-    color: rgb(255, 255, 255)
-}
-
 .font-load-1 pre code {
-    font-size: 1em;
+    font-size: 1em
 }
 
 /*@media screen and (min-width:700px) {*/
@@ -1161,7 +1123,7 @@ pre code {
         margin-bottom: .14em
     }
 
-     .font-load-1 .table>.list-title {
+    .font-load-1 .table>.list-title {
         margin-top: .3em;
         margin-bottom: .05em
     }
@@ -1186,7 +1148,8 @@ pre code {
     }
 
     article main {
-        order: 2
+        order: 2;
+        margin-top: .2em
     }
 
     article aside {
@@ -1196,10 +1159,6 @@ pre code {
     .list-page {
         padding-left: 1em;
         padding-right: 1em
-    }
-
-    article main {
-        margin-top: .2em
     }
 
     .font-load-1 article main {
@@ -1216,7 +1175,7 @@ pre code {
         top: 0
     }
 
-    .links,aside {
+    .links,aside,figure {
         margin: 0
     }
 
@@ -1233,9 +1192,8 @@ pre code {
     }
 
     figure {
-        margin: 0;
         display: initial;
-        align-items: center;
+        align-items: center
     }
 
     figcaption {
@@ -1273,60 +1231,35 @@ pre code {
     }
 
     .font-load-2 .subtitle {
-        letter-spacing: -.028em;
+        letter-spacing: -.028em
     }
 
-    h1 {
-        font-size: 1.542em;
+    .font-load-1 h1,h1 {
+        font-size: 1.542em
+    }
+
+    h1,p+h1 {
         padding-top: 1em
     }
 
-    .font-load-1 h1 {
-        font-size: 1.542em;
-    }
-
-    p + h1 {
-        padding-top: 1em
-    }
-
-    h2 {
+    .font-load-1 h2,h2 {
         font-size: 1.414em
     }
 
-    .font-load-1 h2 {
-        font-size: 1.414em;
-    }
-
-    h3 {
+    .font-load-1 h3,h3 {
         font-size: 1.297em
     }
 
-    .font-load-1 h3 {
-        font-size: 1.297em;
-    }
-
-    h4 {
+    .font-load-1 h4,h4 {
         font-size: 1.189em
     }
 
-    .font-load-1 h4 {
-        font-size: 1.189em;
-    }
-
-    h5 {
+    .font-load-1 h5,h5 {
         font-size: 1.091em
     }
 
-    .font-load-1 h5 {
-        font-size: 1.091em;
-    }
-
-    h6 {
+    .font-load-1 h6,h6 {
         font-size: 1em
-    }
-
-    .font-load-1 h6 {
-        font-size: 1em;
     }
 
     .authors {
@@ -1349,12 +1282,12 @@ pre code {
         height: 30.5px
     }
 
-    .metadata p,.metadata li {
+    .metadata li,.metadata p {
         font-size: .98em;
         letter-spacing: -.03em
     }
 
-    .font-load-1 .metadata p,.font-load-1 .metadata li {
+    .font-load-1 .metadata li,.font-load-1 .metadata p {
         font-size: 1em;
         letter-spacing: -.03em
     }
@@ -1366,7 +1299,7 @@ pre code {
     }
 
     .font-load-1 .authors>p {
-        font-size: 1.04em;
+        font-size: 1.04em
     }
 
     .links {
@@ -1375,7 +1308,7 @@ pre code {
     }
 
     .links>li {
-        display: inline-block;
+        display: inline-block
     }
 
     .font-load-1 .links {
@@ -1401,23 +1334,20 @@ pre code {
 
     .font-load-1 .metadata>.table {
         margin-top: 0;
-        line-height: 1.5em;
+        line-height: 1.5em
     }
 
     .metadata>.table li:after {
         display: inline-block;
         position: relative;
         padding-left: .45em;
-        padding-right: .45em
+        padding-right: .45em;
+        content: ""
     }
 
     .font-load-1 .metadata>.table li:after {
         padding-left: .31em;
         padding-right: .31em
-    }
-
-    .metadata>.table li:after {
-        content: "";
     }
 
     .metadata>.table li:last-child:after {
@@ -1450,26 +1380,21 @@ pre code {
         text-align: left
     }
 
-    .font-load-1 .logo,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 .myname {
+    .font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6 {
         font-weight: 400
     }
 
     img {
-        max-width: 100%;
-        margin-left: 0
-    }
-
-    ol,p,ul {
-        letter-spacing: -.0034em
+        max-width: 100%
     }
 
     ol,p,ul {
         font-size: 18px;
-        letter-spacing: 0.0115em;
+        letter-spacing: .0115em;
         line-height: 1.57em
     }
 
-    .font-load-1 ol,.font-load-1 p,.font-load-1 summary,.font-load-1 ul {
+    .font-load-1 ol,.font-load-1 p,.font-load-1 ul {
         font-size: 16px;
         letter-spacing: -.022em;
         line-height: 1.75em
@@ -1489,12 +1414,7 @@ pre code {
         line-height: 1.65em
     }
 
-    .table>.list-meta {
-        font-size: 11.7px;
-        margin-bottom: 0
-    }
-
-    .font-load-1 .table>.list-meta {
+    .font-load-1 .table>.list-meta,.table>.list-meta {
         font-size: 11.7px;
         margin-bottom: 0
     }
@@ -1508,7 +1428,7 @@ pre code {
     }
 
     .font-load-1 .table>.list-title {
-        font-size: .900em;
+        font-size: .9em;
         letter-spacing: -.02em;
         line-height: 1.34em;
         margin-top: .1em;
@@ -1546,7 +1466,7 @@ pre code {
 
     .myname {
         margin-top: 0;
-        padding-top: .28em;
+        padding-top: .28em
     }
 
     .mylinks {
@@ -1586,54 +1506,30 @@ pre code {
     }
 
     .font-load-2 .subtitle {
-        letter-spacing: -.021em;
+        letter-spacing: -.021em
     }
 
-    h1 {
+    .font-load-1 h1,h1 {
         font-size: 1.341em
     }
 
-    .font-load-1 h1 {
-        font-size: 1.341em
-    }
-
-    h2,.myname {
-        font-size: 1.265em;
-    }
-
-    .font-load-1 h2,.font-load-1 .myname {
+    .font-load-1 .myname,.font-load-1 h2,.myname,h2 {
         font-size: 1.265em
     }
 
-    h3 {
+    .font-load-1 h3,h3 {
         font-size: 1.193em
     }
 
-    .font-load-1 h3 {
-        font-size: 1.193em
-    }
-
-    h4 {
+    .font-load-1 h4,h4 {
         font-size: 1.125em
     }
 
-    .font-load-1 h4 {
-        font-size: 1.125em
-    }
-
-    h5 {
+    .font-load-1 h5,h5 {
         font-size: 1.061em
     }
 
-    .font-load-1 h5 {
-        font-size: 1.061em
-    }
-
-    h6 {
-        font-size: 1em
-    }
-
-    .font-load-1 h6 {
+    .font-load-1 h6,h6 {
         font-size: 1em
     }
 
@@ -1653,11 +1549,11 @@ pre code {
         margin-bottom: .4em
     }
 
-    .metadata a,.authors a,figcaption a {
+    .authors a,.metadata a,figcaption a {
         background-position: 0 .98em
     }
 
-    .font-load-1 .metadata a,.font-load-1 .authors a,.font-load-1 figcaption a {
+    .font-load-1 .authors a,.font-load-1 .metadata a,.font-load-1 figcaption a {
         background-position: 0 1.2em
     }
 
@@ -1681,8 +1577,8 @@ pre code {
         line-height: 2.36em
     }
 
-    blockquote {
-        margin-left: 0;
+    blockquote,img {
+        margin-left: 0
     }
 }
 
