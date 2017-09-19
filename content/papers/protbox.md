@@ -75,9 +75,9 @@ folders and files:
 - it should allow client operating systems to have a local mount point of the
   shared folder.
 
-Nowadays, most file- oriented cloud storage solutions, if not all, fulfill
-these requirements; in our experiments we managed to explore it successfully
-with Dropbox, SkyDrive, Google Drive and SugarSync.
+Nowadays, most file-oriented cloud storage solutions, if not all, fulfill these
+requirements; in our experiments we managed to explore it successfully with
+Dropbox, SkyDrive, Google Drive and SugarSync.
 
 We developed an open-source prototype in Java, [available
 here](https://github.com/edduarte/protbox). It runs on any operating system
