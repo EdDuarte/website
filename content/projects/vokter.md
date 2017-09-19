@@ -145,8 +145,8 @@ environment and has yet to be battle-tested in high-usage consumer software. If
 you're using Vokter in your projects, let me know! 😀
 
 Regardless, there is always room for improvement, and I feel that there are
-currently two main issues that should be addressed with higher priority: i) web
-crawling functionality and ii) timeout of jobs when clients are missing.
+currently two main issues that should be addressed with higher priority:<br/>1)
+web crawling functionality; and 2) timeout of jobs when clients are missing.
 
 ## Web crawling
 
