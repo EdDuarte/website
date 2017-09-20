@@ -1,7 +1,6 @@
 ---
 title: "Projects"
-aliases:
-    - project
+markup: mmark
 ---
 
 Below are some of my personal software projects. All of these projects are

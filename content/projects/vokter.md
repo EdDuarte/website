@@ -3,13 +3,11 @@ title: "Vokter, a Java library that detects and notifies changes in web
 documents"
 description: "High-performant library that uses LSH, DiffMatchPatch and Bloom
 filters to detect and notify textual changes in web documents."
-date: '2016-06-19 19:26:00+01:00'
+date: "2016-06-19 19:26:00+01:00"
 medium: "https://medium.com/@edduarte/vokter-a-java-library-that-detects-
 changes-in-web-documents-c4d3d399046d"
 type: project
-slug: vokter
-aliases:
-    - vokter
+markup: mmark
 ---
 
 What started as a simple project called Argus (from [*Argus
@@ -39,7 +37,7 @@ variants. Appropriate stopword filtering and stemming algorithms are picked
 based on the inferred language of the document, using a [N-grams Naïve Bayesian
 classifier](https://github.com/optimaize/language-detector).
 
-# Job Management
+# Job Management{{< anchor link="#jobs" >}}{#jobs}
 
 There are two types of jobs, concurrently executed and scheduled periodically
 (using Quartz Scheduler): detection jobs and matching jobs.
@@ -66,7 +64,7 @@ single scheduled detection job and one or more matching jobs. In other words,
 When two clients watch the same page, only one detection job for that page is
 active.
 
-# Scaling
+# Scaling{{< anchor link="#scaling" >}}{#scaling}
 
 Vokter was conceived to be able to scale and to be future-proof, and to this
 effect it was implemented to deal with a high number of jobs in terms of
@@ -87,7 +85,7 @@ resource-consumption, both in memory as well as in the database:
    are still matching-jobs in its cluster, and if not, the cluster is cleared
    from the workspace.
 
-# Persistence
+# Persistence{{< anchor link="#persistence" >}}{#persistence}
 
 Documents, indexing results, found differences are all stored in MongoDB. To
 avoid multiple bulk operations on the database, every query (document, tokens,
@@ -97,7 +95,7 @@ between 20 seconds and 1 minute.
 Persistence of detection and matching jobs is also covered, using a custom
 MongoDB Job Store by Michael Klishin and Alex Petrov.
 
-# OSGi-based architecture
+# OSGi-based architecture{{< anchor link="#osgi" >}}{#osgi}
 
 Vokter support for reading of a given ``MediaType`` is provided by Reader
 modules, where raw content is converted into a clean string filtered of non-
@@ -112,7 +110,7 @@ language detection prediction model, Vokter determines the most probable
 language of the document and queries on-demand for available Stemmers by
 language supported.
 
-# Indexing
+# Indexing{{< anchor link="#indexing" >}}{#indexing}
 
 The string of text that represents the document snapshot that was captured
 during the Reading phase is passed through a parser that tokenizes, filters
@@ -137,7 +135,7 @@ performed in parallel, Vokter will instance multiple parsers when deployed and
 store them in a blocking queue. The number of parsers corresponds to the number
 of cores available in the machine where Vokter was deployed to.
 
-# Caveats / Future Work
+# Caveats / Future Work{{< anchor link="#caveats" >}}{#caveats}
 
 Despite every part of its architecture having been optimized to accommodate to
 a massive amount of parallel tasks, Vokter has only been used in a academic
@@ -148,7 +146,7 @@ Regardless, there is always room for improvement, and I feel that there are
 currently two main issues that should be addressed with higher priority:<br/>1)
 web crawling functionality; and 2) timeout of jobs when clients are missing.
 
-## Web crawling
+## Web crawling{{< anchor link="#web-crawling" >}}{#web-crawling}
 
 One way to improve user experience is by integrating web crawling in Reader
 modules, allowing users to set their visit policy (e.g. number of nested
@@ -166,7 +164,7 @@ B. Instead, job 1 should trigger clients linked to A and B:
 This implies a more optimized architecture that has the potential of
 significantly reducing the total number of simultaneous jobs.
 
-## Fault-tolerance and timeout of matching jobs
+## Fault-tolerance and timeout of matching jobs{{< anchor link="#fault-tolerance" >}}{#fault-tolerance}
 
 Only detection jobs can be timed-out after failing too many times to load a new
 snapshot of the document. However, sending a response to the client can fail

@@ -313,7 +313,7 @@ figcaption {
     margin-left: 6px;
     min-width: 270px;
     font-size: 1em;
-    line-height: 1.75em;
+    line-height: 1.5em;
     letter-spacing: .025em
 }
 
@@ -347,7 +347,7 @@ article header {
 
 .subtitle {
     font-size: 2.8em;
-    letter-spacing: -.06em;
+    letter-spacing: -.065em;
     line-height: 1.2em;
     margin-top: .18em
 }
@@ -413,7 +413,7 @@ article header {
 
 .font-load-1 figcaption {
     font-size: .9em;
-    line-height: 2em;
+    line-height: 1.72em;
     letter-spacing: -.02em
 }
 
@@ -690,20 +690,21 @@ kbd,pre code,samp {
 }
 
 .links>li>a,pre {
-    border-radius: .3em
+    border-radius: 1px
 }
 
 .links>li>a {
-    color: rgba(14,17,21,.6);
+    color: rgba(14,17,21,.5);
     font-size: 12.2px;
     text-decoration: none;
+    /*background-color: rgba(14,17,21,.05);*/
     border: 1px solid rgba(14,17,21,.15);
     cursor: pointer;
     padding: .7em
 }
 
 .links>li>a:hover {
-    background-color: rgba(14,17,21,.08);
+    background-color: rgba(14,17,21,.05);
     text-decoration: none
 }
 
@@ -736,18 +737,16 @@ footer>ul>li {
     padding-right: 0
 }
 
+.myemail,.myemail a,.mylinks a,.myname,.myname a,.table>.list-meta a,.title,.title a,b,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,pre code,strong {
+    text-decoration: none
+}
+
 .myname,.myname a,.table>.list-meta a,.title,.title a,b,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,pre code,strong {
-    text-decoration: none;
     color: rgba(14,17,21,.9)
 }
 
-.myemail,.myemail a,.mylinks a {
-    text-decoration: none;
-    color: rgba(14,17,21,.4)
-}
-
-.authors,.authors a,.logo,.logo a,aside,aside a,figcaption,footer,footer a {
-    color: rgba(14,17,21,.4)
+.myemail,.myemail a,.mylinks a,.authors,.authors a,.logo,.logo a,aside,aside a,figcaption,footer,footer a,.mlt-title,.mlt-summary {
+    color: rgba(14,17,21,.5)
 }
 
 .metadata a,figcaption a {
@@ -809,7 +808,7 @@ h1,h2,h3,h4 {
 }
 
 .list-meta-date {
-    color: rgba(14,17,21,.4)
+    color: rgba(14,17,21,.5)
 }
 
 a {
@@ -826,6 +825,18 @@ a {
 
 .table>.list-title>a,a {
     background-position: 0 1em
+}
+
+.footnote-ref a {
+    padding-top: 0;
+    padding-left: .2em;
+    padding-right: .2em;
+    padding-bottom: .2em;
+    background-image: none
+}
+
+a.footnote-return {
+    background-image: none
 }
 
 pre {
@@ -947,8 +958,12 @@ img.centered:empty {
     font-size: .9em
 }
 
-.links>li>a,.list-meta-date,.logo,.myemail,.myemail a,.mylinks a,.myname,.myname a,.skills,.title,.title a,footer,footer a,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
+.links>li>a,.list-meta-date,.logo,.myemail,.myemail a,.mylinks a,.myname,.myname a,.skills,.title,.title a,footer,footer a,h1,h2,h3,h4,h5,h6,.anchor {
     background-image: none
+}
+
+.anchor {
+    margin-left: 10px
 }
 
 .metadata li,.metadata p {
@@ -969,7 +984,7 @@ img.centered:empty {
     background-origin: border-box
 }
 
-.title a:hover,h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover {
+.title a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
     background-image: linear-gradient(to right,rgba(14,17,21,.9) 50%,rgba(14,17,21,.9) 50%);
     background-position: 0 1.2em;
     background-repeat: repeat-x;
@@ -1028,8 +1043,8 @@ pre code {
 }
 
 table {
-    border-top: 1px solid rgba(14,17,21,.4);
-    border-bottom: 1px solid rgba(14,17,21,.4);
+    border-top: 1px solid rgba(14,17,21,.5);
+    border-bottom: 1px solid rgba(14,17,21,.5);
     margin: auto
 }
 
@@ -1051,6 +1066,53 @@ tr:nth-child(even) {
 
 .font-load-1 pre code {
     font-size: 1em
+}
+
+.mlt-title,.mlt-summary {
+    color: rgba(14,17,21,.6)
+}
+
+.mlt-line {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-left: -15px;
+    width: 60px;
+    height: 2px;
+    background-color: rgba(14,17,21,.25)
+}
+
+.mlt-header {
+    margin-bottom: .8em
+}
+
+.font-load-1 .mlt-header {
+    margin-bottom: .8em
+}
+
+.mlt-summary {
+    font-size: 17px;
+    letter-spacing: .01em
+}
+
+.font-load-1 .mlt-summary {
+    font-size: 15px;
+    letter-spacing: -.01em
+}
+
+.mlt-link:hover > .mlt-title {
+    text-decoration: underline;
+}
+
+blockquote footer,.font-load-1 blockquote footer {
+    margin-top: 1em
+}
+
+.highlight {
+    font-size: 12px;
+}
+
+.highlight span {
+    line-height: 1.7em
 }
 
 /*@media screen and (min-width:700px) {*/
@@ -1075,7 +1137,7 @@ tr:nth-child(even) {
     }
 
     .font-load-2 .subtitle {
-        letter-spacing: -.028em
+        letter-spacing: -.029em
     }
 
     @-moz-document url-prefix() {
@@ -1470,11 +1532,11 @@ tr:nth-child(even) {
     }
 
     .mylinks {
-        margin-bottom: 1.12em
+        margin-top: -.05em;
+        margin-bottom: 1.05em
     }
 
     .font-load-1 .mylinks {
-        margin-top: .05em;
         margin-bottom: 1em
     }
 
@@ -1557,8 +1619,8 @@ tr:nth-child(even) {
         background-position: 0 1.2em
     }
 
-    .list-title a {
-        background-size: 5px 2px
+    .list-title a,a,.mlt-header a {
+        background-size: 5px 1px
     }
 
     .logo {
@@ -1579,6 +1641,23 @@ tr:nth-child(even) {
 
     blockquote,img {
         margin-left: 0
+    }
+
+    .mlt-line {
+        margin-left: 0
+    }
+
+    .mlt-header a {
+        background-position: 0 1.2em
+    }
+
+    .mlt-summary {
+        font-size: 16px;
+        line-height: 1.5em
+    }
+
+    .font-load-1 .mlt-summary {
+        font-size: 14px
     }
 }
 

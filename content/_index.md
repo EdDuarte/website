@@ -1,7 +1,9 @@
 ---
 title: "Eduardo Duarte"
-description: "Junior Software Developer & Researcher. Philonoist, over-thinker, cinephile and music junkie."
-date: '2017-09-05 15:17:00+01:00'
+description: "Junior Software Developer & Researcher. Philonoist, over-thinker,
+cinephile and music junkie."
+date: "2017-09-20 18:31:00+01:00"
+markup: mmark
 ---
 
 ## Experience

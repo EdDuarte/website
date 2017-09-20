@@ -6,36 +6,30 @@ Stuttgart, Germany"
 description: "Open-source & cross-platform app that performs file encryption
 and user authentication on existing cloud storage services using eID tokens."
 authors:
-    - Eduardo Duarte
-    - Filipe Pinheiro
-    - André Zúquete
-    - Hélder Gomes
-authorUrls:
-    - https://www.edduarte.com
-    - 
-    - http://sweet.ua.pt/andre.zuquete/public_html/
-    - http://wiki.ieeta.pt/wiki/index.php/Hélder_Gomes
+    - name: Eduardo Duarte
+      url: https://www.edduarte.com
+    - name: Filipe Pinheiro
+      url: 
+    - name: André Zúquete
+      url: http://sweet.ua.pt/andre.zuquete/public_html/
+    - name: Hélder Gomes
+      url: http://wiki.ieeta.pt/wiki/index.php/Hélder_Gomes
 links:
-    - Source code
-    - Paper (Scopus)
-    - Paper (LNI)
-    - Paper (arXiv)
-    - Slides (PDF)
-    - Slides (SlideShare)
-linkUrls:
-    - https://github.com/edduarte/protbox
-    - "https://www.scopus.com/record/display.uri?eid=2-s2.0-84919383572&origin=inward&txGid=1ca0335b4c696f3c89c8f47f269f70ee"
-    - http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html
-    - http://arxiv.org/abs/1501.03139
-    - /openidentity2014/slides.pdf
-    - http://www.slideshare.net/EduardoDuarte33/oid2014presentation
-date: '2014-11-05 11:03:00+01:00'
+    - name: Source code
+      url: https://github.com/edduarte/protbox
+    - name: Paper (LNI)
+      url: http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html
+    - name: Paper (arXiv)
+      url: http://arxiv.org/abs/1501.03139
+    - name: Slides (PDF)
+      url: /openidentity2014/slides.pdf
+    - name: Slides (SlideShare)
+      url: http://www.slideshare.net/EduardoDuarte33/oid2014presentation
+date: "2014-11-05 11:03:00+01:00"
 medium: "https://medium.com/@edduarte/secure-and-trustworthy-file-sharing-over-
 cloud-storage-using-eid-tokens-d8546a4e5a00"
 type: paper
-slug: protbox
-aliases:
-    - protbox
+markup: mmark
 ---
 
 In this paper we present Protbox, an open-source, cross-platform

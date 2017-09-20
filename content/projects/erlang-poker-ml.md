@@ -4,13 +4,10 @@ prediction in Erlang"
 description: "Implementation of a decision-tree classifier and a disk
 persistence module to evaluate win-lose probabilities over a Poker Texas
 Hold'em game."
-date: '2015-03-31 17:25:00+01:00'
+date: "2015-03-31 17:25:00+01:00"
 medium: "https://medium.com/@edduarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
 type: project
-slug: erlang-poker-ml
-aliases:
-    - erlang-poker-ml
-    - poker-ml
+markup: mmark
 ---
 
 For a University class project we were asked to implement a decision-tree
@@ -47,7 +44,7 @@ This application is composed of three modules:
 - a tree module, that implements the decision tree and the probability
   calculation methods.
 
-# Preliminaries
+# Preliminaries{{< anchor link="#preliminaries" >}}{#preliminaries}
 
 A match is considered a result of seven cards that occurred throughout four
 rounds. The four rounds are numbered from 0 to 3:
@@ -66,7 +63,9 @@ A ranked hand is a specific set of cards that have an associated rank, namely:
 1. Royal Flush; 2. Straight Flush; 3. Four Of A Kind; 4. Full House; 5. Flush;
 6. Straight; 7. Three Of A Kind; 8. Two Pair; 9. Pair; 10. High Card.
 
-# Main module
+
+
+# Main module{{< anchor link="#main" >}}{#main}
 
 The main module uses the rule-based engine Eresye to store variables per match
 and Texas Hold'em hand rankings. For each match, the user is prompted to input:
@@ -92,7 +91,7 @@ with itself during Eresye's operations.
 
 
 
-# Decision tree module
+# Decision tree module{{< anchor link="#decision-tree" >}}{#decision-tree}
 
 The decision tree module implements a Decision tree where each node corresponds
 to a round, and each round has 3 branches pointing to 3 child nodes. Each
@@ -135,7 +134,7 @@ should take corresponds to the one that has the higher expected profit.
 
 
 
-# History module
+# History module{{< anchor link="#history" >}}{#history}
 
 The history module is a data history, implemented using an alternative Eresye
 engine (different from the one used in the main module). Essentially, using

@@ -20,11 +20,11 @@
 {{ if $authorList }}
 <p>
 {{ $len := (len $authorList) }}
-{{ $authorUrlList := .Params.authorUrls }}
 {{ if eq $len 1 }}
-<a href="{{ index $authorUrlList 0 }}">{{ index $authorList 0 }}</a>
+{{ $author := index $authorList 0 }}
+<a href="{{ $author.url }}">{{ $author.name }}</a>
 {{ else }}
-{{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $link := index $authorUrlList $i }}{{ if $link }}<a href="{{ $link }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}
+{{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $author := index $authorList $i }}{{ if $author.url }}<a href='{{ $author.url }}'>{{ $author.name }}</a>{{ else }}{{ $author.name }}{{ end }}{{ end }}
 {{ end }}
 </p>
 {{ end }}
@@ -38,6 +38,25 @@
 
 <section class="content">
 {{ .Content }}
+</section>
+
+<section class="mlt">
+<div class="mlt-line"></div>
+{{if .NextInSection}}
+<h3 class="mlt-header">Next on <a href="/{{.Section}}/">{{.Section}}</a></h3>
+<a class="mlt-link" href="{{.NextInSection.Permalink}}">
+<h4 class="mlt-title">{{.NextInSection.Title}}</h4>
+<p class="mlt-summary">{{.NextInSection.Summary}}...</p>
+</a>
+{{else}}
+{{if .PrevInSection}}
+<h3 class="mlt-header">More on <a href="/{{.Section}}/">{{.Section}}</a></h3>
+<a class="mlt-link" href="{{.PrevInSection.Permalink}}">
+<h4 class="mlt-title">{{.PrevInSection.Title}}</h4>
+<p class="mlt-summary">{{.PrevInSection.Summary}}...</p>
+</a>
+{{end}}
+{{end}}
 </section>
 
 </main>
@@ -74,15 +93,10 @@ Discussion on <a href="{{ . }}">Hacker News</a>
 {{ if $linkList }}
 <section>
 <ul class="links">
-{{ $linkUrlList := .Params.linkUrls }}
-{{ range $i, $temp := $linkList }}{{ $link := index $linkUrlList $i }}{{ if $link }}<li><a href="{{ $link }}">{{ . }}</a></li>{{ else }}<li>{{ . }}</li>{{ end }}{{ end }}
+{{ range $i, $temp := $linkList }}{{ $link := index $linkList $i }}{{ if $link.url }}<li><a href="{{ $link.url }}">{{ $link.name }}</a></li>{{ else }}<li>{{ $link.name }}</li>{{ end }}{{ end }}
 </ul>
 </section>
 {{ end }}
-
-<section class="toc">
-{{.TableOfContents}}
-</section>
 
 </aside>
 

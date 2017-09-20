@@ -5,37 +5,32 @@ description: "Open-source WebGL app for tri-dimensional worldwide data
 visualization, with customizable data-to-visual mapping and filtering with
 adjustable scales."
 authors:
-    - Eduardo Duarte
-    - Pedro Bordonhos
-    - Paulo Dias
-    - Beatriz Sousa Santos
-authorUrls:
-    - https://www.edduarte.com
-    - 
-    - http://sweet.ua.pt/paulo.dias/
-    - http://sweet.ua.pt/bss/
+    - name: Eduardo Duarte
+      url: https://www.edduarte.com
+    - name: Pedro Bordonhos
+      url: 
+    - name: Paulo Dias
+      url: http://sweet.ua.pt/paulo.dias/
+    - name: Beatriz Sousa Santos
+      url: http://sweet.ua.pt/bss/
 links:
-    - Demo
-    - Source code
-    - Paper (Springer)
-    - Paper (arXiv)
-    - Slides (PDF)
-    - Slides (SlideShare)
-linkUrls:
-    - https://edduarte.github.io/living-globe
-    - https://github.com/edduarte/living-globe
-    - https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2
-    - https://arxiv.org/abs/1607.05946
-    - /hcii2016/slides.pdf
-    - http://www.slideshare.net/EduardoDuarte33/hcii2016slides-v3
-date: '2016-06-21 19:58:00+01:00'
+    - name: Demo
+      url: https://edduarte.github.io/living-globe
+    - name: Source code
+      url: https://github.com/edduarte/living-globe
+    - name: Paper (Springer)
+      url: https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2
+    - name: Paper (arXiv)
+      url: https://arxiv.org/abs/1607.05946
+    - name: Slides (PDF)
+      url: /hcii2016/slides.pdf
+    - name: Slides (SlideShare)
+      url: http://www.slideshare.net/EduardoDuarte33/hcii2016slides-v3
+date: "2016-06-21 19:58:00+01:00"
 medium: "https://medium.com/@edduarte/living-globe-tridimensional-interactive-
 visualization-of-world-demographic-data-c3eeb1845c51"
 type: paper
-slug: living-globe
-aliases:
-    - living-globe
-    - livingglobe
+markup: mmark
 ---
 
 Living Globe is a WebGL application for tri-dimensional worldwide data
@@ -48,22 +43,15 @@ Additionally, the represented data is normalized within an adjustable scale.
 This can be used to filter out extremely high or extremely low samples,
 uniforming the remaining data and improving its visibility.
 
-<figure>
-<img class="js-lazy-image"
-    src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-    data-src="/hcii2016/screenshot-1-compressed.png"
-    alt="Current prototype of Living Globe"/>
+{class="js-lazy-image" src="/hcii2016/screenshot-1.png"} ![Current prototype of Living Globe](#
+'Current prototype of Living Globe, showing population growth mapped to the
+bars/pilars height, total life expectancy at birth to bar color, and
+birth/death ratio to country color.')
 <noscript>
-<img 
-    src="/hcii2016/screenshot-1-compressed.png"
-    alt="Current prototype of Living Globe"/>
+![Current prototype of Living Globe](/hcii2016/screenshot-1.png 'Current prototype of Living Globe,
+showing population growth mapped to the bars/pilars height, total life
+expectancy at birth to bar color, and birth/death ratio to country color.')
 </noscript>
-
-<figcaption>Current prototype of Living Globe, showing population growth mapped
-to the bars/pilars height, total life expectancy at birth to bar color, and
-birth/death ratio to country color.</figcaption>
-
-</figure>
 
 Our prototype was developed with demographic data in mind, like total
 population, density, population-growth, life expectancy, net migration, crude
@@ -76,10 +64,10 @@ and employment between the years 1960 and 2014).
 
 While offering inexperienced users a default mapping of these data variables
 into visual variables, Living Globe allows more advanced users to select the
-mapping they intent to use. This means that these users have the possibility of
-control over an earlier stage of the visualization reference model (Riccardo
-Mazza. Introduction to information visualization. Springer-Verlag London, 1,
-2009) making Living Globe a more flexible tool.
+mapping they intend to use. This means that users can control over an earlier
+stage of the visualization reference model (Riccardo Mazza. Introduction to
+information visualization. Springer-Verlag London, 1, 2009) making Living Globe
+a more flexible tool than other similar tools.
 
 In order to support this feature, three visual variables may be selected to map
 a data type: i) height of vertical bars (directly proportional to the data
@@ -98,26 +86,19 @@ normalizes the remaining data set, can potentially lead to improvements in the
 interpretation of data in countries with small samples (eg. Portugal) by
 filtering out countries with large samples (e.g. China).
 
-<figure>
-<img class="js-lazy-image"
-    src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-    data-src="/hcii2016/screenshot-2-compressed.png"
-    alt="Demonstration of Living Globe when using the filtering feature with
-    data normalization"/>
-<noscript>
-<img 
-    src="/hcii2016/screenshot-2-compressed.png"
-    alt="Demonstration of Living Globe when using the filtering feature with
-    data normalization"/>
-</noscript>
-
-<figcaption>Living Globe showing total population mapped to the country color:
-the data from all countries is displayed on the left, and filtering out large
-population countries (such as China and India) on the right (resulting in a
-representation with much more diverse and distinguishing colors for the
-remaining countries)</figcaption>
-
-</figure>
+{class="js-lazy-image" src="/hcii2016/screenshot-2.png"}
+![Demonstration of Living Globe when using the filtering feature with data
+normalization](# 'Living Globe showing total population mapped to the country
+color: the data from all countries is displayed on the left, and filtering out
+large population countries \(such as China and India\) on the right \(resulting
+in a representation with much more diverse and distinguishing colors for the
+remaining countries\)') <noscript> ![Demonstration of Living Globe when using
+the filtering feature with data
+normalization](/hcii2016/screenshot-2.png 'Living Globe showing
+total population mapped to the country color: the data from all countries is
+displayed on the left, and filtering out large population countries \(such as
+China and India\) on the right \(resulting in a representation with much more
+diverse and distinguishing colors for the remaining countries\)') </noscript>
 
 Finally, the usability of this tool was tested by agnostic individuals, and the
 results indicate that the data filtering and customizable mapping features

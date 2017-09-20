@@ -1,7 +1,6 @@
 ---
 title: "Papers"
-aliases:
-    - paper
+markup: mmark
 ---
 
 Below are some of the papers I've authored, covering various fields like
