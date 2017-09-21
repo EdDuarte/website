@@ -359,7 +359,7 @@ article header {
     margin-top: .17em
 }
 
-.subtitle,.subtitle a {
+.subtitle,.subtitle a,.anchor {
     color: #e21b2a
 }
 
@@ -812,7 +812,10 @@ h1,h2,h3,h4 {
 }
 
 a {
-    color: rgba(14,17,21,.85);
+    color: rgba(14,17,21,.85)
+}
+
+a,.anchor:hover {
     background-image: linear-gradient(to right,#e21b2a 50%,#e21b2a 50%);
     background-size: 5px 2px;
     text-size-adjust: 100%;
@@ -962,8 +965,32 @@ img.centered:empty {
     background-image: none
 }
 
-.anchor {
-    margin-left: 10px
+.anchor,.font-load-1 .anchor {
+    margin-right: 5px
+}
+
+.font-load-1 h1 .anchor,h1 .anchor {
+    margin-left: -30.5px
+}
+
+.font-load-1 h2 .anchor,h2 .anchor {
+    margin-left: -27px
+}
+
+.font-load-1 h3 .anchor,h3 .anchor {
+    margin-left: -24px
+}
+
+.font-load-1 h4 .anchor,h4 .anchor {
+    margin-left: -22px
+}
+
+.font-load-1 h5 .anchor,h5 .anchor {
+    margin-left: -20.5px
+}
+
+.font-load-1 h6 .anchor,h6 .anchor {
+    margin-left: -18.5px
 }
 
 .metadata li,.metadata p {
@@ -1115,7 +1142,7 @@ blockquote footer,.font-load-1 blockquote footer {
     line-height: 1.7em
 }
 
-/*@media screen and (min-width:700px) {*/
+/*@media screen and (min-width:720px) {*/
 
     .font-load-2 .subtitle,.font-load-2 .title,.font-load-2 h1,.font-load-2 h2,.font-load-2 h3,.font-load-2 h4,.font-load-2 h5,.font-load-2 h6,.font-load-2 .myname {
         font-family: "edduarte-headings-bold","edduarte-headings-regular","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
@@ -1191,7 +1218,7 @@ blockquote footer,.font-load-1 blockquote footer {
     }
 }
 
-@media screen and (max-width:980px),print {
+@media screen and (max-width:1024px),print {
 
     article header {
         padding-top: .3em;
@@ -1427,9 +1454,33 @@ blockquote footer,.font-load-1 blockquote footer {
         background-size: 5px 1px;
         background-position: 0 1.22em
     }
+
+    .font-load-1 h1 .anchor,h1 .anchor {
+        margin-left: -24.5px
+    }
+
+    .font-load-1 h2 .anchor,h2 .anchor {
+        margin-left: -23px
+    }
+
+    .font-load-1 h3 .anchor,h3 .anchor {
+        margin-left: -21.5px
+    }
+
+    .font-load-1 h4 .anchor,h4 .anchor {
+        margin-left: -20.5px
+    }
+
+    .font-load-1 h5 .anchor,h5 .anchor {
+        margin-left: -19.5px
+    }
+
+    .font-load-1 h6 .anchor,h6 .anchor {
+        margin-left: -18.5px
+    }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:720px) {
 
     body {
         text-rendering: optimizeSpeed
@@ -1658,6 +1709,12 @@ blockquote footer,.font-load-1 blockquote footer {
 
     .font-load-1 .mlt-summary {
         font-size: 14px
+    }
+
+    .anchor {
+        display: none;
+        margin-left: 0;
+        margin-right: 0
     }
 }
 
