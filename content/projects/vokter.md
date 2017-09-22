@@ -40,7 +40,6 @@ classifier](https://github.com/optimaize/language-detector).
 # {{< anchor link="#jobs" >}} Job Management {#jobs}
 
 There are two types of jobs, concurrently executed and scheduled periodically
-(using Quartz Scheduler): detection jobs and matching jobs.
 (using Quartz Scheduler): detection and matching jobs.
 
 The detection job is responsible for fetching a new document and comparing it
