@@ -10,6 +10,7 @@ disableKinds = ["tags", "categories"]
 enableRobotsTXT = true
 disableAliases = true
 PygmentsCodeFences = true
+PygmentsStyle = "solarizeddark"
 
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]

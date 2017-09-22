@@ -9,19 +9,19 @@ markup: mmark
 ## Experience
 
 Over three years of hands-on experience with Backend Architecture, Mobile
-Development, UI/UX Design and Information Retrieval. Worked on multiple
-projects that extensively used languages like Java, Kotlin, Objective-C, Swift
-and Javascript ES6, and technologies / frameworks like Spring, Jetty, Tomcat,
-Socket.io, Websocket, MQTT, Redis, Hazelcast, Cassandra, MongoDB, Android and
-iOS, among others.
+Development, UI/UX Design and Information Retrieval. Worked extensively with
+languages like Java, Kotlin, Javascript ES6, Objective-C and Swift, and
+technologies like Spring, Jetty / Tomcat, Django, Socket.io, Websocket, MQTT,
+Redis, Hazelcast, Cassandra, MongoDB, Android and iOS.
 
 Recently finished my internship at [Ubiwhere](http://www.ubiwhere.com/en/),
 where I worked as a backend developer (business process modeling and
 integration platform for [University of Coimbra](http://www.uc.pt/en)) and a
 mobile developer (Android and iOS applications for various brands like
-Vodafone, [Prio](https://app.prioenergy.com/), [Anacom
-Netmede](http://www.netmede.pt/app), [Bikeemotion](http://www.bikeemotion.com/)
-and [Citibrain](http://www.citibrain.com/en/)).
+Vodafone, [Prio](https://app.prioenergy.com/),
+[Citibrain](http://www.citibrain.com/en/), [Anacom
+Netmede](http://www.netmede.pt/app) and
+[Bikeemotion](http://www.bikeemotion.com/)).
 
 I have co-founded two tech startups ([Thumbeo](http://www.thumbeo.com/en/) and
 YouClap) where I had the chance to act both as a creative director and a
