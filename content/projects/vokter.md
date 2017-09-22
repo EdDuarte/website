@@ -41,6 +41,7 @@ classifier](https://github.com/optimaize/language-detector).
 
 There are two types of jobs, concurrently executed and scheduled periodically
 (using Quartz Scheduler): detection jobs and matching jobs.
+(using Quartz Scheduler): detection and matching jobs.
 
 The detection job is responsible for fetching a new document and comparing it
 with the previous document, detecting textual differences between the two. To
