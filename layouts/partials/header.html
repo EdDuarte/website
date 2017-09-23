@@ -90,7 +90,7 @@ html {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-size: 20px;
-    color: rgba(14,17,21,.85)
+    color: rgba(14,17,21,.8)
 }
 
 body {
@@ -230,19 +230,28 @@ ol>li,ul>li {
     margin-bottom: .738em
 }
 
+figcaption,p {
+    line-height: 1.5em
+}
+
+img,p {
+    display: block
+}
+
+ol,p,ul {
+    letter-spacing: -.01em
+}
+
 p {
-    letter-spacing: -.01em;
-    line-height: 1.5em;
-    display: block;
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
     word-break: break-word;
     word-wrap: break-word;
-    margin-top: .55em;
     margin-bottom: 0;
-    hanging-punctuation: first
+    hanging-punctuation: first;
+    margin-top: .55em
 }
 
 .font-load-1 p {
@@ -276,15 +285,14 @@ p {
     letter-spacing: -.06em
 }
 
-.font-load-2 em {
+.font-load-1 h1,.font-load-2 em {
     letter-spacing: -.03em
 }
 
 ol,ul {
     line-height: 1.5em;
     margin: -20px 0 -.8em .25em;
-    padding: .938em;
-    letter-spacing: -.01em
+    padding: .938em
 }
 
 .font-load-1 ol>li,.font-load-1 ul>li {
@@ -307,17 +315,15 @@ img {
     object-fit: scale-down;
     object-position: 50% 0;
     margin-left: auto;
-    margin-right: auto;
-    display: block;
+    margin-right: auto
 }
 
 figcaption {
     float: right;
     font-size: .9em;
     letter-spacing: .025em;
-    line-height: 1.5em;
     margin-top: -5px;
-    width: 270px;
+    width: 270px
 }
 
 .font-load-1 figcaption {
@@ -329,7 +335,6 @@ figcaption {
 img.myphoto {
     float: none;
     min-width: 0;
-    max-width: 100%;
     width: 100px;
     height: 100px;
     border-radius: 100px;
@@ -364,7 +369,7 @@ article header {
     margin: .15em 0 0
 }
 
-.subtitle {
+.font-load-1 .subtitle,.subtitle {
     font-size: 2.8em;
     letter-spacing: -.063em;
     line-height: 1.22em;
@@ -372,13 +377,11 @@ article header {
 }
 
 .font-load-1 .subtitle {
-    font-size: 2.8em;
     letter-spacing: -.022em;
-    line-height: 1.22em;
     margin-top: .17em
 }
 
-.subtitle,.subtitle a,.anchor {
+.anchor,.subtitle,.subtitle a {
     color: #e21b2a
 }
 
@@ -438,13 +441,13 @@ article header {
     letter-spacing: -.025em
 }
 
-.metadata .published-date,.metadata .reading-time,.metadata .medium,.metadata .hn {
+.metadata .hn,.metadata .medium,.metadata .published-date,.metadata .reading-time {
     display: inline-table;
     line-height: 1.5em;
     height: 32px
 }
 
-.font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time,.font-load-1 .metadata .medium,.font-load-1 .metadata .hn {
+.font-load-1 .metadata .hn,.font-load-1 .metadata .medium,.font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time {
     line-height: 1.75em;
     height: 33.4px
 }
@@ -459,7 +462,7 @@ article header {
     padding-left: 5px
 }
 
-.font-load-1 .toc,.toc {
+.font-load-1 .toc,.font-load-1 blockquote footer,.toc,blockquote footer {
     margin-top: 1em
 }
 
@@ -540,31 +543,31 @@ h1,h2,h3,h4,h5,h6 {
     margin-top: 0
 }
 
-.font-load-1 h1,h1 {
+.font-load-1 h1 {
+    font-size: 1.987em;
+    margin-top: -.1em;
+    margin-bottom: -.25em
+}
+
+h1 {
     font-size: 1.987em;
     letter-spacing: -.078em;
     margin-bottom: -.28em
 }
 
-.font-load-1 h1 {
-    letter-spacing: -.03em;
-    margin-top: -.1em;
-    margin-bottom: -.25em
-}
-
-.font-load-1 p+h2,.font-load-1 ul+h2,.font-load-1 ol+h2,.font-load-1 img+h2,p+h1,ul+h1,ol+h1,img+h1 {
+.font-load-1 img+h2,.font-load-1 ol+h2,.font-load-1 p+h2,.font-load-1 ul+h2,img+h1,ol+h1,p+h1,ul+h1 {
     padding-top: 1em
 }
 
-.font-load-1 p+h1,.font-load-1 ul+h1,.font-load-1 ol+h1,.font-load-1 img+h1 {
+.font-load-1 img+h1,.font-load-1 ol+h1,.font-load-1 p+h1,.font-load-1 ul+h1 {
     padding-top: 1.13em
 }
 
-.font-load-1 h3,h2,h3 {
+h2,h3 {
     letter-spacing: -.08em
 }
 
-.font-load-1 h3,.myname,h2,h3 {
+.myname,h2 {
     font-size: 1.732em;
     margin-bottom: -.32em
 }
@@ -578,44 +581,44 @@ h1,h2,h3,h4,h5,h6 {
     margin-bottom: -.27em
 }
 
-p+h2,ul+h2,ol+h2,img+h2 {
+img+h2,ol+h2,p+h2,ul+h2 {
     padding-top: 1.05em
 }
 
-.font-load-1 h3,h3 {
+.font-load-1 h3,.font-load-1 h4,h4 {
     font-size: 1.51em;
-    margin-bottom: -.33em
-}
-
-.font-load-1 h3 {
     letter-spacing: -.031em;
     margin-bottom: -.3em
 }
 
-p+h3,ul+h3,ol+h3,img+h3 {
+h3 {
+    font-size: 1.51em;
+    margin-bottom: -.33em
+}
+
+img+h3,ol+h3,p+h3,ul+h3 {
     padding-top: .92em
 }
 
-.font-load-1 p+h3,.font-load-1 ul+h3,.font-load-1 ol+h3,.font-load-1 img+h3 {
+.font-load-1 img+h3,.font-load-1 ol+h3,.font-load-1 p+h3,.font-load-1 ul+h3 {
     padding-top: .885em
 }
 
 .font-load-1 h4,h4 {
     font-size: 1.316em;
+    letter-spacing: -.025em
+}
+
+h4 {
     letter-spacing: -.07em;
     margin-bottom: -.35em
 }
 
-.font-load-1 h4 {
-    letter-spacing: -.025em;
-    margin-bottom: -.3em
-}
-
-p+h4,ul+h4,ol+h4,img+h4 {
+img+h4,ol+h4,p+h4,ul+h4 {
     padding-top: .82em
 }
 
-.font-load-1 p+h4,.font-load-1 ul+h4,.font-load-1 ol+h4,.font-load-1 img+h4 {
+.font-load-1 img+h4,.font-load-1 ol+h4,.font-load-1 p+h4,.font-load-1 ul+h4 {
     padding-top: .783em
 }
 
@@ -625,17 +628,20 @@ h5 {
     margin-bottom: -.6em
 }
 
-.font-load-1 h5,.font-load-1 h6 {
+.font-load-1 h5 {
     font-size: 1.147em;
-    letter-spacing: -.01em;
     margin-bottom: -.5em
 }
 
-p+h5,ul+h5,ol+h5,img+h5 {
+.font-load-1 .logo,.font-load-1 h5,.font-load-1 h6 {
+    letter-spacing: -.01em
+}
+
+img+h5,ol+h5,p+h5,ul+h5 {
     padding-top: .72em
 }
 
-.font-load-1 p+h5,.font-load-1 ul+h5,.font-load-1 ol+h5,.font-load-1 img+h5 {
+.font-load-1 img+h5,.font-load-1 ol+h5,.font-load-1 p+h5,.font-load-1 ul+h5 {
     padding-top: .693em
 }
 
@@ -650,11 +656,11 @@ h6 {
     margin-bottom: -.55em
 }
 
-p+h6,ul+h6,ol+h6,img+h6 {
+img+h6,ol+h6,p+h6,ul+h6 {
     padding-top: .62em
 }
 
-.font-load-1 p+h6,.font-load-1 ul+h6,.font-load-1 ol+h6,.font-load-1 img+h6 {
+.font-load-1 img+h6,.font-load-1 ol+h6,.font-load-1 p+h6,.font-load-1 ul+h6 {
     padding-top: .613em
 }
 
@@ -702,21 +708,16 @@ kbd,pre code,samp {
 }
 
 .links>li>a {
-    border-radius: 3px
-}
-
-.links>li>a {
+    border-radius: 3px;
     color: rgba(14,17,21,.5);
     font-size: 12.2px;
-    text-decoration: none;
     border: 1px solid rgba(14,17,21,.15);
     cursor: pointer;
     padding: .7em
 }
 
 .links>li>a:hover {
-    background-color: rgba(14,17,21,.05);
-    text-decoration: none
+    background-color: rgba(14,17,21,.05)
 }
 
 .logo {
@@ -728,7 +729,6 @@ kbd,pre code,samp {
 
 .font-load-1 .logo {
     font-size: 15px;
-    letter-spacing: -.01em;
     padding-top: 1em;
     padding-bottom: .1em
 }
@@ -748,7 +748,7 @@ footer>ul>li {
     padding-right: 0
 }
 
-.myemail,.myemail a,.mylinks a,.myname,.myname a,.table>.list-meta a,.title,.title a,b,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,pre code,strong {
+.links>li>a,.links>li>a:hover,.myemail,.myemail a,.mylinks a,.myname,.myname a,.table>.list-meta a,.title,.title a,b,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,pre code,strong {
     text-decoration: none
 }
 
@@ -756,7 +756,7 @@ footer>ul>li {
     color: rgba(14,17,21,.9)
 }
 
-.myemail,.myemail a,.mylinks a,.authors,.authors a,.logo,.logo a,aside,aside a,figcaption,footer,footer a,.mlt-title,.mlt-summary {
+.authors,.authors a,.logo,.logo a,.myemail,.myemail a,.mylinks a,aside,aside a,figcaption,footer,footer a {
     color: rgba(14,17,21,.5)
 }
 
@@ -789,13 +789,12 @@ h1,h2,h3,h4 {
     padding-top: .45em
 }
 
-.font-load-1 .myemail {
+.font-load-1 .myemail,.mylinks {
     letter-spacing: -.03em;
     padding-top: .7em
 }
 
 .mylinks {
-    letter-spacing: -.03em;
     padding-top: .6em;
     margin-bottom: 1.1em
 }
@@ -806,16 +805,16 @@ h1,h2,h3,h4 {
 }
 
 .font-load-1 .skills,.skills {
-    font-size: .93em;
     letter-spacing: -.02em;
-    margin-top: 1.2em;
-    margin-bottom: -.42em
-}
-
-.font-load-1 .skills {
     font-size: 1em;
     margin-top: 1em;
     margin-bottom: 0
+}
+
+.skills {
+    font-size: .93em;
+    margin-top: 1.2em;
+    margin-bottom: -.42em
 }
 
 .list-meta-date {
@@ -826,7 +825,7 @@ a {
     color: rgba(14,17,21,.85)
 }
 
-a,.anchor:hover {
+.anchor:hover,a {
     background-image: linear-gradient(to right,#e21b2a 50%,#e21b2a 50%);
     background-size: 5px 2px;
     text-size-adjust: 100%;
@@ -837,21 +836,15 @@ a,.anchor:hover {
     background-position: 0 1.2em
 }
 
-
-
 .table>.list-title>a,a {
     background-position: 0 1em
 }
 
 .footnote-ref a {
-    padding-top: 0;
-    padding-left: .2em;
-    padding-right: .2em;
-    padding-bottom: .2em;
-    background-image: none
+    padding: 0 .2em .2em
 }
 
-a.footnote-return {
+.footnote-ref a,a.footnote-return {
     background-image: none
 }
 
@@ -865,7 +858,7 @@ pre {
     border-radius: 3px
 }
 
-iframe,video {
+iframe,img.myphoto,video {
     max-width: 100%
 }
 
@@ -925,7 +918,6 @@ img.centered:empty {
 
 .list {
     list-style-type: none;
-    padding: 0;
     margin-top: 1.78em;
     margin-bottom: 2em;
     margin-left: -96px
@@ -939,7 +931,7 @@ img.centered:empty {
 
 .table>.list-meta,.table>.list-title {
     letter-spacing: -.02em;
-    line-height: 1.3em;
+    line-height: 1.3em
 }
 
 .table>.list-meta {
@@ -950,7 +942,7 @@ img.centered:empty {
 
 .font-load-1 .table>.list-meta {
     font-size: 11.5px;
-    margin-top: .4em;
+    margin-top: .4em
 }
 
 .table>.list-title {
@@ -970,7 +962,7 @@ img.centered:empty {
     align-items: normal
 }
 
-.metadata>.table li,.table {
+.list,.metadata>.table li,.table {
     padding: 0
 }
 
@@ -978,7 +970,7 @@ img.centered:empty {
     font-size: .9em
 }
 
-.links>li>a,.list-meta-date,.logo,.myemail,.myemail a,.mylinks a,.myname,.myname a,.skills,.title,.title a,footer,footer a,h1,h2,h3,h4,h5,h6,.anchor {
+.anchor,.links>li>a,.list-meta-date,.logo,.myemail,.myemail a,.mylinks a,.myname,.myname a,.skills,.title,.title a,footer,footer a,h1,h2,h3,h4,h5,h6 {
     background-image: none
 }
 
@@ -1023,27 +1015,17 @@ img.centered:empty {
     margin: 0 0 -1em
 }
 
-.logo a:hover,.myemail a:hover {
+.logo a:hover,.myemail a:hover,.title a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
     background-repeat: repeat-x;
-    background-origin: border-box
+    background-origin: border-box;
+    background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%);
+    background-position: 0 1.24em;
+    background-size: 5px 2px
 }
 
 .title a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
     background-image: linear-gradient(to right,rgba(14,17,21,.9) 50%,rgba(14,17,21,.9) 50%);
-    background-position: 0 1.2em;
-    background-repeat: repeat-x;
-    background-size: 5px 2px;
-    background-origin: border-box
-}
-
-.logo a:hover,.myemail a:hover {
-    background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%);
-    background-size: 5px 2px;
-    background-position: 0 1.24em
-}
-
-.myemail a:hover {
-    background-size: 5px 2px
+    background-position: 0 1.2em
 }
 
 .mylinks a:hover {
@@ -1071,7 +1053,7 @@ footer a:hover {
     background-image: none
 }
 
-.table>.list-meta>a:hover {
+.mlt-link:hover>.mlt-title,.table>.list-meta>a:hover {
     text-decoration: underline
 }
 
@@ -1112,7 +1094,7 @@ tr:nth-child(even) {
     font-size: 1em
 }
 
-.mlt-title,.mlt-summary {
+.mlt-summary,.mlt-title {
     color: rgba(14,17,21,.6)
 }
 
@@ -1125,11 +1107,7 @@ tr:nth-child(even) {
     background-color: rgba(14,17,21,.25)
 }
 
-.mlt-header {
-    margin-bottom: .8em
-}
-
-.font-load-1 .mlt-header {
+.font-load-1 .mlt-header,.mlt-header {
     margin-bottom: .8em
 }
 
@@ -1147,16 +1125,8 @@ tr:nth-child(even) {
     letter-spacing: -.01em
 }
 
-.mlt-link:hover > .mlt-title {
-    text-decoration: underline;
-}
-
-blockquote footer,.font-load-1 blockquote footer {
-    margin-top: 1em
-}
-
 .highlight {
-    font-size: 12px;
+    font-size: 12px
 }
 
 .highlight span {
@@ -1297,26 +1267,20 @@ blockquote footer,.font-load-1 blockquote footer {
         display: none
     }
 
-    figure {
+    figure,img {
         max-width: 100%
     }
 
-    .myphoto-figure {
-    }
-
-    figure img {
-        float: initial;
+    figcaption,figure img {
+        float: initial
     }
 
     img {
-        max-width: 100%;
         min-width: 0;
-        object-fit: initial;
+        object-fit: initial
     }
 
     figcaption {
-        font-size: 1em;
-        float: initial;
         letter-spacing: .025em;
         line-height: 1.5em;
         width: 100%;
@@ -1325,7 +1289,6 @@ blockquote footer,.font-load-1 blockquote footer {
 
     .font-load-1 figcaption {
         font-size: .9em;
-        margin: 0;
         margin: .7em auto
     }
 
@@ -1365,7 +1328,7 @@ blockquote footer,.font-load-1 blockquote footer {
         font-size: 1.542em
     }
 
-    h1,p+h1,ul+h1,ol+h1,img+h1 {
+    h1,img+h1,ol+h1,p+h1,ul+h1 {
         padding-top: 1em
     }
 
@@ -1385,7 +1348,7 @@ blockquote footer,.font-load-1 blockquote footer {
         font-size: 1.091em
     }
 
-    .font-load-1 h6,h6 {
+    .font-load-1 h6,figcaption,h6 {
         font-size: 1em
     }
 
@@ -1401,11 +1364,11 @@ blockquote footer,.font-load-1 blockquote footer {
         background-position: 0 1em
     }
 
-    .metadata .published-date,.metadata .reading-time,.metadata .medium,.metadata .hn {
+    .metadata .hn,.metadata .medium,.metadata .published-date,.metadata .reading-time {
         height: 32px
     }
 
-    .font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time,.font-load-1 .metadata .medium,.font-load-1 .metadata .hn {
+    .font-load-1 .metadata .hn,.font-load-1 .metadata .medium,.font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time {
         height: 33.5px
     }
 
@@ -1703,11 +1666,11 @@ blockquote footer,.font-load-1 blockquote footer {
         margin-top: .05em
     }
 
-    .metadata .published-date,.metadata .reading-time,.metadata .medium,.metadata .hn {
+    .metadata .hn,.metadata .medium,.metadata .published-date,.metadata .reading-time {
         height: 28.5px
     }
 
-    .font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time,.font-load-1 .metadata .medium,.font-load-1 .metadata .hn {
+    .font-load-1 .metadata .hn,.font-load-1 .metadata .medium,.font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time {
         height: 30px
     }
 
@@ -1727,7 +1690,7 @@ blockquote footer,.font-load-1 blockquote footer {
         background-position: 0 1.2em
     }
 
-    .list-title a,a,.mlt-header a {
+    .list-title a,.mlt-header a,a {
         background-size: 5px 1px
     }
 
@@ -1739,11 +1702,7 @@ blockquote footer,.font-load-1 blockquote footer {
         margin-top: .1em
     }
 
-    blockquote,img {
-        margin-left: 0
-    }
-
-    .mlt-line {
+    .mlt-line,blockquote,img {
         margin-left: 0
     }
 
