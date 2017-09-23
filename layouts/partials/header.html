@@ -232,7 +232,7 @@ ol>li,ul>li {
 
 p {
     letter-spacing: -.01em;
-    line-height: 1.51em;
+    line-height: 1.5em;
     display: block;
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
@@ -292,38 +292,45 @@ ol,ul {
     margin-bottom: .6em
 }
 
-img {
-    min-width: 108%;
-    max-width: 108%;
-    margin-left: -4%
-}
-
-img.myphoto {
-    min-width: 0;
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    margin: 15vw 0 .5em
-}
-
 figure {
-    display: flex;
-    align-items: top
+    width: 950px;
+    overflow: auto
+}
+
+figure img {
+    float: left
+}
+
+img {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 figcaption {
+    float: right;
     font-size: .9em;
     letter-spacing: .025em;
     line-height: 1.5em;
-    margin-top: 1em;
-    margin-left: 6px;
-    min-width: 270px
+    margin-top: -5px;
+    width: 270px;
 }
 
 .font-load-1 figcaption {
     font-size: .8em;
-    line-height: 1.72em;
-    letter-spacing: -.02em
+    letter-spacing: -.02em;
+    line-height: 1.72em
+}
+
+img.myphoto {
+    float: none;
+    min-width: 0;
+    max-width: 100%;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin: 15vw 0 .5em
 }
 
 article header {
@@ -356,8 +363,8 @@ article header {
 
 .subtitle {
     font-size: 2.8em;
-    letter-spacing: -.065em;
-    line-height: 1.2em;
+    letter-spacing: -.063em;
+    line-height: 1.22em;
     margin-top: .18em
 }
 
@@ -1154,7 +1161,7 @@ blockquote footer,.font-load-1 blockquote footer {
 }
 
 /*@media screen and (min-width:720px) {*/
-/*@media screen and (-webkit-min-device-pixel-ratio:0) {*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
 
     .font-load-2 .subtitle,.font-load-2 .title,.font-load-2 h1,.font-load-2 h2,.font-load-2 h3,.font-load-2 h4,.font-load-2 h5,.font-load-2 h6,.font-load-2 .myname {
         font-family: "edduarte-headings-bold","edduarte-headings-regular","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
@@ -1188,7 +1195,7 @@ blockquote footer,.font-load-1 blockquote footer {
             letter-spacing: -.032em
         }
     }
-/*}*/
+}
 
 @media screen and (max-width:870px),print {
 
@@ -1288,24 +1295,30 @@ blockquote footer,.font-load-1 blockquote footer {
         display: none
     }
 
-    img {
-        min-width: 0
-    }
-
     figure {
-        display: initial;
-        align-items: center
+        max-width: 100%
     }
 
     .myphoto-figure {
-        display: flex;
-        align-items: center
+    }
+
+    figure img {
+        float: initial;
     }
 
     figcaption {
-        margin-left: 2px;
-        margin-right: 2px;
-        margin-bottom: 0
+        font-size: 1em;
+        float: initial;
+        letter-spacing: .025em;
+        line-height: 1.5em;
+        width: 100%;
+        margin: .5em auto
+    }
+
+    .font-load-1 figcaption {
+        font-size: .9em;
+        margin: 0;
+        margin: .7em auto
     }
 
     .title {
