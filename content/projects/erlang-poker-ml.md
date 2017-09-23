@@ -2,73 +2,82 @@
 title: "Developing a knowledge-based system for Texas Hold'em outcome
 prediction in Erlang"
 description: "Implementation of a decision-tree classifier and a disk
-persistence module to evaluate win-lose probabilities over a Poker Texas
-Hold'em game."
+persistence module to evaluate win-lose probabilities over a Poker
+Texas Hold'em game."
 date: "2015-03-31 17:25:00+01:00"
-medium: "https://medium.com/@edduarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
+medium: "https://medium.com/@edduarte/developing-a-knowledge-
+management-system-for-texas-holdem-outcome-prediction-in-erlang-
+cf3440ab806b"
 type: project
 markup: mmark
 ---
 
-For a University class project we were asked to implement a decision-tree
-classifier and to use a rule engine in order to develop a recommender system
-for hands and outcomes in Poker Texas Hold'em matches. An additional challenge
-to this was to make it in a functional language like Erlang, where no variable
-state is persisted in memory for long periods of time. Instead, the objective
-was to use a rule engine more-or-less like a disk database. All of the
-historical data collected over time is sent between functions in a stateless
-manner and persisted to disk using the rule engine.
+For a University class project we were asked to implement a decision-
+tree classifier and to use a rule engine in order to develop a
+recommender system for hands and outcomes in Poker Texas Hold'em
+matches. An additional challenge to this was to make it in a
+functional language like Erlang, where no variable state is persisted
+in memory for long periods of time. Instead, the objective was to use
+a rule engine more-or-less like a disk database. All of the
+historical data collected over time is sent between functions in a
+stateless manner and persisted to disk using the rule engine.
 
-With this, I developed a [Erlang application](https://github.com/edduarte
-/erlang-poker-ml) with a CLI interface that collects game data and sends win-
-lose percentages on each round. It works by prompting the user to fill the card
-in his/her hand and table for each round, and whenever the user won or lost
-each match. The probabilities of occurrence for each card per round, along with
-the probability of winning or losing the match with the current cards, are
-recalculated at the end of every match and organized into a Decision tree. Each
-round the probability of getting a good hand and win the match is queried from
-the Decision tree and printed to the user, suggesting him to either raise, call
-or fold.
+With this, I developed a [Erlang
+application](https://github.com/edduarte /erlang-poker-ml) with a CLI
+interface that collects game data and sends win- lose percentages on
+each round. It works by prompting the user to fill the card in
+his/her hand and table for each round, and whenever the user won or
+lost each match. The probabilities of occurrence for each card per
+round, along with the probability of winning or losing the match with
+the current cards, are recalculated at the end of every match and
+organized into a Decision tree. Each round the probability of getting
+a good hand and win the match is queried from the Decision tree and
+printed to the user, suggesting him to either raise, call or fold.
 
-The application is fully open-source and only uses a single file ('poker.erl').
-A trained model containing an history of matches and ranked hands is also
-provided ('storage' file), so you can start testing the application
-immediately.
+The application is fully open-source and only uses a single file
+('poker.erl'). A trained model containing an history of matches and
+ranked hands is also provided ('storage' file), so you can start
+testing the application immediately.
 
 This application is composed of three modules:
 
-- a main module, which uses [Eresye](http://sourceforge.net/projects/eresye/)
-  to store Texas Hold'em rules and hand rankings;
-- a history module, which stores the number of occurrences and the ranking of
-  hands;
-- a tree module, that implements the decision tree and the probability
-  calculation methods.
+- a main module, which uses
+  [Eresye](http://sourceforge.net/projects/eresye/) to store Texas
+  Hold'em rules and hand rankings;
+- a history module, which stores the number of occurrences and the
+  ranking of hands;
+- a tree module, that implements the decision tree and the
+  probability calculation methods.
 
 # {{< anchor link="#preliminaries" >}} Preliminaries {#preliminaries}
 
-A match is considered a result of seven cards that occurred throughout four
-rounds. The four rounds are numbered from 0 to 3:
+A match is considered a result of seven cards that occurred
+throughout four rounds. The four rounds are numbered from 0 to 3:
 
 - Round 0: when the user is given 2 cards
-- Round 1: when the first, second and third cards on the table are shown
+- Round 1: when the first, second and third cards on the table are
+  shown
 - Round 2: when the fourth card on the table is shown
 - Round 3: when the fifth card on the table is shown
 
-We consider that is possible to raise, call or fold between the four rounds,
-hence, three phases of betting. In this implementation, draws / split results
-are not considered, so as to not influence the collected probabilities of
-winning or losing by reducing both.
+We consider that is only possible to either raise, call or fold
+between the four rounds, hence, three phases of betting. In this
+implementation, draws / split results are not considered, so as to
+not influence the collected probabilities of winning or losing by
+reducing the sample data of both.
 
-A ranked hand is a specific set of cards that have an associated rank, namely:
-1. Royal Flush; 2. Straight Flush; 3. Four Of A Kind; 4. Full House; 5. Flush;
-6. Straight; 7. Three Of A Kind; 8. Two Pair; 9. Pair; 10. High Card.
+A **ranked hand** is a specific set of cards that have an associated
+weight of importance. These hands, in order: 1. Royal Flush; 2.
+Straight Flush; 3. Four Of A Kind; 4. Full House; 5. Flush; 6.
+Straight; 7. Three Of A Kind; 8. Two Pair; 9. Pair; 10. High Card.
 
 
 
 # {{< anchor link="#main" >}} Main module {#main}
 
-The main module uses the rule-based engine Eresye to store variables per match
-and Texas Hold'em hand rankings. For each match, the user is prompted to input:
+The main module uses the rule-based engine Eresye to store variables
+per match and Texas Hold'em hand rankings. For each match, the user
+is prompted to input:
 
 - the 7 cards that are visible to the user;
 - the current pot value;
@@ -76,34 +85,36 @@ and Texas Hold'em hand rankings. For each match, the user is prompted to input:
 
 Some additional inputs can be used at any time:
 
-- "reset": discards the current match inputs and starts again from round 0;
-- "close": saves the current history data into a local file 'storage' and
-  closes the application.
+- "reset": discards the current match inputs and starts again from
+  round 0;
+- "close": saves the current history data into a local file 'storage'
+  and closes the application.
 
-The current match data is only committed to history at the end of the match, so
-a "reset" will discard the current match.
+The current match data is only committed to history at the end of the
+match, so a "reset" will discard the current match.
 
-When prompting for a card, two inputs are required: the suit and the value.
-Inputted cards are then structured as {card, ID, Suit, Value} and compared with
-ranked hands in Eresye. The ID value is randomly attributed using the method
-'random:uniform()', and is used to ensure that the card will not be compared
-with itself during Eresye's operations.
+When prompting for a card, two inputs are required: the suit and the
+value. Inputted cards are then structured as {card, ID, Suit, Value}
+and compared with ranked hands in Eresye. The ID value is randomly
+attributed using the method 'random:uniform()', and is used to ensure
+that the card will not be compared with itself during Eresye's
+operations.
 
 
 
 # {{< anchor link="#decision-tree" >}} Decision tree module {#decision-tree}
 
-The decision tree module implements a Decision tree where each node corresponds
-to a round, and each round has 3 branches pointing to 3 child nodes. Each
-branch and node stores, respectively:
+The decision tree module implements a Decision tree where each node
+corresponds to a round, and each round has 3 branches pointing to 3
+child nodes. Each branch and node stores, respectively:
 
 - branch1 - Expected profit on Raise; node1 - Raise value
 - branch2 - Expected profit on Fold; node2 - Fold value
 - branch3 - Expected profit on Call; node3 - Call value
 
-Because the probability of winning (PWin) varies according to the user's hand
-and the current round, this decision tree is built at the end of each round,
-and the expected profits are calculated as such:
+Because the probability of winning (PWin) varies according to the
+user's hand and the current round, this decision tree is built at the
+end of each round, and the expected profits are calculated as such:
 
 `$$ExpectedProfitRaise = \left(Pot + RaiseValue\right) * PWin$$`
 
@@ -111,74 +122,81 @@ and the expected profits are calculated as such:
 
 `$$ExpectedProfitCall = Pot * PWin$$`
 
-BetsDoneByPlayer is the total value of bets done by the user to that point, or
-in other words, the number of chips the user placed in the pot.
+BetsDoneByPlayer is the total value of bets done by the user to that
+point, or in other words, the number of chips the user placed in the
+pot.
 
-PWin can be calculated using the History module and its Bayesian network (see
-below), where we can obtain the number of wins attained with the
-CurrentHand, but also the possible hands that can be obtained in future rounds
-knowing the CurrentHand. So:
+PWin can be calculated using the History module and its Bayesian
+network (see below), where we can obtain the number of wins attained
+with the CurrentHand, but also the possible hands that can be
+obtained in future rounds knowing the CurrentHand. So:
 
-`$$P(Round(N), CurrentHand) = \frac{winCountCurrentHand}{totalMatchesCount}$$`
+`$$P(Round(N), CurrentHand) =
+\frac{winCountCurrentHand}{totalMatchesCount}$$`
 
-Assuming that the variable *T* represents the **total number of matches**
-recorded in history, the variable *W* represents the **win count** for any of
-the possible hands, and the variable *NR* represents a possible hand in the
-**next round**, then the above expression can be resolved into the following:
+Assuming that the variable *T* represents the **total number of
+matches** recorded in history, the variable *W* represents the **win
+count** for any of the possible hands, and the variable *NR*
+represents a possible hand in the **next round**, then the above
+expression can be resolved into the following:
 
-`$$ = \sum \left ( \frac{W(x)}{T} + \left
-( NR | CurrentHand \right ) \right )$$`
+`$$ = \sum \left ( \frac{W(x)}{T} + \left ( NR | CurrentHand \right )
+\right )$$`
 
-Once all of the expected profits are calculated, the action that the user
-should take corresponds to the one that has the higher expected profit.
+Once all of the expected profits are calculated, the action that the
+user should take corresponds to the one that has the higher expected
+profit.
 
 
 
 # {{< anchor link="#history" >}} History module {#history}
 
-The history module is a data history, implemented using an alternative Eresye
-engine (different from the one used in the main module). Essentially, using
-Eresye allows the usage of insertion and query within a single variable that
-does not need to be passed along functions, something that would otherwise be
-impossible to do in native Erlang. In addition, the query implementation of
-Eresye enables the retrieval of tuples without knowing all of its data, using
-the wildcard '_' (underscore).
+The history module is a data history, implemented using an
+alternative Eresye engine (different from the one used in the main
+module). Essentially, using Eresye allows the usage of insertion and
+query within a single variable that does not need to be passed along
+functions, something that would otherwise be impossible to do in
+native Erlang. In addition, the query implementation of Eresye
+enables the retrieval of tuples without knowing all of its data,
+using the wildcard '_' (underscore).
 
 The data in storage is structured as:
 
 - ``{round_no, current_ranked_hand, previous_round_ranked_hand,
-  occurrence_count}``: the number of times the user had a ranked hand Y
-  knowing that he/she had a ranked hand X on a previous hand (where Rank(Y) >=
-  Rank(X));
+  occurrence_count}``: the number of times the user had a ranked hand
+  Y knowing that he/she had a ranked hand X on a previous hand (where
+  Rank(Y) >= Rank(X));
 
-- ``{won/lost, current_ranked_hand, occurrence_count}``: the
-  number of times the user won or lost with a specific ranked hand;
+- ``{won/lost, current_ranked_hand, occurrence_count}``: the number
+  of times the user won or lost with a specific ranked hand;
 
-- ``{total, total_matches_count}``: the total number of matches that were
-  played with the application.
+- ``{total, total_matches_count}``: the total number of matches that
+  were played with the application.
 
-Note that the above data-types are identified by the first constant, so in
-practice we will have 7 data-types (4 for each of the four rounds, 2 for won or
-lost hands, and 1 for total matches count).
+Note that the above data-types are identified by the first constant,
+so in practice we will have 7 data-types (4 for each of the four
+rounds, 2 for won or lost hands, and 1 for total matches count).
 
-By storing the history on the local file 'storage', we have a continually
-trained model, persistent between different application sessions. The
-prediction of outcomes is based on conditional probabilities per round. For
-example, for the following match...
+By storing the history on the local file 'storage', we have a
+continually trained model, persistent between different application
+sessions. The prediction of outcomes is based on conditional
+probabilities per round. For example, for the following match...
 
 - Round 0 = High Card
 - Round 1 = Pair
 - Round 2 = Pair
 - Round 3 = Two Pair
 
-... the conditional probability for each round is calculated as follows (in
-pseudo-code, where the asterisk is interpreted as a wildcard):
+... the conditional probability for each round is calculated as
+follows (in pseudo-code, where the asterisk is interpreted as a
+wildcard):
 
 `$$Total = query(total, *)$$`
 
 - Round 0:
 
-`$$P(Pair | HighCard) = \frac{query(round1, pair, highCard, *)}{Total}$$`
+`$$P(Pair | HighCard) = \frac{query(round1, pair, highCard,
+*)}{Total}$$`
 
 - Round 1:
 
@@ -186,7 +204,8 @@ pseudo-code, where the asterisk is interpreted as a wildcard):
 
 - Round 2:
 
-`$$P(TwoPair | Pair) = \frac{query(round3, twoPair, pair, *)}{Total}$$`
+`$$P(TwoPair | Pair) = \frac{query(round3, twoPair, pair,
+*)}{Total}$$`
 
 
 <script async src="/js/math-code.js"></script>
