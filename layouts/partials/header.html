@@ -303,6 +303,9 @@ figure img {
 
 img {
     max-width: 650px;
+    min-width: 650px;
+    object-fit: scale-down;
+    object-position: 50% 0;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -1306,6 +1309,12 @@ blockquote footer,.font-load-1 blockquote footer {
         float: initial;
     }
 
+    img {
+        max-width: 100%;
+        min-width: 0;
+        object-fit: none
+    }
+
     figcaption {
         font-size: 1em;
         float: initial;
@@ -1535,10 +1544,6 @@ blockquote footer,.font-load-1 blockquote footer {
 
     .font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6 {
         font-weight: 400
-    }
-
-    img {
-        max-width: 100%
     }
 
     ol,p,ul {
