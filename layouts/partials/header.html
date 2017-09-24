@@ -835,16 +835,16 @@ a {
     hyphens: manual
 }
 
-.font-load-1 .table>.list-title>a {
+.list-title a,a {
+    background-position: 0 1em
+}
+
+.font-load-1 .list-title a {
     background-position: 0 1.12em
 }
 
 .font-load-1 a {
     background-position: 0 1.18em
-}
-
-.table>.list-title>a,a {
-    background-position: 0 1em
 }
 
 .footnote-ref a {
@@ -937,8 +937,15 @@ img.centered:empty {
 }
 
 .table>.list-meta,.table>.list-title {
-    letter-spacing: -.02em;
+    letter-spacing: -.02em
+}
+
+.table>.list-meta {
     line-height: 1.3em
+}
+
+.table>.list-title {
+    line-height: 1.29em
 }
 
 .table>.list-meta {
@@ -949,19 +956,21 @@ img.centered:empty {
 
 .font-load-1 .table>.list-meta {
     font-size: 11.5px;
-    margin-top: .4em
+    margin-top: .1em
 }
 
 .table>.list-title {
-    font-size: .81em
+    font-size: .8em;
+    margin-top: 0;
+    margin-bottom: 0
 }
 
 .font-load-1 .table>.list-title {
-    font-size: .77em;
-    letter-spacing: -.03em;
-    line-height: 1.55em;
+    font-size: .76em;
+    letter-spacing: -.02em;
+    line-height: 1.29em;
     margin-top: 0;
-    margin-bottom: .54em
+    margin-bottom: .94em
 }
 
 .metadata>.table {
@@ -1531,12 +1540,15 @@ tr:nth-child(even) {
         line-height: 1.75em
     }
 
+    .summary-container {
+        max-width: 300px;
+        margin-top: .6em
+    }
+
     summary {
         font-size: 15.8px;
         line-height: 1.76em;
-        letter-spacing: -.02em;
-        max-width: 300px;
-        margin-top: .6em
+        letter-spacing: -.02em
     }
 
     .font-load-1 summary {
@@ -1553,13 +1565,13 @@ tr:nth-child(even) {
     .table>.list-title {
         font-size: .92em;
         letter-spacing: 0;
-        line-height: 1.2em;
+        line-height: .98em;
         margin-top: .1em;
         margin-bottom: .14em
     }
 
     .font-load-1 .table>.list-title {
-        font-size: .9em;
+        font-size: .88em;
         letter-spacing: -.02em;
         line-height: 1.34em;
         margin-top: .1em;
