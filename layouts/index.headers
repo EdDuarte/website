@@ -5,6 +5,8 @@
   Referrer-Policy: origin-when-cross-origin
   Cache-Control: private,max-age=0
   Link: </css/print.css>; rel=preload; as=style
+  Link: </fonts/volkhov-v8-latin-regular.woff2>; rel=preload; as=font
+  Link: </fonts/heebo-v2-latin-regular.woff2>; rel=preload; as=font
 
 /*.jpg
   Cache-Control: max-age=31536000, public
