@@ -51,8 +51,8 @@ optimized solutions.
 Throughout the few years of professional experience that I've had, I
 have done research and implementation of scalable software ranging
 all ends of the development stack, from web & mobile frontend coding,
-to UI/UX design and prototyping, to middleware implementation (fully-
-fledged platforms or brokers) to RESTful services deployment.
+to UI/UX design and prototyping, to middleware implementation
+(fully-fledged platforms or brokers) to RESTful services deployment.
 
 ## Work with me
 
