@@ -36,12 +36,17 @@
 
 <main>
 
+{{ if .Params.prologue }}
+<p class="prologue">{{ .Params.prologue }}</p>
+<div class="line"></div>
+{{ end }}
+
 <section class="content">
 {{ .Content }}
 </section>
 
+<div class="line"></div>
 <section class="mlt">
-<div class="mlt-line"></div>
 {{if .NextInSection}}
 <h3 class="mlt-header">Next on <a href="/{{.Section}}/">{{.Section}}</a></h3>
 <a class="mlt-link" href="{{.NextInSection.Permalink}}">
