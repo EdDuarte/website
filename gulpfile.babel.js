@@ -5,8 +5,8 @@ import shell from 'gulp-shell'
 
 gulp.task('hugo-build', shell.task(['hugo']))
 
-gulp.task('minify-html', () => {
-  return gulp.src('public/**/*.html')
+gulp.task('minify', () => {
+  return gulp.src(['public/**/*.html','public/**/*.css','public/**/*.js'])
     .pipe(htmlmin({
       collapseWhitespace: true,
       minifyCSS: true,
@@ -18,5 +18,5 @@ gulp.task('minify-html', () => {
 })
 
 gulp.task('build', ['hugo-build'], (callback) => {
-  runSequence('minify-html', callback)
+  runSequence('minify', callback)
 })
