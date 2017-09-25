@@ -1408,13 +1408,17 @@ img.centered:empty {
     display: none
 }
 </style>
-<link rel="stylesheet" href="/css/defer.css">
+<link rel="stylesheet" href="/css/defer.css" media="not print">
+<link rel="stylesheet" href="/css/print.css" media="only print">
 <div class="font-load-1 font-load-2">
 </noscript>
 
 <script src="https://www.google-analytics.com/analytics.js" async></script>
 <script src="/js/defer.js" async></script>
 <script type="text/javascript">
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-103779128-1', 'auto');
+ga('send', 'pageview');
 
 (function() {
 

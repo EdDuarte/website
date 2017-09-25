@@ -73,8 +73,3 @@ var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 webkitRequestAnimationFrame || msRequestAnimationFrame;
 if (raf) raf(function() { window.setTimeout(init, 0); });
 else window.addEventListener('load', init);
-
-
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-103779128-1', 'auto');
-ga('send', 'pageview');
