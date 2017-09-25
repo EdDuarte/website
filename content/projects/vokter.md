@@ -21,12 +21,13 @@ complex open-source library, now known as Vokter (Norwegian for
 [Vokter](https://github.com/vokter/vokter) is a high-performance,
 scalable library that combines [Locality-Sensitive Hashing for
 K-Shingles](https://github.com/edduarte/near-neighbor-search), [a
-fork of DiffMatchPatch](https://github.com/edduarte/indexed-diff-
-match-patch), [Bloom
-filters](https://github.com/google/guava/wiki/HashingEx
-plained#bloomfilter) and [Quartz jobs](http://www.quartz-
-scheduler.org) to detect changes in web documents, triggering
-notifications when specified keywords were either added or removed.
+fork of
+DiffMatchPatch](https://github.com/edduarte/indexed-diff-match-patch),
+[Bloom
+filters](https://github.com/google/guava/wiki/HashingExplained#bloomfilter)
+and [Quartz jobs](http://www.quartz-scheduler.org) to detect changes
+in web documents, triggering notifications when specified keywords
+were either added or removed.
 
 At a basic level, Vokter fetches web documents on a periodic basis
 and performs **detection** (comparison of occurrences between two
@@ -40,7 +41,7 @@ changes in common words with no important significance, and
 lexical variants. Appropriate stopword filtering and stemming
 algorithms are picked based on the inferred language of the document,
 using a [N-grams Naïve Bayesian
-classifier](https://github.com/optimaize /language-detector).
+classifier](https://github.com/optimaize/language-detector).
 
 # {{< anchor link="#jobs" >}} Job Management {#jobs}
 
