@@ -58,46 +58,36 @@
     font-family:'edduarte-content-regular';
     font-style:normal;
     font-weight:400;
-    src: url('https://www.edduarte.com/fonts/volkhov-v8-latin-regular.eot');
+    src: url('../fonts/volkhov-v8-latin-regular.eot');
     src: local('Volkhov Regular'), local('Volkhov-Regular'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-regular.eot?#iefix') format('embedded-opentype'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-regular.woff2') format('woff2'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-regular.woff') format('woff'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-regular.ttf') format('truetype'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-regular.svg#Volkhov') format('svg');
+    url('../fonts/volkhov-v8-latin-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/volkhov-v8-latin-regular.woff2') format('woff2'),
+    url('../fonts/volkhov-v8-latin-regular.woff') format('woff'),
+    url('../fonts/volkhov-v8-latin-regular.ttf') format('truetype'),
+    url('../fonts/volkhov-v8-latin-regular.svg#Volkhov') format('svg');
 }
 
 @font-face {
     font-family:'edduarte-headings-regular';
     font-style:normal;
     font-weight:400;
-    src: url('https://www.edduarte.com/fonts/heebo-v2-latin-regular.eot');
+    src: url('../fonts/heebo-v2-latin-regular.eot');
     src: local('Heebo'), local('Heebo-Regular'),
-    url('https://www.edduarte.com/fonts/heebo-v2-latin-regular.eot?#iefix') format('embedded-opentype'),
-    url('https://www.edduarte.com/fonts/heebo-v2-latin-regular.woff2') format('woff2'),
-    url('https://www.edduarte.com/fonts/heebo-v2-latin-regular.woff') format('woff'),
-    url('https://www.edduarte.com/fonts/heebo-v2-latin-regular.ttf') format('truetype'),
-    url('https://www.edduarte.com/fonts/heebo-v2-latin-regular.svg#Heebo') format('svg');
+    url('../fonts/heebo-v2-latin-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/heebo-v2-latin-regular.woff2') format('woff2'),
+    url('../fonts/heebo-v2-latin-regular.woff') format('woff'),
+    url('../fonts/heebo-v2-latin-regular.ttf') format('truetype'),
+    url('../fonts/heebo-v2-latin-regular.svg#Heebo') format('svg');
 }
 
 /* ------------- */
 
 html {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -moz-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
     font-size: 20px;
     color: rgba(14,17,21,.8)
 }
 
 body {
-    font-variant-ligatures: common-ligatures;
-    font-feature-settings: "liga","clig";
-    font-kerning: normal;
-    text-align: left;
     max-width: 950px;
     margin: auto;
     padding: 0 1em
@@ -111,20 +101,20 @@ body {
     white-space: nowrap;
     clip: rect(1px,1px,1px,1px);
     -webkit-clip-path: polygon(0 0,0 0,0 0,0 0);
-    clip-path: polygon(0 0,0 0,0 0,0 0);
+    clip-path: polygon(0 0,0 0,0 0,0 0)
 }
 
 .table>.list-meta,pre {
     font-family: "Monaco","Consolas",monospace
 }
 
-summary,.skills,.logo,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,.myname,.font-load-1 .links,.links {
+summary,.logo,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,.myname,.font-load-1 .links,.links {
     font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
     font-style: normal;
     font-weight: 400
 }
 
-.font-load-1 .logo,.font-load-1 .title,.font-load-1 .subtitle,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 .myname,.font-load-1 summary,.font-load .skills {
+.font-load-1 .logo,.font-load-1 .title,.font-load-1 .subtitle,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 .myname,.font-load-1 summary {
     font-family: "edduarte-headings-regular","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
     font-style: normal;
     font-weight: 400
@@ -180,11 +170,6 @@ em,blockquote p,dfn,.font-load-1 em,.font-load-1 blockquote p,.font-load-1 dfn,.
     }
 }
 
-.article-table>.col1,.article-table>.col2,.article-table>.col3 {
-    margin: 0;
-    padding: 0
-}
-
 .article-table {
     display: flex;
     flex-flow: row;
@@ -211,8 +196,6 @@ aside {
 }
 
 ol,p,summary,ul {
-    --x-height-multiplier: 0.35;
-    --baseline-multiplier: 0.179;
     font-size: 23.5px
 }
 
@@ -233,39 +216,26 @@ ol>li,ul>li {
     margin-bottom: .738em
 }
 
-figcaption,p {
-    line-height: 1.5em
-}
-
-img,p {
-    display: block
-}
-
 ol,p,ul {
     letter-spacing: -.01em
 }
 
+figcaption,p {
+    line-height: 1.5em
+}
+
 p {
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0;
-    -webkit-margin-end: 0;
-    word-break: break-word;
-    word-wrap: break-word;
-    margin-bottom: 0;
-    hanging-punctuation: first;
-    margin-top: .55em
+    margin-top: .55em;
+    margin-bottom: 0
 }
 
 .font-load-1 p {
+    font-size: 21px;
     margin-top: .6em;
-    margin-bottom: 0;
-    font-size: 21px
+    margin-bottom: 0
 }
 
 .font-load-1 ol,.font-load-1 p,.font-load-1 summary,.font-load-1 ul {
-    --x-height-multiplier: 0.35;
-    --baseline-multiplier: 0.179;
     line-height: 1.68em
 }
 
@@ -312,40 +282,24 @@ ol,ul {
     margin-bottom: .6em
 }
 
-figure {
-    width: 950px;
-    overflow: auto
-}
-
-figure img {
-    float: left
-}
-
 img {
-    max-width: 650px;
-    min-width: 650px;
-    object-fit: scale-down;
-    object-position: 50% 0;
-    margin-left: auto;
-    margin-right: auto
+    margin: 0 auto
 }
 
 figcaption {
-    float: right;
-    font-size: .9em;
-    letter-spacing: .025em;
-    margin-top: -5px;
-    width: 270px
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: .5em auto
 }
 
 .font-load-1 figcaption {
-    font-size: .8em;
-    letter-spacing: -.02em;
-    line-height: 1.72em
+    font-size: .88em;
+    letter-spacing: -.03em;
+    line-height: 1.71em;
+    margin: .7em auto
 }
 
 img.myphoto {
-    float: none;
     min-width: 0;
     width: 100px;
     height: 100px;
@@ -364,7 +318,7 @@ article header {
 }
 
 .font-load-1 article header {
-    margin-top: .188em
+    margin-top: .2em
 }
 
 .title {
@@ -474,81 +428,8 @@ article header {
     padding-left: 5px
 }
 
-.font-load-1 .toc,.font-load-1 blockquote footer,.toc,blockquote footer {
+.font-load-1 blockquote footer, blockquote footer {
     margin-top: 1em
-}
-
-.toc ul {
-    padding: 0;
-    counter-reset: item;
-    position: relative
-}
-
-.toc li {
-    font-size: 16.4px;
-    letter-spacing: -.015em;
-    line-height: 1.3em;
-    margin: .5em 0 0
-}
-
-.font-load-1 .toc li {
-    font-size: 14.2px;
-    letter-spacing: -.03em;
-    line-height: 1.4em;
-    margin-top: .7em
-}
-
-.toc li>ul {
-    margin-left: -12px
-}
-
-.font-load-1 .toc li>ul {
-    margin-left: -10px
-}
-
-.toc ul>li:before {
-    color: rgba(14,17,21,.25);
-    content: counters(item,".") ". ";
-    display: table-cell
-}
-
-.font-load-1 .toc ul>li:before,.toc ul>li:before {
-    padding-right: .3rem
-}
-
-.toc ul li li:before {
-    content: counters(item,".") " "
-}
-
-.toc li {
-    counter-increment: item;
-    display: table;
-
-    .toc li .toc-page:before {
-        content: '';
-        display: block;
-        position: absolute
-    }
-
-    .toc li > a {
-        display: inline-block
-    }
-}
-
-.authors a {
-    background-position: 0 1em
-}
-
-.font-load-1 .metadata a,.font-load-1 figcaption a {
-    background-position: 0 1.18em
-}
-
-.font-load-1 .authors a {
-    background-position: 0 1.15em
-}
-
-.authors a,.toc a:hover,aside a:hover,footer a:hover {
-    background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%)
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -694,13 +575,6 @@ kbd,samp {
     font-size: .875em
 }
 
-kbd,pre code,samp {
-    font-weight: 400;
-    line-height: 1.5em;
-    padding-left: 0;
-    padding-right: 0
-}
-
 .links {
     font-style: normal;
     margin: 0;
@@ -760,24 +634,18 @@ footer>ul>li {
     padding-right: 0
 }
 
-.links>li>a,.links>li>a:hover,.myemail,.myemail a,.mylinks a,.myname,.myname a,.table>.list-meta a,.title,.title a,b,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,pre code,strong {
-    text-decoration: none
+.myname,.myname a,.title,.title a,b,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,strong {
+    color: rgba(14,17,21,.85);
+    text-decoration-color: rgba(14,17,21,.85)
 }
 
-.myname,.myname a,.table>.list-meta a,.title,.title a,b,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,pre code,strong {
+.table>.list-meta a {
     color: rgba(14,17,21,.85)
 }
 
 .authors,.authors a,.logo,.logo a,.myemail,.myemail a,.mylinks a,aside,aside a,figcaption,footer,footer a {
-    color: rgba(14,17,21,.5)
-}
-
-.metadata a,figcaption a {
-    background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%)
-}
-
-.logo a,.table>.list-meta>a,a,footer a {
-    text-decoration: none
+    color: rgba(14,17,21,.5);
+    text-decoration-color: rgba(14,17,21,.25)
 }
 
 h1,h2,h3,h4 {
@@ -796,16 +664,6 @@ h1,h2,h3,h4 {
     padding-top: .36em
 }
 
-.myemail {
-    letter-spacing: -.06em;
-    padding-top: .45em
-}
-
-.font-load-1 .myemail,.mylinks {
-    letter-spacing: -.03em;
-    padding-top: .7em
-}
-
 .mylinks {
     padding-top: .6em;
     margin-bottom: 1.1em
@@ -813,20 +671,8 @@ h1,h2,h3,h4 {
 
 .font-load-1 .mylinks {
     letter-spacing: .03em;
+    padding-top: .7em;
     margin-bottom: 1.1em
-}
-
-.font-load-1 .skills,.skills {
-    letter-spacing: -.02em;
-    font-size: 1em;
-    margin-top: 1em;
-    margin-bottom: 0
-}
-
-.skills {
-    font-size: .93em;
-    margin-top: 1.2em;
-    margin-bottom: -.42em
 }
 
 .list-meta-date {
@@ -834,34 +680,12 @@ h1,h2,h3,h4 {
 }
 
 a {
-    color: rgba(14,17,21,.8)
-}
-
-.anchor:hover,a {
-    background-image: linear-gradient(to right,#e21b2a 50%,#e21b2a 50%);
-    background-size: 5px 2px;
-    text-size-adjust: 100%;
-    hyphens: manual
-}
-
-.list-title a,a {
-    background-position: 0 1em
-}
-
-.font-load-1 .list-title a {
-    background-position: 0 1.12em
-}
-
-.font-load-1 a {
-    background-position: 0 1.18em
+    color: rgba(14,17,21,.8);
+    text-decoration-color: #e21b2a
 }
 
 .footnote-ref a {
     padding: 0 .2em .2em
-}
-
-.footnote-ref a,a.footnote-return {
-    background-image: none
 }
 
 pre {
@@ -953,10 +777,6 @@ img.centered:empty {
     line-height: 1.3em
 }
 
-.table>.list-title {
-    line-height: 1.29em
-}
-
 .table>.list-meta {
     font-size: 11.5px;
     margin-top: .3em;
@@ -970,6 +790,7 @@ img.centered:empty {
 
 .table>.list-title {
     font-size: .8em;
+    line-height: 1.29em;
     margin-top: 0;
     margin-bottom: 0
 }
@@ -991,12 +812,78 @@ img.centered:empty {
     padding: 0
 }
 
-.mjx-math {
-    font-size: .9em
+.metadata li,.metadata p {
+    letter-spacing: -.02em
 }
 
-.anchor,.links>li>a,.list-meta-date,.logo,.myemail,.myemail a,.mylinks a,.myname,.myname a,.skills,.title,.title a,footer,footer a,h1,h2,h3,h4,h5,h6 {
-    background-image: none
+.font-load-1 .metadata li,.font-load-1 .metadata p {
+    letter-spacing: -.05em
+}
+
+.font-load-1 footer>ul>li,footer>ul>li {
+    line-height: 3em;
+    margin: 0 0 -1em
+}
+
+footer {
+    margin-top: .5em
+}
+
+.font-load-1 footer {
+    margin-top: 1.7em
+}
+
+.mlt-link:hover>.mlt-title,.table>.list-meta>a:hover {
+    text-decoration: underline
+}
+
+table {
+    border-top: 1px solid rgba(14,17,21,.5);
+    border-bottom: 1px solid rgba(14,17,21,.5);
+    margin: auto
+}
+
+.mlt-summary,.mlt-title {
+    color: rgba(14,17,21,.6)
+}
+
+.line {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-left: -15px;
+    width: 60px;
+    height: 2px;
+    background-color: rgba(14,17,21,.25)
+}
+
+.font-load-1 .mlt-header,.mlt-header {
+    margin-bottom: .8em
+}
+
+.mlt-summary {
+    font-size: 17px;
+    letter-spacing: .01em
+}
+
+.mlt a,.links a,.table>.list-meta a,.anchor {
+    text-decoration: none;
+}
+
+.font-load-1 .mlt-summary {
+    font-size: 15px;
+    letter-spacing: -.01em
+}
+
+.highlight {
+    font-size: 12px
+}
+
+.highlight span {
+    line-height: 1.7em
+}
+
+figure,img {
+    max-width: 100%
 }
 
 .anchor,.font-load-1 .anchor {
@@ -1025,141 +912,6 @@ img.centered:empty {
 
 .font-load-1 h6 .anchor,h6 .anchor {
     margin-right: 23px
-}
-
-.metadata li,.metadata p {
-    letter-spacing: -.02em
-}
-
-.font-load-1 .metadata li,.font-load-1 .metadata p {
-    letter-spacing: -.05em
-}
-
-.font-load-1 footer>ul>li,footer>ul>li {
-    line-height: 3em;
-    margin: 0 0 -1em
-}
-
-.logo a:hover,.myemail a:hover,.title a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
-    background-repeat: repeat-x;
-    background-origin: border-box;
-    background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%);
-    background-position: 0 1.24em;
-    background-size: 5px 2px
-}
-
-.title a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,.mlt-header a:hover {
-    background-image: linear-gradient(to right,rgba(14,17,21,.85) 50%,rgba(14,17,21,.85) 50%);
-    background-position: 0 1.2em
-}
-
-.mylinks a:hover {
-    background-image: none
-}
-
-.home-link a:hover,a,footer a:hover {
-    background-repeat: repeat-x;
-    background-origin: border-box
-}
-
-footer {
-    margin-top: .5em
-}
-
-.font-load-1 footer {
-    margin-top: 1.7em
-}
-
-footer a:hover {
-    background-position: 0 1.2em
-}
-
-.logo a,.table>.list-meta>a,aside a {
-    background-image: none
-}
-
-.mlt-link:hover>.mlt-title,.table>.list-meta>a:hover {
-    text-decoration: underline
-}
-
-hr {
-    color: transparent;
-    border-style: solid
-}
-
-pre code {
-    background: 0 0;
-    font-size: 1em;
-    color: #fff
-}
-
-table {
-    border-top: 1px solid rgba(14,17,21,.5);
-    border-bottom: 1px solid rgba(14,17,21,.5);
-    margin: auto
-}
-
-table thead th {
-    border-bottom: 1px solid rgba(14,17,21,.8)
-}
-
-td,th {
-    padding: .4em
-}
-
-tr:nth-child(even) {
-    background: rgba(14,17,21,.8)
-}
-
-.table>div>a {
-    text-decoration: none
-}
-
-.font-load-1 pre code {
-    font-size: 1em
-}
-
-.mlt-summary,.mlt-title {
-    color: rgba(14,17,21,.6)
-}
-
-.line {
-    margin-top: 3em;
-    margin-bottom: 3em;
-    margin-left: -15px;
-    width: 60px;
-    height: 2px;
-    background-color: rgba(14,17,21,.25)
-}
-
-.font-load-1 .mlt-header,.mlt-header {
-    margin-bottom: .8em
-}
-
-.mlt-header a {
-    background-image: none
-}
-
-.mlt-header a:hover {
-    background-position: 0 1.3em
-}
-
-.mlt-summary {
-    font-size: 17px;
-    letter-spacing: .01em
-}
-
-.font-load-1 .mlt-summary {
-    font-size: 15px;
-    letter-spacing: -.01em
-}
-
-.highlight {
-    font-size: 12px
-}
-
-.highlight span {
-    line-height: 1.7em
 }
 
 @media screen {
@@ -1242,8 +994,13 @@ tr:nth-child(even) {
 
     article header {
         padding-top: .3em;
-        padding-bottom: 0;
+        padding-bottom: .1em;
+        margin-top: .2em;
         margin-bottom: .2em
+    }
+
+    .font-load-1 article header {
+        padding-top: .2em;
     }
 
     body {
@@ -1279,46 +1036,12 @@ tr:nth-child(even) {
         padding: 0
     }
 
-    .sticky {
-        position: unset;
-        top: 0
-    }
-
     .links,aside,figure {
         margin: 0
     }
 
     .font-load-1 .links {
         padding-top: 0
-    }
-
-    .toc {
-        display: none
-    }
-
-    figure,img {
-        max-width: 100%
-    }
-
-    figcaption,figure img {
-        float: initial
-    }
-
-    img {
-        min-width: 0;
-        object-fit: initial
-    }
-
-    figcaption {
-        letter-spacing: .025em;
-        line-height: 1.5em;
-        width: 100%;
-        margin: .5em auto
-    }
-
-    .font-load-1 figcaption {
-        font-size: .9em;
-        margin: .7em auto
     }
 
     .title {
@@ -1387,18 +1110,6 @@ tr:nth-child(even) {
 
     .font-load-1 .authors {
         margin-top: .45em
-    }
-
-    .authors a {
-        background-position: 0 1em
-    }
-
-    .metadata .hn,.metadata .medium,.metadata .published-date,.metadata .reading-time {
-        height: 32px
-    }
-
-    .font-load-1 .metadata .hn,.font-load-1 .metadata .medium,.font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time {
-        height: 33.5px
     }
 
     .metadata li,.metadata p {
@@ -1476,14 +1187,12 @@ tr:nth-child(even) {
         padding-right: 0
     }
 
-    .metadata a {
-        background-size: 5px 1px;
-        background-position: 0 1.04em
+    .metadata .hn,.metadata .medium,.metadata .published-date,.metadata .reading-time {
+        height: 32px
     }
 
-    .font-load-1 .metadata a {
-        background-size: 5px 1px;
-        background-position: 0 1.22em
+    .font-load-1 .metadata .hn,.font-load-1 .metadata .medium,.font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time {
+        height: 33.5px
     }
 
     .anchor,.font-load-1 .anchor {
@@ -1513,28 +1222,12 @@ tr:nth-child(even) {
     .font-load-1 h6 .anchor,h6 .anchor {
         margin-right: 13px
     }
-
-    .font-load-1 ol>li,.font-load-1 ul>li {
-        margin-bottom: .8em
-    }
 }
 
 @media screen and (max-width:750px) {
 
     body {
-        text-rendering: optimizeSpeed;
         font-size: 18px
-    }
-
-    article header {
-        margin-top: .2em;
-        margin-bottom: .3em;
-        border-width: 2px 0 0;
-        text-align: left
-    }
-
-    .font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6 {
-        font-weight: 400
     }
 
     ol,p,ul {
@@ -1572,11 +1265,11 @@ tr:nth-child(even) {
     }
 
     .table>.list-title {
-        font-size: .92em;
+        font-size: .9em;
         letter-spacing: 0;
-        line-height: .98em;
-        margin-top: .1em;
-        margin-bottom: .14em
+        line-height: 1.16em;
+        margin-top: .05em;
+        margin-bottom: .12em
     }
 
     .font-load-1 .table>.list-title {
@@ -1585,28 +1278,6 @@ tr:nth-child(even) {
         line-height: 1.34em;
         margin-top: .1em;
         margin-bottom: .22em
-    }
-
-    .table>.list-title>a {
-        background-position: 0 1.02em
-    }
-
-    .font-load-1 .table>.list-title>a {
-        background-position: 0 1.17em
-    }
-
-    .font-load-1 code,code {
-        font-size: 17px
-    }
-
-    kbd,pre code,samp {
-        font-size: .6em;
-        letter-spacing: -.017em
-    }
-
-    .mjx-math {
-        font-size: .7em;
-        margin: 0
     }
 
     footer>.table {
@@ -1698,14 +1369,6 @@ tr:nth-child(even) {
         margin-top: .05em
     }
 
-    .metadata .hn,.metadata .medium,.metadata .published-date,.metadata .reading-time {
-        height: 28.5px
-    }
-
-    .font-load-1 .metadata .hn,.font-load-1 .metadata .medium,.font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time {
-        height: 30px
-    }
-
     .metadata {
         margin-bottom: .2em
     }
@@ -1714,16 +1377,16 @@ tr:nth-child(even) {
         margin-bottom: .4em
     }
 
-    .authors a,.metadata a,figcaption a {
-        background-position: 0 .98em
+    .metadata .hn,.metadata .medium,.metadata .published-date,.metadata .reading-time {
+        height: 28.5px
     }
 
-    .font-load-1 .authors a,.font-load-1 .metadata a,.font-load-1 figcaption a {
-        background-position: 0 1.2em
+    .font-load-1 .metadata .hn,.font-load-1 .metadata .medium,.font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time {
+        height: 30px
     }
 
-    .list-title a,.mlt-header a,a {
-        background-size: 5px 1px
+    .font-load-1 code,code {
+        font-size: 17px
     }
 
     .logo {
@@ -1732,14 +1395,6 @@ tr:nth-child(even) {
 
     .font-load-1 .logo {
         margin-top: .1em
-    }
-
-    .line,blockquote,img {
-        margin-left: 0
-    }
-
-    .mlt-header a {
-        background-position: 0 1.3em
     }
 
     .mlt-summary {
@@ -1764,52 +1419,52 @@ tr:nth-child(even) {
     font-family:'edduarte-content-regular-italic';
     font-style:normal;
     font-weight: 400;
-    src: url('https://www.edduarte.com/fonts/volkhov-v8-latin-italic.eot');
+    src: url('../fonts/volkhov-v8-latin-italic.eot');
     src: local('Volkhov Italic'), local('Volkhov-Italic'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-italic.eot?#iefix') format('embedded-opentype'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-italic.woff2') format('woff2'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-italic.woff') format('woff'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-italic.ttf') format('truetype'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-italic.svg#Volkhov') format('svg');
+    url('../fonts/volkhov-v8-latin-italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/volkhov-v8-latin-italic.woff2') format('woff2'),
+    url('../fonts/volkhov-v8-latin-italic.woff') format('woff'),
+    url('../fonts/volkhov-v8-latin-italic.ttf') format('truetype'),
+    url('../fonts/volkhov-v8-latin-italic.svg#Volkhov') format('svg');
 }
 
 @font-face {
     font-family:'edduarte-content-bold'; 
     font-style:normal;
     font-weight:700;
-    src: url('https://www.edduarte.com/fonts/volkhov-v8-latin-700.eot');
+    src: url('../fonts/volkhov-v8-latin-700.eot');
     src: local('Volkhov Bold'), local('Volkhov-Bold'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-700.eot?#iefix') format('embedded-opentype'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-700.woff2') format('woff2'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-700.woff') format('woff'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-700.ttf') format('truetype'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-700.svg#Volkhov') format('svg');
+    url('../fonts/volkhov-v8-latin-700.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/volkhov-v8-latin-700.woff2') format('woff2'),
+    url('../fonts/volkhov-v8-latin-700.woff') format('woff'),
+    url('../fonts/volkhov-v8-latin-700.ttf') format('truetype'),
+    url('../fonts/volkhov-v8-latin-700.svg#Volkhov') format('svg');
 }
 
 @font-face {
     font-family:'edduarte-content-bold-italic'; 
     font-style:normal;
     font-weight:700;
-    src: url('https://www.edduarte.com/fonts/volkhov-v8-latin-700italic.eot');
+    src: url('../fonts/volkhov-v8-latin-700italic.eot');
     src: local('Volkhov Bold Italic'), local('Volkhov-BoldItalic'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-700italic.eot?#iefix') format('embedded-opentype'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-700italic.woff2') format('woff2'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-700italic.woff') format('woff'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-700italic.ttf') format('truetype'),
-    url('https://www.edduarte.com/fonts/volkhov-v8-latin-700italic.svg#Volkhov') format('svg');
+    url('../fonts/volkhov-v8-latin-700italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/volkhov-v8-latin-700italic.woff2') format('woff2'),
+    url('../fonts/volkhov-v8-latin-700italic.woff') format('woff'),
+    url('../fonts/volkhov-v8-latin-700italic.ttf') format('truetype'),
+    url('../fonts/volkhov-v8-latin-700italic.svg#Volkhov') format('svg');
 }
 
 @font-face {
     font-family:'edduarte-headings-bold';
     font-style:normal;
     font-weight:700;
-    src: url('https://www.edduarte.com/fonts/heebo-v2-latin-500.eot');
+    src: url('../fonts/heebo-v2-latin-500.eot');
     src: local('Heebo Bold'), local('Heebo-Bold'),
-    url('https://www.edduarte.com/fonts/heebo-v2-latin-500.eot?#iefix') format('embedded-opentype'),
-    url('https://www.edduarte.com/fonts/heebo-v2-latin-500.woff2') format('woff2'),
-    url('https://www.edduarte.com/fonts/heebo-v2-latin-500.woff') format('woff'),
-    url('https://www.edduarte.com/fonts/heebo-v2-latin-500.ttf') format('truetype'),
-    url('https://www.edduarte.com/fonts/heebo-v2-latin-500.svg#Heebo') format('svg');
+    url('../fonts/heebo-v2-latin-500.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/heebo-v2-latin-500.woff2') format('woff2'),
+    url('../fonts/heebo-v2-latin-500.woff') format('woff'),
+    url('../fonts/heebo-v2-latin-500.ttf') format('truetype'),
+    url('../fonts/heebo-v2-latin-500.svg#Heebo') format('svg');
 }
 
 /* ------------- */
@@ -1825,6 +1480,7 @@ tr:nth-child(even) {
 
 <script type="text/javascript">
 
+loadCSS('{{ "/css/defer.css" | relURL }}', "", 'not print');
 loadCSS('{{ "/css/print.css" | relURL }}', "", 'only print');
 
 (function() {
@@ -1854,6 +1510,7 @@ var fontB = new FontFaceObserver('edduarte-headings-regular', {
 });
 
 Promise.all([fontA.load(), fontB.load()]).then(function () {
+    // setTimeout(function(){
     document.documentElement.className += " font-load-1";
 
     var fontC = new FontFaceObserver('edduarte-content-regular-italic', {
@@ -1870,9 +1527,12 @@ Promise.all([fontA.load(), fontB.load()]).then(function () {
     });
 
     Promise.all([fontC.load(), fontD.load(), fontE.load(), fontF.load()]).then(function () {
+        // setTimeout(function(){
         document.documentElement.className += " font-load-2";
         sessionStorage.fontsLoaded = true;
+        // }, 1000);
     });
+    // }, 1000);
 });
 })();
 

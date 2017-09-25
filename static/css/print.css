@@ -1,6 +1,10 @@
 
-.myname,.title,h1,h2,h3,h4,h5,h6 {
+.font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.myname,.title,h1,h2,h3,h4,h5,h6 {
     font-weight: 400
+}
+
+.anchor {
+    display: none
 }
 
 .footnote a,.home-link a:hover,.homelink a,.metadata a,.myemail a,.mylinks a,.myname a,.section-link a:hover,.subtitle a,.table>.list-meta>a,.table>.list-title>a,.title a,a,footer a,footer a:hover,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
@@ -16,11 +20,9 @@ pre {
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
-    word-wrap: break-word;
-    margin: 0 0 2em;
-    padding: .7em
+    word-wrap: break-word
 }
 
-pre>code {
-    color: #333
+pre span {
+    color: #000!important
 }
