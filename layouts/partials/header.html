@@ -42,14 +42,6 @@
 <link rel="preconnect" href="https://www.google-analytics.com/" />
 <link rel="preconnect" href="https://cloud.netlifyusercontent.com/" />
 
-<script type="text/javascript">
-  // https://github.com/filamentgroup/loadCSS
-  !function(e){"use strict"
-  var n=function(n,t,o){function i(e){return f.body?e():void setTimeout(function(){i(e)})}var d,r,a,l,f=e.document,s=f.createElement("link"),u=o||"all"
-  return t?d=t:(r=(f.body||f.getElementsByTagName("head")[0]).childNodes,d=r[r.length-1]),a=f.styleSheets,s.rel="stylesheet",s.href=n,s.media="only x",i(function(){d.parentNode.insertBefore(s,t?d:d.nextSibling)}),l=function(e){for(var n=s.href,t=a.length;t--;)if(a[t].href===n)return e()
-  setTimeout(function(){l(e)})},s.addEventListener&&s.addEventListener("load",function(){this.media=u}),s.onloadcssdefined=l,l(function(){s.media!==u&&(s.media=u)}),s}
-  "undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this)
-</script>
 <style type="text/css">
 
 /* STAGE 1 FONTS */
@@ -638,11 +630,11 @@ footer>ul>li {
     letter-spacing: 0
 }
 
-.anchor,.links a,.mlt-header a,.mlt-link,.table>.list-meta a {
+.anchor,.links a,.mlt-header a,.mlt-link,.table>.list-meta a,.logo a,footer a {
     text-decoration: none
 }
 
-.anchor:hover,.mlt-header a:hover,.mlt-link:hover>.mlt-title,.table>.list-meta>a:hover {
+.anchor:hover,.mlt-header a:hover,.mlt-link:hover>.mlt-title,.table>.list-meta a:hover,.logo a:hover,footer a:hover {
     text-decoration: underline
 }
 
@@ -1409,18 +1401,20 @@ img.centered:empty {
 /* ------------- */
 
 </style>
+
 <noscript>
 <style type="text/css">
 .js-lazy-image {
     display: none
 }
 </style>
+<link rel="stylesheet" href="/css/defer.css">
+<div class="font-load-1 font-load-2">
 </noscript>
 
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+<script src="/js/defer.js" async></script>
 <script type="text/javascript">
-
-loadCSS('{{ "/css/defer.css" | relURL }}', "", 'not print');
-loadCSS('{{ "/css/print.css" | relURL }}', "", 'only print');
 
 (function() {
 

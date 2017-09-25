@@ -44,6 +44,10 @@ a {
     text-decoration: none!important
 }
 
+.table>.list-meta a:hover {
+    text-decoration: underline!important
+}
+
 .anchor:hover,a {
     background-image: linear-gradient(to right,#e21b2a 50%,#e21b2a 50%);
     background-size: 5px 2px;

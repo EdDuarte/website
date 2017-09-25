@@ -4,12 +4,7 @@
     <li><a href="mailto:hi@edduarte.com">Email</a>&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/_edduarte">Twitter</a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/edduarte">Github</a></li>
 </ul>
 </footer>
-
-<script type="text/javascript">
-function detectIE(){var a=window.navigator.userAgent,b=a.indexOf('MSIE ');if(0<b)return parseInt(a.substring(b+5,a.indexOf('.',b)),10);var c=a.indexOf('Trident/');if(0<c){var d=a.indexOf('rv:');return parseInt(a.substring(d+3,a.indexOf('.',d)),10)}var e=a.indexOf('Edge/');return!!(0<e)&&parseInt(a.substring(e+5,a.indexOf('.',e)),10)}function loadImg(a){var b=a.getAttribute('src');if(console.log(b),b){var c=a.getElementsByTagName('img')[0];c.setAttribute('src',b)}}var init=function(){const a=document.querySelectorAll('.js-lazy-image');var b=detectIE();if(!1===b){if(!('IntersectionObserver'in window))Array.from(a).forEach(d=>loadImg(d));else{let d=new IntersectionObserver(function(e){e.forEach(f=>{0<f.intersectionRatio&&(d.unobserve(f.target),loadImg(f.target))})},{rootMargin:'50px 0px',threshold:0.01});a.forEach(e=>{d.observe(e)})}}else Array.from(a).forEach(c=>loadImg(c))},raf=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;raf?raf(function(){window.setTimeout(init,0)}):window.addEventListener('load',init);window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create', 'UA-103779128-1', 'auto');ga('send', 'pageview');
-</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-<noscript><link rel="stylesheet" href="{{ "/css/main-noscript.css" | relURL }}"></noscript>
-
+<script type="text/javascript" src="{{ "/js/async.js" | relURL }}" async></script>
 </body>
+<noscript></div></noscript>
 </html>
