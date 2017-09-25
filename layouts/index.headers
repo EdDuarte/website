@@ -4,7 +4,6 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: origin-when-cross-origin
   Cache-Control: private,max-age=0
-  Link: </css/print.css>; rel=preload; as=style
 
 /*.jpg
   Cache-Control: max-age=31536000, public

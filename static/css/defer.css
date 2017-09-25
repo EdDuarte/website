@@ -1,0 +1,256 @@
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility
+}
+
+body {
+    font-variant-ligatures: common-ligatures;
+    font-feature-settings: "liga","clig";
+    font-kerning: normal;
+    text-align: left;
+}
+
+.article-table>.col1,.article-table>.col2,.article-table>.col3 {
+    margin: 0;
+    padding: 0
+}
+
+ol,p,summary,ul {
+    --x-height-multiplier: 0.35;
+    --baseline-multiplier: 0.179;
+}
+
+p {
+    word-break: break-word;
+    word-wrap: break-word;
+    hanging-punctuation: first
+}
+
+.font-load-1 ol,.font-load-1 p,.font-load-1 summary,.font-load-1 ul {
+    --x-height-multiplier: 0.35;
+    --baseline-multiplier: 0.179
+}
+
+.authors a {
+    background-position: 0 1em
+}
+
+.font-load-1 .metadata a,.font-load-1 figcaption a {
+    background-position: 0 1.18em
+}
+
+.font-load-1 .authors a {
+    background-position: 0 1.15em
+}
+
+.authors a,aside a:hover,footer a:hover {
+    background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%)
+}
+
+a {
+    text-decoration: none
+}
+
+.metadata a,figcaption a {
+    background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%)
+}
+
+.anchor:hover,a {
+    background-image: linear-gradient(to right,#e21b2a 50%,#e21b2a 50%);
+    background-size: 5px 2px;
+    text-size-adjust: 100%;
+    hyphens: manual
+}
+
+.list-title a,a {
+    background-position: 0 1em
+}
+
+.font-load-1 .list-title a {
+    background-position: 0 1.12em
+}
+
+.font-load-1 a {
+    background-position: 0 1.18em
+}
+
+.footnote-ref a,a.footnote-return {
+    background-image: none
+}
+
+.anchor,.links>li>a,.list-meta-date,.logo,.myemail,.myemail a,.mylinks a,.myname,.myname a,.skills,.title,.title a,footer,footer a,h1,h2,h3,h4,h5,h6 {
+    background-image: none
+}
+
+.logo a:hover,.myemail a:hover,.title a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+    background-repeat: repeat-x;
+    background-origin: border-box;
+    background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%);
+    background-position: 0 1.24em;
+    background-size: 5px 2px
+}
+
+.title a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,.mlt-header a:hover {
+    background-image: linear-gradient(to right,rgba(14,17,21,.85) 50%,rgba(14,17,21,.85) 50%);
+    background-position: 0 1.2em
+}
+
+.mylinks a:hover {
+    background-image: none
+}
+
+.home-link a:hover,a,footer a:hover {
+    background-repeat: repeat-x;
+    background-origin: border-box
+}
+
+footer a:hover {
+    background-position: 0 1.2em
+}
+
+.logo a,.table>.list-meta>a,aside a {
+    background-image: none
+}
+
+hr {
+    color: transparent;
+    border-style: solid
+}
+
+table thead th {
+    border-bottom: 1px solid rgba(14,17,21,.8)
+}
+
+td,th {
+    padding: .4em
+}
+
+tr:nth-child(even) {
+    background: rgba(14,17,21,.8)
+}
+
+.table>div>a {
+    text-decoration: none
+}
+
+.mlt-header a {
+    background-image: none
+}
+
+.mlt-header a:hover {
+    background-position: 0 1.3em
+}
+
+.sticky {
+    position: sticky;
+    top: 0
+}
+
+@media screen and (max-width:1080px),print {
+
+    .authors a {
+        background-position: 0 1em
+    }
+
+    .metadata a {
+        background-size: 5px 1px;
+        background-position: 0 1.04em
+    }
+
+    .font-load-1 .metadata a {
+        background-size: 5px 1px;
+        background-position: 0 1.22em
+    }
+}
+
+@media screen and (min-width:1081px) {
+
+    figure {
+        max-width: 950px;
+        width: 950px;
+        overflow: auto
+    }
+
+    figure img {
+        float: left;
+        display: block
+    }
+
+    img {
+        max-width: 650px;
+        min-width: 650px;
+        object-fit: scale-down;
+        object-position: 50% 0
+    }
+
+    figcaption {
+        font-size: .9em;
+        letter-spacing: .008em;
+        margin-top: -5px;
+        float: right;
+        width: 270px
+    }
+
+    .font-load-1 figcaption {
+        font-size: .8em;
+        letter-spacing: -.02em;
+        line-height: 1.72em;
+        margin-top: -5px;
+    }
+}
+
+@media screen and (max-width:750px) {
+
+    body {
+        text-rendering: optimizeSpeed
+    }
+
+/*
+    article header {
+        margin-top: .2em;
+        margin-bottom: .3em;
+        border-width: 2px 0 0;
+        text-align: left
+    }
+*/
+    .font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6 {
+        font-weight: 400
+    }
+
+    .table>.list-title>a {
+        background-position: 0 1.02em
+    }
+
+    .font-load-1 .table>.list-title>a {
+        background-position: 0 1.17em
+    }
+
+    .mjx-math {
+        font-size: .7em
+    }
+
+    .authors a,.metadata a,figcaption a {
+        background-position: 0 .98em
+    }
+
+    .font-load-1 .authors a,.font-load-1 .metadata a,.font-load-1 figcaption a {
+        background-position: 0 1.2em
+    }
+
+    .list-title a,.mlt-header a,a {
+        background-size: 5px 1px
+    }
+
+    .line,blockquote,img {
+        margin-left: 0
+    }
+
+    .mlt-header a {
+        background-position: 0 1.3em
+    }
+}
