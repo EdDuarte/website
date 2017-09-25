@@ -1,6 +1,7 @@
 import gulp from 'gulp'
 import htmlmin from 'gulp-htmlmin'
 import cleanCSS from 'gulp-clean-css'
+import minify from 'gulp-babel-minify'
 import runSequence from 'run-sequence'
 import shell from 'gulp-shell'
 
@@ -24,6 +25,16 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('./public'));
 });
 
+gulp.task('minify-js', () => {
+  return gulp.src('public/**/*.js')
+    .pipe(minify({
+      mangle: {
+        keepClassName: true
+      }
+    }))
+    .pipe(gulp.dest('./public'));
+});
+
 gulp.task('build', ['hugo-build'], (callback) => {
-  runSequence('minify-html', 'minify-css', callback);
+  runSequence('minify-html', 'minify-css', 'minify-js', callback);
 })
