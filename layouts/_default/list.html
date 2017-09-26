@@ -20,11 +20,11 @@
 {{ end }}
 
 <ul class="list">
-{{ range (where .Data.Pages "Section" "!=" "") }}
+{{ range .Data.Pages }}
 <li>
 <div class="table">
 <div class="col1 list-meta">
-<span class="list-meta-date">{{ .Date.Format "2006 Jan 02" }}</span>
+<time class="list-meta-date">{{ .Date.Format "2006 Jan 02" }}</time>
 {{ if $.IsHome }}
 <a href="{{ (.Section | urlize) | absLangURL }}" class="category">
 {{ .Type }}
@@ -32,7 +32,11 @@
 {{ end }}
 </div>
 <div class="col2 list-title">
+{{ if .Params.externalLink }}
+<a href="{{ .Params.externalLink }}"><div class="icon list-icon icon-external-link"></div>{{ .Title }}</a>
+{{ else }}
 <a href="{{ .URL }}">{{ .Title }}</a>
+{{ end }}
 </div>
 </div>
 </li>
