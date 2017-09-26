@@ -67,11 +67,28 @@ a {
     background-position: 0 1.18em
 }
 
+.icon {
+    background-position: 0 0;
+    background-size: auto 100%;
+    display: inline-block;
+}
+
+.font-load-1 .icon {
+    background-position: 0 0
+}
+
+.social-icon {
+    width:22px;
+    height: 22px;
+    padding-left: 8px;
+    padding-right: 8px
+}
+
 .footnote-ref a {
     padding: 0 .2em .2em
 }
 
-.anchor,.footnote-ref a,.links>li>a,.list-meta-date,.logo,.myemail,.myemail a,.mylinks a,.myname,.myname a,.skills,.title,.title a,a.footnote-return,footer,footer a,h1,h2,h3,h4,h5,h6 {
+.anchor,.footnote-ref a,.links>li>a,.list-meta-date,.logo,.myemail,.myemail a,.myname,.myname a,.skills,.title,.title a,a.footnote-return,footer,footer a,h1,h2,h3,h4,h5,h6 {
     background-image: none
 }
 
@@ -94,7 +111,7 @@ a {
     background-image: linear-gradient(to right,rgba(14,17,21,.85) 50%,rgba(14,17,21,.85) 50%)
 }
 
-.logo a,.mlt-header a,.mylinks a:hover,.table>.list-meta>a,aside a {
+.logo a,.mlt-header a,.table>.list-meta>a,aside a {
     background-image: none
 }
 

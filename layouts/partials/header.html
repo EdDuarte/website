@@ -379,18 +379,14 @@ article header {
 
 .metadata .hn,.metadata .medium,.metadata .published-date,.metadata .reading-time {
     display: inline-table;
-    line-height: 1.5em;
-    height: 32px
-}
-
-.font-load-1 .metadata .hn,.font-load-1 .metadata .medium,.font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time {
-    line-height: 1.75em;
-    height: 33.4px
 }
 
 .metadata-icon {
     display: table-cell;
-    vertical-align: middle
+    vertical-align: middle;
+    margin-top: -4px;
+    width: 16px;
+    height: 16px
 }
 
 .metadata-title {
@@ -616,11 +612,11 @@ footer>ul>li {
     text-decoration-color: rgba(14,17,21,.85)
 }
 
-.authors,.authors a,.links>li>a,.list-meta-date,.logo,.logo a,.mlt-header,.mlt-header a,.mlt-summary,.mlt-title,.mylinks a,aside,aside a,figcaption,footer,footer a {
+.authors,.authors a,.links>li>a,.list-meta-date,.logo,.logo a,.mlt-header,.mlt-header a,.mlt-summary,.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
     color: rgba(14,17,21,.5)
 }
 
-.authors,.authors a,.logo,.logo a,.mlt-link:hover>.mlt-title,.mylinks a,aside,aside a,figcaption,footer,footer a {
+.authors,.authors a,.logo,.logo a,.mlt-link:hover>.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
     text-decoration-color: rgba(14,17,21,.25)
 }
 
@@ -638,11 +634,12 @@ h1,h2,h3,h4 {
     padding-top: .36em
 }
 
-.mylinks {
-    padding-top: .6em
+.social {
+    padding-top: .6em;
+    height: 22px;
 }
 
-.font-load-1 .mylinks {
+.font-load-1 .social {
     letter-spacing: .01em
 }
 
@@ -1038,22 +1035,23 @@ img.centered:empty {
     }
 
     .links {
+        margin-top: .12em;
         padding: 0
     }
 
     .font-load-1 .links {
-        margin-top: -.2em;
-        margin-bottom: .15em
+        margin-top: 0;
+        margin-bottom: .2em
     }
 
     .metadata {
-        margin-top: -.65em;
+        margin-top: -.8em;
         margin-bottom: 0
     }
 
     .font-load-1 .metadata {
         margin-top: -.2em;
-        margin-bottom: .25em
+        margin-bottom: .38em
     }
 
     .metadata>.table {
@@ -1084,14 +1082,6 @@ img.centered:empty {
         content: "";
         padding-left: 0;
         padding-right: 0
-    }
-
-    .metadata .hn,.metadata .medium,.metadata .published-date,.metadata .reading-time {
-        height: 32px
-    }
-
-    .font-load-1 .metadata .hn,.font-load-1 .metadata .medium,.font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time {
-        height: 33.5px
     }
 
     .anchor,.font-load-1 .anchor {
@@ -1190,12 +1180,12 @@ img.centered:empty {
         margin-bottom: .9em
     }
 
-    .mylinks {
+    .social {
         margin-top: -.1em;
         margin-bottom: .9em
     }
 
-    .font-load-1 .mylinks {
+    .font-load-1 .social {
         margin-top: -.05em;
         margin-bottom: 1em
     }
@@ -1273,14 +1263,6 @@ img.centered:empty {
 
     .font-load-1 .metadata {
         margin-bottom: .4em
-    }
-
-    .metadata .hn,.metadata .medium,.metadata .published-date,.metadata .reading-time {
-        height: 28.5px
-    }
-
-    .font-load-1 .metadata .hn,.font-load-1 .metadata .medium,.font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time {
-        height: 30px
     }
 
     .font-load-1 code,code {
