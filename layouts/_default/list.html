@@ -20,7 +20,7 @@
 {{ end }}
 
 <ul class="list">
-{{ range .Data.Pages }}
+{{ range .Data.Pages.ByDate.Reverse }}
 <li>
 <div class="table">
 <div class="col1 list-meta">

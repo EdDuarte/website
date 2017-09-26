@@ -45,24 +45,38 @@
 {{ .Content }}
 </section>
 
+{{ if .NextInSection }}
+
+{{ if (gt .NextInSection.Weight -1) }}
 <div class="line"></div>
 <section class="mlt">
-{{if .NextInSection}}
 <h3 class="mlt-header">Next on <a href="/{{.Section}}/">{{.Section}}</a></h3>
 <a class="mlt-link" href="{{.NextInSection.Permalink}}">
 <h4 class="mlt-title">{{.NextInSection.Title}}</h4>
+{{ if .NextInSection.Summary }}
 <p class="mlt-summary">{{.NextInSection.Summary}}...</p>
+{{ end }}
 </a>
-{{else}}
-{{if .PrevInSection}}
+</section>
+
+{{ else }}
+
+{{ if .PrevInSection }}
+{{ if gt .PrevInSection.Weight -1 }}
+<div class="line"></div>
+<section class="mlt">
 <h3 class="mlt-header">More on <a href="/{{.Section}}/">{{.Section}}</a></h3>
 <a class="mlt-link" href="{{.PrevInSection.Permalink}}">
 <h4 class="mlt-title">{{.PrevInSection.Title}}</h4>
 <p class="mlt-summary">{{.PrevInSection.Summary}}...</p>
 </a>
-{{end}}
-{{end}}
 </section>
+{{ end }}
+{{ end }}
+
+{{ end }}
+
+{{ end }}
 
 </main>
 
