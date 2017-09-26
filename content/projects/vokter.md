@@ -4,6 +4,13 @@ web documents"
 description: "High-performant library that uses LSH, DiffMatchPatch
 and Bloom filters to detect and notify textual changes in web
 documents."
+prologue: "This post outlines the architecture and design decisions
+behind Vokter, an open-source Java library that I've been developing
+since October 2014. This is a bit of a technical read, and other
+projects I developed that interop with Vokter, like HTTP and MQTT
+servers which manage a persistent state of Vokter on the web instead
+of locally, are not addressed here (although I do hope to address
+them later on a future post)."
 date: "2016-06-19 19:26:00+01:00"
 medium: "https://medium.com/@edduarte/vokter-a-java-library-that-dete
 cts-changes-in-web-documents-c4d3d399046d"
@@ -11,15 +18,15 @@ type: project
 markup: mmark
 ---
 
-What started as a simple project called Argus (from [*Argus
+What started as a simple project for a University class in
+Distributed Architecture, which I named Argus (from [*Argus
 Panoptes*](https://en.wikipedia.org/wiki/Argus_Panoptes), the
-all-seeing giant from Greek mythology) for a University class in
-Distributed Architecture, it is currently my most ambitious and
-complex open-source library, now known as Vokter (Norwegian for
+all-seeing giant of Greek mythology), it is currently one of my most
+ambitious and complex libraries, now known as Vokter (Norwegian for
 *watcher*).
 
 [Vokter](https://github.com/vokter/vokter) is a high-performance,
-scalable library that combines [Locality-Sensitive Hashing for
+scalable Java library that combines [Locality-Sensitive Hashing for
 K-Shingles](https://github.com/edduarte/near-neighbor-search), [a
 fork of
 DiffMatchPatch](https://github.com/edduarte/indexed-diff-match-patch),
@@ -65,7 +72,7 @@ the detected changes contains any of the keywords.
 Since the logic of difference retrieval is spread between two jobs,
 one that is agnostic of requests and one that is specific to the
 client and its keywords, Vokter reduces workload by scheduling only
-one detection job per watched webpage. For this, jobs are grouped
+one detection job per watched web-page. For this, jobs are grouped
 into clusters, where its unique identifier is the document URL. This
 means that each cluster imperatively contains a single scheduled
 detection job and one or more matching jobs. In other words, When two
