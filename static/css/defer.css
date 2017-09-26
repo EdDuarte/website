@@ -243,4 +243,9 @@ tr:nth-child(even) {
     .mlt-header a {
         background-position: 0 1.3em
     }
+
+    .social-icon {
+        width:18px;
+        height: 18px
+    }
 }
