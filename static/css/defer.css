@@ -156,6 +156,10 @@ tr:nth-child(even) {
     top: 0
 }
 
+.mjx-math {
+    font-size: .9em
+}
+
 @media screen and (max-width:1080px),print {
     .authors a {
         background-position: 0 1em
