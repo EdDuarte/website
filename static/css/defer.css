@@ -24,13 +24,56 @@ p {
     hanging-punctuation: first
 }
 
+.authors a {
+    background-position: 0 1em
+}
+
+.font-load-1 .metadata a,.font-load-1 figcaption a {
+    background-position: 0 1.18em
+}
+
+.font-load-1 .authors a {
+    background-position: 0 1.15em
+}
+
+.authors a,.metadata a,aside a:hover,figcaption a,footer a:hover {
+    background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%)
+}
+
+a {
+    text-decoration: none!important
+}
+
+.table>.list-meta a:hover {
+    text-decoration: underline!important
+}
+
 .anchor:hover,a {
+    background-image: linear-gradient(to right,#e21b2a 50%,#e21b2a 50%);
+    background-size: 5px 2px;
     text-size-adjust: 100%;
     hyphens: manual
 }
 
+.list-title a,a {
+    background-position: 0 1em
+}
+
+.font-load-1 .list-title a {
+    background-position: 0 1.12em
+}
+
+.font-load-1 a {
+    background-position: 0 1.18em
+}
+
 .icon {
+    background-size: auto 100%;
     display: inline-block
+}
+
+.font-load-1 .icon,.icon {
+    background-position: 0 0
 }
 
 .social-icon {
@@ -42,6 +85,42 @@ p {
 
 .footnote-ref a {
     padding: 0 .2em .2em
+}
+
+.anchor,.footnote-ref a,.links>li>a,.list-meta-date,.logo,.myemail,.myemail a,.myname,.myname a,.skills,.title,.title a,a.footnote-return,footer,footer a,h1,h2,h3,h4,h5,h6 {
+    background-image: none
+}
+
+.logo a:hover,.myemail a:hover,.title a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+    background-repeat: repeat-x;
+    background-origin: border-box;
+    background-size: 5px 2px
+}
+
+.logo a:hover,.mlt-header a:hover,.myemail a:hover {
+    background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%)
+}
+
+.logo a:hover,.myemail a:hover {
+    background-position: 0 1.24em
+}
+
+.title a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+    background-position: 0 1.2em;
+    background-image: linear-gradient(to right,rgba(14,17,21,.85) 50%,rgba(14,17,21,.85) 50%)
+}
+
+.logo a,.mlt-header a,.table>.list-meta>a,aside a {
+    background-image: none
+}
+
+.home-link a:hover,a,footer a:hover {
+    background-repeat: repeat-x;
+    background-origin: border-box
+}
+
+footer a:hover {
+    background-position: 0 1.2em
 }
 
 hr {
@@ -67,14 +146,17 @@ tr:nth-child(even) {
     background: rgba(14,17,21,.8)
 }
 
+.mlt-header a:hover {
+    background-position: 0 1.3em
+}
+
 .sticky {
     position: sticky;
     top: 0
 }
 
 .mjx-math {
-    font-size: .9em;
-    letter-spacing: 0
+    font-size: .9em
 }
 
 /* .icon-twitter
@@ -189,93 +271,4 @@ feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0
 .icon-external-link {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' style='stroke:rgba%2814,17,21,.5%29;' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-external-link'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E");
     background-repeat: no-repeat;
-}
-
-.authors a {
-    background-position: 0 1em
-}
-
-.font-load-1 .metadata a,.font-load-1 figcaption a {
-    background-position: 0 1.18em
-}
-
-.font-load-1 .authors a {
-    background-position: 0 1.15em
-}
-
-.authors a,.metadata a,aside a:hover,figcaption a,footer a:hover {
-    background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%)
-}
-
-a {
-    text-decoration: none!important
-}
-
-.table>.list-meta a:hover {
-    text-decoration: underline!important
-}
-
-.anchor,.footnote-ref a,.links>li>a,.list-meta-date,.logo,.myemail,.myemail a,.myname,.myname a,.skills,.title,.title a,a.footnote-return,footer,footer a,h1,h2,h3,h4,h5,h6 {
-    background-image: none
-}
-
-.logo a:hover,.myemail a:hover,.title a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
-    background-repeat: repeat-x;
-    background-origin: border-box;
-    background-size: 5px 2px
-}
-
-.logo a:hover,.mlt-header a:hover,.myemail a:hover {
-    background-image: linear-gradient(to right,rgba(14,17,21,.25) 50%,rgba(14,17,21,.25) 50%)
-}
-
-.logo a:hover,.myemail a:hover {
-    background-position: 0 1.24em
-}
-
-.title a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
-    background-position: 0 1.2em;
-    background-image: linear-gradient(to right,rgba(14,17,21,.85) 50%,rgba(14,17,21,.85) 50%)
-}
-
-.logo a,.mlt-header a,.table>.list-meta>a,aside a {
-    background-image: none
-}
-
-.home-link a:hover,a,footer a:hover {
-    background-repeat: repeat-x;
-    background-origin: border-box
-}
-
-footer a:hover {
-    background-position: 0 1.2em
-}
-
-.anchor:hover,a {
-    background-image: linear-gradient(to right,#e21b2a 50%,#e21b2a 50%);
-    background-size: 5px 2px
-}
-
-.list-title a,a {
-    background-position: 0 1em
-}
-
-.font-load-1 .list-title a {
-    background-position: 0 1.12em
-}
-
-.font-load-1 a {
-    background-position: 0 1.18em
-}
-
-.icon {
-    background-size: auto 100%
-}
-
-.font-load-1 .icon,.icon {
-    background-position: 0 0
-}
-
-.mlt-header a:hover {
-    background-position: 0 1.3em
 }
