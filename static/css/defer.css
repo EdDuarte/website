@@ -272,3 +272,34 @@ feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' style='stroke:rgba%2814,17,21,.5%29;' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-external-link'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E");
     background-repeat: no-repeat;
 }
+
+@media only print {
+
+    .font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.myname,.title,h1,h2,h3,h4,h5,h6 {
+        font-weight: 400
+    }
+
+    .anchor {
+        display: none
+    }
+
+    .footnote a,.home-link a:hover,.homelink a,.metadata a,.myemail a,.mylinks a,.myname a,.section-link a:hover,.subtitle a,.table>.list-meta>a,.table>.list-title>a,.title a,a,footer a,footer a:hover,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+        text-decoration: underline;
+        background-image: none
+    }
+
+    pre {
+        background-color: #fff;
+        border-radius: 0;
+        overflow-x: initial;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word
+    }
+
+    pre span {
+        color: #000!important
+    }
+}

@@ -102,7 +102,6 @@
 }( typeof global !== "undefined" ? global : this ));
 
 loadCSS("/css/defer.css");
-loadCSS("/css/print.css", "", "only print");
 
 var minWidth1081Loaded = false;
 var maxWidth1080Loaded = false;
