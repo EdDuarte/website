@@ -1453,7 +1453,7 @@ var fontB = new FontFaceObserver('edduarte-headings-regular', {
     weight: 400
 });
 
-Promise.all([fontA.load(), fontB.load()]).then(function () {
+Promise.all([fontA.load(null, 6000), fontB.load(null, 6000)]).then(function () {
     // setTimeout(function(){
     document.documentElement.className += " font-load-1";
         sessionStorage.fontsLoaded1 = true;
@@ -1471,7 +1471,7 @@ Promise.all([fontA.load(), fontB.load()]).then(function () {
         weight: 700
     });
 
-    Promise.all([fontC.load(), fontD.load(), fontE.load(), fontF.load()]).then(function () {
+    Promise.all([fontC.load(null, 6000), fontD.load(null, 6000), fontE.load(null, 6000), fontF.load(null, 6000)]).then(function () {
         // setTimeout(function(){
         document.documentElement.className += " font-load-2";
         sessionStorage.fontsLoaded2 = true;
