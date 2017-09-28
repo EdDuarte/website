@@ -101,9 +101,7 @@
     }
 }( typeof global !== "undefined" ? global : this ));
 
-loadCSS("/css/defer.css", "", "not print");
-loadCSS("/css/icons.svg.css");
-loadCSS("/css/print.css", "", "only print");
+loadCSS("/css/defer.css");
 loadJS("/js/defer.js");
 loadJS("https://www.google-analytics.com/analytics.js");
 
