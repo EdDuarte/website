@@ -1,0 +1,41 @@
+
+body {
+    text-rendering: optimizeSpeed
+}
+
+.font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6 {
+    font-weight: 400
+}
+
+.mjx-math {
+    font-size: calc(.05em + 3.3vw)
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px
+}
+
+.table>.list-title>a {
+    background-position: 0 1.02em
+}
+
+.font-load-1 .table>.list-title>a {
+    background-position: 0 1.17em
+}
+
+.authors a,.metadata a,figcaption a {
+    background-position: 0 .98em
+}
+
+.font-load-1 .authors a,.font-load-1 .metadata a,.font-load-1 figcaption a {
+    background-position: 0 1.2em
+}
+
+.list-title a,.mlt-header a,a {
+    background-size: 5px 1px
+}
+
+.mlt-header a {
+    background-position: 0 1.3em
+}

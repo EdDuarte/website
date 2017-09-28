@@ -102,6 +102,48 @@
 }( typeof global !== "undefined" ? global : this ));
 
 loadCSS("/css/defer.css");
+loadCSS("/css/print.css", "", "only print");
+
+var minWidth1081Loaded = false;
+var maxWidth1080Loaded = false;
+var maxWidth750Loaded = false;
+
+const mq1 = window.matchMedia("screen and (min-width:1081px)");
+if(mq1.matches && !minWidth1081Loaded) {
+    loadCSS("/css/defer-min-width-1081.css", "", "screen and (min-width:1081px)");
+    minWidth1081Loaded = true;
+}
+mq1.addListener(function(mq1) {
+    if(mq1.matches && !minWidth1081Loaded) {
+        loadCSS("/css/defer-min-width-1081.css", "", "screen and (min-width:1081px)");
+        minWidth1081Loaded = true;
+    }
+});
+
+const mq2 = window.matchMedia("screen and (max-width:1080px)");
+if(mq2.matches && !maxWidth1080Loaded) {
+    loadCSS("/css/defer-max-width-1080.css", "", "screen and (max-width:1080px)");
+    maxWidth1080Loaded = true;
+}
+mq2.addListener(function(mq2) {
+    if(mq2.matches && !maxWidth1080Loaded) {
+        loadCSS("/css/defer-max-width-1080.css", "", "screen and (max-width:1080px)");
+        maxWidth1080Loaded = true;
+    }
+});
+
+const mq3 = window.matchMedia("screen and (max-width:750px)");
+if(mq3.matches && !maxWidth750Loaded) {
+    loadCSS("/css/defer-max-width-750.css", "", "screen and (max-width:750px)");
+    maxWidth750Loaded = true;
+}
+mq3.addListener(function(mq3) {
+    if(mq3.matches && !maxWidth750Loaded) {
+        loadCSS("/css/defer-max-width-750.css", "", "screen and (max-width:750px)");
+        maxWidth750Loaded = true;
+    }
+});
+
 loadJS("/js/defer.js");
 loadJS("https://www.google-analytics.com/analytics.js");
 
