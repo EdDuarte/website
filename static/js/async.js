@@ -108,38 +108,41 @@ var minWidth1081Loaded = false;
 var maxWidth1080Loaded = false;
 var maxWidth750Loaded = false;
 
-const mq1 = window.matchMedia("screen and (min-width:1081px)");
+const q1 = "screen and (min-width:1081px)";
+const mq1 = window.matchMedia(q1);
 if(mq1.matches && !minWidth1081Loaded) {
-    loadCSS("/css/defer-min-width-1081.css", "", "screen and (min-width:1081px)");
+    loadCSS("/css/defer-min-width-1081.css", "", q1);
     minWidth1081Loaded = true;
 }
 mq1.addListener(function(mq1) {
     if(mq1.matches && !minWidth1081Loaded) {
-        loadCSS("/css/defer-min-width-1081.css", "", "screen and (min-width:1081px)");
+        loadCSS("/css/defer-min-width-1081.css", "", q1);
         minWidth1081Loaded = true;
     }
 });
 
-const mq2 = window.matchMedia("screen and (max-width:1080px)");
+const q2 = "screen and (max-width:1080px) and (min-width:751px)";
+const mq2 = window.matchMedia(q2);
 if(mq2.matches && !maxWidth1080Loaded) {
-    loadCSS("/css/defer-max-width-1080.css", "", "screen and (max-width:1080px)");
+    loadCSS("/css/defer-max-width-1080.css", "", q2);
     maxWidth1080Loaded = true;
 }
 mq2.addListener(function(mq2) {
     if(mq2.matches && !maxWidth1080Loaded) {
-        loadCSS("/css/defer-max-width-1080.css", "", "screen and (max-width:1080px)");
+        loadCSS("/css/defer-max-width-1080.css", "", q2);
         maxWidth1080Loaded = true;
     }
 });
 
-const mq3 = window.matchMedia("screen and (max-width:750px)");
+const q3 = "screen and (max-width:750px)";
+const mq3 = window.matchMedia(q3);
 if(mq3.matches && !maxWidth750Loaded) {
-    loadCSS("/css/defer-max-width-750.css", "", "screen and (max-width:750px)");
+    loadCSS("/css/defer-max-width-750.css", "", q3);
     maxWidth750Loaded = true;
 }
 mq3.addListener(function(mq3) {
     if(mq3.matches && !maxWidth750Loaded) {
-        loadCSS("/css/defer-max-width-750.css", "", "screen and (max-width:750px)");
+        loadCSS("/css/defer-max-width-750.css", "", q3);
         maxWidth750Loaded = true;
     }
 });
