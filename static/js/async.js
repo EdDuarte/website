@@ -105,7 +105,8 @@ loadCSS("/css/defer.css", "", "not print");
 loadCSS("/css/icons.svg.css");
 loadCSS("/css/print.css", "", "only print");
 loadJS("/js/defer.js");
+loadJS("https://www.google-analytics.com/analytics.js");
 
-// window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-// ga('create', 'UA-103779128-1', 'auto');
-// ga('send', 'pageview');
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-103779128-1', 'auto');
+ga('send', 'pageview');
