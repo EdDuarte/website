@@ -10,7 +10,7 @@ since October 2014. This is a bit of a technical read, and other
 projects I developed that interop with Vokter, like HTTP and MQTT
 servers which manage a persistent state of Vokter on the web instead
 of locally, are not addressed here (although I do hope to address
-them later on a future post)."
+them later in a future post)."
 links:
     - name: Source code
       url: https://github.com/vokter/vokter
