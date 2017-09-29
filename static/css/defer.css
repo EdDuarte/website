@@ -154,7 +154,7 @@ tr:nth-child(even) {
     transition: .1s
 }
 
-.links>li>a:hover {
+.links>li>a:hover,.links>li>a:focus {
     box-shadow: 0 0.5em 0.5em -0.4em #e21b2a;
     border-color: #e21b2a;
     color: #e21b2a
