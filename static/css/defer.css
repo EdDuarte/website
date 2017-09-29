@@ -150,6 +150,16 @@ tr:nth-child(even) {
     background-position: 0 1.3em
 }
 
+.links>li>a {
+    transition: .1s
+}
+
+.links>li>a:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em #e21b2a;
+    border-color: #e21b2a;
+    color: #e21b2a
+}
+
 .sticky {
     position: sticky;
     top: 0
