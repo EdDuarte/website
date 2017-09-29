@@ -146,7 +146,7 @@ Because different documents can have different languages, which
 require specialized stemmers and stop-word filters to be used, the
 language must be obtained. Unlike the ``Content-Type``, which is
 often provided as a HTTP header when fetching the document, the
-``Accept- Language`` is not for the most part. Instead, Vokter infers
+``Accept-Language`` is not for the most part. Instead, Vokter infers
 the language from the document content using a language detector
 algorithm based on Bayesian probabilistic models and N-Grams,
 developed by Nakatani Shuyo, Fabian Kessler, Francois Roland and
