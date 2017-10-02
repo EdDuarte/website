@@ -53,7 +53,7 @@ algorithms are picked based on the inferred language of the document,
 using a [N-grams Naïve Bayesian
 classifier](https://github.com/optimaize/language-detector).
 
-# {{< anchor link="#jobs" >}} Job Management {#jobs}
+# {{< anchor link="#jobs" >}}Job Management {#jobs}
 
 There are two types of jobs, concurrently executed and scheduled
 periodically (using Quartz Scheduler): detection and matching jobs.
@@ -82,7 +82,7 @@ detection job and one or more matching jobs. In other words, When two
 clients watch the same page, only one detection job for that page is
 active.
 
-# {{< anchor link="#scaling" >}} Scaling {#scaling}
+# {{< anchor link="#scaling" >}}Scaling {#scaling}
 
 Vokter was conceived to be able to scale and to be future-proof, and
 to this effect it was implemented to deal with a high number of jobs
@@ -104,7 +104,7 @@ database:
    if there are still matching-jobs in its cluster, and if not, the
    cluster is cleared from the workspace.
 
-# {{< anchor link="#persistence" >}} Persistence {#persistence}
+# {{< anchor link="#persistence" >}}Persistence {#persistence}
 
 Documents, indexing results, found differences are all stored in
 MongoDB. To avoid multiple bulk operations on the database, every
@@ -114,7 +114,7 @@ memory cache with an expiry duration between 20 seconds and 1 minute.
 Persistence of detection and matching jobs is also covered, using a
 custom MongoDB Job Store by Michael Klishin and Alex Petrov.
 
-# {{< anchor link="#osgi" >}} OSGi-based architecture {#osgi}
+# {{< anchor link="#osgi" >}}OSGi-based architecture {#osgi}
 
 Vokter support for reading of a given ``MediaType`` is provided by
 Reader modules, where raw content is converted into a clean string
@@ -129,7 +129,7 @@ modules. Using a language detection prediction model, Vokter
 determines the most probable language of the document and queries
 on-demand for available Stemmers by language supported.
 
-# {{< anchor link="#indexing" >}} Indexing {#indexing}
+# {{< anchor link="#indexing" >}}Indexing {#indexing}
 
 The string of text that represents the document snapshot that was
 captured during the Reading phase is passed through a parser that
@@ -158,7 +158,7 @@ parsers when deployed and store them in a blocking queue. The number
 of parsers corresponds to the number of cores available in the
 machine where Vokter was deployed to.
 
-# {{< anchor link="#caveats" >}} Caveats / Future Work {#caveats}
+# {{< anchor link="#caveats" >}}Caveats / Future Work {#caveats}
 
 Despite every part of its architecture having been optimized to
 accommodate to a massive amount of parallel tasks, Vokter has only
@@ -171,7 +171,7 @@ there are currently two main issues that should be addressed with
 higher priority: 1) web crawling functionality; and 2) timeout of
 jobs when clients are missing.
 
-## {{< anchor link="#web-crawling" >}} Web crawling {#web-crawling}
+## {{< anchor link="#web-crawling" >}}Web crawling {#web-crawling}
 
 One way to improve user experience is by integrating web crawling in
 Reader modules, allowing users to set their visit policy (e.g. number
@@ -192,7 +192,7 @@ linked to A and B:
 This implies a more optimized architecture that has the potential of
 significantly reducing the total number of simultaneous jobs.
 
-## {{< anchor link="#fault-tolerance" >}} Fault-tolerance for matching jobs {#fault-tolerance}
+## {{< anchor link="#fault-tolerance" >}}Fault-tolerance for matching jobs {#fault-tolerance}
 
 Only detection jobs can be timed-out after failing too many times to
 load a new snapshot of the document. However, sending a response to

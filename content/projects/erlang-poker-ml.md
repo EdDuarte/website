@@ -52,7 +52,7 @@ This application is composed of three modules:
 - a tree module, that implements the decision tree and the
   probability calculation methods.
 
-# {{< anchor link="#preliminaries" >}} Preliminaries {#preliminaries}
+# {{< anchor link="#preliminaries" >}}Preliminaries {#preliminaries}
 
 A match is considered a result of seven cards that occurred
 throughout four rounds. The four rounds are numbered from 0 to 3:
@@ -76,7 +76,7 @@ Straight; 7. Three Of A Kind; 8. Two Pair; 9. Pair; 10. High Card.
 
 
 
-# {{< anchor link="#main" >}} Main module {#main}
+# {{< anchor link="#main" >}}Main module {#main}
 
 The main module uses the rule-based engine Eresye to store variables
 per match and Texas Hold'em hand rankings. For each match, the user
@@ -105,7 +105,7 @@ operations.
 
 
 
-# {{< anchor link="#decision-tree" >}} Decision tree module {#decision-tree}
+# {{< anchor link="#decision-tree" >}}Decision tree module {#decision-tree}
 
 The decision tree module implements a Decision tree where each node
 corresponds to a round, and each round has 3 branches pointing to 3
@@ -152,7 +152,7 @@ profit.
 
 
 
-# {{< anchor link="#history" >}} History module {#history}
+# {{< anchor link="#history" >}}History module {#history}
 
 The history module is a data history, implemented using an
 alternative Eresye engine (different from the one used in the main

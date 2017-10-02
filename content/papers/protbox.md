@@ -16,8 +16,6 @@ authors:
     - name: Hélder Gomes
       url: http://wiki.ieeta.pt/wiki/index.php/Hélder_Gomes
 links:
-    - name: Source code
-      url: https://github.com/edduarte/protbox
     - name: Paper (LNI)
       url: http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html
     - name: Paper (arXiv)
@@ -26,6 +24,8 @@ links:
       url: /openidentity2014/slides.pdf
     - name: Slides (SlideShare)
       url: http://www.slideshare.net/EduardoDuarte33/oid2014presentation
+    - name: Source code
+      url: https://github.com/edduarte/protbox
 date: "2014-11-05 11:03:00+01:00"
 medium: "https://medium.com/@edduarte/secure-and-trustworthy-file-
 sharing-over-cloud-storage-using-eid-tokens-d8546a4e5a00"

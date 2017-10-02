@@ -170,7 +170,7 @@ aside {
 
 ol,p,ul {
     font-size: 23.5px;
-    letter-spacing: -.01em
+    letter-spacing: -.007em
 }
 
 .summary-container {
@@ -215,8 +215,8 @@ p {
 }
 
 .font-load-1 ol,.font-load-1 ul {
-    letter-spacing: -.04em;
     font-size: 21px;
+    letter-spacing: -.04em;
     margin-top: -18px;
     margin-bottom: -15px
 }
@@ -410,20 +410,21 @@ article header {
     margin-top: 1em
 }
 
-h1,h2,h3,h4,h5,h6 {
+h2,h3,h4,h5,h6 {
     margin-top: 0
-}
-
-.font-load-1 h1 {
-    font-size: 1.987em;
-    margin-top: -.1em;
-    margin-bottom: -.25em
 }
 
 h1 {
     font-size: 1.987em;
     letter-spacing: -.078em;
-    margin-bottom: -.28em
+    margin-top: .11em;
+    margin-bottom: -.02em
+}
+
+.font-load-1 h1 {
+    font-size: 1.987em;
+    margin-top: 0;
+    margin-bottom: 0
 }
 
 .font-load-1 img+h2,.font-load-1 ol+h2,.font-load-1 p+h2,.font-load-1 ul+h2,img+h1,ol+h1,p+h1,ul+h1 {
@@ -440,7 +441,7 @@ h2,h3 {
 
 .myname,h2 {
     font-size: 1.732em;
-    margin-bottom: -.32em
+    margin-bottom: -.03em
 }
 
 .font-load-1 h2 {
@@ -449,7 +450,7 @@ h2,h3 {
 
 .font-load-1 .myname,.font-load-1 h2 {
     font-size: 1.732em;
-    margin-bottom: -.27em
+    margin-bottom: 0
 }
 
 img+h2,ol+h2,p+h2,ul+h2 {
@@ -457,17 +458,19 @@ img+h2,ol+h2,p+h2,ul+h2 {
 }
 
 .font-load-1 h3 {
-    font-size: 1.51em;
     letter-spacing: -.031em
 }
 
 .font-load-1 h3,.font-load-1 h4 {
-    margin-bottom: -.3em
+    margin-bottom: -.1em
 }
 
-h3 {
-    font-size: 1.51em;
-    margin-bottom: -.33em
+h3,h4 {
+    margin-bottom: -.12em
+}
+
+.font-load-1 h3,h3 {
+    font-size: 1.51em
 }
 
 img+h3,ol+h3,p+h3,ul+h3 {
@@ -484,8 +487,7 @@ img+h3,ol+h3,p+h3,ul+h3 {
 }
 
 h4 {
-    letter-spacing: -.07em;
-    margin-bottom: -.35em
+    letter-spacing: -.07em
 }
 
 img+h4,ol+h4,p+h4,ul+h4 {
@@ -499,12 +501,12 @@ img+h4,ol+h4,p+h4,ul+h4 {
 h5 {
     font-size: 1.147em;
     letter-spacing: -.055em;
-    margin-bottom: -.6em
+    margin-bottom: -.37em
 }
 
 .font-load-1 h5 {
     font-size: 1.147em;
-    margin-bottom: -.5em
+    margin-bottom: -.3em
 }
 
 .font-load-1 .logo,.font-load-1 h5,.font-load-1 h6 {
@@ -522,12 +524,12 @@ img+h5,ol+h5,p+h5,ul+h5 {
 h6 {
     font-size: 1em;
     letter-spacing: -.06em;
-    margin-bottom: -.65em
+    margin-bottom: -.45em
 }
 
 .font-load-1 h6 {
     font-size: 1em;
-    margin-bottom: -.55em
+    margin-bottom: -.35em
 }
 
 img+h6,ol+h6,p+h6,ul+h6 {
@@ -564,6 +566,7 @@ kbd,samp {
 
 .links>li {
     margin: 0 4px 0 0;
+    margin-bottom: 3px;
     line-height: 37px;
     display: inline-block;
     position: relative
@@ -790,10 +793,15 @@ img.centered:empty {
 }
 
 .line {
-    margin: 2em auto;
-    width: 80px;
-    height: 2px;
-    background-color: rgba(14,17,21,.25)
+    color: rgba(14,17,21,.25);
+    margin: .8em auto 2em;
+    width: 70px
+}
+
+.line:before {
+    content:"...";
+    font-size: 40px;
+    letter-spacing: 20px
 }
 
 .font-load-1 .mlt-header,.mlt-header {
@@ -818,32 +826,60 @@ img.centered:empty {
     line-height: 1.7em
 }
 
+.anchor:before {
+    content: "#"
+}
+
 .anchor,.font-load-1 .anchor {
     margin-left: -40px
 }
 
-.font-load-1 h1 .anchor,h1 .anchor {
-    margin-right: 8px
+h1 .anchor {
+    margin-right: 18px
 }
 
-.font-load-1 h2 .anchor,h2 .anchor {
-    margin-right: 12.5px
+.font-load-1 h1 .anchor {
+    margin-right: 17px
 }
 
-.font-load-1 h3 .anchor,h3 .anchor {
-    margin-right: 16px
-}
-
-.font-load-1 h4 .anchor,h4 .anchor {
-    margin-right: 18.5px
-}
-
-.font-load-1 h5 .anchor,h5 .anchor {
+h2 .anchor {
     margin-right: 20.5px
 }
 
-.font-load-1 h6 .anchor,h6 .anchor {
+.font-load-1 h2 .anchor {
+    margin-right: 20px
+}
+
+h3 .anchor {
     margin-right: 23px
+}
+
+.font-load-1 h3 .anchor {
+    margin-right: 22.5px
+}
+
+h4 .anchor {
+    margin-right: 25px
+}
+
+.font-load-1 h4 .anchor {
+    margin-right: 24.5px
+}
+
+h5 .anchor {
+    margin-right: 26.5px
+}
+
+.font-load-1 h5 .anchor {
+    margin-right: 26px
+}
+
+h6 .anchor {
+    margin-right: 28.5px
+}
+
+.font-load-1 h6 .anchor {
+    margin-right: 28px
 }
 
 @media screen {
@@ -1040,7 +1076,8 @@ img.centered:empty {
     }
 
     .links {
-        margin-top: .12em;
+        margin-top: .35em;
+        margin-bottom: .1em;
         padding: 0
     }
 
@@ -1050,7 +1087,7 @@ img.centered:empty {
     }
 
     .metadata {
-        margin-top: -.8em;
+        margin-top: -.65em;
         margin-bottom: 0
     }
 
@@ -1101,28 +1138,52 @@ img.centered:empty {
         margin-left: -30px
     }
 
-    .font-load-1 h1 .anchor,h1 .anchor {
-        margin-right: 6px
-    }
-
-    .font-load-1 h2 .anchor,h2 .anchor {
-        margin-right: 7.5px
-    }
-
-    .font-load-1 h3 .anchor,h3 .anchor {
-        margin-right: 9.5px
-    }
-
-    .font-load-1 h4 .anchor,h4 .anchor {
-        margin-right: 10.7px
-    }
-
-    .font-load-1 h5 .anchor,h5 .anchor {
-        margin-right: 11.5px
-    }
-
-    .font-load-1 h6 .anchor,h6 .anchor {
+    h1 .anchor {
         margin-right: 13px
+    }
+
+    .font-load-1 h1 .anchor {
+        margin-right: 12.5px
+    }
+
+    h2 .anchor {
+        margin-right: 14.5px
+    }
+
+    .font-load-1 h2 .anchor {
+        margin-right: 13.5px
+    }
+
+    h3 .anchor {
+        margin-right: 15.5px
+    }
+
+    .font-load-1 h3 .anchor {
+        margin-right: 15px
+    }
+
+    h4 .anchor {
+        margin-right: 16.5px
+    }
+
+    .font-load-1 h4 .anchor {
+        margin-right: 16px
+    }
+
+    h5 .anchor {
+        margin-right: 17.5px
+    }
+
+    .font-load-1 h5 .anchor {
+        margin-right: 17px
+    }
+
+    h6 .anchor {
+        margin-right: 18.5px
+    }
+
+    .font-load-1 h6 .anchor {
+        margin-right: 18px
     }
 }
 
