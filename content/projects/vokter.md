@@ -171,7 +171,7 @@ there are currently two main issues that should be addressed with
 higher priority: 1) web crawling functionality; and 2) timeout of
 jobs when clients are missing.
 
-## {{< anchor link="#web-crawling" >}}Web crawling {#web-crawling}
+## Web crawling {#web-crawling}
 
 One way to improve user experience is by integrating web crawling in
 Reader modules, allowing users to set their visit policy (e.g. number
@@ -192,7 +192,7 @@ linked to A and B:
 This implies a more optimized architecture that has the potential of
 significantly reducing the total number of simultaneous jobs.
 
-## {{< anchor link="#fault-tolerance" >}}Fault-tolerance for matching jobs {#fault-tolerance}
+## Fault-tolerance for matching jobs {#fault-tolerance}
 
 Only detection jobs can be timed-out after failing too many times to
 load a new snapshot of the document. However, sending a response to
