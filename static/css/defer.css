@@ -44,7 +44,7 @@ a {
     text-decoration: none!important
 }
 
-.table>.list-meta a:hover {
+.list-meta-category a:hover {
     text-decoration: underline!important
 }
 
@@ -53,6 +53,10 @@ a {
     background-size: 5px 2px;
     text-size-adjust: 100%;
     hyphens: manual
+}
+
+.list-meta-category a {
+    background-image: none
 }
 
 .list-title a,a {
