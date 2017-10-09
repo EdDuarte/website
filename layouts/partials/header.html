@@ -68,11 +68,11 @@ body {
     clip-path: polygon(0 0,0 0,0 0,0 0)
 }
 
-.table>.list-meta,pre {
+pre {
     font-family: Monaco,Consolas,monospace
 }
 
-.font-load-1 .links,.links,.logo,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
+.table>.list-meta,.font-load-1 .links,.links,.logo,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
     font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif
 }
 
@@ -81,13 +81,13 @@ body {
     font-weight: 400
 }
 
-.font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 summary {
+.font-load-1 .table>.list-meta,.font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 summary {
     font-family: edduarte-headings-regular,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
     font-style: normal;
     font-weight: 700
 }
 
-.font-load-1 summary {
+.font-load-1 .table>.list-meta,.font-load-1 summary {
     font-weight: 400
 }
 
@@ -317,10 +317,6 @@ article header {
 .subtitle {
     letter-spacing: -.065em;
     margin-top: .18em
-}
-
-.anchor,.subtitle,.subtitle a {
-    color: #e21b2a
 }
 
 .metadata {
@@ -565,7 +561,7 @@ kbd,samp {
 
 .links>li {
     margin: 0 4px 0 0;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     line-height: 37px;
     display: inline-block;
     position: relative
@@ -573,7 +569,7 @@ kbd,samp {
 
 .font-load-1 .links>li {
     margin-top: 0;
-    margin-bottom: 4px
+    margin-bottom: 6px
 }
 
 .links>li>a {
@@ -622,11 +618,15 @@ footer>ul>li {
     text-decoration: underline
 }
 
+.anchor,.subtitle,.subtitle a {
+    color: #e21b2a
+}
+
 b,strong {
     color: #050910
 }
 
-.myname,.myname a,.table>.list-meta a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
+.myname,.myname a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
     color: rgba(14,17,21,.9)
 }
 
@@ -635,7 +635,7 @@ b,strong {
 }
 
 .authors,.authors a,.links>li>a,.list-meta-date,.logo,.logo a,.mlt-header,.mlt-header a,.mlt-summary,.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
-    color: rgba(14,17,21,.5)
+    color: rgba(14,17,21,.4)
 }
 
 .authors,.authors a,.logo,.logo a,.mlt-link:hover>.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
@@ -740,13 +740,13 @@ img.centered:empty {
     list-style-type: none;
     margin-top: 3.67em;
     margin-bottom: 2em;
-    margin-left: -96px
+    margin-left: -98px
 }
 
 .font-load-1 .list {
     margin-top: 4em;
     margin-bottom: 2.15em;
-    margin-left: -98px
+    margin-left: -100px
 }
 
 .metadata li,.metadata p,.table>.list-meta,.table>.list-title {
@@ -754,14 +754,15 @@ img.centered:empty {
 }
 
 .table>.list-meta {
+    font-size: 13px;
     line-height: 1.3em;
-    font-size: 11.5px;
     margin-top: .35em;
     text-align: right
 }
 
 .font-load-1 .table>.list-meta {
-    font-size: 11.5px;
+    font-size: 13px;
+    letter-spacing: .02em;
     margin-top: .3em
 }
 
@@ -1258,7 +1259,6 @@ h6 .anchor {
     }
 
     .font-load-1 .table>.list-meta,.table>.list-meta {
-        font-size: 11.7px;
         margin-bottom: 0
     }
 
@@ -1455,6 +1455,14 @@ h6 .anchor {
     .anchor {
         display: none;
         margin-right: 0
+    }
+
+    .links>li {
+        margin-bottom: 3px
+    }
+
+    .font-load-1 .links>li {
+        margin-bottom: 4px
     }
 }
 
