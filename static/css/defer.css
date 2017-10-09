@@ -63,11 +63,7 @@ a {
     background-position: 0 1em
 }
 
-.font-load-1 .list-title a {
-    background-position: 0 1.12em
-}
-
-.font-load-1 a {
+.font-load-1 .list-title a,.font-load-1 a {
     background-position: 0 1.18em
 }
 

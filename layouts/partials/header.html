@@ -553,6 +553,13 @@ kbd,samp {
     font-size: .875em
 }
 
+.list-meta-category a {
+    color: rgba(14,17,21,.6);
+    background-color: rgba(14,17,21,.07);
+    border-radius: 4px;
+    padding: .1em .5em
+}
+
 .links {
     font-style: normal;
     margin: 0;
@@ -626,11 +633,11 @@ b,strong {
     color: #050910
 }
 
-.list-meta-category a,.myname,.myname a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
+.myname,.myname a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
     color: rgba(14,17,21,.9)
 }
 
-.list-meta-category a,.myname,.myname a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
+.myname,.myname a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
     text-decoration-color: rgba(14,17,21,.9)
 }
 
@@ -657,7 +664,7 @@ h1,h2,h3,h4 {
 }
 
 .social {
-    padding-top: .6em;
+    padding-top: .48em;
     height: 22px
 }
 
@@ -755,30 +762,29 @@ img.centered:empty {
 
 .table>.list-meta {
     font-size: 13px;
-    line-height: 1.3em;
-    margin-top: .27em;
+    line-height: 1.6em;
+    padding-bottom: .53em;
     text-align: right
 }
 
 .font-load-1 .table>.list-meta {
     font-size: 13px;
     letter-spacing: .02em;
-    margin-top: .23em
+    padding-bottom: .7em
 }
 
 .table>.list-title {
-    font-size: .8em;
-    line-height: 1.3em;
-    margin-top: 0;
-    margin-bottom: 0
+    font-size: 20.3px;
+    letter-spacing: .018em;
+    line-height: 1.23em;
+    margin-top: -.08em
 }
 
 .font-load-1 .table>.list-title {
-    font-size: .76em;
-    letter-spacing: -.02em;
-    line-height: 1.6em;
-    margin-top: 0;
-    margin-bottom: .515em
+    font-size: 18px;
+    letter-spacing: -.01em;
+    line-height: 1.33em;
+    margin-top: 0
 }
 
 .metadata>.table {
@@ -946,31 +952,29 @@ h6 .anchor {
     .list>li>.table {
         flex-direction: column;
         align-items: normal;
-        margin-bottom: .9em
+        margin-bottom: .88em
     }
 
-    .table>.list-meta {
+    .font-load-1 .list>li>.table {
+        margin-bottom: 1em
+    }
+
+    .font-load-1 .table>.list-meta,.table>.list-meta {
+        padding-bottom: 0;
         text-align: left
     }
 
-    .table>.list-title {
-        margin-bottom: -.092em
-    }
-
-    .font-load-1 .table>.list-title {
-        margin-bottom: 0
-    }
-
     .list-meta-category:before {
-        content: " | "
+        content: " ";
+        white-space: pre
     }
 }
 
 @media screen and (max-width:1080px),print {
 
     article header {
-        padding-top: .3em;
-        padding-bottom: .1em;
+        padding-top: 0;
+        padding-bottom: 0;
         margin-top: .2em;
         margin-bottom: .2em
     }
@@ -1262,10 +1266,6 @@ h6 .anchor {
         font-size: 20px
     }
 
-    .font-load-1 .table>.list-meta,.table>.list-meta {
-        margin-bottom: 0
-    }
-
     .list {
         margin-top: 1.8em
     }
@@ -1274,20 +1274,22 @@ h6 .anchor {
         margin-top: 2em
     }
 
+    .list>li>.table {
+        margin-bottom: 1.05em
+    }
+
+    .font-load-1 .list>li>.table {
+        margin-bottom: 1em
+    }
+
     .table>.list-title {
-        font-size: .93em;
         letter-spacing: 0;
-        line-height: 1.16em;
-        margin-top: .1em;
-        margin-bottom: .04em
+        line-height: 1.16em
     }
 
     .font-load-1 .table>.list-title {
-        font-size: .88em;
         letter-spacing: -.02em;
-        line-height: 1.34em;
-        margin-top: .1em;
-        margin-bottom: .2em
+        line-height: 1.34em
     }
 
     footer>.table {
@@ -1433,14 +1435,6 @@ h6 .anchor {
 
     .font-load-1 code,code {
         font-size: 17px
-    }
-
-    .logo {
-        padding-top: 1.063em
-    }
-
-    .font-load-1 .logo {
-        margin-top: .1em
     }
 
     .mlt-summary {
