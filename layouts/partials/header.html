@@ -72,32 +72,32 @@ pre {
     font-family: Monaco,Consolas,monospace
 }
 
-.table>.list-meta,.font-load-1 .links,.links,.logo,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
+.list-title,.table>.list-meta,.font-load-1 .links,.links,.logo,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
     font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif
 }
 
-.font-load-1 .links,.logo,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
+.list-title,.font-load-1 .links,.logo,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
     font-style: normal;
     font-weight: 400
 }
 
-.font-load-1 .table>.list-meta,.font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 summary {
+.font-load-1 .list-title,.font-load-1 .table>.list-meta,.font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 summary {
     font-family: edduarte-headings-regular,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
     font-style: normal;
     font-weight: 700
 }
 
-.font-load-1 .table>.list-meta,.font-load-1 summary {
+.font-load-1 .list-title,.font-load-1 .table>.list-meta,.font-load-1 summary {
     font-weight: 400
 }
 
-.table>.list-title,figcaption,ol,p,ul {
+figcaption,ol,p,ul {
     font-family: "Times New Roman",Times,serif;
     font-style: normal;
     font-weight: 400
 }
 
-.font-load-1 .table>.list-title,.font-load-1 figcaption,.font-load-1 ol,.font-load-1 p,.font-load-1 ul {
+.font-load-1 figcaption,.font-load-1 ol,.font-load-1 p,.font-load-1 ul {
     font-family: edduarte-content-regular,"Times New Roman",Times,serif;
     font-style: normal;
     font-weight: 400
@@ -176,6 +176,7 @@ ol,p,ul {
 .summary-container {
     max-width: 420px;
     margin: 0 auto;
+    margin-top: .1em;
     text-align: center
 }
 
@@ -226,8 +227,7 @@ p {
 }
 
 .font-load-1 summary {
-    font-size: 1.29em;
-    margin-top: 0
+    font-size: 1.29em
 }
 
 .font-load-1 p,.font-load-1 summary,em {
@@ -401,6 +401,12 @@ article header {
     height: 14px
 }
 
+.icon-external-link {
+    padding-right: 6px;
+    width: 18px;
+    height: 18px
+}
+
 .font-load-1 blockquote footer,blockquote footer {
     margin-top: 1em
 }
@@ -413,13 +419,13 @@ h1 {
     font-size: 1.987em;
     letter-spacing: -.078em;
     margin-top: .11em;
-    margin-bottom: -.02em
+    margin-bottom: -.12em
 }
 
 .font-load-1 h1 {
     font-size: 1.987em;
     margin-top: 0;
-    margin-bottom: 0
+    margin-bottom: -.1em
 }
 
 .font-load-1 .highlight+h2,.font-load-1 img+h2,.font-load-1 ol+h2,.font-load-1 p+h2,.highlight+h1,img+h1,ol+h1,p+h1 {
@@ -436,7 +442,7 @@ h2,h3 {
 
 .myname,h2 {
     font-size: 1.732em;
-    margin-bottom: -.03em
+    margin-bottom: -.16em
 }
 
 .font-load-1 h2 {
@@ -445,7 +451,7 @@ h2,h3 {
 
 .font-load-1 .myname,.font-load-1 h2 {
     font-size: 1.732em;
-    margin-bottom: 0
+    margin-bottom: -.15em
 }
 
 .highlight+h2,img+h2,ol+h2,p+h2 {
@@ -617,11 +623,11 @@ footer>ul>li {
     letter-spacing: 0
 }
 
-.anchor,.links a,.logo a,.mlt-header a,.mlt-link,.list-meta-category a,footer a {
+.list-title a,.anchor,.links a,.logo a,.mlt-header a,.mlt-link,.list-meta-category a,footer a {
     text-decoration: none
 }
 
-.anchor:hover,.logo a:hover,.mlt-header a:hover,.mlt-link:hover>.mlt-title,.list-meta-category a:hover,footer a:hover {
+.list-title a:hover,.anchor:hover,.logo a:hover,.mlt-header a:hover,.mlt-link:hover>.mlt-title,.list-meta-category a:hover,footer a:hover {
     text-decoration: underline
 }
 
@@ -633,7 +639,7 @@ b,strong {
     color: #010409
 }
 
-.myname,.myname a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
+.list-title a,.myname,.myname a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
     color: rgba(14,17,21,.9)
 }
 
@@ -743,48 +749,52 @@ img.centered:empty {
     order: 2
 }
 
-.list {
-    list-style-type: none;
-    margin-top: 3.67em;
-    margin-bottom: 2em;
-    margin-left: -98px
+.list>li>.table {
+    margin-bottom: .9em
 }
 
-.font-load-1 .list {
-    margin-top: 4em;
-    margin-bottom: 2.15em;
+.font-load-1 .list>li>.table {
+    margin-bottom: 1em
+}
+
+.list {
+    list-style-type: none;
+    margin-top: 2.67em;
+    margin-bottom: 1.7em;
     margin-left: -100px
 }
 
-.metadata li,.metadata p,.table>.list-meta,.table>.list-title {
+.font-load-1 .list {
+    margin-top: 3em;
+    margin-bottom: 2em;
+    margin-left: -101px
+}
+
+.metadata li,.metadata p,.table>.list-meta,.list-title {
     letter-spacing: -.02em
 }
 
 .table>.list-meta {
     font-size: 13px;
     line-height: 1.6em;
-    padding-bottom: .53em;
     text-align: right
 }
 
 .font-load-1 .table>.list-meta {
     font-size: 13px;
-    letter-spacing: .02em;
-    padding-bottom: .7em
+    letter-spacing: .02em
 }
 
-.table>.list-title {
-    font-size: 20.3px;
-    letter-spacing: .018em;
-    line-height: 1.23em;
-    margin-top: -.08em
+.list-title {
+    font-size: 23.3px;
+    letter-spacing: -.024em;
+    line-height: 1.45em
 }
 
-.font-load-1 .table>.list-title {
-    font-size: 18px;
-    letter-spacing: -.01em;
-    line-height: 1.33em;
-    margin-top: 0
+.font-load-1 .list-title {
+    font-size: 25px;
+    letter-spacing: -.008em;
+    line-height: 1.33em
 }
 
 .metadata>.table {
@@ -939,7 +949,7 @@ h6 .anchor {
     .list {
         max-width: 100%;
         margin-top: 2.9em;
-        margin-bottom: 1.9em;
+        margin-bottom: 1.72em;
         margin-left: 0
     }
 
@@ -952,7 +962,7 @@ h6 .anchor {
     .list>li>.table {
         flex-direction: column;
         align-items: normal;
-        margin-bottom: .88em
+        margin-bottom: .85em
     }
 
     .font-load-1 .list>li>.table {
@@ -960,7 +970,7 @@ h6 .anchor {
     }
 
     .font-load-1 .table>.list-meta,.table>.list-meta {
-        padding-bottom: .2em;
+        margin-bottom: .2em;
         text-align: left
     }
 
@@ -1243,13 +1253,17 @@ h6 .anchor {
 
     .summary-container {
         max-width: 320px;
+        margin-top: .35em
+    }
+
+    .font-load-1 .summary-container {
         margin-top: .4em
     }
 
     summary {
         font-size: 16.8px;
-        line-height: 2em;
-        letter-spacing: -.02em
+        letter-spacing: -.02em;
+        line-height: 2em
     }
 
     .font-load-1 summary {
@@ -1282,12 +1296,14 @@ h6 .anchor {
         margin-bottom: 1.3em
     }
 
-    .table>.list-title {
-        letter-spacing: 0;
-        line-height: 1.16em
+    .list-title {
+        font-size: 19px;
+        letter-spacing: -.045em;
+        line-height: 1.34em
     }
 
-    .font-load-1 .table>.list-title {
+    .font-load-1 .list-title {
+        font-size: 20px;
         letter-spacing: -.02em;
         line-height: 1.34em
     }
@@ -1374,20 +1390,20 @@ h6 .anchor {
     }
 
     h1 {
-        margin-bottom: -.28em
+        margin-bottom: -.38em
     }
 
     .font-load-1 h1 {
         margin-top: -.1em;
-        margin-bottom: -.25em
+        margin-bottom: -.35em
     }
 
     .myname,h2 {
-        margin-bottom: -.3em
+        margin-bottom: -.4em
     }
 
     .font-load-1 .myname,.font-load-1 h2 {
-        margin-bottom: -.24em
+        margin-bottom: -.34em
     }
 
     h3,h4 {

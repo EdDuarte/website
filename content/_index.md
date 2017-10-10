@@ -12,8 +12,8 @@ Over three years of hands-on experience with Backend Architecture,
 Mobile Development, UI/UX Design and Information Retrieval. Worked
 extensively with languages like Java, Kotlin, Javascript ES6,
 Objective-C and Swift, and technologies like Spring, Jetty / Tomcat,
-Django, Socket.io, Websocket, MQTT, Redis, Hazelcast, Cassandra,
-MongoDB, Android and iOS.
+Socket.io, Websocket, MQTT, Redis, Hazelcast, Cassandra, MongoDB,
+Android and iOS.
 
 Recently finished my internship at
 [Ubiwhere](http://www.ubiwhere.com/en/), where I worked as a backend

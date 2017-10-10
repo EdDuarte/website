@@ -48,23 +48,27 @@ a {
     text-decoration: underline!important
 }
 
-.anchor:hover,a {
+.anchor:hover,.list-title a:hover,a {
     background-image: linear-gradient(to right,#e21b2a 50%,#e21b2a 50%);
     background-size: 5px 2px;
     text-size-adjust: 100%;
     hyphens: manual
 }
 
-.list-meta-category a {
+.list-meta-category a,.list-title a {
     background-image: none
 }
 
-.list-title a,a {
+.list-title a:hover,a {
     background-position: 0 1em
 }
 
-.font-load-1 .list-title a {
-    background-position: 0 1.16em
+.list-title a:hover {
+    background-position: 0 1.4em
+}
+
+.font-load-1 .list-title a:hover {
+    background-position: 0 1.3em
 }
 
 .font-load-1 a {
