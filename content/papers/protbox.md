@@ -5,7 +5,7 @@ subtitle: "Open Identity Summit 2014, Fraunhofer IAO Institute
 Center, Stuttgart, Germany"
 description: "Open-source & cross-platform app that performs file
 encryption and user authentication on existing cloud storage services
-using eID tokens."
+using eID tokens"
 authors:
     - name: Eduardo Duarte
       url: https://www.edduarte.com

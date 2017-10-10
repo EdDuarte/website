@@ -5,7 +5,7 @@ subtitle: "HCI International 2016, The Westin Harbour Castle Hotel,
 Toronto, Canada"
 description: "Open-source WebGL app for tri-dimensional worldwide
 data visualization, with customizable data-to-visual mapping and
-filtering with adjustable scales."
+filtering with adjustable scales"
 authors:
     - name: Eduardo Duarte
       url: https://www.edduarte.com

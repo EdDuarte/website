@@ -51,8 +51,8 @@
 <h3 class="mlt-header">Next on <a href="/{{.Section}}/">{{.Section}}</a></h3>
 <a class="mlt-link" href="{{.NextInSection.Permalink}}">
 <h4 class="mlt-title">{{.NextInSection.Title}}</h4>
-{{ if .NextInSection.Summary }}
-<p class="mlt-summary">{{.NextInSection.Summary}}...</p>
+{{ if .NextInSection.Params.description }}
+<p class="mlt-summary">{{.NextInSection.Params.description}}</p>
 {{ end }}
 </a>
 </section>
@@ -66,7 +66,7 @@
 <h3 class="mlt-header">More on <a href="/{{.Section}}/">{{.Section}}</a></h3>
 <a class="mlt-link" href="{{.PrevInSection.Permalink}}">
 <h4 class="mlt-title">{{.PrevInSection.Title}}</h4>
-<p class="mlt-summary">{{.PrevInSection.Summary}}...</p>
+<p class="mlt-summary">{{.PrevInSection.Params.description}}</p>
 </a>
 </section>
 {{ end }}
