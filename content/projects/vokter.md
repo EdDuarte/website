@@ -12,7 +12,9 @@ servers which manage a persistent state of Vokter on the web instead
 of locally, are not addressed here (although I do hope to address
 them later in a future post)."
 links:
-    - name: Source code
+    - name: Project Hub
+      url: https://github.com/vokter
+    - name: Core-lib source code
       url: https://github.com/vokter/vokter
 date: "2016-06-19 19:26:00+01:00"
 medium: "https://medium.com/@edduarte/vokter-a-java-library-that-dete

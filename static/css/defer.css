@@ -36,7 +36,7 @@ p {
     background-position: 0 1.15em
 }
 
-.authors a,.metadata a,aside a:hover,figcaption a,footer a:hover {
+.anchor:hover,.authors a,.metadata a,aside a:hover,figcaption a,footer a:hover {
     background-image: linear-gradient(to right,rgba(14,17,21,.15) 50%,rgba(14,17,21,.15) 50%)
 }
 
@@ -48,7 +48,7 @@ a {
     text-decoration: underline!important
 }
 
-.anchor:hover,.list-title a:hover,a {
+.list-title a:hover,a {
     background-image: linear-gradient(to right,#e21b2a 50%,#e21b2a 50%);
     background-size: 5px 2px;
     text-size-adjust: 100%;
@@ -63,12 +63,8 @@ a {
     background-position: 0 1em
 }
 
-.list-title a:hover {
-    background-position: 0 1.4em
-}
-
 .font-load-1 .list-title a:hover {
-    background-position: 0 1.3em
+    background-position: 0 1.16em
 }
 
 .font-load-1 a {

@@ -72,36 +72,36 @@ pre {
     font-family: Monaco,Consolas,monospace
 }
 
-.list-title,.table>.list-meta,.font-load-1 .links,.links,.logo,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6 {
+.table>.list-meta,.font-load-1 .links,.links,.logo,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
     font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif
 }
 
-.list-title,.font-load-1 .links,.logo,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6 {
+.font-load-1 .links,.logo,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
     font-style: normal;
     font-weight: 400
 }
 
-.font-load-1 .list-title,.font-load-1 .table>.list-meta,.font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6 {
+.font-load-1 .table>.list-meta,.font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 summary {
     font-family: edduarte-headings-regular,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
     font-style: normal;
     font-weight: 700
 }
 
-.font-load-1 .list-title,.font-load-1 .table>.list-meta {
+.font-load-1 .table>.list-meta,.font-load-1 summary {
     font-weight: 400
 }
 
-figcaption,ol,p,ul,summary {
+.list-title,figcaption,ol,p,ul {
     font-family: "Times New Roman",Times,serif;
     font-style: normal;
     font-weight: 400
 }
 
-.font-load-1 figcaption,.font-load-1 ol,.font-load-1 p,.font-load-1 ul,.font-load-1 summary,.font-load-1 b,.font-load-1 em,.font-load-1 strong {
+.font-load-1 .list-title,.font-load-1 figcaption,.font-load-1 ol,.font-load-1 p,.font-load-1 ul,.font-load-1 b,.font-load-1 em,.font-load-1 strong {
     font-family: edduarte-content-regular,"Times New Roman",Times,serif;
 }
 
-.font-load-1 figcaption,.font-load-1 ol,.font-load-1 p,.font-load-1 ul,.font-load-1 summary {
+.font-load-1 .list-title,.font-load-1 figcaption,.font-load-1 ol,.font-load-1 p,.font-load-1 ul {
     font-style: normal;
     font-weight: 400
 }
@@ -173,20 +173,21 @@ ol,p,ul {
 }
 
 .summary-container {
-    max-width: 450px;
+    max-width: 420px;
     margin: 0 auto;
-    margin-top: .15em;
+    margin-top: .2em;
     text-align: center
 }
 
 summary {
-    font-size: 28.2px;
-    letter-spacing: -.005em;
-    line-height: 1.6em
+    font-size: 23px;
+    letter-spacing: -.05em;
+    line-height: 1.97em
 }
 
 .font-load-1 summary {
     font-size: 25px;
+    letter-spacing: -.005em;
     line-height: 1.8em
 }
 
@@ -283,13 +284,13 @@ header {
 }
 
 article header {
+    margin-top: .2em;
     margin-bottom: .25em;
     padding-top: 2em;
     padding-bottom: 1.5em
 }
 
 .font-load-1 article header {
-    margin-top: .2em;
     margin-bottom: .2em
 }
 
@@ -403,8 +404,8 @@ article header {
 
 .icon-external-link {
     padding-right: 6px;
-    width: 18px;
-    height: 18px
+    width: 16px;
+    height: 16px
 }
 
 .font-load-1 blockquote footer,blockquote footer {
@@ -627,11 +628,15 @@ footer>ul>li {
     text-decoration: none
 }
 
-.list-title a:hover,.anchor:hover,.logo a:hover,.mlt-header a:hover,.mlt-link:hover>.mlt-title,.list-meta-category a:hover,footer a:hover {
+.list-title a:hover,.logo a:hover,.mlt-header a:hover,.mlt-link:hover>.mlt-title,.list-meta-category a:hover,footer a:hover {
     text-decoration: underline
 }
 
-.anchor,.subtitle,.subtitle a {
+.list-title a:hover {
+    text-decoration-color: #e21b2a
+}
+
+.subtitle,.subtitle a {
     color: #e21b2a
 }
 
@@ -639,7 +644,7 @@ b,strong {
     color: #010409
 }
 
-.list-title a,.myname,.myname a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,summary {
+.myname,.myname a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,summary {
     color: rgba(14,17,21,.9)
 }
 
@@ -651,7 +656,11 @@ b,strong {
     color: rgba(14,17,21,.4)
 }
 
-.authors,.authors a,.logo,.logo a,.mlt-link:hover>.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
+.anchor {
+    color: rgba(14,17,21,.15)
+}
+
+.anchor:hover,.authors,.authors a,.logo,.logo a,.mlt-link:hover>.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
     text-decoration-color: rgba(14,17,21,.15)
 }
 
@@ -750,11 +759,11 @@ img.centered:empty {
 }
 
 .list>li>.table {
-    margin-bottom: .9em
+    margin-bottom: 1.3em
 }
 
 .font-load-1 .list>li>.table {
-    margin-bottom: 1em
+    margin-bottom: 1.38em
 }
 
 .list {
@@ -777,6 +786,7 @@ img.centered:empty {
 .table>.list-meta {
     font-size: 13px;
     line-height: 1.6em;
+    margin-top: .17em;
     text-align: right
 }
 
@@ -786,15 +796,15 @@ img.centered:empty {
 }
 
 .list-title {
-    font-size: 18.5px;
+    font-size: 22.5px;
     letter-spacing: -.014em;
-    line-height: 1.45em
+    line-height: 1.4em;
 }
 
 .font-load-1 .list-title {
     font-size: 20px;
-    letter-spacing: -.008em;
-    line-height: 1.33em
+    letter-spacing: -.041em;
+    line-height: 1.53em
 }
 
 .metadata>.table {
@@ -1056,7 +1066,7 @@ h6 .anchor {
     }
 
     .font-load-1 h1,h1 {
-        font-size: 1.542em
+        font-size: 1.642em
     }
 
     .font-load-1 h2,h2 {
@@ -1252,20 +1262,20 @@ h6 .anchor {
     }
 
     .summary-container {
-        max-width: 350px;
+        max-width: 320px;
         margin-top: .5em
     }
 
     summary {
-        font-size: 19.9px;
-        letter-spacing: .0115em;
-        line-height: 1.57em
+        font-size: 16.8px;
+        letter-spacing: -.02em;
+        line-height: 2em
     }
 
     .font-load-1 summary {
         font-size: 18px;
-        letter-spacing: -.024em;
-        line-height: 1.75em
+        letter-spacing: -.01em;
+        line-height: 1.85em
     }
 
     .prologue {
@@ -1293,15 +1303,15 @@ h6 .anchor {
     }
 
     .list-title {
-        font-size: 17px;
-        letter-spacing: -.045em;
-        line-height: 1.34em
+        font-size: 18.9px;
+        letter-spacing: .0115em;
+        line-height: 1.37em
     }
 
     .font-load-1 .list-title {
-        font-size: 18px;
-        letter-spacing: -.02em;
-        line-height: 1.34em
+        font-size: 17px;
+        letter-spacing: -.022em;
+        line-height: 1.55em
     }
 
     footer>.table {
@@ -1489,8 +1499,8 @@ h6 .anchor {
     }
 
     .icon-external-link {
-        width: 16px;
-        height: 16px
+        width: 14px;
+        height: 14px
     }
 }
 
