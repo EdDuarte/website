@@ -36,7 +36,7 @@ p {
     background-position: 0 1.15em
 }
 
-.anchor:hover,.authors a,.metadata a,aside a:hover,figcaption a,footer a:hover {
+.authors a,.metadata a,aside a:hover,figcaption a,footer a:hover {
     background-image: linear-gradient(to right,rgba(14,17,21,.15) 50%,rgba(14,17,21,.15) 50%)
 }
 
@@ -48,27 +48,27 @@ a {
     text-decoration: underline!important
 }
 
-.list-title a:hover,a {
+a {
     background-image: linear-gradient(to right,#e21b2a 50%,#e21b2a 50%);
     background-size: 5px 2px;
     text-size-adjust: 100%;
     hyphens: manual
 }
 
-.list-meta-category a,.list-title a {
+.list-meta-category a {
     background-image: none
 }
 
-.list-title a:hover,a {
+a {
     background-position: 0 1em
-}
-
-.font-load-1 .list-title a:hover {
-    background-position: 0 1.16em
 }
 
 .font-load-1 a {
     background-position: 0 1.18em
+}
+
+.font-load-1 .list-title a {
+    background-position: 0 1.16em
 }
 
 .icon {
@@ -81,8 +81,8 @@ a {
 }
 
 .social-icon {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     margin-left: 10px;
     margin-right: 10px
 }

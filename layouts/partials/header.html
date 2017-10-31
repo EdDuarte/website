@@ -44,7 +44,7 @@
 <style type="text/css">
 
 a,html {
-    color: rgb(14,17,21)
+    color: rgba(14,17,21,.9)
 }
 
 html {
@@ -173,20 +173,20 @@ ol,p,ul {
 }
 
 .summary-container {
-    max-width: 420px;
+    max-width: 390px;
     margin: 0 auto;
     margin-top: .2em;
     text-align: center
 }
 
 summary {
-    font-size: 23px;
+    font-size: 21px;
     letter-spacing: -.05em;
-    line-height: 1.97em
+    line-height: 1.93em
 }
 
 .font-load-1 summary {
-    font-size: 25px;
+    font-size: 23px;
     letter-spacing: -.005em;
     line-height: 1.8em
 }
@@ -417,24 +417,28 @@ h2,h3,h4,h5,h6 {
 }
 
 h1 {
-    font-size: 1.987em;
+    font-size: 2em;
     letter-spacing: -.078em;
     margin-top: .11em;
     margin-bottom: -.12em
 }
 
 .font-load-1 h1 {
-    font-size: 1.987em;
+    font-size: 2em;
     margin-top: 0;
     margin-bottom: -.1em
 }
 
-.font-load-1 .highlight+h2,.font-load-1 img+h2,.font-load-1 ol+h2,.font-load-1 p+h2,.highlight+h1,img+h1,ol+h1,p+h1 {
-    padding-top: 1em
+.highlight+h1,img+h1,ul+h1,ol+h1,p+h1 {
+    padding-top: 1.87em
 }
 
-.font-load-1 .highlight+h1,.font-load-1 img+h1,.font-load-1 ol+h1,.font-load-1 p+h1  {
-    padding-top: 1.13em
+.font-load-1 .highlight+h1,.font-load-1 img+h1,.font-load-1 ul+h1,.font-load-1 ol+h1,.font-load-1 p+h1  {
+    padding-top: 2em
+}
+
+.font-load-1 .highlight+h2,.font-load-1 img+h2,.font-load-1 ul+h2,.font-load-1 ol+h2,.font-load-1 p+h2 {
+    padding-top: 1em
 }
 
 h2,h3 {
@@ -442,7 +446,7 @@ h2,h3 {
 }
 
 .myname,h2 {
-    font-size: 1.732em;
+    font-size: 1.588em;
     margin-bottom: -.16em
 }
 
@@ -451,7 +455,7 @@ h2,h3 {
 }
 
 .font-load-1 .myname,.font-load-1 h2 {
-    font-size: 1.732em;
+    font-size: 1.588em;
     margin-bottom: -.15em
 }
 
@@ -472,7 +476,7 @@ h3,h4 {
 }
 
 .font-load-1 h3,h3 {
-    font-size: 1.51em
+    font-size: 1.414em
 }
 
 .highlight+h3,img+h3,ol+h3,p+h3 {
@@ -484,7 +488,7 @@ h3,h4 {
 }
 
 .font-load-1 h4,h4 {
-    font-size: 1.316em;
+    font-size: 1.26em;
     letter-spacing: -.025em
 }
 
@@ -501,13 +505,13 @@ h4 {
 }
 
 h5 {
-    font-size: 1.147em;
+    font-size: 1.123em;
     letter-spacing: -.055em;
     margin-bottom: -.37em
 }
 
 .font-load-1 h5 {
-    font-size: 1.147em;
+    font-size: 1.149em;
     margin-bottom: -.3em
 }
 
@@ -624,7 +628,7 @@ footer>ul>li {
     letter-spacing: 0
 }
 
-.list-title a,.anchor,.links a,.logo a,.mlt-header a,.mlt-link,.list-meta-category a,footer a {
+.anchor,.links a,.logo a,.mlt-header a,.mlt-link,.list-meta-category a,footer a {
     text-decoration: none
 }
 
@@ -645,11 +649,11 @@ b,strong {
 }
 
 .myname,.myname a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,summary {
-    color: rgba(14,17,21,.9)
+    color: rgba(14,17,21,.85)
 }
 
 .myname,.myname a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
-    text-decoration-color: rgba(14,17,21,.9)
+    text-decoration-color: rgba(14,17,21,.85)
 }
 
 .authors,.authors a,.links>li>a,.list-meta-date,.list-meta-category,.logo,.logo a,.mlt-header,.mlt-header a,.mlt-summary,.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
@@ -657,11 +661,16 @@ b,strong {
 }
 
 .anchor {
-    color: rgba(14,17,21,.15)
+    color: rgba(14,17,21,.1)
 }
 
-.anchor:hover,.authors,.authors a,.logo,.logo a,.mlt-link:hover>.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
-    text-decoration-color: rgba(14,17,21,.15)
+.anchor:hover {
+    color: #e21b2a;
+    text-decoration: none
+}
+
+.authors,.authors a,.logo,.logo a,.mlt-link:hover>.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
+    text-decoration-color: rgba(14,17,21,.1)
 }
 
 h1,h2,h3,h4 {
@@ -679,11 +688,12 @@ h1,h2,h3,h4 {
 }
 
 .social {
-    padding-top: .58em;
+    padding-top: .4em;
     height: 22px
 }
 
 .font-load-1 .social {
+    padding-top: .37em;
     letter-spacing: .01em
 }
 
@@ -769,13 +779,13 @@ img.centered:empty {
 .list {
     list-style-type: none;
     margin-top: 3.65em;
-    margin-bottom: 1.7em;
+    margin-bottom: 2.65em;
     margin-left: -100px
 }
 
 .font-load-1 .list {
     margin-top: 4em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     margin-left: -101px
 }
 
@@ -830,15 +840,15 @@ img.centered:empty {
 }
 
 .line {
-    color: rgba(14,17,21,.15);
-    margin: .2em auto 1.5em;
+    color: rgba(14,17,21,.4);
+    margin: 1.5em auto;
     width: 70px
 }
 
 .line:before {
-    content:"...";
-    font-size: 40px;
-    letter-spacing: 20px
+    content:"•••";
+    font-size: 14px;
+    letter-spacing: 25px
 }
 
 .font-load-1 .mlt-header,.mlt-header {
@@ -1061,6 +1071,14 @@ h6 .anchor {
         letter-spacing: -.028em
     }
 
+    .highlight+h1,img+h1,ul+h1,ol+h1,p+h1 {
+        padding-top: 1.07em
+    }
+
+    .font-load-1 .highlight+h1,.font-load-1 img+h1,.font-load-1 ul+h1,.font-load-1 ol+h1,.font-load-1 p+h1  {
+        padding-top: 1.2em
+    }
+
     .font-load-1 h1:first-of-type,h1:first-of-type {
         margin-top: .6em
     }
@@ -1250,13 +1268,13 @@ h6 .anchor {
     }
 
     ol,p,ul {
-        font-size: 19.9px;
+        font-size: 18.9px;
         letter-spacing: .0115em;
         line-height: 1.57em
     }
 
     .font-load-1 ol,.font-load-1 p,.font-load-1 ul {
-        font-size: 18px;
+        font-size: 17px;
         letter-spacing: -.022em;
         line-height: 1.75em
     }
@@ -1279,11 +1297,11 @@ h6 .anchor {
     }
 
     .prologue {
-        font-size: 22.5px
+        font-size: 20.3px
     }
 
     .font-load-1 .prologue {
-        font-size: 20px
+        font-size: 18px
     }
 
     .list {
@@ -1322,12 +1340,12 @@ h6 .anchor {
     }
 
     .social {
-        margin-top: -.1em;
+        margin-top: .2em;
         margin-bottom: .9em
     }
 
     .font-load-1 .social {
-        margin-top: -.1em;
+        margin-top: .2em;
         margin-bottom: 1em
     }
 
@@ -1368,23 +1386,23 @@ h6 .anchor {
     }
 
     .font-load-1 .myname,.myname,.font-load-1 h1,h1 {
-        font-size: 1.341em
+        font-size: 1.5em
     }
 
     .font-load-1 h2,h2 {
-        font-size: 1.265em
+        font-size: 1.383em
     }
 
     .font-load-1 h3,h3 {
-        font-size: 1.193em
+        font-size: 1.276em
     }
 
     .font-load-1 h4,h4 {
-        font-size: 1.125em
+        font-size: 1.176em
     }
 
     .font-load-1 h5,h5 {
-        font-size: 1.061em
+        font-size: 1.085em
     }
 
     .font-load-1 h6,h6 {
@@ -1501,6 +1519,16 @@ h6 .anchor {
     .icon-external-link {
         width: 14px;
         height: 14px
+    }
+
+    .line {
+        width: 50px;
+        margin: 1em auto
+    }
+
+    .line:before {
+        font-size: 10px;
+        letter-spacing: 20px
     }
 }
 
