@@ -174,8 +174,7 @@ ol,p,ul {
 
 .summary-container {
     max-width: 390px;
-    margin: 0 auto;
-    margin-top: .2em;
+    margin: .2em auto 0;
     text-align: center
 }
 
@@ -187,7 +186,6 @@ summary {
 
 .font-load-1 summary {
     font-size: 23px;
-    letter-spacing: -.005em;
     line-height: 1.8em
 }
 
@@ -215,17 +213,13 @@ p {
     margin-bottom: 0
 }
 
-.font-load-1 p {
-    font-size: 21px;
-    margin-top: .6em
-}
-
 .font-load-1 ol,.font-load-1 p,.font-load-1 ul {
+    font-size: 21px;
+    margin-top: .6em;
     line-height: 1.68em
 }
 
 .font-load-1 ol,.font-load-1 ul {
-    font-size: 21px;
     letter-spacing: -.04em;
     margin-top: -18px;
     margin-bottom: -15px
@@ -286,7 +280,6 @@ header {
 article header {
     margin-top: .2em;
     margin-bottom: .25em;
-    padding-top: 2em;
     padding-bottom: 1.5em
 }
 
@@ -372,10 +365,6 @@ article header {
     margin: 0
 }
 
-.font-load-2 .metadata>p {
-    letter-spacing: -.025em
-}
-
 .metadata .hn,.metadata .medium,.metadata .published-date,.metadata .reading-time {
     display: inline-table
 }
@@ -429,15 +418,15 @@ h1 {
     margin-bottom: -.1em
 }
 
-.highlight+h1,img+h1,ul+h1,ol+h1,p+h1 {
+.highlight+h1,img+h1,ol+h1,p+h1,ul+h1 {
     padding-top: 1.87em
 }
 
-.font-load-1 .highlight+h1,.font-load-1 img+h1,.font-load-1 ul+h1,.font-load-1 ol+h1,.font-load-1 p+h1  {
+.font-load-1 .highlight+h1,.font-load-1 img+h1,.font-load-1 ol+h1,.font-load-1 p+h1,.font-load-1 ul+h1,article header {
     padding-top: 2em
 }
 
-.font-load-1 .highlight+h2,.font-load-1 img+h2,.font-load-1 ul+h2,.font-load-1 ol+h2,.font-load-1 p+h2 {
+.font-load-1 .highlight+h2,.font-load-1 img+h2,.font-load-1 ol+h2,.font-load-1 p+h2,.font-load-1 ul+h2 {
     padding-top: 1em
 }
 
@@ -483,7 +472,7 @@ h3,h4 {
     padding-top: .92em
 }
 
-.font-load-1 .highlight+h3,.font-load-1 img+h3,.font-load-1 ol+h3,.font-load-1 p+h3  {
+.font-load-1 .highlight+h3,.font-load-1 img+h3,.font-load-1 ol+h3,.font-load-1 p+h3 {
     padding-top: .885em
 }
 
@@ -500,7 +489,7 @@ h4 {
     padding-top: .82em
 }
 
-.font-load-1 .highlight+h4,.font-load-1 img+h4,.font-load-1 ol+h4,.font-load-1 p+h4  {
+.font-load-1 .highlight+h4,.font-load-1 img+h4,.font-load-1 ol+h4,.font-load-1 p+h4 {
     padding-top: .783em
 }
 
@@ -523,7 +512,7 @@ h5 {
     padding-top: .72em
 }
 
-.font-load-1 .highlight+h5,.font-load-1 img+h5,.font-load-1 ol+h5,.font-load-1 p+h5  {
+.font-load-1 .highlight+h5,.font-load-1 img+h5,.font-load-1 ol+h5,.font-load-1 p+h5 {
     padding-top: .693em
 }
 
@@ -542,7 +531,7 @@ h6 {
     padding-top: .62em
 }
 
-.font-load-1 .highlight+h6,.font-load-1 img+h6,.font-load-1 ol+h6,.font-load-1 p+h6  {
+.font-load-1 .highlight+h6,.font-load-1 img+h6,.font-load-1 ol+h6,.font-load-1 p+h6 {
     padding-top: .613em
 }
 
@@ -578,8 +567,7 @@ kbd,samp {
 }
 
 .links>li {
-    margin: 0 4px 0 0;
-    margin-bottom: 5px;
+    margin: 0 4px 5px 0;
     line-height: 37px;
     display: inline-block;
     position: relative
@@ -628,15 +616,15 @@ footer>ul>li {
     letter-spacing: 0
 }
 
-.anchor,.links a,.logo a,.mlt-header a,.mlt-link,.list-meta-category a,footer a {
+.anchor,.anchor:hover,.links a,.list-meta-category a,.logo a,.mlt-header a,.mlt-link,footer a {
     text-decoration: none
 }
 
-.list-title a:hover,.logo a:hover,.mlt-header a:hover,.mlt-link:hover>.mlt-title,.list-meta-category a:hover,footer a:hover {
+.list-meta-category a:hover,.list-title a:hover,.logo a:hover,.mlt-header a:hover,.mlt-link:hover>.mlt-title,footer a:hover {
     text-decoration: underline
 }
 
-.list-title a:hover {
+.list-title a:hover,a {
     text-decoration-color: #e21b2a
 }
 
@@ -656,7 +644,7 @@ b,strong {
     text-decoration-color: rgba(14,17,21,.85)
 }
 
-.authors,.authors a,.links>li>a,.list-meta-date,.list-meta-category,.logo,.logo a,.mlt-header,.mlt-header a,.mlt-summary,.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
+.authors,.authors a,.links>li>a,.list-meta-category,.list-meta-date,.logo,.logo a,.mlt-header,.mlt-header a,.mlt-summary,.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
     color: rgba(14,17,21,.4)
 }
 
@@ -665,8 +653,7 @@ b,strong {
 }
 
 .anchor:hover {
-    color: #e21b2a;
-    text-decoration: none
+    color: #e21b2a
 }
 
 .authors,.authors a,.logo,.logo a,.mlt-link:hover>.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
@@ -695,10 +682,6 @@ h1,h2,h3,h4 {
 .font-load-1 .social {
     padding-top: .37em;
     letter-spacing: .01em
-}
-
-a {
-    text-decoration-color: #e21b2a
 }
 
 pre {
@@ -789,7 +772,7 @@ img.centered:empty {
     margin-left: -101px
 }
 
-.metadata li,.metadata p,.table>.list-meta,.list-title {
+.metadata li,.metadata p,.table>.list-meta {
     letter-spacing: -.02em
 }
 
@@ -808,7 +791,7 @@ img.centered:empty {
 .list-title {
     font-size: 22.5px;
     letter-spacing: -.014em;
-    line-height: 1.4em;
+    line-height: 1.4em
 }
 
 .font-load-1 .list-title {
@@ -846,7 +829,7 @@ img.centered:empty {
 }
 
 .line:before {
-    content:"•••";
+    content: "•••";
     font-size: 14px;
     letter-spacing: 25px
 }
@@ -1001,7 +984,6 @@ h6 .anchor {
 }
 
 @media screen and (max-width:1090px),print {
-
     article header {
         padding-top: 0;
         padding-bottom: 0;
@@ -1051,10 +1033,6 @@ h6 .anchor {
         font-size: 2em
     }
 
-    .font-load-2 .title {
-        letter-spacing: -.028em
-    }
-
     .subtitle {
         font-size: 1.73em;
         letter-spacing: -.045em;
@@ -1067,15 +1045,11 @@ h6 .anchor {
         letter-spacing: -.025em
     }
 
-    .font-load-2 .subtitle {
-        letter-spacing: -.028em
-    }
-
-    .highlight+h1,img+h1,ul+h1,ol+h1,p+h1 {
+    .highlight+h1,img+h1,ol+h1,p+h1,ul+h1 {
         padding-top: 1.07em
     }
 
-    .font-load-1 .highlight+h1,.font-load-1 img+h1,.font-load-1 ul+h1,.font-load-1 ol+h1,.font-load-1 p+h1  {
+    .font-load-1 .highlight+h1,.font-load-1 img+h1,.font-load-1 ol+h1,.font-load-1 p+h1,.font-load-1 ul+h1 {
         padding-top: 1.2em
     }
 
@@ -1255,11 +1229,15 @@ h6 .anchor {
         margin-left: -27px;
         padding-left: 25px
     }
+
+    .font-load-2 .subtitle,.font-load-2 .title {
+        letter-spacing: -.028em
+    }
 }
 
 @media screen and (max-width:750px) {
 
-    body {
+    .font-load-1 .prologue,body {
         font-size: 18px
     }
 
@@ -1298,10 +1276,6 @@ h6 .anchor {
 
     .prologue {
         font-size: 20.3px
-    }
-
-    .font-load-1 .prologue {
-        font-size: 18px
     }
 
     .list {
@@ -1356,7 +1330,7 @@ h6 .anchor {
         margin-top: 0
     }
 
-    .font-load-1 .title,.font-load-2 .title {
+    .font-load-1 .title,.font-load-2 .title { 
         font-size: 1.6em;
         letter-spacing: -.023em;
         line-height: 1.25em;
@@ -1385,7 +1359,7 @@ h6 .anchor {
         letter-spacing: -.021em
     }
 
-    .font-load-1 .myname,.myname,.font-load-1 h1,h1 {
+    .font-load-1 .myname,.font-load-1 h1,.myname,h1 {
         font-size: 1.5em
     }
 
@@ -1418,8 +1392,7 @@ h6 .anchor {
     }
 
     .font-load-1 h1 {
-        margin-top: -.1em;
-        margin-bottom: -.35em
+        margin-top: -.1em
     }
 
     .myname,h2 {
@@ -1430,7 +1403,7 @@ h6 .anchor {
         margin-bottom: -.34em
     }
 
-    h3,h4 {
+    .font-load-1 h1,h3,h4 {
         margin-bottom: -.35em
     }
 
@@ -1479,12 +1452,7 @@ h6 .anchor {
         font-size: 17px
     }
 
-    .logo {
-        margin-top: .1em;
-        padding-bottom: 0
-    }
-
-    .font-load-1 .logo {
+    .font-load-1 .logo,.logo {
         margin-top: .1em;
         padding-bottom: 0
     }
