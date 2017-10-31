@@ -18,6 +18,10 @@ body {
     margin-right: 8px
 }
 
+a {
+    background-size: 5px 1px
+}
+
 .table>.list-title>a {
     background-position: 0 1.02em
 }

@@ -97,8 +97,7 @@ a {
 
 .logo a:hover,.myemail a:hover,.title a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
     background-repeat: repeat-x;
-    background-origin: border-box;
-    background-size: 5px 2px
+    background-origin: border-box
 }
 
 .logo a:hover,.mlt-header a:hover,.myemail a:hover {
