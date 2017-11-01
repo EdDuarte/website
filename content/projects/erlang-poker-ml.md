@@ -39,8 +39,8 @@ printed to the user, suggesting him to either raise, call or fold.
 
 The application is fully open-source and only uses a single file
 ('poker.erl'). A trained model containing an history of matches and
-ranked hands is also provided ('storage' file), so you can start
-testing the application immediately.
+hands is also provided ('storage' file), so you can start testing the
+application immediately.
 
 This application is composed of three modules:
 
@@ -69,10 +69,10 @@ implementation, draws / split results are not considered, so as to
 not influence the collected probabilities of winning or losing by
 reducing the sample data of both.
 
-A **ranked hand** is a specific set of cards that have an associated
-weight of importance. These hands, in order: 1. Royal Flush; 2.
-Straight Flush; 3. Four Of A Kind; 4. Full House; 5. Flush; 6.
-Straight; 7. Three Of A Kind; 8. Two Pair; 9. Pair; 10. High Card.
+A **rank** is a weight of importance associated with a specific set
+of cards. These ranks are, in order: 1. Royal Flush; 2. Straight
+Flush; 3. Four Of A Kind; 4. Full House; 5. Flush; 6. Straight; 7.
+Three Of A Kind; 8. Two Pair; 9. Pair; 10. High Card.
 
 
 
@@ -97,11 +97,11 @@ The current match data is only committed to history at the end of the
 match, so a "reset" will discard the current match.
 
 When prompting for a card, two inputs are required: the suit and the
-value. Inputted cards are then structured as {card, ID, Suit, Value}
-and compared with ranked hands in Eresye. The ID value is randomly
-attributed using the method 'random:uniform()', and is used to ensure
-that the card will not be compared with itself during Eresye's
-operations.
+value. Cards are then structured as {card, ID, Suit, Value} and
+compared with other hands (and their ranks) in Eresye. The ID value
+is randomly attributed using the method 'random:uniform()', and is
+used to ensure that the card will not be compared with itself during
+Eresye's operations.
 
 
 
@@ -115,7 +115,7 @@ child nodes. Each branch and node stores, respectively:
 - branch2 - Expected profit on Fold; node2 - Fold value
 - branch3 - Expected profit on Call; node3 - Call value
 
-Because the probability of winning (PWin) varies according to the
+Because the probability of winning (*PWin*) varies according to the
 user's hand and the current round, this decision tree is built at the
 end of each round, and the expected profits are calculated as such:
 
@@ -129,22 +129,20 @@ BetsDoneByPlayer is the total value of bets done by the user to that
 point, or in other words, the number of chips the user placed in the
 pot.
 
-PWin can be calculated using the History module and its Bayesian
+*PWin* can be calculated using the History module and its Bayesian
 network (see below), where we can obtain the number of wins attained
-with the CurrentHand, but also the possible hands that can be
-obtained in future rounds knowing the CurrentHand. So:
+with the current hand, but also the possible hands that can be
+obtained in future rounds knowing the current hand. Assuming that:
+- *c* is the **current hand**;
+- *x* is a **possible hand in the next round**;
+- *t* is the **total number of matches** recorded in history;
+- function *W* is the **number of historic wins** for a specific
+  hand;
 
-`$$P(Round(N), CurrentHand) =
-\frac{winCountCurrentHand}{totalMatchesCount}$$`
+Then *PWin* can be obtained using the following expression:
 
-Assuming that the variable *T* represents the **total number of
-matches** recorded in history, the variable *W* represents the **win
-count** for any of the possible hands, and the variable *NR*
-represents a possible hand in the **next round**, then the above
-expression can be resolved into the following:
-
-`$$ = \sum \left ( \frac{W(x)}{T} + \left ( NR | CurrentHand \right )
-\right )$$`
+`$$P(c) = \frac{W(c)}{t} = \sum_{x=1}^{\infty} \left ( \frac{ W(x)
+}{t} + P \left ( x | c \right ) \right )$$`
 
 Once all of the expected profits are calculated, the action that the
 user should take corresponds to the one that has the higher expected
@@ -165,12 +163,12 @@ using the wildcard '_' (underscore).
 
 The data in storage is structured as:
 
-- ``{round_no, current_ranked_hand, previous_round_ranked_hand,
+- ``{round_no, current_rank, previous_round_rank,
   occurrence_count}``: the number of times the user had a ranked hand
   Y knowing that he/she had a ranked hand X on a previous hand (where
   Rank(Y) >= Rank(X));
 
-- ``{won/lost, current_ranked_hand, occurrence_count}``: the number
+- ``{won/lost, current_rank, occurrence_count}``: the number
   of times the user won or lost with a specific ranked hand;
 
 - ``{total, total_matches_count}``: the total number of matches that
@@ -210,6 +208,8 @@ wildcard):
 `$$P(TwoPair | Pair) = \frac{query(round3, twoPair, pair,
 *)}{Total}$$`
 
+This lets us know if the chance to get other more valuable ranks is
+high enough for it to be worth a raise or a call.
 
 <script async src="/js/math-code.js"></script>
 <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
