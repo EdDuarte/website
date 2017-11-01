@@ -194,19 +194,14 @@ wildcard):
 
 `$$Total = query(total, *)$$`
 
-- Round 0:
+- Round 0: `$$P(Pair | HighCard) = \frac{query(round1, pair,
+  highCard, *)}{Total}$$`
 
-`$$P(Pair | HighCard) = \frac{query(round1, pair, highCard,
-*)}{Total}$$`
+- Round 1: `$$P(Pair | Pair) = \frac{query(round2, pair, pair,
+  *)}{Total}$$`
 
-- Round 1:
-
-`$$P(Pair | Pair) = \frac{query(round2, pair, pair, *)}{Total}$$`
-
-- Round 2:
-
-`$$P(TwoPair | Pair) = \frac{query(round3, twoPair, pair,
-*)}{Total}$$`
+- Round 2: `$$P(TwoPair | Pair) = \frac{query(round3, twoPair, pair,
+  *)}{Total}$$`
 
 This lets us know if the chance to get other more valuable ranks is
 high enough for it to be worth a raise or a call.
