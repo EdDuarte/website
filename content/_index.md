@@ -9,11 +9,12 @@ markup: mmark
 ## Experience
 
 Over three years of hands-on experience with Backend Architecture,
-Mobile Development, UI/UX Design and Information Retrieval. Worked
-extensively with languages like Java, Kotlin, Javascript ES6,
-Objective-C and Swift, and technologies like Spring, Jetty / Tomcat,
-Socket.io, Websocket, MQTT, Redis, Hazelcast, Cassandra, MongoDB,
-Android and iOS.
+Stream Processing, Smart City IoT, Mobile & Web Frontend Development,
+UI/UX Design, Natural Language Processing, and Information Retrieval.
+Worked extensively with languages like Java 9, Kotlin 1.1, Javascript
+ES6, Swift 4 and Objective-C, and technologies like Spring, Jetty /
+Tomcat, Socket.io, Websocket, MQTT, Redis, Hazelcast, Cassandra,
+MongoDB, Android and iOS.
 
 Recently finished my internship at
 [Ubiwhere](http://www.ubiwhere.com/en/), where I worked as a backend
@@ -56,6 +57,6 @@ to UI/UX design and prototyping, to middleware implementation
 
 ## Work with me
 
-I am not currently looking for a job, as I am working on my Master's
-thesis at the University of Aveiro, but feel free to [send me an
-email](mailto:hi@edduarte.com).
+I am currently working on my Master's thesis at Bosch
+Thermotechnology SA, so I am not actively looking for a job right
+now, but feel free to [send me an email](mailto:hi@edduarte.com).
