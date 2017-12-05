@@ -1,7 +1,7 @@
-/post/*                     /:splat/
-/posts/*                    /:splat/
-/blog/*                     /:splat/
-/talks/*                    /:splat/
+/post/*                     /:splat
+/posts/*                    /:splat
+/blog/*                     /:splat
+/talks/*                    /:splat
 /essay                      /essays/
 /project                    /projects/
 /paper                      /papers/
