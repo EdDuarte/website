@@ -1,43 +1,43 @@
 
 body {
-    text-rendering: optimizeSpeed
+  text-rendering: optimizeSpeed
 }
 
 .font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6 {
-    font-weight: 400
+  font-weight: 400
 }
 
 .mjx-math {
-    font-size: calc(.05em + 3.3vw)
+  font-size: calc(.05em + 3.3vw)
 }
 
 .social-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 8px;
-    margin-right: 8px
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  margin-right: 8px
 }
 
 a {
-    background-size: 5px 1px
+  background-size: 5px 1px
 }
 
 .table>.list-title>a {
-    background-position: 0 1.02em
+  background-position: 0 1.02em
 }
 
 .font-load-1 .table>.list-title>a {
-    background-position: 0 1.17em
+  background-position: 0 1.17em
 }
 
 .authors a,.metadata a,figcaption a {
-    background-position: 0 .98em
+  background-position: 0 .98em
 }
 
 .font-load-1 .authors a,.font-load-1 .metadata a,.font-load-1 figcaption a {
-    background-position: 0 1.2em
+  background-position: 0 1.2em
 }
 
 .mlt-header a {
-    background-position: 0 1.3em
+  background-position: 0 1.3em
 }

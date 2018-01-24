@@ -83,11 +83,13 @@
 <section class="metadata">
 <ul class="table">
 
-{{ if .Params.date }}<li class="published-date">
+{{ if .Params.date }}
+<li class="published-date">
 <div class="icon metadata-icon icon-published-date"></div>
 <span class="screen-reader">Published on </span>
 <time class="metadata-title" datetime="{{ .Date }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-</li>{{ end }}
+</li>
+{{ end }}
 
 <li class="reading-time">
 <div class="icon metadata-icon icon-reading-time"></div>
@@ -95,17 +97,21 @@
 <span class="metadata-title">{{ .ReadingTime }} min read</span>
 </li>
 
-{{ with .Params.medium }}<li class="medium">
-<div class="icon metadata-icon icon-medium"></div>
+{{ with .Params.medium }}
+<li class="medium">
+<div class="icon metadata-icon icon-mirror"></div>
 <span class="screen-reader">Article mirrors: </span>
 <span class="metadata-title">Also on <a href="{{ . }}">Medium</a></span>
-</li>{{ end }}
+</li>
+{{ end }}
 
-{{ with .Params.hn }}<li class="hn">
-<div class="icon metadata-icon icon-hn"></div>
+{{ with .Params.hn }}
+<li class="hn">
+<div class="icon metadata-icon icon-discussion"></div>
 <span class="screen-reader">Discussion: </span>
 <span class="metadata-title">Discussion on <a href="{{ . }}">Hacker News</a></span>
-</li>{{ end }}
+</li>
+{{ end }}
 
 </ul>
 </section>

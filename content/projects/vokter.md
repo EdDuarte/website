@@ -12,10 +12,10 @@ servers which manage a persistent state of Vokter on the web instead
 of locally, are not addressed here (although I do hope to address
 them later in a future post)."
 links:
-    - name: Project Hub
-      url: https://github.com/vokter
-    - name: Core-lib source code
-      url: https://github.com/vokter/vokter
+  - name: Project Hub
+    url: https://github.com/vokter
+  - name: Core-lib source code
+    url: https://github.com/vokter/vokter
 date: "2016-06-19 19:26:00+01:00"
 medium: "https://medium.com/@edduarte/vokter-a-java-library-that-dete
 cts-changes-in-web-documents-c4d3d399046d"
@@ -55,6 +55,7 @@ algorithms are picked based on the inferred language of the document,
 using a [N-grams Naïve Bayesian
 classifier](https://github.com/optimaize/language-detector).
 
+
 # {{< anchor link="#jobs" >}}Job Management {#jobs}
 
 There are two types of jobs, concurrently executed and scheduled
@@ -83,6 +84,7 @@ means that each cluster imperatively contains a single scheduled
 detection job and one or more matching jobs. In other words, When two
 clients watch the same page, only one detection job for that page is
 active.
+
 
 # {{< anchor link="#scaling" >}}Scaling {#scaling}
 
@@ -116,20 +118,6 @@ memory cache with an expiry duration between 20 seconds and 1 minute.
 Persistence of detection and matching jobs is also covered, using a
 custom MongoDB Job Store by Michael Klishin and Alex Petrov.
 
-# {{< anchor link="#osgi" >}}OSGi-based architecture {#osgi}
-
-Vokter support for reading of a given ``MediaType`` is provided by
-Reader modules, where raw content is converted into a clean string
-filtered of non- informative data (e.g. XML tags). These modules are
-loaded in a OSGi-based architecture, meaning that compiled Reader
-classes can be loaded or unloaded without requiring a reboot. When
-needed, usually when reading a new document or snapshot, Vokter will
-query for available Readers by ``Content-Type`` supported.
-
-This same plugin-like architecture is implemented for Stemmer
-modules. Using a language detection prediction model, Vokter
-determines the most probable language of the document and queries
-on-demand for available Stemmers by language supported.
 
 # {{< anchor link="#indexing" >}}Indexing {#indexing}
 
@@ -149,7 +137,8 @@ require specialized stemmers and stop-word filters to be used, the
 language must be obtained. Unlike the ``Content-Type``, which is
 often provided as a HTTP header when fetching the document, the
 ``Accept-Language`` is not for the most part. Instead, Vokter infers
-the language from the document content using a language detector
+the language from the document content using a [language
+detector](https://github.com/optimaize/language-detector)
 algorithm based on Bayesian probabilistic models and N-Grams,
 developed by Nakatani Shuyo, Fabian Kessler, Francois Roland and
 Robert Theis.
@@ -159,6 +148,23 @@ should be performed in parallel, Vokter will instance multiple
 parsers when deployed and store them in a blocking queue. The number
 of parsers corresponds to the number of cores available in the
 machine where Vokter was deployed to.
+
+
+# {{< anchor link="#osgi" >}}OSGi-based architecture {#osgi}
+
+Vokter support for reading of a given ``MediaType`` is provided by
+Reader modules, where raw content is converted into a clean string
+filtered of non- informative data (e.g. XML tags). These modules are
+loaded in a OSGi-based architecture, meaning that compiled Reader
+classes can be loaded or unloaded without requiring a reboot. When
+needed, usually when reading a new document or snapshot, Vokter will
+query for available Readers by ``Content-Type`` supported.
+
+This same plugin-like architecture is implemented for Stemmer
+modules. Using a language detection prediction model, Vokter
+determines the most probable language of the document and queries
+on-demand for available Stemmers by language supported.
+
 
 # {{< anchor link="#caveats" >}}Caveats / Future Work {#caveats}
 

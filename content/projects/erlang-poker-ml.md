@@ -5,8 +5,8 @@ description: "Implementation of a decision-tree classifier and a disk
 persistence module to evaluate win-lose probabilities over a Poker
 Texas Hold'em game"
 links:
-    - name: Source code
-      url: https://github.com/edduarte/erlang-poker-ml
+  - name: Source code
+    url: https://github.com/edduarte/erlang-poker-ml
 date: "2015-03-31 17:25:00+01:00"
 medium: "https://medium.com/@edduarte/developing-a-knowledge-
 management-system-for-texas-holdem-outcome-prediction-in-erlang-
