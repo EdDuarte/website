@@ -24,8 +24,8 @@ applications for various brands like
 [Vodafone](https://parking.vodafone.citibrain.com/),
 [Bewegen](https://www.bewegen.pt/about/app/),
 [Bikeemotion](http://www.bikeemotion.com/),
-[Anacom](http://www.netmede.pt/app),
-[Prio](https://app.prioenergy.com/).
+[Anacom](http://www.netmede.pt/app) and
+[Prio](https://app.prioenergy.com/)).
 
 I have co-founded two tech startups,
 [Thumbeo](http://www.thumbeo.com/en/) and YouClap, where I had the
