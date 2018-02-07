@@ -60,9 +60,14 @@ _ff fi fl ffi ffl fk fh ft_
 
 # Line length
 
-To help me visualize the length of the line <span style="color:red;">(</span>as demonstrating in this para<span style="color:red;">g</span>raph), I mark the letter at 45 and 75 characters (including spaces), then drop in a span class in both places.
+To help me visualize the length of the line <span style="color:red;">(</span>as
+demonstrating in this para<span style="color:red;">g</span>raph), I mark the
+letter at 45 and 75 characters (including spaces), then drop in a span class in
+both places.
 
-And now I want to visualize the length of the line by marking the 70t<span style="color:red;">h</span> cha<span style="color:red;">r</span>acte<span style="color:red;">r</span>, the 75th character and the 80th character.
+And now I want to visualize the length of the line by marking the 70t<span
+style="color:red;">h</span> cha<span style="color:red;">r</span>acte<span
+style="color:red;">r</span>, the 75th character and the 80th character.
 
 # International characters
 
