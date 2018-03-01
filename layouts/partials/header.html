@@ -72,22 +72,22 @@ pre {
   font-family: Monaco, Consolas, monospace
 }
 
-.table>.list-meta,.font-load-1 .links,.links,.logo,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
+.table>.list-meta,.font-load-1 .links,.links,.home-link,.section-link,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif
 }
 
-.font-load-1 .links,.logo,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
+.font-load-1 .links,.home-link,.section-link,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
   font-style: normal;
   font-weight: 400
 }
 
-.font-load-1 .table>.list-meta,.font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 summary {
+.font-load-1 .table>.list-meta,.font-load-1 .home-link,.font-load-1 .section-link,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 summary {
   font-family: edduarte-headings-regular, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-style: normal;
   font-weight: 700
 }
 
-.font-load-1 .table>.list-meta,.font-load-1 summary {
+.font-load-1 .table>.list-meta,.font-load-1 summary,.font-load-1 .home-link {
   font-weight: 400
 }
 
@@ -420,15 +420,18 @@ h1 {
 }
 
 .highlight+h1,img+h1,ol+h1,p+h1,ul+h1 {
-  padding-top: 1.87em
+  margin-top: 1.87em;
+  padding-top: .2em
 }
 
 .font-load-1 .highlight+h1,.font-load-1 img+h1,.font-load-1 ol+h1,.font-load-1 p+h1,.font-load-1 ul+h1,article header {
-  padding-top: 2em
+  margin-top: 2em;
+  padding-top: .2em
 }
 
 .font-load-1 .highlight+h2,.font-load-1 img+h2,.font-load-1 ol+h2,.font-load-1 p+h2,.font-load-1 ul+h2 {
-  padding-top: 1em
+  margin-top: 1em;
+  padding-top: .2em
 }
 
 h2,h3 {
@@ -450,7 +453,8 @@ h2,h3 {
 }
 
 .highlight+h2,img+h2,ol+h2,p+h2 {
-  padding-top: 1.05em
+  margin-top: 1.05em;
+  padding-top: .2em
 }
 
 .font-load-1 h3 {
@@ -470,11 +474,13 @@ h3,h4 {
 }
 
 .highlight+h3,img+h3,ol+h3,p+h3 {
-  padding-top: .92em
+  margin-top: .92em;
+  padding-top: .2em
 }
 
 .font-load-1 .highlight+h3,.font-load-1 img+h3,.font-load-1 ol+h3,.font-load-1 p+h3 {
-  padding-top: .885em
+  margin-top: .885em;
+  padding-top: .2em
 }
 
 .font-load-1 h4,h4 {
@@ -487,11 +493,13 @@ h4 {
 }
 
 .highlight+h4,img+h4,ol+h4,p+h4 {
-  padding-top: .82em
+  margin-top: .82em;
+  padding-top: .2em
 }
 
 .font-load-1 .highlight+h4,.font-load-1 img+h4,.font-load-1 ol+h4,.font-load-1 p+h4 {
-  padding-top: .783em
+  margin-top: .783em;
+  padding-top: .2em
 }
 
 h5 {
@@ -510,11 +518,13 @@ h5 {
 }
 
 .highlight+h5,img+h5,ol+h5,p+h5 {
-  padding-top: .72em
+  margin-top: .72em;
+  padding-top: .2em
 }
 
 .font-load-1 .highlight+h5,.font-load-1 img+h5,.font-load-1 ol+h5,.font-load-1 p+h5 {
-  padding-top: .693em
+  margin-top: .693em;
+  padding-top: .2em
 }
 
 h6 {
@@ -529,11 +539,13 @@ h6 {
 }
 
 .highlight+h6,img+h6,ol+h6,p+h6 {
-  padding-top: .62em
+  margin-top: .62em;
+  padding-top: .2em
 }
 
 .font-load-1 .highlight+h6,.font-load-1 img+h6,.font-load-1 ol+h6,.font-load-1 p+h6 {
-  padding-top: .613em
+  margin-top: .613em;
+  padding-top: .2em
 }
 
 .links,.links>li,code,kbd,pre,samp {
@@ -582,19 +594,18 @@ kbd,samp {
 .links>li>a {
   border-radius: 14px;
   font-size: 12.2px;
-  border: 2px solid rgba(14, 17, 21, .15);
+  border: 2px solid #D3D4D4;
   cursor: pointer;
   padding: .7em .9em
 }
 
-.logo {
-  font-size: 15.4px;
+.home-link, .section-link {
   letter-spacing: -.07em;
   padding-top: .9em
 }
 
-.font-load-1 .logo {
-  font-size: 15px;
+.font-load-1 .home-link, .font-load-1 .section-link {
+  letter-spacing: -.01em;
   padding-top: 1em;
   padding-bottom: .1em
 }
@@ -604,7 +615,12 @@ kbd,samp {
 }
 
 .section-link {
+  font-size: 15.4px;
   padding-left: .5em
+}
+
+.font-load-1 .section-link {
+  font-size: 15px;
 }
 
 footer>ul>li {
@@ -617,11 +633,11 @@ footer>ul>li {
   letter-spacing: 0
 }
 
-.anchor,.anchor:hover,.links a,.list-meta-category a,.logo a,.mlt-header a,.mlt-link,footer a {
+.anchor,.anchor:hover,.links a,.list-meta-category a,.home-link a,.section-link a,.mlt-header a,.mlt-link,footer a {
   text-decoration: none
 }
 
-.list-meta-category a:hover,.list-title a:hover,.logo a:hover,.mlt-header a:hover,.mlt-link:hover>.mlt-title,footer a:hover {
+.list-meta-category a:hover,.list-title a:hover,.section-link a:hover,.mlt-header a:hover,.mlt-link:hover>.mlt-title,footer a:hover {
   text-decoration: underline
 }
 
@@ -645,24 +661,21 @@ b,strong {
   text-decoration-color: rgba(14, 17, 21, .85)
 }
 
-.authors,.authors a,.links>li>a,.list-meta-category,.logo,.logo a,footer,footer a,.list-meta-date,.social a,aside,aside a,figcaption {
-  color: rgba(14, 17, 21, .4)
+.home-link a {
+  color: #fff;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  padding-left: .3em;
+  padding-right: .3em;
+  background-color: #ACB0B0;
 }
 
-.mlt-header,.mlt-header a,.mlt-summary,.mlt-title {
-  color: rgba(14, 17, 21, .35)
+.authors,.authors a,.links>li>a,.list-meta-category,.section-link,.section-link a,footer,footer a,.list-meta-date,.social a,aside,aside a,figcaption,.mlt-header,.mlt-header a,.mlt-summary,.mlt-title  {
+  color: #ACB0B0
 }
 
-.anchor {
-  color: rgba(14, 17, 21, .1)
-}
-
-.anchor:hover {
-  color: #e21b2a
-}
-
-.authors,.authors a,.logo,.logo a,.mlt-link:hover>.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
-  text-decoration-color: rgba(14, 17, 21, .1)
+.authors,.authors a,.section-link,.section-link a,.mlt-link:hover>.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
+  color: #ACB0B0
 }
 
 h1,h2,h3,h4 {
@@ -737,7 +750,7 @@ img.centered:empty {
 
 .table li {
   display: inline-block;
-  padding: 0 .625em 0 0
+  padding: 0 1em 0 0
 }
 
 .table>.col1,.table>.col2,.table>.col3 {
@@ -829,7 +842,7 @@ img.centered:empty {
 
 .line {
   color: rgba(14, 17, 21, .4);
-  margin: 3.5em auto;
+  margin: 2.5em auto;
   width: 70px
 }
 
@@ -861,64 +874,31 @@ img.centered:empty {
   line-height: 1.7em
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-left: -1.5em;
+  padding-left: 1.5em;
+}
+
+h1:hover > .anchor, h1 > .anchor:hover, h1:hover > .anchor:hover,
+h2:hover > .anchor, h2 > .anchor:hover, h2:hover > .anchor:hover,
+h3:hover > .anchor, h3 > .anchor:hover, h3:hover > .anchor:hover,
+h4:hover > .anchor, h4 > .anchor:hover, h4:hover > .anchor:hover,
+h5:hover > .anchor, h5 > .anchor:hover, h5:hover > .anchor:hover,
+h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
+  visibility: visible;
+}
+
 .anchor:before {
   content: "#"
 }
 
 .anchor {
+  color: #e21b2a;
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  vertical-align: text-top;
   margin-left: -52px
-}
-
-.font-load-1 .anchor {
-  margin-left: -50px
-}
-
-h1 .anchor {
-  margin-right: 30px
-}
-
-.font-load-1 h1 .anchor {
-  margin-right: 27.5px
-}
-
-h2 .anchor {
-  margin-right: 33px
-}
-
-.font-load-1 h2 .anchor {
-  margin-right: 30.5px
-}
-
-h3 .anchor {
-  margin-right: 35.5px
-}
-
-.font-load-1 h3 .anchor {
-  margin-right: 33px
-}
-
-h4 .anchor {
-  margin-right: 37.5px
-}
-
-.font-load-1 h4 .anchor {
-  margin-right: 35px
-}
-
-h5 .anchor {
-  margin-right: 38.5px
-}
-
-.font-load-1 h5 .anchor {
-  margin-right: 36.5px
-}
-
-h6 .anchor {
-  margin-right: 40.5px
-}
-
-.font-load-1 h6 .anchor {
-  margin-right: 38px
 }
 
 @media screen {
@@ -1051,15 +1031,7 @@ h6 .anchor {
     letter-spacing: -.025em;
   }
 
-  .highlight+h1,img+h1,ol+h1,p+h1,ul+h1 {
-    padding-top: 1.07em;
-  }
-
-  .font-load-1 .highlight+h1,.font-load-1 img+h1,.font-load-1 ol+h1,.font-load-1 p+h1,.font-load-1 ul+h1 {
-    padding-top: 1.2em;
-  }
-
-  .font-load-1 h1:first-of-type,h1:first-of-type {
+  .content>.font-load-1 h1:first-child,.content>h1:first-child {
     margin-top: .6em;
   }
 
@@ -1175,60 +1147,17 @@ h6 .anchor {
     line-height: 1.95em;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    margin-left: -1.2em;
+    padding-left: 1.2em;
+  }
+
   .anchor {
-    margin-left: -31px;
+    margin-left: -35px;
   }
 
   .font-load-1 .anchor {
-    margin-left: -29px;
-  }
-
-  h1 .anchor {
-    margin-right: 14px;
-  }
-
-  .font-load-1 h1 .anchor {
-    margin-right: 11.5px;
-  }
-
-  h2 .anchor {
-    margin-right: 15px;
-  }
-
-  .font-load-1 h2 .anchor {
-    margin-right: 13px;
-  }
-
-  h3 .anchor {
-    margin-right: 16.5px;
-  }
-
-  .font-load-1 h3 .anchor {
-    margin-right: 14.5px;
-  }
-
-  h4 .anchor {
-    margin-right: 17.5px;
-  }
-
-  .font-load-1 h4 .anchor {
-    margin-right: 15.5px;
-  }
-
-  h5 .anchor {
-    margin-right: 18.5px;
-  }
-
-  .font-load-1 h5 .anchor {
-    margin-right: 16px;
-  }
-
-  h6 .anchor {
-    margin-right: 19.5px;
-  }
-
-  .font-load-1 h6 .anchor {
-    margin-right: 17px;
+    margin-left: -33px;
   }
 
   blockquote {
