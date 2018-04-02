@@ -63,9 +63,7 @@ results are not considered, so as to not influence the collected probabilities
 of winning or losing by reducing the sample data of both.
 
 A **rank** is a weight of importance associated with a specific set of cards.
-These ranks are, in order: 1. Royal Flush; 2. Straight Flush; 3. Four Of A Kind;
-4. Full House; 5. Flush; 6. Straight; 7. Three Of A Kind; 8. Two Pair; 9. Pair;
-10. High Card.
+These ranks are, in order: 1. Royal Flush; 2. Straight Flush; 3. Four Of A Kind; 4. Full House; 5. Flush; 6. Straight; 7. Three Of A Kind; 8. Two Pair; 9. Pair; 10. High Card.
 
 
 
