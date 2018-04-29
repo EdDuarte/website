@@ -1,7 +1,18 @@
 {
+  "name": "edduarte website",
+  "version": "1.0.0",
+  "description": "Hugo static page that contains my blog, papers, conference and meet-ups slides, code examples and other materials.",
   "private": true,
   "scripts": {
     "build": "gulp build"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "stylelint": "^9.2.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.5.0",
@@ -12,11 +23,7 @@
     "gulp-cli": "^1.2.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-shell": "^0.6.3",
-    "run-sequence": "^2.2.0"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
+    "run-sequence": "^2.2.0",
+    "stylelint-config-standard": "^18.2.0"
   }
 }

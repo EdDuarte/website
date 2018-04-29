@@ -24,10 +24,7 @@
           {{ $author := index $authorList 0 }}
           <a href="{{ $author.url }}">{{ $author.name }}</a>
           {{ else }}
-          {{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{
-          else if eq $i 0 }}{{ else }}, {{ end }}{{ $author := index $authorList
-          $i }}{{ if $author.url }}<a href='{{ $author.url }}'>{{ $author.name
-          }}</a>{{ else }}{{ $author.name }}{{ end }}{{ end }}
+          {{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $author := index $authorList $i }}{{ if $author.url }}<a href='{{ $author.url }}'>{{ $author.name }}</a>{{ else }}{{ $author.name }}{{ end }}{{ end }}
           {{ end }}
         </p>
         {{ end }}
@@ -93,8 +90,8 @@
             <li class="published-date">
               <div class="icon metadata-icon icon-published-date"></div>
               <span class="screen-reader">Published on </span>
-              <time class="metadata-title" datetime="{{ .Date }}">{{
-                .Date.Format "Jan 2, 2006" }}
+              <time class="metadata-title" datetime="{{ .Date }}">
+                {{ .Date.Format "Jan 2, 2006" }}
               </time>
             </li>
             {{ end }}
@@ -128,8 +125,7 @@
         {{ if $linkList }}
         <section>
           <ul class="links">
-            {{ range $i, $temp := $linkList }}{{ $link := index $linkList $i
-            }}{{ if $link.url }}
+            {{ range $i, $temp := $linkList }}{{ $link := index $linkList $i }}{{ if $link.url }}
             <li><a href="{{ $link.url }}">{{ $link.name }}</a></li>
             {{ else }}
             <li>{{ $link.name }}</li>
