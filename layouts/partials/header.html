@@ -5,19 +5,28 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{ .Params.description }}">
-<meta name="keywords" content="Java, Kotlin, RESTful architecture, Distributed Systems, Stream Processing, Complex Event Processing, Distributed Caching, UI, UX, User Experience Design, User Interface Design, Natural Language Processing, Information Retrieval, Text Mining, iOS, Swift, Objective-C, Android, Jersey, Jetty, Tomcat, Spring Framework, Hibernate, SAAJ, JAXB, XSLT, Google App Engine, Parse, Firebase, Quartz, Semantic Web, JavaScript, jQuery, HTML">
+<meta
+    name="keywords"
+    content="Java, Kotlin, RESTful architecture, Distributed Systems, Stream Processing, Complex Event Processing, Distributed Caching, UI, UX, User Experience Design, User Interface Design, Natural Language Processing, Information Retrieval, Text Mining, iOS, Swift, Objective-C, Android, Jersey, Jetty, Tomcat, Spring Framework, Hibernate, SAAJ, JAXB, XSLT, Google App Engine, Parse, Firebase, Quartz, Semantic Web, JavaScript, jQuery, HTML"
+>
 <meta name="author" content="Eduardo Duarte">
 
 <meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ .Params.description }}">
-<meta name="twitter:image" content="https://www.gravatar.com/avatar/c90cbe2011d1eb0738b7a8483946df1e?s=200" />
+<meta
+    name="twitter:image"
+    content="https://www.gravatar.com/avatar/c90cbe2011d1eb0738b7a8483946df1e?s=200"
+/>
 <meta name="twitter:site" content="@_edduarte">
 <meta name="twitter:creator" content="@_edduarte">
 <meta name="twitter:card" content="summary">
 
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ .Params.description }}">
-<meta property="og:image" content="https://www.gravatar.com/avatar/c90cbe2011d1eb0738b7a8483946df1e?s=200">
+<meta
+    property="og:image"
+    content="https://www.gravatar.com/avatar/c90cbe2011d1eb0738b7a8483946df1e?s=200"
+>
 <meta property="og:site_name" content="edduarte">
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 <meta property="og:type" content="article">
@@ -43,7 +52,8 @@
 
 <style type="text/css">
 
-a,html {
+html,
+a {
   color: rgba(14, 17, 21, .9);
 }
 
@@ -72,76 +82,143 @@ pre {
   font-family: Monaco, Consolas, monospace
 }
 
-.table>.list-meta,.font-load-1 .links,.links,.home-link,.section-link,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif
-}
-
-.font-load-1 .links,.home-link,.section-link,.myname,.subtitle,.title,footer>ul>li,h1,h2,h3,h4,h5,h6,summary {
+.table > .list-meta,
+.links,
+.font-load-1 .links,
+.home-link,
+.section-link,
+.myname,
+.subtitle,
+.title,
+footer > ul > li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+summary {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-style: normal;
   font-weight: 400
 }
 
-.font-load-1 .table>.list-meta,.font-load-1 .home-link,.font-load-1 .section-link,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6,.font-load-1 summary {
-  font-family: edduarte-headings-regular, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-  font-style: normal;
+.font-load-1 .table > .list-meta,
+.font-load-1 .home-link,
+.font-load-1 .section-link,
+.font-load-1 .myname,
+.font-load-1 .subtitle,
+.font-load-1 .title,
+.font-load-1 footer > ul > li,
+.font-load-1 h1,
+.font-load-1 h2,
+.font-load-1 h3,
+.font-load-1 h4,
+.font-load-1 h5,
+.font-load-1 h6,
+.font-load-1 summary {
+  font-style: normal
+}
+
+.home-link,
+.font-load-1 .home-link,
+.font-load-1 .myname,
+.font-load-1 .subtitle,
+.font-load-1 .title,
+.font-load-1 footer > ul > li,
+.font-load-1 h1,
+.font-load-1 h2,
+.font-load-1 h3,
+.font-load-1 h4,
+.font-load-1 h5,
+.font-load-1 h6 {
   font-weight: 700
 }
 
-.font-load-1 .table>.list-meta,.font-load-1 summary,.font-load-1 .home-link {
+.font-load-1 .table > .list-meta,
+.font-load-1 .section-link,
+.font-load-1 summary {
   font-weight: 400
 }
 
-.list-title,figcaption,ol,p,ul {
+.list-title,
+figcaption,
+ol,
+p,
+ul,
+.prologue,
+blockquote p,
+dfn,
+em,
+b,
+strong,
+b em,
+strong em {
   font-family: "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: 400
 }
 
-.font-load-1 .list-title,.font-load-1 figcaption,.font-load-1 ol,.font-load-1 p,.font-load-1 ul,.font-load-1 b,.font-load-1 em,.font-load-1 strong {
-  font-family: edduarte-content-regular, "Times New Roman", Times, serif;
-}
-
-.font-load-1 .list-title,.font-load-1 figcaption,.font-load-1 ol,.font-load-1 p,.font-load-1 ul {
-  font-style: normal;
-  font-weight: 400
-}
-
-.font-load-1 b,.font-load-1 strong {
-  font-style: normal;
+b,
+strong,
+b em,
+strong em {
   font-weight: 700
 }
 
-.font-load-1 em,.links {
-  font-weight: 400
-}
-
-.font-load-1 .prologue,.font-load-1 blockquote p,.font-load-1 dfn,.font-load-1 em,.prologue,blockquote p,dfn,em {
+.prologue,
+blockquote p,
+dfn,
+em,
+b em,
+strong em {
   font-style: italic
 }
 
-.font-load-2 .prologue,.font-load-2 blockquote p,.font-load-2 dfn,.font-load-2 em {
-  font-family: edduarte-content-regular-italic, edduarte-content-regular, "Times New Roman", Times, serif;
+.font-load-1 .list-title,
+.font-load-1 figcaption,
+.font-load-1 ol,
+.font-load-1 p,
+.font-load-1 ul,
+.font-load-1 .prologue,
+.font-load-1 blockquote p,
+.font-load-1 dfn,
+.font-load-1 em,
+.font-load-1 b,
+.font-load-1 strong,
+.font-load-1 b em,
+.font-load-1 strong em {
+}
+
+.font-load-2 .prologue,
+.font-load-2 blockquote p,
+.font-load-2 dfn,
+.font-load-2 em {
   font-style: normal
 }
 
-.font-load-2 b,.font-load-2 strong {
-  font-family: edduarte-content-bold, edduarte-content-regular, "Times New Roman", Times, serif
+.font-load-2 b,
+.font-load-2 strong {
 }
 
-.font-load-1 b em,.font-load-1 strong em {
-  font-style: italic;
-  font-weight: 700
-}
-
-.font-load-2 b em,.font-load-2 strong em {
-  font-family: edduarte-content-bold-italic, edduarte-content-regular, "Times New Roman", Times, serif;
-  font-style: normal;
-  font-weight: 700
+.font-load-2 b em,
+.font-load-2 strong em {
+  font-style: normal
 }
 
 @-moz-document url-prefix() {
-  .font-load-1 .logo,.font-load-1 .myname,.font-load-1 .subtitle,.font-load-1 .title,.font-load-1 footer>ul>li,.font-load-1 h1,.font-load-1 h2,.font-load-1 h3,.font-load-1 h4,.font-load-1 h5,.font-load-1 h6 {
-  font-weight: 400
+  .font-load-1 .home-link,
+  .font-load-1 .myname,
+  .font-load-1 .subtitle,
+  .font-load-1 .title,
+  .font-load-1 footer > ul > li,
+  .font-load-1 h1,
+  .font-load-1 h2,
+  .font-load-1 h3,
+  .font-load-1 h4,
+  .font-load-1 h5,
+  .font-load-1 h6 {
+    font-weight: 400
   }
 }
 
@@ -158,7 +235,8 @@ article aside {
   order: 2
 }
 
-.list-page,article main {
+.list-page,
+article main {
   max-width: 650px
 }
 
@@ -167,8 +245,9 @@ aside {
   margin-left: 30px
 }
 
-ol,p,ul {
-  font-size: 23.5px;
+ol,
+p,
+ul {
   letter-spacing: -.007em
 }
 
@@ -189,22 +268,28 @@ summary {
   line-height: 1.8em
 }
 
-ol,ul {
+ol,
+ul {
   margin: -20px 0 -.8em .25em;
   padding: .938em
 }
 
-ol>li,ul>li {
+ol > li,
+ul > li {
   margin-top: .438em;
   margin-bottom: .54em
 }
 
-.font-load-1 ol>li,.font-load-1 ul>li {
+.font-load-1 ol > li,
+.font-load-1 ul > li {
   margin-top: .55em;
   margin-bottom: .6em
 }
 
-figcaption,ol,p,ul {
+figcaption,
+ol,
+p,
+ul {
   line-height: 1.5em
 }
 
@@ -213,27 +298,34 @@ p {
   margin-bottom: 0
 }
 
-.font-load-1 ol,.font-load-1 p,.font-load-1 ul {
-  font-size: 21px;
+.font-load-1 ol,
+.font-load-1 p,
+.font-load-1 ul {
   margin-top: .6em;
   line-height: 1.68em
 }
 
-.font-load-1 ol,.font-load-1 ul {
+.font-load-1 ol,
+.font-load-1 ul {
   letter-spacing: -.04em;
   margin-top: -18px;
   margin-bottom: -15px
 }
 
-.font-load-1 p,.font-load-1 summary,em {
+.font-load-1 p,
+.font-load-1 summary, em {
   letter-spacing: -.041em
 }
 
-.font-load-1 .prologue,.font-load-1 em {
+.font-load-1 .prologue,
+.font-load-1 em {
   letter-spacing: -.06em
 }
 
-.font-load-1 h1,.font-load-2 .prologue,.font-load-2 em,.prologue {
+.font-load-1 h1,
+.font-load-2 .prologue,
+.font-load-2 em,
+.prologue {
   letter-spacing: -.03em
 }
 
@@ -302,7 +394,8 @@ article header {
   margin: .15em 0 0
 }
 
-.font-load-1 .subtitle,.subtitle {
+.subtitle,
+.font-load-1 .subtitle {
   font-size: 2.8em;
   line-height: 1.22em;
   letter-spacing: -.022em;
@@ -332,7 +425,7 @@ article header {
   margin-top: .7em
 }
 
-.authors>p {
+.authors > p {
   font-size: 1.3em;
   letter-spacing: .03em;
   line-height: 1.5em;
@@ -340,13 +433,14 @@ article header {
   margin-bottom: 1em
 }
 
-.font-load-1 .authors>p {
+.font-load-1 .authors > p {
   letter-spacing: -.025em;
   line-height: 1.53em;
   font-size: 1.25em
 }
 
-.metadata>.table,.metadata>p {
+.metadata > .table,
+.metadata > p {
   font-size: .9em;
   letter-spacing: -.01em;
   line-height: 1.75em;
@@ -354,7 +448,8 @@ article header {
   margin-bottom: 0
 }
 
-.font-load-1 .metadata>.table,.font-load-1 .metadata>p {
+.font-load-1 .metadata > .table,
+.font-load-1 .metadata > p {
   font-size: .8em;
   letter-spacing: -.055em;
   line-height: 2em;
@@ -362,11 +457,15 @@ article header {
   margin-bottom: 0
 }
 
-.metadata>.table li,.toc ul,figure {
+.metadata > .table li,
+.toc ul, figure {
   margin: 0
 }
 
-.metadata .hn,.metadata .medium,.metadata .published-date,.metadata .reading-time {
+.metadata .hn,
+.metadata .medium,
+.metadata .published-date,
+.metadata .reading-time {
   display: inline-table
 }
 
@@ -375,7 +474,8 @@ article header {
   height: 16px
 }
 
-.list-icon,.metadata-icon {
+.list-icon,
+.metadata-icon {
   display: table-cell;
   vertical-align: middle;
   margin-top: -4px
@@ -398,11 +498,11 @@ article header {
   height: 16px
 }
 
-.font-load-1 blockquote footer,blockquote footer {
+.font-load-1 blockquote footer, blockquote footer {
   margin-top: 1em
 }
 
-h2,h3,h4,h5,h6 {
+h2, h3, h4, h5, h6 {
   margin-top: 0
 }
 
@@ -419,26 +519,34 @@ h1 {
   margin-bottom: -.1em
 }
 
-.highlight+h1,img+h1,ol+h1,p+h1,ul+h1 {
+.highlight + h1, img + h1, ol + h1, p + h1, ul + h1 {
   margin-top: 1.87em;
   padding-top: .2em
 }
 
-.font-load-1 .highlight+h1,.font-load-1 img+h1,.font-load-1 ol+h1,.font-load-1 p+h1,.font-load-1 ul+h1,article header {
+.font-load-1 .highlight + h1,
+.font-load-1 img + h1,
+.font-load-1 ol + h1,
+.font-load-1 p + h1,
+.font-load-1 ul + h1, article header {
   margin-top: 2em;
   padding-top: .2em
 }
 
-.font-load-1 .highlight+h2,.font-load-1 img+h2,.font-load-1 ol+h2,.font-load-1 p+h2,.font-load-1 ul+h2 {
+.font-load-1 .highlight + h2,
+.font-load-1 img + h2,
+.font-load-1 ol + h2,
+.font-load-1 p + h2,
+.font-load-1 ul + h2 {
   margin-top: 1em;
   padding-top: .2em
 }
 
-h2,h3 {
+h2, h3 {
   letter-spacing: -.08em
 }
 
-.myname,h2 {
+.myname, h2 {
   font-size: 1.588em;
   margin-bottom: -.16em
 }
@@ -447,12 +555,13 @@ h2,h3 {
   letter-spacing: -.032em
 }
 
-.font-load-1 .myname,.font-load-1 h2 {
+.font-load-1 .myname,
+.font-load-1 h2 {
   font-size: 1.588em;
   margin-bottom: -.15em
 }
 
-.highlight+h2,img+h2,ol+h2,p+h2 {
+.highlight + h2, img + h2, ol + h2, p + h2 {
   margin-top: 1.05em;
   padding-top: .2em
 }
@@ -461,29 +570,33 @@ h2,h3 {
   letter-spacing: -.031em
 }
 
-.font-load-1 h3,.font-load-1 h4 {
+.font-load-1 h3,
+.font-load-1 h4 {
   margin-bottom: -.1em
 }
 
-h3,h4 {
+h3, h4 {
   margin-bottom: -.12em
 }
 
-.font-load-1 h3,h3 {
+.font-load-1 h3, h3 {
   font-size: 1.414em
 }
 
-.highlight+h3,img+h3,ol+h3,p+h3 {
+.highlight + h3, img + h3, ol + h3, p + h3 {
   margin-top: .92em;
   padding-top: .2em
 }
 
-.font-load-1 .highlight+h3,.font-load-1 img+h3,.font-load-1 ol+h3,.font-load-1 p+h3 {
+.font-load-1 .highlight + h3,
+.font-load-1 img + h3,
+.font-load-1 ol + h3,
+.font-load-1 p + h3 {
   margin-top: .885em;
   padding-top: .2em
 }
 
-.font-load-1 h4,h4 {
+.font-load-1 h4, h4 {
   font-size: 1.26em;
   letter-spacing: -.025em
 }
@@ -492,12 +605,15 @@ h4 {
   letter-spacing: -.07em
 }
 
-.highlight+h4,img+h4,ol+h4,p+h4 {
+.highlight + h4, img + h4, ol + h4, p + h4 {
   margin-top: .82em;
   padding-top: .2em
 }
 
-.font-load-1 .highlight+h4,.font-load-1 img+h4,.font-load-1 ol+h4,.font-load-1 p+h4 {
+.font-load-1 .highlight + h4,
+.font-load-1 img + h4,
+.font-load-1 ol + h4,
+.font-load-1 p + h4 {
   margin-top: .783em;
   padding-top: .2em
 }
@@ -513,16 +629,21 @@ h5 {
   margin-bottom: -.3em
 }
 
-.font-load-1 .logo,.font-load-1 h5,.font-load-1 h6 {
+.font-load-1 .logo,
+.font-load-1 h5,
+.font-load-1 h6 {
   letter-spacing: -.01em
 }
 
-.highlight+h5,img+h5,ol+h5,p+h5 {
+.highlight + h5, img + h5, ol + h5, p + h5 {
   margin-top: .72em;
   padding-top: .2em
 }
 
-.font-load-1 .highlight+h5,.font-load-1 img+h5,.font-load-1 ol+h5,.font-load-1 p+h5 {
+.font-load-1 .highlight + h5,
+.font-load-1 img + h5,
+.font-load-1 ol + h5,
+.font-load-1 p + h5 {
   margin-top: .693em;
   padding-top: .2em
 }
@@ -538,17 +659,21 @@ h6 {
   margin-bottom: -.35em
 }
 
-.highlight+h6,img+h6,ol+h6,p+h6 {
+.highlight + h6, img + h6, ol + h6, p + h6 {
   margin-top: .62em;
   padding-top: .2em
 }
 
-.font-load-1 .highlight+h6,.font-load-1 img+h6,.font-load-1 ol+h6,.font-load-1 p+h6 {
+.font-load-1 .highlight + h6,
+.font-load-1 img + h6,
+.font-load-1 ol + h6,
+.font-load-1 p + h6 {
   margin-top: .613em;
   padding-top: .2em
 }
 
-.links,.links>li,code,kbd,pre,samp {
+.links,
+.links > li, code, kbd, pre, samp {
   letter-spacing: 0
 }
 
@@ -558,11 +683,13 @@ code {
   padding-right: .313em
 }
 
-.font-load-1 code,code {
+code,
+.font-load-1 code {
   font-size: 19px
 }
 
-kbd,samp {
+kbd,
+samp {
   font-size: .875em
 }
 
@@ -579,32 +706,34 @@ kbd,samp {
   padding: .5em 0 0
 }
 
-.links>li {
+.links > li {
   margin: 0 4px 5px 0;
-  line-height: 37px;
+  line-height: 30px;
   display: inline-block;
   position: relative
 }
 
-.font-load-1 .links>li {
+.font-load-1 .links > li {
   margin-top: 0;
   margin-bottom: 6px
 }
 
-.links>li>a {
-  border-radius: 14px;
+.links > li > a {
+  border-radius: 12px;
   font-size: 12.2px;
   border: 2px solid #D3D4D4;
   cursor: pointer;
   padding: .7em .9em
 }
 
-.home-link, .section-link {
+.home-link,
+.section-link {
   letter-spacing: -.07em;
   padding-top: .9em
 }
 
-.font-load-1 .home-link, .font-load-1 .section-link {
+.font-load-1 .home-link,
+.font-load-1 .section-link {
   letter-spacing: -.01em;
   padding-top: 1em;
   padding-bottom: .1em
@@ -623,41 +752,87 @@ kbd,samp {
   font-size: 15px;
 }
 
-footer>ul>li {
+footer > ul > li {
   font-size: 13.4px;
   letter-spacing: -.077em
 }
 
-.font-load-1 footer>ul>li {
+.font-load-1 footer > ul > li {
   font-size: 13px;
   letter-spacing: 0
 }
 
-.anchor,.anchor:hover,.links a,.list-meta-category a,.home-link a,.section-link a,.mlt-header a,.mlt-link,footer a {
+.anchor,
+.anchor:hover,
+.links a,
+.list-meta-category a,
+.home-link a,
+.section-link a,
+.mlt-header a,
+.mlt-link, footer a {
   text-decoration: none
 }
 
-.list-meta-category a:hover,.list-title a:hover,.section-link a:hover,.mlt-header a:hover,.mlt-link:hover>.mlt-title,footer a:hover {
+.list-meta-category a:hover,
+.list-title a:hover,
+.section-link a:hover,
+.mlt-header a:hover,
+.mlt-link:hover > .mlt-title,
+footer a:hover {
   text-decoration: underline
 }
 
-.list-title a:hover,a {
+.list-title a:hover, a {
   text-decoration-color: #e21b2a
 }
 
-.subtitle,.subtitle a {
+.subtitle,
+.subtitle a {
   color: #e21b2a
 }
 
-b,strong {
-  color: #090D13
+b, strong {
+  color: #090d13
 }
 
-.myname,.myname a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a,summary {
+.myname,
+.myname a,
+.title,
+.title a,
+code,
+h1,
+h1 a,
+h2,
+h2 a,
+h3,
+h3 a,
+h4,
+h4 a,
+h5,
+h5 a,
+h6,
+h6 a,
+summary {
   color: rgba(14, 17, 21, .85)
 }
 
-.myname,.myname a,.title,.title a,code,h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
+.myname,
+.myname a,
+.title,
+.title a,
+code,
+h1,
+h1 a,
+h2,
+h2 a,
+h3,
+h3 a,
+h4,
+h4 a,
+h5,
+h5 a,
+h6,
+h6 a {
   text-decoration-color: rgba(14, 17, 21, .85)
 }
 
@@ -670,15 +845,47 @@ b,strong {
   background-color: #ACB0B0;
 }
 
-.authors,.authors a,.links>li>a,.list-meta-category,.section-link,.section-link a,footer,footer a,.list-meta-date,.social a,aside,aside a,figcaption,.mlt-header,.mlt-header a,.mlt-summary,.mlt-title  {
-  color: #ACB0B0
+.authors,
+.authors a,
+.list-meta-category,
+.home-link,
+.home-link a,
+.section-link,
+.section-link a,
+footer,
+footer a,
+.list-meta-date,
+.social a,
+aside,
+aside a,
+figcaption,
+.mlt-header,
+.mlt-header a,
+.mlt-summary,
+.mlt-title {
+  color: #959999
 }
 
-.authors,.authors a,.section-link,.section-link a,.mlt-link:hover>.mlt-title,.social a,aside,aside a,figcaption,footer,footer a {
-  color: #ACB0B0
+.authors,
+.authors a,
+.home-link,
+.home-link a,
+.section-link,
+.section-link a,
+.mlt-link:hover > .mlt-title,
+.social a,
+aside,
+aside a,
+figcaption,
+footer,
+footer a {
+  color: #959999
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
   line-height: 1.2em
 }
 
@@ -711,7 +918,11 @@ pre {
   border-radius: 3px
 }
 
-figure,iframe,img,img.myphoto,video {
+figure,
+iframe,
+img,
+img.myphoto,
+video {
   max-width: 100%
 }
 
@@ -744,7 +955,8 @@ img.centered:empty {
   flex-flow: row
 }
 
-.font-load-1 .table,.table {
+.table,
+.font-load-1 .table {
   margin: 0 0 .9em
 }
 
@@ -753,27 +965,29 @@ img.centered:empty {
   padding: 0 1em 0 0
 }
 
-.table>.col1,.table>.col2,.table>.col3 {
+.table > .col1,
+.table > .col2,
+.table > .col3 {
   margin: 0;
   padding: 0
 }
 
-.table>.col1 {
+.table > .col1 {
   flex: 2 1 12%;
   order: 1;
   padding-right: .938em
 }
 
-.table>.col2 {
+.table > .col2 {
   flex: 1 6 88%;
   order: 2
 }
 
-.list>li>.table {
+.list > li > .table {
   margin-bottom: 1.3em
 }
 
-.font-load-1 .list>li>.table {
+.font-load-1 .list > li > .table {
   margin-bottom: 1.38em
 }
 
@@ -790,18 +1004,20 @@ img.centered:empty {
   margin-left: -101px
 }
 
-.metadata li,.metadata p,.table>.list-meta {
+.metadata li,
+.metadata p,
+.table > .list-meta {
   letter-spacing: -.02em
 }
 
-.table>.list-meta {
+.table > .list-meta {
   font-size: 13px;
   line-height: 1.6em;
   margin-top: .17em;
   text-align: right
 }
 
-.font-load-1 .table>.list-meta {
+.font-load-1 .table > .list-meta {
   font-size: 13px;
   letter-spacing: .02em
 }
@@ -818,25 +1034,30 @@ img.centered:empty {
   line-height: 1.53em
 }
 
-.metadata>.table {
+.metadata > .table {
   flex-direction: column;
   align-items: normal
 }
 
-.list,.metadata>.table li,.table {
+.list,
+.metadata > .table li,
+.table {
   padding: 0
 }
 
-.font-load-1 .metadata li,.font-load-1 .metadata p {
+.font-load-1 .metadata li,
+.font-load-1 .metadata p {
   letter-spacing: -.05em
 }
 
-.font-load-1 footer>ul>li,footer>ul>li {
+.font-load-1 footer > ul > li,
+footer > ul > li {
   line-height: 3em;
   margin: 0 0 -1em
 }
 
-.font-load-1 footer,footer {
+.font-load-1 footer,
+footer {
   margin-top: 1em
 }
 
@@ -852,7 +1073,8 @@ img.centered:empty {
   letter-spacing: 25px
 }
 
-.font-load-1 .mlt-header,.mlt-header {
+.font-load-1 .mlt-header,
+.mlt-header {
   margin-bottom: .8em
 }
 
@@ -874,17 +1096,34 @@ img.centered:empty {
   line-height: 1.7em
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-left: -1.5em;
   padding-left: 1.5em;
 }
 
-h1:hover > .anchor, h1 > .anchor:hover, h1:hover > .anchor:hover,
-h2:hover > .anchor, h2 > .anchor:hover, h2:hover > .anchor:hover,
-h3:hover > .anchor, h3 > .anchor:hover, h3:hover > .anchor:hover,
-h4:hover > .anchor, h4 > .anchor:hover, h4:hover > .anchor:hover,
-h5:hover > .anchor, h5 > .anchor:hover, h5:hover > .anchor:hover,
-h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
+h1:hover > .anchor,
+h1 > .anchor:hover,
+h1:hover > .anchor:hover,
+h2:hover > .anchor,
+h2 > .anchor:hover,
+h2:hover > .anchor:hover,
+h3:hover > .anchor,
+h3 > .anchor:hover,
+h3:hover > .anchor:hover,
+h4:hover > .anchor,
+h4 > .anchor:hover,
+h4:hover > .anchor:hover,
+h5:hover > .anchor,
+h5 > .anchor:hover,
+h5:hover > .anchor:hover,
+h6:hover > .anchor,
+h6 > .anchor:hover,
+h6:hover > .anchor:hover {
   visibility: visible;
 }
 
@@ -903,8 +1142,17 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
 
 @media screen {
 
-  .font-load-2 .myname,.font-load-2 .subtitle,.font-load-2 .title,.font-load-2 h1,.font-load-2 h2,.font-load-2 h3,.font-load-2 h4,.font-load-2 h5,.font-load-2 h6 {
-    font-family: edduarte-headings-bold, edduarte-headings-regular, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  .font-load-2 .home-link,
+  .font-load-2 .myname,
+  .font-load-2 .subtitle,
+  .font-load-2 .title,
+  .font-load-2 footer > ul > li,
+  .font-load-2 h1,
+  .font-load-2 h2,
+  .font-load-2 h3,
+  .font-load-2 h4,
+  .font-load-2 h5,
+  .font-load-2 h6 {
     font-weight: 700
   }
 
@@ -932,7 +1180,7 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
   }
 }
 
-@media screen and (max-width:870px),print {
+@media screen and (max-width: 870px), print {
 
   .list {
     max-width: 100%;
@@ -947,17 +1195,18 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     margin-left: 0;
   }
 
-  .list>li>.table {
+  .list > li > .table {
     flex-direction: column;
     align-items: normal;
     margin-bottom: .85em;
   }
 
-  .font-load-1 .list>li>.table {
+  .font-load-1 .list > li > .table {
     margin-bottom: 1em;
   }
 
-  .font-load-1 .table>.list-meta,.table>.list-meta {
+  .font-load-1 .table > .list-meta,
+  .table > .list-meta {
     margin-bottom: .2em;
     text-align: left;
   }
@@ -968,7 +1217,7 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
   }
 }
 
-@media screen and (max-width:1090px),print {
+@media screen and (max-width: 1090px), print {
 
   article header {
     padding-top: 0;
@@ -1005,10 +1254,11 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     margin-top: 0;
   }
 
-  .links,aside,figure {
+  .links, aside, figure {
     margin: 0;
   }
 
+  /*
   .title {
     font-size: 1.9em;
     letter-spacing: -.04em;
@@ -1031,30 +1281,37 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     letter-spacing: -.025em;
   }
 
-  .content>.font-load-1 h1:first-child,.content>h1:first-child {
+  .font-load-2 .subtitle,
+  .font-load-2 .title {
+    letter-spacing: -.028em;
+  }
+  */
+  .content > .font-load-1 h1:first-child,
+  .content > h1:first-child {
     margin-top: .6em;
   }
 
-  .font-load-1 h1,h1 {
+  /*
+  .font-load-1 h1, h1 {
     font-size: 1.642em;
   }
 
-  .font-load-1 h2,h2 {
+  .font-load-1 h2, h2 {
     font-size: 1.414em;
   }
 
-  .font-load-1 h3,h3 {
+  .font-load-1 h3, h3 {
     font-size: 1.297em;
   }
 
-  .font-load-1 h4,h4 {
+  .font-load-1 h4, h4 {
     font-size: 1.189em;
   }
 
-  .font-load-1 h5,h5 {
+  .font-load-1 h5, h5 {
     font-size: 1.091em;
   }
-
+  */
   figcaption {
     font-size: 1em;
   }
@@ -1067,24 +1324,26 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     margin-top: .45em;
   }
 
-  .metadata li,.metadata p {
+  .metadata li,
+  .metadata p {
     font-size: 1em;
     letter-spacing: -.01em;
   }
 
-  .font-load-1 .metadata li,.font-load-1 .metadata p {
+  .font-load-1 .metadata li,
+  .font-load-1 .metadata p {
     font-size: 1em;
     letter-spacing: -.03em;
   }
 
-  .authors>p {
+  .authors > p {
     font-size: .95em;
     letter-spacing: .03em;
     line-height: 1.37em;
     margin-bottom: 0;
   }
 
-  .font-load-1 .authors>p {
+  .font-load-1 .authors > p {
     font-size: .9em;
   }
 
@@ -1109,18 +1368,18 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     margin-bottom: .38em;
   }
 
-  .metadata>.table {
+  .metadata > .table {
     margin-top: .8em;
     line-height: 1.75em;
     display: inline-block;
   }
 
-  .font-load-1 .metadata>.table {
+  .font-load-1 .metadata > .table {
     margin-top: .3em;
     line-height: 1.5em;
   }
 
-  .metadata>.table li:after {
+  .metadata > .table li:after {
     display: inline-block;
     position: relative;
     padding-left: .4em;
@@ -1128,22 +1387,28 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     content: "";
   }
 
-  .font-load-1 .metadata>.table li:after {
+  .font-load-1 .metadata > .table li:after {
     padding-left: .5em;
     padding-right: .5em;
   }
 
-  .metadata>.table li:last-child:after {
+  .metadata > .table li:last-child:after {
     content: "";
     padding-left: 0;
     padding-right: 0;
   }
 
-  .metadata .hn,.metadata .medium,.metadata .published-date,.metadata .reading-time {
+  .metadata .hn,
+  .metadata .medium,
+  .metadata .published-date,
+  .metadata .reading-time {
     line-height: 1.7em;
   }
 
-  .font-load-1 .metadata .hn,.font-load-1 .metadata .medium,.font-load-1 .metadata .published-date,.font-load-1 .metadata .reading-time {
+  .font-load-1 .metadata .hn,
+  .font-load-1 .metadata .medium,
+  .font-load-1 .metadata .published-date,
+  .font-load-1 .metadata .reading-time {
     line-height: 1.95em;
   }
 
@@ -1164,15 +1429,11 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     margin-left: -27px;
     padding-left: 25px;
   }
-
-  .font-load-2 .subtitle,.font-load-2 .title {
-    letter-spacing: -.028em;
-  }
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width: 750px) {
 
-  .font-load-1 .prologue,body {
+  .font-load-1 .prologue, body {
     font-size: 18px;
   }
 
@@ -1180,13 +1441,15 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     margin-top: .1em;
   }
 
-  ol,p,ul {
+  ol, p, ul {
     font-size: 18.9px;
     letter-spacing: .0115em;
     line-height: 1.57em;
   }
 
-  .font-load-1 ol,.font-load-1 p,.font-load-1 ul {
+  .font-load-1 ol,
+  .font-load-1 p,
+  .font-load-1 ul {
     font-size: 17px;
     letter-spacing: -.022em;
     line-height: 1.75em;
@@ -1221,11 +1484,11 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     margin-top: 2em;
   }
 
-  .list>li>.table {
+  .list > li > .table {
     margin-bottom: 1.28em;
   }
 
-  .font-load-1 .list>li>.table {
+  .font-load-1 .list > li > .table {
     margin-bottom: 1.3em;
   }
 
@@ -1241,14 +1504,14 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     line-height: 1.55em;
   }
 
-  footer>.table {
+  footer > .table {
     text-align: center;
     flex-direction: column;
     align-items: normal;
     margin-bottom: .9em;
   }
 
-  footer>.table li {
+  footer > .table li {
     padding: 0 0 .625em 0
   }
 
@@ -1269,7 +1532,8 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     margin-top: 0;
   }
 
-  .font-load-1 .title,.font-load-2 .title {
+  .font-load-1 .title,
+  .font-load-2 .title {
     font-size: 1.6em;
     letter-spacing: -.023em;
     line-height: 1.25em;
@@ -1298,31 +1562,33 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     letter-spacing: -.021em;
   }
 
-  .font-load-1 .myname,.font-load-1 h1,.myname,h1 {
+  .font-load-1 .myname,
+  .font-load-1 h1,
+  .myname, h1 {
     font-size: 1.5em;
   }
 
-  .font-load-1 h2,h2 {
+  .font-load-1 h2, h2 {
     font-size: 1.383em;
   }
 
-  .font-load-1 h3,h3 {
+  .font-load-1 h3, h3 {
     font-size: 1.276em;
   }
 
-  .font-load-1 h4,h4 {
+  .font-load-1 h4, h4 {
     font-size: 1.176em;
   }
 
-  .font-load-1 h5,h5 {
+  .font-load-1 h5, h5 {
     font-size: 1.085em;
   }
 
-  .font-load-1 h6,h6 {
+  .font-load-1 h6, h6 {
     font-size: 1em;
   }
 
-  h1,h2,h3,h4,h5,h6 {
+  h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
   }
 
@@ -1334,19 +1600,21 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     margin-top: -.1em;
   }
 
-  .myname,h2 {
+  .myname, h2 {
     margin-bottom: -.4em;
   }
 
-  .font-load-1 .myname,.font-load-1 h2 {
+  .font-load-1 .myname,
+  .font-load-1 h2 {
     margin-bottom: -.34em;
   }
 
-  .font-load-1 h1,h3,h4 {
+  .font-load-1 h1, h3, h4 {
     margin-bottom: -.35em;
   }
 
-  .font-load-1 h3,.font-load-1 h4 {
+  .font-load-1 h3,
+  .font-load-1 h4 {
     margin-bottom: -.3em;
   }
 
@@ -1387,12 +1655,12 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     margin-top: -3.5px;
   }
 
-  .font-load-1 code,code {
+  .font-load-1 code, code {
     font-size: 17px;
   }
 
-  .font-load-1 .logo,.logo {
-    margin-top: .1em;
+  .font-load-1 .logo,
+  .logo {
     padding-bottom: 0;
   }
 
@@ -1406,7 +1674,7 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     line-height: 1.7em;
   }
 
-  .anchor,blockquote,img {
+  .anchor, blockquote, img {
     margin-left: 0;
   }
 
@@ -1415,11 +1683,11 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
     margin-right: 0;
   }
 
-  .links>li {
+  .links > li {
     margin-bottom: 2px;
   }
 
-  .font-load-1 .links>li {
+  .font-load-1 .links > li {
     margin-bottom: 3px;
   }
 
@@ -1538,54 +1806,63 @@ h6:hover > .anchor, h6 > .anchor:hover, h6:hover > .anchor:hover {
 <script src="/js/async.js" async></script>
 <script type="text/javascript">
 
-(function() {
+(function () {
 
 // setTimeout(function(){
 
-// Optimization for Repeat Views
-if (sessionStorage.fontsLoaded1) {
-  document.documentElement.className += " font-load-1";
-}
-if (sessionStorage.fontsLoaded2) {
-  document.documentElement.className += " font-load-2";
-  return;
-}
+  // Optimization for successive page refreshes
+  if (sessionStorage.fontsLoaded1) {
+    document.documentElement.className += " font-load-1";
+  }
 
+//   setTimeout(function(){
+  if (sessionStorage.fontsLoaded2) {
+    document.documentElement.className += " font-load-2";
+    return;
+  }
+//   }, 1000);
+//
 // }, 1000);
 // return;
 
-// FontFaceObserver https://github.com/bramstein/fontfaceobserver
-(function(){function e(e,t){document.addEventListener?e.addEventListener("scroll",t,!1):e.attachEvent("scroll",t)}function t(e){document.body?e():document.addEventListener?document.addEventListener("DOMContentLoaded",function t(){document.removeEventListener("DOMContentLoaded",t),e()}):document.attachEvent("onreadystatechange",function n(){if("interactive"==document.readyState||"complete"==document.readyState)document.detachEvent("onreadystatechange",n),e()})}function n(e){this.a=document.createElement("div"),this.a.setAttribute("aria-hidden","true"),this.a.appendChild(document.createTextNode(e)),this.b=document.createElement("span"),this.c=document.createElement("span"),this.h=document.createElement("span"),this.f=document.createElement("span"),this.g=-1,this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;",this.b.appendChild(this.h),this.c.appendChild(this.f),this.a.appendChild(this.b),this.a.appendChild(this.c)}function r(e,t){e.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:"+t+";"}function i(e){var t=e.a.offsetWidth,n=t+100;return e.f.style.width=n+"px",e.c.scrollLeft=n,e.b.scrollLeft=e.b.scrollWidth+100,e.g!==t?(e.g=t,!0):!1}function s(t,n){function r(){var e=s;i(e)&&null!==e.a.parentNode&&n(e.g)}var s=t;e(t.b,r),e(t.c,r),i(t)}function o(e,t){var n=t||{};this.family=e,this.style=n.style||"normal",this.weight=n.weight||"normal",this.stretch=n.stretch||"normal"}function l(){if(null===a){var e=document.createElement("div");try{e.style.font="condensed 100px sans-serif"}catch(t){}a=""!==e.style.font}return a}function c(e,t){return[e.style,e.weight,l()?e.stretch:"","100px",t].join(" ")}var u=null,a=null,f=null;o.prototype.load=function(e,i){var o=this,a=e||"BESbswy",l=i||3e3,h=(new Date).getTime();return new Promise(function(e,i){null===f&&(f=!!window.FontFace);if(f){var p=new Promise(function(e,t){function n(){(new Date).getTime()-h>=l?t():document.fonts.load(c(o,o.family),a).then(function(t){1<=t.length?e():setTimeout(n,25)},function(){t()})}n()}),d=new Promise(function(e,t){setTimeout(t,l)});Promise.race([d,p]).then(function(){e(o)},function(){i(o)})}else t(function(){function t(){var t;if(t=-1!=m&&-1!=g||-1!=m&&-1!=S||-1!=g&&-1!=S)(t=m!=g&&m!=S&&g!=S)||(null===u&&(t=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),u=!!t&&(536>parseInt(t[1],10)||536===parseInt(t[1],10)&&11>=parseInt(t[2],10))),t=u&&(m==x&&g==x&&S==x||m==T&&g==T&&S==T||m==N&&g==N&&S==N)),t=!t;t&&(null!==C.parentNode&&C.parentNode.removeChild(C),clearTimeout(L),e(o))}function f(){if((new Date).getTime()-h>=l)null!==C.parentNode&&C.parentNode.removeChild(C),i(o);else{var e=document.hidden;if(!0===e||void 0===e)m=p.a.offsetWidth,g=d.a.offsetWidth,S=v.a.offsetWidth,t();L=setTimeout(f,50)}}var p=new n(a),d=new n(a),v=new n(a),m=-1,g=-1,S=-1,x=-1,T=-1,N=-1,C=document.createElement("div"),L=0;C.dir="ltr",r(p,c(o,"sans-serif")),r(d,c(o,"serif")),r(v,c(o,"monospace")),C.appendChild(p.a),C.appendChild(d.a),C.appendChild(v.a),document.body.appendChild(C),x=p.a.offsetWidth,T=d.a.offsetWidth,N=v.a.offsetWidth,f(),s(p,function(e){m=e,t()}),r(p,c(o,'"'+o.family+'",sans-serif')),s(d,function(e){g=e,t()}),r(d,c(o,'"'+o.family+'",serif')),s(v,function(e){S=e,t()}),r(v,c(o,'"'+o.family+'",monospace'))})})},"undefined"!=typeof module?module.exports=o:(window.FontFaceObserver=o,window.FontFaceObserver.prototype.load=o.prototype.load)})();
+  // FontFaceObserver https://github.com/bramstein/fontfaceobserver
+  (function(){function e(e,t){document.addEventListener?e.addEventListener("scroll",t,!1):e.attachEvent("scroll",t)}function t(e){document.body?e():document.addEventListener?document.addEventListener("DOMContentLoaded",function t(){document.removeEventListener("DOMContentLoaded",t),e()}):document.attachEvent("onreadystatechange",function n(){if("interactive"==document.readyState||"complete"==document.readyState)document.detachEvent("onreadystatechange",n),e()})}function n(e){this.a=document.createElement("div"),this.a.setAttribute("aria-hidden","true"),this.a.appendChild(document.createTextNode(e)),this.b=document.createElement("span"),this.c=document.createElement("span"),this.h=document.createElement("span"),this.f=document.createElement("span"),this.g=-1,this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;",this.b.appendChild(this.h),this.c.appendChild(this.f),this.a.appendChild(this.b),this.a.appendChild(this.c)}function r(e,t){e.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:"+t+";"}function i(e){var t=e.a.offsetWidth,n=t+100;return e.f.style.width=n+"px",e.c.scrollLeft=n,e.b.scrollLeft=e.b.scrollWidth+100,e.g!==t?(e.g=t,!0):!1}function s(t,n){function r(){var e=s;i(e)&&null!==e.a.parentNode&&n(e.g)}var s=t;e(t.b,r),e(t.c,r),i(t)}function o(e,t){var n=t||{};this.family=e,this.style=n.style||"normal",this.weight=n.weight||"normal",this.stretch=n.stretch||"normal"}function l(){if(null===a){var e=document.createElement("div");try{e.style.font="condensed 100px sans-serif"}catch(t){}a=""!==e.style.font}return a}function c(e,t){return[e.style,e.weight,l()?e.stretch:"","100px",t].join(" ")}var u=null,a=null,f=null;o.prototype.load=function(e,i){var o=this,a=e||"BESbswy",l=i||3e3,h=(new Date).getTime();return new Promise(function(e,i){null===f&&(f=!!window.FontFace);if(f){var p=new Promise(function(e,t){function n(){(new Date).getTime()-h>=l?t():document.fonts.load(c(o,o.family),a).then(function(t){1<=t.length?e():setTimeout(n,25)},function(){t()})}n()}),d=new Promise(function(e,t){setTimeout(t,l)});Promise.race([d,p]).then(function(){e(o)},function(){i(o)})}else t(function(){function t(){var t;if(t=-1!=m&&-1!=g||-1!=m&&-1!=S||-1!=g&&-1!=S)(t=m!=g&&m!=S&&g!=S)||(null===u&&(t=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),u=!!t&&(536>parseInt(t[1],10)||536===parseInt(t[1],10)&&11>=parseInt(t[2],10))),t=u&&(m==x&&g==x&&S==x||m==T&&g==T&&S==T||m==N&&g==N&&S==N)),t=!t;t&&(null!==C.parentNode&&C.parentNode.removeChild(C),clearTimeout(L),e(o))}function f(){if((new Date).getTime()-h>=l)null!==C.parentNode&&C.parentNode.removeChild(C),i(o);else{var e=document.hidden;if(!0===e||void 0===e)m=p.a.offsetWidth,g=d.a.offsetWidth,S=v.a.offsetWidth,t();L=setTimeout(f,50)}}var p=new n(a),d=new n(a),v=new n(a),m=-1,g=-1,S=-1,x=-1,T=-1,N=-1,C=document.createElement("div"),L=0;C.dir="ltr",r(p,c(o,"sans-serif")),r(d,c(o,"serif")),r(v,c(o,"monospace")),C.appendChild(p.a),C.appendChild(d.a),C.appendChild(v.a),document.body.appendChild(C),x=p.a.offsetWidth,T=d.a.offsetWidth,N=v.a.offsetWidth,f(),s(p,function(e){m=e,t()}),r(p,c(o,'"'+o.family+'",sans-serif')),s(d,function(e){g=e,t()}),r(d,c(o,'"'+o.family+'",serif')),s(v,function(e){S=e,t()}),r(v,c(o,'"'+o.family+'",monospace'))})})},"undefined"!=typeof module?module.exports=o:(window.FontFaceObserver=o,window.FontFaceObserver.prototype.load=o.prototype.load)})();
 
-var fontA = new FontFaceObserver('edduarte-content-regular', {
-  weight: 400
-});
-var fontB = new FontFaceObserver('edduarte-headings-regular', {
-  weight: 400
-});
-
-Promise.all([fontA.load(null, 6000), fontB.load(null, 6000)]).then(function () {
-  document.documentElement.className += " font-load-1";
-  sessionStorage.fontsLoaded1 = true;
-
-  var fontC = new FontFaceObserver('edduarte-content-regular-italic', {
+  const fontA = new FontFaceObserver('Spectral', {
     weight: 400
   });
-  var fontD = new FontFaceObserver('edduarte-content-bold', {
-    weight: 700
-  });
-  var fontE = new FontFaceObserver('edduarte-content-bold-italic', {
-    weight: 700
-  });
-  var fontF = new FontFaceObserver('edduarte-headings-bold', {
-    weight: 700
+  const fontB = new FontFaceObserver('Heebo', {
+    weight: 400
   });
 
-  Promise.all([fontC.load(null, 6000), fontD.load(null, 6000), fontE.load(null, 6000), fontF.load(null, 6000)]).then(function () {
-    document.documentElement.className += " font-load-2";
-    sessionStorage.fontsLoaded2 = true;
-  });
-});
+  Promise.all([fontA.load(null, 6000), fontB.load(null, 6000)])
+      .then(function () {
+        document.documentElement.className += " font-load-1";
+        sessionStorage.fontsLoaded1 = true;
+
+        const fontC = new FontFaceObserver('Spectral-Italic', {
+          weight: 400
+        });
+        const fontD = new FontFaceObserver('Spectral-Bold', {
+          weight: 700
+        });
+        const fontE = new FontFaceObserver('Spectral-Bold-Italic', {
+          weight: 700
+        });
+        const fontF = new FontFaceObserver('Heebo-Bold', {
+          weight: 700
+        });
+
+        Promise.all([
+          fontC.load(null, 6000),
+          fontD.load(null, 6000),
+          fontE.load(null, 6000),
+          fontF.load(null, 6000)
+        ]).then(function () {
+          document.documentElement.className += " font-load-2";
+          sessionStorage.fontsLoaded2 = true;
+        });
+      });
 })();
 
 </script>

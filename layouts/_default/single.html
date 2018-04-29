@@ -4,132 +4,145 @@
 
 <body>
 <header class="logo">
-<span class="home-link"><a href="{{ .Site.BaseURL }}">edduarte</a></span><span class="section-link"><a href="/{{.Section}}">{{.Section}}</a></span>
+  <span class="home-link"><a href="{{ .Site.BaseURL }}">edduarte</a></span><span
+    class="section-link"
+><a href="/{{.Section}}">{{.Section}}</a></span>
 </header>
 
 <main>
-<article>
-<header>
-<div class="title">{{ .Title }}</div>
-<div class="subtitle">{{ .Params.subtitle }}</div>
+  <article>
+    <header>
+      <div class="title">{{ .Title }}</div>
+      <div class="subtitle">{{ .Params.subtitle }}</div>
 
-<div class="authors">
-{{ $authorList := .Params.authors }}
-{{ if $authorList }}
-<p>
-{{ $len := (len $authorList) }}
-{{ if eq $len 1 }}
-{{ $author := index $authorList 0 }}
-<a href="{{ $author.url }}">{{ $author.name }}</a>
-{{ else }}
-{{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $author := index $authorList $i }}{{ if $author.url }}<a href='{{ $author.url }}'>{{ $author.name }}</a>{{ else }}{{ $author.name }}{{ end }}{{ end }}
-{{ end }}
-</p>
-{{ end }}
-</div>
+      <div class="authors">
+        {{ $authorList := .Params.authors }}
+        {{ if $authorList }}
+        <p>
+          {{ $len := (len $authorList) }}
+          {{ if eq $len 1 }}
+          {{ $author := index $authorList 0 }}
+          <a href="{{ $author.url }}">{{ $author.name }}</a>
+          {{ else }}
+          {{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{
+          else if eq $i 0 }}{{ else }}, {{ end }}{{ $author := index $authorList
+          $i }}{{ if $author.url }}<a href='{{ $author.url }}'>{{ $author.name
+          }}</a>{{ else }}{{ $author.name }}{{ end }}{{ end }}
+          {{ end }}
+        </p>
+        {{ end }}
+      </div>
 
-</header>
+    </header>
 
-<div class="article-table">
+    <div class="article-table">
 
-<main>
+      <main>
 
-{{ if .Params.prologue }}
-<p class="prologue">{{ .Params.prologue }}</p>
-<div class="line"></div>
-{{ end }}
+        {{ if .Params.prologue }}
+        <p class="prologue">{{ .Params.prologue }}</p>
+        {{ end }}
 
-<section class="content">
-{{ .Content }}
-</section>
+        <section class="content">
+          {{ .Content }}
+        </section>
 
-{{ if .NextInSection }}
+        {{ if .NextInSection }}
 
-{{ if (gt .NextInSection.Weight -1) }}
-<div class="line"></div>
-<section class="mlt">
-<h3 class="mlt-header">Next on <a href="/{{.Section}}/">{{.Section}}</a></h3>
-<a class="mlt-link" href="{{.NextInSection.Permalink}}">
-<h4 class="mlt-title">{{.NextInSection.Title}}</h4>
-{{ if .NextInSection.Params.description }}
-<p class="mlt-summary">{{.NextInSection.Params.description}}</p>
-{{ end }}
-</a>
-</section>
+        {{ if (gt .NextInSection.Weight -1) }}
+        <div class="line"></div>
+        <section class="mlt">
+          <h3 class="mlt-header">Next on
+            <a href="/{{.Section}}/">{{.Section}}</a></h3>
+          <a class="mlt-link" href="{{.NextInSection.Permalink}}">
+            <h4 class="mlt-title">{{.NextInSection.Title}}</h4>
+            {{ if .NextInSection.Params.description }}
+            <p class="mlt-summary">{{.NextInSection.Params.description}}</p>
+            {{ end }}
+          </a>
+        </section>
 
-{{ else }}
+        {{ else }}
 
-{{ if .PrevInSection }}
-{{ if gt .PrevInSection.Weight -1 }}
-<div class="line"></div>
-<section class="mlt">
-<h3 class="mlt-header">More on <a href="/{{.Section}}/">{{.Section}}</a></h3>
-<a class="mlt-link" href="{{.PrevInSection.Permalink}}">
-<h4 class="mlt-title">{{.PrevInSection.Title}}</h4>
-<p class="mlt-summary">{{.PrevInSection.Params.description}}</p>
-</a>
-</section>
-{{ end }}
-{{ end }}
+        {{ if .PrevInSection }}
+        {{ if gt .PrevInSection.Weight -1 }}
+        <div class="line"></div>
+        <section class="mlt">
+          <h3 class="mlt-header">More on
+            <a href="/{{.Section}}/">{{.Section}}</a></h3>
+          <a class="mlt-link" href="{{.PrevInSection.Permalink}}">
+            <h4 class="mlt-title">{{.PrevInSection.Title}}</h4>
+            <p class="mlt-summary">{{.PrevInSection.Params.description}}</p>
+          </a>
+        </section>
+        {{ end }}
+        {{ end }}
 
-{{ end }}
+        {{ end }}
 
-{{ end }}
+        {{ end }}
 
-</main>
+      </main>
 
-<aside>
+      <aside>
 
-<section class="metadata">
-<ul class="table">
+        <section class="metadata">
+          <ul class="table">
 
-{{ if .Params.date }}
-<li class="published-date">
-<div class="icon metadata-icon icon-published-date"></div>
-<span class="screen-reader">Published on </span>
-<time class="metadata-title" datetime="{{ .Date }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-</li>
-{{ end }}
+            {{ if .Params.date }}
+            <li class="published-date">
+              <div class="icon metadata-icon icon-published-date"></div>
+              <span class="screen-reader">Published on </span>
+              <time class="metadata-title" datetime="{{ .Date }}">{{
+                .Date.Format "Jan 2, 2006" }}
+              </time>
+            </li>
+            {{ end }}
 
-<li class="reading-time">
-<div class="icon metadata-icon icon-reading-time"></div>
-<span class="screen-reader">Reading time: </span>
-<span class="metadata-title">{{ .ReadingTime }} min read</span>
-</li>
+            <li class="reading-time">
+              <div class="icon metadata-icon icon-reading-time"></div>
+              <span class="screen-reader">Reading time: </span>
+              <span class="metadata-title">{{ .ReadingTime }} min read</span>
+            </li>
 
-{{ with .Params.medium }}
-<li class="medium">
-<div class="icon metadata-icon icon-mirror"></div>
-<span class="screen-reader">Article mirrors: </span>
-<span class="metadata-title">Also on <a href="{{ . }}">Medium</a></span>
-</li>
-{{ end }}
+            {{ with .Params.medium }}
+            <li class="medium">
+              <div class="icon metadata-icon icon-mirror"></div>
+              <span class="screen-reader">Article mirrors: </span>
+              <span class="metadata-title">Also on <a href="{{ . }}">Medium</a></span>
+            </li>
+            {{ end }}
 
-{{ with .Params.hn }}
-<li class="hn">
-<div class="icon metadata-icon icon-discussion"></div>
-<span class="screen-reader">Discussion: </span>
-<span class="metadata-title">Discussion on <a href="{{ . }}">Hacker News</a></span>
-</li>
-{{ end }}
+            {{ with .Params.hn }}
+            <li class="hn">
+              <div class="icon metadata-icon icon-discussion"></div>
+              <span class="screen-reader">Discussion: </span>
+              <span class="metadata-title">Discussion on <a href="{{ . }}">Hacker News</a></span>
+            </li>
+            {{ end }}
 
-</ul>
-</section>
+          </ul>
+        </section>
 
-{{ $linkList := .Params.links }}
-{{ if $linkList }}
-<section>
-<ul class="links">
-{{ range $i, $temp := $linkList }}{{ $link := index $linkList $i }}{{ if $link.url }}<li><a href="{{ $link.url }}">{{ $link.name }}</a></li>{{ else }}<li>{{ $link.name }}</li>{{ end }}{{ end }}
-</ul>
-</section>
-{{ end }}
+        {{ $linkList := .Params.links }}
+        {{ if $linkList }}
+        <section>
+          <ul class="links">
+            {{ range $i, $temp := $linkList }}{{ $link := index $linkList $i
+            }}{{ if $link.url }}
+            <li><a href="{{ $link.url }}">{{ $link.name }}</a></li>
+            {{ else }}
+            <li>{{ $link.name }}</li>
+            {{ end }}{{ end }}
+          </ul>
+        </section>
+        {{ end }}
 
-</aside>
+      </aside>
 
-</div>
+    </div>
 
-</article>
+  </article>
 </main>
 
 {{ partial "footer.html" . }}

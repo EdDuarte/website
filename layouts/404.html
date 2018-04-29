@@ -8,16 +8,16 @@
 <style type="text/css">
 
 @font-face {
-  font-family:'edduarte-headings-regular';
-  font-style:normal;
-  font-weight:400;
-  src: url('../fonts/heebo-v2-latin-regular.eot'); /* IE9 Compat Modes */
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/heebo-v2-latin-regular.eot');
   src: local('Heebo'), local('Heebo-Regular'),
-  url('../fonts/heebo-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/heebo-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/heebo-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/heebo-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/heebo-v2-latin-regular.svg#Heebo') format('svg'); /* Legacy iOS */
+  url('../fonts/heebo-v2-latin-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/heebo-v2-latin-regular.woff2') format('woff2'),
+  url('../fonts/heebo-v2-latin-regular.woff') format('woff'),
+  url('../fonts/heebo-v2-latin-regular.ttf') format('truetype'),
+  url('../fonts/heebo-v2-latin-regular.svg#Heebo') format('svg');
 }
 
 body, html {
@@ -25,8 +25,8 @@ body, html {
   -webkit-text-size-adjust: 100%;
   -moz-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
-  color: rgba(14,17,21,.9);
-  font-family: "edduarte-headings-regular", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  color: rgba(14, 17, 21, .9);
+  font-family: "Heebo", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-style: normal;
   font-weight: 400;
   height: 100%;
@@ -51,16 +51,16 @@ body, html {
 }
 
 .link-home a {
-  color: rgba(14,17,21,.9);
+  color: rgba(14, 17, 21, .9);
   text-decoration: none;
-  background-image: linear-gradient(to right,#e21b2a 50%,#e21b2a 50%);
+  background-image: linear-gradient(to right, #e21b2a 50%, #e21b2a 50%);
   background-position: 0 1.3em;
   background-size: 5px 2px;
   background-repeat: repeat-x;
   background-origin: border-box
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width: 750px) {
 
   .container {
     position: relative;
@@ -72,7 +72,7 @@ body, html {
   }
 }
 
-@media screen and (min-width:750px) {
+@media screen and (min-width: 750px) {
 
   .container h1 {
     position: relative;
@@ -95,7 +95,8 @@ body, html {
 
 <div class="container">
   <h1>Page Not Found</h1>
-  <p class="link-home">Back to <a href="{{ .Site.BaseURL }}">edduarte.com</a></p>
+  <p class="link-home">Back to <a href="{{ .Site.BaseURL }}">edduarte.com</a>
+  </p>
 </div>
 
 </body>

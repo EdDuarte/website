@@ -1,21 +1,19 @@
-
 function supportsIntersectionObserver() {
-  var ua = window.navigator.userAgent;
+  const ua = window.navigator.userAgent;
 
-  var msie = ua.indexOf('MSIE ');
+  const msie = ua.indexOf('MSIE ');
   if (msie > 0) {
     // IE 10 or older
     return false;
   }
 
-  var trident = ua.indexOf('Trident/');
+  const trident = ua.indexOf('Trident/');
   if (trident > 0) {
     // IE 11
-    var rv = ua.indexOf('rv:');
     return false;
   }
 
-  var edge = ua.indexOf('Edge/');
+  const edge = ua.indexOf('Edge/');
   if (edge > 0) {
     // Edge (IE 12+)
     return false;
@@ -26,16 +24,16 @@ function supportsIntersectionObserver() {
 }
 
 function loadImg(figure) {
-  var src = figure.getAttribute('src');
+  const src = figure.getAttribute('src');
   if (src) {
-    var img = figure.getElementsByTagName('img')[0];
+    const img = figure.getElementsByTagName('img')[0];
     if (img) {
-      img.setAttribute('src',src);
+      img.setAttribute('src', src);
     }
   }
 }
 
-var init = function() {
+const init = function () {
   const images = document.querySelectorAll('.js-lazy-image');
   const supported = supportsIntersectionObserver();
 
@@ -50,17 +48,17 @@ var init = function() {
       // IntersectionObserver, so load images normally
       Array.from(images).forEach(image => loadImg(image));
     } else {
-      let observer = new IntersectionObserver(function(entries){
+      let observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
           if (entry.intersectionRatio > 0) {
-          observer.unobserve(entry.target);
-          loadImg(entry.target);
-        }
-      });
+            observer.unobserve(entry.target);
+            loadImg(entry.target);
+          }
+        });
       }, config);
       images.forEach(image => {
         observer.observe(image);
-    });
+      });
     }
   } else {
     // it's IE or Edge, so load images normally
@@ -69,7 +67,9 @@ var init = function() {
 
 };
 
-var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+const raf = requestAnimationFrame || mozRequestAnimationFrame ||
     webkitRequestAnimationFrame || msRequestAnimationFrame;
-if (raf) raf(function() { window.setTimeout(init, 0); });
+if (raf) raf(function () {
+  window.setTimeout(init, 0);
+});
 else window.addEventListener('load', init);

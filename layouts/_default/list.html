@@ -6,7 +6,7 @@
 {{ partial "intro.html" . }}
 {{ else }}
 <header class="logo">
-<span class="home-link"><a href="{{ .Site.BaseURL }}">edduarte</a></span>
+  <span class="home-link"><a href="{{ .Site.BaseURL }}">edduarte</a></span>
 </header>
 <!-- 
 <header>
@@ -14,36 +14,41 @@
 </header>
  -->
 <section class="content">
-{{ .Content }}
+  {{ .Content }}
 </section>
 
 {{ end }}
 
 <ul class="list">
-{{ range .Data.Pages.ByDate.Reverse }}
-<li>
-<div class="table">
-<div class="col1 list-meta">
-<time class="list-meta-date">{{ .Date.Format "2006 Jan 02" }}</time>
-{{ if $.IsHome }}
-<span class="list-meta-category"><a href="{{ (.Section | urlize) | absLangURL }}" class="category">{{ .Type }}</a></span>
-{{ end }}
-</div>
-<div class="col2 list-title">
-{{ if .Params.externalLink }}
-<a href="{{ .Params.externalLink }}"><div class="icon list-icon icon-external-link"></div>{{ .Title }}</a>
-{{ else }}
-<a href="{{ .URL }}">{{ .Title }}</a>
-{{ end }}
-</div>
-</div>
-</li>
-{{ end }}
+  {{ range .Data.Pages.ByDate.Reverse }}
+  <li>
+    <div class="table">
+      <div class="col1 list-meta">
+        <time class="list-meta-date">{{ .Date.Format "2006 Jan 02" }}</time>
+        {{ if $.IsHome }}
+        <span class="list-meta-category"><a
+            href="{{ (.Section | urlize) | absLangURL }}"
+            class="category"
+        >{{ .Type }}</a></span>
+        {{ end }}
+      </div>
+      <div class="col2 list-title">
+        {{ if .Params.externalLink }}
+        <a href="{{ .Params.externalLink }}">
+          <div class="icon list-icon icon-external-link"></div>
+          {{ .Title }}</a>
+        {{ else }}
+        <a href="{{ .URL }}">{{ .Title }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </li>
+  {{ end }}
 </ul>
 
 {{ if .IsHome }}
 <section class="content">
-{{ .Content }}
+  {{ .Content }}
 </section>
 {{ end }}
 
