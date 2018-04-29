@@ -8,12 +8,12 @@ markup: mmark
 
 ## Experience
 
-Over four years of hands-on experience with Backend Architecture, Time-Series
-Analysis & Storage, Stream Processing, Smart City IoT, Mobile & Web Frontend
-Development, UI/UX Design, Natural Language Processing, and Information
-Retrieval. Worked extensively with languages like Java 9, Kotlin 1.1, Javascript
-ES6, Swift 4 and Objective-C, and technologies like Spring, REST, gRPC,
-WebSocket, MQTT, Flink, React, Android and iOS.
+Over four years of hands-on experience with Backend Architecture, Distributed
+Systems, Time-Series Querying & Storage, Stream Processing, Mobile & Web
+Frontend Development, UI/UX Design, Natural Language Processing, and Information
+Retrieval. Worked extensively with languages like Java, Kotlin, Javascript ES6,
+Swift and Objective-C, and technologies like REST, gRPC, WebSocket, MQTT, React,
+Android and iOS.
 
 Recently finished my internship at [Ubiwhere](http://www.ubiwhere.com/en/),
 where I worked as a backend developer (business process modeling and integration
