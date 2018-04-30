@@ -13,11 +13,14 @@
   <article>
     <header>
       <div class="title">{{ .Title }}</div>
-      <div class="subtitle">{{ .Params.subtitle }}</div>
+      {{ $subtitle := .Params.subtitle }}
+      {{ if $subtitle }}
+      <div class="subtitle">{{ $subtitle }}</div>
+      {{ end }}
 
+      {{ $authorList := .Params.authors }}
+      {{ if $authorList }}
       <div class="authors">
-        {{ $authorList := .Params.authors }}
-        {{ if $authorList }}
         <p>
           {{ $len := (len $authorList) }}
           {{ if eq $len 1 }}
@@ -27,8 +30,8 @@
           {{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $author := index $authorList $i }}{{ if $author.url }}<a href='{{ $author.url }}'>{{ $author.name }}</a>{{ else }}{{ $author.name }}{{ end }}{{ end }}
           {{ end }}
         </p>
-        {{ end }}
       </div>
+      {{ end }}
 
     </header>
 
@@ -99,22 +102,28 @@
             <li class="reading-time">
               <div class="icon metadata-icon icon-reading-time"></div>
               <span class="screen-reader">Reading time: </span>
-              <span class="metadata-title">{{ .ReadingTime }} min read</span>
+              <span class="metadata-title">
+                {{ .ReadingTime }} min read
+              </span>
             </li>
 
             {{ with .Params.medium }}
             <li class="medium">
               <div class="icon metadata-icon icon-mirror"></div>
               <span class="screen-reader">Article mirrors: </span>
-              <span class="metadata-title">Also on <a href="{{ . }}">Medium</a></span>
+              <span class="metadata-title">
+                Also on <a href="{{ . }}">Medium</a>
+              </span>
             </li>
             {{ end }}
 
             {{ with .Params.hn }}
             <li class="hn">
               <div class="icon metadata-icon icon-discussion"></div>
-              <span class="screen-reader">Discussion: </span>
-              <span class="metadata-title">Discussion on <a href="{{ . }}">Hacker News</a></span>
+              <span class="screen-reader">Hacker News: </span>
+              <span class="metadata-title">
+                Discussion on <a href="{{ . }}">Hacker News</a>
+              </span>
             </li>
             {{ end }}
 

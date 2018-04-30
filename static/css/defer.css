@@ -54,7 +54,8 @@ footer a:hover {
 
 a {
   text-decoration: none !important;
-  background: linear-gradient(to right, #e21b2a 50%, #e21b2a 50%) 0 1em;
+  background-image: linear-gradient(to right, #e21b2a 50%, #e21b2a 50%);
+  background-position: 0 1em;
   background-size: 5px 2px;
   text-size-adjust: 100%;
   hyphens: manual;
@@ -223,7 +224,8 @@ tr:nth-child(even) {
   font-size: 0.9em;
 }
 
-/* .icon-twitter
+/*
+.icon-twitter
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
 viewBox="0 0 24 24" fill="none" stroke="currentColor"
 style="stroke:rgb(172,176,176);" stroke-width="2"
@@ -237,7 +239,8 @@ stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9
   background-repeat: no-repeat;
 }
 
-/* .icon-github
+/*
+.icon-github
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
 viewBox="0 0 24 24" fill="none" stroke="currentColor"
 style="stroke:rgb(172,176,176);" stroke-width="2"
@@ -253,16 +256,16 @@ stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5
   background-repeat: no-repeat;
 }
 
-/* .icon-feed v1
+/*
+.icon-feed v1
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
 viewBox="0 0 24 24" fill="none" stroke="currentColor"
 style="stroke:rgb(172,176,176);" stroke-width="2.2"
 stroke-linecap="round" stroke-linejoin="round"><path d="m 3.2,12.4 a
 10,12 0 0 1 7.8,8.4 M 3.2,4.8 A 18,19 0 0 1 19,20.7 M 3.2,-5.2"/><line
 x1="3.2" y1="20.1" x2="3.8" y2="20.7"/></svg>
-*/
 
-/* .icon-feed v2
+.icon-feed v2
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
 viewBox="0 0 24 24" fill="none" stroke="currentColor"
 style="stroke:rgb(172,176,176);" stroke-width="2.2"
@@ -275,7 +278,8 @@ cy="19" r="1"></circle></svg>
   background-repeat: no-repeat;
 }
 
-/* .icon-published-date
+/*
+.icon-published-date
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 viewBox="0 0 24 24" fill="none" stroke="currentColor"
 style="stroke:rgb(172,176,176);" stroke-width="2"
@@ -290,7 +294,8 @@ y2="10"></line></svg>
   background-repeat: no-repeat;
 }
 
-/* .icon-reading-time
+/*
+.icon-reading-time
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 viewBox="0 0 24 24" fill="none" stroke="currentColor"
 style="stroke:rgb(172,176,176);" stroke-width="2"
@@ -303,7 +308,8 @@ points="12 6 12 12 15 15"></polyline></svg>
   background-repeat: no-repeat;
 }
 
-/* .icon-mirror v1
+/*
+.icon-mirror v1
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 viewBox="0 0 24 24" fill="none" stroke="currentColor"
 style="stroke:rgb(172,176,176);" stroke-width="2"
@@ -311,15 +317,14 @@ stroke-linecap="round" stroke-linejoin="round" class="feather
 feather-type"><polyline points="4 7 4 4 20 4 20 7"></polyline><line
 x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12"
 y2="20"></line></svg>
-*/
 
-/* .icon-mirror v2
+.icon-mirror v2
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 viewBox="0 0 24 24" fill="none" stroke="currentColor"
 style="stroke:rgb(172,176,176);" stroke-width="2"
-stroke-linecap="round" stroke-linejoin="round" class="feather
-feather-link-2"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6
-0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16"
+stroke-linecap="round" stroke-linejoin="round"
+class="feather feather-link-2"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5
+5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16"
 y2="12"></line></svg>
 */
 .icon-mirror {
@@ -327,7 +332,8 @@ y2="12"></line></svg>
   background-repeat: no-repeat;
 }
 
-/* .icon-discussion
+/*
+.icon-discussion
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 viewBox="0 0 24 24" fill="none" stroke="currentColor"
 style="stroke:rgb(172,176,176);" stroke-width="2"
@@ -342,7 +348,8 @@ feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5
   background-repeat: no-repeat;
 }
 
-/* .icon-external-link
+/*
+.icon-external-link
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 viewBox="0 0 24 24" fill="none" stroke="currentColor"
 style="stroke:rgb(172,176,176);" stroke-width="2"
@@ -384,13 +391,14 @@ feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0
   }
 
   .footnote a,
-  .home-link a:hover,
   .homelink a,
+  .home-link a:hover,
+  .section-link a,
+  .section-link a:hover,
   .metadata a,
   .myemail a,
   .mylinks a,
   .myname a,
-  .section-link a:hover,
   .subtitle a,
   .table > .list-meta > a,
   .table > .list-title > a,

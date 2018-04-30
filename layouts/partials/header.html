@@ -123,7 +123,7 @@ summary {
 .font-load-1 h5,
 .font-load-1 h6,
 .font-load-1 summary {
-  font-family: Heebo, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-family: Lato, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-style: normal;
 }
 
@@ -261,24 +261,29 @@ aside {
 ol,
 p,
 ul {
-  font-size: 1.175em;
+  font-size: 1.175rem;
   letter-spacing: -0.007em;
 }
 
 .summary-container {
   max-width: 390px;
-  margin: 0.2em auto 0;
+  margin: 0.1em auto 0;
   text-align: center;
 }
 
+.font-load-1 .summary-container {
+  margin: 0.5em auto 0;
+}
+
 summary {
-  font-size: 1.05em;
-  letter-spacing: -0.05em;
-  line-height: 1.93em;
+  font-size: 1.1em;
+  letter-spacing: -0.07em;
+  line-height: 1.88em;
 }
 
 .font-load-1 summary {
   font-size: 1.15em;
+  letter-spacing: -0.05em;
   line-height: 1.8em;
 }
 
@@ -315,7 +320,7 @@ p {
 .font-load-1 ol,
 .font-load-1 p,
 .font-load-1 ul {
-  font-size: 1.15em;
+  font-size: 1.15rem;
   margin-top: 0.6em;
   line-height: 1.68em;
 }
@@ -344,9 +349,10 @@ em,
 }
 
 .prologue {
-  font-size: 1.340em;
+  font-size: 1.34em;
   letter-spacing: -0.02em;
   line-height: 1.55em;
+  margin-top: 0.5em;
   margin-bottom: 1.85em;
 }
 
@@ -354,6 +360,7 @@ em,
   font-size: 1.3em;
   letter-spacing: -0.06em;
   line-height: 1.6em;
+  margin-top: 0.5em;
   margin-bottom: 2em;
 }
 
@@ -390,78 +397,79 @@ img.myphoto {
   border-radius: 100px;
 }
 
-header {
-  margin-top: 0.7em;
+.logo {
+  margin-top: 1em;
+  height: 32px;
+}
+
+.font-load-1 .logo {
+  margin-top: 1em;
 }
 
 article header {
   margin-top: 0.2em;
-  margin-bottom: 0.25em;
+  margin-bottom: 0;
   padding-bottom: 1.5em;
 }
 
 .font-load-1 article header {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.3em;
 }
 
 .title {
-  font-size: 3.02em;
-  letter-spacing: -0.065em;
+  font-size: 3em;
+  letter-spacing: -0.072em;
   line-height: 1.19em;
-  margin: 0.15em 0 0;
+  margin-top: 0.1em;
 }
 
 .font-load-1 .title {
   font-size: 3em;
   letter-spacing: -0.022em;
   line-height: 1.2em;
-  margin: 0.15em 0 0;
-}
-
-.subtitle,
-.font-load-1 .subtitle {
-  font-size: 2.8em;
-  line-height: 1.22em;
-  letter-spacing: -0.022em;
-  margin-top: 0.17em;
+  margin-top: 0;
 }
 
 .subtitle {
-  letter-spacing: -0.065em;
+  font-size: 2.8em;
+  letter-spacing: -0.068em;
+  line-height: 1.22em;
   margin-top: 0.18em;
 }
 
+.font-load-1 .subtitle {
+  font-size: 2.8em;
+  letter-spacing: -0.022em;
+  line-height: 1.22em;
+  margin-top: 0.17em;
+}
+
 .metadata {
-  margin-top: 1.1em;
-  margin-bottom: 0.2em;
+  margin-top: 0.9em;
 }
 
 .font-load-1 .metadata {
-  margin-top: 1em;
-  margin-bottom: 1.2em;
+  margin-top: 0.75em;
 }
 
 .authors {
-  margin-top: 0.62em;
+  margin-top: 0;
 }
 
 .font-load-1 .authors {
-  margin-top: 0.7em;
+  margin-top: 1em;
 }
 
 .authors > p {
   font-size: 1.3em;
   letter-spacing: 0.005em;
   line-height: 1.45em;
-  margin-top: -0.1em;
-  margin-bottom: 1em;
 }
 
 .font-load-1 .authors > p {
   font-size: 1.25em;
   letter-spacing: -0.025em;
   line-height: 1.5em;
-  margin-top: 0;
 }
 
 .metadata > .table,
@@ -488,6 +496,7 @@ figure {
   margin: 0;
 }
 
+.metadata .reddit,
 .metadata .hn,
 .metadata .medium,
 .metadata .published-date,
@@ -759,23 +768,28 @@ samp {
   padding: 0.1em 0.5em;
 }
 
+.font-load-1 .list-meta-category a {
+  padding: 0.3em 0.5em;
+}
+
 .links {
   font-style: normal;
-  margin: 0;
+  margin-top: 0.1em;
   padding: 0.5em 0 0;
 }
 
+.font-load-1 .links {
+  margin-top: 0.1em;
+}
+
 .links > li {
-  margin-top: 2px;
-  margin-bottom: 4px;
-  line-height: 1.4em;
+  line-height: 0.75em;
   display: inline-block;
   position: relative;
 }
 
 .font-load-1 .links > li {
-  margin-top: 0;
-  margin-bottom: 6px;
+  line-height: 0.6em;
 }
 
 .links > li > a {
@@ -1062,14 +1076,14 @@ img.centered:empty {
 }
 
 .table > .list-meta {
-  font-size: 0.65em;
+  font-size: 0.62em;
   line-height: 1.6em;
   margin-top: 0.17em;
   text-align: right;
 }
 
 .font-load-1 .table > .list-meta {
-  font-size: 0.65em;
+  font-size: 0.64em;
   letter-spacing: 0.02em;
 }
 
@@ -1190,7 +1204,7 @@ h6:hover > .anchor:hover {
   .font-load-2 h4,
   .font-load-2 h5,
   .font-load-2 h6 {
-    font-family: Heebo-Bold, Heebo, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    font-family: Lato-Bold, Lato, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
     font-weight: 700;
   }
 
@@ -1200,21 +1214,11 @@ h6:hover > .anchor:hover {
   }
 
   .font-load-2 .title {
-    letter-spacing: -0.028em;
+    letter-spacing: -0.034em;
   }
 
   .font-load-2 .subtitle {
-    letter-spacing: -0.029em;
-  }
-
-  @-moz-document url-prefix() {
-    .font-load-2 .title {
-      letter-spacing: -0.033em;
-    }
-
-    .font-load-2 .subtitle {
-      letter-spacing: -0.032em;
-    }
+    letter-spacing: -0.031em;
   }
 }
 
@@ -1256,10 +1260,13 @@ h6:hover > .anchor:hover {
 
 @media screen and (max-width: 1079px), print {
   article header {
-    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     padding-bottom: 0;
-    margin-top: 0.22em;
-    margin-bottom: 0.2em;
+  }
+
+  .font-load-1 article header {
+    margin-bottom: 0;
   }
 
   body {
@@ -1296,77 +1303,13 @@ h6:hover > .anchor:hover {
     margin: 0;
   }
 
-  /*
-  .title {
-    font-size: 1.9em;
-    letter-spacing: -0.04em;
-    line-height: 1.25em;
-  }
-
-  .font-load-1 .title {
-    font-size: 2em;
-  }
-
-  .subtitle {
-    font-size: 1.73em;
-    letter-spacing: -0.045em;
-    line-height: 1.26em;
-    margin-top: 0.23em;
-  }
-
-  .font-load-1 .subtitle {
-    font-size: 1.8em;
-    letter-spacing: -0.025em;
-  }
-
-  .font-load-2 .subtitle,
-  .font-load-2 .title {
-    letter-spacing: -0.028em;
-  }
-  */
-
   .content > .font-load-1 h1:first-child,
   .content > h1:first-child {
     margin-top: 0.6em;
   }
 
-  /*
-  h1,
-  .font-load-1 h1 {
-    font-size: 1.642em;
-  }
-
-  h2,
-  .font-load-1 h2 {
-    font-size: 1.414em;
-  }
-
-  h3,
-  .font-load-1 h3 {
-    font-size: 1.297em;
-  }
-
-  h4,
-  .font-load-1 h4 {
-    font-size: 1.189em;
-  }
-
-  h5,
-  .font-load-1 h5 {
-    font-size: 1.091em;
-  }
-  */
-
   figcaption {
     font-size: 1em;
-  }
-
-  .authors {
-    margin-top: 0.5em;
-  }
-
-  .font-load-1 .authors {
-    margin-top: 0.45em;
   }
 
   /*
@@ -1383,39 +1326,41 @@ h6:hover > .anchor:hover {
   }
   */
 
-  .authors > p {
-    margin-bottom: 0.4em;
+  .authors {
+    margin-top: 0;
+  }
+
+  .font-load-1 .authors {
+    margin-top: 0;
   }
 
   .links {
     margin-top: 0.35em;
-    margin-bottom: 0.1em;
+    margin-bottom: 0;
     padding: 0;
   }
 
   .font-load-1 .links {
-    margin-top: 0;
-    margin-bottom: 0.2em;
+    margin-top: 0.35em;
+    margin-bottom: 0.25em;
   }
 
   .metadata {
-    margin-top: -0.85em;
-    margin-bottom: 0;
+    margin-top: 0.15em;
   }
 
   .font-load-1 .metadata {
-    margin-top: -0.3em;
-    margin-bottom: 0.38em;
+    margin-top: 0.2em;
   }
 
   .metadata > .table {
-    margin-top: 0.8em;
+    margin-top: 0;
     line-height: 1.75em;
     display: inline-block;
   }
 
   .font-load-1 .metadata > .table {
-    margin-top: 0.3em;
+    margin-top: 0;
     line-height: 1.5em;
   }
 
@@ -1438,6 +1383,7 @@ h6:hover > .anchor:hover {
     padding-right: 0;
   }
 
+  .metadata .reddit,
   .metadata .hn,
   .metadata .medium,
   .metadata .published-date,
@@ -1445,6 +1391,7 @@ h6:hover > .anchor:hover {
     line-height: 1.7em;
   }
 
+  .font-load-1 .metadata .reddit,
   .font-load-1 .metadata .hn,
   .font-load-1 .metadata .medium,
   .font-load-1 .metadata .published-date,
@@ -1488,7 +1435,7 @@ h6:hover > .anchor:hover {
   ol,
   p,
   ul {
-    font-size: 1.114em;
+    font-size: 1.114rem;
     letter-spacing: -0.012em;
     line-height: 1.6em;
   }
@@ -1496,7 +1443,7 @@ h6:hover > .anchor:hover {
   .font-load-1 ol,
   .font-load-1 p,
   .font-load-1 ul {
-    font-size: 1.07em;
+    font-size: 1.07rem;
     line-height: 1.7em;
   }
 
@@ -1599,9 +1546,12 @@ h6:hover > .anchor:hover {
   .font-load-1 .title,
   .font-load-2 .title {
     font-size: 1.6em;
-    letter-spacing: -0.023em;
     line-height: 1.25em;
     margin-top: 0;
+  }
+
+  .font-load-1 .title {
+    letter-spacing: -0.01em;
   }
 
   .font-load-2 .title {
@@ -1815,18 +1765,18 @@ h6:hover > .anchor:hover {
 }
 
 @font-face {
-  font-family: 'Heebo';
+  font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/heebo-v2-latin-regular.eot');
+  src: url('../fonts/lato-v14-latin-regular.eot');
   src:
-    local('Heebo'),
-    local('Heebo-Regular'),
-    url('../fonts/heebo-v2-latin-regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/heebo-v2-latin-regular.woff2') format('woff2'),
-    url('../fonts/heebo-v2-latin-regular.woff') format('woff'),
-    url('../fonts/heebo-v2-latin-regular.ttf') format('truetype'),
-    url('../fonts/heebo-v2-latin-regular.svg#Heebo') format('svg');
+    local('Lato Regular'),
+    local('Lato-Regular'),
+    url('../fonts/lato-v14-latin-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/lato-v14-latin-regular.woff2') format('woff2'),
+    url('../fonts/lato-v14-latin-regular.woff') format('woff'),
+    url('../fonts/lato-v14-latin-regular.ttf') format('truetype'),
+    url('../fonts/lato-v14-latin-regular.svg#Lato') format('svg');
 }
 
 /* STAGE 2 FONTS */
@@ -1877,18 +1827,18 @@ h6:hover > .anchor:hover {
 }
 
 @font-face {
-  font-family: 'Heebo-Bold';
+  font-family: 'Lato-Bold';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/heebo-v2-latin-500.eot');
+  src: url('../fonts/lato-v14-latin-700.eot');
   src:
-    local('Heebo Bold'),
-    local('Heebo-Bold'),
-    url('../fonts/heebo-v2-latin-500.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/heebo-v2-latin-500.woff2') format('woff2'),
-    url('../fonts/heebo-v2-latin-500.woff') format('woff'),
-    url('../fonts/heebo-v2-latin-500.ttf') format('truetype'),
-    url('../fonts/heebo-v2-latin-500.svg#Heebo') format('svg');
+    local('Lato Bold'),
+    local('Lato-Bold'),
+    url('../fonts/lato-v14-latin-700.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/lato-v14-latin-700.woff2') format('woff2'),
+    url('../fonts/lato-v14-latin-700.woff') format('woff'),
+    url('../fonts/lato-v14-latin-700.ttf') format('truetype'),
+    url('../fonts/lato-v14-latin-700.svg#Lato') format('svg');
 }
 
 </style>
@@ -1931,7 +1881,7 @@ h6:hover > .anchor:hover {
   const fontA = new FontFaceObserver('Spectral', {
     weight: 400
   });
-  const fontB = new FontFaceObserver('Heebo', {
+  const fontB = new FontFaceObserver('Lato', {
     weight: 400
   });
 
@@ -1949,7 +1899,7 @@ h6:hover > .anchor:hover {
         const fontE = new FontFaceObserver('Spectral-Bold-Italic', {
           weight: 700
         });
-        const fontF = new FontFaceObserver('Heebo-Bold', {
+        const fontF = new FontFaceObserver('Lato-Bold', {
           weight: 700
         });
 
