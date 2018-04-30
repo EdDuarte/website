@@ -364,7 +364,7 @@ feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0
 }
 
 @media only print {
-  .font-load-1 .logo,
+  .font-load-1 .home-link,
   .font-load-1 .myname,
   .font-load-1 .subtitle,
   .font-load-1 .title,
@@ -412,7 +412,7 @@ feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0
   h4 a,
   h5 a,
   h6 a {
-    text-decoration: underline;
+    text-decoration: underline !important;
     background-image: none;
   }
 
