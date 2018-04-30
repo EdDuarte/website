@@ -1259,6 +1259,10 @@ h6:hover > .anchor:hover {
 }
 
 @media screen and (max-width: 1079px), print {
+  body {
+    max-width: 650px;
+  }
+
   article header {
     margin-top: 0;
     margin-bottom: 0;
@@ -1267,10 +1271,6 @@ h6:hover > .anchor:hover {
 
   .font-load-1 article header {
     margin-bottom: 0;
-  }
-
-  body {
-    max-width: 650px;
   }
 
   .article-table {
@@ -1428,14 +1428,14 @@ h6:hover > .anchor:hover {
     font-size: 18px;
   }
 
-  article main {
-    margin-top: 0.1em;
+  .logo {
+    height: 24px;
   }
 
   ol,
   p,
   ul {
-    font-size: 1.114rem;
+    font-size: 1.044rem;
     letter-spacing: -0.012em;
     line-height: 1.6em;
   }
@@ -1443,23 +1443,28 @@ h6:hover > .anchor:hover {
   .font-load-1 ol,
   .font-load-1 p,
   .font-load-1 ul {
-    font-size: 1.07rem;
+    font-size: 1rem;
     line-height: 1.7em;
   }
 
   .summary-container {
     max-width: 320px;
-    margin-top: 0.5em;
+    margin-top: 0.6em;
+  }
+
+  .font-load-1 .summary-container {
+    max-width: 320px;
+    margin-top: 0.8em;
   }
 
   summary {
-    font-size: 0.933em;
+    font-size: 0.953em;
     letter-spacing: -0.02em;
     line-height: 2em;
   }
 
   .font-load-1 summary {
-    font-size: 1em;
+    font-size: 1.05em;
     letter-spacing: -0.01em;
     line-height: 1.85em;
   }
@@ -1494,18 +1499,10 @@ h6:hover > .anchor:hover {
     margin-bottom: 0.9em;
   }
 
-  .list > li > .table {
-    margin-bottom: 1.28em;
-  }
-
-  .font-load-1 .list > li > .table {
-    margin-bottom: 1.3em;
-  }
-
   .list-title {
     font-size: 1em;
-    letter-spacing: 0.0115em;
-    line-height: 1.42em;
+    letter-spacing: 0.01em;
+    line-height: 1.46em;
   }
 
   .font-load-1 .list-title {
@@ -1664,8 +1661,6 @@ h6:hover > .anchor:hover {
 
   .authors > p {
     font-size: 0.95em;
-    letter-spacing: -0.005em;
-    line-height: 1.37em;
   }
 
   .font-load-1 .authors > p {
@@ -1674,29 +1669,16 @@ h6:hover > .anchor:hover {
 
   .authors {
     font-size: 1.12em;
-    margin-top: 0.22em;
+    margin-top: 0.12em;
   }
 
   .font-load-1 .authors {
     font-size: 1em;
-    margin-top: 0.1em;
-  }
-
-  .metadata {
-    margin-bottom: 0.2em;
-  }
-
-  .font-load-1 .metadata {
-    margin-bottom: 0.4em;
+    margin-top: 0;
   }
 
   .metadata-icon {
     margin-top: -3.5px;
-  }
-
-  .logo,
-  .font-load-1 .logo {
-    padding-bottom: 0;
   }
 
   .mlt-summary {
@@ -1727,6 +1709,7 @@ h6:hover > .anchor:hover {
   }
 
   .font-load-1 .links > li {
+    line-height: 1.8em;
     margin-top: 1px;
     margin-bottom: 3px;
   }
