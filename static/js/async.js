@@ -115,46 +115,46 @@
 
 loadCSS("/css/defer.css");
 
-let minWidth1081Loaded = false;
-let maxWidth1080Loaded = false;
-let maxWidth750Loaded = false;
+let minWidth1080Loaded = false;
+let maxWidth1079Loaded = false;
+let maxWidth719Loaded = false;
 
-const q1 = "screen and (min-width:1081px)";
+const q1 = "screen and (min-width:1080px)";
 const mq1 = window.matchMedia(q1);
-if (mq1.matches && !minWidth1081Loaded) {
-  loadCSS("/css/defer-min-width-1081.css", "", q1);
-  minWidth1081Loaded = true;
+if (mq1.matches && !minWidth1080Loaded) {
+  loadCSS("/css/defer-min-width-1080.css", "", q1);
+  minWidth1080Loaded = true;
 }
 mq1.addListener(function (mq1) {
-  if (mq1.matches && !minWidth1081Loaded) {
-    loadCSS("/css/defer-min-width-1081.css", "", q1);
-    minWidth1081Loaded = true;
+  if (mq1.matches && !minWidth1080Loaded) {
+    loadCSS("/css/defer-min-width-1080.css", "", q1);
+    minWidth1080Loaded = true;
   }
 });
 
-const q2 = "screen and (max-width:1080px) and (min-width:751px)";
+const q2 = "screen and (max-width: 1079px) and (min-width:720px)";
 const mq2 = window.matchMedia(q2);
-if (mq2.matches && !maxWidth1080Loaded) {
-  loadCSS("/css/defer-max-width-1080.css", "", q2);
-  maxWidth1080Loaded = true;
+if (mq2.matches && !maxWidth1079Loaded) {
+  loadCSS("/css/defer-max-width-1079.css", "", q2);
+  maxWidth1079Loaded = true;
 }
 mq2.addListener(function (mq2) {
-  if (mq2.matches && !maxWidth1080Loaded) {
-    loadCSS("/css/defer-max-width-1080.css", "", q2);
-    maxWidth1080Loaded = true;
+  if (mq2.matches && !maxWidth1079Loaded) {
+    loadCSS("/css/defer-max-width-1079.css", "", q2);
+    maxWidth1079Loaded = true;
   }
 });
 
-const q3 = "screen and (max-width:750px)";
+const q3 = "screen and (max-width: 719px)";
 const mq3 = window.matchMedia(q3);
-if (mq3.matches && !maxWidth750Loaded) {
-  loadCSS("/css/defer-max-width-750.css", "", q3);
-  maxWidth750Loaded = true;
+if (mq3.matches && !maxWidth719Loaded) {
+  loadCSS("/css/defer-max-width-719.css", "", q3);
+  maxWidth719Loaded = true;
 }
 mq3.addListener(function (mq3) {
-  if (mq3.matches && !maxWidth750Loaded) {
-    loadCSS("/css/defer-max-width-750.css", "", q3);
-    maxWidth750Loaded = true;
+  if (mq3.matches && !maxWidth719Loaded) {
+    loadCSS("/css/defer-max-width-719.css", "", q3);
+    maxWidth719Loaded = true;
   }
 });
 
