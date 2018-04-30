@@ -16,6 +16,10 @@ authors:
   - name: Beatriz Sousa Santos
     url: http://sweet.ua.pt/bss/
 links:
+  - name: Demo
+    url: https://edduarte.github.io/living-globe
+  - name: Source code
+    url: https://github.com/edduarte/living-globe
   - name: Paper (Springer)
     url: https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2
   - name: Paper (arXiv)
@@ -24,10 +28,6 @@ links:
     url: /hcii2016/slides.pdf
   - name: Slides (SlideShare)
     url: http://www.slideshare.net/EduardoDuarte33/hcii2016slides-v3
-  - name: Demo
-    url: https://edduarte.github.io/living-globe
-  - name: Source code
-    url: https://github.com/edduarte/living-globe
 date: "2016-06-21 19:58:00+01:00"
 medium: "https://medium.com/@edduarte/living-globe-tridimensional-interactive-vi
 sualization-of-world-demographic-data-c3eeb1845c51"

@@ -125,11 +125,7 @@
         {{ if $linkList }}
         <section>
           <ul class="links">
-            {{ range $i, $temp := $linkList }}{{ $link := index $linkList $i }}{{ if $link.url }}
-            <li><a href="{{ $link.url }}">{{ $link.name }}</a></li>
-            {{ else }}
-            <li>{{ $link.name }}</li>
-            {{ end }}{{ end }}
+            {{ range $i, $temp := $linkList }}{{ $link := index $linkList $i }}{{ if $link.url }}<li><a href="{{ $link.url }}">{{ $link.name }}</a></li>{{ else }}<li>{{ $link.name }}</li>{{ end }}{{ end }}
           </ul>
         </section>
         {{ end }}
