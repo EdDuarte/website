@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-<title>{{ .Title }}</title>
+<title>{{ .Title }} - Eduardo Duarte</title>
 </head>
 
 <body>
@@ -113,6 +113,16 @@
               <span class="screen-reader">Article mirrors: </span>
               <span class="metadata-title">
                 Also on <a href="{{ . }}">Medium</a>
+              </span>
+            </li>
+            {{ end }}
+
+            {{ with .Params.reddit }}
+            <li class="reddit">
+              <div class="icon metadata-icon icon-discussion"></div>
+              <span class="screen-reader">Reddit: </span>
+              <span class="metadata-title">
+                Discussion on <a href="{{ . }}">Reddit</a>
               </span>
             </li>
             {{ end }}

@@ -1,18 +1,21 @@
 {{ partial "header.html" . }}
-<title>{{ .Title }}</title>
+{{ if .IsHome }}
+<title>Eduardo Duarte</title>
 </head>
 <body class="list-page">
-{{ if .IsHome }}
 {{ partial "intro.html" . }}
 {{ else }}
+<title>{{ .Title }} - Eduardo Duarte</title>
+</head>
+<body class="list-page">
 <header class="logo">
   <span class="home-link"><a href="{{ .Site.BaseURL }}">edduarte</a></span>
 </header>
-<!-- 
+<!--
 <header>
 <h1>{{ .Title }}</h1>
 </header>
- -->
+-->
 <section class="content">
   {{ .Content }}
 </section>
