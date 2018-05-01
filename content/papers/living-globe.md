@@ -1,8 +1,10 @@
 ---
 title: "Living Globe: Tridimensional interactive visualization of world
 demographic data"
-subtitle: "HCI International 2016, The Westin Harbour Castle Hotel, Toronto,
-Canada"
+prologue: "This paper and the described prototype were presented at the HCI
+International 2016 in The Westin Harbour Castle Hotel, Toronto, Canada. It was
+originally presented in portuguese at SciTecIN 2015 at the University of
+Coimbra, Portugal."
 description: "Open-source WebGL app for tri-dimensional worldwide data
 visualization, with customizable data-to-visual mapping and filtering with
 adjustable scales"
@@ -115,3 +117,9 @@ distinguishing colors for the remaining countries\)')
 Finally, the usability of this tool was tested by agnostic individuals, and the
 results indicate that the data filtering and customizable mapping features
 encourage a faster interpretation of relational information.
+
+You may test this application [here](https://edduarte.github.io/living-globe).
+It is fully open-source and [available at
+Github](https://github.com/edduarte/living-globe), and was built using web
+technologies and Javascript libraries such as three.js, chroma.js and jQuery. It
+was successfully tested in Firefox 44, Chrome 48 (64-bit) and Safari 9.
