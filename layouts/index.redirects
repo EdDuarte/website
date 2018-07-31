@@ -9,8 +9,9 @@
 /living-globe               /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
 /livingglobe                /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
 /hcii2016                   /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
-/protbox                    /secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
-/openidentity2014           /secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
+/protbox                    /secure-file-sharing-over-cloud-storage-using-eid-tokens/
+/openidentity2014           /secure-file-sharing-over-cloud-storage-using-eid-tokens/
+/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/           /secure-file-sharing-over-cloud-storage-using-eid-tokens/
 /erlang-poker-ml            /developing-a-knowledge-based-system-for-texas-holdem-outcome-prediction-in-erlang/
 /poker-ml                   /developing-a-knowledge-based-system-for-texas-holdem-outcome-prediction-in-erlang/
 /vokter                     /vokter-a-java-library-that-detects-and-notifies-changes-in-web-documents/
