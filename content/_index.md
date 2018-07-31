@@ -58,5 +58,6 @@ systems to achieve optimized solutions.
 ## Work with me
 
 I am currently looking for a job that joins the technical aspect of software
-engineering with more creative elements (e.g. UI, interaction design, VFX).
-Feel free to [send me an email](mailto:hi@edduarte.com).
+engineering (e.g. distributed systems, API design, data handling) with more
+creative elements (e.g. UI, interaction design, shaders). Feel free to [send me
+an email](mailto:hi@edduarte.com).
