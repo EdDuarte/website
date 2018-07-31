@@ -9,20 +9,24 @@ markup: mmark
 ## Experience
 
 Over four years of hands-on experience with Backend Architecture, Distributed
-Systems, Time-Series Querying & Storage, Stream Processing, Mobile & Web
-Frontend Development, UI/UX Design, Natural Language Processing, and Information
-Retrieval. Worked extensively with languages like Java, Kotlin, Javascript ES6,
-Swift and Objective-C, and technologies like REST, gRPC, WebSocket, MQTT, React,
-Android and iOS.
+Systems, Stream Processing, Mobile & Web Frontend Development, UI/UX Design and
+Information Retrieval. Worked extensively with languages like Java, Kotlin,
+Javascript ES6, Typescript, Swift and Objective-C, and technologies like REST,
+gRPC, WebSocket, MQTT, React, Android and iOS.
 
-Recently finished my internship at [Ubiwhere](http://www.ubiwhere.com/en/),
-where I worked as a backend developer (business process modeling and integration
-platform for University of Coimbra) and a mobile developer (Android and iOS
-applications for various brands like
-[Vodafone](https://parking.vodafone.citibrain.com/),
+Recently finished my internship at [Bosch
+Thermotechnology](https://www.bosch.pt/en/our-company/bosch-in-portugal/),
+where I developed a scalable backend and web frontend platform for time-series
+analysis and annotation, employing distributed system techniques and best
+practices in order to handle massive amounts of data with high cardinality.
+
+Previously worked at [Ubiwhere](http://www.ubiwhere.com/en/) as a backend
+developer on a business process modeling and integration platform, and as a
+mobile developer in various Android and iOS applications for brands like
+[Vodafone Smart Parking](https://parking.vodafone.citibrain.com/),
 [Bewegen](https://www.bewegen.pt/about/app/),
 [Bikeemotion](http://www.bikeemotion.com/), [Anacom](http://www.netmede.pt/app)
-and [Prio](https://app.prioenergy.com/)).
+and [Prio](https://app.prioenergy.com/).
 
 I have co-founded two tech startups, [Thumbeo](http://www.thumbeo.com/en/) and
 YouClap, where I had the chance to act both as a creative director and a
@@ -30,8 +34,9 @@ technical lead, guiding co-workers in the development and marketing of mobile
 apps, overseeing the interactive design of the final product, and devising
 unique interface ideas in the consumer space.
 
-I also have a strong background in academia: earned a Bachelor in Information
-Technology (thesis graded 19 out of 20); worked with a [Bioinformatics research
+I also have a strong background in academia: earned a Master's in Software
+Engineering (thesis awaiting review) and a Bachelor in Information Technology
+(thesis graded 19 out of 20); worked with a [Bioinformatics research
 group](http://bioinformatics.ua.pt/); [published three papers](/papers/) in
 various fields such as Information Security and Information Visualization; and
 spoken at various conferences around the globe.
@@ -52,6 +57,6 @@ systems to achieve optimized solutions.
 
 ## Work with me
 
-I am currently finishing my Master's in Software Engineering at Bosch
-Thermotechnology, so I am not actively looking for a job right now, but feel
-free to [send me an email](mailto:hi@edduarte.com).
+I am currently looking for a job that joins the technical aspect of software
+engineering with more creative elements (e.g. UI, interaction design, VFX).
+Feel free to [send me an email](mailto:hi@edduarte.com).

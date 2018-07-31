@@ -3,8 +3,8 @@ title: "Living Globe: Tridimensional interactive visualization of world
 demographic data"
 prologue: "This paper and the described prototype were presented at the HCI
 International 2016 in The Westin Harbour Castle Hotel, Toronto, Canada. It was
-originally presented in portuguese at SciTecIN 2015 at the University of
-Coimbra, Portugal."
+originally presented in portuguese at SciTecIN 2015, University of Coimbra,
+Portugal."
 description: "Open-source WebGL app for tri-dimensional worldwide data
 visualization, with customizable data-to-visual mapping and filtering with
 adjustable scales"
@@ -26,13 +26,10 @@ links:
     url: https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2
   - name: Paper (arXiv)
     url: https://arxiv.org/abs/1607.05946
-  - name: Slides (PDF)
+  - name: Talk slides (PDF)
     url: /hcii2016/slides.pdf
-  - name: Slides (SlideShare)
-    url: http://www.slideshare.net/EduardoDuarte33/hcii2016slides-v3
 date: "2016-06-21 19:58:00+01:00"
-medium: "https://medium.com/@edduarte/living-globe-tridimensional-interactive-vi
-sualization-of-world-demographic-data-c3eeb1845c51"
+medium: "https://medium.com/@edduarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data-c3eeb1845c51"
 type: paper
 markup: mmark
 ---
@@ -119,7 +116,6 @@ results indicate that the data filtering and customizable mapping features
 encourage a faster interpretation of relational information.
 
 You may test this application [here](https://edduarte.github.io/living-globe).
-It is fully open-source and [available at
-Github](https://github.com/edduarte/living-globe), and was built using web
-technologies and Javascript libraries such as three.js, chroma.js and jQuery. It
-was successfully tested in Firefox 44, Chrome 48 (64-bit) and Safari 9.
+It is fully open-source and [available on
+Github](https://github.com/edduarte/living-globe), and was built with
+Javascript ES6, jQuery, three.js and chroma.js.

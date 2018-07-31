@@ -8,8 +8,7 @@ links:
   - name: Source code
     url: https://github.com/edduarte/erlang-poker-ml
 date: "2015-03-31 17:25:00+01:00"
-medium: "https://medium.com/@edduarte/developing-a-knowledge-management-system-f
-or-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
+medium: "https://medium.com/@edduarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
 type: project
 markup: mmark
 ---

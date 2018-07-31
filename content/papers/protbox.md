@@ -1,6 +1,5 @@
 ---
-title: "Secure and trustworthy file sharing over cloud storage using eID
-tokens"
+title: "Secure file sharing over cloud storage using eID tokens"
 prologue: "This paper and the implemented desktop app were presented at the Open
 Identity Summit 2014 in Fraunhofer IAO Institute Center, Stuttgart, Germany."
 description: "Open-source & cross-platform app that performs file encryption
@@ -23,13 +22,12 @@ links:
     url: http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html
   - name: Paper (arXiv)
     url: http://arxiv.org/abs/1501.03139
-  - name: Slides (PDF)
+  - name: Talk slides (PDF)
     url: /openidentity2014/slides.pdf
-  - name: Slides (SlideShare)
-    url: http://www.slideshare.net/EduardoDuarte33/oid2014presentation
+#  - name: Talk slides (SlideShare)
+#    url: http://www.slideshare.net/EduardoDuarte33/oid2014presentation
 date: "2014-11-05 11:03:00+01:00"
-medium: "https://medium.com/@edduarte/secure-and-trustworthy-file-sharing-over-c
-loud-storage-using-eid-tokens-d8546a4e5a00"
+medium: "https://medium.com/@edduarte/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens-d8546a4e5a00"
 type: paper
 markup: mmark
 ---
