@@ -16,7 +16,7 @@ PygmentsStyle = "solarizedlight"
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
 
 [mediaTypes."text/netlify"]
-suffix = ""
+suffixes = []
 delimiter = ""
 
 [outputFormats.HEADERS]

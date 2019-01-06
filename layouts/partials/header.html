@@ -89,13 +89,14 @@ pre {
 }
 
 .table > .list-meta,
+.authors > p,
 .links,
-.font-load-1 .links,
 .home-link,
 .section-link,
 .myname,
 .subtitle,
 .title,
+.metadata > ul > li,
 footer > ul > li,
 h1,
 h2,
@@ -110,11 +111,14 @@ summary {
 }
 
 .font-load-1 .table > .list-meta,
+.font-load-1 .authors > p,
+.font-load-1 .links,
 .font-load-1 .home-link,
 .font-load-1 .section-link,
 .font-load-1 .myname,
 .font-load-1 .subtitle,
 .font-load-1 .title,
+.font-load-1 .metadata > ul > li,
 .font-load-1 footer > ul > li,
 .font-load-1 h1,
 .font-load-1 h2,
@@ -468,8 +472,8 @@ article header {
 
 .metadata > .table,
 .metadata > p {
-  font-size: 0.97em;
-  letter-spacing: -0.025em;
+  font-size: 0.9em;
+  letter-spacing: 0.025em;
   line-height: 1.86em;
   margin-top: -0.1em;
   margin-bottom: 0;
@@ -477,8 +481,8 @@ article header {
 
 .font-load-1 .metadata > .table,
 .font-load-1 .metadata > p {
-  font-size: 0.9em;
-  letter-spacing: -0.03em;
+  font-size: 0.8em;
+  letter-spacing: 0.03em;
   line-height: 2em;
   margin-top: 0;
   margin-bottom: 0;
@@ -777,19 +781,19 @@ samp {
 }
 
 .links > li {
-  line-height: 1.1em;
+  line-height: 1em;
   display: inline-block;
   position: relative;
 }
 
 .font-load-1 .links > li {
-  line-height: 0.95em;
+  line-height: 0.85em;
 }
 
 .links > li > a {
-  border: 2px #DBDCDC solid;
+  border: 1px #C5CACA solid;
   border-radius: 30px;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   cursor: pointer;
   margin-right: 5px;
   padding: 0.8em 1em;
@@ -912,8 +916,6 @@ h6 a {
 .home-link a,
 .section-link,
 .section-link a,
-footer,
-footer a,
 .list-meta-date,
 .social a,
 aside,
@@ -922,21 +924,8 @@ figcaption,
 .mlt-header,
 .mlt-header a,
 .mlt-summary,
-.mlt-title {
-  color: #959999;
-}
-
-.authors,
-.authors a,
-.home-link,
-.home-link a,
-.section-link,
-.section-link a,
+.mlt-title,
 .mlt-link:hover > .mlt-title,
-.social a,
-aside,
-aside a,
-figcaption,
 footer,
 footer a {
   color: #959999;
@@ -1067,7 +1056,7 @@ img.centered:empty {
 .metadata li,
 .metadata p,
 .table > .list-meta {
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
 }
 
 .table > .list-meta {

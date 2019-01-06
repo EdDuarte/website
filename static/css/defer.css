@@ -35,21 +35,16 @@ p {
   background-position: 0 1em;
 }
 
-.font-load-1 .metadata a,
+.font-load-1 .metadata a {
+  background-position: 0 1.08em;
+}
+
 .font-load-1 figcaption a {
   background-position: 0 1.18em;
 }
 
 .font-load-1 .authors a {
-  background-position: 0 1.15em;
-}
-
-.authors a,
-.metadata a,
-aside a:hover,
-figcaption a,
-footer a:hover {
-  background-image: linear-gradient(to right, rgba(14, 17, 21, 0.15) 50%, rgba(14, 17, 21, 0.15) 50%);
+  background-position: 0 1.1em;
 }
 
 a {
@@ -59,6 +54,14 @@ a {
   background-size: 5px 2px;
   text-size-adjust: 100%;
   hyphens: manual;
+}
+
+.authors a,
+.metadata a,
+aside a:hover,
+figcaption a,
+footer a:hover {
+  background-image: linear-gradient(to right, rgba(14, 17, 21, 0.15) 50%, rgba(14, 17, 21, 0.15) 50%);
 }
 
 .list-meta-category a:hover {
@@ -329,6 +332,21 @@ y2="12"></line></svg>
 */
 .icon-mirror {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='black' style='stroke:rgb%28172,176,176%29;' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-link-2'%3E%3Cpath d='M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3'%3E%3C/path%3E%3Cline x1='8' y1='12' x2='16' y2='12'%3E%3C/line%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+
+/*
+.icon-slides
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+viewBox="0 0 24 24" fill="none" stroke="currentColor"
+style="stroke:rgb(172,176,176);" stroke-width="2"
+stroke-linecap="round" stroke-linejoin="round"
+class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2"
+ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17"
+x2="12" y2="21"></line></svg>
+*/
+.icon-slides {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' style='stroke:rgb(172,176,176);' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-monitor'%3e%3crect x='2' y='3' width='20' height='14' rx='2' ry='2'%3e%3c/rect%3e%3cline x1='8' y1='21' x2='16' y2='21'%3e%3c/line%3e%3cline x1='12' y1='17' x2='12' y2='21'%3e%3c/line%3e%3c/svg%3e");
   background-repeat: no-repeat;
 }
 
