@@ -10,8 +10,8 @@ markup: mmark
 
 Over five years of hands-on experience with Backend Architecture, Distributed
 Systems, Mobile & Web Frontend Development, UI/UX Design and Information
-Science. Worked extensively with languages such as Java, Kotlin, Javascript
-ES6, Typescript, Swift and Objective-C, and technologies like REST, gRPC,
+Science. Worked extensively with languages such as Java, Kotlin, Typescript,
+Javascript ES6, Swift and Objective-C, and technologies like REST, gRPC,
 WebSocket, MQTT, ReactJS (with Redux and Webpack), Android and iOS.
 
 Recently finished my internship at [Bosch
@@ -35,11 +35,12 @@ product, and devising unique interface ideas in the consumer space.
 
 I also have a strong background in academia: earned a Master's degree in
 Software Engineering (thesis graded 19 out of 20) and a Bachelor's in
-Information Technology; worked with a [Bioinformatics research
-group](http://bioinformatics.ua.pt/) and a [marine life research
-unit](http://www.oceano21.org/info.asp?id=46&idpai=3&LN=EN); [published three
-papers](/papers/) in fields such as Data Analysis, Information Visualization
-and Information Security; and spoken at various conferences around the globe.
+Information Technology; worked with
+[bioinformatics](http://bioinformatics.ua.pt/) and [marine
+life](http://www.oceano21.org/info.asp?id=46&idpai=3&LN=EN) research groups;
+[published three papers](/papers/) in fields such as Data Analysis, Information
+Visualization and Information Security; and spoken at various conferences
+around the globe.
 
 
 ## Ethos
