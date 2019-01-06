@@ -11,8 +11,8 @@ markup: mmark
 Over five years of hands-on experience with Backend Architecture, Distributed
 Systems, Mobile & Web Frontend Development, UI/UX Design and Information
 Science. Worked extensively with languages such as Java, Kotlin, Typescript,
-Javascript ES6, Swift and Objective-C, and technologies like REST, gRPC,
-WebSocket, MQTT, ReactJS (with Redux and Webpack), Android and iOS.
+Javascript ES6 and Swift, and technologies like REST, gRPC, WebSocket, MQTT,
+ReactJS (with Redux and Webpack), Android and iOS.
 
 Recently finished my internship at [Bosch
 Thermotechnology](https://www.bosch.pt/en/our-company/bosch-in-portugal/),
