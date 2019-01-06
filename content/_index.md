@@ -8,9 +8,9 @@ markup: mmark
 
 ## Experience
 
-Over four years of hands-on experience with Backend Architecture, Distributed
+Over five years of hands-on experience with Backend Architecture, Distributed
 Systems, Mobile & Web Frontend Development, UI/UX Design and Information
-Retrieval. Worked extensively with languages such as Java, Kotlin, Javascript
+Science. Worked extensively with languages such as Java, Kotlin, Javascript
 ES6, Typescript, Swift and Objective-C, and technologies like REST, gRPC,
 WebSocket, MQTT, ReactJS (with Redux and Webpack), Android and iOS.
 
@@ -38,9 +38,8 @@ Software Engineering (thesis graded 19 out of 20) and a Bachelor's in
 Information Technology; worked with a [Bioinformatics research
 group](http://bioinformatics.ua.pt/) and a [marine life research
 unit](http://www.oceano21.org/info.asp?id=46&idpai=3&LN=EN); [published three
-papers](/papers/) in various fields such as Data Science, Information
-Visualization and Information Security; and spoken at various conferences
-around the globe.
+papers](/papers/) in fields such as Data Analysis, Information Visualization
+and Information Security; and spoken at various conferences around the globe.
 
 
 ## Ethos
@@ -63,8 +62,8 @@ as an engineer.
 ## Work with me
 
 I am currently looking for a job that merges the technical aspects of software
-engineering (e.g. distributed systems, data management, frontend development)
-with more creative factors (e.g. interaction design, computer graphics,
-information visualization). Feel free to [send me an
+engineering (e.g. Distributed Systems, Data Management, Frontend Development)
+with more creative factors (e.g. Interaction Design, Computer Graphics,
+Information Visualization). Feel free to [send me an
 email](mailto:hi@edduarte.com).
 
