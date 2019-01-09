@@ -1,7 +1,8 @@
 ---
 title: "Secure file sharing over cloud storage using eID tokens"
-prologue: "This paper and the implemented desktop app were presented at the Open
-Identity Summit 2014 in Fraunhofer IAO Institute Center, Stuttgart, Germany."
+prologue: "This paper, and the implemented desktop app, were presented at the
+Open Identity Summit 2014 in Fraunhofer IAO Institute Center, Stuttgart,
+Germany."
 description: "Open-source & cross-platform app that performs file encryption
 and user authentication on existing cloud storage services using eID tokens"
 authors:
