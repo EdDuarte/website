@@ -54,11 +54,10 @@ There are two types of jobs, concurrently executed and scheduled periodically
 (using Quartz Scheduler): detection and matching jobs.
 
 The detection job is responsible for fetching a new document and comparing it
-with the previous document, detecting textual differences between the two. To do
-that, the robust DiffMatchPatch algorithm is used.
-
-The matching job is responsible for querying the list of detected differences
-with specific requested keywords.
+with the previous document, detecting textual differences between the two. To
+do that, the robust DiffMatchPatch algorithm is used. The matching job is
+responsible for querying the list of detected differences with specific
+requested keywords.
 
 Harmonization of keywords-to-differences is performed by using a Bloom filter,
 removing differences that have a very low chance of containing the specified

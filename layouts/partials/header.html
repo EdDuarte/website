@@ -58,7 +58,7 @@ a {
 }
 
 html {
-  font-size: 20px;
+  font-size: 19px;
 }
 
 body {
@@ -133,6 +133,7 @@ summary {
 
 .home-link,
 .font-load-1 .home-link,
+.font-load-1 .section-link,
 .font-load-1 .myname,
 .font-load-1 .subtitle,
 .font-load-1 .title,
@@ -803,7 +804,8 @@ samp {
 .section-link {
   font-size: 0.87em;
   letter-spacing: -0.07em;
-  padding-top: 0.9em;
+  padding-top: 5em;
+  padding-left: 0.5em;
   padding-right: 0.5em;
 }
 
@@ -811,7 +813,7 @@ samp {
 .font-load-1 .section-link {
   font-size: 0.85em;
   letter-spacing: -0.01em;
-  padding-top: 1em;
+  padding-top: 5em;
   padding-bottom: 0.1em;
 }
 
@@ -835,6 +837,7 @@ footer > ul > li {
 .mlt-link,
 footer a {
   text-decoration: none;
+  text-decoration-color: rgb(135, 135, 135);
 }
 
 .list-meta-category a:hover,
@@ -858,7 +861,7 @@ a {
 
 b,
 strong {
-  color: #090d13;
+  color: rgba(14, 17, 21, 0.9);
 }
 
 .myname,
@@ -907,14 +910,16 @@ h6 a {
   padding-bottom: 0.1em;
 }
 
+.home-link,
+.home-link a {
+  color: #fff;
+  background-color: #e21b2a;
+}
+
 .authors,
 .authors a,
 .links,
 .links a,
-.home-link,
-.home-link a,
-.section-link,
-.section-link a,
 .list-meta-category,
 .list-meta-date,
 .social a,
@@ -1178,6 +1183,7 @@ h6:hover > .anchor:hover {
 
 @media screen {
   .font-load-2 .home-link,
+  .font-load-2 .section-link,
   .font-load-2 .myname,
   .font-load-2 .subtitle,
   .font-load-2 .title,
@@ -1688,10 +1694,6 @@ h6:hover > .anchor:hover {
     line-height: 2.1em;
     margin-top: 1px;
     margin-bottom: 3px;
-  }
-
-  .links > li > a {
-    border: 1px #959999 solid;
   }
 
   .icon-external-link {
