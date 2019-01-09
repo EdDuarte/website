@@ -176,12 +176,11 @@ Instead, job 1 should trigger clients linked to A and B:
 This implies a more optimized architecture that has the potential of
 significantly reducing the total number of simultaneous jobs.
 
-## Fault-tolerance for matching jobs {#fault-tolerance}
+## Orchestration for matching jobs {#matching-orchestration}
 
-Only detection jobs can be timed-out after failing too many times to load a new
-snapshot of the document. However, sending a response to the client can fail
-too, and currently there is no fault-tolerant way to deprecate matching jobs
-when the client has 'disappeared and lost interest'. If a client fails to
-receive the data, maybe because the client itself has been shutdown before
-canceling its jobs from Vokter, then a potential high number of active detection
-and matching jobs are gonna stay unnecessarily active.
+After an attempt to load a new snapshot of the document fails too many times,
+only detection jobs are timed-out. However, the system can fail to send a
+response to the client as well, and there is currently no way to deprecate
+matching jobs when the client has "disappeared and lost interest" before
+canceling their jobs from Vokter. This means that a high number of active
+detection and matching jobs might be kept alive unnecessarily.
