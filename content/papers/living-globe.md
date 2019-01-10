@@ -1,9 +1,9 @@
 ---
 title: "Living Globe: Tridimensional interactive visualization of world
 demographic data"
-prologue: "This paper and the described prototype were presented at the HCI
-International 2016 in The Westin Harbour Castle Hotel, Toronto, Canada. It was
-originally presented in portuguese at SciTecIN 2015, University of Coimbra,
+prologue: "The paper and prototype described in this page were presented at the
+HCI International 2016 in The Westin Harbour Castle Hotel, Toronto, Canada. It
+was originally presented in portuguese at SciTecIN 2015, University of Coimbra,
 Portugal."
 description: "Open-source WebGL app for tri-dimensional worldwide data
 visualization, with customizable data-to-visual mapping and filtering with

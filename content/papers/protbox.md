@@ -1,8 +1,8 @@
 ---
 title: "Secure file sharing over cloud storage using eID tokens"
-prologue: "This paper, and the implemented desktop app, were presented at the
-Open Identity Summit 2014 in Fraunhofer IAO Institute Center, Stuttgart,
-Germany."
+prologue: "The paper and desktop application described in this page were
+presented at the Open Identity Summit 2014 in Fraunhofer IAO Institute Center,
+Stuttgart, Germany."
 description: "Open-source & cross-platform app that performs file encryption
 and user authentication on existing cloud storage services using eID tokens"
 authors:
@@ -16,7 +16,7 @@ authors:
     url: http://wiki.ieeta.pt/wiki/index.php/Hélder_Gomes
 links:
   - name: Download (v3.0.2)
-    url: https://github.com/edduarte/protbox/releases/download/3.0.2/protbox-3.0.2.zip
+    url: https://github.com/edduarte/protbox/releases/tag/3.0.2
   - name: Source code
     url: https://github.com/edduarte/protbox
   - name: Paper (LNI)
