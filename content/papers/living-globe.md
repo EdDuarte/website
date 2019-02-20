@@ -9,7 +9,7 @@ description: "Open-source WebGL app for tri-dimensional worldwide data
 visualization, with customizable data-to-visual mapping and filtering with
 adjustable scales"
 authors:
-  - name: Eduardo Duarte
+  - name: Ed Duarte
     url: https://www.edduarte.com
   - name: Pedro Bordonhos
     url: 

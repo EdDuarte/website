@@ -1,12 +1,10 @@
 {{ partial "header.html" . }}
-<title>{{ .Title }} - Eduardo Duarte</title>
+<title>{{ .Title }} - Ed Duarte</title>
 </head>
 
 <body>
 <header class="logo">
-  <span class="home-link"><a href="{{ .Site.BaseURL }}">edduarte</a></span><span
-    class="section-link"
-><a href="/{{.Section}}">{{.Section}}</a></span>
+  <span class="home-link"><a href="{{ .Site.BaseURL }}">edduarte</a></span><span class="noselect"> | </span><span class="section-link"><a href="/{{.Section}}">{{.Section}}</a></span>
 </header>
 
 <main>
@@ -113,6 +111,16 @@
               <span class="screen-reader">Article mirrors: </span>
               <span class="metadata-title">
                 Also on <a href="{{ . }}">Medium</a>
+              </span>
+            </li>
+            {{ end }}
+
+            {{ with .Params.slides_pdf }}
+            <li class="slides-pdf">
+              <div class="icon metadata-icon icon-slides"></div>
+              <span class="screen-reader">Slides in PDF: </span>
+              <span class="metadata-title">
+                Talk slides in <a href="{{ . }}">PDF</a>
               </span>
             </li>
             {{ end }}

@@ -1,7 +1,6 @@
 ---
-title: "Eduardo Duarte"
-description: "Junior Software Developer & Researcher. Philonoist, over-thinker,
-cinephile and music junkie."
+title: "Ed Duarte"
+description: "Software engineer & researcher. Philonoist, over-thinker, cinephile and electronic music junkie."
 date: "2018-02-07 20:31:00+01:00"
 markup: mmark
 ---

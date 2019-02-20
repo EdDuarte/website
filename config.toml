@@ -1,6 +1,6 @@
 languageCode = "en-us"
 languageLang = "en"
-title = "Eduardo Duarte"
+title = "Ed Duarte"
 baseurl = "https://www.edduarte.com"
 enableGitInfo = true
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]

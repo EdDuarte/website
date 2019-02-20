@@ -6,7 +6,7 @@ Stuttgart, Germany."
 description: "Open-source & cross-platform app that performs file encryption
 and user authentication on existing cloud storage services using eID tokens"
 authors:
-  - name: Eduardo Duarte
+  - name: Ed Duarte
     url: https://www.edduarte.com
   - name: Filipe Pinheiro
     url: 
