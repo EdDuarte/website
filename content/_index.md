@@ -11,15 +11,14 @@ markup: mmark
 Over five years of hands-on experience with Backend Architecture, Distributed
 Systems, Mobile & Web Frontend Development, UI/UX Design and Information
 Science. Worked extensively with languages such as Java, Kotlin, Typescript,
-Javascript ES6 and Swift, and technologies like REST, gRPC, WebSocket, MQTT,
-ReactJS (with Redux and Webpack), Android and iOS.
+Javascript ES6 and Swift.
 
 Recently finished my internship at [Bosch
 Thermotechnology](https://www.bosch.pt/en/our-company/bosch-in-portugal/),
 where I developed a scalable platform for time series analysis and annotation,
 designing a ReactJS application and deploying a distributed architecture with
 polyglot persistence that handles high amounts of traffic and massive
-multivariate data sets with high cardinality.
+multivariate data sets.
 
 Previously worked at [Ubiwhere](http://www.ubiwhere.com/en/) as a backend
 developer on a business process modeling and integration platform, and as a
