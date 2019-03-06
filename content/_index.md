@@ -1,7 +1,7 @@
 ---
 title: "Ed Duarte"
-description: "Software engineer & researcher. Philonoist, critical thought
-advocate, cinephile and music junkie."
+description: "Software engineer & researcher. Philonoist, cinephile and
+electronic music aficionado."
 date: "2018-02-07 20:31:00+01:00"
 markup: mmark
 ---
