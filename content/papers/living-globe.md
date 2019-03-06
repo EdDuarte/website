@@ -77,12 +77,14 @@ information visualization. Springer-Verlag London, 1, 2009) making Living Globe
 a more flexible tool than other similar tools.
 
 In order to support this feature, three visual variables may be selected to map
-a data type: i) height of vertical bars (directly proportional to the data
-value) ii) color of vertical bars (in a color scale ranging from blue to yellow)
-and iii) color of the countries on the globe (in a scale ranging from red to
-green). An adequate selection of the data variables and their mapping to the
-visual variables may help the identification and study of potential relations
-among data variables. The time interval may be selected using a slider.
+a data type:
+- height of vertical bars (directly proportional to the data value);
+- color of vertical bars (in a color scale ranging from blue to yellow);
+- color of the countries on the globe (in a scale ranging from red to green).
+
+An adequate selection of the data variables and their mapping to the visual
+variables may help the identification and study of potential relations among
+data variables. The time interval can be changed through a slider.
 
 Living Globe also offers the following functionality: i) textual search, with
 dynamic suggestion of the countries names; ii) country selection; and iii)
