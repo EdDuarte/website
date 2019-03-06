@@ -38,7 +38,7 @@
       <main>
 
         {{ if .Params.prologue }}
-        <p class="prologue">{{ .Params.prologue }}</p>
+        <p class="prologue">{{ .Params.prologue | markdownify }}</p>
         {{ end }}
 
         <section class="content">

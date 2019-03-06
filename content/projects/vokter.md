@@ -5,10 +5,10 @@ description: "High-performant library that uses LSH, DiffMatchPatch and Bloom
 filters to detect and notify textual changes in web documents"
 prologue: "This post outlines the architecture and design decisions behind
 Vokter, an open-source Java library that I've been developing since October
-2014. This is a bit of a technical read, and other projects I developed that
-interop with Vokter, like HTTP and MQTT servers which manage a persistent state
-of Vokter on the web instead of locally, are not addressed here (although I do
-hope to address them later in a future post)."
+2014. This does **not** address other projects under the 'Vokter' umbrella,
+such as HTTP servers that use the core library to manage a persistent state of
+Vokter on the web instead of locally, but I do hope to address them later in a
+future post."
 links:
   - name: Project Hub
     url: https://github.com/vokter
