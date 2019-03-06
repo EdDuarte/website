@@ -45,25 +45,25 @@ around the globe.
 
 ### Ethos
 
+Throughout the few years of academic and professional career I have had, I was
+lucky to have the opportunity of working in ambitious projects with fantastic
+colleagues and leading teams of talented developers and designers, assimilating
+experience from various domains ranging all aspects of the product development
+life cycle.
+
+I tend to prefer projects that allow me to step out of my comfort zone, as I
+firmly believe that having a wide breadth of understanding is vital to gain
+perspective when approaching specific challenges and to grow as an engineer.
 More than simply focusing on coding, I have always pushed myself to complete my
 tasks with a high standard of quality and polish, applying best practices and
 researching bleeding edge methods. I am enthusiastic about re-thinking and
 over-thinking systems to achieve optimized solutions.
 
-Throughout the few years of academic and professional career I have had, I was
-lucky to have the opportunity of working in ambitious projects with fantastic
-colleagues and leading teams of talented developers and designers, assimilating
-experience from various domains ranging all aspects of the product development
-life cycle. I have always looked for projects that allow me to step out of my
-comfort zone, as I firmly believe that having a wide breadth of understanding
-is vital to gain perspective when approaching specific challenges and to grow
-as an engineer.
-
 
 ### Work with me
 
-I am currently looking for a job that merges the technical aspects of software
-engineering (e.g. Distributed Systems, Data Management, Frontend Development)
+I am currently looking for a job that merges the technical aspects of Software
+Engineering (e.g. Distributed Systems, Data Management, Frontend Development)
 with more creative aspects (e.g. Interaction Design, Computer Graphics,
 Information Visualization).
 
