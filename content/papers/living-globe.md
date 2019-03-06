@@ -8,6 +8,7 @@ Portugal."
 description: "Open-source WebGL app for tri-dimensional worldwide data
 visualization, with customizable data-to-visual mapping and filtering with
 adjustable scales"
+image: "/hcii2016/screenshot-01.png"
 authors:
   - name: Ed Duarte
     url: https://www.edduarte.com

@@ -6,7 +6,7 @@ date: "2018-02-07 20:31:00+01:00"
 markup: mmark
 ---
 
-## Experience
+### Experience
 
 Over five years of hands-on experience with Backend Architecture, Distributed
 Systems, Mobile & Web Frontend Development, UI/UX Design and Information
@@ -43,7 +43,7 @@ Visualization and Information Security; and spoken at various conferences
 around the globe.
 
 
-## Ethos
+### Ethos
 
 More than simply focusing on coding, I have always pushed myself to complete my
 tasks with a high standard of quality and polish, applying best practices and
@@ -60,7 +60,7 @@ is vital to gain perspective when approaching specific challenges and to grow
 as an engineer.
 
 
-## Work with me
+### Work with me
 
 I am currently looking for a job that merges the technical aspects of software
 engineering (e.g. Distributed Systems, Data Management, Frontend Development)

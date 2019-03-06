@@ -13,26 +13,38 @@
 
 <meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ .Params.description }}">
-<meta
-    name="twitter:image"
-    content="https://www.gravatar.com/avatar/c90cbe2011d1eb0738b7a8483946df1e?s=200"
-/>
 <meta name="twitter:site" content="@_edduarte">
 <meta name="twitter:creator" content="@_edduarte">
-<meta name="twitter:card" content="summary">
 
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ .Params.description }}">
-<meta
-    property="og:image"
-    content="https://www.gravatar.com/avatar/c90cbe2011d1eb0738b7a8483946df1e?s=200"
->
-<meta property="og:site_name" content="edduarte">
+<meta property="og:site_name" content="Ed Duarte">
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 <meta property="og:type" content="article">
+{{ if .Params.image }}
+<meta name="twitter:card" content="summary_large_image">
+<meta
+    name="twitter:image"
+    content="{{ .Site.BaseURL }}{{ .Params.image }}"
+/>
+<meta
+    property="og:image"
+    content="{{ .Site.BaseURL }}{{ .Params.image }}"
+>
+{{ else }}
+<meta name="twitter:card" content="summary">
+<meta
+    name="twitter:image"
+    content="{{ .Site.BaseURL }}/13320427_307466512918702_3833355147561267939_o_crop_red_v2_compressed.jpg"
+/>
+<meta
+    property="og:image"
+    content="{{ .Site.BaseURL }}/13320427_307466512918702_3833355147561267939_o_crop_red_v2_compressed.jpg"
+>
+{{ end }}
 <meta name="theme-color" content="#fff">
-<meta name="apple-mobile-web-app-title" content="edduarte">
-<meta name="application-name" content="edduarte">
+<meta name="apple-mobile-web-app-title" content="Ed Duarte">
+<meta name="application-name" content="Ed Duarte">
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" href="/favicon-16x16.png">
@@ -1095,18 +1107,6 @@ img.centered:empty {
   letter-spacing: 0.02em;
 }
 
-.list-title {
-  font-size: 0.94em;
-  letter-spacing: 0;
-  line-height: 1.4em;
-}
-
-.font-load-1 .list-title {
-  font-size: 0.9em;
-  letter-spacing: -0.02em;
-  line-height: 1.4em;
-}
-
 .metadata > .table {
   flex-direction: column;
   align-items: normal;
@@ -1231,7 +1231,7 @@ h6:hover > .anchor:hover {
   }
 }
 
-@media screen and (max-width: 900px), print {
+/*@media screen and (max-width: 900px), print {*/
   .list {
     max-width: 100%;
     margin-top: 2.9em;
@@ -1265,7 +1265,7 @@ h6:hover > .anchor:hover {
     content: " ";
     white-space: pre;
   }
-}
+/*}*/
 
 @media screen and (max-width: 1079px), print {
   body {
