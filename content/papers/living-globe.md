@@ -121,4 +121,5 @@ encourage a faster interpretation of relational information.
 You may test this application [here](https://edduarte.github.io/living-globe).
 It is fully open-source and [available on
 Github](https://github.com/edduarte/living-globe), and was built with
-Javascript ES6, jQuery, three.js and chroma.js.
+Javascript ES6, [jQuery](https://jquery.com/), [three.js](https://threejs.org/)
+and [chroma.js](https://gka.github.io/chroma.js/).
