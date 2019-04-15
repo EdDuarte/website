@@ -2,11 +2,7 @@
 title: "Testing page for multiple CSS parameters"
 subtitle: "Normal roman text"
 links:
-  - name: GitHub
-    url: /
-  - name: Slides (PDF)
-    url: /
-  - name: Slides (SlideShare)
+  - name: Source code
     url: /
 date: "2017-09-10 12:24:56+01:00"
 medium: "#"

@@ -58,7 +58,7 @@ a {
 
 .authors a,
 .metadata a,
-aside a:hover,
+.metadata a:hover,
 figcaption a,
 footer a:hover {
   background-image: linear-gradient(to right, rgba(14, 17, 21, 0.15) 50%, rgba(14, 17, 21, 0.15) 50%);
@@ -164,7 +164,7 @@ h6 a {
 .section-link a,
 .mlt-header a,
 .table > .list-meta > a,
-aside a {
+.metadata a {
   background-image: none;
 }
 

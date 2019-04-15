@@ -23,11 +23,11 @@ links:
     url: https://edduarte.github.io/living-globe
   - name: Source code
     url: https://github.com/edduarte/living-globe
-  - name: Paper (Springer)
+  - name: Springer
     url: https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2
-  - name: Paper (arXiv)
+  - name: arXiv
     url: https://arxiv.org/abs/1607.05946
-  - name: Talk slides (PDF)
+  - name: Talk slides
     url: /hcii2016/slides.pdf
 date: "2016-06-21 19:58:00+01:00"
 medium: "https://medium.com/@edduarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data-c3eeb1845c51"

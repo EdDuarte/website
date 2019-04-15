@@ -12,7 +12,7 @@ future post."
 links:
   - name: Project Hub
     url: https://github.com/vokter
-  - name: Core-lib source code
+  - name: Source code
     url: https://github.com/vokter/vokter
 date: "2016-06-19 19:26:00+01:00"
 medium: "https://medium.com/@edduarte/vokter-a-java-library-that-detects-changes-in-web-documents-c4d3d399046d"
