@@ -3,11 +3,38 @@
 </head>
 
 <body>
+
+<div class="all-site-wrap">
+  <div class="circle circle-article-1">
+    <svg width="700" height="700" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="orange-to-pink" x1="1" x2="0" y1="1" y2="0">
+          <stop offset="0%" stop-color="#E5E9F0"></stop>
+          <stop offset="100%" stop-color="#D8DEE9"></stop>
+        </linearGradient>
+      </defs>
+      <circle cx="350" cy="350" r="350" fill="url(#orange-to-pink)"></circle>
+    </svg>
+  </div>
+  <div class="circle circle-article-2">
+    <svg width="700" height="700" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="gradient-red" x1="1" x2="0" y1="1" y2="0">
+          <stop offset="0%" stop-color="#8E000A"></stop>
+          <stop offset="100%" stop-color="#e21b2a"></stop>
+        </linearGradient>
+      </defs>
+      <circle cx="350" cy="350" r="350" fill="url(#gradient-red)"></circle>
+    </svg>
+  </div>
+</div>
+
 <header class="logo">
-  <span class="home-link"><a href="{{ .Site.BaseURL }}">Ed Duarte</a></span><span class="noselect">•</span><span class="section-link"><a href="/{{.Section}}">{{.Section}}</a></span>
+  <span class="home-link"><a href="{{ .Site.BaseURL }}">Ed Duarte</a></span>
+  <!--<span class="noselect">/</span><span class="section-link section-link-{{ .Section }}"><a href="/{{.Section}}">{{.Section}}</a></span>-->
 </header>
 
-<main>
+<main class="article-container">
   <article>
     <header>
       <div class="title">{{ .Title }}</div>
@@ -35,7 +62,7 @@
 
     <div class="article-table">
 
-      <main>
+      <main class="card card-article">
 
         {{ if .Params.prologue }}
         <p class="prologue">{{ .Params.prologue | markdownify }}</p>
@@ -45,50 +72,28 @@
           {{ .Content }}
         </section>
 
-        {{ if .NextInSection }}
-
-        {{ if (gt .NextInSection.Weight -1) }}
-        <div class="line"></div>
-        <section class="mlt">
-          <h3 class="mlt-header">Next on
-            <a href="/{{.Section}}/">{{.Section}}</a></h3>
-          <a class="mlt-link" href="{{.NextInSection.Permalink}}">
-            <h4 class="mlt-title">{{.NextInSection.Title}}</h4>
-            {{ if .NextInSection.Params.description }}
-            <p class="mlt-summary">{{.NextInSection.Params.description}}</p>
-            {{ end }}
-          </a>
-        </section>
-
-        {{ else }}
-
-        {{ if .PrevInSection }}
-        {{ if gt .PrevInSection.Weight -1 }}
-        <div class="line"></div>
-        <section class="mlt">
-          <h3 class="mlt-header">More on
-            <a href="/{{.Section}}/">{{.Section}}</a></h3>
-          <a class="mlt-link" href="{{.PrevInSection.Permalink}}">
-            <h4 class="mlt-title">{{.PrevInSection.Title}}</h4>
-            <p class="mlt-summary">{{.PrevInSection.Params.description}}</p>
-          </a>
-        </section>
-        {{ end }}
-        {{ end }}
-
-        {{ end }}
-
-        {{ end }}
-
       </main>
 
       <aside>
+
+        {{ $tags := .Site.Taxonomies.tags }}
+        {{ $tagList := .Params.tags }}
+        {{ if $tagList }}
+        <section>
+          <ul class="links tags">
+            {{ range .Params.tags }}
+            {{ $tag := index $tags . }}
+            <li><a href="{{ $tag.Page.Permalink }}" class="badge-{{ . }}">{{ . }}</a></li>
+            {{ end }}
+          </ul>
+        </section>
+        {{ end }}
 
         <section class="metadata">
           <ul class="table">
 
             {{ if .Params.date }}
-            <li class="published-date">
+            <li class="metadata-item">
               <div class="icon metadata-icon icon-published-date"></div>
               <span class="screen-reader">Published on </span>
               <time class="metadata-title" datetime="{{ .Date }}">
@@ -97,7 +102,7 @@
             </li>
             {{ end }}
 
-            <li class="reading-time">
+            <li class="metadata-item">
               <div class="icon metadata-icon icon-reading-time"></div>
               <span class="screen-reader">Reading time: </span>
               <span class="metadata-title">
@@ -105,28 +110,48 @@
               </span>
             </li>
 
-            {{ with .Params.medium }}
-            <li class="medium">
-              <div class="icon metadata-icon icon-mirror"></div>
-              <span class="screen-reader">Article mirrors: </span>
+            {{ with .Params.github }}
+            <li class="metadata-item">
+              <div class="icon metadata-icon icon-github"></div>
+              <span class="screen-reader">Source code: </span>
               <span class="metadata-title">
-                Also on <a href="{{ . }}">Medium</a>
+                Source code on <a href="{{ . }}">GitHub</a>
               </span>
             </li>
             {{ end }}
 
-            {{ with .Params.slides_pdf }}
-            <li class="slides-pdf">
-              <div class="icon metadata-icon icon-slides"></div>
-              <span class="screen-reader">Slides in PDF: </span>
+            {{ with .Params.gitlab }}
+            <li class="metadata-item">
+              <div class="icon metadata-icon icon-gitlab"></div>
+              <span class="screen-reader">Source code: </span>
               <span class="metadata-title">
-                Talk slides in <a href="{{ . }}">PDF</a>
+                Source code on <a href="{{ . }}">GitLab</a>
+              </span>
+            </li>
+            {{ end }}
+
+            {{ with .Params.slides }}
+            <li class="metadata-item">
+              <div class="icon metadata-icon icon-slides"></div>
+              <span class="screen-reader">Talk slides (PDF): </span>
+              <span class="metadata-title">
+                Talk slides as <a href="{{ . }}">PDF</a>
+              </span>
+            </li>
+            {{ end }}
+
+            {{ with .Params.speakerdeck }}
+            <li class="metadata-item">
+              <div class="icon metadata-icon icon-slides"></div>
+              <span class="screen-reader">Talk slides (Speaker Deck): </span>
+              <span class="metadata-title">
+                Talk slides on <a href="{{ . }}">Speaker Deck</a>
               </span>
             </li>
             {{ end }}
 
             {{ with .Params.reddit }}
-            <li class="reddit">
+            <li class="metadata-item">
               <div class="icon metadata-icon icon-discussion"></div>
               <span class="screen-reader">Reddit: </span>
               <span class="metadata-title">
@@ -136,11 +161,21 @@
             {{ end }}
 
             {{ with .Params.hn }}
-            <li class="hn">
+            <li class="metadata-item">
               <div class="icon metadata-icon icon-discussion"></div>
               <span class="screen-reader">Hacker News: </span>
               <span class="metadata-title">
                 Discussion on <a href="{{ . }}">Hacker News</a>
+              </span>
+            </li>
+            {{ end }}
+
+            {{ with .Params.medium }}
+            <li class="metadata-item">
+              <div class="icon metadata-icon icon-mirror"></div>
+              <span class="screen-reader">Article mirrors: </span>
+              <span class="metadata-title">
+                Also on <a href="{{ . }}">Medium</a>
               </span>
             </li>
             {{ end }}
@@ -151,8 +186,27 @@
         {{ $linkList := .Params.links }}
         {{ if $linkList }}
         <section>
-          <ul class="links">
-            {{ range $i, $temp := $linkList }}{{ $link := index $linkList $i }}{{ if $link.url }}<li><a href="{{ $link.url }}">{{ $link.name }}</a></li>{{ else }}<li>{{ $link.name }}</li>{{ end }}{{ end }}
+          <ul class="links metadata-links">
+            {{ range $i, $temp := $linkList }}
+            {{ $link := index $linkList $i }}
+            {{ if $link.url }}
+            <li>
+              <a href="{{ $link.url }}">
+                {{ with $link.icon }}
+                <div class="icon metadata-icon icon-{{ $link.icon }}"></div>
+                <span class="screen-reader">Source code: </span>
+                {{ end }}
+                <span class="metadata-title">
+                {{ $link.name }}
+              </span>
+              </a>
+            </li>
+            {{ else }}
+            <li>
+              {{ $link.name }}
+            </li>
+            {{ end }}
+            {{ end }}
           </ul>
         </section>
         {{ end }}
@@ -162,6 +216,42 @@
     </div>
 
   </article>
+
+{{ if .NextInSection }}
+
+{{ if (gt .NextInSection.Weight -1) }}
+<div class="line"></div>
+<section class="mlt">
+  <h3 class="mlt-header">Next on
+    <a href="/{{.Section}}/">{{.Section}}</a></h3>
+  <a class="mlt-link" href="{{.NextInSection.Permalink}}">
+    <h4 class="mlt-title">{{.NextInSection.Title}}</h4>
+    {{ if .NextInSection.Params.description }}
+    <p class="mlt-summary">{{.NextInSection.Params.description}}</p>
+    {{ end }}
+  </a>
+</section>
+
+{{ else }}
+
+{{ if .PrevInSection }}
+{{ if gt .PrevInSection.Weight -1 }}
+<div class="line"></div>
+<section class="mlt">
+  <h3 class="mlt-header">More on
+    <a href="/{{.Section}}/">{{.Section}}</a></h3>
+  <a class="mlt-link" href="{{.PrevInSection.Permalink}}">
+    <h4 class="mlt-title">{{.PrevInSection.Title}}</h4>
+    <p class="mlt-summary">{{.PrevInSection.Params.description}}</p>
+  </a>
+</section>
+{{ end }}
+{{ end }}
+
+{{ end }}
+
+{{ end }}
+
 </main>
 
 {{ partial "footer.html" . }}

@@ -1,7 +1,7 @@
 
 figure {
-  max-width: 950px;
-  width: 950px;
+  max-width: 1000px;
+  width: 1000px;
   overflow: auto;
 }
 
@@ -23,16 +23,12 @@ img {
 }
 
 figcaption {
-  font-size: 0.9em;
-  letter-spacing: 0.008em;
+  position: relative;
   margin-top: -5px;
   float: right;
   width: 270px;
 }
 
 .font-load-1 figcaption {
-  font-size: 0.85em;
-  letter-spacing: -0.02em;
-  line-height: 1.72em;
   margin-top: -5px;
 }

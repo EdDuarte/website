@@ -2,7 +2,7 @@
 title: "Testing page for multiple CSS parameters"
 subtitle: "Normal roman text"
 links:
-  - name: Source code
+  - name: Demo
     url: /
 date: "2017-09-10 12:24:56+01:00"
 medium: "#"
@@ -11,6 +11,8 @@ hn: "#"
 type: project
 markup: mmark
 draft: true
+tags:
+  - project
 ---
 
 # Heading 1
@@ -45,7 +47,7 @@ Normal roman text. __Bold text.__ _Italic text._ **_Bold Italic Text._** &#@$%.
 
 
 
-# Ligatures
+# Ligatures [link](https://www.edduarte.com)
 
 ff fi fl ffi ffl fk fh ft
 
@@ -54,6 +56,11 @@ __ff fi fl ffi ffl fk fh ft__
 _ff fi fl ffi ffl fk fh ft_
 
 **_ff fi fl ffi ffl fk fh ft_**
+
+
+# Images
+
+![Current prototype of Living Globe](/hcii2016/screenshot-01.png "Current prototype of Living Globe, showing population growth mapped to the bars/pilars height, total life expectancy at birth to bar color, and birth/death ratio to country color.")
 
 # Line length
 

@@ -6,11 +6,15 @@ persistence module to evaluate win-lose probabilities over a Poker Texas
 Hold'em game"
 links:
   - name: Source code
+    icon: github
     url: https://github.com/edduarte/erlang-poker-ml
 date: "2015-03-31 17:25:00+01:00"
-medium: "https://medium.com/@edduarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
+medium: "https://medium.com/@EdDuarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
 type: project
 markup: mmark
+tags:
+  - notes
+  - project
 ---
 
 For a University class project we were asked to implement a decision- tree
@@ -185,6 +189,19 @@ pseudo-code, where the asterisk is interpreted as a wildcard):
 
 This lets us know if the chance to get other more valuable ranks is high enough
 for it to be worth a raise or a call.
+
+# {{< anchor link="#final" >}}Final thoughts {#final}
+
+That's all! With all these modules, our knowledge management system for Texas
+Hold'em outcome prediction is complete! In a way, we used Eresye to store state,
+essentially getting around the functional and immutable nature of Erlang. There
+might have been better ways to keep the statelessness by passing the complete
+records around every function, but regardless, the decision-tree classifier is
+completely stateless and, surprisingly, highly readable and maintainable.
+
+Give it a go! And as always - feel free to [get in
+touch](mailto:hi@edduarte.com).
+
 
 <script async src="/js/math-code.js"></script>
 <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>

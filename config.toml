@@ -6,11 +6,12 @@ enableGitInfo = true
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
-disableKinds = ["tags", "categories"]
+disableKinds = ["categories"]
 enableRobotsTXT = true
 disableAliases = true
+pygmentsUseClassic=true
 PygmentsCodeFences = true
-PygmentsStyle = "solarizedlight"
+PygmentsStyle = "solarizeddark"
 
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
@@ -32,11 +33,10 @@ isPlainText = true
 notAlternative = true
 
 [taxonomies]
-  category = ""
-  tags = ""
+  tag = "tags"
+  series = "series"
 
 [permalinks]
-  essays = "/:title/"
-  projects = "/:title/"
-  papers = "/:title/"
-  talks = "/:title/"
+  tags = "/:slug/"
+  series = "/:slug/"
+  posts = "/:title/"

@@ -5,4 +5,6 @@ date: "2015-05-08 14:57:00+01:00"
 type: project
 externalLink: "http://www.thumbeo.com/en/"
 weight: -1
+tags:
+  - project
 ---

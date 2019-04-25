@@ -1,0 +1,106 @@
+{{ partial "header.html" . }}
+<title>Ed Duarte</title>
+</head>
+<body>
+<!--
+<header class="logo logo-home">
+  <span class="home-link"><a href="{{ .Site.BaseURL }}">Ed Duarte</a></span>
+</header>
+-->
+
+<main class="article-container">
+<article>
+
+<div class="article-table">
+
+<main>
+{{ $tags := .Site.Taxonomies.tags }}
+
+<ul class="list">
+  {{ range .Data.Pages.ByDate.Reverse }}
+  {{ if not .Params.hidden }}
+  <li>
+    <div>
+      <div class="table list-meta">
+        <time class="col1 list-meta-date">{{ .Date.Format "2006 Jan 02" }}</time>
+        <span class="col2 list-meta-tags">
+        {{ $tagList := .Params.tags }}
+        {{ if $tagList }}
+        <ul class="links tags list-meta-tags-ul">
+          {{ range .Params.tags }}
+          {{ $tag := index $tags . }}
+          <li><a href="{{ $tag.Page.Permalink }}" class="badge-{{ . }}">{{ . }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </span>
+      </div>
+      <div class="list-title">
+        {{ if .Params.externalLink }}
+        <a href="{{ .Params.externalLink }}">
+          <div class="icon list-icon icon-external-link"></div>
+          {{ .Title }}
+        </a>
+        {{ else }}
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </li>
+  {{ end }}
+  {{ end }}
+</ul>
+
+</main>
+
+<aside>
+<div class="sticky">
+
+{{ partial "intro.html" . }}
+
+<section>
+  <ul class="links tags aside-centered">
+    {{ range $key, $value := $tags }}
+      <li><a href="{{ $value.Page.Permalink }}" class="badge-{{ $key }}">{{ lower $value.Page.Title }}</a></li>
+    {{ end }}
+  </ul>
+</section>
+
+<section class="bio">
+  {{ .Content }}
+</section>
+
+<section class="card card-item">
+  <div class="card-item-title">
+    Featured series
+  </div>
+  <a href="#">
+    <div class="card-item-title card-item-desc">
+      <ul class="series">
+        {{ range first 3 (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
+        <li>
+          {{ if .Page.Params.popular }}
+          <span class="series-badge">Top</span>
+          {{ end }}
+          <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </a>
+  <div class="card-item-metadata">
+    <a href="#">
+      More series »
+    </a>
+  </div>
+</section>
+
+</div>
+</aside>
+
+</div>
+
+</article>
+</main>
+
+{{ partial "footer.html" . }}

@@ -13,11 +13,16 @@ links:
   - name: Project Hub
     url: https://github.com/vokter
   - name: Source code
+    icon: github
     url: https://github.com/vokter/vokter
 date: "2016-06-19 19:26:00+01:00"
 medium: "https://medium.com/@edduarte/vokter-a-java-library-that-detects-changes-in-web-documents-c4d3d399046d"
 type: project
 markup: mmark
+tags:
+  - project
+series:
+  - ieprojects
 ---
 
 What started as a simple project for a University class in Distributed
@@ -154,9 +159,9 @@ massive amount of parallel tasks, Vokter has only been used in a academic
 environment and has yet to be battle-tested in high-usage consumer software. If
 you're using Vokter in your projects, let me know! 😀
 
-Regardless, there is always room for improvement, and I feel that there are
-currently two main issues that should be addressed with higher priority: 1) web
-crawling functionality; and 2) timeout of jobs when clients are missing.
+I believe that there are currently two main issues that should be addressed with
+higher priority: 1) web crawling functionality; and 2) timeout of jobs when
+clients are missing.
 
 ## Web crawling {#web-crawling}
 

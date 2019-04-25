@@ -9,18 +9,25 @@
 </head>
 <body class="list-page">
 <header class="logo">
-  <span class="home-link"><a href="{{ .Site.BaseURL }}">Ed Duarte</a></span><span class="noselect">•</span><span class="section-link"><a href="/{{.Section}}">{{.Section}}</a></span>
+  <span class="home-link"><a href="{{ .Site.BaseURL }}">Ed Duarte</a></span><span class="noselect">/</span><span class="section-link"><a href="/{{.Section}}">{{.Section}}</a></span>
 </header>
 <!--
 <header>
 <h1>{{ .Title }}</h1>
 </header>
 -->
+
+<div class="card-article">
 <section class="content">
   {{ .Content }}
 </section>
 
-{{ end }}
+<main>
+<article>
+
+<div class="article-table">
+
+<main>
 
 <ul class="list">
   {{ range .Data.Pages.ByDate.Reverse }}
@@ -41,7 +48,7 @@
           <div class="icon list-icon icon-external-link"></div>
           {{ .Title }}</a>
         {{ else }}
-        <a href="{{ .URL }}">{{ .Title }}</a>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
         {{ end }}
       </div>
     </div>
@@ -54,5 +61,13 @@
   {{ .Content }}
 </section>
 {{ end }}
+</main>
+
+</div>
+
+</article>
+</main>
+
+</div>
 
 {{ partial "footer.html" . }}

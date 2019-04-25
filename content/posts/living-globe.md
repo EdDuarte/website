@@ -1,10 +1,6 @@
 ---
-title: "Living Globe: Tridimensional interactive visualization of world
-demographic data"
-prologue: "The paper and prototype described in this page were presented at the
-HCI International 2016 in The Westin Harbour Castle Hotel, Toronto, Canada. It
-was originally presented in portuguese at SciTecIN 2015, University of Coimbra,
-Portugal."
+title: "Living Globe, a tridimensional interactive visualization of demographic
+data sets"
 description: "Open-source WebGL app for tri-dimensional worldwide data
 visualization, with customizable data-to-visual mapping and filtering with
 adjustable scales"
@@ -19,20 +15,31 @@ authors:
   - name: Beatriz Sousa Santos
     url: http://sweet.ua.pt/bss/
 links:
-  - name: Demo
+  - name: Demo app
     url: https://edduarte.github.io/living-globe
   - name: Source code
+    icon: github
     url: https://github.com/edduarte/living-globe
-  - name: Springer
+  - name: Paper on Springer
+    icon: paper
     url: https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2
-  - name: arXiv
+  - name: Paper on arXiv
+    icon: paper
     url: https://arxiv.org/abs/1607.05946
-  - name: Talk slides
+  - name: Talk slides as PDF
+    icon: slides
     url: /hcii2016/slides.pdf
+  - name: Talk slides as Speaker Deck
+    icon: slides
+    url: https://speakerdeck.com/edduarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data
 date: "2016-06-21 19:58:00+01:00"
-medium: "https://medium.com/@edduarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data-c3eeb1845c51"
+medium: "https://medium.com/@EdDuarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data-c3eeb1845c51"
 type: paper
 markup: mmark
+tags:
+  - project
+  - paper
+  - talk
 ---
 
 Living Globe is a WebGL application for tri-dimensional worldwide data
@@ -46,17 +53,11 @@ This can be used to filter out extremely high or extremely low samples,
 uniforming the remaining data and improving its visibility.
 
 {class="js-lazy-image" src="/hcii2016/screenshot-01.png"}
-
-![Current prototype of Living Globe](# 'Current prototype of Living Globe,
-showing population growth mapped to the bars/pilars height, total life
-expectancy at birth to bar color, and birth/death ratio to country color.')
+![Current prototype of Living Globe](# "Current prototype of Living Globe, showing population growth mapped to the bars/pilars height, total life expectancy at birth to bar color, and birth/death ratio to country color.")
 
 <noscript>
 
-![Current prototype of Living Globe](/hcii2016/screenshot-01.png 'Current
-prototype of Living Globe, showing population growth mapped to the bars/pilars
-height, total life expectancy at birth to bar color, and birth/death ratio to
-country color.')
+![Current prototype of Living Globe](/hcii2016/screenshot-01.png "Current prototype of Living Globe, showing population growth mapped to the bars/pilars height, total life expectancy at birth to bar color, and birth/death ratio to country color.")
 
 </noscript>
 
@@ -95,31 +96,44 @@ interpretation of data in countries with small samples (eg. Portugal) by
 filtering out countries with large samples (e.g. China).
 
 {class="js-lazy-image" src="/hcii2016/screenshot-02.png"}
-
-![Demonstration of Living Globe when using the filtering feature with data
-normalization](# 'Living Globe showing total population mapped to the country
-color: the data from all countries is displayed on the left, and filtering out
-large population countries \(such as China and India\) on the right \(resulting
-in a representation with much more diverse and distinguishing colors for the
-remaining countries\)')
+![Demonstration of Living Globe when using the filtering feature with data normalization](# 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishing colors for the remaining countries\)')
 
 <noscript>
 
-![Demonstration of Living Globe when using the filtering feature with data
-normalization](/hcii2016/screenshot-02.png 'Living Globe showing total
-population mapped to the country color: the data from all countries is displayed
-on the left, and filtering out large population countries \(such as China and
-India\) on the right \(resulting in a representation with much more diverse and
-distinguishing colors for the remaining countries\)')
+![Demonstration of Living Globe when using the filtering feature with data normalization](/hcii2016/screenshot-02.png 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishing colors for the remaining countries\)')
 
 </noscript>
 
-Finally, the usability of this tool was tested by agnostic individuals, and the
-results indicate that the data filtering and customizable mapping features
-encourage a faster interpretation of relational information.
+A demo of this application is available
+[here](https://edduarte.github.io/living-globe).
+It is fully open-source [on Github](https://github.com/edduarte/living-globe)
+and was built with Javascript ES6, [jQuery](https://jquery.com/),
+[three.js](https://threejs.org/) and
+[chroma.js](https://gka.github.io/chroma.js/).
 
-You may test this application [here](https://edduarte.github.io/living-globe).
-It is fully open-source and [available on
-Github](https://github.com/edduarte/living-globe), and was built with
-Javascript ES6, [jQuery](https://jquery.com/), [three.js](https://threejs.org/)
-and [chroma.js](https://gka.github.io/chroma.js/).
+
+## Publication
+
+A research paper describing the implementation of Living Globe, titled **_Living
+Globe: Tridimensional Interactive Visualization of World Demographic Data_**,
+was published in _HIMI 2016: Human Interface and the Management of Information:
+Information, Design and Interaction_, volume 9734, pages 14-24. This paper can
+be read by accessing the links on the right of this page.
+
+Throughout research, the usability of this app was tested by agnostic
+individuals, and the results indicate that the data filtering and customizable
+mapping features encourage a faster interpretation of relational information.
+
+
+## Talk
+
+The paper and prototype described in this page were presented at the
+[HCI International 2016](http://www.hci.international/) in The Westin Harbour
+Castle Hotel, Toronto, Canada. It was originally presented in portuguese at
+[SciTecIN 2015](https://scitecin.isr.uc.pt/index.php/pt/), University of
+Coimbra, Portugal. Below are the slides used for those presentations, [hosted on
+Speaker
+Deck](https://speakerdeck.com/edduarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data).
+
+{{< sd bf04a6e0d58a4dfaa7ce97e9c08c309b >}}
+
