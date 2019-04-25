@@ -1,10 +1,4 @@
 {{ partial "header.html" . }}
-{{ if .IsHome }}
-<title>Ed Duarte</title>
-</head>
-<body class="list-page">
-{{ partial "intro.html" . }}
-{{ else }}
 <title>{{ .Title }} - Ed Duarte</title>
 </head>
 <body class="list-page">
@@ -35,12 +29,6 @@
     <div class="table">
       <div class="col1 list-meta">
         <time class="list-meta-date">{{ .Date.Format "2006 Jan 02" }}</time>
-        {{ if $.IsHome }}
-        <span class="list-meta-category"><a
-            href="{{ (.Section | urlize) | absLangURL }}"
-            class="category"
-        >{{ .Type }}</a></span>
-        {{ end }}
       </div>
       <div class="col2 list-title">
         {{ if .Params.externalLink }}
@@ -56,11 +44,6 @@
   {{ end }}
 </ul>
 
-{{ if .IsHome }}
-<section class="content">
-  {{ .Content }}
-</section>
-{{ end }}
 </main>
 
 </div>
