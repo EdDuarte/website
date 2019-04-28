@@ -110,46 +110,6 @@
               </span>
             </li>
 
-            {{ with .Params.github }}
-            <li class="metadata-item">
-              <div class="icon metadata-icon icon-github"></div>
-              <span class="screen-reader">Source code: </span>
-              <span class="metadata-title">
-                Source code on <a href="{{ . }}">GitHub</a>
-              </span>
-            </li>
-            {{ end }}
-
-            {{ with .Params.gitlab }}
-            <li class="metadata-item">
-              <div class="icon metadata-icon icon-gitlab"></div>
-              <span class="screen-reader">Source code: </span>
-              <span class="metadata-title">
-                Source code on <a href="{{ . }}">GitLab</a>
-              </span>
-            </li>
-            {{ end }}
-
-            {{ with .Params.slides }}
-            <li class="metadata-item">
-              <div class="icon metadata-icon icon-slides"></div>
-              <span class="screen-reader">Talk slides (PDF): </span>
-              <span class="metadata-title">
-                Talk slides as <a href="{{ . }}">PDF</a>
-              </span>
-            </li>
-            {{ end }}
-
-            {{ with .Params.speakerdeck }}
-            <li class="metadata-item">
-              <div class="icon metadata-icon icon-slides"></div>
-              <span class="screen-reader">Talk slides (Speaker Deck): </span>
-              <span class="metadata-title">
-                Talk slides on <a href="{{ . }}">Speaker Deck</a>
-              </span>
-            </li>
-            {{ end }}
-
             {{ with .Params.reddit }}
             <li class="metadata-item">
               <div class="icon metadata-icon icon-discussion"></div>
@@ -194,11 +154,11 @@
               <a href="{{ $link.url }}">
                 {{ with $link.icon }}
                 <div class="icon metadata-icon icon-{{ $link.icon }}"></div>
-                <span class="screen-reader">Source code: </span>
+                <span class="screen-reader">{{ $link.icon }}: </span>
                 {{ end }}
                 <span class="metadata-title">
-                {{ $link.name }}
-              </span>
+                  {{ $link.name }}
+                </span>
               </a>
             </li>
             {{ else }}

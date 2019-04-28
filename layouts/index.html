@@ -22,14 +22,20 @@
   <li>
     <div>
       <div class="table list-meta">
-        <time class="col1 list-meta-date">{{ .Date.Format "2006 Jan 02" }}</time>
+        <time class="col1 list-meta-date">
+          {{ .Date.Format "2006 Jan 02" }}
+        </time>
         <span class="col2 list-meta-tags">
         {{ $tagList := .Params.tags }}
         {{ if $tagList }}
         <ul class="links tags list-meta-tags-ul">
           {{ range .Params.tags }}
           {{ $tag := index $tags . }}
-          <li><a href="{{ $tag.Page.Permalink }}" class="badge-{{ . }}">{{ . }}</a></li>
+          <li>
+            <a href="{{ $tag.Page.Permalink }}" class="badge-{{ . }}">
+              {{ . }}
+            </a>
+          </li>
           {{ end }}
         </ul>
         {{ end }}
@@ -61,7 +67,11 @@
 <section>
   <ul class="links tags aside-centered">
     {{ range $key, $value := $tags }}
-      <li><a href="{{ $value.Page.Permalink }}" class="badge-{{ $key }}">{{ lower $value.Page.Title }}</a></li>
+    <li>
+      <a href="{{ $value.Page.Permalink }}" class="badge-{{ $key }}">
+        {{ lower $value.Page.Title }}
+      </a>
+    </li>
     {{ end }}
   </ul>
 </section>
@@ -71,25 +81,23 @@
 </section>
 
 <section class="card card-item">
-  <div class="card-item-title">
-    Featured series
-  </div>
-  <a href="#">
-    <div class="card-item-title card-item-desc">
-      <ul class="series">
-        {{ range first 3 (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
-        <li>
+  <div class="card-item-title">Featured series</div>
+  <ul class="series">
+    {{ range first 3 (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
+    <li>
+      <a href="{{ .Page.Permalink }}">
+        <div class="card-item-desc">
           {{ if .Page.Params.popular }}
           <span class="series-badge">Top</span>
           {{ end }}
-          <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-        </li>
-        {{ end }}
-      </ul>
-    </div>
-  </a>
+          <span>{{ .Page.Title }}</span>
+        </div>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
   <div class="card-item-metadata">
-    <a href="#">
+    <a href="/series">
       More series »
     </a>
   </div>

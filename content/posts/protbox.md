@@ -105,8 +105,9 @@ applications out-of-the-box.
 A research paper describing the architecture of Protbox, titled **_Secure and
 trustworthy file sharing over cloud storage using eID tokens_**, was published
 in _Lecture Notes in Informatics (LNI), Proceedings - Series of the Gesellschaft
-fur Informatik (GI)_, volume P-237, pages 73-84. This paper can be read by
-accessing the links on the right of this page.
+fur Informatik (GI)_, volume P-237, pages 73-84. This paper can be read on
+[LNI](http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html) or
+[arXiv](http://arxiv.org/abs/1501.03139).
 
 
 ## Talk

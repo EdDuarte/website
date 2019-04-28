@@ -46,6 +46,14 @@ Normal roman text. __Bold text.__ _Italic text._ **_Bold Italic Text._** &#@$%.
 Normal roman text. __Bold text.__ _Italic text._ **_Bold Italic Text._** &#@$%.
 
 
+# Reference
+
+Additionally, the represented data is normalized[^test] within an adjustable
+scale. This can be used to filter out extremely high or extremely low samples,
+uniforming the remaining data and improving its visibility.
+
+[^test]: Footnote example.
+
 
 # Ligatures [link](https://www.edduarte.com)
 

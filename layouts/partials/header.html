@@ -116,11 +116,12 @@ pre {
 /* Sans Serif text elements */
 
 .authors > p,
-.bio li,
 .bio p,
 .series li,
 .card-item,
 .list-meta,
+.footnotes li,
+.sidenote,
 figcaption,
 .home-link,
 .links,
@@ -145,8 +146,22 @@ p {
   font-weight: 400;
 }
 
+.home-link,
+.myname,
+.section-link,
+.subtitle,
+.title,
+footer > ul > li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
 .font-load-1 .authors > p,
-.font-load-1 .bio li,
 .font-load-1 .bio p,
 .font-load-1 .series li,
 .font-load-1 .card-item,
@@ -159,6 +174,8 @@ p {
 .font-load-1 .section-link,
 .font-load-1 .subtitle,
 .font-load-1 .title,
+.font-load-1 .footnotes li,
+.font-load-1 .sidenote,
 .font-load-1 figcaption,
 .font-load-1 footer > ul > li,
 .font-load-1 h1,
@@ -168,21 +185,6 @@ p {
 .font-load-1 h5,
 .font-load-1 h6 {
   font-family: Lato, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-}
-
-.font-load-1 .home-link,
-.font-load-1 .myname,
-.font-load-1 .section-link,
-.font-load-1 .subtitle,
-.font-load-1 .title,
-.font-load-1 footer > ul > li,
-.font-load-1 h1,
-.font-load-1 h2,
-.font-load-1 h3,
-.font-load-1 h4,
-.font-load-1 h5,
-.font-load-1 h6 {
-  font-weight: 700;
 }
 
 /* Serif text elements */
@@ -444,14 +446,14 @@ article header {
 
 .title {
   font-size: 3em;
-  letter-spacing: -.08em;
-  line-height: 1.19em;
-  margin-top: .1em;
+  letter-spacing: -.095em;
+  line-height: 1.2em;
+  margin-top: .07em;
 }
 
 .font-load-1 .title {
   font-size: 3em;
-  letter-spacing: -.025em;
+  letter-spacing: -.021em;
   line-height: 1.2em;
   margin-top: 0;
 }
@@ -496,24 +498,34 @@ blockquote footer {
   margin-top: .6em;
 }
 
-.bio li,
 .bio p,
+.card-item-desc,
+.series li,
 .metadata > .table,
 .metadata > p,
+.footnotes li,
+.sidenote,
 figcaption {
   font-size: .72rem;
   letter-spacing: .035em;
   line-height: 2.2em;
 }
 
-.font-load-1 .bio li,
 .font-load-1 .bio p,
+.font-load-1 .card-item-desc,
+.font-load-1 .series li,
 .font-load-1 .metadata > .table,
 .font-load-1 .metadata > p,
+.font-load-1 .footnotes li,
+.font-load-1 .sidenote,
 .font-load-1 figcaption {
   font-size: .8rem;
   letter-spacing: .04em;
   line-height: 2em;
+}
+
+.footnote {
+  font-size: .9rem;
 }
 
 .metadata > .table,
@@ -532,6 +544,11 @@ figcaption {
 .toc ul,
 figure {
   margin: 0;
+}
+
+hr {
+  color: transparent;
+  border-style: solid;
 }
 
 .metadata .metadata-item {
@@ -866,13 +883,12 @@ samp {
 }
 
 .series,
-.bio ul {
+.font-load-1 .series {
   margin: 0;
   padding: 0;
 }
 
-.series li,
-.bio li {
+.series li {
   display: block;
 }
 
@@ -1021,13 +1037,8 @@ strong {
   color: #111a2c;
 }
 
-.bio a,
-.bio p {
-  color: #7b88a1;
-}
-
 a, .list-title a:hover, .series a:hover {
-  text-decoration: underline;
+  text-decoration-line: underline;
   text-decoration-color: #e21b2a;
 }
 
@@ -1035,7 +1046,7 @@ a, .list-title a:hover, .series a:hover {
 .list-title a,
 .section-link a,
 footer a {
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 .anchor,
@@ -1045,10 +1056,12 @@ footer a {
 .list-meta-category a,
 .list-meta-category a:hover,
 .mlt-link {
-  text-decoration: none;
+  text-decoration-line: none;
   text-decoration-color: #585b66;
 }
 
+.footnotes a,
+.sidenote a,
 figcaption a,
 .title a,
 .footnote-ref a,
@@ -1061,9 +1074,11 @@ a.footnote-return,
 .mlt-link:hover > .mlt-title,
 .section-link a:hover,
 footer a:hover {
-  text-decoration: underline;
+  text-decoration-line: underline;
 }
 
+.footnotes a,
+.sidenote a,
 figcaption a,
 .title a,
 .footnote-ref a,
@@ -1076,7 +1091,15 @@ a.footnote-return,
 .mlt-link:hover > .mlt-title,
 .section-link a:hover,
 footer a:hover {
-  text-decoration-color: #8b919e;
+  text-decoration-color: #b5b8bf;
+}
+
+.footnote::before {
+  content: '[';
+}
+
+.footnote::after {
+  content: ']';
 }
 
 .myname,
@@ -1102,7 +1125,6 @@ h6 a {
 
 .authors,
 .authors a,
-.card-item-desc,
 .list-meta-date,
 .metadata,
 .metadata a,
@@ -1115,11 +1137,16 @@ h6 a {
 .section-link,
 .section-link a,
 .social a,
+.footnotes,
+.footnotes a,
+.sidenote,
+.sidenote a,
 figcaption,
+figcaption a,
 footer,
 footer a {
   color: #7b88a1;
-  text-decoration-color: #8b919e;
+  text-decoration-color: #b5b8bf;
 }
 
 .home-link a {
@@ -1237,13 +1264,8 @@ img.centered:empty {
   width: 100%;
   height: auto;
   overflow: hidden;
-  transition: box-shadow 100ms ease-in-out 0s, background-color 100ms ease-in-out 0s;
   -webkit-box-pack: justify;
   justify-content: space-between;
-}
-
-.card-item:hover {
-  box-shadow: rgba(184, 194, 215, .25) 0 8px 10px, rgba(184, 194, 215, .1) 0 9px 11px;
 }
 
 .card-item-title {
@@ -1252,12 +1274,18 @@ img.centered:empty {
   -webkit-box-align: center;
   align-items: start;
   text-align: start;
-  padding: .5em;
+  padding: .5rem .5rem 0;
 }
 
 .card-item-desc {
-  font-size: .9em;
-  padding-top: 0;
+  margin: 0;
+  padding: .3em .5rem;
+  line-height: 1.7em;
+}
+
+.font-load-1 .card-item-desc {
+  margin: 0;
+  line-height: 1.5em;
 }
 
 .card-item-metadata {
@@ -1266,7 +1294,18 @@ img.centered:empty {
   justify-content: space-between;
   font-size: .7em;
   border-top: 1px solid #e5e9f0;
-  padding: .5em;
+  padding-top: .4rem;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  padding-bottom: .4rem;
+}
+
+.font-load-1 .card-item-metadata {
+  padding: .5rem;
+}
+
+.card-item-metadata a {
+  text-decoration-line: none;
 }
 
 .card-article {
@@ -1769,16 +1808,14 @@ h6 > .anchor:hover {
   }
 
   .series p,
-  .bio p,
-  .bio li {
+  .bio p {
     font-size: 0.9em;
     letter-spacing: -0.03em;
     line-height: 2em;
   }
 
   .font-load-1 .series p,
-  .font-load-1 .bio p,
-  .font-load-1 .bio li {
+  .font-load-1 .bio p {
     font-size: 1em;
     letter-spacing: -0.02em;
     line-height: 1.85em;

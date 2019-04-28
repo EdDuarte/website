@@ -40,6 +40,8 @@ tags:
   - project
   - paper
   - talk
+series:
+  - infovisproj
 ---
 
 Living Globe is a WebGL application for tri-dimensional worldwide data
@@ -96,11 +98,11 @@ interpretation of data in countries with small samples (eg. Portugal) by
 filtering out countries with large samples (e.g. China).
 
 {class="js-lazy-image" src="/hcii2016/screenshot-02.png"}
-![Demonstration of Living Globe when using the filtering feature with data normalization](# 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishing colors for the remaining countries\)')
+![Demonstration of Living Globe when using the filtering feature with data normalization](# 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishable colors for the remaining countries\)')
 
 <noscript>
 
-![Demonstration of Living Globe when using the filtering feature with data normalization](/hcii2016/screenshot-02.png 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishing colors for the remaining countries\)')
+![Demonstration of Living Globe when using the filtering feature with data normalization](/hcii2016/screenshot-02.png 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishable colors for the remaining countries\)')
 
 </noscript>
 
@@ -118,7 +120,9 @@ A research paper describing the implementation of Living Globe, titled **_Living
 Globe: Tridimensional Interactive Visualization of World Demographic Data_**,
 was published in _HIMI 2016: Human Interface and the Management of Information:
 Information, Design and Interaction_, volume 9734, pages 14-24. This paper can
-be read by accessing the links on the right of this page.
+be read on
+[Springer](https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2) or
+[arXiv](https://arxiv.org/abs/1607.05946).
 
 Throughout research, the usability of this app was tested by agnostic
 individuals, and the results indicate that the data filtering and customizable
