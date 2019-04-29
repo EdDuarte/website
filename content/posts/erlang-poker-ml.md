@@ -1,9 +1,9 @@
 ---
 title: "Developing a knowledge-based system for Texas Hold'em outcome
 prediction in Erlang"
-description: "Implementation of a decision-tree classifier and a disk
+description: "Implementing a decision-tree classifier and a disk
 persistence module to evaluate win-lose probabilities over a Poker Texas
-Hold'em game"
+Hold'em game."
 links:
   - name: Source code
     icon: github
