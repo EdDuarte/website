@@ -13,7 +13,7 @@
 
 <div class="article-table">
 
-<main>
+<main class="article-list">
 {{ $tags := .Site.Taxonomies.tags }}
 
 <ul class="list">
@@ -23,7 +23,7 @@
     <div>
       <div class="table list-meta">
         <time class="col1 list-meta-date">
-          {{ .Date.Format "2006 Jan 02" }}
+          {{ .Date.Format "Jan 02, 2006" }}
         </time>
         <span class="col2 list-meta-tags">
         {{ $tagList := .Params.tags }}
@@ -41,18 +41,26 @@
         {{ end }}
       </span>
       </div>
+      {{ if .Params.externalLink }}
+      <a href="{{ .Params.externalLink }}" class="list-item">
+      {{ else }}
+      <a href="{{ .Permalink }}" class="list-item">
+      {{ end }}
       <div class="list-title">
         {{ if .Params.externalLink }}
-        <a href="{{ .Params.externalLink }}">
-          <div class="icon list-icon icon-external-link"></div>
-          {{ .Title }}
-        </a>
-        {{ else }}
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <div class="icon list-icon icon-external-link"></div>
         {{ end }}
+        {{ .Title }}
       </div>
+      {{ with .Params.description }}
+      <div class="list-desc">
+        {{ . }}
+      </div>
+      {{ end }}
+      </a>
     </div>
   </li>
+  <hr>
   {{ end }}
   {{ end }}
 </ul>
@@ -60,7 +68,7 @@
 </main>
 
 <aside>
-<div class="sticky">
+<div>
 
 {{ partial "intro.html" . }}
 

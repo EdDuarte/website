@@ -125,7 +125,8 @@ pre {
 figcaption,
 .home-link,
 .links,
-.list-title a,
+.list-title,
+.list-desc,
 .metadata > ul > li,
 .myname,
 .section-link,
@@ -168,7 +169,8 @@ h6 {
 .font-load-1 .home-link,
 .font-load-1 .links,
 .font-load-1 .list-meta,
-.font-load-1 .list-title a,
+.font-load-1 .list-title,
+.font-load-1 .list-desc,
 .font-load-1 .metadata > ul > li,
 .font-load-1 .myname,
 .font-load-1 .section-link,
@@ -225,7 +227,6 @@ strong em {
   font-style: italic;
 }
 
-.font-load-1 .list-title,
 .font-load-1 .prologue,
 .font-load-1 p,
 .font-load-1 ol,
@@ -293,6 +294,44 @@ article aside {
 .mlt,
 article main {
   max-width: 650px;
+}
+
+.article-list {
+  max-width: 750px;
+}
+
+.list {
+  margin-right: 100px;
+}
+
+hr {
+  opacity: 0.075;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.mlt {
+  border: 1px solid #D8DEE9;
+  box-shadow: #D8DEE9 0 4px 6px, rgba(184, 194, 215, 0) 0 5px 7px;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-right: 1rem;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  /*width: 33.33%;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 aside {
@@ -484,6 +523,10 @@ blockquote footer {
   margin-top: .85em;
 }
 
+.metadata-title {
+  margin-left: .1em;
+}
+
 .authors > p {
   font-size: 1.2em;
   letter-spacing: -.05em;
@@ -499,6 +542,7 @@ blockquote footer {
 }
 
 .bio p,
+.list-desc,
 .card-item-desc,
 .series li,
 .metadata > .table,
@@ -512,6 +556,7 @@ figcaption {
 }
 
 .font-load-1 .bio p,
+.font-load-1 .list-desc,
 .font-load-1 .card-item-desc,
 .font-load-1 .series li,
 .font-load-1 .metadata > .table,
@@ -544,11 +589,6 @@ figcaption {
 .toc ul,
 figure {
   margin: 0;
-}
-
-hr {
-  color: transparent;
-  border-style: solid;
 }
 
 .metadata .metadata-item {
@@ -914,7 +954,7 @@ samp {
 .tags > li > a {
   font-size: .54em;
   letter-spacing: -.01em;
-  padding: .4em .9em;
+  padding: .3em .9em;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -1014,7 +1054,7 @@ footer > ul > li {
   color: #e21b2a;
 }
 
-.list-title a,
+.list-title,
 .myname,
 .myname a,
 .title,
@@ -1037,13 +1077,15 @@ strong {
   color: #111a2c;
 }
 
-a, .list-title a:hover, .series a:hover {
+a,
+.list-item:hover > .list-title,
+.series a:hover {
   text-decoration-line: underline;
   text-decoration-color: #e21b2a;
 }
 
 .series a,
-.list-title a,
+.list-item,
 .section-link a,
 footer a {
   text-decoration-line: none;
@@ -1125,7 +1167,10 @@ h6 a {
 
 .authors,
 .authors a,
+.bio,
+.bio a,
 .list-meta-date,
+.list-desc,
 .metadata,
 .metadata a,
 .metadata-links,
@@ -1154,6 +1199,7 @@ footer a {
   padding-bottom: .1em;
 }
 
+.card-item-desc,
 .home-link,
 .home-link a {
   color: #4c566a;
@@ -1340,18 +1386,18 @@ footer > .table li {
 }
 
 .table > .col1 {
-  flex: 2 1 14%;
+  flex: 2 1 7em;
   order: 1;
 }
 
 .table > .col2 {
-  flex: 1 6 86%;
+  flex: 1 6 100%;
   order: 2;
 }
 
 .table > .list-meta-date {
-  padding-top: .33em;
-  padding-bottom: .33em;
+  padding-top: .3em;
+  padding-bottom: .3em;
 }
 
 .list {
@@ -1495,12 +1541,12 @@ h6 > .anchor:hover {
 }
 
 .list > li {
-  margin-top: 0;
+  margin-top: 1.2rem;
   margin-bottom: 1.4rem;
 }
 
 .font-load-1 .list > li {
-  margin-top: 0;
+  margin-top: 1.2rem;
   margin-bottom: 1.2rem;
 }
 
@@ -1566,7 +1612,7 @@ h6 > .anchor:hover {
   }
 }
 
-@media screen and (max-width: 1083px), print {
+@media screen and (max-width: 1099px), print {
 
   .article-container,
   .list-container {
@@ -1602,6 +1648,10 @@ h6 > .anchor:hover {
   article main {
     order: 2;
     margin-top: 0.2em;
+  }
+
+  .article-list {
+    max-width: initial;
   }
 
   article aside {
@@ -1667,6 +1717,10 @@ h6 > .anchor:hover {
   .font-load-1 .metadata {
     margin-top: 0.5em;
     margin-bottom: 0;
+  }
+
+  .metadata-title {
+    margin-left: 0;
   }
 
   .links {
@@ -1808,14 +1862,16 @@ h6 > .anchor:hover {
   }
 
   .series p,
-  .bio p {
+  .bio p,
+  .list-desc {
     font-size: 0.9em;
     letter-spacing: -0.03em;
     line-height: 2em;
   }
 
   .font-load-1 .series p,
-  .font-load-1 .bio p {
+  .font-load-1 .bio p,
+  .font-load-1 .list-desc {
     font-size: 1em;
     letter-spacing: -0.02em;
     line-height: 1.85em;
