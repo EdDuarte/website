@@ -31,8 +31,7 @@ p {
   hanging-punctuation: first;
 }
 
-a,
-.list-title a:hover {
+a {
   text-decoration-line: none !important;
   background-image: linear-gradient(to right, #e21b2a 50%, #e21b2a 50%);
   background-position: 0 1em;
@@ -54,7 +53,7 @@ figcaption a,
 .title a,
 .anchor,
 .footnote-ref a,
-.list-title a,
+.list-item,
 .home-link a,
 .links > li > a,
 .list-meta-category a,
@@ -103,16 +102,18 @@ footer a:hover {
   background-position: 0 1.1em;
 }
 
-.authors a {
-  background-position: 0 1.2em;
+.font-load-1 .authors a {
+  background-position: 0 1.1em;
+}
+
+@-moz-document url-prefix() {
+  .font-load-1 .authors a {
+    background-position: 0 .95em;
+  }
 }
 
 .font-load-1 a {
   background-position: 0 1.18em;
-}
-
-.font-load-1 .list-title a {
-  background-position: 0 1.16em;
 }
 
 .icon {
@@ -407,7 +408,6 @@ feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0
   .myname a,
   .subtitle a,
   .table > .list-meta > a,
-  .table > .list-title > a,
   .title a,
   a,
   footer a,

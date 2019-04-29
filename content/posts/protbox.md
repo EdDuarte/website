@@ -2,7 +2,7 @@
 title: "Protbox, a desktop application for secure file sharing over cloud
 storage using eID tokens"
 description: "Open-source & cross-platform app that performs file encryption
-and user authentication on existing cloud storage services using eID tokens."
+and user authentication on existing cloud storage services."
 authors:
   - name: Ed Duarte
     url: https://www.edduarte.com
