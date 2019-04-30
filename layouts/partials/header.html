@@ -66,7 +66,7 @@
 
 html,
 a {
-  color: #111a2c;
+  color: #283044;
 }
 
 html {
@@ -310,12 +310,12 @@ hr {
   margin: 0;
   width: 100%;
   height: 1px;
-  background-color: #111a2c;
+  background-color: #283044;
 }
 
 .mlt {
-  border: 1px solid #D8DEE9;
-  box-shadow: #D8DEE9 0 4px 6px, rgba(184, 194, 215, 0) 0 5px 7px;
+  border: 1px solid #d8dee9;
+  box-shadow: #d8dee9 0 4px 6px, rgba(184, 194, 215, 0) 0 5px 7px;
   border-radius: 8px;
   padding: 1rem;
   margin-right: 1rem;
@@ -346,12 +346,19 @@ ul {
   letter-spacing: -.005em;
 }
 
-.bio {
-  max-width: 340px;
+.bio, .card-series {
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
+}
+
+.bio {
+  max-width: 340px;
   margin-top: 1.1em;
+}
+
+.card-series {
+  max-width: 450px;
 }
 
 .font-load-1 .bio {
@@ -936,6 +943,11 @@ samp {
 
 .series li {
   display: block;
+  margin: 0;
+}
+
+.font-load-1 .series li {
+  margin: 0;
 }
 
 .links > li {
@@ -953,14 +965,14 @@ samp {
 
 .tags > li {
   line-height: 0;
-  margin-right: 3px;
+  margin-right: 5px;
 }
 
 .metadata-links > li > a,
 .tags > li > a {
   font-size: .54em;
   letter-spacing: -.01em;
-  padding: .4em .9em;
+  padding: .4em .8em;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -1080,7 +1092,7 @@ h5 a,
 h6,
 h6 a,
 strong {
-  color: #111a2c;
+  color: #283044;
 }
 
 a,
@@ -1167,7 +1179,7 @@ h5,
 h5 a,
 h6,
 h6 a {
-  text-decoration-color: #111a2c;
+  text-decoration-color: #283044;
 }
 
 .authors,
@@ -1329,7 +1341,7 @@ img.centered:empty {
   -webkit-box-align: center;
   align-items: start;
   text-align: start;
-  padding: .5rem .5rem 0;
+  padding: .5rem .5rem;
 }
 
 .card-item-desc {
@@ -1410,20 +1422,41 @@ footer > .table li {
   padding-right: .7em;
 }
 
-.gradient-container {
+/*
+.tags-container, .social {
+  visibility: hidden;
+}
+
+.myname, .bio, .bio a {
+  color: #fff;
+}
+
+*/
+
+.myname {
+  color: #fff;
+}
+
+.bio, .bio a {
+  color: #eceff4;
+}
+
+.blob-container {
   position: absolute;
+  zoom: 1;
+  overflow: hidden;
+  margin: 0 auto;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   pointer-events: none;
-  overflow: hidden;
 }
 
-.block {
+.blob-top {
   position: absolute;
   z-index: -2;
-  background-color: #d8dee9;
+  background-color: #283044;
   top: -10px;
   left: 0;
   right: 0;
@@ -1431,33 +1464,52 @@ footer > .table li {
   margin-left: 100px;
 }
 
-.block-cut {
+.blob-top-cut {
   position: absolute;
   z-index: -1;
   background-color: #eceff4;
   top: -10px;
   left: 0;
-  width: calc((100% / 2) + 190px);
+  width: calc(50% + 190px);
   height: 300px;
-  border-top-right-radius: 5rem 23rem;
+  border-top-right-radius: 70px 500px;
 }
 
-.gradient {
+.blob-bottom {
   position: absolute;
   z-index: -2;
-  background-color: #d8dee9;
-  /* background-image: linear-gradient(-45deg, #333C4F 0%,#111a2c 70%,#111a2c 100%); */
+  background-color: #283044;
+  top: 730px;
+  right: -30px;
+  width: calc(50% - 405px);
+  height: 100px;
+}
+
+.blob-bottom-cut {
+  position: absolute;
+  z-index: -1;
+  background-color: #eceff4;
+  top: 730px;
+  right: -30px;
+  width: calc(50% - 405px);
+  height: 100px;
+  border-top-right-radius: calc(50% + 405px) 100px;
+}
+
+.blob-corner {
+  position: absolute;
+  z-index: -2;
+  background-color: #283044;
+  /* background-image: linear-gradient(-45deg, #333C4F 0%,#283044 70%,#283044 100%); */
   /* background-image: linear-gradient(45deg, #6153cc 0%,#ff157e 35%,#e21b2a 70%,#e21b2a 100%); */
   /* background-image: linear-gradient(45deg, #6153cc 0%,#06a7be 10%,#2f9f75 20%,#ff6700 30%,#e21b2a 40%,#e21b2a 100%); */
   /* background-image: linear-gradient(-45deg, #06a7be 0%,#6153cc 25%,#e21b2a 70%,#e21b2a 100%); */
-  background-image: linear-gradient(90deg, #d8dee9 0%,#e5e9f0 100%);
+  /* background-image: linear-gradient(-110deg, #8e000a 0%,#e21b2a 40%,#e21b2a 100%); */
   top: 0;
   right: 0;
-  width: calc((100% / 2) - 190px);
-  height: 720px;
-  pointer-events: none;
-  border-bottom-left-radius: 5rem 23rem;
-  background-size: 100% 100%;
+  width: calc(50% - 190px);
+  height: 730px;
+  border-bottom-left-radius: 250px 400px;
 }
 
 .list {
@@ -1712,6 +1764,30 @@ h6 > .anchor:hover {
 
   .article-list {
     max-width: initial;
+  }
+
+  .blob-top-cut {
+    visibility: hidden;
+  }
+
+  .blob-bottom {
+    top: 600px;
+    width: 150%;
+    height: 100px;
+  }
+
+  .blob-bottom-cut {
+    top: 600px;
+    width: 150%;
+    height: 100px;
+    border-top-right-radius: 35% 100px;
+  }
+
+  .blob-corner {
+    left: -50px;
+    width: 150%;
+    height: 600px;
+    border-bottom-left-radius: 35% 100px;
   }
 
   .list {
