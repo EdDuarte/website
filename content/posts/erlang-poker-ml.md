@@ -13,7 +13,7 @@ medium: "https://medium.com/@EdDuarte/developing-a-knowledge-management-system-f
 type: project
 markup: mmark
 tags:
-  - notes
+  - article
   - project
 series:
   - dmproj

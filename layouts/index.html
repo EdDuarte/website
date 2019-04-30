@@ -7,6 +7,11 @@
   <span class="home-link"><a href="{{ .Site.BaseURL }}">Ed Duarte</a></span>
 </header>
 -->
+<div class="gradient-container">
+  <div class="block"></div>
+  <div class="block-cut"></div>
+  <div class="gradient"></div>
+</div>
 
 <main class="article-container">
 <article>
@@ -72,8 +77,8 @@
 
 {{ partial "intro.html" . }}
 
-<section>
-  <ul class="links tags aside-centered">
+<section class="tags-container">
+  <ul class="links tags centered">
     {{ range $key, $value := $tags }}
     <li>
       <a href="{{ $value.Page.Permalink }}" class="badge-{{ $key }}">
