@@ -26,7 +26,7 @@
 <ul class="list">
   {{ range .Data.Pages.ByDate.Reverse }}
   {{ if not .Params.hidden }}
-  <li class="card card-list">
+  <li>
     <div>
     <div class="list-meta">
       <div class="table">
@@ -61,7 +61,7 @@
         {{ if .Params.externalLink }}
         <div class="icon list-icon icon-external-link"></div>
         {{ end }}
-        <h5 class="list-title-alt-h">{{ .Title }}</h5>
+        <h3 class="list-title-alt-h">{{ .Title }}</h3>
       </div>
       {{ with .Params.description }}
       <div class="list-desc-alt">
