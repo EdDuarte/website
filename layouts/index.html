@@ -8,14 +8,14 @@
 </header>
 -->
 <div class="blob-container">
-  <div class="blob-top"></div>
-  <div class="blob-top-cut"></div>
-  <div class="blob-bottom"></div>
-  <div class="blob-bottom-cut"></div>
-  <div class="blob-corner"></div>
+  <div class="blob blob-top"></div>
+  <div class="blob blob-top-cut"></div>
+  <div class="blob blob-bottom"></div>
+  <div class="blob blob-bottom-cut"></div>
+  <div class="blob blob-corner"></div>
 </div>
 
-<main class="article-container">
+<main class="article-container list-container">
 <article>
 
 <div class="article-table">
@@ -53,11 +53,11 @@
       {{ else }}
       <a href="{{ .Permalink }}" class="list-item">
       {{ end }}
-      <div class="list-title">
+      <div class="list-title-alt">
         {{ if .Params.externalLink }}
         <div class="icon list-icon icon-external-link"></div>
         {{ end }}
-        <span>{{ .Title }}</span>
+        <h5>{{ .Title }}</h5>
       </div>
       {{ with .Params.description }}
       <div class="list-desc">
@@ -95,8 +95,8 @@
   {{ .Content }}
 </section>
 
-<section class="card card-item">
-  <div class="card-item-title">Featured series</div>
+<section class="card card-item card-series">
+  <div class="card-item-title">Series of Articles</div>
   <ul class="series">
     {{ range first 3 (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
     <li>

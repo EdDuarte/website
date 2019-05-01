@@ -64,9 +64,54 @@
 
 <style type="text/css">
 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, div, footer, header, hgroup,
+menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 html,
 a {
-  color: #283044;
+  color: #292e39;
 }
 
 html {
@@ -150,6 +195,7 @@ p {
 .home-link,
 .myname,
 .section-link,
+.list-title,
 .subtitle,
 .title,
 footer > ul > li,
@@ -264,6 +310,7 @@ strong em {
 
 @-moz-document url-prefix() {
   .font-load-1 .myname,
+  .font-load-1 .list-title,
   .font-load-1 .subtitle,
   .font-load-1 .title,
   .font-load-1 footer > ul > li,
@@ -310,7 +357,7 @@ hr {
   margin: 0;
   width: 100%;
   height: 1px;
-  background-color: #283044;
+  background-color: #292e39;
 }
 
 .mlt {
@@ -641,7 +688,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0
+  margin-top: 0;
 }
 
 h1 {
@@ -695,8 +742,9 @@ h2 {
   margin-bottom: -.16em;
 }
 
+.font-load-1 .myname,
 .font-load-1 h2 {
-  letter-spacing: -.032em;
+  letter-spacing: -.031em;
 }
 
 .font-load-1 .myname,
@@ -775,8 +823,8 @@ p + h4 {
 }
 
 h5 {
-  font-size: 1.123em;
-  letter-spacing: -.055em;
+  font-size: 1.133em;
+  letter-spacing: -.08em;
   margin-bottom: -.37em;
 }
 
@@ -789,6 +837,10 @@ h5 {
 .font-load-1 h5,
 .font-load-1 h6 {
   letter-spacing: -.01em;
+}
+
+.font-load-2 h5 {
+  letter-spacing: -.02em;
 }
 
 .highlight + h5,
@@ -900,10 +952,6 @@ samp {
   margin-top: .1em;
 }
 
-.all-site-wrap {
-  position: relative;
-}
-
 .circle {
   position: absolute;
   overflow: hidden;
@@ -931,7 +979,14 @@ samp {
 .circle-article-2 {
   text-align: left;
   top: 800px;
-  left: -30px;
+  left: -600px;
+  max-width: 1300px;
+}
+
+.circle-article-3 {
+  text-align: left;
+  top: 1700px;
+  left: 600px;
   max-width: 1300px;
 }
 
@@ -1092,7 +1147,7 @@ h5 a,
 h6,
 h6 a,
 strong {
-  color: #283044;
+  color: #292e39;
 }
 
 a,
@@ -1179,7 +1234,7 @@ h5,
 h5 a,
 h6,
 h6 a {
-  text-decoration-color: #283044;
+  text-decoration-color: #292e39;
 }
 
 .authors,
@@ -1211,6 +1266,10 @@ footer a {
   text-decoration-color: #b5b8bf;
 }
 
+.list-desc {
+  margin-top: .8em;
+}
+
 .list-meta-date {
   text-transform: uppercase;
 }
@@ -1239,17 +1298,18 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 1.2em;
+  line-height: 1.3em;
 }
 
 .myname {
   letter-spacing: -.078em;
+  line-height: 1.4em;
   padding-top: .3em;
   padding-bottom: .09em;
 }
 
 .font-load-1 .myname {
-  letter-spacing: -.031em;
+  line-height: 1em;
   padding-top: .36em;
   padding-bottom: .36em;
 }
@@ -1427,19 +1487,15 @@ footer > .table li {
   visibility: hidden;
 }
 
-.myname, .bio, .bio a {
-  color: #fff;
-}
-
-*/
-
 .myname {
   color: #fff;
 }
 
 .bio, .bio a {
-  color: #eceff4;
+  color: #c1cfda;
 }
+
+*/
 
 .blob-container {
   position: absolute;
@@ -1449,14 +1505,28 @@ footer > .table li {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  height: 800px;
   pointer-events: none;
 }
 
-.blob-top {
+.blob {
   position: absolute;
+  overflow-x: hidden;
+  margin: 0 auto;
   z-index: -2;
-  background-color: #283044;
+}
+
+.blob-logo {
+  background-color: #d8dee9;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 60px;
+  border-bottom-right-radius: 250px 400px;
+}
+
+.blob-top {
+  background-color: #d8dee9;
   top: -10px;
   left: 0;
   right: 0;
@@ -1465,8 +1535,6 @@ footer > .table li {
 }
 
 .blob-top-cut {
-  position: absolute;
-  z-index: -1;
   background-color: #eceff4;
   top: -10px;
   left: 0;
@@ -1476,35 +1544,31 @@ footer > .table li {
 }
 
 .blob-bottom {
-  position: absolute;
-  z-index: -2;
-  background-color: #283044;
+  background-color: #d8dee9;
   top: 730px;
-  right: -30px;
+  right: 0px;
+  margin-right: -30px;
   width: calc(50% - 405px);
   height: 100px;
 }
 
 .blob-bottom-cut {
-  position: absolute;
-  z-index: -1;
   background-color: #eceff4;
   top: 730px;
-  right: -30px;
+  right: 0px;
+  margin-right: -30px;
   width: calc(50% - 405px);
   height: 100px;
   border-top-right-radius: calc(50% + 405px) 100px;
 }
 
 .blob-corner {
-  position: absolute;
-  z-index: -2;
-  background-color: #283044;
-  /* background-image: linear-gradient(-45deg, #333C4F 0%,#283044 70%,#283044 100%); */
+  background-color: #d8dee9;
+  /* background-image: linear-gradient(-45deg, #333C4F 0%,#292e39 70%,#292e39 100%); */
   /* background-image: linear-gradient(45deg, #6153cc 0%,#ff157e 35%,#e21b2a 70%,#e21b2a 100%); */
   /* background-image: linear-gradient(45deg, #6153cc 0%,#06a7be 10%,#2f9f75 20%,#ff6700 30%,#e21b2a 40%,#e21b2a 100%); */
   /* background-image: linear-gradient(-45deg, #06a7be 0%,#6153cc 25%,#e21b2a 70%,#e21b2a 100%); */
-  /* background-image: linear-gradient(-110deg, #8e000a 0%,#e21b2a 40%,#e21b2a 100%); */
+  background-image: linear-gradient(-135deg, #e5e9f0 0%,#d8dee9 30%,#d8dee9 100%);
   top: 0;
   right: 0;
   width: calc(50% - 190px);
@@ -1664,8 +1728,8 @@ h6 > .anchor:hover {
 
 .list-title {
   font-size: .9em;
-  letter-spacing: -0.02em;
-  line-height: 1.6em;
+  letter-spacing: -0.03em;
+  line-height: 1.62em;
 }
 
 .font-load-1 .list-title {
@@ -1697,6 +1761,7 @@ h6 > .anchor:hover {
   .font-load-2 .home-link,
   .font-load-2 .section-link,
   .font-load-2 .myname,
+  .font-load-2 .list-title,
   .font-load-2 .subtitle,
   .font-load-2 .title,
   .font-load-2 footer > ul > li,
@@ -1990,10 +2055,6 @@ h6 > .anchor:hover {
   .circle-article-1 {
     max-width: initial;
     left: 100px;
-  }
-
-  .circle-article-2 {
-    max-width: initial;
   }
 
   ol,
