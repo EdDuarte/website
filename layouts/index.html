@@ -26,9 +26,10 @@
 <ul class="list">
   {{ range .Data.Pages.ByDate.Reverse }}
   {{ if not .Params.hidden }}
-  <li>
+  <li class="card card-list">
     <div>
-      <div class="table list-meta">
+    <div class="list-meta">
+      <div class="table">
         <time class="col1 list-meta-date">
           {{ .Date.Format "Jan 02, 2006" }}
         </time>
@@ -48,26 +49,29 @@
         {{ end }}
         </span>
       </div>
+    </div>
+      <hr>
       {{ if .Params.externalLink }}
       <a href="{{ .Params.externalLink }}" class="list-item">
       {{ else }}
       <a href="{{ .Permalink }}" class="list-item">
       {{ end }}
+      <div class="list-item-container">
       <div class="list-title-alt">
         {{ if .Params.externalLink }}
         <div class="icon list-icon icon-external-link"></div>
         {{ end }}
-        <h5>{{ .Title }}</h5>
+        <h5 class="list-title-alt-h">{{ .Title }}</h5>
       </div>
       {{ with .Params.description }}
-      <div class="list-desc">
-        {{ . }}
+      <div class="list-desc-alt">
+        <p class="small">{{ . }}</p>
       </div>
       {{ end }}
+      </div>
       </a>
     </div>
   </li>
-  <hr>
   {{ end }}
   {{ end }}
 </ul>
@@ -79,6 +83,7 @@
 
 {{ partial "intro.html" . }}
 
+<!--
 <section class="tags-container">
   <ul class="links tags centered">
     {{ range $key, $value := $tags }}
@@ -90,6 +95,7 @@
     {{ end }}
   </ul>
 </section>
+-->
 
 <section class="bio">
   {{ .Content }}
@@ -98,7 +104,7 @@
 <section class="card card-item card-series">
   <div class="card-item-title">Series of Articles</div>
   <ul class="series">
-    {{ range first 3 (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
+    {{ range (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
     <hr>
     <li>
       <a href="{{ .Page.Permalink }}">
@@ -112,11 +118,13 @@
     </li>
     {{ end }}
   </ul>
+  <!--
   <div class="card-item-metadata">
     <a href="/series">
       More series »
     </a>
   </div>
+  -->
 </section>
 
 </div>
