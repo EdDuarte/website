@@ -99,6 +99,7 @@
   <div class="card-item-title">Series of Articles</div>
   <ul class="series">
     {{ range first 3 (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
+    <hr>
     <li>
       <a href="{{ .Page.Permalink }}">
         <div class="card-item-desc">
