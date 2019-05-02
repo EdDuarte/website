@@ -1,12 +1,12 @@
 {{ partial "header.html" . }}
 <title>Ed Duarte</title>
 </head>
-<body>
-<!--
-<header class="logo logo-home">
+<body class="body-list">
+
+<header class="logo">
   <span class="home-link"><a href="{{ .Site.BaseURL }}">Ed Duarte</a></span>
 </header>
--->
+
 <div class="blob-container">
   <div class="blob blob-top"></div>
   <div class="blob blob-top-cut"></div>
@@ -61,7 +61,7 @@
         {{ if .Params.externalLink }}
         <div class="icon list-icon icon-external-link"></div>
         {{ end }}
-        <h3 class="list-title-alt-h">{{ .Title }}</h3>
+        <h5 class="list-title-alt-h">{{ .Title }}</h5>
       </div>
       {{ with .Params.description }}
       <div class="list-desc-alt">
@@ -83,7 +83,6 @@
 
 {{ partial "intro.html" . }}
 
-<!--
 <section class="tags-container">
   <ul class="links tags centered">
     {{ range $key, $value := $tags }}
@@ -95,7 +94,6 @@
     {{ end }}
   </ul>
 </section>
--->
 
 <section class="bio">
   {{ .Content }}
