@@ -115,18 +115,20 @@ a {
 }
 
 html {
+  background-color: #eceff4;
   font-size: 19px;
   /* border-top: 5px solid #fe3d3e; */
 }
 
+/*
 .body-single {
   background-color: #eceff4;
 }
 
 .body-list {
   background-color: #fff;
-  /* background-image: linear-gradient(0deg, #fff 0%,#e5e9f0 100%); */
 }
+*/
 
 body {
   margin: 0;
@@ -1261,13 +1263,13 @@ h6 a {
 }
 */
 
-.list-desc-alt,
-.list-item:hover .list-title-alt-h,
+.list-meta-tags, .tags-container, .social {
+  visibility: hidden;
+}
+
+.list-title-alt-h,
 .authors,
 .authors a,
-.bio,
-.bio a,
-.list-meta-date,
 .metadata,
 .metadata a,
 .metadata-links,
@@ -1291,8 +1293,14 @@ footer a {
   text-decoration-color: #b5b8bf;
 }
 
+.list-meta-date,
+.list-desc-alt,
+.list-item:hover .list-title-alt-h {
+  color: #96a2bb;
+}
+
 .list-item:hover .list-desc-alt {
-  color: #a8b0c1;
+  color: #a8b3cc;
 }
 
 .series a:hover .card-item-desc {
@@ -1536,6 +1544,8 @@ footer > .table li {
   visibility: hidden;
 }
 
+*/
+
 .bio, .bio a {
   color: #c1cfda;
 }
@@ -1543,8 +1553,6 @@ footer > .table li {
 .tag-title, .bio, .bio a {
   color: #fff;
 }
-
-*/
 
 .tags-container {
   margin-bottom: 1.2em;
@@ -1574,7 +1582,7 @@ footer > .table li {
 }
 
 .blob-logo {
-  background-color: #eceff4;
+  background-color: #fe3d3e;
   top: 0;
   left: 0;
   width: 150px;
@@ -1583,7 +1591,7 @@ footer > .table li {
 }
 
 .blob-top {
-  background-color: #eceff4;
+  background-color: #fe3d3e;
   top: -10px;
   left: 0;
   right: 0;
@@ -1592,7 +1600,7 @@ footer > .table li {
 }
 
 .blob-top-cut {
-  background-color: #fff;
+  background-color: #eceff4;
   top: -10px;
   left: 0;
   width: calc(50% + 190px);
@@ -1601,8 +1609,8 @@ footer > .table li {
 }
 
 .blob-bottom {
-  background-color: #eceff4;
-  background-image: linear-gradient(-90deg, #e5e9f0 0%,#eceff4 100%);
+  background-color: #fe3d3e;
+  background-image: linear-gradient(-90deg,#ff0161 0,#fe3d3e 100%);
   top: 730px;
   right: -30px;
   width: calc(50% - 160px);
@@ -1610,7 +1618,7 @@ footer > .table li {
 }
 
 .blob-bottom-cut {
-  background-color: #fff;
+  background-color: #eceff4;
   top: 730px;
   right: -30px;
   width: calc(50% - 160px);
@@ -1619,8 +1627,8 @@ footer > .table li {
 }
 
 .blob-corner {
-  background-color: #eceff4;
-  background-image: linear-gradient(-90deg, #e5e9f0 0%,#eceff4 100%);
+  background-color: #fe3d3e;
+  background-image: linear-gradient(-90deg,#ff0161 0,#fe3d3e 100%);
   /* background-image: linear-gradient(-90deg, #333C4F 0%,#111a2c 70%,#111a2c 100%); */
   /* background-image: linear-gradient(90deg, #6153cc 0%,#ff157e 35%,#fe3d3e 70%,#fe3d3e 100%); */
   /* background-image: linear-gradient(90deg, #6153cc 0%,#06a7be 10%,#2f9f75 20%,#ff6700 30%,#fe3d3e 40%,#fe3d3e 100%); */
