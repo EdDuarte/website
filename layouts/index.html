@@ -31,50 +31,7 @@
   {{ range .Data.Pages.ByDate.Reverse }}
   {{ if not .Params.hidden }}
   <li>
-    <div>
-    <div class="list-meta">
-      <div class="table">
-        <time class="col1 list-meta-date">
-          {{ .Date.Format "Jan 02, 2006" }}
-        </time>
-        <span class="col2 list-meta-tags">
-        {{ $tagList := .Params.tags }}
-        {{ if $tagList }}
-        <ul class="links tags list-meta-tags-ul">
-          {{ range .Params.tags }}
-          {{ $tag := index $tags . }}
-          <li>
-            <a href="{{ $tag.Page.Permalink }}" class="badge-{{ . }}">
-              {{ . }}
-            </a>
-          </li>
-          {{ end }}
-        </ul>
-        {{ end }}
-        </span>
-      </div>
-    </div>
-      <hr>
-      {{ if .Params.externalLink }}
-      <a href="{{ .Params.externalLink }}" class="list-item">
-      {{ else }}
-      <a href="{{ .Permalink }}" class="list-item">
-      {{ end }}
-      <div class="list-item-container">
-      <div class="list-title-alt">
-        {{ if .Params.externalLink }}
-        <div class="icon list-icon icon-external-link"></div>
-        {{ end }}
-        <h4 class="list-title-alt-h">{{ .Title }}</h4>
-      </div>
-      {{ with .Params.description }}
-      <div class="list-desc-alt">
-        <p class="small">{{ . }}</p>
-      </div>
-      {{ end }}
-      </div>
-      </a>
-    </div>
+    {{ partial "list-item.html" . }}
   </li>
   {{ end }}
   {{ end }}
@@ -88,24 +45,18 @@
 
 {{ partial "intro.html" . }}
 
-<section class="tags-container">
-  <ul class="links tags centered">
-    {{ range $key, $value := $tags }}
-    <li>
-      <a href="{{ $value.Page.Permalink }}" class="badge-{{ $key }}">
-        {{ lower $value.Page.Title }}
-      </a>
-    </li>
-    {{ end }}
-  </ul>
-</section>
-
 <section class="bio">
   {{ .Content }}
 </section>
 
 <section class="card card-item card-series">
-  <div class="card-item-title">Series of Articles</div>
+  <section class="tags-container">
+    <ul class="links tags centered">
+      {{ range $key, $value := $tags }}<li><a href="{{ $value.Page.Permalink }}" class="badge-{{ $key }}">{{ lower $value.Page.Title }}</a></li>{{ end }}
+    </ul>
+  </section>
+  <!--<hr>-->
+  <!--<div class="card-item-title">Series of Articles</div>-->
   <ul class="series">
     {{ range (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
     <hr>
