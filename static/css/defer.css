@@ -33,11 +33,9 @@ p {
 
 p a {
   text-decoration-line: none !important;
-  background-image: linear-gradient(-45deg, #ff0161 0, #ff263f 100%);
-  background-position: 0 1em;
-  background-repeat: repeat-x;
+  background: linear-gradient(-45deg, #ff0161 0, #ff263f 100%) repeat-x 0 1em;
   background-origin: border-box;
-  background-size: 5px 2px;
+  background-size: auto 2px;
   text-size-adjust: 100%;
   hyphens: manual;
 }
@@ -160,6 +158,63 @@ tr:nth-child(even) {
 .links > li > a:focus,
 .links > li > a:hover {
   box-shadow: 0 .5em .5em -.4em rgba(123, 136, 161, .7);
+}
+
+.blob {
+  position: absolute;
+  overflow-x: hidden;
+  margin: 0 auto;
+  z-index: -2;
+}
+
+.blob-top {
+  background-color: #d8dee9;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 300px;
+  margin-left: 100px;
+}
+
+.blob-top-cut {
+  background-color: #eceff4;
+  top: -10px;
+  left: 0;
+  width: calc(50% + 190px);
+  height: 300px;
+  border-top-right-radius: 100px 500px;
+}
+
+.blob-bottom {
+  background-color: #d8dee9;
+  background-image: linear-gradient(-90deg, #e5e9f0 0, #e5e9f0 60%, #d8dee9 100%);
+  top: 730px;
+  right: -30px;
+  width: calc(50% - 160px);
+  height: 70px;
+}
+
+.blob-bottom-cut {
+  background-color: #eceff4;
+  top: 730px;
+  right: -30px;
+  width: calc(50% - 160px);
+  height: 70px;
+  border-top-right-radius: calc(100% - 230px) 70px;
+}
+
+.blob-corner {
+  background-color: #d8dee9;
+  background-image: linear-gradient(-90deg, #e5e9f0 0, #e5e9f0 60%, #d8dee9 100%);
+  top: 0;
+  right: -30px;
+  width: calc(50% - 160px);
+  height: 730px;
+  border-bottom-left-radius: 250px 400px;
+}
+
+.badge {
+  color: #eceff4;
 }
 
 .badge-article {

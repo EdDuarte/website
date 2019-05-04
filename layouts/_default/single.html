@@ -2,7 +2,7 @@
 <title>{{ .Title }} - Ed Duarte</title>
 </head>
 
-<body class="body-single">
+<body>
 
 <div>
   <div class="circle circle-article-1">
@@ -69,11 +69,12 @@
 
       <main class="card card-article">
 
-        {{ if .Params.prologue }}
-        <p class="prologue">{{ .Params.prologue | markdownify }}</p>
-        {{ end }}
-
         <section class="content">
+
+          {{ if .Params.prologue }}
+          <p class="prologue">{{ .Params.prologue | markdownify }}</p>
+          {{ end }}
+
           {{ .Content }}
         </section>
 

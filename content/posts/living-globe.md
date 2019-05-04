@@ -15,7 +15,7 @@ authors:
   - name: Beatriz Sousa Santos
     url: http://sweet.ua.pt/bss/
 links:
-  - name: Demo app
+  - name: Open app
     url: https://edduarte.github.io/living-globe
   - name: Source code
     icon: github
@@ -98,20 +98,19 @@ interpretation of data in countries with small samples (eg. Portugal) by
 filtering out countries with large samples (e.g. China).
 
 {class="js-lazy-image" src="/hcii2016/screenshot-02.png"}
-![Demonstration of Living Globe when using the filtering feature with data normalization](# 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishable colors for the remaining countries\)')
+![Living Globe when using the filtering feature with data normalization](# 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishable colors for the remaining countries\)')
 
 <noscript>
 
-![Demonstration of Living Globe when using the filtering feature with data normalization](/hcii2016/screenshot-02.png 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishable colors for the remaining countries\)')
+![Living Globe when using the filtering feature with data normalization](/hcii2016/screenshot-02.png 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishable colors for the remaining countries\)')
 
 </noscript>
 
-A demo of this application is available
-[here](https://edduarte.github.io/living-globe).
-It is fully open-source [on Github](https://github.com/edduarte/living-globe)
-and was built with Javascript ES6, [jQuery](https://jquery.com/),
+This application can be tested [here](https://edduarte.github.io/living-globe).
+It is built with Javascript ES6, [jQuery](https://jquery.com/),
 [three.js](https://threejs.org/) and
-[chroma.js](https://gka.github.io/chroma.js/).
+[chroma.js](https://gka.github.io/chroma.js/), and the codebase is open-sourced
+[on Github](https://github.com/edduarte/living-globe).
 
 
 ## Publication

@@ -132,7 +132,7 @@ mq1.addListener(function (mq1) {
   }
 });
 
-const q2 = "screen and (max-width: 1099px) and (min-width:720px)";
+const q2 = "screen and (max-width: 1099px)";
 const mq2 = window.matchMedia(q2);
 if (mq2.matches && !maxWidth1099Loaded) {
   loadCSS("/css/defer-max-width-1099.css", "", q2);

@@ -1,56 +1,43 @@
 {{ partial "header.html" . }}
 <title>{{ .Title }} - Ed Duarte</title>
 </head>
-<body class="list-page">
+<body>
 <header class="logo">
-  <span class="home-link"><a href="{{ .Site.BaseURL }}">Ed Duarte</a></span><span class="noselect">/</span><span class="section-link"><a href="/{{.Section}}">{{.Section}}</a></span>
+  <span class="home-link"><a href="{{ .Site.BaseURL }}">Ed Duarte</a></span>
 </header>
-<!--
-<header>
-<h1>{{ .Title }}</h1>
-</header>
--->
 
-<div class="card-article">
-<section class="content">
-  {{ .Content }}
-</section>
+<div class="article-container">
+  <div class="title">{{ .Title }}</div>
 
-<main>
-<article>
-
-<div class="article-table">
-
-<main>
-
-<ul class="list">
-  {{ range .Data.Pages.ByDate.Reverse }}
-  <li>
-    <div class="table">
-      <div class="col1 list-meta">
-        <time class="list-meta-date">{{ .Date.Format "2006 Jan 02" }}</time>
-      </div>
-      <div class="col2 list-title">
-        {{ if .Params.externalLink }}
-        <a href="{{ .Params.externalLink }}">
-          <div class="icon list-icon icon-external-link"></div>
-          {{ .Title }}</a>
-        {{ else }}
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-        {{ end }}
-      </div>
-    </div>
-  </li>
+  {{ with .Content }}
+  <div class="authors">
+    {{ . }}
+  </div>
   {{ end }}
-</ul>
-
-</main>
-
 </div>
 
-</article>
-</main>
+<main class="list-container">
+  <article>
 
-</div>
+    <div class="article-table">
+
+      <main class="article-list">
+
+        <ul class="list">
+          {{ range .Data.Pages.ByDate.Reverse }}
+          {{ if not .Params.hidden }}
+          <li>
+            {{ partial "list-item.html" . }}
+          </li>
+          {{ end }}
+          {{ end }}
+        </ul>
+
+      </main>
+
+    </div>
+
+  </article>
+</main>
 
 {{ partial "footer.html" . }}
