@@ -162,29 +162,24 @@ tr:nth-child(even) {
   box-shadow: 0 .5em .5em -.4em rgba(123, 136, 161, .7);
 }
 
-.tags > li > .badge-article:focus,
-.tags > li > .badge-article:hover {
-  box-shadow: 0 .5em .5em -.4em #ff263f;
+.badge-article {
+  background: #ff263f linear-gradient(-45deg, #ff0161 0, #ff263f 100%);
 }
 
-.tags > li > .badge-essay:focus,
-.tags > li > .badge-essay:hover {
-  box-shadow: 0 .5em .5em -.4em #8c00ff;
+.badge-essay {
+  background: #d680ff linear-gradient(-45deg, #c755fd 0, #d680ff 100%);
 }
 
-.tags > li > .badge-paper:focus,
-.tags > li > .badge-paper:hover {
-  box-shadow: 0 .5em .5em -.4em #ffc45f;
+.badge-paper {
+  background: #ffc45f linear-gradient(-45deg, #ff855a 0, #ffc45f 100%);
 }
 
-.tags > li > .badge-project:focus,
-.tags > li > .badge-project:hover {
-  box-shadow: 0 .5em .5em -.4em #51d7f8;
+.badge-project {
+  background: #51d7f8 linear-gradient(-45deg, #38a2e8 0, #51d7f8 100%);
 }
 
-.tags > li > .badge-talk:focus,
-.tags > li > .badge-talk:hover {
-  box-shadow: 0 .5em .5em -.4em #73d9c5;
+.badge-talk {
+  background: #73d9c5 linear-gradient(-45deg, #6ac2c1 0, #73d9c5 100%);
 }
 
 .mjx-math {
