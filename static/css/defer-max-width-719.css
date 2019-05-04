@@ -21,13 +21,6 @@ body {
   font-size: calc(0.05em + 3.3vw);
 }
 
-.social-icon {
-  width: 20px;
-  height: 20px;
-  margin-left: 8px;
-  margin-right: 8px;
-}
-
 a {
   background-size: 5px 1px;
 }
