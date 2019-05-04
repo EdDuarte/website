@@ -41,25 +41,27 @@
 </main>
 
 <aside>
-<div>
+<div class="aside-list">
 
 {{ partial "intro.html" . }}
+
+<section class="tags-container">
+  <ul class="links tags centered">
+    {{ range $key, $value := $tags }}<li><a href="{{ $value.Page.Permalink }}" class="badge badge-{{ $key }}">{{ lower $value.Page.Title }}</a></li>{{ end }}
+  </ul>
+</section>
 
 <section class="bio">
   {{ .Content }}
 </section>
 
+</div>
+
 <section class="card card-item card-series">
-  <section class="tags-container">
-    <ul class="links tags centered">
-      {{ range $key, $value := $tags }}<li><a href="{{ $value.Page.Permalink }}" class="badge-{{ $key }}">{{ lower $value.Page.Title }}</a></li>{{ end }}
-    </ul>
-  </section>
   <!--<hr>-->
   <!--<div class="card-item-title">Series of Articles</div>-->
   <ul class="series">
     {{ range (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
-    <hr>
     <li>
       <a href="{{ .Page.Permalink }}">
         <div class="card-item-desc">
@@ -80,8 +82,6 @@
   </div>
   -->
 </section>
-
-</div>
 </aside>
 
 </div>

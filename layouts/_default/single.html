@@ -88,7 +88,7 @@
           <ul class="links tags">
             {{ range .Params.tags }}
             {{ $tag := index $tags . }}
-            <li><a href="{{ $tag.Page.Permalink }}" class="badge-{{ . }}">{{ . }}</a></li>
+            <li><a href="{{ $tag.Page.Permalink }}" class="badge badge-{{ . }}">{{ . }}</a></li>
             {{ end }}
           </ul>
         </section>

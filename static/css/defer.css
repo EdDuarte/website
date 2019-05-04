@@ -31,9 +31,9 @@ p {
   hanging-punctuation: first;
 }
 
-a {
+p a {
   text-decoration-line: none !important;
-  background-image: linear-gradient(to right, #d61726 50%, #d61726 50%);
+  background-image: linear-gradient(-45deg, #ff0161 0, #ff263f 100%);
   background-position: 0 1em;
   background-repeat: repeat-x;
   background-origin: border-box;
@@ -55,7 +55,7 @@ figcaption a,
 .footnote-ref a,
 .list-item,
 .home-link a,
-.links > li > a,
+.metadata-links > li > a,
 .list-meta-category a,
 .metadata a,
 .bio a,
@@ -110,7 +110,7 @@ footer a:hover {
   }
 }
 
-.font-load-1 a {
+.font-load-1 p a {
   background-position: 0 1.18em;
 }
 
@@ -164,27 +164,27 @@ tr:nth-child(even) {
 
 .tags > li > .badge-article:focus,
 .tags > li > .badge-article:hover {
-  box-shadow: 0 .5em .5em -.4em #d61726;
-}
-
-.tags > li > .badge-project:focus,
-.tags > li > .badge-project:hover {
-  box-shadow: 0 .5em .5em -.4em #06a7be;
-}
-
-.tags > li > .badge-paper:focus,
-.tags > li > .badge-paper:hover {
-  box-shadow: 0 .5em .5em -.4em #ff6700;
-}
-
-.tags > li > .badge-talk:focus,
-.tags > li > .badge-talk:hover {
-  box-shadow: 0 .5em .5em -.4em #2f9f75;
+  box-shadow: 0 .5em .5em -.4em #ff263f;
 }
 
 .tags > li > .badge-essay:focus,
 .tags > li > .badge-essay:hover {
-  box-shadow: 0 .5em .5em -.4em #6153cc;
+  box-shadow: 0 .5em .5em -.4em #8c00ff;
+}
+
+.tags > li > .badge-paper:focus,
+.tags > li > .badge-paper:hover {
+  box-shadow: 0 .5em .5em -.4em #ffc45f;
+}
+
+.tags > li > .badge-project:focus,
+.tags > li > .badge-project:hover {
+  box-shadow: 0 .5em .5em -.4em #51d7f8;
+}
+
+.tags > li > .badge-talk:focus,
+.tags > li > .badge-talk:hover {
+  box-shadow: 0 .5em .5em -.4em #73d9c5;
 }
 
 .mjx-math {

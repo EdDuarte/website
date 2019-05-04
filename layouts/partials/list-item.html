@@ -11,7 +11,7 @@
         {{ $tagList := .Params.tags }}
         {{ if $tagList }}
         <ul class="links tags list-meta-tags-ul">
-          {{ range .Params.tags }}{{ $tag := index $tags . }}<li><a href="{{ $tag.Page.Permalink }}" class="badge-{{ . }}">{{ . }}</a></li>{{ end }}
+          {{ range .Params.tags }}{{ $tag := index $tags . }}<li><a href="{{ $tag.Page.Permalink }}" class="badge badge-{{ . }}">{{ . }}</a></li>{{ end }}
         </ul>
         {{ end }}
         </span>
