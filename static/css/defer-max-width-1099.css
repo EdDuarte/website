@@ -1,16 +1,16 @@
 
 .authors a {
-  background-size: 5px 2px;
+  background-size: auto 2px;
   background-position: 0 1em;
 }
 
 .metadata a {
-  background-size: 5px 1px;
+  background-size: auto 1px;
   background-position: 0 1.04em;
 }
 
 .font-load-1 .metadata a {
-  background-size: 5px 1px;
+  background-size: auto 1px;
   background-position: 0 1.22em;
 }
 

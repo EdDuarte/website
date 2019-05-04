@@ -29,7 +29,7 @@ body {
 }
 
 a {
-  background-size: 5px 1px;
+  background-size: auto 1px !important;
 }
 
 .table > .list-title > a {
