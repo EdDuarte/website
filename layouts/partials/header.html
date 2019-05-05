@@ -2387,6 +2387,13 @@ h6 > .anchor:hover {
   // setTimeout(function () {
 
   // Optimization for successive page refreshes
+  if (sessionStorage.fontsLoaded1 && sessionStorage.fontsLoaded2) {
+    document.documentElement.className += " font-load-1";
+    document.documentElement.className += " font-load-2";
+    // return early, because both fonts are loaded
+    return;
+  }
+
   if (sessionStorage.fontsLoaded1) {
     document.documentElement.className += " font-load-1";
   }
@@ -2394,7 +2401,7 @@ h6 > .anchor:hover {
   // setTimeout(function () {
   if (sessionStorage.fontsLoaded2) {
     document.documentElement.className += " font-load-2";
-    return;
+    // return;
   }
   // }, 1000);
   //

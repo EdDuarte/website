@@ -93,7 +93,7 @@ footer a:hover {
 .mlt-header a,
 .font-load-1 .authors a,
 .font-load-1 .mlt-header a {
-  text-decoration-line: none !important;
+  text-decoration-line: none;
   background-image: linear-gradient(to right, #b3b9c4 50%, #b3b9c4 50%);
   background-repeat: repeat-x;
   background-origin: border-box;

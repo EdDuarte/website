@@ -28,7 +28,11 @@ body {
   margin-right: 8px;
 }
 
-a {
+p a,
+.authors a,
+.mlt-header a,
+.font-load-1 .authors a,
+.font-load-1 .mlt-header a {
   background-size: auto 1px !important;
 }
 
@@ -52,6 +56,13 @@ figcaption a {
   background-position: 0 1.1em;
 }
 
-.mlt-header a {
-  background-position: 0 1.3em;
+@-moz-document url-prefix() {
+  .authors a,
+  .mlt-header a,
+  .font-load-1 .authors a,
+  .font-load-1 .mlt-header a {
+    background-image: none !important;
+    text-decoration-line: underline !important;
+    text-decoration-color: #b3b9c4;
+  }
 }
