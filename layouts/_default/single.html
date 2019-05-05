@@ -6,7 +6,12 @@
 
 <div>
   <div class="circle circle-article-1">
-    <svg width="700" height="700" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+    <svg
+        width="700"
+        height="700"
+        viewBox="0 0 700 700"
+        xmlns="http://www.w3.org/2000/svg"
+    >
       <defs>
         <linearGradient id="gradient-gray" x1="1" x2="0" y1="1" y2="0">
           <stop offset="0%" stop-color="#e5e9f0"></stop>
@@ -17,7 +22,12 @@
     </svg>
   </div>
   <div class="circle circle-article-2">
-    <svg width="700" height="700" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+    <svg
+        width="700"
+        height="700"
+        viewBox="0 0 700 700"
+        xmlns="http://www.w3.org/2000/svg"
+    >
       <defs>
         <linearGradient id="gradient-colored" x1="1" x2="0" y1="1" y2="0">
           <stop offset="0%" stop-color="#ff0161"></stop>
@@ -28,7 +38,12 @@
     </svg>
   </div>
   <div class="circle circle-article-3">
-    <svg width="700" height="700" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+    <svg
+        width="700"
+        height="700"
+        viewBox="0 0 700 700"
+        xmlns="http://www.w3.org/2000/svg"
+    >
       <circle cx="350" cy="350" r="350" fill="#c1cfda"></circle>
     </svg>
   </div>
@@ -183,38 +198,40 @@
 
   </article>
 
-{{ if .NextInSection }}
+{{ $current := . }}
+{{ $series := .Site.Taxonomies.series }}
+{{ $seriesList := .Params.series }}
+{{ if $seriesList }}
 
-{{ if (gt .NextInSection.Weight -1) }}
-<div class="line"></div>
-<section class="mlt">
-  <h3 class="mlt-header">Next on
-    <a href="/{{.Section}}/">{{.Section}}</a></h3>
-  <a class="mlt-link" href="{{.NextInSection.Permalink}}">
-    <h4 class="mlt-title">{{.NextInSection.Title}}</h4>
-    {{ if .NextInSection.Params.description }}
-    <p class="mlt-summary">{{.NextInSection.Params.description}}</p>
+  {{ range $seriesList }}
+    {{ $it := . }}
+    {{ $s := index $series $it }}
+    {{ $pages := $s.Pages.ByDate }}
+    {{ range $i, $v := $pages }}
+      {{ if eq $current.File $v.File }}
+        <div class="line"></div>
+        <h3 class="mlt-header">Part of <a href="{{ $s.Page.Permalink }}">{{ $s.Page.Title }}</a></h3>
+        <div class="mlt-table">
+          {{ if ne $i 0 }}
+            {{ range first 1 (after (sub (len $pages) $i) $pages.Reverse) }}
+            <div class="mlt mlt-previous">
+              <h6 class="mlt-header">Previous</h6>
+              {{ partial "list-item.html" . }}
+            </div>
+            {{ end }}
+          {{ end }}
+          {{ if ne (len $pages) (add $i 1) }}
+            {{ range first 1 (after (add $i 1) $pages) }}
+              <div class="mlt mlt-next">
+                <h6 class="mlt-header">Next</h6>
+                {{ partial "list-item.html" . }}
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
     {{ end }}
-  </a>
-</section>
-
-{{ else }}
-
-{{ if .PrevInSection }}
-{{ if gt .PrevInSection.Weight -1 }}
-<div class="line"></div>
-<section class="mlt">
-  <h3 class="mlt-header">More on
-    <a href="/{{.Section}}/">{{.Section}}</a></h3>
-  <a class="mlt-link" href="{{.PrevInSection.Permalink}}">
-    <h4 class="mlt-title">{{.PrevInSection.Title}}</h4>
-    <p class="mlt-summary">{{.PrevInSection.Params.description}}</p>
-  </a>
-</section>
-{{ end }}
-{{ end }}
-
-{{ end }}
+  {{ end }}
 
 {{ end }}
 

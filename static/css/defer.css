@@ -95,16 +95,21 @@ footer a:hover {
 .font-load-1 .mlt-header a {
   text-decoration-line: none !important;
   background-image: linear-gradient(to right, #b3b9c4 50%, #b3b9c4 50%);
-  background-position: 0 1.1em;
-}
-
-.font-load-1 .authors a {
+  background-repeat: repeat-x;
+  background-origin: border-box;
+  background-size: auto 2px;
+  text-size-adjust: 100%;
+  hyphens: manual;
   background-position: 0 1.1em;
 }
 
 @-moz-document url-prefix() {
   .font-load-1 .authors a {
     background-position: 0 .95em;
+  }
+
+  .font-load-1 .mlt-header a {
+    background-position: 0 .91em;
   }
 }
 
