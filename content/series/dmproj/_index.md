@@ -1,5 +1,5 @@
 ---
-title: "My data mining projects"
+title: "Data Mining projects"
 weight: 1
 markup: mmark
 ---
