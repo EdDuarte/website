@@ -29,7 +29,7 @@ links:
   - name: Talk slides as PDF
     icon: slides
     url: /hcii2016/slides.pdf
-  - name: Talk slides as Speaker Deck
+  - name: Talk slides on Speaker Deck
     icon: slides
     url: https://speakerdeck.com/edduarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data
 date: "2016-06-21 19:58:00+01:00"
