@@ -37,8 +37,6 @@ tags:
   - project
   - paper
   - talk
-series:
-  - tsdbms
 ---
 
 ![Protbox header](/protbox/header.png)

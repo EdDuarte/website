@@ -23,7 +23,6 @@ tags:
   - project
 series:
   - dmproj
-  - distsys
 ---
 
 What started as a simple project for a University class in Distributed

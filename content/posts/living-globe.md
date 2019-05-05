@@ -41,7 +41,7 @@ tags:
   - paper
   - talk
 series:
-  - infovisproj
+#  - infovisproj
 ---
 
 Living Globe is a WebGL application for tri-dimensional worldwide data
