@@ -17,11 +17,11 @@ body {
 
 .font-load-1 ol,
 .font-load-1 p,
-.font-load-1 summary,
+.font-load-1 em,
 .font-load-1 ul,
 ol,
 p,
-summary,
+em,
 ul {
   --x-height-multiplier: 0.35;
   --baseline-multiplier: 0.179;
@@ -31,13 +31,27 @@ p {
   hanging-punctuation: first;
 }
 
-p a {
+p a,
+em a,
+ol a,
+ul a {
   text-decoration-line: none !important;
   background: linear-gradient(-45deg, #ff0161 0, #ff263f 100%) repeat-x 0 1em;
   background-origin: border-box;
   background-size: auto 2px;
   text-size-adjust: 100%;
   hyphens: manual;
+}
+
+.links a {
+  background-position: initial !important;
+}
+
+.font-load-1 p a,
+.font-load-1 em a,
+.font-load-1 ol a,
+.font-load-1 ul a {
+  background-position: 0 1.18em;
 }
 
 h1 a,
@@ -105,16 +119,12 @@ footer a:hover {
 
 @-moz-document url-prefix() {
   .font-load-1 .authors a {
-    background-position: 0 .95em;
+    background-position: 0 .91em;
   }
 
   .font-load-1 .mlt-header a {
     background-position: 0 .91em;
   }
-}
-
-.font-load-1 p a {
-  background-position: 0 1.18em;
 }
 
 .icon {

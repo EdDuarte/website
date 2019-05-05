@@ -29,6 +29,9 @@ body {
 }
 
 p a,
+em a,
+ol a,
+ul a,
 .authors a,
 .mlt-header a,
 .font-load-1 .authors a,

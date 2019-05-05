@@ -210,7 +210,7 @@
     {{ range $i, $v := $pages }}
       {{ if eq $current.File $v.File }}
         <div class="line"></div>
-        <h3 class="mlt-header">Part of <a href="{{ $s.Page.Permalink }}">{{ $s.Page.Title }}</a></h3>
+        <h4 class="mlt-header">Part of <a href="{{ $s.Page.Permalink }}">{{ $s.Page.Title }}</a></h4>
         <div class="mlt-table">
           {{ if ne $i 0 }}
             {{ range first 1 (after (sub (len $pages) $i) $pages.Reverse) }}
