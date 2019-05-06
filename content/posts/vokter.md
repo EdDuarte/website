@@ -17,7 +17,6 @@ links:
     url: https://github.com/vokter/vokter
 date: "2016-06-19 19:26:00+01:00"
 medium: "https://medium.com/@edduarte/vokter-a-java-library-that-detects-changes-in-web-documents-c4d3d399046d"
-type: project
 markup: mmark
 tags:
   - project

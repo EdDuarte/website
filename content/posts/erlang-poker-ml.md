@@ -10,7 +10,6 @@ links:
     url: https://github.com/edduarte/erlang-poker-ml
 date: "2015-03-31 17:25:00+01:00"
 medium: "https://medium.com/@EdDuarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
-type: project
 markup: mmark
 tags:
   - article
@@ -181,13 +180,17 @@ pseudo-code, where the asterisk is interpreted as a wildcard):
 
 `$$Total = query(total, *)$$`
 
-- Round 0: `$$P(Pair | HighCard) = \frac{query(round1, pair, highCard,
-  *)}{Total}$$`
+Round 0:
 
-- Round 1: `$$P(Pair | Pair) = \frac{query(round2, pair, pair, *)}{Total}$$`
+`$$P(Pair | HighCard) = \frac{query(round1, pair, highCard, *)}{Total}$$`
 
-- Round 2: `$$P(TwoPair | Pair) = \frac{query(round3, twoPair, pair,
-  *)}{Total}$$`
+Round 1:
+
+`$$P(Pair | Pair) = \frac{query(round2, pair, pair, *)}{Total}$$`
+
+Round 2:
+
+`$$P(TwoPair | Pair) = \frac{query(round3, twoPair, pair, *)}{Total}$$`
 
 This lets us know if the chance to get other more valuable ranks is high enough
 for it to be worth a raise or a call.

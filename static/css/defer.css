@@ -166,12 +166,13 @@ tr:nth-child(even) {
   background: rgba(14, 17, 21, .9);
 }
 
-.links > li > a {
+.metadata-links > li > a {
   transition: .2s;
 }
 
 .links > li > a:focus,
 .links > li > a:hover {
+  transition: .2s;
   box-shadow: 0 .5em .5em -.4em rgba(123, 136, 161, .7);
 }
 
