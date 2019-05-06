@@ -208,5 +208,5 @@ Give it a go! And as always - feel free to [get in
 touch](mailto:hi@edduarte.com).
 
 
-<script async src="/js/math-code.js"></script>
-<script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script defer src="/js/math-code.js"></script>
+<script defer src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>

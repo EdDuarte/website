@@ -44,7 +44,13 @@
         viewBox="0 0 700 700"
         xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="350" cy="350" r="350" fill="#c1cfda"></circle>
+      <defs>
+        <linearGradient id="gradient-white" x1="1" x2="0" y1="1" y2="0">
+          <stop offset="0%" stop-color="#d8dee9"></stop>
+          <stop offset="100%" stop-color="#c1cfda"></stop>
+        </linearGradient>
+      </defs>
+      <circle cx="350" cy="350" r="350" fill="url(#gradient-white)"></circle>
     </svg>
   </div>
 </div>

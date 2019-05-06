@@ -234,7 +234,7 @@ tr:nth-child(even) {
 }
 
 .badge-article {
-  background: #ff263f linear-gradient(-45deg, #ff263f 0, #ff0161 100%);
+  background: #ff263f linear-gradient(-45deg, #ff0161 0, #ff263f 100%);
 }
 
 .badge-essay {
