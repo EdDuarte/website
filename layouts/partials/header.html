@@ -136,12 +136,12 @@ html {
 }
 
 .logo,
-footer {
+.footer {
   padding-left: 1em;
   padding-right: 1em;
 }
 
-footer {
+.footer {
   min-width: 100%;
   position: absolute;
   bottom: 0;
@@ -197,7 +197,7 @@ pre {
 .tag-title,
 .title,
 figcaption,
-footer > ul > li,
+.footer > ul > li,
 h1,
 h2,
 h3,
@@ -219,7 +219,7 @@ ul {
 .subtitle,
 .tag-title,
 .title,
-footer > ul > li,
+.footer > ul > li,
 h1,
 h2,
 h3,
@@ -246,7 +246,7 @@ h6 {
 .font-load-1 .tag-title,
 .font-load-1 .title,
 .font-load-1 figcaption,
-.font-load-1 footer > ul > li,
+.font-load-1 .footer > ul > li,
 .font-load-1 h1,
 .font-load-1 h2,
 .font-load-1 h3,
@@ -333,7 +333,7 @@ strong em {
   .font-load-1 .subtitle,
   .font-load-1 .tag-title,
   .font-load-1 .title,
-  .font-load-1 footer > ul > li,
+  .font-load-1 .footer > ul > li,
   .font-load-1 h1,
   .font-load-1 h2,
   .font-load-1 h3,
@@ -597,9 +597,9 @@ article header {
   margin-top: .17em;
 }
 
-.font-load-1 blockquote footer,
+.font-load-1 blockquote .footer,
 .metadata,
-blockquote footer {
+blockquote .footer {
   margin-top: 1em;
 }
 
@@ -654,13 +654,13 @@ figcaption {
 .small {
   font-size: .8em;
   letter-spacing: .015em;
-  margin-top: .5rem;
+  margin-top: .25rem;
 }
 
 .font-load-1 .small {
   font-size: .8em;
   letter-spacing: -.025em;
-  margin-top: .5rem;
+  margin-top: .25rem;
 }
 
 .footnote {
@@ -858,6 +858,7 @@ p + h4 {
 h5 {
   font-size: 1.133em;
   letter-spacing: -.08em;
+  line-height: 1.4em;
   margin-bottom: -.37em;
 }
 
@@ -1157,12 +1158,12 @@ samp {
   user-select: none;
 }
 
-footer > ul > li {
+.footer > ul > li {
   font-size: .67em;
   letter-spacing: -.077em;
 }
 
-.font-load-1 footer > ul > li {
+.font-load-1 .footer > ul > li {
   font-size: .65em;
   letter-spacing: 0;
 }
@@ -1203,7 +1204,7 @@ a {
 .list-item,
 .section-link a,
 .series a,
-footer a {
+.footer a {
   text-decoration-line: none;
 }
 
@@ -1231,7 +1232,7 @@ footer a {
 .title a,
 a.footnote-return,
 figcaption a,
-footer a:hover {
+.footer a:hover {
   text-decoration-line: underline;
   text-decoration-color: #b3b9c4;
 }
@@ -1289,8 +1290,8 @@ h6 a {
 .social a,
 figcaption,
 figcaption a,
-footer,
-footer a {
+.footer,
+.footer a {
   color: #5f6d87;
   text-decoration-color: #b3b9c4;
 }
@@ -1496,12 +1497,12 @@ img.centered:empty {
 }
 
 .table li,
-footer > .table li {
+.footer > .table li {
   display: inline-block;
   padding: 0;
 }
 
-footer > .table li {
+.footer > .table li {
   padding: 0 1em 0 0;
 }
 
@@ -1550,14 +1551,14 @@ footer > .table li {
   margin: 0;
 }
 
-.font-load-1 footer > ul > li,
-footer > ul > li {
+.font-load-1 .footer > ul > li,
+.footer > ul > li {
   line-height: 1.6em;
   margin: 0;
 }
 
-.font-load-1 footer,
-footer {
+.font-load-1 .footer,
+.footer {
   margin-top: 2.5em;
 }
 
@@ -1726,7 +1727,7 @@ h6 > .anchor:hover {
   .font-load-2 .list-title,
   .font-load-2 .subtitle,
   .font-load-2 .title,
-  .font-load-2 footer > ul > li,
+  .font-load-2 .footer > ul > li,
   .font-load-2 .tag-title,
   .font-load-2 h1,
   .font-load-2 h2,
@@ -1763,7 +1764,7 @@ h6 > .anchor:hover {
   }
 
   .logo,
-  footer {
+  .footer {
     padding-left: .6em;
     padding-right: .6em;
   }
@@ -1951,7 +1952,7 @@ h6 > .anchor:hover {
   }
 
   .logo,
-  footer {
+  .footer {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -2068,22 +2069,22 @@ h6 > .anchor:hover {
     padding-right: .7em;
   }
 
-  footer > .table {
+  .footer > .table {
     text-align: center;
     flex-direction: column;
     align-items: normal;
     margin-bottom: 0.9em;
   }
 
-  footer > ul > li {
+  .footer > ul > li {
     font-size: 0.73em;
   }
 
-  .font-load-1 footer > ul > li {
+  .font-load-1 .footer > ul > li {
     font-size: 0.72em;
   }
 
-  footer > .table li {
+  .footer > .table li {
     padding: 0 0 0.625em 0;
   }
 
