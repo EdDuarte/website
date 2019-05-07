@@ -44,8 +44,6 @@ Protbox is an open-source, cross-platform application for securely sharing files
 within existing cloud storage services like Dropbox, OneDrive, Google Drive and
 SugarSync.
 
-## Features
-
 - confidentiality, to prevent non-authorized readings;
 - integrity control, to detect malicious tampering;
 - protection against un-wanted file removals, either by malicious or legitimate
@@ -70,13 +68,10 @@ their integrity is ensured with HMAC-SHA1. Encrypted file names, which contain
 bytes that are not acceptable for naming files in existing file systems, are
 coded in a modified Base64 alphabet, which should work in most file systems.
 
-
-## Application
-
 The application is [fully open-source](https://github.com/edduarte/protbox), and
 can be [freely
-downloaded](https://github.com/edduarte/protbox/releases/tag/3.0.2) and executed
-on any operating system with a suitable Java Runtime Environment. The
+downloaded](https://github.com/edduarte/protbox/releases/tag/3.0.2). It works
+with any operating system with a suitable Java Runtime Environment. The
 application also features a graphical user interface for dealing with key
 distribution requests, which was designed to be similar to the Dropbox user
 interface in order to be accessible to common Dropbox users.
