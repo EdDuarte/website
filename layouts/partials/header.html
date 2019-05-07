@@ -1637,31 +1637,32 @@ figure,
     margin-right: 0;
   }
 
+  .article-list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .logo,
   .footer {
     padding-left: .6em;
     padding-right: .6em;
   }
 
-  article header {
-    margin-top: 0;
-  }
-
-  .font-load-1 article header,
-  article header {
+  article header,
+  .font-load-1 article header {
     margin-bottom: 0;
     padding-bottom: 0;
   }
 
   .article-table,
   .mlt-table {
-    flex-direction: column;
     align-items: normal;
+    flex-direction: column;
   }
 
   article main {
-    order: 2;
     margin-top: .25em;
+    order: 2;
   }
 
   .font-load-1 article main {
@@ -1669,17 +1670,13 @@ figure,
   }
 
   .article-list {
+    margin-top: 0;
     max-width: 650px;
-    margin-top: 0;
-  }
-
-  .font-load-1 .article-list {
-    margin-top: 0;
   }
 
   article aside {
-    order: 1;
     max-width: 100%;
+    order: 1;
   }
 
   .mlt-previous,
@@ -1694,8 +1691,8 @@ figure,
 
   .mlt-table > .mlt:first-child {
     margin-top: 0;
-    margin-right: 0;
     margin-left: 0;
+    margin-right: 0;
   }
 
   .list-page {
@@ -1750,9 +1747,9 @@ figure,
   }
 
   .metadata > .table {
-    margin-top: 0;
-    line-height: 1.75em;
     display: inline-block;
+    line-height: 1.75em;
+    margin-top: 0;
   }
 
   .font-load-1 .metadata > .table {
@@ -1761,11 +1758,11 @@ figure,
   }
 
   .metadata > .table li::after {
+    content: "";
     display: inline-block;
-    position: relative;
     padding-left: .25em;
     padding-right: .25em;
-    content: "";
+    position: relative;
   }
 
   .font-load-1 .metadata > .table li::after {
@@ -1813,6 +1810,11 @@ figure,
   .sticky {
     position: initial;
   }
+
+  article header,
+  .font-load-1 .article-list {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 783px) {
@@ -1859,15 +1861,15 @@ figure,
   }
 
   .circle-article-1 {
-    max-width: initial;
     left: 100px;
+    max-width: initial;
   }
 
   ol,
   p,
   ul {
     font-size: 1.044rem;
-    letter-spacing: -0.012em;
+    letter-spacing: -.012em;
     line-height: 1.65em;
   }
 
@@ -1880,22 +1882,22 @@ figure,
 
   .series p,
   .list-desc {
-    font-size: 0.9em;
-    letter-spacing: -0.03em;
+    font-size: .9em;
+    letter-spacing: -.03em;
     line-height: 2em;
   }
 
   .font-load-1 .series p,
   .font-load-1 .list-desc {
     font-size: 1em;
-    letter-spacing: -0.02em;
+    letter-spacing: -.02em;
     line-height: 1.85em;
   }
 
   .prologue {
     font-size: 1.139em;
     line-height: 1.6em;
-    margin-bottom: 0.85em;
+    margin-bottom: .85em;
   }
 
   .font-load-1 .prologue {
@@ -1929,41 +1931,33 @@ figure,
     margin-bottom: 1.5rem;
   }
 
-  .list-meta {
-    padding: 0;
-  }
-
-  .font-load-1 .list-meta {
-    padding: 0;
-  }
-
   .table > .list-meta-date {
     padding-top: .1em;
     padding-right: .7em;
   }
 
   .footer > .table {
-    text-align: center;
-    flex-direction: column;
     align-items: normal;
-    margin-bottom: 0.9em;
+    flex-direction: column;
+    margin-bottom: .9em;
+    text-align: center;
   }
 
   .footer > ul > li {
-    font-size: 0.73em;
+    font-size: .73em;
   }
 
   .font-load-1 .footer > ul > li {
-    font-size: 0.72em;
+    font-size: .72em;
   }
 
   .footer > .table li {
-    padding: 0 0 0.625em 0;
+    padding: 0 0 .625em;
   }
 
   .title {
     font-size: 1.48em;
-    letter-spacing: -0.029em;
+    letter-spacing: -.029em;
     line-height: 1.37em;
     margin-top: 0;
   }
@@ -1976,29 +1970,29 @@ figure,
   }
 
   .font-load-1 .title {
-    letter-spacing: -0.01em;
+    letter-spacing: -.01em;
   }
 
   .font-load-2 .title {
-    letter-spacing: -0.026em;
+    letter-spacing: -.026em;
   }
 
   .subtitle {
     font-size: 1.47em;
-    letter-spacing: -0.057em;
+    letter-spacing: -.057em;
     line-height: 1.35em;
-    margin-top: 0.05em;
+    margin-top: .05em;
   }
 
   .font-load-1 .subtitle {
     font-size: 1.5em;
-    letter-spacing: -0.015em;
+    letter-spacing: -.015em;
     line-height: 1.3em;
-    margin-top: 0.06em;
+    margin-top: .06em;
   }
 
   .font-load-2 .subtitle {
-    letter-spacing: -0.021em;
+    letter-spacing: -.021em;
   }
 
   h1,
@@ -2041,60 +2035,60 @@ figure,
   }
 
   h1 {
-    margin-bottom: -0.38em;
+    margin-bottom: -.38em;
   }
 
   .font-load-1 h1 {
-    margin-top: -0.1em;
+    margin-top: -.1em;
   }
 
   h2 {
-    margin-bottom: -0.4em;
+    margin-bottom: -.4em;
   }
 
   .font-load-1 h2 {
-    margin-bottom: -0.34em;
+    margin-bottom: -.34em;
   }
 
   .font-load-1 h1,
   h3,
   h4 {
-    margin-bottom: -0.35em;
+    margin-bottom: -.35em;
   }
 
   .font-load-1 h3,
   .font-load-1 h4 {
-    margin-bottom: -0.3em;
+    margin-bottom: -.3em;
   }
 
   h5 {
-    margin-bottom: -0.6em;
+    margin-bottom: -.6em;
   }
 
   .font-load-1 h5 {
-    margin-bottom: -0.5em;
+    margin-bottom: -.5em;
   }
 
   h6 {
-    margin-bottom: -0.65em;
+    margin-bottom: -.65em;
   }
 
   .font-load-1 h6 {
-    margin-bottom: -0.55em;
+    margin-bottom: -.55em;
   }
 
   .authors > p {
     font-size: 1.05em;
-    margin-top: 0.2em;
+    margin-top: .2em;
   }
 
   .font-load-1 .authors > p {
     font-size: 1em;
-    margin-top: 0.25em;
+    margin-top: .25em;
   }
 
   .metadata {
-    margin-top: 0.65em;
+    margin-top: .65em;
     margin-bottom: 0;
   }
 
@@ -2105,12 +2099,12 @@ figure,
 
   .links {
     margin-top: .3em;
-    margin-bottom: 0.25em;
+    margin-bottom: .25em;
   }
 
   .font-load-1 .links {
     margin-top: .15em;
-    margin-bottom: 0.5em;
+    margin-bottom: .5em;
   }
 
   .metadata-icon {
@@ -2123,7 +2117,7 @@ figure,
   }
 
   .font-load-1 .mlt-summary {
-    font-size: 0.889em;
+    font-size: .889em;
     line-height: 1.7em;
   }
 
@@ -2139,19 +2133,24 @@ figure,
   }
 
   .icon-external-link {
+    height: 14px;
     padding-right: 18px;
     width: 14px;
-    height: 14px;
   }
 
   .line {
-    width: 50px;
     margin: 1em auto;
+    width: 50px;
   }
 
   .line:before {
-    font-size: 0.5em;
+    font-size: .5em;
     letter-spacing: 20px;
+  }
+
+  .list-meta,
+  .font-load-1 .list-meta {
+    padding: 0;
   }
 }
 
