@@ -15,16 +15,16 @@ body {
   text-align: left;
 }
 
-.font-load-1 ol,
-.font-load-1 p,
-.font-load-1 em,
-.font-load-1 ul,
 ol,
 p,
 em,
-ul {
-  --x-height-multiplier: 0.35;
+ul,
+.font-load-1 ol,
+.font-load-1 p,
+.font-load-1 em,
+.font-load-1 ul {
   --baseline-multiplier: 0.179;
+  --x-height-multiplier: 0.35;
 }
 
 p {
@@ -35,12 +35,12 @@ p a,
 em a,
 ol a,
 ul a {
-  text-decoration-line: none !important;
   background: linear-gradient(-45deg, #ff0161 0, #ff263f 100%) repeat-x 0 1em;
   background-origin: border-box;
   background-size: auto 2px;
-  text-size-adjust: 100%;
   hyphens: manual;
+  text-decoration-line: none !important;
+  text-size-adjust: 100%;
 }
 
 .links a {
@@ -71,7 +71,6 @@ figcaption a,
 .list-meta-category a,
 .metadata a,
 .bio a,
-.myname a,
 .table > .list-meta > a,
 a.footnote-return,
 footer,
@@ -91,37 +90,34 @@ figcaption a,
 .footnote-ref a,
 .metadata a,
 .bio a,
-.myname a,
 .table > .list-meta > a,
 a.footnote-return,
 footer a:hover {
   text-decoration-line: underline !important;
 }
 
+.header-meta a,
+.mlt-header a,
 .anchor,
 .anchor a {
   text-decoration-line: none !important;
 }
 
-.authors a,
+.header-meta a,
 .mlt-header a,
-.font-load-1 .authors a,
+.font-load-1 .header-meta a,
 .font-load-1 .mlt-header a {
-  text-decoration-line: none;
   background-image: linear-gradient(to right, #b3b9c4 50%, #b3b9c4 50%);
-  background-repeat: repeat-x;
   background-origin: border-box;
-  background-size: auto 2px;
-  text-size-adjust: 100%;
-  hyphens: manual;
   background-position: 0 1.1em;
+  background-repeat: repeat-x;
+  background-size: auto 2px;
+  hyphens: manual;
+  text-size-adjust: 100%;
 }
 
 @-moz-document url-prefix() {
-  .font-load-1 .authors a {
-    background-position: 0 .91em;
-  }
-
+  .font-load-1 .header-meta a,
   .font-load-1 .mlt-header a {
     background-position: 0 .91em;
   }
@@ -132,16 +128,16 @@ footer a:hover {
   display: inline-block;
 }
 
-.font-load-1 .icon,
-.icon {
+.icon,
+.font-load-1 .icon {
   background-position: 0 0;
 }
 
 .social-icon {
-  width: 24px;
   height: 24px;
   margin-left: 10px;
   margin-right: 10px;
+  width: 24px;
 }
 
 .metadata-icon {
@@ -149,8 +145,8 @@ footer a:hover {
 }
 
 table {
-  border-top: 1px solid rgba(14, 17, 21, .15);
   border-bottom: 1px solid rgba(14, 17, 21, .15);
+  border-top: 1px solid rgba(14, 17, 21, .15);
   margin: auto;
 }
 
@@ -158,7 +154,8 @@ table thead th {
   border-bottom: 1px solid rgba(14, 17, 21, .9);
 }
 
-td, th {
+td,
+th {
   padding: .4em;
 }
 
@@ -172,61 +169,61 @@ tr:nth-child(even) {
 
 .links > li > a:focus,
 .links > li > a:hover {
-  transition: .2s;
   box-shadow: 0 .5em .5em -.4em rgba(123, 136, 161, .7);
+  transition: .2s;
 }
 
 .blob {
-  position: absolute;
-  overflow-x: hidden;
   margin: 0 auto;
+  overflow-x: hidden;
+  position: absolute;
   z-index: -2;
 }
 
 .blob-top {
   background-color: #d8dee9;
+  height: 300px;
   top: -10px;
   left: 0;
   right: 0;
-  height: 300px;
   margin-left: 100px;
 }
 
 .blob-top-cut {
   background-color: #eceff4;
-  top: -10px;
-  left: 0;
+  border-top-right-radius: 100px 500px;
   width: calc(50% + 190px);
   height: 300px;
-  border-top-right-radius: 100px 500px;
+  top: -10px;
+  left: 0;
 }
 
 .blob-bottom {
   background-color: #d8dee9;
   background-image: linear-gradient(-90deg, #e5e9f0 0, #e5e9f0 60%, #d8dee9 100%);
-  top: 730px;
-  right: -30px;
   width: calc(50% - 160px);
   height: 70px;
+  top: 730px;
+  right: -30px;
 }
 
 .blob-bottom-cut {
   background-color: #eceff4;
-  top: 730px;
-  right: -30px;
+  border-top-right-radius: calc(100% - 230px) 70px;
   width: calc(50% - 160px);
   height: 70px;
-  border-top-right-radius: calc(100% - 230px) 70px;
+  top: 730px;
+  right: -30px;
 }
 
 .blob-corner {
   background-color: #d8dee9;
   background-image: linear-gradient(-90deg, #e5e9f0 0, #e5e9f0 60%, #d8dee9 100%);
-  top: 0;
-  right: -30px;
+  border-bottom-left-radius: 250px 400px;
   width: calc(50% - 160px);
   height: 730px;
-  border-bottom-left-radius: 250px 400px;
+  top: 0;
+  right: -30px;
 }
 
 .badge {
@@ -478,8 +475,15 @@ feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0
 }
 
 @media only print {
+
+  .title,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
   .font-load-1 .home-link,
-  .font-load-1 .myname,
   .font-load-1 .subtitle,
   .font-load-1 .title,
   .font-load-1 footer > ul > li,
@@ -488,15 +492,7 @@ feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0
   .font-load-1 h3,
   .font-load-1 h4,
   .font-load-1 h5,
-  .font-load-1 h6,
-  .myname,
-  .title,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  .font-load-1 h6 {
     font-weight: 400;
   }
 
@@ -507,11 +503,7 @@ feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0
   .footnote a,
   .homelink a,
   .home-link a:hover,
-  .section-link a,
-  .section-link a:hover,
   .metadata a,
-  .mylinks a,
-  .myname a,
   .subtitle a,
   .table > .list-meta > a,
   .title a,
@@ -524,8 +516,8 @@ feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0
   h4 a,
   h5 a,
   h6 a {
-    text-decoration-line: underline !important;
     background-image: none;
+    text-decoration-line: underline !important;
   }
 
   pre {

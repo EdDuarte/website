@@ -32,8 +32,7 @@ and marketing of mobile apps, overseeing the interactive design of the final
 product, and devising unique interface ideas in the consumer space.
 
 I also have a strong background in academia: earned a Master's degree in
-Software Engineering (thesis graded 19 out of 20) and a Bachelor's in
-Information Technology; worked with
+Software Engineering and a Bachelor's in Information Technology; worked with
 [bioinformatics](http://bioinformatics.ua.pt/) and [marine
 life](http://www.oceano21.org/info.asp?id=46&idpai=3&LN=EN) research groups; and
 [published papers](/papers/) in various fields, including Data Analysis,
