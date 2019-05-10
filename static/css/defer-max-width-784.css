@@ -29,10 +29,10 @@ body {
 }
 
 .blob-single-corner {
-  top: -50px;
+  top: calc((100vw * -0.01) - 45px);
   left: 0;
-  width: 260px;
-  transform: skewY(-3deg);
+  width: 100vw;
+  transform: skewY(-2deg);
 }
 
 p a,
