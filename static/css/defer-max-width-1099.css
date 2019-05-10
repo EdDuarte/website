@@ -14,27 +14,27 @@
   background-position: 0 1.22em;
 }
 
-.blob-top,
-.blob-top-cut {
+.blob-home-top,
+.blob-home-top-cut {
   visibility: hidden !important;
 }
 
-.blob-bottom,
-.blob-bottom-cut {
+.blob-home-bottom,
+.blob-home-bottom-cut {
   top: 510px !important;
   width: 150% !important;
   height: 100px !important;
 }
 
-.blob-bottom {
+.blob-home-bottom {
   left: -50px !important;
 }
 
-.blob-bottom-cut {
+.blob-home-bottom-cut {
   border-top-right-radius: 35% 100px !important;
 }
 
-.blob-corner {
+.blob-home-corner {
   left: -50px !important;
   width: 150% !important;
   height: 510px !important;

@@ -182,32 +182,17 @@ tr:nth-child(even) {
 
 .blob-single-corner {
   background-color: #242933;
+  background-image: linear-gradient(-45deg, #303641 0, #242933 100%);
   border-bottom-right-radius: 200px 100px;
-  top: -40px;
-  left: -50px;
+  top: -30px;
+  left: -60px;
   width: 300px;
   height: 100px;
-}
-
-.blob-single-bottom {
-  background-color: #242933;
-  top: 0;
-  left: 0;
-  width: 49px;
-  height: 250px;
-}
-
-.blob-single-bottom-cut {
-  background-color: #eceff4;
-  border-top-left-radius: 400px 200px;
-  top: 60px;
-  left: -250px;
-  width: 300px;
-  height: 200px;
+  transform: skewY(-10deg);
 }
 
 .blob-home-top {
-  background-color: #242933;
+  background-color: #303641;
   height: 300px;
   top: -10px;
   left: 0;
@@ -226,7 +211,7 @@ tr:nth-child(even) {
 
 .blob-home-bottom {
   background-color: #242933;
-  background-image: linear-gradient(-90deg, #303641 0, #242933 100%);
+  background-image: linear-gradient(90deg, #303641 0, #242933 100%);
   width: calc(50% - 160px);
   height: 70px;
   top: 700px;
@@ -244,7 +229,7 @@ tr:nth-child(even) {
 
 .blob-home-corner {
   background-color: #242933;
-  background-image: linear-gradient(-90deg, #303641 0, #242933 100%);
+  background-image: linear-gradient(90deg, #303641 0, #242933 100%);
   border-bottom-left-radius: 250px 400px;
   width: calc(50% - 160px);
   height: 700px;

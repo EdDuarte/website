@@ -28,6 +28,13 @@ body {
   margin-right: 8px;
 }
 
+.blob-single-corner {
+  top: -40px;
+  left: -30px;
+  width: 260px;
+  transform: skewY(-3deg);
+}
+
 p a,
 em a,
 ol a,
