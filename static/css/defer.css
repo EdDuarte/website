@@ -183,12 +183,12 @@ tr:nth-child(even) {
 .blob-single-corner {
   background-color: #242933;
   background-image: linear-gradient(-45deg, #303641 0, #242933 100%);
-  border-bottom-right-radius: 200px 100px;
-  top: -30px;
+  border-bottom-right-radius: 400px 100px;
+  top: -40px;
   left: -60px;
-  width: 300px;
+  width: 500px;
   height: 100px;
-  transform: skewY(-10deg);
+  transform: skewY(-5deg);
 }
 
 .blob-home-top {
