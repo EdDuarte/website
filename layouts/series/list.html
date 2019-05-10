@@ -2,9 +2,16 @@
 <title>{{ .Title }} - Ed Duarte</title>
 </head>
 <body>
+
 <header class="logo">
   <span class="home-link"><a href="{{ .Site.BaseURL }}">Ed Duarte</a></span>
 </header>
+
+<div class="blob-container">
+  <div class="blob blob-single-corner"></div>
+  <div class="blob blob-single-bottom"></div>
+  <div class="blob blob-single-bottom-cut"></div>
+</div>
 
 <div class="article-container">
   <div class="title">{{ .Title }}</div>
@@ -16,28 +23,26 @@
   {{ end }}
 </div>
 
-<main class="list-container">
-  <article>
+<main class="main-container list-container">
 
-    <div class="article-table">
+  <div class="article-table">
 
-      <main class="article-list">
+    <main>
 
-        <ul class="list">
-          {{ range .Data.Pages.ByDate }}
-          {{ if not .Params.hidden }}
-          <li>
-            {{ partial "list-item.html" . }}
-          </li>
-          {{ end }}
-          {{ end }}
-        </ul>
+      <ul class="list">
+        {{ range .Data.Pages.ByDate }}
+        {{ if not .Params.hidden }}
+        <li>
+          {{ partial "list-item.html" . }}
+        </li>
+        {{ end }}
+        {{ end }}
+      </ul>
 
-      </main>
+    </main>
 
-    </div>
+  </div>
 
-  </article>
 </main>
 
 {{ partial "footer.html" . }}
