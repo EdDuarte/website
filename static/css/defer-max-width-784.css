@@ -29,8 +29,8 @@ body {
 }
 
 .blob-single-corner {
-  top: -40px;
-  left: -30px;
+  top: -55px;
+  left: 0;
   width: 260px;
   transform: skewY(-3deg);
 }
