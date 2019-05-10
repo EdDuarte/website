@@ -16,12 +16,11 @@
   {{ end }}
 </div>
 
-<main class="list-container">
-  <article>
+<main class="main-container list-container">
 
     <div class="article-table">
 
-      <main class="article-list">
+      <main>
 
         <ul class="list">
           {{ range .Data.Pages.ByDate.Reverse }}
@@ -37,7 +36,6 @@
 
     </div>
 
-  </article>
 </main>
 
 {{ partial "footer.html" . }}

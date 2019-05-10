@@ -46,8 +46,8 @@
     >
       <defs>
         <linearGradient id="gradient-white" x1="1" x2="0" y1="1" y2="0">
-          <stop offset="0%" stop-color="#d8dee9"></stop>
-          <stop offset="100%" stop-color="#c1cfda"></stop>
+          <stop offset="0%" stop-color="#d5dbeb"></stop>
+          <stop offset="100%" stop-color="#c4cdde"></stop>
         </linearGradient>
       </defs>
       <circle cx="350" cy="350" r="350" fill="url(#gradient-white)"></circle>
@@ -60,7 +60,7 @@
   <!--<span class="noselect">/</span><span class="section-link section-link-{{ .Section }}"><a href="/{{.Section}}">{{.Section}}</a></span>-->
 </header>
 
-<main class="article-container">
+<main class="main-container article-container">
   <article>
     <header>
       <div class="title">{{ .Title }}</div>
@@ -160,7 +160,7 @@
             {{ with .Params.medium }}
             <li class="metadata-item">
               <div class="icon metadata-icon icon-mirror"></div>
-              <span class="screen-reader">Article mirrors: </span>
+              <span class="screen-reader">Article mirror: </span>
               <span class="metadata-title">
                 Also on <a href="{{ . }}">Medium</a>
               </span>

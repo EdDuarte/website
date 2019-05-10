@@ -141,6 +141,7 @@ html {
   position: absolute;
 }
 
+.home-container,
 .article-container {
   margin: auto;
   max-width: 1050px;
@@ -319,12 +320,12 @@ strong em {
   }
 }
 
-article main,
+.main-container main,
 .mlt-table .mlt-previous {
   order: 1;
 }
 
-article aside,
+.main-container aside,
 .mlt-table .mlt-next {
   order: 2;
 }
@@ -344,15 +345,15 @@ article aside,
 }
 
 .list-page,
-article main .content {
+.main-container main .content {
   max-width: 650px;
 }
 
-.article-list {
+.home-list-container {
   max-width: 750px;
 }
 
-.article-list-content {
+.home-list {
   margin-right: 100px;
 }
 
@@ -423,7 +424,6 @@ ul {
   line-height: 1.65em;
 }
 
-article header,
 p {
   margin-top: .55em;
   margin-bottom: 0;
@@ -504,12 +504,13 @@ img.logoicon {
   text-transform: uppercase;
 }
 
-article header {
+.main-container header {
   margin-top: 0;
+  margin-bottom: 0;
   padding-bottom: 1.5em;
 }
 
-.font-load-1 article header {
+.font-load-1 .main-container header {
   margin-bottom: 0;
   padding-bottom: 1.6em;
 }
@@ -549,7 +550,7 @@ article header {
 }
 
 .metadata-title {
-  margin-left: .1em;
+  margin-left: .3em;
 }
 
 .header-meta p {
@@ -1103,8 +1104,8 @@ h6 a {
 .bio a,
 .footnotes,
 .footnotes a,
-.list-desc-alt,
-.list-item:hover .list-title-alt-h,
+.list-desc,
+.list-item:hover .list-title,
 .list-meta-date,
 .metadata,
 .metadata a,
@@ -1125,16 +1126,12 @@ figcaption a,
   text-decoration-color: #b3b9c4;
 }
 
-.list-item:hover .list-desc-alt {
+.list-item:hover .list-desc {
   color: #96a2bb;
 }
 
 .series a:hover .card-item-desc {
   background-color: #fbfbfc;
-}
-
-.list-desc {
-  margin-top: .8em;
 }
 
 .list-meta-date {
@@ -1147,7 +1144,7 @@ figcaption a,
 }
 
 .series-badge {
-  background-color: #e91830;
+  background-color: #ea0058;
   border-radius: 4px;
   color: #fff;
   font-size: .7em;
@@ -1284,7 +1281,7 @@ img.centered:empty {
   padding: 5px 0;
 }
 
-.list-title-alt-h {
+.list-title {
   margin: 0;
   padding: 0;
   text-shadow: 1px 1px rgba(255, 255, 255, .6);
@@ -1532,8 +1529,8 @@ h6 {
   letter-spacing: -.02em;
 }
 
-.list-meta-tags-ul,
-.font-load-1 .list-meta-tags-ul {
+.list-meta-tags,
+.font-load-1 .list-meta-tags {
   line-height: 0;
 }
 
@@ -1560,7 +1557,7 @@ figure,
 .tags,
 .font-load-1 .series,
 .series,
-.font-load-1 .list-title-alt-h,
+.font-load-1 .list-title,
 .table > .col1,
 .table > .col2,
 .table > .col3 {
@@ -1602,15 +1599,19 @@ figure,
 
 @media screen and (max-width: 1099px), print {
 
+  .home-container {
+    max-width: 650px;
+  }
+
   .article-container {
     max-width: 750px;
   }
 
-  .article-list-content {
+  .home-list {
     margin-right: 0;
   }
 
-  .article-list {
+  .home-list-container {
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
@@ -1623,8 +1624,8 @@ figure,
     padding-right: .6em;
   }
 
-  article header,
-  .font-load-1 article header {
+  .main-container header,
+  .font-load-1 .main-container header {
     margin-bottom: 0;
     padding-bottom: 0;
   }
@@ -1635,16 +1636,16 @@ figure,
     flex-direction: column;
   }
 
-  article main {
+  .main-container main {
     margin-top: .25em;
     order: 2;
   }
 
-  .font-load-1 article main {
+  .font-load-1 .main-container main {
     margin-top: .5em;
   }
 
-  article aside {
+  .main-container aside {
     max-width: 100%;
     order: 1;
   }
@@ -1781,16 +1782,27 @@ figure,
     position: initial;
   }
 
-  article header,
-  .font-load-1 .article-list {
+  .main-container header,
+  .font-load-1 .home-list-container {
     margin-top: 0;
   }
 }
 
-@media screen and (max-width: 783px) {
+@media screen and (max-width: 784px) {
 
   body {
     font-size: 18px;
+  }
+
+  .list-container,
+  .article-container {
+    max-width: initial;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .main-container main .content {
+    max-width: initial;
   }
 
   .logo {
@@ -1804,22 +1816,16 @@ figure,
   }
 
   .list-page,
-  article main {
+  .main-container main {
     max-width: initial;
   }
 
-  article main {
+  .main-container main {
     margin-top: .3em;
   }
 
-  .font-load-1 article main {
+  .font-load-1 .main-container main {
     margin-top: .2em;
-  }
-
-  .list-container,
-  .article-container {
-    margin-left: 10px;
-    margin-right: 10px;
   }
 
   .card-article {
@@ -1850,15 +1856,13 @@ figure,
     line-height: 1.7em;
   }
 
-  .series p,
-  .list-desc {
+  .series p {
     font-size: .9em;
     letter-spacing: -.03em;
     line-height: 2em;
   }
 
-  .font-load-1 .series p,
-  .font-load-1 .list-desc {
+  .font-load-1 .series p {
     font-size: 1em;
     letter-spacing: -.02em;
     line-height: 1.85em;
@@ -1927,9 +1931,9 @@ figure,
 
   .title {
     font-size: 1.48em;
-    letter-spacing: -.029em;
-    line-height: 1.37em;
-    margin-top: 0;
+    letter-spacing: -.039em;
+    line-height: 1.38em;
+    margin-top: .1em;
   }
 
   .font-load-1 .title,
@@ -2005,7 +2009,7 @@ figure,
   }
 
   h1 {
-    margin-bottom: -.38em;
+    margin-bottom: -.28em;
   }
 
   .font-load-1 h1 {
@@ -2013,47 +2017,51 @@ figure,
   }
 
   h2 {
-    margin-bottom: -.4em;
+    margin-bottom: -.3em;
   }
 
   .font-load-1 h2 {
-    margin-bottom: -.34em;
+    margin-bottom: -.24em;
   }
 
   .font-load-1 h1,
   h3,
   h4 {
-    margin-bottom: -.35em;
+    margin-bottom: -.25em;
   }
 
   .font-load-1 h3,
   .font-load-1 h4 {
-    margin-bottom: -.3em;
+    margin-bottom: -.2em;
   }
 
   h5 {
-    margin-bottom: -.6em;
-  }
-
-  .font-load-1 h5 {
     margin-bottom: -.5em;
   }
 
-  h6 {
-    margin-bottom: -.65em;
+  .font-load-1 h5 {
+    margin-bottom: -.4em;
   }
 
-  .font-load-1 h6 {
+  h6 {
     margin-bottom: -.55em;
   }
 
+  .font-load-1 h6 {
+    margin-bottom: -.45em;
+  }
+
   .header-meta p {
-    font-size: 1.05em;
-    margin-top: .2em;
+    font-size: .98em;
+    letter-spacing: -.05em;
+    line-height: 1.75em;
+    margin-top: .22em;
   }
 
   .font-load-1 .header-meta p {
     font-size: 1em;
+    letter-spacing: -.005em;
+    line-height: 1.7em;
     margin-top: .25em;
   }
 
@@ -2130,6 +2138,7 @@ figure,
   font-family: 'Spectral';
   font-style: normal;
   font-weight: 400;
+  font-display: fallback;
   src: url('../fonts/spectral-v4-latin-500.eot');
   src:
     local('Spectral Medium'),
@@ -2145,6 +2154,7 @@ figure,
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
+  font-display: fallback;
   src: url('../fonts/lato-v14-latin-regular.eot');
   src:
     local('Lato Regular'),
@@ -2162,6 +2172,7 @@ figure,
   font-family: 'Spectral-Italic';
   font-style: normal;
   font-weight: 400;
+  font-display: optional;
   src: url('../fonts/spectral-v4-latin-500italic.eot');
   src:
     local('Spectral Medium Italic'),
@@ -2177,6 +2188,7 @@ figure,
   font-family: 'Spectral-Bold';
   font-style: normal;
   font-weight: 700;
+  font-display: optional;
   src: url('../fonts/spectral-v4-latin-700.eot');
   src:
     local('Spectral Bold'),
@@ -2192,6 +2204,7 @@ figure,
   font-family: 'Spectral-Bold-Italic';
   font-style: normal;
   font-weight: 700;
+  font-display: optional;
   src: url('../fonts/spectral-v4-latin-700italic.eot');
   src:
     local('Spectral Bold Italic'),
@@ -2207,6 +2220,7 @@ figure,
   font-family: 'Lato-Bold';
   font-style: normal;
   font-weight: 700;
+  font-display: optional;
   src: url('../fonts/lato-v14-latin-700.eot');
   src:
     local('Lato Bold'),

@@ -7,14 +7,14 @@
       <time class="col1 list-meta-date">
         {{ .Date.Format "Jan 02, 2006" }}
       </time>
-      <span class="col2 list-meta-tags">
+      <div class="col2">
         {{ $tagList := .Params.tags }}
         {{ if $tagList }}
-        <ul class="links tags list-meta-tags-ul">
+        <ul class="links tags list-meta-tags">
           {{ range .Params.tags }}{{ $tag := index $tags . }}<li><a href="{{ $tag.Page.Permalink }}" class="badge badge-{{ . }}">{{ . }}</a></li>{{ end }}
         </ul>
         {{ end }}
-        </span>
+      </div>
     </div>
   </div>
   <hr>
@@ -24,14 +24,14 @@
   <a href="{{ .Permalink }}" class="list-item">
   {{ end }}
     <div class="list-item-container">
-      <div class="list-title-alt">
+      <div>
         {{ if .Params.externalLink }}
         <div class="icon list-icon icon-external-link"></div>
         {{ end }}
-        <h5 class="list-title-alt-h">{{ .Title }}</h5>
+        <h5 class="list-title">{{ .Title }}</h5>
       </div>
       {{ with .Params.description }}
-      <div class="list-desc-alt">
+      <div class="list-desc">
         <p class="small">{{ . }}</p>
       </div>
       {{ end }}

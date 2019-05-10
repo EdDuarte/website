@@ -18,7 +18,7 @@ body {
 }
 
 .mjx-math {
-  font-size: 70%;
+  font-size: 68%;
 }
 
 .social-icon {
@@ -32,37 +32,29 @@ p a,
 em a,
 ol a,
 ul a,
-.authors a,
+.header-meta a,
 .mlt-header a,
-.font-load-1 .authors a,
+.font-load-1 .header-meta a,
 .font-load-1 .mlt-header a {
   background-size: auto 1px !important;
 }
 
-.table > .list-title > a {
-  background-position: 0 1.02em;
-}
-
-.font-load-1 .table > .list-title > a {
-  background-position: 0 1.17em;
-}
-
-.authors a,
+.header-meta a,
 .metadata a,
 figcaption a {
   background-position: 0 0.98em;
 }
 
-.font-load-1 .authors a,
+.font-load-1 .header-meta a,
 .font-load-1 .metadata a,
 .font-load-1 figcaption a {
   background-position: 0 1.1em;
 }
 
 @-moz-document url-prefix() {
-  .authors a,
+  .header-meta a,
   .mlt-header a,
-  .font-load-1 .authors a,
+  .font-load-1 .header-meta a,
   .font-load-1 .mlt-header a {
     background-image: none !important;
     text-decoration-line: underline !important;
