@@ -1,4 +1,6 @@
 
+@media screen and (max-width: 1099px) {
+
 .header-meta a {
   background-size: auto 2px;
   background-position: 0 1em;
@@ -16,27 +18,32 @@
 
 .blob-home-top,
 .blob-home-top-cut {
-  visibility: hidden !important;
+  visibility: hidden;
 }
 
 .blob-home-bottom,
 .blob-home-bottom-cut {
-  top: 510px !important;
-  width: 150% !important;
-  height: 100px !important;
+  width: 150%;
+  height: 100px;
 }
 
 .blob-home-bottom {
-  left: -50px !important;
+  height: 90px;
+  left: -50px;
+  top: 500px;
 }
 
 .blob-home-bottom-cut {
-  border-top-right-radius: 35% 100px !important;
+  border-top-right-radius: 35% 80px;
+  height: 100px;
+  top: 500px;
 }
 
 .blob-home-corner {
-  left: -50px !important;
-  width: 150% !important;
-  height: 510px !important;
-  border-bottom-left-radius: 35% 100px !important;
+  left: -50px;
+  width: 150%;
+  height: 500px;
+  border-bottom-left-radius: 35% 80px;
+}
+
 }

@@ -117,6 +117,7 @@ loadCSS("/css/defer.css");
 
 let minWidth1100Loaded = false;
 let maxWidth1099Loaded = false;
+let minWidth785Loaded = false;
 let maxWidth784Loaded = false;
 
 const q1 = "screen and (min-width:1100px)";
@@ -145,15 +146,28 @@ mq2.addListener(function (mq2) {
   }
 });
 
-const q3 = "screen and (max-width: 784px)";
+const q3 = "screen and (min-width: 785px)";
 const mq3 = window.matchMedia(q3);
-if (mq3.matches && !maxWidth784Loaded) {
-  loadCSS("/css/defer-max-width-784.css", "", q3);
-  maxWidth784Loaded = true;
+if (mq3.matches && !minWidth785Loaded) {
+  loadCSS("/css/defer-min-width-785.css", "", q3);
+  minWidth785Loaded = true;
 }
 mq3.addListener(function (mq3) {
-  if (mq3.matches && !maxWidth784Loaded) {
-    loadCSS("/css/defer-max-width-784.css", "", q3);
+  if (mq3.matches && !minWidth785Loaded) {
+    loadCSS("/css/defer-min-width-785.css", "", q3);
+    minWidth785Loaded = true;
+  }
+});
+
+const q4 = "screen and (max-width: 784px)";
+const mq4 = window.matchMedia(q4);
+if (mq4.matches && !maxWidth784Loaded) {
+  loadCSS("/css/defer-max-width-784.css", "", q4);
+  maxWidth784Loaded = true;
+}
+mq4.addListener(function (mq4) {
+  if (mq4.matches && !maxWidth784Loaded) {
+    loadCSS("/css/defer-max-width-784.css", "", q4);
     maxWidth784Loaded = true;
   }
 });

@@ -1,4 +1,6 @@
 
+@media screen and (max-width: 784px) {
+
 body {
   text-rendering: optimizeSpeed;
 }
@@ -28,11 +30,31 @@ body {
   margin-right: 8px;
 }
 
+.circle-article-1 {
+  left: calc(50% - 80px);
+}
+
+.circle-article-2 {
+  left: calc(50% - 700px);
+}
+
+.circle-article-3 {
+  left: calc(50% + 80px);
+}
+
 .blob-single-corner {
   top: calc((100vw * -0.01) - 45px);
   left: 0;
   width: 100vw;
   transform: skewY(-2deg);
+}
+
+.blob-home-bottom-cut {
+  border-top-right-radius: 35% 30px;
+}
+
+.blob-home-corner {
+  border-bottom-left-radius: 35% 30px;
 }
 
 p a,
@@ -67,4 +89,6 @@ figcaption a {
     text-decoration-line: underline !important;
     text-decoration-color: #b3b9c4;
   }
+}
+
 }
