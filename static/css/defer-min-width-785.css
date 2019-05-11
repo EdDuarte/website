@@ -1,0 +1,16 @@
+
+@media screen and (min-width: 785px) {
+
+.circle-article-1 {
+  left: calc(50% - 50px);
+}
+
+.circle-article-2 {
+  left: calc(50% - 1000px);
+}
+
+.circle-article-3 {
+  left: calc(50% - 200px);
+}
+
+}
