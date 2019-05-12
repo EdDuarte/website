@@ -280,6 +280,7 @@ strong em {
   letter-spacing: -.05em;
 }
 
+.font-load-2 .prologue strong,
 .font-load-2 b em,
 .font-load-2 strong em {
   font-family: Spectral-Bold-Italic, Spectral, "Times New Roman", Times, serif;
@@ -397,7 +398,7 @@ ul {
 }
 
 .bio-temp {
-  margin-top: 4em;
+  margin-top: 3.6em;
 }
 
 .card-series {
@@ -427,6 +428,15 @@ ol,
 p,
 ul {
   line-height: 1.65em;
+}
+
+.content .prologue + p {
+  margin-top: 2em;
+}
+
+.content .prologue + p:first-of-type::first-letter {
+  font-size: 2.625em;
+  margin-right: -0.02em;
 }
 
 p {
@@ -673,6 +683,7 @@ h1 {
   margin-bottom: -.1em;
 }
 
+.sidenote-container + h1,
 .highlight + h1,
 img + h1,
 ol + h1,
@@ -682,6 +693,7 @@ ul + h1 {
   padding-top: .2em;
 }
 
+.font-load-1 .sidenote-container + h1,
 .font-load-1 .highlight + h1,
 .font-load-1 img + h1,
 .font-load-1 ol + h1,
@@ -691,6 +703,7 @@ ul + h1 {
   padding-top: .2em;
 }
 
+.font-load-1 .sidenote-container + h2,
 .font-load-1 .highlight + h2,
 .font-load-1 img + h2,
 .font-load-1 ol + h2,
@@ -719,6 +732,7 @@ h2 {
   margin-bottom: -.15em;
 }
 
+.sidenote-container + h2,
 .highlight + h2,
 img + h2,
 ol + h2,
@@ -746,6 +760,7 @@ h3 {
   font-size: 1.414em;
 }
 
+.sidenote-container + h3,
 .highlight + h3,
 img + h3,
 ol + h3,
@@ -754,6 +769,7 @@ p + h3 {
   padding-top: .2em;
 }
 
+.font-load-1 .sidenote-container + h3,
 .font-load-1 .highlight + h3,
 .font-load-1 img + h3,
 .font-load-1 ol + h3,
@@ -772,6 +788,7 @@ h4 {
   letter-spacing: -.024rem;
 }
 
+.sidenote-container + h4,
 .highlight + h4,
 img + h4,
 ol + h4,
@@ -780,6 +797,7 @@ p + h4 {
   padding-top: .2em;
 }
 
+.font-load-1 .sidenote-container + h4,
 .font-load-1 .highlight + h4,
 .font-load-1 img + h4,
 .font-load-1 ol + h4,
@@ -806,6 +824,7 @@ h5 {
   letter-spacing: -.01em;
 }
 
+.sidenote-container + h5,
 .highlight + h5,
 img + h5,
 ol + h5,
@@ -814,6 +833,7 @@ p + h5 {
   padding-top: .2em;
 }
 
+.font-load-1 .sidenote-container + h5,
 .font-load-1 .highlight + h5,
 .font-load-1 img + h5,
 .font-load-1 ol + h5,
@@ -833,6 +853,7 @@ h6 {
   margin-bottom: -.35em;
 }
 
+.sidenote-container + h6,
 .highlight + h6,
 img + h6,
 ol + h6,
@@ -841,12 +862,18 @@ p + h6 {
   padding-top: .2em;
 }
 
+.font-load-1 .sidenote-container + h6,
 .font-load-1 .highlight + h6,
 .font-load-1 img + h6,
 .font-load-1 ol + h6,
 .font-load-1 p + h6 {
   margin-top: .613em;
   padding-top: .2em;
+}
+
+.sidenote-container {
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 .links,
@@ -1784,12 +1811,6 @@ figure,
     margin-top: .2em;
   }
 
-  .bio-temp {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .bio-temp,
   .list,
   .font-load-1 .list {
@@ -2012,10 +2033,6 @@ figure,
 
   .font-load-1 h6 {
     margin-bottom: -.45em;
-  }
-
-  .bio-temp {
-    max-width: 320px;
   }
 
   .header-meta p {

@@ -169,7 +169,7 @@ tr:nth-child(even) {
 
 .links > li > a:focus,
 .links > li > a:hover {
-  box-shadow: 0 .5em .5em -.4em rgba(123, 136, 161, .7);
+  box-shadow: rgba(15, 17, 21, 0.15) 0 6px 9px 0;
   transition: .2s;
 }
 

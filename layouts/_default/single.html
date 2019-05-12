@@ -49,7 +49,7 @@
         <section class="content">
 
           {{ if .Params.prologue }}
-          <p class="prologue">{{ .Params.prologue | markdownify }}</p>
+          <div class="prologue">{{ .Params.prologue | markdownify }}</div>
           {{ end }}
 
           {{ .Content }}

@@ -27,7 +27,8 @@
   .sidenote-container {
     position: absolute;
     width: 1000px;
-    margin: auto;
+    margin: 0 auto;
+    transform: translateY(-50%);
   }
 
   .sidenote {
