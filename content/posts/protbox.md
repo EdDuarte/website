@@ -38,7 +38,7 @@ tags:
   - talk
 ---
 
-![Protbox header](/protbox/header.png)
+![Protbox header](/protbox/logo-v2.png)
 
 Protbox is an open-source, cross-platform application for securely sharing files
 within existing cloud storage services like Dropbox, OneDrive, Google Drive and

@@ -1,67 +1,89 @@
 
 @media screen and (min-width: 1100px) {
 
-figure {
-  max-width: 1000px;
-  width: 1000px;
-  overflow: auto;
-}
+  figure {
+    max-width: 1000px;
+    width: 1000px;
+    overflow: auto;
+  }
 
-figure img {
-  float: left;
-  display: block;
-}
+  figure img {
+    float: left;
+    display: block;
+  }
 
-figure.myphoto {
-  max-width: 100%;
-  width: 100%;
-}
+  figure.myphoto {
+    max-width: 100%;
+    width: 100%;
+  }
 
-img {
-  max-width: 650px;
-  min-width: 650px;
-  object-fit: scale-down;
-  object-position: 50% 0;
-}
+  img {
+    max-width: 650px;
+    min-width: 650px;
+    object-fit: scale-down;
+    object-position: 50% 0;
+  }
 
-.sidenote-container {
-  position: absolute;
-  width: 1000px;
-  margin: auto;
-}
+  .sidenote-container {
+    position: absolute;
+    width: 1000px;
+    margin: auto;
+  }
 
-.sidenote {
-  float: right;
-  width: 270px;
-}
+  .sidenote {
+    float: right;
+    width: 270px;
+  }
 
-figcaption {
-  position: relative;
-  margin-top: -5px;
-  float: right;
-  width: 270px;
-}
+  figcaption {
+    position: relative;
+    margin-top: -5px;
+    float: right;
+    width: 270px;
+  }
 
-.font-load-1 figcaption {
-  margin-top: -5px;
-}
+  .font-load-1 figcaption {
+    margin-top: -5px;
+  }
 
-.blob-home-bottom {
-  width: calc(50% - 162px);
-  height: 65px;
-  top: 700px;
-}
+  .blob-home-top {
+    background-color: #303641;
+    height: 198px;
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin-left: 100px;
+  }
 
-.blob-home-bottom-cut {
-  border-top-right-radius: calc(100% - 230px) 70px;
-  height: 70px;
-  top: 700px;
-}
+  .blob-home-top-cut {
+    background-color: #eceff4;
+    border-top-right-radius: 70px 210px;
+    width: calc(50% + 190px);
+    height: 300px;
+    top: -10px;
+    left: 0;
+  }
 
-.blob-home-corner {
-  border-bottom-left-radius: 250px 400px;
-  width: calc(50% - 160px);
-  height: 700px;
-}
+  .blob-home-bottom {
+    width: calc(50% - 162px);
+    height: 65px;
+    top: 400px;
+  }
+
+  .blob-home-bottom-cut {
+    border-top-right-radius: calc(100% - 230px) 70px;
+    height: 70px;
+    top: 400px;
+  }
+
+  .blob-home-corner {
+    border-bottom-left-radius: 220px 220px;
+    width: calc(50% - 160px);
+    height: 400px;
+  }
+
+  .section-name {
+    color: #eceff4;
+  }
 
 }

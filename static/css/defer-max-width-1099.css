@@ -1,49 +1,53 @@
 
 @media screen and (max-width: 1099px) {
 
-.header-meta a {
-  background-size: auto 2px;
-  background-position: 0 1em;
-}
+  .header-meta a {
+    background-size: auto 2px;
+    background-position: 0 1em;
+  }
 
-.metadata a {
-  background-size: auto 1px;
-  background-position: 0 1.04em;
-}
+  .metadata a {
+    background-size: auto 1px;
+    background-position: 0 1.04em;
+  }
 
-.font-load-1 .metadata a {
-  background-size: auto 1px;
-  background-position: 0 1.22em;
-}
+  .font-load-1 .metadata a {
+    background-size: auto 1px;
+    background-position: 0 1.22em;
+  }
 
-.blob-home-top,
-.blob-home-top-cut {
-  visibility: hidden;
-}
+  .blob-home-top,
+  .blob-home-top-cut {
+    visibility: hidden;
+  }
 
-.blob-home-bottom,
-.blob-home-bottom-cut {
-  width: 150%;
-  height: 100px;
-}
+  .blob-home-bottom,
+  .blob-home-bottom-cut {
+    width: 150%;
+    height: 100px;
+  }
 
-.blob-home-bottom {
-  height: 90px;
-  left: -50px;
-  top: 500px;
-}
+  .blob-home-bottom {
+    height: 90px;
+    left: -50px;
+    top: 360px;
+  }
 
-.blob-home-bottom-cut {
-  border-top-right-radius: 35% 80px;
-  height: 100px;
-  top: 500px;
-}
+  .blob-home-bottom-cut {
+    border-top-right-radius: 35% 80px;
+    height: 100px;
+    top: 360px;
+  }
 
-.blob-home-corner {
-  left: -50px;
-  width: 150%;
-  height: 500px;
-  border-bottom-left-radius: 35% 80px;
-}
+  .blob-home-corner {
+    left: -50px;
+    width: 150%;
+    height: 360px;
+    border-bottom-left-radius: 35% 80px;
+  }
+
+  .section-name {
+    color: #eceff4;
+  }
 
 }

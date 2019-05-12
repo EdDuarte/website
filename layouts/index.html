@@ -23,6 +23,9 @@
 
 <main class="home-list-container">
 <div class="home-list">
+  <div class="header-meta bio-temp">
+    {{ .Content }}
+  </div>
 
 {{ $tags := .Site.Taxonomies.tags }}
 
@@ -40,7 +43,6 @@
 </main>
 
 <aside>
-<div class="aside-list">
 
 {{ partial "intro.html" . }}
 
@@ -49,12 +51,6 @@
     {{ range $key, $value := $tags }}<li><a href="{{ $value.Page.Permalink }}" class="badge badge-{{ $key }}">{{ lower $value.Page.Title }}</a></li>{{ end }}
   </ul>
 </section>
-
-<section class="bio">
-  {{ .Content }}
-</section>
-
-</div>
 
 <section class="card card-item card-series">
   <!--<hr>-->
@@ -81,6 +77,7 @@
   </div>
   -->
 </section>
+
 </aside>
 
 </div>
