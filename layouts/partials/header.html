@@ -371,7 +371,11 @@ hr {
   padding: 1rem;
 }
 
-aside {
+.aside-home {
+  max-width: 300px;
+}
+
+.aside-article {
   margin-left: 30px;
   max-width: 270px;
 }
@@ -1083,6 +1087,7 @@ h6 a {
 .list-desc,
 .list-item:hover .list-title,
 .list-meta-date,
+.mlt .list-title,
 .metadata,
 .metadata a,
 .metadata-links,
@@ -1102,6 +1107,7 @@ figcaption a,
   text-decoration-color: #b3b9c4;
 }
 
+.mlt .list-item:hover .list-title,
 .list-item:hover .list-desc {
   color: #96a2bb;
 }
@@ -1224,14 +1230,21 @@ img.centered:empty {
 
 .card-item-desc {
   color: #4c566a;
-  line-height: 1.7em;
+  line-height: 0;
   margin: 0;
   padding: .3em .5rem;
 }
 
 .font-load-1 .card-item-desc {
-  line-height: 1.5em;
   margin: 0;
+}
+
+.card-item-ti {
+  line-height: 1.7em;
+}
+
+.font-load-1 .card-item-ti {
+  line-height: 1.5em;
 }
 
 .card-item-metadata {
@@ -1391,13 +1404,13 @@ h6 > .anchor:hover {
 
 .list {
   list-style-type: none;
-  margin-top: 3em;
+  margin-top: 4em;
   max-width: 100%;
   padding: 0;
 }
 
 .font-load-1 .list {
-  margin-top: 3.1em;
+  margin-top: 4.1em;
   padding: 0;
 }
 
@@ -1568,6 +1581,7 @@ figure,
 
 .card-series {
   max-width: 360px;
+  min-width: 300px;
 }
 
 @media screen {
@@ -1672,7 +1686,7 @@ figure,
   }
 
   .links,
-  aside,
+  .aside-article,
   figure {
     margin: 0;
   }
