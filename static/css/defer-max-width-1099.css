@@ -28,24 +28,26 @@
   }
 
   .blob-home-bottom {
-    height: 90px;
-    left: -50px;
-    top: 360px;
+    height: 100px;
+    left: 50%;
+    top: 620px;
   }
 
   .blob-home-bottom-cut {
-    border-top-right-radius: 35% 80px;
+    border-top-right-radius: 35% 50px;
     height: 100px;
-    top: 360px;
+    top: 630px;
   }
 
   .blob-home-corner {
     left: -50px;
     width: 150%;
-    height: 360px;
-    border-bottom-left-radius: 35% 80px;
+    height: 630px;
+    border-bottom-left-radius: 35% 50px;
   }
 
+  .bio-temp,
+  .bio-temp a,
   .section-name {
     color: #eceff4;
   }

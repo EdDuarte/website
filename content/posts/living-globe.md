@@ -1,6 +1,6 @@
 ---
-title: "Living Globe, a tridimensional interactive visualization of demographic
-data sets"
+title: "Living Globe: Tridimensional interactive visualization of world
+demographic data"
 description: "Open-source WebGL app for tri-dimensional worldwide data
 visualization, with customizable data-to-visual mapping and filtering with
 adjustable scales."
@@ -96,12 +96,12 @@ normalizes the remaining data set, can potentially lead to improvements in the
 interpretation of data in countries with small samples (eg. Portugal) by
 filtering out countries with large samples (e.g. China).
 
-{class="js-lazy-image" src="/hcii2016/screenshot-02.png"}
+{class="js-lazy-image" src="/hcii2016/screenshot-02-transparent.png"}
 ![Living Globe when using the filtering feature with data normalization](# 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishable colors for the remaining countries\)')
 
 <noscript>
 
-![Living Globe when using the filtering feature with data normalization](/hcii2016/screenshot-02.png 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishable colors for the remaining countries\)')
+![Living Globe when using the filtering feature with data normalization](/hcii2016/screenshot-02-transparent.png 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishable colors for the remaining countries\)')
 
 </noscript>
 

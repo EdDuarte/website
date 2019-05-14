@@ -48,43 +48,48 @@
   }
 
   .blob-home-top {
-    background-color: #303641;
-    height: 198px;
-    top: -10px;
+    width: 100%;
+    height: calc(60vw - 400px - 2px);
+    top: 700px;
     left: 0;
     right: 0;
-    margin-left: 100px;
   }
 
   .blob-home-top-cut {
-    background-color: #eceff4;
-    border-top-right-radius: 70px 210px;
-    width: calc(50% + 190px);
-    height: 300px;
-    top: -10px;
-    left: 0;
+    border-top-right-radius: 55% calc(60vw - 400px);
+    width: 150%;
+    height: calc(60vw - 400px);
+    top: 700px;
+    right: -25%;
   }
 
   .blob-home-bottom {
-    width: calc(50% - 162px);
-    height: 65px;
-    top: 400px;
+    visibility: hidden;
   }
 
   .blob-home-bottom-cut {
-    border-top-right-radius: calc(100% - 230px) 70px;
-    height: 70px;
-    top: 400px;
+    visibility: hidden;
   }
 
   .blob-home-corner {
-    border-bottom-left-radius: 220px 220px;
-    width: calc(50% - 160px);
-    height: 400px;
+    left: -15%;
+    width: 130%;
+    height: 700px;
+    border-bottom-left-radius: 45% calc(40vw - 400px);
   }
 
+  .bio-temp,
+  .bio-temp a,
   .section-name {
     color: #eceff4;
+  }
+
+}
+
+@media screen and (min-width: 2750px) {
+
+  .blob-home-corner {
+    border-bottom-left-radius: 45% 700px;
   }
 
 }

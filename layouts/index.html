@@ -8,6 +8,7 @@
   <span class="home-link"><a href="{{ .Site.BaseURL }}">Ed Duarte</a></span>
 </header>
 -->
+{{ $tags := .Site.Taxonomies.tags }}
 
 <div class="blob-container">
   <div class="blob blob-home-top"></div>
@@ -17,17 +18,59 @@
   <div class="blob blob-home-corner"></div>
 </div>
 
+<header class="logo"></header>
+
+<div class="article-container bio-temp-content">
+
+  <div class="title section-name">{{ .Title }}</div>
+  <div class="social">
+    <a
+        href="https://twitter.com/eddrt"
+        title="Twitter"
+        class="icon social-icon social-icon-twitter"
+    >
+      <span class="screen-reader">Twitter</span>
+    </a>
+    <a
+        href="https://github.com/EdDuarte"
+        title="GitHub"
+        class="icon social-icon social-icon-github"
+    >
+      <span class="screen-reader">GitHub</span>
+    </a>
+    <!--
+    <a
+        href="https://www.linkedin.com/in/Ed-Duarte"
+        title="LinkedIn"
+        class="icon social-icon social-icon-linkedin"
+    >
+      <span class="screen-reader">LinkedIn</span>
+    </a>
+    -->
+    <a
+        href="/index.xml"
+        title="RSS Feed"
+        class="icon social-icon social-icon-feed"
+    >
+      <span class="screen-reader">RSS feed</span>
+    </a>
+  </div>
+  <section class="tags-container">
+    <ul class="links tags">
+      {{ range $key, $value := $tags }}<li><a href="{{ $value.Page.Permalink }}" class="badge badge-{{ $key }}">{{ lower $value.Page.Title }}</a></li>{{ end }}
+    </ul>
+  </section>
+  <div class="header-meta bio-temp">
+    {{ .Content }}
+  </div>
+</div>
+
 <main class="main-container article-container">
 
 <div class="article-table">
 
 <main class="home-list-container">
 <div class="home-list">
-  <div class="header-meta bio-temp">
-    {{ .Content }}
-  </div>
-
-{{ $tags := .Site.Taxonomies.tags }}
 
 <ul class="list">
   {{ range .Data.Pages.ByDate.Reverse }}
@@ -44,14 +87,7 @@
 
 <aside>
 
-{{ partial "intro.html" . }}
-
-<section class="tags-container">
-  <ul class="links tags centered">
-    {{ range $key, $value := $tags }}<li><a href="{{ $value.Page.Permalink }}" class="badge badge-{{ $key }}">{{ lower $value.Page.Title }}</a></li>{{ end }}
-  </ul>
-</section>
-
+<div class="sticky">
 <section class="card card-item card-series">
   <!--<hr>-->
   <!--<div class="card-item-title">Series of Articles</div>-->
@@ -77,6 +113,7 @@
   </div>
   -->
 </section>
+</div>
 
 </aside>
 

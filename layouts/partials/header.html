@@ -139,6 +139,7 @@ html {
   bottom: 0;
   min-width: 100%;
   position: absolute;
+  padding-top: 1em;
 }
 
 .home-container,
@@ -186,7 +187,6 @@ pre {
 .series li,
 .sidenote,
 .subtitle,
-.section-name,
 .title,
 figcaption,
 .footer > ul > li,
@@ -215,7 +215,6 @@ ul {
 .font-load-1 .series li,
 .font-load-1 .sidenote,
 .font-load-1 .subtitle,
-.font-load-1 .section-name,
 .font-load-1 .title,
 .font-load-1 figcaption,
 .font-load-1 .footer > ul > li,
@@ -291,8 +290,8 @@ strong em {
 .home-link,
 .title,
 .subtitle,
-.section-name,
 .footer > ul > li,
+.tags,
 h1,
 h2,
 h3,
@@ -309,7 +308,6 @@ strong em {
 @-moz-document url-prefix() {
   .font-load-1 .title,
   .font-load-1 .subtitle,
-  .font-load-1 .section-name,
   .font-load-1 footer > ul > li,
   .font-load-1 h1,
   .font-load-1 h2,
@@ -383,26 +381,6 @@ p,
 ul {
   font-size: 1.175rem;
   letter-spacing: -.005em;
-}
-
-.bio,
-.card-series {
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bio {
-  max-width: 500px;
-  margin-top: 1.5em;
-}
-
-.bio-temp {
-  margin-top: 3.6em;
-}
-
-.card-series {
-  max-width: 340px;
 }
 
 ol,
@@ -713,19 +691,16 @@ ul + h1 {
   padding-top: .2em;
 }
 
-.section-name,
 h2,
 h3 {
   letter-spacing: -.08em;
 }
 
-.section-name,
 h2 {
   font-size: 1.588em;
   margin-bottom: -.16em;
 }
 
-.font-load-1 .section-name,
 .font-load-1 h2 {
   font-size: 1.588em;
   letter-spacing: -.031em;
@@ -944,6 +919,7 @@ samp {
   pointer-events: none;
   position: absolute;
   zoom: 1;
+  z-index: -1;
 }
 
 .series li {
@@ -1152,7 +1128,6 @@ figcaption a,
   padding: .3em .5em;
 }
 
-.section-name,
 h1,
 h2,
 h3,
@@ -1234,7 +1209,6 @@ img.centered:empty {
   -webkit-box-pack: justify;
   height: auto;
   justify-content: space-between;
-  margin-top: 1.7em;
   overflow: hidden;
   width: 100%;
 }
@@ -1334,7 +1308,7 @@ img.centered:empty {
 }
 
 .line {
-  color: #b3b9c4;
+  color: #96a2bb;
   margin: 2.5em auto;
   width: 70px;
 }
@@ -1407,6 +1381,7 @@ h6 > .anchor:hover {
 .sticky {
   position: sticky;
   top: 0;
+  padding-top: 2em;
 }
 
 .list,
@@ -1439,7 +1414,7 @@ h6 > .anchor:hover {
 
 .font-load-1 .list > li {
   margin-top: 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5em;
 }
 
 .list-meta {
@@ -1567,12 +1542,40 @@ figure,
   padding-right: .8em;
 }
 
+.bio,
+.card-series {
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bio {
+  max-width: 500px;
+}
+
+.bio-container {
+  position: relative;
+}
+
+.bio-temp {
+  max-width: 500px;
+}
+
+.bio-temp-content {
+  margin-top: 180px;
+  margin-bottom: 2em;
+}
+
+.card-series {
+  max-width: 360px;
+}
+
 @media screen {
   .font-load-2 .home-link,
   .font-load-2 .subtitle,
   .font-load-2 .title,
   .font-load-2 .footer > ul > li,
-  .font-load-2 .section-name,
+  .font-load-2 .tags,
   .font-load-2 h1,
   .font-load-2 h2,
   .font-load-2 h3,
@@ -1593,6 +1596,10 @@ figure,
 }
 
 @media screen and (max-width: 1099px), print {
+
+  .bio-temp-content {
+    margin-top: 100px;
+  }
 
   .home-container {
     max-width: 650px;
@@ -1639,7 +1646,7 @@ figure,
     order: 1;
   }
 
-  .bio-temp {
+  .bio-container {
     margin-top: 2em;
   }
 
@@ -1773,6 +1780,7 @@ figure,
 
   .sticky {
     position: initial;
+    padding-top: 0;
   }
 
   .main-container header,
@@ -1783,6 +1791,21 @@ figure,
 
 @media screen and (max-width: 784px) {
 
+  .bio-temp-content {
+    margin-top: 0;
+  }
+
+  .section-name,
+  .social,
+  .tags-container {
+    text-align: center;
+  }
+
+  .bio-temp {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   body {
     font-size: 18px;
   }
@@ -1791,6 +1814,14 @@ figure,
   .article-container {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .home-list-container {
+    max-width: 560px;
+  }
+
+  .bio-temp {
+    max-width: 300px;
   }
 
   .logo {
@@ -1811,7 +1842,7 @@ figure,
     margin-top: .2em;
   }
 
-  .bio-temp,
+  .bio-container,
   .list,
   .font-load-1 .list {
     margin-top: 1em;
@@ -2044,6 +2075,7 @@ figure,
 
   .font-load-1 .header-meta p {
     font-size: 1.1em;
+    letter-spacing: -.01em;
     margin-top: .25em;
   }
 

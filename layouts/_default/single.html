@@ -39,22 +39,18 @@
         </p>
       </div>
       {{ end }}
-
     </header>
 
     <div class="article-table">
 
       <main class="card card-article">
-
         <section class="content">
-
           {{ if .Params.prologue }}
           <div class="prologue">{{ .Params.prologue | markdownify }}</div>
           {{ end }}
 
           {{ .Content }}
         </section>
-
       </main>
 
       <aside>
@@ -172,7 +168,7 @@
     {{ range $i, $v := $pages }}
       {{ if eq $current.File $v.File }}
         <div class="line"></div>
-        <h4 class="mlt-header">Part of <a href="{{ $s.Page.Permalink }}">{{ $s.Page.Title }}</a></h4>
+        <h4 class="mlt-header">Part of the <a href="{{ $s.Page.Permalink }}">{{ $s.Page.Title }}</a> collection</h4>
         <div class="mlt-table">
           {{ if ne $i 0 }}
             {{ range first 1 (after (sub (len $pages) $i) $pages.Reverse) }}

@@ -219,9 +219,17 @@ tr:nth-child(even) {
   height: 100px;
 }
 
+.blob-home-top {
+  background-color: #242933;
+}
+
+.blob-home-top-cut {
+  background-color: #eceff4;
+}
+
 .blob-home-bottom {
   background-color: #242933;
-  background-image: linear-gradient(90deg, #303641 0, #242933 100%);
+  /* background-image: linear-gradient(90deg, #303641 0, #242933 100%); */
   right: -30px;
 }
 
@@ -233,7 +241,7 @@ tr:nth-child(even) {
 
 .blob-home-corner {
   background-color: #242933;
-  background-image: linear-gradient(90deg, #303641 0, #242933 100%);
+  /* background-image: linear-gradient(90deg, #303641 0, #242933 100%); */
   top: 0;
   right: -30px;
 }
