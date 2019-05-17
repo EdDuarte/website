@@ -1,13 +1,23 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:cc="http://cyber.law.harvard.edu/rss/creativeCommonsRssModule.html" version="2.0">
+<rss
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:cc="http://cyber.law.harvard.edu/rss/creativeCommonsRssModule.html"
+    xmlns:webfeeds="http://webfeeds.org/rss/1.0"
+    version="2.0"
+>
   <channel>
     <title>{{ .Site.Title }}</title>
     <link>{{ .Permalink }}</link>
     <description>Personal website and blog of Ed Duarte, a software engineer and researcher.</description>
     <image>
-      <url>{{ .Permalink }}/rss-icon.png</url>
+      <url>{{ .Permalink }}rss-icon.png</url>
       <title>{{ .Site.Title }}</title>
       <link>{{ .Permalink }}</link>
     </image>
+    <webfeeds:icon>{{ .Permalink }}rss-icon.png</webfeeds:icon>
+    <webfeeds:logo>{{ .Permalink }}rss-icon.png</webfeeds:logo>
+    <webfeeds:accentColor>111a2c</webfeeds:accentColor>
     {{ with .Site.Language.Lang }}
       <language>{{ . }}</language>
     {{ end }}
