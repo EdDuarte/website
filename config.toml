@@ -13,6 +13,10 @@ pygmentsUseClassic=true
 PygmentsCodeFences = true
 PygmentsStyle = "solarizeddark"
 
+[author]
+name = "Ed Duarte"
+email = "hi@edduarte.com"
+
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
 

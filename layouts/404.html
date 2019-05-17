@@ -8,12 +8,16 @@
 
 <style type="text/css">
 
+html {
+  background-color: #eceff4;
+}
+
 body, html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
-  color: rgba(14, 17, 21, .9);
+  color: #111a2c;
   font-family: Lato, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -27,28 +31,31 @@ body, html {
   height: 100%;
 }
 
-.container h1 {
+.title h1 {
   margin: 0;
   font-size: calc(1em + 6vw);
 }
 
-.link-home {
-  font-size: 16px;
-  letter-spacing: -.025em;
+.header-meta {
   margin: 0;
 }
 
-.link-home a {
-  color: rgba(14, 17, 21, .9);
-  text-decoration: none;
-  background-image: linear-gradient(to right, #e21b2a 50%, #e21b2a 50%);
-  background-position: 0 1.3em;
-  background-size: 5px 2px;
-  background-repeat: repeat-x;
-  background-origin: border-box;
+.header-meta p {
+  font-size: 1.2em;
+  letter-spacing: -.048em;
 }
 
-@media screen and (max-width: 750px) {
+.font-load-1 .header-meta p {
+  font-size: 1.25em;
+  letter-spacing: -.01em;
+}
+
+.header-meta,
+.header-meta p a {
+  color: #5f6d87;
+}
+
+@media screen and (max-width: 784px) {
 
   .container {
     position: relative;
@@ -60,9 +67,9 @@ body, html {
   }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 785px) {
 
-  .container h1 {
+  .title {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -70,7 +77,7 @@ body, html {
     transform: translateY(-50%);
   }
 
-  .link-home {
+  .header-meta {
     position: absolute;
     width: 100%;
     bottom: 30px;
@@ -98,9 +105,12 @@ body, html {
 <body>
 
 <div class="container">
-  <h1>Page Not Found</h1>
-  <p class="link-home">Back to <a href="{{ .Site.BaseURL }}">edduarte.com</a>
-  </p>
+  <div class="title">
+    <h1>Not Found</h1>
+  </div>
+  <div class="header-meta">
+    <p>Back to <a href="https://www.edduarte.com">edduarte.com</a></p>
+  </div>
 </div>
 
 </body>

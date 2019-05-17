@@ -1,0 +1,35 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>{{ .Site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>Personal website and blog of Ed Duarte, a software engineer and researcher.</description>
+    {{ with .Site.Language.Lang }}
+      <language>{{ . }}</language>
+    {{ end }}
+    {{ with .Site.Author.email }}
+      <managingEditor>{{ . }}{{ with $.Site.Author.name }} ({{ . }}){{ end }}</managingEditor>
+      <webMaster>{{ . }}{{ with $.Site.Author.name }} ({{ . }}){{ end }}</webMaster>
+    {{ end }}
+    {{ with .Site.Copyright }}
+      <copyright>{{ . }}</copyright>
+    {{ end }}
+    {{ if not .Date.IsZero }}
+      <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{ end }}
+    {{ with .OutputFormats.Get "RSS" }}
+      {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{ end }}
+    {{ range .Pages }}
+      {{ if and (not .Params.hidden) (not .Params.externalLink) }}
+      <item>
+        <title>{{ .Title }}</title>
+        <link>{{ .Permalink }}</link>
+        <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+        <guid isPermaLink="true">{{ .Permalink }}</guid>
+        <description>{{ .Description | html }}</description>
+        <content type="html">{{ .Content | html }}</content>
+      </item>
+      {{ end }}
+    {{ end }}
+  </channel>
+</rss>
