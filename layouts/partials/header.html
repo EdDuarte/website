@@ -18,7 +18,7 @@
 
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ .Params.description }}">
-<meta property="og:site_name" content="Ed Duarte">
+<meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 <meta property="og:type" content="article">
 {{ if .Params.image }}
@@ -42,14 +42,17 @@
     content="{{ .Site.BaseURL }}/13320427_307466512918702_3833355147561267939_o_crop_red_v2_compressed_alt.jpg"
 >
 {{ end }}
-<meta name="theme-color" content="#fff">
-<meta name="apple-mobile-web-app-title" content="Ed Duarte">
-<meta name="application-name" content="Ed Duarte">
+<meta name="theme-color" content="#111a2c">
+<meta name="msapplication-TileColor" content="#242933">
+<meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}">
+<meta name="application-name" content="{{ .Site.Title }}">
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.webmanifest">
-<link rel="shortcut icon" href="/favicon.ico?v=3">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=4">
+<link rel="manifest" href="/site.webmanifest?v=4">
+<link rel="shortcut icon" href="/favicon.ico?v=4">
+<link rel="mask-icon" href="/safari-pinned-tab.svg?v=4" color="#242933">
 
 <link rel="dns-prefetch" href="https://d33wubrfki0l68.cloudfront.net" />
 <link rel="dns-prefetch" href="https://www.googletagmanager.com/" />
@@ -1628,6 +1631,10 @@ figure,
 
   .home-list {
     margin-right: 0;
+  }
+
+  .theme-link {
+    margin-top: .2em;
   }
 
   .home-list-container {
