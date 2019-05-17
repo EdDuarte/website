@@ -5,6 +5,7 @@ const TOOLTIP_ELEGANT = 'Switch to elegant theme';
 const TOOLTIP_SIMPLE = 'Switch to simple theme (better for slow connections)';
 
 const ls = window.localStorage;
+const elegantCssListenerCache = new Map();
 
 const themeLinkElem = document.getElementsByClassName("theme-link")[0].childNodes[0];
 const titleElem = document.getElementsByTagName("title")[0];
@@ -127,19 +128,23 @@ const titleElem = document.getElementsByTagName("title")[0];
   }
 }(typeof global !== "undefined" ? global : this));
 
-const matchAndLoad = function (f, q, before, className) {
+const matchAndLoad = function (f, q, before, className, listenerCache) {
   const mq = window.matchMedia(q);
   let loaded = false;
   if (mq.matches && !loaded) {
     loadCSS(f, before, q, className);
     loaded = true;
   }
-  mq.addListener(function (mq) {
+  const listener = (mq) => {
     if (mq.matches && !loaded) {
       loadCSS(f, before, q, className);
       // loaded = true;
     }
-  });
+  };
+  mq.addListener(listener);
+  if (listenerCache) {
+    listenerCache.set(mq, listener);
+  }
 };
 
 const loadElegantTheme = function () {
@@ -151,31 +156,36 @@ const loadElegantTheme = function () {
       "/css/defer-elegant-min-width-2750.css",
       "screen and (min-width:2750px)",
       titleElem,
-      ELEGANT_MODE_CLASS_NAME
+      ELEGANT_MODE_CLASS_NAME,
+      elegantCssListenerCache
   );
   matchAndLoad(
       "/css/defer-elegant-min-width-1100.css",
       "screen and (min-width:1100px)",
       titleElem,
-      ELEGANT_MODE_CLASS_NAME
+      ELEGANT_MODE_CLASS_NAME,
+      elegantCssListenerCache
   );
   matchAndLoad(
       "/css/defer-elegant-max-width-1099.css",
       "screen and (max-width: 1099px)",
       titleElem,
-      ELEGANT_MODE_CLASS_NAME
+      ELEGANT_MODE_CLASS_NAME,
+      elegantCssListenerCache
   );
   matchAndLoad(
       "/css/defer-elegant-min-width-785.css",
       "screen and (min-width: 785px)",
       titleElem,
-      ELEGANT_MODE_CLASS_NAME
+      ELEGANT_MODE_CLASS_NAME,
+      elegantCssListenerCache
   );
   matchAndLoad(
       "/css/defer-elegant-max-width-784.css",
       "screen and (max-width: 784px)",
       titleElem,
-      ELEGANT_MODE_CLASS_NAME
+      ELEGANT_MODE_CLASS_NAME,
+      elegantCssListenerCache
   );
 };
 
@@ -188,10 +198,11 @@ const toggleTheme = function () {
   } else {
     ls.setItem(SIMPLE_MODE_KEY, 'true');
     const list = document.getElementsByClassName(ELEGANT_MODE_CLASS_NAME);
-    console.log(list);
     Array.from(list).forEach((e) => {
-      console.log(e);
       e.parentNode.removeChild(e);
+    });
+    elegantCssListenerCache.forEach((v, k) => {
+      k.removeListener(v);
     });
     themeLinkElem.setAttribute('title', TOOLTIP_ELEGANT);
   }
