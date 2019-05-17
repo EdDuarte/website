@@ -33,7 +33,7 @@
   .blob-single-corner {
     top: -10px;
     height: 70px;
-    transform: skewY(.5deg);
+    transform: skewY(1deg);
   }
 
   .home-link a {
