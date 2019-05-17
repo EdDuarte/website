@@ -32,15 +32,27 @@
     content="{{ .Site.BaseURL }}{{ .Params.image }}"
 >
 {{ else }}
-<meta name="twitter:card" content="summary">
+{{ if .Params.hasThumbnail }}
+<meta name="twitter:card" content="summary_large_image">
 <meta
     name="twitter:image"
-    content="{{ .Site.BaseURL }}/13320427_307466512918702_3833355147561267939_o_crop_red_v2_compressed_alt.jpg"
+    content="{{ .Site.BaseURL }}thumbnail/{{ .File.BaseFileName }}.png"
 />
 <meta
     property="og:image"
-    content="{{ .Site.BaseURL }}/13320427_307466512918702_3833355147561267939_o_crop_red_v2_compressed_alt.jpg"
+    content="{{ .Site.BaseURL }}thumbnail/{{ .File.BaseFileName }}.png"
 >
+{{ else }}
+<meta name="twitter:card" content="summary">
+<meta
+    name="twitter:image"
+    content="{{ .Site.BaseURL }}rss-icon.png"
+/>
+<meta
+    property="og:image"
+    content="{{ .Site.BaseURL }}rss-icon.png"
+>
+{{ end }}
 {{ end }}
 <meta name="theme-color" content="#111a2c">
 <meta name="msapplication-TileColor" content="#242933">
