@@ -1,0 +1,14 @@
+<figure class="js-lazy-image" src='{{ .Get "src" }}'>
+  <img
+      src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+      alt='{{ .Get "alt" }}'
+      title='{{ .Get "alt" }}'
+  />
+  <figcaption>{{ .Inner }}</figcaption>
+</figure>
+<noscript>
+<figure>
+  <img src='{{ .Get "src" }}' alt='{{ .Get "alt" }}' title='{{ .Get "alt" }}' />
+  <figcaption>{{ .Inner }}</figcaption>
+</figure>
+</noscript>

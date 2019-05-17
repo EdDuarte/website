@@ -53,14 +53,13 @@ Additionally, the represented data is normalized within an adjustable scale.
 This can be used to filter out extremely high or extremely low samples,
 uniforming the remaining data and improving its visibility.
 
-{class="js-lazy-image" src="/hcii2016/screenshot-01.png"}
-![Current prototype of Living Globe](# "Current prototype of Living Globe, showing population growth mapped to the bars/pilars height, total life expectancy at birth to bar color, and birth/death ratio to country color.")
-
-<noscript>
-
-![Current prototype of Living Globe](/hcii2016/screenshot-01.png "Current prototype of Living Globe, showing population growth mapped to the bars/pilars height, total life expectancy at birth to bar color, and birth/death ratio to country color.")
-
-</noscript>
+{{< figure
+  src="/hcii2016/screenshot-01.png"
+  alt="Current prototype of Living Globe" >}}
+Current prototype of Living Globe, showing population growth mapped to the
+bars/pilars height, total life expectancy at birth to bar color, and birth/death
+ratio to country color.
+{{</ figure >}}
 
 Our prototype was developed with demographic data in mind, like total
 population, density, population-growth, life expectancy, net migration, crude
@@ -96,14 +95,15 @@ normalizes the remaining data set, can potentially lead to improvements in the
 interpretation of data in countries with small samples (eg. Portugal) by
 filtering out countries with large samples (e.g. China).
 
-{class="js-lazy-image" src="/hcii2016/screenshot-02-transparent.png"}
-![Living Globe when using the filtering feature with data normalization](# 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishable colors for the remaining countries\)')
-
-<noscript>
-
-![Living Globe when using the filtering feature with data normalization](/hcii2016/screenshot-02-transparent.png 'Living Globe showing total population mapped to the country color: the data from all countries is displayed on the left, and filtering out large population countries \(such as China and India\) on the right \(resulting in a representation with much more diverse and distinguishable colors for the remaining countries\)')
-
-</noscript>
+{{< figure
+  src="/hcii2016/screenshot-02-transparent.png"
+  alt="Living Globe when using the filtering feature with data normalization" >}}
+Living Globe showing total population mapped to the country color: the data from
+all countries is displayed on the left, and filtering out large population
+countries (such as China and India) on the right (resulting in a
+representation with much more diverse and distinguishable colors for the
+remaining countries).
+{{</ figure >}}
 
 This application can be tested [here](https://edduarte.github.io/living-globe).
 It is built with Javascript ES6, [jQuery](https://jquery.com/),

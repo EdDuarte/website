@@ -76,14 +76,12 @@ application also features a graphical user interface for dealing with key
 distribution requests, which was designed to be similar to the Dropbox user
 interface in order to be accessible to common Dropbox users.
 
-{class="js-lazy-image" src="/protbox/screenshot_main.png"}
-![Protbox desktop application](# "Protbox desktop application running in the background, protecting two shared folders from Dropbox.")
-
-<noscript>
-
-![Protbox desktop application](/protbox/screenshot_main.png "Protbox desktop application running in the background, protecting two shared folders from Dropbox.")
-
-</noscript>
+{{< figure
+  src="/protbox/screenshot_main.png"
+  alt="Protbox desktop application" >}}
+Protbox desktop application running in the background, protecting two shared
+folders from Dropbox.
+{{</ figure >}}
 
 There are only two requirements for the host cloud storage solution: it should
 allow the sharing of folders by many persons, and it should allow client
