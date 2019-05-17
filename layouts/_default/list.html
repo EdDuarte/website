@@ -1,15 +1,17 @@
 {{ partial "header.html" . }}
 <title>{{ .Title }} - Ed Duarte</title>
 </head>
+
 <body>
+
+<div class="blob-container">
+  <div class="blob blob-single-corner fade-in"></div>
+</div>
 
 <header class="logo">
   <span class="home-link"><a href="{{ .Site.BaseURL }}">Ed Duarte</a></span>
+  {{ partial "theme-link.html" }}
 </header>
-
-<div class="blob-container">
-  <div class="blob blob-single-corner"></div>
-</div>
 
 <div class="article-container">
   <div class="title">{{ .Title }}</div>
@@ -23,23 +25,23 @@
 
 <main class="main-container list-container">
 
-    <div class="article-table">
+  <div class="article-table">
 
-      <main>
+    <main>
 
-        <ul class="list">
-          {{ range .Data.Pages.ByDate.Reverse }}
-          {{ if not .Params.hidden }}
-          <li>
-            {{ partial "list-item.html" . }}
-          </li>
-          {{ end }}
-          {{ end }}
-        </ul>
+      <ul class="list">
+        {{ range .Data.Pages.ByDate.Reverse }}
+        {{ if not .Params.hidden }}
+        <li>
+          {{ partial "list-item.html" . }}
+        </li>
+        {{ end }}
+        {{ end }}
+      </ul>
 
-      </main>
+    </main>
 
-    </div>
+  </div>
 
 </main>
 

@@ -30,52 +30,6 @@
     margin-right: 8px;
   }
 
-  .circle-article-1 {
-    left: calc(50% - 80px);
-    display: block;
-  }
-
-  .circle-article-2 {
-    left: calc(50% - 700px);
-    display: block;
-  }
-
-  .circle-article-3 {
-    left: calc(50% + 80px);
-    display: block;
-  }
-
-  .blob-home-bottom {
-    top: 450px;
-  }
-
-  .blob-home-bottom-cut {
-    top: 450px;
-  }
-
-  .blob-home-corner {
-    height: 450px;
-  }
-
-  .blob-home-bottom-cut {
-    border-top-right-radius: 35% 30px;
-  }
-
-  .blob-home-corner {
-    border-bottom-left-radius: 35% 30px;
-  }
-
-  .blob-single-corner {
-    top: calc((100vw * -0.01) - 50px);
-    left: 0;
-    width: 200vw;
-    transform: skewY(-2deg);
-  }
-
-  .home-link a {
-    color: #eceff4;
-  }
-
   p a,
   em a,
   ol a,

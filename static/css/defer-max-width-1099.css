@@ -16,40 +16,4 @@
     background-position: 0 1.22em;
   }
 
-  .blob-home-top,
-  .blob-home-top-cut {
-    visibility: hidden;
-  }
-
-  .blob-home-bottom,
-  .blob-home-bottom-cut {
-    width: 150%;
-    height: 100px;
-  }
-
-  .blob-home-bottom {
-    height: 100px;
-    left: 50%;
-    top: 620px;
-  }
-
-  .blob-home-bottom-cut {
-    border-top-right-radius: 35% 50px;
-    height: 100px;
-    top: 630px;
-  }
-
-  .blob-home-corner {
-    left: -50px;
-    width: 150%;
-    height: 630px;
-    border-bottom-left-radius: 35% 50px;
-  }
-
-  .bio-temp,
-  .bio-temp a,
-  .section-name {
-    color: #eceff4;
-  }
-
 }

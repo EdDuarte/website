@@ -5,15 +5,15 @@
 <body>
 
 <div class="blob-container">
-  <div class="blob blob-single-corner"></div>
-  <div class="circle circle-article-1"></div>
-  <div class="circle circle-article-2"></div>
-  <div class="circle circle-article-3"></div>
+  <div class="blob blob-single-corner fade-in"></div>
+  <div class="circle circle-article-1 fade-in"></div>
+  <div class="circle circle-article-2 fade-in"></div>
+  <div class="circle circle-article-3 fade-in"></div>
 </div>
 
 <header class="logo">
   <span class="home-link"><a href="{{ .Site.BaseURL }}">Ed Duarte</a></span>
-  <!--<span class="noselect">/</span><span class="section-link section-link-{{ .Section }}"><a href="/{{.Section}}">{{.Section}}</a></span>-->
+  {{ partial "theme-link.html" }}
 </header>
 
 <main class="main-container article-container">

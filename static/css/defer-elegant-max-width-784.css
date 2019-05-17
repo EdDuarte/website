@@ -1,0 +1,43 @@
+
+@media screen and (max-width: 784px) {
+
+  .circle-article-1 {
+    left: calc(50% - 80px);
+    display: block;
+  }
+
+  .circle-article-2 {
+    left: calc(50% - 700px);
+    display: block;
+  }
+
+  .circle-article-3 {
+    left: calc(50% + 80px);
+    display: block;
+  }
+
+  .blob-home-bottom {
+    top: 450px;
+    border-top-right-radius: 35% 30px;
+  }
+
+  .blob-home-bottom-cut {
+    top: 450px;
+  }
+
+  .blob-home-corner {
+    height: 450px;
+    border-bottom-left-radius: 35% 30px;
+  }
+
+  .blob-single-corner {
+    top: -10px;
+    height: 70px;
+    transform: skewY(.5deg);
+  }
+
+  .home-link a {
+    color: #eceff4;
+  }
+
+}

@@ -1,8 +1,19 @@
+
+const SIMPLE_MODE_KEY = 'simpleModeActive';
+const ELEGANT_MODE_CLASS_NAME = 'elegant';
+const TOOLTIP_ELEGANT = 'Switch to elegant theme';
+const TOOLTIP_SIMPLE = 'Switch to simple theme (better for slow connections)';
+
+const ls = window.localStorage;
+
+const themeLinkElem = document.getElementsByClassName("theme-link")[0].childNodes[0];
+const titleElem = document.getElementsByTagName("title")[0];
+
 /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 (function (w) {
   "use strict";
   /* exported loadCSS */
-  const loadCSS = function (href, before, media) {
+  const loadCSS = function (href, before, media, className) {
     // Arguments explained:
     // `href` [REQUIRED] is the URL for your CSS file.
     // `before` [OPTIONAL] is the element the script should use as a reference
@@ -14,6 +25,9 @@
     // default it will be 'all'
     const doc = w.document;
     const ss = doc.createElement("link");
+    if (className) {
+      ss.setAttribute("class", className);
+    }
     let ref;
     if (before) {
       ref = before;
@@ -113,64 +127,109 @@
   }
 }(typeof global !== "undefined" ? global : this));
 
-loadCSS("/css/defer.css");
-
-let minWidth1100Loaded = false;
-let maxWidth1099Loaded = false;
-let minWidth785Loaded = false;
-let maxWidth784Loaded = false;
-
-const q1 = "screen and (min-width:1100px)";
-const mq1 = window.matchMedia(q1);
-if (mq1.matches && !minWidth1100Loaded) {
-  loadCSS("/css/defer-min-width-1100.css", "", q1);
-  minWidth1100Loaded = true;
-}
-mq1.addListener(function (mq1) {
-  if (mq1.matches && !minWidth1100Loaded) {
-    loadCSS("/css/defer-min-width-1100.css", "", q1);
-    minWidth1100Loaded = true;
+const matchAndLoad = function (f, q, before, className) {
+  const mq = window.matchMedia(q);
+  let loaded = false;
+  if (mq.matches && !loaded) {
+    loadCSS(f, before, q, className);
+    loaded = true;
   }
-});
+  mq.addListener(function (mq) {
+    if (mq.matches && !loaded) {
+      loadCSS(f, before, q, className);
+      // loaded = true;
+    }
+  });
+};
 
-const q2 = "screen and (max-width: 1099px)";
-const mq2 = window.matchMedia(q2);
-if (mq2.matches && !maxWidth1099Loaded) {
-  loadCSS("/css/defer-max-width-1099.css", "", q2);
-  maxWidth1099Loaded = true;
-}
-mq2.addListener(function (mq2) {
-  if (mq2.matches && !maxWidth1099Loaded) {
-    loadCSS("/css/defer-max-width-1099.css", "", q2);
-    maxWidth1099Loaded = true;
-  }
-});
+const loadElegantTheme = function () {
+  // setTimeout(function () {
+  loadCSS("/css/defer-elegant.css", titleElem, "all", ELEGANT_MODE_CLASS_NAME);
+  // }, 2000);
 
-const q3 = "screen and (min-width: 785px)";
-const mq3 = window.matchMedia(q3);
-if (mq3.matches && !minWidth785Loaded) {
-  loadCSS("/css/defer-min-width-785.css", "", q3);
-  minWidth785Loaded = true;
-}
-mq3.addListener(function (mq3) {
-  if (mq3.matches && !minWidth785Loaded) {
-    loadCSS("/css/defer-min-width-785.css", "", q3);
-    minWidth785Loaded = true;
-  }
-});
+  matchAndLoad(
+      "/css/defer-elegant-min-width-2750.css",
+      "screen and (min-width:2750px)",
+      titleElem,
+      ELEGANT_MODE_CLASS_NAME
+  );
+  matchAndLoad(
+      "/css/defer-elegant-min-width-1100.css",
+      "screen and (min-width:1100px)",
+      titleElem,
+      ELEGANT_MODE_CLASS_NAME
+  );
+  matchAndLoad(
+      "/css/defer-elegant-max-width-1099.css",
+      "screen and (max-width: 1099px)",
+      titleElem,
+      ELEGANT_MODE_CLASS_NAME
+  );
+  matchAndLoad(
+      "/css/defer-elegant-min-width-785.css",
+      "screen and (min-width: 785px)",
+      titleElem,
+      ELEGANT_MODE_CLASS_NAME
+  );
+  matchAndLoad(
+      "/css/defer-elegant-max-width-784.css",
+      "screen and (max-width: 784px)",
+      titleElem,
+      ELEGANT_MODE_CLASS_NAME
+  );
+};
 
-const q4 = "screen and (max-width: 784px)";
-const mq4 = window.matchMedia(q4);
-if (mq4.matches && !maxWidth784Loaded) {
-  loadCSS("/css/defer-max-width-784.css", "", q4);
-  maxWidth784Loaded = true;
-}
-mq4.addListener(function (mq4) {
-  if (mq4.matches && !maxWidth784Loaded) {
-    loadCSS("/css/defer-max-width-784.css", "", q4);
-    maxWidth784Loaded = true;
+const toggleTheme = function () {
+  const isSimpleMode = ls.getItem(SIMPLE_MODE_KEY) === 'true';
+  if (isSimpleMode) {
+    ls.setItem(SIMPLE_MODE_KEY, 'false');
+    loadElegantTheme();
+    themeLinkElem.setAttribute('title', TOOLTIP_SIMPLE);
+  } else {
+    ls.setItem(SIMPLE_MODE_KEY, 'true');
+    const list = document.getElementsByClassName(ELEGANT_MODE_CLASS_NAME);
+    console.log(list);
+    Array.from(list).forEach((e) => {
+      console.log(e);
+      e.parentNode.removeChild(e);
+    });
+    themeLinkElem.setAttribute('title', TOOLTIP_ELEGANT);
   }
-});
+  return false;
+};
+
+// setTimeout(function () {
+loadCSS("/css/defer.css", titleElem);
+// }, 1000);
+
+// setTimeout(function () {
+
+matchAndLoad(
+    "/css/defer-min-width-1100.css",
+    "screen and (min-width:1100px)",
+    titleElem
+);
+matchAndLoad(
+    "/css/defer-max-width-1099.css",
+    "screen and (max-width: 1099px)",
+    titleElem
+);
+matchAndLoad(
+    "/css/defer-max-width-784.css",
+    "screen and (max-width: 784px)",
+    titleElem
+);
+
+// }, 3000);
+
+const isSimpleMode = ls.getItem(SIMPLE_MODE_KEY) === 'true';
+
+if (isSimpleMode) {
+  themeLinkElem.setAttribute('title', TOOLTIP_ELEGANT);
+} else {
+  themeLinkElem.setAttribute('title', TOOLTIP_SIMPLE);
+  loadElegantTheme();
+}
 
 loadJS("/js/defer.js");
 loadJS("https://www.google-analytics.com/analytics.js");

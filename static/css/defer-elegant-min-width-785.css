@@ -17,10 +17,9 @@
   }
 
   .blob-single-corner {
-    top: -40px;
-    left: -60px;
-    width: 500px;
-    transform: skewY(-5deg);
+    top: -1vw;
+    height: 78px;
+    transform: skewY(.4deg);
   }
 
   .home-link a {

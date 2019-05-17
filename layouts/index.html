@@ -11,14 +11,17 @@
 {{ $tags := .Site.Taxonomies.tags }}
 
 <div class="blob-container">
-  <div class="blob blob-home-top"></div>
+  <div class="blob-photo fade-in"></div>
+  <div class="blob blob-home-top fade-in"></div>
   <div class="blob blob-home-top-cut"></div>
-  <div class="blob blob-home-bottom"></div>
+  <div class="blob blob-home-bottom fade-in"></div>
   <div class="blob blob-home-bottom-cut"></div>
-  <div class="blob blob-home-corner"></div>
+  <div class="blob blob-home-corner fade-in"></div>
 </div>
 
-<header class="logo"></header>
+<header class="logo">
+  {{ partial "theme-link.html" }}
+</header>
 
 <div class="article-container bio-temp-content">
 
@@ -92,7 +95,12 @@
   <!--<hr>-->
   <!--<div class="card-item-title">Series of Articles</div>-->
   <ul class="series">
-    {{ range (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
+    {{ range $i, $e := (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
+    {{ if $i }}
+    <li>
+    <hr>
+    </li>
+    {{ end }}
     <li>
       <a href="{{ .Page.Permalink }}">
         <div class="card-item-desc">
