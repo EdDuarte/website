@@ -30,10 +30,11 @@
     border-bottom-left-radius: 35% 30px;
   }
 
-  .blob-single-corner {
-    top: -10px;
-    height: 70px;
-    transform: skewY(1deg);
+  .blob-photo {
+    background-repeat: no-repeat;
+    max-width: 915px;
+    margin-top: -50px;
+    margin-left: calc(50% - 400px);
   }
 
   .home-link a {

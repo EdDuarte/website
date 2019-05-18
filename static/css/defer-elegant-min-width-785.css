@@ -16,10 +16,10 @@
     display: block;
   }
 
-  .blob-single-corner {
-    top: -1vw;
-    height: 78px;
-    transform: skewY(.4deg);
+  .blob-photo {
+    background-repeat: no-repeat;
+    max-width: 1250px;
+    margin-left: calc(50% - 500px);
   }
 
   .home-link a {

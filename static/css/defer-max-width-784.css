@@ -20,7 +20,7 @@
   }
 
   .mjx-math {
-    font-size: 68%;
+    font-size: 19px;
   }
 
   .social-icon {
@@ -63,5 +63,10 @@
       text-decoration-color: #b3b9c4;
     }
   }
+}
 
+@media screen and (max-width: 542px) {
+  .mjx-math {
+    font-size: 3.5vw;
+  }
 }

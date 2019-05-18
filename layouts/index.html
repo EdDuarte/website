@@ -25,8 +25,8 @@
 
 <div class="article-container bio-temp-content">
 
-  <div class="title section-name">{{ .Title }}</div>
-  <div class="social">
+  <div class="title section-name fade-in">{{ .Title }}</div>
+  <div class="social fade-in">
     <a
         href="https://twitter.com/eddrt"
         title="Twitter"
@@ -58,12 +58,12 @@
       <span class="screen-reader">RSS feed</span>
     </a>
   </div>
-  <section class="tags-container">
+  <section class="tags-container fade-in">
     <ul class="links tags">
       {{ range $key, $value := $tags }}<li><a href="{{ $value.Page.Permalink }}" class="badge badge-{{ $key }}">{{ lower $value.Page.Title }}</a></li>{{ end }}
     </ul>
   </section>
-  <div class="header-meta bio-temp">
+  <div class="header-meta bio-temp fade-in">
     {{ .Content }}
   </div>
 </div>

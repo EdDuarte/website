@@ -26,7 +26,7 @@ links:
     url: http://arxiv.org/abs/1501.03139
   - name: Talk slides as PDF
     icon: slides
-    url: /openidentity2014/slides.pdf
+    url: /protbox/slides.pdf
   - name: Talk slides on Speaker Deck
     icon: slides
     url: https://speakerdeck.com/edduarte/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens

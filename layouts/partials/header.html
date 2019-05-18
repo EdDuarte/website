@@ -203,6 +203,7 @@ pre {
 .subtitle,
 .title,
 figcaption,
+.footnotes:before,
 .footer > ul > li,
 h1,
 h2,
@@ -231,6 +232,7 @@ ul {
 .font-load-1 .subtitle,
 .font-load-1 .title,
 .font-load-1 figcaption,
+.font-load-1 .footnotes:before,
 .font-load-1 .footer > ul > li,
 .font-load-1 h1,
 .font-load-1 h2,
@@ -305,6 +307,7 @@ strong em {
 .title,
 .subtitle,
 .footer > ul > li,
+.font-load-1 .footnotes:before,
 .tags,
 h1,
 h2,
@@ -323,6 +326,7 @@ strong em {
   .font-load-1 .title,
   .font-load-1 .subtitle,
   .font-load-1 footer > ul > li,
+  .font-load-1 .footnotes:before,
   .font-load-1 h1,
   .font-load-1 h2,
   .font-load-1 h3,
@@ -511,12 +515,6 @@ img.logoicon {
   height: 20px;
   min-width: 0;
   width: 20px;
-}
-
-.logo {
-  height: 100px;
-  padding-top: 1em;
-  text-transform: uppercase;
 }
 
 .main-container header {
@@ -815,9 +813,9 @@ h5 {
   margin-bottom: -.3em;
 }
 
-.font-load-1 .logo,
 .font-load-1 h5,
-.font-load-1 h6 {
+.font-load-1 h6,
+.font-load-1 .footnotes:before {
   letter-spacing: -.01em;
 }
 
@@ -839,13 +837,15 @@ p + h5 {
   padding-top: .2em;
 }
 
-h6 {
+h6,
+.footnotes:before {
   font-size: 1em;
   letter-spacing: -.06em;
   margin-bottom: -.45em;
 }
 
-.font-load-1 h6 {
+.font-load-1 h6,
+.font-load-1 .footnotes:before {
   font-size: 1em;
   margin-bottom: -.35em;
 }
@@ -997,21 +997,24 @@ samp {
   color: #55627b;
 }
 
+.logo {
+  height: 100px;
+  line-height: 58px;
+}
+
 .home-link {
   font-size: .9em;
   letter-spacing: -.04em;
-  padding-top: 5em;
-  padding-right: .5em;
+  text-transform: uppercase;
 }
 
 .font-load-1 .home-link {
   font-size: .9em;
   letter-spacing: -.01em;
-  padding-top: 5em;
 }
 
 .theme-link {
-  margin-top: .1em;
+  margin-top: .25em;
   float: right;
 }
 
@@ -1129,6 +1132,18 @@ figcaption a,
   text-decoration-color: #b3b9c4;
 }
 
+.footnotes {
+  margin-top: 2em;
+}
+
+.footnotes hr {
+  margin-top: .5em;
+}
+
+.footnotes:before {
+  content: 'References';
+}
+
 .mlt .list-item:hover .list-title,
 .list-item:hover .list-desc {
   color: #96a2bb;
@@ -1140,11 +1155,6 @@ figcaption a,
 
 .list-meta-date {
   text-transform: uppercase;
-}
-
-.home-link a {
-  padding-top: .1em;
-  padding-bottom: .1em;
 }
 
 .series-badge {
@@ -1613,7 +1623,8 @@ figure,
   .font-load-2 h3,
   .font-load-2 h4,
   .font-load-2 h5,
-  .font-load-2 h6 {
+  .font-load-2 h6,
+  .font-load-2 .footnotes:before {
     font-family: Lato-Bold, Lato, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
     font-weight: 700;
   }
@@ -1643,10 +1654,6 @@ figure,
 
   .home-list {
     margin-right: 0;
-  }
-
-  .theme-link {
-    margin-top: .2em;
   }
 
   .home-list-container {
@@ -1838,6 +1845,11 @@ figure,
     text-align: center;
   }
 
+  .social {
+    margin-top: .7em;
+    margin-bottom: .5em;
+  }
+
   .bio-temp {
     margin-left: auto;
     margin-right: auto;
@@ -1863,6 +1875,10 @@ figure,
 
   .logo {
     height: 78px;
+  }
+
+  .theme-link {
+    margin-top: .2em;
   }
 
   .logo,
@@ -2180,6 +2196,11 @@ figure,
   .list-meta,
   .font-load-1 .list-meta {
     padding: 0;
+  }
+
+  .series-header,
+  .font-load-1 .series-header {
+    margin-bottom: .2em;
   }
 }
 
