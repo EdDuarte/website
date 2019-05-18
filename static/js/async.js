@@ -233,13 +233,22 @@ matchAndLoad(
 
 // }, 3000);
 
-const isSimpleMode = ls.getItem(SIMPLE_MODE_KEY) === 'true';
-
-if (isSimpleMode) {
-  themeLinkElem.setAttribute('title', TOOLTIP_ELEGANT);
+// set the theme according to network limitations
+const connection =
+    navigator.connection ||
+    navigator.mozConnection ||
+    navigator.webkitConnection;
+if (connection && connection.effectiveType === 'cellular') {
+  // do not load elegant theme, in order to reduce the amount
+  // of mobile data that is used for this session
 } else {
-  themeLinkElem.setAttribute('title', TOOLTIP_SIMPLE);
-  loadElegantTheme();
+  const isSimpleMode = ls.getItem(SIMPLE_MODE_KEY) === 'true';
+  if (isSimpleMode) {
+    themeLinkElem.setAttribute('title', TOOLTIP_ELEGANT);
+  } else {
+    themeLinkElem.setAttribute('title', TOOLTIP_SIMPLE);
+    loadElegantTheme();
+  }
 }
 
 loadJS("/js/defer.js");
