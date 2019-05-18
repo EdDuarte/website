@@ -26,7 +26,7 @@ links:
     url: http://arxiv.org/abs/1501.03139
   - name: Talk slides as PDF
     icon: slides
-    url: /protbox/slides.pdf
+    url: /posts/protbox/slides.pdf
   - name: Talk slides on Speaker Deck
     icon: slides
     url: https://speakerdeck.com/edduarte/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens
@@ -38,7 +38,7 @@ tags:
   - talk
 ---
 
-![Protbox header](/protbox/logo-v3.png)
+![Protbox header](/posts/protbox/logo-v3.png)
 
 Protbox is an open-source, cross-platform application for securely sharing files
 within existing cloud storage services like Dropbox, OneDrive, Google Drive and
@@ -77,7 +77,7 @@ distribution requests, which was designed to be similar to the Dropbox user
 interface in order to be accessible to common Dropbox users.
 
 {{< figure
-  src="/protbox/screenshot_main.png"
+  src="/posts/protbox/screenshot_main.png"
   alt="Protbox desktop application" >}}
 Protbox desktop application running in the background, protecting two shared
 folders from Dropbox.

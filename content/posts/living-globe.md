@@ -4,7 +4,7 @@ demographic data"
 description: "Open-source WebGL / three.js app for tri-dimensional worldwide data
 visualization, with customizable data-to-visual mapping and filtering with
 adjustable scales."
-image: "/living-globe/screenshot-01.png"
+image: "/posts/living-globe/screenshot-01.png"
 authors:
   - name: Ed Duarte
     url: https://www.edduarte.com
@@ -28,7 +28,7 @@ links:
     url: https://arxiv.org/abs/1607.05946
   - name: Talk slides as PDF
     icon: slides
-    url: /living-globe/slides.pdf
+    url: /posts/living-globe/slides.pdf
   - name: Talk slides on Speaker Deck
     icon: slides
     url: https://speakerdeck.com/edduarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data
@@ -54,7 +54,7 @@ This can be used to filter out extremely high or extremely low samples,
 uniforming the remaining data and improving its visibility.
 
 {{< figure
-  src="/living-globe/screenshot-01.png"
+  src="/posts/living-globe/screenshot-01.png"
   alt="Current prototype of Living Globe" >}}
 Current prototype of Living Globe, showing population growth mapped to the
 bars/pilars height, total life expectancy at birth to bar color, and birth/death
@@ -96,7 +96,7 @@ interpretation of data in countries with small samples (eg. Portugal) by
 filtering out countries with large samples (e.g. China).
 
 {{< figure
-  src="/living-globe/screenshot-02.png"
+  src="/posts/living-globe/screenshot-02.png"
   alt="Living Globe when using the filtering feature with data normalization" >}}
 Living Globe showing total population mapped to the country color: the data from
 all countries is displayed on the left, and filtering out large population
