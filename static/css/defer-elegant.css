@@ -72,6 +72,7 @@
 .blob-photo {
   height: 615px;
   z-index: -1;
+  animation-delay: .4s;
 }
 
 .blob-home-top {
