@@ -31,10 +31,11 @@
   }
 
   .blob-photo {
+    background-image: url("/header_small.png");
     background-repeat: no-repeat;
     max-width: 915px;
     margin-top: -50px;
-    margin-left: calc(50% - 400px);
+    margin-left: calc(50% - (550px - 25%));
   }
 
   .home-link a {
