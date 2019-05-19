@@ -43,7 +43,6 @@
   text-align: right;
   top: -160px;
   display: none;
-  animation-delay: .1s;
 }
 
 .circle-article-2 {
@@ -51,7 +50,7 @@
   text-align: left;
   top: 600px;
   display: none;
-  animation-delay: 0s;
+  animation-delay: .4s;
 }
 
 .circle-article-3 {
@@ -59,7 +58,7 @@
   text-align: left;
   top: 1400px;
   display: none;
-  animation-delay: .4s;
+  animation-delay: .8s;
 }
 
 .blob {
@@ -102,15 +101,15 @@
   right: -30px;
 }
 
-.blob-single-corner {
+.logo {
   background-color: #242933;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 58px;
 }
 
+.body-list .logo {
+  background-color: initial;
+}
+
+.home-link a,
 .badge {
   color: #eceff4;
 }
