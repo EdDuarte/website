@@ -16,7 +16,12 @@
     display: block;
   }
 
+  .blob-single-corner {
+    background-image: linear-gradient(-45deg, #303641 0, #242933 100%);
+  }
+
   .blob-photo {
+    background-image: url("/header.png");
     background-repeat: no-repeat;
     max-width: 1250px;
     margin-left: calc(50% - 500px);
