@@ -2325,8 +2325,6 @@ figure,
 
 (function () {
 
-  // setTimeout(function () {
-
   // Optimization for successive page refreshes
   if (sessionStorage.fontsLoaded1 && sessionStorage.fontsLoaded2) {
     document.documentElement.className += " font-load-1";
@@ -2335,17 +2333,15 @@ figure,
     return;
   }
 
+  // setTimeout(function () {
   if (sessionStorage.fontsLoaded1) {
     document.documentElement.className += " font-load-1";
   }
-
   // setTimeout(function () {
   if (sessionStorage.fontsLoaded2) {
     document.documentElement.className += " font-load-2";
-    // return;
   }
   // }, 1000);
-  //
   // }, 1000);
   // return;
 

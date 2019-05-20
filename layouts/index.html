@@ -80,8 +80,8 @@
 
 <div class="sticky">
 <section class="card card-item card-series">
-  <!--<hr>-->
-  <!--<div class="card-item-title">Series of Articles</div>-->
+  <div class="card-item-title">Collections</div>
+  <hr>
   <ul class="series">
     {{ range $i, $e := (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
     {{ if $i }}
