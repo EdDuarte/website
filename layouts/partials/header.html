@@ -5,10 +5,14 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{ .Params.description }}">
+{{ with .Keywords }}
 <meta
     name="keywords"
-    content="Ed Duarte, edduarte, eddrt, Java, Kotlin, RESTful architecture, Distributed Systems,  Distributed Caching, UI, UX, User Experience Design, User Interface Design, Natural Language Processing, Information Retrieval, Text Mining, iOS, Swift, Objective-C, Android, Jersey, Jetty, Tomcat, Spring Framework, Hibernate, SAAJ, JAXB, XSLT, Google App Engine, Parse, Firebase, Quartz, Semantic Web, JavaScript, jQuery, HTML"
+    content="{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}, Ed Duarte, edduarte, eddrt, duarte"
 >
+{{ else }}
+<meta name="keywords" content="Ed Duarte, edduarte, eddrt">
+{{ end }}
 <meta name="author" content="{{ .Site.Author.name }}">
 
 <meta name="twitter:title" content="{{ .Title }}">
@@ -1154,7 +1158,7 @@ figcaption a,
 }
 
 .series-badge {
-  background-color: #e8153f;
+  background-color: #6f849e;
   border-radius: 4px;
   color: #fff;
   font-size: .7em;

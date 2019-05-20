@@ -2,27 +2,40 @@
 /post/*                     /:splat
 /posts/*                    /:splat
 /series                     /
-/series/*                   /:splat
+/tag                        /
 /tags                       /
+/series/*                   /:splat
 /tag/*                      /:splat
 /tags/*                     /:splat
 /blog/*                     /:splat
-/talks/*                    /:splat
 /article                    /articles/
+/articles/*                 /:splat
 /essay                      /essays/
+/essays/*                   /:splat
 /paper                      /papers/
+/papers/*                   /:splat
 /project                    /projects/
+/projects/*                 /:splat
 /talk                       /talks/
-/living-globe               /living-globe-a-tridimensional-interactive-visualization-of-demographic-data-sets/
-/livingglobe                /living-globe-a-tridimensional-interactive-visualization-of-demographic-data-sets/
-/hcii2016                   /living-globe-a-tridimensional-interactive-visualization-of-demographic-data-sets/
-/living-globe-tridimensional-interactive-visualization-of-world-demographic-data/    /living-globe-a-tridimensional-interactive-visualization-of-demographic-data-sets/
-/protbox                    /protbox-a-desktop-application-for-secure-file-sharing-over-cloud-storage-using-eid-tokens/
-/openidentity2014           /protbox-a-desktop-application-for-secure-file-sharing-over-cloud-storage-using-eid-tokens/
-/secure-file-sharing-over-cloud-storage-using-eid-tokens/           /protbox-a-desktop-application-for-secure-file-sharing-over-cloud-storage-using-eid-tokens/
-/erlang-poker-ml            /developing-a-knowledge-based-system-for-texas-holdem-outcome-prediction-in-erlang/
-/poker-ml                   /developing-a-knowledge-based-system-for-texas-holdem-outcome-prediction-in-erlang/
-/vokter                     /vokter-a-java-library-that-detects-and-notifies-changes-in-web-documents/
-/thumbeo                    http://www.thumbeo.com/en/
-/thumbeo-a-ride-sharing-mobile-application-where-users-can-find-rides-near-them-schedule-their-own-rides-and-chat-in-real-time                    http://www.thumbeo.com/en/
+/talks/*                    /:splat
+
+/living-globe  /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
+/livingglobe  /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
+/hcii2016  /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
+
+/vokter  /vokter-a-library-that-periodically-checks-for-changes-in-web-documents/
+/vokter-a-java-library-that-detects-and-notifies-changes-in-web-documents  /vokter-a-library-that-periodically-checks-for-changes-in-web-documents/
+
+/thumbeo  http://www.thumbeo.com/en/
+/thumbeo-a-ride-sharing-mobile-application-where-users-can-find-rides-near-them-schedule-their-own-rides-and-chat-in-real-time  http://www.thumbeo.com/en/
+/thumbeo-a-mobile-app-to-finds-cheap-rides-nearby  http://www.thumbeo.com/en/
+
+/erlang-poker-ml  /knowledge-based-system-for-texas-holdem-outcome-prediction/
+/poker-ml  /knowledge-based-system-for-texas-holdem-outcome-prediction/
+/developing-a-knowledge-based-system-for-texas-holdem-outcome-prediction-in-erlang  /knowledge-based-system-for-texas-holdem-outcome-prediction/
+
+/protbox  /protbox-secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
+/openidentity2014  /protbox-secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
+/secure-file-sharing-over-cloud-storage-using-eid-tokens  /protbox-secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
+
 /living-globe-demo          https://edduarte.github.io/living-globe/

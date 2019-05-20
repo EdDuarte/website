@@ -43,4 +43,4 @@ notAlternative = true
 [permalinks]
   tags = "/:slug/"
   series = "/:slug/"
-  posts = "/:title/"
+  posts = "/:slug/"

@@ -1,9 +1,11 @@
 ---
-title: "Developing a knowledge-based system for Texas Hold'em outcome
-prediction in Erlang"
+title: "Knowledge-based system for Texas Hold'em outcome prediction"
 description: "Implementing a decision-tree classifier and a data management
-module to evaluate win-lose probabilities over the course of a Poker Texas
-Hold'em game."
+module in Erlang to evaluate win-lose probabilities over the course of a Poker
+Texas Hold'em game."
+keywords: [knowledge base, knowledge-based system, rule engine, recommender,
+machine learning, data mining, prediction system, decision tree, bayesian,
+bayesian network, probability, erlang, eresye, poker, texas hold'em]
 links:
   - name: Source code
     icon: github

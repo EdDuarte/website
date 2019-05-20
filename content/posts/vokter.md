@@ -1,14 +1,10 @@
 ---
-title: "Vokter, a Java library that detects and notifies changes in web
-documents"
-description: "High-performant library that uses LSH, DiffMatchPatch and Bloom
-filters to detect and notify textual changes in web documents."
-prologue: "This post outlines the architecture and design decisions behind
-Vokter, an open-source Java library that I've been developing since October
-2014. This does **not** address other projects under the 'Vokter' umbrella,
-such as HTTP servers that use the core library to manage a persistent state of
-Vokter on the web instead of locally, but I do hope to address them later in a
-future post."
+title: "Vokter: A library that periodically checks for changes in web documents"
+description: "High-performant Java library that uses LSH, DiffMatchPatch and
+Bloom filters to detect inserted and removed keywords from web documents."
+keywords: [java, library, rest, restful architecture, distributed systems, bloom
+filter, hashing, locality sensitive hashing, nearest neighbor search, natural
+language processing, nlp, information retrieval, text mining]
 links:
   - name: Project Hub
     url: https://github.com/vokter
@@ -22,6 +18,12 @@ tags:
   - project
 series:
   - dmproj
+prologue: "This post outlines the architecture and design decisions behind
+Vokter, an open-source Java library that I've been developing since October
+2014. This does **not** address other projects under the 'Vokter' umbrella,
+such as HTTP servers that use the core library to manage a persistent state of
+Vokter on the web instead of locally, but I do hope to address them later in a
+future post."
 ---
 
 What started as a simple project for a University class in Distributed

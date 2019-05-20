@@ -1,8 +1,10 @@
 ---
-title: "Protbox, a desktop application for secure file sharing over cloud
-storage using eID tokens"
+title: "Protbox: Secure and trustworthy file sharing over cloud storage using
+eID tokens"
 description: "Open-source & cross-platform app that performs file encryption
 and user authentication on existing cloud storage services."
+keywords: [information security, cloud storage, file encryption, authentication,
+eID token, dropbox, onedrive, google drive, sugarsync]
 authors:
   - name: Ed Duarte
     url: https://www.edduarte.com
@@ -38,8 +40,6 @@ tags:
   - talk
 ---
 
-![Protbox header](/posts/protbox/logo-v3.png)
-
 Protbox is an open-source, cross-platform application for securely sharing files
 within existing cloud storage services like Dropbox, OneDrive, Google Drive and
 SugarSync.
@@ -51,6 +51,13 @@ SugarSync.
 - access control to the shared data based on strong identification and
   authentication of people, using the nowadays widespread electronic, personal
   identity tokens (eIDs for short).
+
+{{< figure
+  src="/posts/protbox/screenshot_main.png"
+  alt="Protbox desktop application" >}}
+Protbox desktop application running in the background, protecting two shared
+folders from Dropbox.
+{{</ figure >}}
 
 Although similar solutions already exist, these tend to require all keys to be
 stored on a centralized database owned by the service provider, and hence the
@@ -75,13 +82,6 @@ with any operating system with a suitable Java Runtime Environment. The
 application also features a graphical user interface for dealing with key
 distribution requests, which was designed to be similar to the Dropbox user
 interface in order to be accessible to common Dropbox users.
-
-{{< figure
-  src="/posts/protbox/screenshot_main.png"
-  alt="Protbox desktop application" >}}
-Protbox desktop application running in the background, protecting two shared
-folders from Dropbox.
-{{</ figure >}}
 
 There are only two requirements for the host cloud storage solution: it should
 allow the sharing of folders by many persons, and it should allow client
