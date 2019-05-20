@@ -1,5 +1,6 @@
 ---
 title: "About me"
+image: "thumbnail/ed-duarte.jpg"
 hidden: true
 markup: mmark
 ---

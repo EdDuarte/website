@@ -4,7 +4,7 @@ demographic data"
 description: "Open-source WebGL / three.js app for tri-dimensional worldwide data
 visualization, with customizable data-to-visual mapping and filtering with
 adjustable scales."
-image: "/posts/living-globe/screenshot-01.png"
+image: "posts/living-globe/screenshot-01.png"
 authors:
   - name: Ed Duarte
     url: https://www.edduarte.com
