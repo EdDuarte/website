@@ -9,7 +9,7 @@
     name="keywords"
     content="Ed Duarte, edduarte, eddrt, Java, Kotlin, RESTful architecture, Distributed Systems,  Distributed Caching, UI, UX, User Experience Design, User Interface Design, Natural Language Processing, Information Retrieval, Text Mining, iOS, Swift, Objective-C, Android, Jersey, Jetty, Tomcat, Spring Framework, Hibernate, SAAJ, JAXB, XSLT, Google App Engine, Parse, Firebase, Quartz, Semantic Web, JavaScript, jQuery, HTML"
 >
-<meta name="author" content="Ed Duarte">
+<meta name="author" content="{{ .Site.Author.name }}">
 
 <meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ .Params.description }}">
@@ -244,15 +244,10 @@ ul {
 }
 
 .prologue,
-b,
-b em,
 blockquote p,
 dfn,
-em,
 ol,
 p,
-strong,
-strong em,
 ul {
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
@@ -268,15 +263,10 @@ strong em {
 }
 
 .font-load-1 .prologue,
-.font-load-1 b,
-.font-load-1 b em,
 .font-load-1 blockquote p,
 .font-load-1 dfn,
-.font-load-1 em,
 .font-load-1 ol,
 .font-load-1 p,
-.font-load-1 strong,
-.font-load-1 strong em,
 .font-load-1 ul {
   font-family: Spectral, "Times New Roman", Times, serif;
 }
@@ -290,14 +280,18 @@ strong em {
 }
 
 .font-load-2 b,
-.font-load-2 strong {
+.font-load-2 p strong,
+.font-load-2 ul strong,
+.font-load-2 ol strong {
   font-family: Spectral-Bold, Spectral, "Times New Roman", Times, serif;
   letter-spacing: -.05em;
 }
 
 .font-load-2 .prologue strong,
 .font-load-2 b em,
-.font-load-2 strong em {
+.font-load-2 p strong em,
+.font-load-2 ul strong em,
+.font-load-2 ol strong em {
   font-family: Spectral-Bold-Italic, Spectral, "Times New Roman", Times, serif;
   font-style: normal;
   letter-spacing: -.05em;
@@ -332,7 +326,8 @@ strong em {
   .font-load-1 h3,
   .font-load-1 h4,
   .font-load-1 h5,
-  .font-load-1 h6 {
+  .font-load-1 h6,
+  .font-load-2 .sidenote strong {
     font-weight: 400;
   }
 }
@@ -1500,8 +1495,7 @@ h4 a,
 h5,
 h5 a,
 h6,
-h6 a,
-strong {
+h6 a {
   color: #111a2c;
 }
 
@@ -1625,6 +1619,7 @@ figure,
   .font-load-2 h4,
   .font-load-2 h5,
   .font-load-2 h6,
+  .font-load-2 .sidenote strong,
   .font-load-2 .footnotes:before {
     font-family: Lato-Bold, Lato, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
     font-weight: 700;

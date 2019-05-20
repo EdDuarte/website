@@ -51,9 +51,10 @@ This application is composed of three modules:
 - a tree module, that implements the decision tree and the probability
   calculation methods.
 
+
 ## {{< anchor link="#preliminaries" >}}Preliminaries {#preliminaries}
 
-A match is considered a result of seven cards that occurred throughout four
+A match is considered a result of seven cards that showed up throughout four
 rounds. The four rounds are numbered from 0 to 3:
 
 - Round 0: when the user is given 2 cards
@@ -61,14 +62,15 @@ rounds. The four rounds are numbered from 0 to 3:
 - Round 2: when the fourth card on the table is shown
 - Round 3: when the fifth card on the table is shown
 
-We consider that is only possible to either raise, call or fold between the four
-rounds, hence, three phases of betting. In this implementation, draws / split
-results are not considered, so as to not influence the collected probabilities
-of winning or losing by reducing the sample data of both.
+We consider that it is only possible to either raise, call or fold between the
+four rounds. Hence, there are three phases of betting. In this implementation draws are
+ignored, so as to not influence the collected probabilities of winning or losing
+by reducing the sample data of both.
 
 A **rank** is a weight of importance associated with a specific set of cards.
-These ranks are, in order: 1. Royal Flush; 2. Straight Flush; 3. Four Of A Kind; 4. Full House; 5. Flush; 6. Straight; 7. Three Of A Kind; 8. Two Pair; 9. Pair; 10. High Card.
-
+These ranks are, in order: 1. Royal Flush; 2. Straight Flush; 3. Four Of A
+Kind; 4. Full House; 5. Flush; 6. Straight; 7. Three Of A Kind; 8. Two Pair; 9.
+Pair; 10. High Card.
 
 
 ## {{< anchor link="#main" >}}Main module {#main}
@@ -92,9 +94,15 @@ a "reset" will discard the current match.
 When prompting for a card, two inputs are required: the suit and the value.
 Cards are then structured as {card, ID, Suit, Value} and compared with other
 hands (and their ranks) in Eresye. The ID value is randomly attributed using the
-method 'random:uniform()', and is used to ensure that the card will not be
+method ``random:uniform()``, and is used to ensure that the card will not be
 compared with itself during Eresye's operations.
 
+{{< sidenote >}}
+**Review note (May 20, 2019):** In retrospective, using the result of
+random:uniform() as an ID is a bad idea, as it can lead to collisions (even
+if they are rare). An unique UUID or a counting integer should have been used
+instead.
+{{</ sidenote >}}
 
 
 ## {{< anchor link="#decision-tree" >}}Decision tree module {#decision-tree}
@@ -117,7 +125,7 @@ the expected profits are calculated as such:
 
 `$$ExpectedProfitCall = Pot * PWin$$`
 
-BetsDoneByPlayer is the total value of bets done by the user to that point, or
+*BetsDoneByPlayer* is the total value of bets done by the user to that point, or
 in other words, the number of chips the user placed in the pot.
 
 *PWin* can be calculated using the History module and its Bayesian network (see
@@ -175,10 +183,9 @@ the following match...
 - Round 2 = Pair
 - Round 3 = Two Pair
 
-... the conditional probability for each round is calculated as follows (in
-pseudo-code, where the asterisk is interpreted as a wildcard):
-
-`$$Total = query(total, *)$$`
+... where *Total* is the total number of matches stored in history and where the
+asterisk is a wildcard, the conditional probability for each round is
+calculated as follows:
 
 Round 0:
 
