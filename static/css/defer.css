@@ -31,89 +31,102 @@ p {
   hanging-punctuation: first;
 }
 
-p a,
-em a,
-ol a,
-ul a {
-  background: linear-gradient(90deg, #fe3d3e 0, #ff0161 100%) repeat-x 0 1em;
-  background-origin: border-box;
-  background-size: auto 2px;
-  hyphens: manual;
-  text-decoration-line: none !important;
-  text-size-adjust: 100%;
-}
+/* only replace link underlines with a graphic if it's not microsoft edge */
+@supports not (-ms-ime-align:auto) {
+  p a,
+  em a,
+  ol a,
+  ul a {
+    background: linear-gradient(90deg, #fe3d3e 0, #ff0161 100%) repeat-x 0 1em;
+    background-origin: border-box;
+    background-size: auto 2px;
+    hyphens: manual;
+    text-decoration-line: none !important;
+    text-size-adjust: 100%;
+  }
 
-.links a {
-  background-position: initial !important;
-}
+  .font-load-1 p a,
+  .font-load-1 em a,
+  .font-load-1 ol a,
+  .font-load-1 ul a {
+    background-position: 0 1.18em;
+  }
 
-.font-load-1 p a,
-.font-load-1 em a,
-.font-load-1 ol a,
-.font-load-1 ul a {
-  background-position: 0 1.18em;
-}
+  .links a {
+    background-position: initial !important;
+  }
 
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a,
-figcaption a,
-.card-item a,
-.title a,
-.anchor,
-.footnote-ref a,
-.list-item,
-.home-link a,
-.metadata-links > li > a,
-.list-meta-category a,
-.metadata a,
-.bio a,
-.table > .list-meta > a,
-a.footnote-return,
-footer,
-footer a,
-footer a:hover {
-  background-image: none;
-}
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a,
+  figcaption a,
+  .card-item a,
+  .title a,
+  .anchor,
+  .footnote-ref a,
+  .list-item,
+  .home-link a,
+  .metadata-links > li > a,
+  .list-meta-category a,
+  .metadata a,
+  .bio a,
+  .table > .list-meta > a,
+  a.footnote-return,
+  footer,
+  footer a,
+  footer a:hover {
+    background-image: none;
+  }
 
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a,
-figcaption a,
-.title a,
-.footnote-ref a,
-.metadata a,
-.bio a,
-.table > .list-meta > a,
-a.footnote-return,
-footer a:hover {
-  text-decoration-line: underline !important;
-}
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a,
+  figcaption a,
+  .title a,
+  .footnote-ref a,
+  .metadata a,
+  .bio a,
+  .table > .list-meta > a,
+  a.footnote-return,
+  footer a:hover {
+    text-decoration-line: underline !important;
+  }
 
-.header-meta a,
-.mlt-header a,
-.anchor,
-.anchor a {
-  text-decoration-line: none !important;
-}
+  .header-meta a,
+  .mlt-header a,
+  .anchor,
+  .anchor a {
+    text-decoration-line: none !important;
+  }
 
-.header-meta a,
-.mlt-header a,
-.font-load-1 .header-meta a,
-.font-load-1 .mlt-header a {
-  background-image: linear-gradient(to right, #b3b9c4 50%, #b3b9c4 50%);
-  background-origin: border-box;
-  background-position: 0 1.1em;
-  background-repeat: repeat-x;
-  background-size: auto 2px;
-  hyphens: manual;
-  text-size-adjust: 100%;
+  .header-meta a,
+  .mlt-header a,
+  .font-load-1 .header-meta a,
+  .font-load-1 .mlt-header a {
+    background-image: linear-gradient(to right, #b3b9c4 50%, #b3b9c4 50%);
+    background-origin: border-box;
+    background-position: 0 1.1em;
+    background-repeat: repeat-x;
+    background-size: auto 2px;
+    hyphens: manual;
+    text-size-adjust: 100%;
+  }
+
+  .links > li > a:focus,
+  .links > li > a:hover {
+    box-shadow: rgba(15, 17, 21, 0.15) 0 6px 9px 0;
+    transition: .2s;
+  }
+
+  .badge {
+    background-image: none;
+  }
 }
 
 @-moz-document url-prefix() {
@@ -161,20 +174,6 @@ th {
 
 tr:nth-child(even) {
   background: rgba(14, 17, 21, .9);
-}
-
-.metadata-links > li > a {
-  transition: .2s;
-}
-
-.links > li > a:focus,
-.links > li > a:hover {
-  box-shadow: rgba(15, 17, 21, 0.15) 0 6px 9px 0;
-  transition: .2s;
-}
-
-.badge {
-  background-image: none;
 }
 
 .mjx-math {
@@ -225,25 +224,6 @@ stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='black' style='stroke:rgb%2895,109,135%29;' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'%3E%3C/path%3E%3C/svg%3E");
   background-repeat: no-repeat;
 }
-
-/*
-.social-icon-linkedin
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-viewBox="0 0 24 24" fill="none" stroke="currentColor"
-style="stroke:rgb(95,109,135);" stroke-width="2"
-stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5
-1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54
-6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16
-2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5
-4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9
-18.13V22"></path></svg>
-*/
-/*
-.social-icon-linkedin {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='black' style='stroke:rgb%2895,109,135%29' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'%3E%3C/path%3E%3Crect x='2' y='9' width='4' height='12'%3E%3C/rect%3E%3Ccircle cx='4' cy='4' r='2'%3E%3C/circle%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-}
-*/
 
 /*
 .social-icon-feed v1
