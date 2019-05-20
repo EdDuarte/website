@@ -43,6 +43,7 @@
   text-align: right;
   top: -160px;
   display: none;
+  animation-delay: .2s;
 }
 
 .circle-article-2 {
@@ -58,7 +59,7 @@
   text-align: left;
   top: 1400px;
   display: none;
-  animation-delay: .8s;
+  animation-delay: .6s;
 }
 
 .blob {
