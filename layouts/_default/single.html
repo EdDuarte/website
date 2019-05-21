@@ -44,16 +44,6 @@
 
     <div class="article-table">
 
-      <main class="card card-article">
-        <section class="content">
-          {{ if .Params.prologue }}
-          <div class="prologue">{{ .Params.prologue | markdownify }}</div>
-          {{ end }}
-
-          {{ .Content }}
-        </section>
-      </main>
-
       <aside class="aside-article">
 
         {{ $tags := .Site.Taxonomies.tags }}
@@ -152,6 +142,16 @@
         {{ end }}
 
       </aside>
+
+      <main class="card card-article">
+        <section class="content">
+          {{ if .Params.prologue }}
+          <div class="prologue">{{ .Params.prologue | markdownify }}</div>
+          {{ end }}
+
+          {{ .Content }}
+        </section>
+      </main>
 
     </div>
 
