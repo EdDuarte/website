@@ -21,7 +21,7 @@
   </div>
 </header>
 
-<div class="article-container bio-temp-content">
+<div class="article-container bio-container">
 
   <div class="title section-name fade-in">{{ .Title }}</div>
   <div class="social fade-in">
@@ -52,7 +52,7 @@
       {{ range $key, $value := $tags }}<li><a href="{{ $value.Page.Permalink }}" class="badge badge-{{ $key }}">{{ lower $value.Page.Title }}</a></li>{{ end }}
     </ul>
   </section>
-  <div class="header-meta bio-temp fade-in">
+  <div class="header-meta bio fade-in">
     {{ .Content }}
   </div>
 </div>
