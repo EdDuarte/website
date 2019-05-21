@@ -59,62 +59,62 @@
 
 <main class="main-container article-container">
 
-<div class="article-table">
+  <div class="article-table">
 
-<main class="home-list-container">
-<div class="home-list">
+    <main class="home-list-container">
+      <div class="home-list">
 
-<ul class="list">
-  {{ range .Data.Pages.ByDate.Reverse }}
-  {{ if not .Params.hidden }}
-  <li>
-    {{ partial "list-item.html" . }}
-  </li>
-  {{ end }}
-  {{ end }}
-</ul>
-
-</div>
-</main>
-
-<aside class="aside-home">
-
-<div class="sticky">
-<section class="card card-series">
-  <div class="card-title">Collections</div>
-  <hr>
-  <ul class="series">
-    {{ range $i, $e := (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
-    {{ if $i }}
-    <li>
-    <hr>
-    </li>
-    {{ end }}
-    <li>
-      <a href="{{ .Page.Permalink }}">
-        <div class="card-item-desc">
-          {{ if .Page.Params.popular }}
-          <span class="series-badge">Top</span>
+        <ul class="list">
+          {{ range .Data.Pages.ByDate.Reverse }}
+          {{ if not .Params.hidden }}
+          <li>
+            {{ partial "list-item.html" . }}
+          </li>
           {{ end }}
-          <span class="card-item-title">{{ .Page.Title }}</span>
-        </div>
-      </a>
-    </li>
-    {{ end }}
-  </ul>
-  <!--
-  <div class="card-item-metadata">
-    <a href="/series">
-      More series »
-    </a>
+          {{ end }}
+        </ul>
+
+      </div>
+    </main>
+
+    <aside class="aside-home">
+
+      <div class="sticky">
+        <section class="card card-series">
+          <div class="card-title">Collections</div>
+          <hr>
+          <ul class="series">
+            {{ range $i, $e := (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
+            {{ if $i }}
+            <li>
+              <hr>
+            </li>
+            {{ end }}
+            <li>
+              <a href="{{ .Page.Permalink }}">
+                <div class="card-item-desc">
+                  {{ if .Page.Params.popular }}
+                  <span class="series-badge">Top</span>
+                  {{ end }}
+                  <span class="card-item-title">{{ .Page.Title }}</span>
+                </div>
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+          <!--
+          <div class="card-item-metadata">
+            <a href="/series">
+              More series »
+            </a>
+          </div>
+          -->
+        </section>
+      </div>
+
+    </aside>
+
   </div>
-  -->
-</section>
-</div>
-
-</aside>
-
-</div>
 
 </main>
 
