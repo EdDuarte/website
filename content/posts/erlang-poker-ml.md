@@ -29,16 +29,16 @@ was to use a rule engine more-or-less like a disk database. All of the
 historical data collected over time is sent between functions in a stateless
 manner and persisted to disk using the rule engine.
 
-With this, I developed a [Erlang application](https://github.com/edduarte
-/erlang-poker-ml) with a CLI interface that collects game data and sends win-
-lose percentages on each round. It works by prompting the user to fill the card
-in his/her hand and table for each round, and whenever the user won or lost each
-match. The probabilities of occurrence for each card per round, along with the
-probability of winning or losing the match with the current cards, are
-recalculated at the end of every match and organized into a Decision tree. Each
-round the probability of getting a good hand and win the match is queried from
-the Decision tree and printed to the user, suggesting him to either raise, call
-or fold.
+With this, I developed a [Erlang
+application](https://github.com/edduarte/erlang-poker-ml) with a CLI interface
+that collects game data and sends win-lose percentages on each round. It works
+by prompting the user to fill the card in his/her hand and table for each round,
+and whenever the user won or lost each match. The probabilities of occurrence
+for each card per round, along with the probability of winning or losing the
+match with the current cards, are recalculated at the end of every match and
+organized into a Decision tree. Each round the probability of getting a good
+hand and win the match is queried from the Decision tree and printed to the
+user, suggesting him to either raise, call or fold.
 
 The application is fully open-source and only uses a single file ('poker.erl').
 A trained model containing an history of matches and hands is also provided
