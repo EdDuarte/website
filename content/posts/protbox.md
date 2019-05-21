@@ -33,7 +33,6 @@ links:
     icon: slides
     url: https://speakerdeck.com/edduarte/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens
 date: "2014-11-05 11:03:00+01:00"
-markup: mmark
 tags:
   - project
   - paper

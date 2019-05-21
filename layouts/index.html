@@ -1,7 +1,8 @@
 {{ partial "header.html" . }}
 <title>{{ .Site.Title }}</title>
 </head>
-<body class="body-list">
+
+<body>
 
 {{ $tags := .Site.Taxonomies.tags }}
 
@@ -14,8 +15,8 @@
   <div class="blob blob-home-corner"></div>
 </div>
 
-<header class="logo">
-  <div class="fade-in">
+<header class="logo fade-in">
+  <div>
     {{ partial "theme-link.html" }}
   </div>
 </header>
@@ -76,11 +77,11 @@
 </div>
 </main>
 
-<aside>
+<aside class="aside-home">
 
 <div class="sticky">
-<section class="card card-item card-series">
-  <div class="card-item-title">Collections</div>
+<section class="card card-series">
+  <div class="card-title">Collections</div>
   <hr>
   <ul class="series">
     {{ range $i, $e := (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
@@ -95,7 +96,7 @@
           {{ if .Page.Params.popular }}
           <span class="series-badge">Top</span>
           {{ end }}
-          <span class="card-item-ti">{{ .Page.Title }}</span>
+          <span class="card-item-title">{{ .Page.Title }}</span>
         </div>
       </a>
     </li>

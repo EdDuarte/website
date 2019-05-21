@@ -102,12 +102,8 @@
   right: -30px;
 }
 
-.logo {
+.logo-fill {
   background-color: #242933;
-}
-
-.body-list .logo {
-  background-color: initial;
 }
 
 .home-link a,
