@@ -1,6 +1,5 @@
 ---
 title: "Papers"
-markup: mmark
 ---
 
 Below are the research papers I've authored. You can also view my academic

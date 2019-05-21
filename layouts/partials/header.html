@@ -177,11 +177,11 @@ html {
   -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
   clip-path: polygon(0 0, 0 0, 0 0, 0 0);
   clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
   height: 1px;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
 }
 
 code,
@@ -195,8 +195,7 @@ pre {
 }
 
 .header-meta p,
-.bio p,
-.card-item,
+.card-series,
 .footnotes li,
 .home-link,
 .links,
@@ -224,8 +223,7 @@ ul {
 }
 
 .font-load-1 .header-meta p,
-.font-load-1 .bio p,
-.font-load-1 .card-item,
+.font-load-1 .card-series,
 .font-load-1 .footnotes li,
 .font-load-1 .home-link,
 .font-load-1 .links,
@@ -578,7 +576,6 @@ img.logoicon {
   margin-top: .6em;
 }
 
-.bio p,
 .card-item-desc,
 .footnotes li,
 .metadata > .table,
@@ -591,7 +588,6 @@ figcaption {
   line-height: 2.2em;
 }
 
-.font-load-1 .bio p,
 .font-load-1 .card-item-desc,
 .font-load-1 .footnotes li,
 .font-load-1 .metadata > .table,
@@ -616,8 +612,14 @@ figcaption {
   margin-top: .25rem;
 }
 
-.footnote {
+sup {
   font-size: .9rem;
+  vertical-align: baseline;
+  top: -0.5em;
+  letter-spacing: 0;
+  font-weight: normal;
+  line-height: 0;
+  position: relative;
 }
 
 .metadata > .table,
@@ -929,7 +931,7 @@ samp {
 }
 
 .footer-links a {
-  margin: 0 .5em;
+  margin: 0 .4em;
 }
 
 .blob-container {
@@ -1052,7 +1054,6 @@ a {
   text-decoration-line: underline;
 }
 
-.bio a,
 .footnote-ref a,
 .footnotes a,
 .metadata a,
@@ -1067,11 +1068,11 @@ figcaption a,
   text-decoration-line: underline;
 }
 
-.footnote::before {
+.footnote-ref::before {
   content: '[';
 }
 
-.footnote::after {
+.footnote-ref::after {
   content: ']';
 }
 
@@ -1096,8 +1097,6 @@ h6 a {
 
 .header-meta,
 .header-meta a,
-.bio,
-.bio a,
 .footnotes,
 .footnotes a,
 .list-desc,
@@ -1222,21 +1221,13 @@ img.centered:empty {
   left: 50%;
 }
 
-.card-item,
-.card-item-title {
+.card-series,
+.card-title {
   display: flex;
   flex-direction: column;
 }
 
-.card-item {
-  -webkit-box-pack: justify;
-  height: auto;
-  justify-content: space-between;
-  overflow: hidden;
-  width: 100%;
-}
-
-.card-item-title {
+.card-title {
   -webkit-box-align: center;
   -webkit-box-pack: center;
   align-items: start;
@@ -1256,15 +1247,15 @@ img.centered:empty {
   margin: 0;
 }
 
-.card-item-ti {
+.card-item-title {
   line-height: 2.4em;
 }
 
-.font-load-1 .card-item-ti {
+.font-load-1 .card-item-title {
   line-height: 1.5em;
 }
 
-.card-item-metadata {
+.card-metadata {
   -webkit-box-pack: justify;
   border-top: 1px solid #e5e9f0;
   display: flex;
@@ -1273,7 +1264,7 @@ img.centered:empty {
   padding: .4rem .5rem;
 }
 
-.font-load-1 .card-item-metadata {
+.font-load-1 .card-metadata {
   padding: .5rem;
 }
 
@@ -1514,8 +1505,6 @@ blockquote .footer {
   margin-top: 1em;
 }
 
-.bio > p,
-.font-load-1 .bio > p,
 h2,
 h3,
 h4,
@@ -1552,7 +1541,7 @@ figure,
 .list-item,
 .series a,
 .footer a,
-.card-item-metadata a {
+.card-metadata a {
   text-decoration: none;
 }
 
@@ -1578,21 +1567,6 @@ figure,
   padding-right: .8em;
 }
 
-.bio,
-.card-series {
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bio {
-  max-width: 500px;
-}
-
-.bio-container {
-  position: relative;
-}
-
 .bio-temp {
   max-width: 500px;
 }
@@ -1603,11 +1577,18 @@ figure,
 }
 
 .card-series {
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  overflow: hidden;
+  max-width: 405px;
+  min-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
   border: 1px solid #d8dee9;
   border-radius: 8px;
-  max-width: 360px;
-  min-width: 300px;
-  visibility: hidden;
 }
 
 @media screen {
@@ -1688,10 +1669,6 @@ figure,
     order: 1;
   }
 
-  .bio-container {
-    margin-top: 2em;
-  }
-
   .mlt-previous,
   .mlt-next {
     width: 100%;
@@ -1722,6 +1699,14 @@ figure,
   .content > .font-load-1 h1:first-child,
   .content > h1:first-child {
     margin-top: .6em;
+  }
+
+  .list {
+    margin-top: 1.9em;
+  }
+
+  .font-load-1 .list {
+    margin-top: 2em;
   }
 
   .tags {
@@ -1829,6 +1814,10 @@ figure,
   .font-load-1 .home-list-container {
     margin-top: 0;
   }
+
+  .card-series {
+    min-width: initial;
+  }
 }
 
 @media screen and (max-width: 784px) {
@@ -1856,9 +1845,6 @@ figure,
   .bio-temp {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .bio-temp {
     max-width: 320px;
   }
 
@@ -1896,12 +1882,6 @@ figure,
 
   .font-load-1 .main-container main {
     margin-top: .2em;
-  }
-
-  .bio-container,
-  .list,
-  .font-load-1 .list {
-    margin-top: 1em;
   }
 
   .card-article {
@@ -1955,14 +1935,12 @@ figure,
   }
 
   .list {
-    margin-top: 1.9em;
     margin-left: 0;
     margin-right: 0;
     padding: 0;
   }
 
   .font-load-1 .list {
-    margin-top: 2em;
     margin-left: 0;
     margin-right: 0;
     padding: 0;

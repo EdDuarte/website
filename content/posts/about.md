@@ -2,7 +2,6 @@
 title: "About me"
 image: "thumbnail/ed-duarte.jpg"
 hidden: true
-markup: mmark
 ---
 
 Hi! I'm Ed Duarte, a Full-Stack Software Engineer from Portugal with over five

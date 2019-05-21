@@ -1,6 +1,5 @@
 ---
 title: "Articles"
-markup: mmark
 ---
 
 These are the various notes and thoughts on Computer Science and Software

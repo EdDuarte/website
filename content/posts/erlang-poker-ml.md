@@ -12,7 +12,6 @@ links:
     url: https://github.com/edduarte/erlang-poker-ml
 date: "2015-03-31 17:25:00+01:00"
 medium: "https://medium.com/@EdDuarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
-markup: mmark
 tags:
   - article
   - project
@@ -134,6 +133,7 @@ in other words, the number of chips the user placed in the pot.
 below), where we can obtain the number of wins attained with the current hand,
 but also the possible hands that can be obtained in future rounds knowing the
 current hand. Assuming that:
+
 - *c* is the **current hand**;
 - *x* is a **possible hand in the next round**;
 - *t* is the **total number of matches** recorded in history;

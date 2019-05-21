@@ -8,10 +8,10 @@ date: "2017-09-10 12:24:56+01:00"
 medium: "#"
 reddit: "#"
 hn: "#"
-markup: mmark
 draft: true
 tags:
-  - project
+  - article
+  - essay
 ---
 
 # Heading 1
@@ -67,7 +67,13 @@ _ff fi fl ffi ffl fk fh ft_
 
 # Images
 
-![Current prototype of Living Globe](/hcii2016/screenshot-01.png "Current prototype of Living Globe, showing population growth mapped to the bars/pilars height, total life expectancy at birth to bar color, and birth/death ratio to country color.")
+{{< figure
+  src="/posts/living-globe/screenshot-01.png"
+  alt="Current prototype of Living Globe" >}}
+Current prototype of Living Globe, showing population growth mapped to the
+bars/pilars height, total life expectancy at birth to bar color, and birth/death
+ratio to country color.
+{{</ figure >}}
 
 # Line length
 

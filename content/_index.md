@@ -11,7 +11,6 @@ Mining, Java, Kotlin, Typescript, JavaScript, ES6, iOS, Swift, Objective-C,
 Android, Jersey, Jetty, Tomcat, Spring Framework, Hibernate, SAAJ, JAXB, XSLT,
 Google App Engine, Parse, Firebase, Quartz, jQuery, HTML]
 date: "2018-02-07 20:31:00+01:00"
-markup: mmark
 ---
 
 Software engineer and researcher. Co-founded two tech startups, published four
