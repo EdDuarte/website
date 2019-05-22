@@ -65,6 +65,34 @@ _ff fi fl ffi ffl fk fh ft_
 **_ff fi fl ffi ffl fk fh ft_**
 
 
+# Details
+
+<details>
+  <summary><strong>Contributing</strong></summary>
+  <div>
+    <p>Pull requests and stars are always welcome.</p>
+    <details>
+      <summary><strong>Inner 1</strong></summary>
+      <div>
+        <p>For bugs and feature requests, <a href="/jonschlinkert/gulp-htmlmin/issues/new">please create an issue</a>.</p>
+      </div>
+    </details>
+    <details>
+      <summary><strong>Inner 2</strong></summary>
+      <div>
+      <p>Don't forget to like and subscribe!</p>
+        <details>
+          <summary><strong>Inner-Inner 1</strong></summary>
+          <div>
+            <p>I didn't :angryface:</p>
+          </div>
+        </details>
+      </div>
+    </details>
+  </div>
+</details>
+
+
 # Images
 
 {{< figure
