@@ -15,9 +15,9 @@
   <div class="blob blob-home-corner"></div>
 </div>
 
-<header class="logo fade-in">
-  <div>
-    {{ partial "theme-link.html" }}
+<header class="logo">
+  <div class="fade-in">
+    {{ partial "theme-link.html" (dict "Page" .) }}
   </div>
 </header>
 
@@ -94,7 +94,7 @@
               <a href="{{ .Page.Permalink }}">
                 <div class="card-item-desc">
                   {{ if .Page.Params.popular }}
-                  <span class="series-badge">Top</span>
+                  <span class="series-badge">Popular</span>
                   {{ end }}
                   <span class="card-item-title">{{ .Page.Title }}</span>
                 </div>
