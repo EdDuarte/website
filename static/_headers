@@ -5,6 +5,8 @@
   Referrer-Policy: origin-when-cross-origin
   Cache-Control: private,max-age=0
 
+  Link: </js/main.js>; rel=preload; as=script
+
 /*.jpg
   Cache-Control: max-age=31536000, public
 /*.png
