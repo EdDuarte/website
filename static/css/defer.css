@@ -109,7 +109,6 @@ p {
   .mlt-header a,
   .font-load-1 .header-meta a,
   .font-load-1 .mlt-header a {
-    background-image: linear-gradient(to right, #908d9d 50%, #908d9d 50%);
     background-origin: border-box;
     background-position: 0 1.1em;
     background-repeat: repeat-x;
@@ -118,9 +117,37 @@ p {
     text-size-adjust: 100%;
   }
 
+  /* @media not (prefers-color-scheme: light) { */
+  @media all {
+    .header-meta a,
+    .mlt-header a,
+    .font-load-1 .header-meta a,
+    .font-load-1 .mlt-header a {
+      background-image: linear-gradient(to right, #9794a4 50%, #9794a4 50%);
+    }
+
+    .links > li > a:focus,
+    .links > li > a:hover {
+      box-shadow: rgba(15, 17, 21, .15) 0 6px 9px 0;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .header-meta a,
+    .mlt-header a,
+    .font-load-1 .header-meta a,
+    .font-load-1 .mlt-header a {
+      background-image: linear-gradient(to right, #4d495e 50%, #4d495e 50%);
+    }
+
+    .links > li > a:focus,
+    .links > li > a:hover {
+      box-shadow: rgba(0, 0, 0, .25) 0 6px 9px 0;
+    }
+  }
+
   .links > li > a:focus,
   .links > li > a:hover {
-    box-shadow: rgba(15, 17, 21, 0.15) 0 6px 9px 0;
     transition: .2s;
   }
 

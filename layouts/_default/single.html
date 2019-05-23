@@ -161,13 +161,13 @@
   {{ $seriesList := .Params.series }}
 
   {{ if $seriesList }}
+  <div class="mlt-container">
   {{ range $seriesList }}
   {{ $it := . }}
   {{ $s := index $series $it }}
   {{ $pages := $s.Pages.ByDate }}
   {{ range $i, $v := $pages }}
   {{ if eq $current.File $v.File }}
-  <div class="line"></div>
   <h4 class="mlt-header">Part of the <a href="{{ $s.Page.Permalink }}">{{ $s.Page.Title }}</a> collection</h4>
   <div class="mlt-table">
 
@@ -194,6 +194,7 @@
   {{ end }}
 
   {{ end }}
+  </div>
   {{ end }}
 
 </main>

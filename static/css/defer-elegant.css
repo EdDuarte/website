@@ -10,8 +10,11 @@
 }
 
 html,
+.blob-home-top,
 .blob-home-top-cut,
-.blob-home-bottom-cut {
+.blob-home-bottom,
+.blob-home-bottom-cut,
+.blob-home-corner {
   background-image: url(/img-noise-100x100.png);
 }
 
@@ -162,7 +165,7 @@ html,
 
   .card {
     background-color: #16141d;
-    box-shadow: rgba(15, 15, 15, .25) 0 4px 6px, rgba(15, 15, 15, .1) 0 5px 7px;
+    box-shadow: rgba(15, 17, 21, .25) 0 4px 6px, rgba(15, 17, 21, .1) 0 5px 7px;
   }
 
   .blob-home-top {
