@@ -182,9 +182,16 @@ function init() {
       navigator.connection ||
       navigator.mozConnection ||
       navigator.webkitConnection;
-  if (connection && connection.effectiveType === "cellular") {
-    // do not load elegant theme, in order to reduce the amount
-    // of mobile data that is used for this session
+  if (connection && (
+      connection.saveData ||
+      connection.effectiveType === "cellular" ||
+      connection.effectiveType === "slow-2g" ||
+      connection.effectiveType === "2g"
+  )) {
+    // Network Information API exists, but the user has a slow connection or
+    // is using the Save-Data preference is enabled, so do not load stage-2
+    // fonts and elegant theme in order to reduce the amount of mobile data
+    // that is used for this session
   } else {
     var isSimpleMode = ls.getItem(SIMPLE_MODE_KEY) === "true";
     if (isSimpleMode) {
