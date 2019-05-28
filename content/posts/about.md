@@ -1,5 +1,6 @@
 ---
 title: "About me"
+slug: "about"
 image: "thumbnail/ed-duarte.jpg"
 hidden: true
 ---

@@ -19,6 +19,8 @@
 /talk                       /talks/
 /talks/*                    /:splat
 
+/about-me  /about
+
 /living-globe  /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
 /livingglobe  /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
 /hcii2016  /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
