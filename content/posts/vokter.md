@@ -2,6 +2,7 @@
 title: "Vokter: A library that periodically checks for changes in web documents"
 description: "High-performant Java library that uses LSH, DiffMatchPatch and
 Bloom filters to detect inserted and removed keywords from web documents."
+hasThumbnail: true
 keywords: [java, library, rest, restful architecture, distributed systems, bloom
 filter, hashing, locality sensitive hashing, nearest neighbor search, natural
 language processing, nlp, information retrieval, text mining]
