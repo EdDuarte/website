@@ -25,6 +25,8 @@ Vokter on the web instead of locally, but I do hope to address them later in a
 future post."
 ---
 
+{{< dropcap >}}
+
 What started as a simple project for a University class in Distributed
 Architecture, which I named Argus (from [*Argus
 Panoptes*](https://en.wikipedia.org/wiki/Argus_Panoptes), the all-seeing giant
