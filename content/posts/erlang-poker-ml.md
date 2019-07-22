@@ -12,7 +12,10 @@ links:
     icon: github
     url: https://github.com/edduarte/erlang-poker-ml
 date: "2015-03-31 17:25:00+01:00"
-medium: "https://medium.com/@EdDuarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
+mirrors:
+  - name: Medium
+    url:
+        "https://medium.com/@EdDuarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
 tags:
   - article
   - project

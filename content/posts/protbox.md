@@ -1,6 +1,7 @@
 ---
 title: "Protbox: Secure and trustworthy file sharing over cloud storage using
 eID tokens"
+subtitle: "Open Identity Summit 2014, Stuttgart, Germany"
 description: "Open-source & cross-platform app that performs file encryption
 and user authentication on existing cloud storage services."
 keywords: [information security, cloud storage, file encryption, authentication,
@@ -93,8 +94,8 @@ applications out-of-the-box.
 
 A research paper describing the architecture of Protbox, titled **_Secure and
 trustworthy file sharing over cloud storage using eID tokens_**, was published
-in _Lecture Notes in Informatics (LNI), Proceedings - Series of the Gesellschaft
-fur Informatik (GI)_, volume P-237, pages 73-84. This paper can be read on
+in _Lecture Notes in Informatics (LNI), Proceedings - Series of the
+Gesellschaft fur Informatik (GI)_, volume P-237, pages 73-84. It can be read on
 [LNI](http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html) or
 [arXiv](http://arxiv.org/abs/1501.03139).
 

@@ -5,10 +5,20 @@ links:
   - name: Demo
     url: /
 date: "2017-09-10 12:24:56+01:00"
-medium: "#"
-reddit: "#"
-hn: "#"
-draft: true
+mirrors:
+  - name: dev.to
+    url: https://dev.to/
+  - name: Medium
+    url: https://medium.com/
+discussions:
+  - name: Hacker News
+    url: https://news.ycombinator.com/
+  - name: Reddit
+    url: https://reddit.com/
+knowledge:
+  - HTML5
+  - Javascript
+  - CSS
 tags:
   - article
   - essay
@@ -104,6 +114,8 @@ ratio to country color.
 {{</ figure >}}
 
 # Line length
+
+{{< dropcap >}}
 
 To help me visualize the length of the line <span style="color:red;">(</span>as
 demonstrating in this para<span style="color:red;">g</span>raph), I mark the
