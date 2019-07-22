@@ -632,7 +632,8 @@ sup {
 }
 
 .metadata .metadata-item {
-  display: inline-table;
+  display: flex;
+  align-items: flex-start;
 }
 
 .list-icon,
@@ -641,9 +642,17 @@ sup {
   vertical-align: middle;
 }
 
+.metadata-item .metadata-icon {
+  margin-top: .4em;
+}
+
+.metadata-link .metadata-icon {
+  margin-top: -.25em;
+}
+
 .metadata-icon {
   height: 0;
-  margin-top: -.25em;
+  margin-top: .35em;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 22px;
@@ -1933,7 +1942,12 @@ pre > code {
   }
 
   .metadata .metadata-item {
+    display: inline-table;
     line-height: 1.7em;
+  }
+
+  .metadata-item .metadata-icon {
+    margin-top: -.3em;
   }
 
   .font-load-1 .metadata .metadata-item {

@@ -1,8 +1,9 @@
 ---
 title: "Living Globe: Tridimensional interactive visualization of world
 demographic data"
-description: "Open-source WebGL / three.js app for tri-dimensional worldwide data
-visualization, with customizable data-to-visual mapping and filtering with
+subtitle: "HCI International 2016, Toronto, Canada"
+description: "Open-source WebGL / three.js app for tri-dimensional worldwide
+data visualization, with customizable data-to-visual mapping and filtering with
 adjustable scales."
 keywords: [visualization, infovis, interactive, human computer interaction,
 usability, spatial, demographic data, demography, tri-dimensional, 3d, WebGL,
@@ -36,7 +37,10 @@ links:
     icon: slides
     url: https://speakerdeck.com/edduarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data
 date: "2016-06-21 19:58:00+01:00"
-medium: "https://medium.com/@EdDuarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data-c3eeb1845c51"
+mirrors:
+  - name: Medium
+    url:
+        "https://medium.com/@EdDuarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data-c3eeb1845c51"
 tags:
   - project
   - paper
@@ -117,11 +121,11 @@ It is built with Javascript ES6, [jQuery](https://jquery.com/),
 
 ## Publication
 
-A research paper describing the implementation of Living Globe, titled **_Living
-Globe: Tridimensional Interactive Visualization of World Demographic Data_**,
-was published in _HIMI 2016: Human Interface and the Management of Information:
-Information, Design and Interaction_, volume 9734, pages 14-24. This paper can
-be read on
+A research paper describing the implementation of Living Globe, titled
+**_Living Globe: Tridimensional Interactive Visualization of World Demographic
+Data_**, was published in _HIMI 2016: Human Interface and the Management of
+Information: Information, Design and Interaction_, volume 9734, pages 14-24. It
+can be read on
 [Springer](https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2) or
 [arXiv](https://arxiv.org/abs/1607.05946).
 

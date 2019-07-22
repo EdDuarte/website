@@ -11,6 +11,19 @@ years of hands-on experience in Backend Architecture, Distributed Systems, Web &
 Mobile Frontend Development and UI/UX Design. I've worked extensively with
 languages such as Java, Kotlin, Typescript, Javascript ES6 and Swift.
 
+{{< figure
+  src="/posts/about/banner_v6.jpg"
+  alt="Picture" >}}
+Picture taken in May 2019, used as header or cover photo (1255x836).
+{{</ figure >}}
+
+{{< figure
+  src="/posts/about/avatar_v6.jpg"
+  alt="Avatar"
+  class="myphoto" >}}
+Picture modified from the above, used as avatar photo (1000x1000).
+{{</ figure >}}
+
 ## Experience
 
 Recently worked at [Bosch

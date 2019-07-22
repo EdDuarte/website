@@ -71,6 +71,7 @@
             </li>
             {{ end }}
 
+            {{ if not .Params.hidden }}
             <li class="metadata-item">
               <div class="icon metadata-icon icon-reading-time"></div>
               <span class="screen-reader">Reading time: </span>
@@ -78,33 +79,54 @@
                 {{ .ReadingTime }} min read
               </span>
             </li>
+            {{ end }}
 
-            {{ with .Params.reddit }}
+            {{ $discussionList := .Params.discussions }}
+            {{ if $discussionList }}
             <li class="metadata-item">
               <div class="icon metadata-icon icon-discussion"></div>
-              <span class="screen-reader">Reddit: </span>
+              <span class="screen-reader">Article discussions: </span>
               <span class="metadata-title">
-                Discussion on <a href="{{ . }}">Reddit</a>
+              {{ $len := (len $discussionList) }}
+              {{ if eq $len 1 }}
+              {{ $discussion := index $discussionList 0 }}
+              Discuss on <a href="{{ $discussion.url }}">{{ $discussion.name }}</a>
+              {{ else }}
+              Discuss on {{ range $i, $temp := $discussionList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $discussion := index $discussionList $i }}{{ if $discussion.url }}<a href='{{ $discussion.url }}'>{{ $discussion.name }}</a>{{ else }}{{ $discussion.name }}{{ end }}{{ end }}
+              {{ end }}
               </span>
             </li>
             {{ end }}
 
-            {{ with .Params.hn }}
-            <li class="metadata-item">
-              <div class="icon metadata-icon icon-discussion"></div>
-              <span class="screen-reader">Hacker News: </span>
-              <span class="metadata-title">
-                Discussion on <a href="{{ . }}">Hacker News</a>
-              </span>
-            </li>
-            {{ end }}
-
-            {{ with .Params.medium }}
+            {{ $mirrorList := .Params.mirrors }}
+            {{ if $mirrorList }}
             <li class="metadata-item">
               <div class="icon metadata-icon icon-mirror"></div>
-              <span class="screen-reader">Article mirror: </span>
+              <span class="screen-reader">Article mirrors: </span>
               <span class="metadata-title">
-                Also on <a href="{{ . }}">Medium</a>
+              {{ $len := (len $mirrorList) }}
+              {{ if eq $len 1 }}
+              {{ $mirror := index $mirrorList 0 }}
+              Also on <a href="{{ $mirror.url }}">{{ $mirror.name }}</a>
+              {{ else }}
+              Also on {{ range $i, $temp := $mirrorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $mirror := index $mirrorList $i }}{{ if $mirror.url }}<a href='{{ $mirror.url }}'>{{ $mirror.name }}</a>{{ else }}{{ $mirror.name }}{{ end }}{{ end }}
+              {{ end }}
+              </span>
+            </li>
+            {{ end }}
+
+            {{ $knList := .Params.knowledge }}
+            {{ with $knList }}
+            <li class="metadata-item">
+              <span>
+                Recommended knowledge:
+                {{ $len := (len $knList) }}
+                {{ if eq $len 1 }}
+                {{ $kn := index $knList 0 }}
+                {{ $kn }}
+                {{ else }}
+                {{ range $i, $temp := $knList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $kn := index $knList $i }}{{ $kn }}{{ end }}
+                {{ end }}
               </span>
             </li>
             {{ end }}
@@ -119,7 +141,7 @@
             {{ range $i, $temp := $linkList }}
             {{ $link := index $linkList $i }}
             {{ if $link.url }}
-            <li>
+            <li class="metadata-link">
               <a href="{{ $link.url }}">
                 {{ with $link.icon }}
                 <div class="icon metadata-icon icon-{{ $link.icon }}"></div>
