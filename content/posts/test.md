@@ -22,6 +22,7 @@ knowledge:
 tags:
   - article
   - essay
+draft: true
 ---
 
 # Heading 1
