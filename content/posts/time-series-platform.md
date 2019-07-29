@@ -2,7 +2,7 @@
 title: "Distributed and scalable platform for collaborative analysis of massive
 time series data sets"
 subtitle: "DATA 2019, Prague, Czech Republic"
-description: "High-performant architecture that allows researchers to annotate
+description: "High-performant webapp that allows researchers to annotate
 time series patterns while preventing data loss from overlapping contributions
 or unsanctioned changes."
 keywords: [time series, annotations, annotation systems, collaborative
