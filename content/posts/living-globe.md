@@ -1,7 +1,7 @@
 ---
 title: "Living Globe: Tridimensional interactive visualization of world
 demographic data"
-subtitle: "HCI International 2016, Toronto, Canada"
+subtitle: "HCI International 2016, 17 - 22 July, Toronto, Canada"
 description: "Open-source WebGL / three.js app for tri-dimensional worldwide
 data visualization, with customizable data-to-visual mapping and filtering with
 adjustable scales."

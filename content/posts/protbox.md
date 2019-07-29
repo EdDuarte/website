@@ -1,7 +1,7 @@
 ---
 title: "Protbox: Secure and trustworthy file sharing over cloud storage using
 eID tokens"
-subtitle: "Open Identity Summit 2014, Stuttgart, Germany"
+subtitle: "Open Identity Summit 2014, November 4 - 6, Stuttgart, Germany"
 description: "Open-source & cross-platform app that performs file encryption
 and user authentication on existing cloud storage services."
 keywords: [information security, cloud storage, file encryption, authentication,
