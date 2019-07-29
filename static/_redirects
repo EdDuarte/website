@@ -8,7 +8,10 @@
 /tag/*                      /:splat
 /tags/*                     /:splat
 /blog/*                     /:splat
-/article                    /articles/
+/note                       /notes/
+/notes/*                    /:splat
+/article                    /notes/
+/articles                   /notes/
 /articles/*                 /:splat
 /essay                      /essays/
 /essays/*                   /:splat

@@ -1,5 +1,5 @@
 ---
-title: "Articles"
+title: "Notes"
 ---
 
 These are the various notes on Computer Science and Software Engineering that I

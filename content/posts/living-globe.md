@@ -61,7 +61,8 @@ uniforming the remaining data and improving its visibility.
 
 {{< figure
   src="/posts/living-globe/screenshot-01.png"
-  alt="Current prototype of Living Globe" >}}
+  alt="Current prototype of Living Globe"
+  counter="true" >}}
 Current prototype of Living Globe, showing population growth mapped to the
 bars/pilars height, total life expectancy at birth to bar color, and birth/death
 ratio to country color.
@@ -104,7 +105,8 @@ filtering out countries with large samples (e.g. China).
 
 {{< figure
   src="/posts/living-globe/screenshot-02-transparent.png"
-  alt="Living Globe when using the filtering feature with data normalization" >}}
+  alt="Living Globe when using the filtering feature with data normalization"
+  counter="true" >}}
 Living Globe showing total population mapped to the country color: the data from
 all countries is displayed on the left, and filtering out large population
 countries (such as China and India) on the right (resulting in a
