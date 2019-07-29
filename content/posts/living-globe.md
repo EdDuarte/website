@@ -35,7 +35,7 @@ links:
     url: /posts/living-globe/slides.pdf
   - name: Talk slides on Speaker Deck
     icon: slides
-    url: https://speakerdeck.com/edduarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data
+    url: https://speakerdeck.com/duarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data
 date: "2016-06-21 19:58:00+01:00"
 mirrors:
   - name: Medium
@@ -142,7 +142,7 @@ Castle Hotel, Toronto, Canada. It was originally presented in portuguese at
 [SciTecIN 2015](https://scitecin.isr.uc.pt/index.php/pt/), University of
 Coimbra, Portugal. Below are the slides used for those presentations, [hosted on
 Speaker
-Deck](https://speakerdeck.com/edduarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data).
+Deck](https://speakerdeck.com/duarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data).
 
 {{< sd bf04a6e0d58a4dfaa7ce97e9c08c309b >}}
 

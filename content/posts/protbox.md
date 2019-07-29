@@ -32,7 +32,7 @@ links:
     url: /posts/protbox/slides.pdf
   - name: Talk slides on Speaker Deck
     icon: slides
-    url: https://speakerdeck.com/edduarte/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens
+    url: https://speakerdeck.com/duarte/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens
 date: "2014-11-05 11:03:00+01:00"
 tags:
   - project
@@ -106,7 +106,7 @@ The paper and desktop application described in this page were presented at [Open
 Identity Summit 2014](https://go.eid.as/summit/) in Fraunhofer IAO Institute
 Center, Stuttgart, Germany. Below are the slides used for that presentation,
 [hosted on Speaker
-Deck](https://speakerdeck.com/edduarte/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens).
+Deck](https://speakerdeck.com/duarte/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens).
 
 {{< sd 18f78dd7b1cf493aaf7b817d76f36383 >}}
 
