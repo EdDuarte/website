@@ -206,6 +206,8 @@ details strong,
 .subtitle,
 .title,
 figcaption,
+figcaption > p,
+figcaption > ul > li,
 .footnotes:before,
 .footer > ul > li,
 h1,
@@ -235,6 +237,8 @@ ul {
 .font-load-1 .subtitle,
 .font-load-1 .title,
 .font-load-1 figcaption,
+.font-load-1 figcaption > p,
+.font-load-1 figcaption > ul > li,
 .font-load-1 .footnotes:before,
 .font-load-1 .footer > ul > li,
 .font-load-1 h1,
@@ -579,10 +583,20 @@ img.logoicon {
 .metadata > p,
 .series li,
 .sidenote,
-figcaption {
+figcaption,
+figcaption > p,
+figcaption > ul > li {
   font-size: .72rem;
   letter-spacing: .035em;
   line-height: 2.2em;
+}
+
+figcaption ul {
+  margin: 0 !important;
+  padding: 0;
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: .8em;
 }
 
 .font-load-1 .card-item-desc,
@@ -591,7 +605,9 @@ figcaption {
 .font-load-1 .metadata > p,
 .font-load-1 .series li,
 .font-load-1 .sidenote,
-.font-load-1 figcaption {
+.font-load-1 figcaption,
+.font-load-1 figcaption > p,
+.font-load-1 figcaption > ul > li {
   font-size: .8rem;
   letter-spacing: .04em;
   line-height: 2em;
@@ -1137,7 +1153,7 @@ figcaption {
   counter-increment: figures;
 }
 
-figcaption:before {
+.figcounter > figcaption:before {
   content: 'Fig. 'counter(figures) ': ';
 }
 

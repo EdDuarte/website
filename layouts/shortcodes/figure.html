@@ -1,4 +1,5 @@
-<figure class="js-lazy-image" src='{{ .Get "src" }}'>
+{{ $hasCounter := eq (.Get "counter") "true" }}
+<figure class="js-lazy-image{{ if $hasCounter }} figcounter{{ end }}" src='{{ .Get "src" }}'>
   <img
       src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
       alt='{{ .Get "alt" }}'
@@ -8,7 +9,7 @@
   <figcaption>{{ .Inner }}</figcaption>
 </figure>
 <noscript>
-<figure>
+<figure class="{{ if $hasCounter }}figcounter{{ end }}">
   <img
       src='{{ .Get "src" }}'
       alt='{{ .Get "alt" }}'
