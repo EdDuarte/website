@@ -20,7 +20,7 @@ knowledge:
   - Javascript
   - CSS
 tags:
-  - article
+  - notes
   - essay
 draft: true
 ---

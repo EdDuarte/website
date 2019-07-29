@@ -17,7 +17,7 @@ mirrors:
     url:
         "https://medium.com/@EdDuarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
 tags:
-  - article
+  - notes
   - project
 series:
   - dmproj
