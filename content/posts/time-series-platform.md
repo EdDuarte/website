@@ -70,115 +70,115 @@ Prague, Czech Republic. Below are the slides (with speaker notes) used for that
 presentation, which are also [hosted on Notist](https://noti.st/duarte/CAP51Y/slides).
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-0.jpg" alt="Slide 1"  >}}
+  src="/posts/time-series-platform/slides/data2019-slide-0.jpg" alt="Slide 1"  >}}
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-1.png" alt="Slide 2" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-1.jpg" alt="Slide 2" >}}
   <ul><li>In the last few years we have been in the presence of the phenomenon of increased metrification;</li><li>How to derive meaning from huge amounts of complex raw data while it continues to grow every day? The answer: collaborative (human or automated) analysis;</li><li>Analysis is more agile when done within a software solution, especially when collaborators work in a shared network, evolving a mutual knowledgebase without physical presence.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-2.png" alt="Slide 3" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-2.jpg" alt="Slide 3" >}}
   <ul><li>Example domains with massive time series data sets: medical diagnosis using EEGs and ECGs, financial technical analysis, monitoring of natural phenomenons, athlete performance monitoring;</li><li>Analysis methodologies have to handle data entropy at storage and visual levels.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-3.jpg" alt="Slide 4" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-3.jpg" alt="Slide 4" >}}
   <ul><li>In highly heterogeneous use cases, there is a need to compare data from different measurements and source devices;</li><li>Why webapps? Because of recent developments made to web technologies and the near-universal availability of browsers.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-4.png" alt="Slide 5" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-4.jpg" alt="Slide 5" >}}
   <ul><li>Time series alone cannot convey meaning, only allude to it;</li><li>Annotations allow collaborators to critique, create memory-aids, highlight patterns, and circumventing rigid records by adding meta-data that was not originally envisioned by the creators of the input data set;</li><li>Annotations in time series are commonly associated ONLY with segments of time, occupying the full vertical area in the chart;</li><li>Because of this, annotations cannot visually relate to a subset of the visible series in a chart, but rather to all of them.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-5.png" alt="Slide 6" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-5.jpg" alt="Slide 6" >}}
   <ul><li>The problem: current solutions do not handle realistic scenarios of analysis very well (massive data sets = too slow, unintuitive visualization);</li><li>Additional features include versioning, user management and authentication;</li><li>Focus on consistency for the ontology and availability for the series; Prototype is completely domain-agnostic.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-6.jpg" alt="Slide 7" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-6.jpg" alt="Slide 7" >}}
   <ul><li>Time series are uniquely identified by source-measurement pairs;</li><li>Annotation types enforce a common dictionary to catalog the annotations, one that is shared by all projects;</li><li>Annotations explicitly mapping a set of series is one of the main differentiators of our model;</li><li>All entities are versioned.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-7.jpg" alt="Slide 8" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-7.jpg" alt="Slide 8" >}}
   <ul><li>InfluxDB was the best candidate for queries and long-term storage of massive time series data sets (due to rollups that summarize data optimized by timestamp);</li><li>InfluxDB has a more limited data model for data that is not series, so another database was required;</li><li>A relational database was better a better fit for the ontology because most queries required (all or part of the) related entities;</li><li>PostgreSQL was the best candidate for the ontology due to its highly consistent and ACID-compliant MVCC model;</li><li>The central backend acts as a stateless broker.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-8.jpg" alt="Slide 9" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-8.jpg" alt="Slide 9" >}}
   <ul><li>Example of a query that could lead to a bottleneck: querying series (on InfluxDB) by their annotations, types or projects (on PostgreSQL) would require a request to PostgreSQL so that these results (which include annotation’s affected series) could be used to request InfluxDB;</li><li>These ad-hoc links are eventually-consistent: updating an annotation’s affected series with the annotation links takes some time (inconsistency window), so querying during that time will return obsolete results;</li><li>So why not place all of the data in PostgreSQL, allowing series to fetch associated annotations through joins? See “Evaluation” section.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-9.jpg" alt="Slide 10" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-9.jpg" alt="Slide 10" >}}
   <ul><li>User sends requests to frontend on the left (or to the REST API directly) -&gt; eventually arrives at the relevant databases on the right;</li><li>Cache: remember the result of expensive queries (e.g. computing annotation’s and their types between a start and an end timestamp) to speed up the following calls.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-10.jpg" alt="Slide 11" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-10.jpg" alt="Slide 11" >}}
   <ul><li>InfluxDB does not have transactions with atomic writes, and overlapping update propagations can lead to data loss;</li><li>This is fixed with a FIFO queue (only for writes, reads are not queued) -&gt; eventually consistent writes (they already were, but the inconsistency window is increased).</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-11.jpg" alt="Slide 12" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-11.jpg" alt="Slide 12" >}}
   <ul><li>The backend is replicated;</li><li>Load balancer is the only entry point;</li><li>A load balancer cannot queue requests on its own, so it would keep redirecting requests even if all replicas are under strain;</li><li>The distributed queue allows requests to be queued when all backend replicas are under strain (and if more cannot be spawned on-the-fly).</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-12.jpg" alt="Slide 13" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-12.jpg" alt="Slide 13" >}}
   <p>For an annotation A, a parent annotation-type T, a parent project P, a measurement M, and a source-measurement pair SM that combines any source with M, the relationship constraints that must be validated are as follows:</p><ul><li>P allows T, both being parents of A;</li><li>A is annotating SM, which P is querying;</li><li>A is annotating SM, hence is annotating M, which T allows;</li><li>A is annotating a segment of time (point or region) that T allows.</li></ul><p>Their corollaries (in the case of removal operations) are:</p><ul><li>P cannot revoke SM if at least one of its child A is still annotating SM;</li><li>T cannot revoke M if at least one of its child A is still annotating SM, hence annotating M;</li><li>T cannot revoke a segment type (point or region) if at least one of A is set with it;</li><li>P cannot revoke T if at least one of A is still of type T.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-13.jpg" alt="Slide 14" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-13.jpg" alt="Slide 14" >}}
   <p>Another caveat: this opens an inconsistency window at the local level of the requesting user (between they receive the simulated snapshot and until the actual changes are committed to the database). This does NOT affect the actual system nor the other users.</p>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-14.jpg" alt="Slide 15" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-14.jpg" alt="Slide 15" >}}
   <ul><li>The race condition here means that the ordering of events affects the knowledge-base’s correctness;</li><li>The last atomically received write will overlap the previous one, and although the overlapped variant is versioned and can be recovered, the users are not properly notified of this;</li><li>Users must always send the local last-modified date of the edited entity on update requests;</li><li>If the check fails, the user is reading obsolete data and should manually refresh to merge;</li><li>This check should not be done solely at the backend level, as simultaneous operations could still overlap on the database;</li><li>Therefore, the second check occurs at the transactional level (atomic, so it’s not possible to query a “limbo” state in which the check is made and the entity is updated);</li><li>The first check is just to make sure we don’t waste our time doing validations if the last-modified date is already obsolete.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-15.jpg" alt="Slide 16" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-15.jpg" alt="Slide 16" >}}
   <ul><li>Separation of Concerns: one repository, one service and one controller for each of the entities in our data model;</li><li>Series queries use a structured object (serialized in JSON) -&gt; query objects follow a deterministic schema that is parseable and that can be constructed using query-builder UIs.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-16.jpg" alt="Slide 17" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-16.jpg" alt="Slide 17" >}}
   <ul><li>On left: annotations intersect in the same segment of time, but not over the same series;</li><li>On right: annotations intersect in both segment of time and series;</li><li>Width adjustment to keep both snakes (inner and outer) clickable.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-17.png" alt="Slide 18" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-17.jpg" alt="Slide 18" >}}
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-18.jpg" alt="Slide 19" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-18.jpg" alt="Slide 19" >}}
   <p>The end goal is to recognize either an improvement or a negligible drop: if PostgreSQL has an inconsequentially lower performance, it is still worth using it for series for the possible gains (higher system consistency).</p>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-19.jpg" alt="Slide 20" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-19.jpg" alt="Slide 20" >}}
   <ul><li>Blue lines are PostgreSQL, Purple lines are InfluxDB;</li><li>For smaller data sets, performance differences are negligible;</li><li>For larger data sets, estimated time and resource usage increase exponentially.</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-20.png" alt="Slide 21" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-20.jpg" alt="Slide 21" >}}
   <ul><li>InfluxDB has better data ingestion rate and data compression (more scalable);</li><li>InfluxDB uses more RAM (to store rollups).</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-21.png" alt="Slide 22" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-21.jpg" alt="Slide 22" >}}
   <ul><li>The proposed platform enables stronger collaborative framework and eases the process of knowledge discovery/acquisition;</li><li>Annotations occupy smaller areas of the vertical space, increasing intuitiveness and reducing visual noise;</li><li>With this, we have a strong foundation to build stronger collaborative frameworks in other domains;</li><li>Future Work: user permission granularity, multiple parent annotation types (behave like tags), database sharding, snake scrubbing to edit, bezier curves for series in line graphs, streamed transmission of query results (WebSocket).</li></ul>
 {{</ figure >}}
 
 {{< figure
-  src="https://on.notist.cloud/slides/deck3308/large-22.png" alt="Slide 23" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-22.jpg" alt="Slide 23" >}}
 {{</ figure >}}
 
 
