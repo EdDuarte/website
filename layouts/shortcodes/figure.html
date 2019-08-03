@@ -9,7 +9,7 @@
   <figcaption>{{ .Inner }}</figcaption>
 </figure>
 <noscript>
-<figure class="{{ if $hasCounter }}figcounter{{ end }}">
+<figure{{ if $hasCounter }} class="figcounter"{{ end }}>
   <img
       src='{{ .Get "src" }}'
       alt='{{ .Get "alt" }}'
