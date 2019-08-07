@@ -1,0 +1,12 @@
+{{ $unmarshal := .Inner | transform.Unmarshal }}
+{{ $len := (len $unmarshal.list) }}
+{{ if gt $len 0 }}
+<div class="footnotes">
+  <hr>
+  <ol>
+    {{ range $unmarshal.list }}
+    <li>{{ . }}</li>
+    {{ end }}
+  </ol>
+</div>
+{{ end }}
