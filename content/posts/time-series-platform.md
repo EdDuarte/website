@@ -31,23 +31,26 @@ tags:
   - talk
 ---
 
+{{< dropcap >}}
+
 The recent expansion of metrification on a daily basis has led to the
 production of massive quantities of data, which in many cases correspond to
 time series. To streamline the discovery and sharing of meaningful information
 within time series, a multitude of analysis software tools were developed.
 However, these tools lack appropriate mechanisms to handle massive time series
 data sets and large quantities of simultaneous requests, as well as suitable
-visual representations for annotated data. We propose a distributed, scalable,
-secure and high-performant architecture that allows a group of researchers to
-curate a mutual knowledge base deployed over a network and to annotate patterns
-while preventing data loss from overlapping contributions or unsanctioned
-changes. Analysts can share annotation projects with peers over a reactive web
-interface with a customizable workspace. Annotations can express meaning not
-only over a segment of time but also over a subset of the series that coexist
-in the same segment. In order to reduce visual clutter and improve readability,
-we propose a novel visual encoding where annotations are rendered as arcs
-traced only over the affected curves. The performance of the prototype under
-different architectural approaches was benchmarked.
+visual representations for annotated data. In this paper we propose a
+distributed, scalable, secure and high-performant architecture that allows a
+group of researchers to curate a mutual knowledge base deployed over a network
+and to annotate patterns while preventing data loss from overlapping
+contributions or unsanctioned changes. Analysts can share annotation projects
+with peers over a reactive web interface with a customizable workspace.
+Annotations can express meaning not only over a segment of time but also over a
+subset of the series that coexist in the same segment. In order to reduce
+visual clutter and improve readability, we propose a novel visual encoding
+where annotations are rendered as arcs traced only over the affected curves.
+The performance of the prototype under different architectural approaches was
+benchmarked.
 
 
 {{< line >}}
@@ -67,7 +70,8 @@ The paper described in this page was presented at the [DATA 2019: International
 Conference on Data Science, E-learning and Information
 Systems](http://www.dataconference.org) in Vienna House Diplomat Prague,
 Prague, Czech Republic. Below are the slides (with speaker notes) used for that
-presentation, which are also [hosted on Notist](https://noti.st/duarte/CAP51Y/slides).
+presentation, which are also [hosted on
+Notist](https://noti.st/duarte/CAP51Y/slides).
 
 {{< figure
   src="/posts/time-series-platform/slides/data2019-slide-1.jpg" alt="Slide 1"  >}}
@@ -193,127 +197,39 @@ Competitiveness and Internationalization Operational Program, and by the
 European Regional Development Fund.
 
 
-{{< line >}}
+{{< footnotes >}}
+{"list":[
+"Abadi, D. (2012). Consistency tradeoffs in modern distributed database system design: Cap is only part of the story. Computer, 45(2):37–42.",
+"Adnan, M., Just, M., and Baillie, L. (2016). Investigating time series visualisations to improve the user experience. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems, CHI ’16, pages 5444–5455, New York, NY, USA. ACM.",
+"Bader, A., Kopp, O., and Falkenthal, M. (2017). Survey and comparison of open source time series databases. In Mitschang, B., Nicklas, D., Leymann, F., Schning, H., Herschel, M., Teubner, J., Hrder, T., Kopp, O., and Wieland, M., editors, Datenbanksysteme fr Business, Technologie und Web (BTW 2017) - Workshopband, pages 249–268, Bonn. Gesellschaft fr Informatik e.V.",
+"Bar-Or, A., Healey, J., Kontothanassis, L., and Thong, J. M. V. (2004). Biostream: a system architecture for real-time processing of physiological signals. In The 26th Annual International Conference of the IEEE Engineering in Medicine and Biology Society, volume 2, pages 3101–3104.",
+"Blount, M., Ebling, M., Eklund, J., James, A., Mcgregor, C., Percival, N., Smith, K., and Sow, D. (2010). Real-time analysis for intensive care: Development and deployment of the artemis analytic system. IEEEEngineeringinMedicineandBiologyMagazine, 29(2):110–118.",
+"Cleveland, W. S. and McGill, R. (1984). Graphical perception: Theory, experimentation, and application to the development of graphical methods. Journal of the American Statistical Association, 79(387):531–554.",
+"Eltabakh, M. Y., Aref, W. G., Elmagarmid, A. K., Ouzzani, M., and Silva, Y. N. (2009). Supporting annotations on relations. In Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology, EDBT ’09, pages 379–390, New York, NY, USA. ACM.",
+"Fielding, R. (2000). Representational state transfer. Architectural Styles and the Design of Netowork-based Software Architecture, pages 76–85.",
+"Freedman, M. (2018). Timescaledb vs. influxdb: purpose built differently for time-series data.",
+"Fu, T.-c. (2011). A review on time series data mining. Engineering Applications of Artificial Intelligence, 24(1):164 – 181.",
+"Gilbert, S. and Lynch, N. (2002). Brewer’s conjecture and the feasibility of consistent, available, partitiontolerant web services. SIGACT News, 33(2):51–59.",
+"Guyet, T., Garbay, C., and Dojat, M. (2007). Knowledge construction from time series data using a collaborative exploration system. Journal of Biomedical Informatics, 40(6):672 – 687. Intelligent Data Analysis in Biomedicine.",
+"Hadavandi, E., Shavandi, H., and Ghanbari, A. (2010). Integration of genetic fuzzy systems and artificial neural networks for stock price forecasting. KnowledgeBased Systems, 23(8):800 – 808.",
+"Hampton, L. (2018). Eye or the tiger: Benchmarking cassandra vs. timescaledb for time-series data.",
+"Healy, P. D., O’Reilly, R. D., Boylan, G. B., and Morrison, J. P. (2010). Web-based remote monitoring of live eeg. In The 12th IEEE International Conference on e-Health Networking, Applications and Services, pages 169–174.",
+"Healy, P. D., O’Reilly, R. D., Boylan, G. B., and Morrison, J. P. (2011). Interactive annotations to support collaborative analysis of streaming physiological data. In 2011 24th International Symposium on ComputerBased Medical Systems (CBMS), pages 1–5.",
+"Hochheiser, H. and Shneiderman, B. (2004). Dynamic query tools for time series data sets: Timebox widgets for interactive exploration. Information Visualization, 3(1):1–18.",
+"Jensen, S. K., Pedersen, T. B., and Thomsen, C. (2017). Time series management systems: A survey. IEEE Transactions on Knowledge and Data Engineering, 29(11):2581–2600.",
+"Kalogeropoulos, D. A., Carson, E. R., and Collinson, P. O. (2003). Towards knowledge-based systems in clinical practice: Development of an integrated clinical information and knowledge management support system. Computer Methods and Programs in Biomedicine, 72(1):65 – 80.",
+"Keim, D. A., Mansmann, F., Schneidewind, J., and Ziegler, H. (2006). Challenges in visual data analysis. In Tenth International Conference on Information Visualisation (IV’06), pages 9–16.",
+"Keraron, Y., Bernard, A., and Bachimont, B. (2009). Annotations to improve theusing and the updating of digital technical publications. 20:157–170.",
+"Kiefer, R. (2017). Timescaledb vs. postgres for time-series: 20x higher inserts, 2000x faster deletes, 1.2x-14,000x faster queries.",
+"Kreps, J. (2013). The log: What every software engineer should know about real-time data’s unifying abstraction.",
+"Laney, D. (2001). 3d data management: Controlling data volume, variety and velocity.",
+"Liang, J. and Huang, M. L. (2010). Highlighting in information visualization: A survey. In 2010 14th International Conference Information Visualisation, pages 79–85.",
+"Mathe, Z., Haen, C., and Stagni, F. (2017). Monitoring performance of a highly distributed and complex computing infrastructure in lhcb. In Journal of Physics: Conference Series, volume 898, page 092028. IOP Publishing.",
+"Momjian, B. (2018). Mvcc unmasked.",
+"ONeil, P., Cheng, E., Gawlick, D., and ONeil, E. (1996). The log-structured merge-tree (lsm-tree). Acta Informatica, 33(4):351–385.",
+"O’Reilly, R. D. (2015). A distributed architecture for the monitoring and analysis of time series data.",
+"Pressly, Jr., W. B. S. (2008). Tspad: A tablet-pc based application for annotation and collaboration on time series data. In Proceedings of the 46th Annual Southeast Regional Conference on XX, ACM-SE 46, pages 527– 528, New York, NY, USA. ACM.",
+"Sow, D., Biem, A., Blount, M., Ebling, M., and Verscheure, O. (2010). Body sensor data processing using stream computing. In Proceedings of the International Conference on Multimedia Information Retrieval, MIR ’10, pages 449–458, New York, NY, USA. ACM."
+]}
+{{</ footnotes >}}
 
-## References
-
-- Abadi, D. (2012). Consistency tradeoffs in modern distributed database system
-  design: Cap is only part of the story. Computer, 45(2):37–42.
-
-- Adnan, M., Just, M., and Baillie, L. (2016). Investigating time series
-  visualisations to improve the user experience. In Proceedings of the 2016 CHI
-  Conference on Human Factors in Computing Systems, CHI ’16, pages 5444–5455,
-  New York, NY, USA. ACM.
-
-- Bader, A., Kopp, O., and Falkenthal, M. (2017). Survey and comparison of open
-  source time series databases. In Mitschang, B., Nicklas, D., Leymann, F.,
-  Schning, H., Herschel, M., Teubner, J., Hrder, T., Kopp, O., and Wieland, M.,
-  editors, Datenbanksysteme fr Business, Technologie und Web (BTW 2017) -
-  Workshopband, pages 249–268, Bonn. Gesellschaft fr Informatik e.V.
-
-- Bar-Or, A., Healey, J., Kontothanassis, L., and Thong, J. M. V. (2004).
-  Biostream: a system architecture for real-time processing of physiological
-  signals. In The 26th Annual International Conference of the IEEE Engineering
-  in Medicine and Biology Society, volume 2, pages 3101–3104.
-
-- Blount, M., Ebling, M., Eklund, J., James, A., Mcgregor, C., Percival, N.,
-  Smith, K., and Sow, D. (2010). Real-time analysis for intensive care:
-  Development and deployment of the artemis analytic system.
-  IEEEEngineeringinMedicineandBiologyMagazine, 29(2):110–118.
-
-- Cleveland, W. S. and McGill, R. (1984). Graphical perception: Theory,
-  experimentation, and application to the development of graphical methods.
-  Journal of the American Statistical Association, 79(387):531–554.
-
-- Eltabakh, M. Y., Aref, W. G., Elmagarmid, A. K., Ouzzani, M., and Silva, Y.
-  N. (2009). Supporting annotations on relations. In Proceedings of the 12th
-  International Conference on Extending Database Technology: Advances in
-  Database Technology, EDBT ’09, pages 379–390, New York, NY, USA. ACM.
-
-- Fielding, R. (2000). Representational state transfer. Architectural Styles
-  and the Design of Netowork-based Software Architecture, pages 76–85.
-
-- Freedman, M. (2018). Timescaledb vs. influxdb: purpose built differently for
-  time-series data.
-
-- Fu, T.-c. (2011). A review on time series data mining. Engineering
-  Applications of Artificial Intelligence, 24(1):164 – 181.
-
-- Gilbert, S. and Lynch, N. (2002). Brewer’s conjecture and the feasibility of
-  consistent, available, partitiontolerant web services. SIGACT News,
-  33(2):51–59.
-
-- Guyet, T., Garbay, C., and Dojat, M. (2007). Knowledge construction from time
-  series data using a collaborative exploration system. Journal of Biomedical
-  Informatics, 40(6):672 – 687. Intelligent Data Analysis in Biomedicine.
-
-- Hadavandi, E., Shavandi, H., and Ghanbari, A. (2010). Integration of genetic
-  fuzzy systems and artificial neural networks for stock price forecasting.
-  KnowledgeBased Systems, 23(8):800 – 808.
-
-- Hampton, L. (2018). Eye or the tiger: Benchmarking cassandra vs. timescaledb
-  for time-series data.
-
-- Healy, P. D., O’Reilly, R. D., Boylan, G. B., and Morrison, J. P. (2010).
-  Web-based remote monitoring of live eeg. In The 12th IEEE International
-  Conference on e-Health Networking, Applications and Services, pages 169–174.
-
-- Healy, P. D., O’Reilly, R. D., Boylan, G. B., and Morrison, J. P. (2011).
-  Interactive annotations to support collaborative analysis of streaming
-  physiological data. In 2011 24th International Symposium on ComputerBased
-  Medical Systems (CBMS), pages 1–5.
-
-- Hochheiser, H. and Shneiderman, B. (2004). Dynamic query tools for time
-  series data sets: Timebox widgets for interactive exploration. Information
-  Visualization, 3(1):1–18.
-
-- Jensen, S. K., Pedersen, T. B., and Thomsen, C. (2017). Time series
-  management systems: A survey. IEEE Transactions on Knowledge and Data
-  Engineering, 29(11):2581–2600.
-
-- Kalogeropoulos, D. A., Carson, E. R., and Collinson, P. O. (2003). Towards
-  knowledge-based systems in clinical practice: Development of an integrated
-  clinical information and knowledge management support system. Computer
-  Methods and Programs in Biomedicine, 72(1):65 – 80.
-
-- Keim, D. A., Mansmann, F., Schneidewind, J., and Ziegler, H. (2006).
-  Challenges in visual data analysis. In Tenth International Conference on
-  Information Visualisation (IV’06), pages 9–16.
-
-- Keraron, Y., Bernard, A., and Bachimont, B. (2009). Annotations to improve
-  theusing and the updating of digital technical publications. 20:157–170.
-
-- Kiefer, R. (2017). Timescaledb vs. postgres for time-series: 20x higher
-  inserts, 2000x faster deletes, 1.2x-14,000x faster queries.
-
-- Kreps, J. (2013). The log: What every software engineer should know about
-  real-time data’s unifying abstraction.
-
-- Laney, D. (2001). 3d data management: Controlling data volume, variety and
-  velocity.
-
-- Liang, J. and Huang, M. L. (2010). Highlighting in information visualization:
-  A survey. In 2010 14th International Conference Information Visualisation,
-  pages 79–85.
-
-- Mathe, Z., Haen, C., and Stagni, F. (2017). Monitoring performance of a
-  highly distributed and complex computing infrastructure in lhcb. In Journal
-  of Physics: Conference Series, volume 898, page 092028. IOP Publishing.
-
-- Momjian, B. (2018). Mvcc unmasked.
-
-- ONeil, P., Cheng, E., Gawlick, D., and ONeil, E. (1996). The log-structured
-  merge-tree (lsm-tree). Acta Informatica, 33(4):351–385.
-
-- O’Reilly, R. D. (2015). A distributed architecture for the monitoring and
-  analysis of time series data.
-
-- Pressly, Jr., W. B. S. (2008). Tspad: A tablet-pc based application for
-  annotation and collaboration on time series data. In Proceedings of the 46th
-  Annual Southeast Regional Conference on XX, ACM-SE 46, pages 527– 528, New
-  York, NY, USA. ACM.
-
-- Sow, D., Biem, A., Blount, M., Ebling, M., and Verscheure, O. (2010). Body
-  sensor data processing using stream computing. In Proceedings of the
-  International Conference on Multimedia Information Retrieval, MIR ’10, pages
-  449–458, New York, NY, USA. ACM.
