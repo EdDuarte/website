@@ -110,3 +110,10 @@ Deck](https://speakerdeck.com/duarte/secure-and-trustworthy-file-sharing-over-cl
 
 {{< sd 18f78dd7b1cf493aaf7b817d76f36383 >}}
 
+{{< footnotes >}}
+{"list":[
+"Moritz Borgmann, Tobias Hahn, Michael Herfert, Thomas Kunz, Marcel Richter, Ursula Viebeg, and Sven Vowé. On the Security of Cloud Storage Services. Technical report, Fraunhofer Institute for Secure Information Technology, 2012.",
+"Stephen Geerlings. Measurements for the Paranoid: The Effect of Encrypting Files in Cloud Storage. 2013.",
+"Bernd Zwattendorfer, Bojan Suzic, Peter Teufl, and Andreas Derler. Secure Hardware-Based Public Cloud Storage. Open Identity Summit, 2013."
+]}
+{{</ footnotes >}}

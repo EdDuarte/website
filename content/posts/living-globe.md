@@ -148,3 +148,20 @@ Deck](https://speakerdeck.com/duarte/living-globe-tridimensional-interactive-vis
 
 {{< sd bf04a6e0d58a4dfaa7ce97e9c08c309b >}}
 
+{{< footnotes >}}
+{"list":[
+"Dubel, S., Rohlig, M., Schumann, H., Trapp, M.: 2D and 3D Presentation of Spatial Data: A Systematic Review. In Proceedings of 3DVis@IEEEVIS2014: Does 3D really make sense for Data Visualization? pp. 11-18 (2014)",
+"Mazza, R.: Introduction to information visualization. Springer-Verlag London, (2009)",
+"Robertson, G., Card, S., Mackinlay, J. Information Visualization using 3D Interactive Animation. In Commun. ACM, vol. 36, no. 4, pp. 57–71. (1994)",
+"Shneiderman, B., The eyes have it: a task by data type taxonomy for information visualizations. In: Proceedings of the IEEE Symposium on Visual Languages, pp.336-343 (1996)",
+"Sousa Santos, B., Dias, P.: Evaluation in Visualization: some issues and best practices. In: SPIE Conf. Electronic Imaging, Vol. 9017: Visualization and Data Analysis 2014, pp. 90170O-1-8. SPIE, San Francisco (2014)",
+"Nielsen, J.: Heuristic evaluation of user interfaces. In: Proceedings of the ACM CHI’90 Conference, pp. 249–256 (1990)",
+"Dix, A., Finlay, J., Abowd, G., Beale, R.: Human-Computer Interaction, 3rd edition. Prentice Hall, (2004)",
+"Nielsen, J.: Finding usability problems through heuristic evaluation. In: Proceedings of the SIGCHI Conference on Human Factors in Computing Systems, pp. 373–380 (1992)",
+"Tory, M., Möller, T.: Human Factors in Visualization Research. In: IEEE Trans. Vis. Comput. Graph., vol. 10, no. 1, pp. 72–84. IEEE (2004)",
+"Tory, M., Möller, T.: Evaluating visualizations: do expert reviews work? In: IEEE Comput. Graph. Appl., vol. 25, no. 5, pp. 8–11. IEEE (2005)",
+"Carpendale, S.: Evaluating Information Visualizations. In: Kerren, A., Stasko, J., Fekete, J. D., North, C. (eds) Information Visualization: Human-Centered Issues and Perspectives, pp. 19 – 45. Springer, (2008)",
+"Zuk, T., Schlesier, L., Neumann, P., Hancock, M. S., Carpendale, S.: Heuristics for Information Visualization Evaluation. In BELIV’06, pp. 1–6. ACM, New York (2006)",
+"Forsell, C., Johanson, J.: An heuristic set for evaluation in information visualization. In: Proc. of AVI 2010, pp. 199–206. ACM, New York (2010)"
+]}
+{{</ footnotes >}}
