@@ -34,8 +34,6 @@ tags:
   - talk
 ---
 
-{{< dropcap >}}
-
 The recent expansion of metrification on a daily basis has led to the
 production of massive quantities of data, which in many cases correspond to
 time series. To streamline the discovery and sharing of meaningful information
@@ -60,9 +58,9 @@ benchmarked.
 
 ## Publication
 
-This research paper was published in _8th International Conference on Data
-Science, Technology and Applications: Proceedings_. The full text can be read
-on
+This research paper was published in _Proceedings of the 8th International
+Conference on Data Science, Technology and Applications_, volume 1, pages
+41-52. The full text can be read on
 [SciTePress](https://www.scitepress.org/PublicationsDetail.aspx?ID=duVELBh/osY=&t=1).
 
 To cite this paper, you may use the following BibTex record:
