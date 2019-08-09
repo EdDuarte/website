@@ -30,6 +30,7 @@ links:
     url: https://noti.st/duarte/CAP51Y/slides
 date: "2019-07-28 11:32:00+01:00"
 tags:
+  - project
   - paper
   - talk
 ---

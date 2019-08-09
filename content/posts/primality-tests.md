@@ -1,5 +1,5 @@
 ---
-title: "Primality tests (implementation & benchmarking)"
+title: "Primality tests (implementation in Java & benchmarking)"
 description: "Evaluating the effectiveness of various methods that determine if
 a number is prime: Trial division, Fermat and Miller-Rabin."
 slug: "primality-tests"

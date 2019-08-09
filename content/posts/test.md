@@ -58,6 +58,8 @@ Normal roman text. __Bold text.__ _Italic text._ **_Bold Italic Text._** &#@$%.
 
 # Reference
 
+{{< dropcap >}}
+
 Additionally, the represented data is normalized[^test] within an adjustable
 scale. This can be used to filter out extremely high or extremely low samples,
 uniforming the remaining data and improving its visibility.
@@ -115,8 +117,6 @@ ratio to country color.
 {{</ figure >}}
 
 # Line length
-
-{{< dropcap >}}
 
 To help me visualize the length of the line <span style="color:red;">(</span>as
 demonstrating in this para<span style="color:red;">g</span>raph), I mark the
