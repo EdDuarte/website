@@ -121,6 +121,8 @@ It is built with Javascript ES6, [jQuery](https://jquery.com/),
 [on Github](https://github.com/edduarte/living-globe).
 
 
+{{< line >}}
+
 ## Publication
 
 Throughout research, the usability of this app was tested by agnostic
@@ -128,11 +130,9 @@ individuals, and the results indicate that the data filtering and customizable
 mapping features encourage a faster interpretation of relational information.
 
 A research paper describing the implementation of Living Globe, as well as a
-discussion of the results from the usability tests above, was published with
-the title **_Living Globe: Tridimensional Interactive Visualization of World
-Demographic Data_** in _HIMI 2016: Human Interface and the Management of
-Information: Information, Design and Interaction_, volume 9734, pages 14-24.
-The full text can be read on
+discussion of the results from the usability tests above, was published in
+_HIMI 2016: Human Interface and the Management of Information: Information,
+Design and Interaction_, volume 9734, pages 14-24. The full text can be read on
 [Springer](https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2) or
 [arXiv](https://arxiv.org/abs/1607.05946).
 
@@ -150,6 +150,8 @@ To cite this paper, you may use the following BibTex record:
 }
 ```
 
+
+{{< line >}}
 
 ## Talk
 
