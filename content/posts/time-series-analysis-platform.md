@@ -90,7 +90,7 @@ Conference on Data Science, E-learning and Information
 Systems](http://www.dataconference.org) in Vienna House Diplomat Prague,
 Prague, Czech Republic. Below are the slides (with speaker notes) used for that
 presentation, which are also [hosted on
-Notist](https://noti.st/duarte/CAP51Y/slides).
+Notist](https://noti.st/duarte/CAP51Y).
 
 
 {{< figure

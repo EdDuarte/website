@@ -3,5 +3,6 @@ title: "Data Mining projects"
 weight: 1
 ---
 
-Below are some of my software projects that use Data Mining and Information
-Retrieval technologies, sorted in chronological order.
+Below are some of my software projects that implement and use Data Mining,
+Statistical Classification, Text Analytics, Information Retrieval and
+Information Extraction methods, sorted in chronological order.

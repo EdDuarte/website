@@ -1,5 +1,6 @@
 ---
 title: "Papers"
+description: "Research papers and academic profile"
 ---
 
 Below are the research papers I've authored. You can also view my academic
