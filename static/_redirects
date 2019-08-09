@@ -1,3 +1,36 @@
+
+/time-series-analysis-platform/*  /distributed-and-scalable-platform-for-collaborative-analysis-of-massive-time-series-data-sets/
+/data2019/*  /distributed-and-scalable-platform-for-collaborative-analysis-of-massive-time-series-data-sets/
+
+/primality-tests/*  https://gist.github.com/EdDuarte/ea564df58d317f98ec0d811c32ca6608
+
+/living-globe/*  /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
+/livingglobe/*  /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
+/hcii2016/*  /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
+/tridimensional-interactive-visualization-of-world-demographic-data/*  /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
+
+/living-globe-demo/*  https://edduarte.github.io/living-globe/
+
+/vokter/*  /vokter-a-library-that-periodically-checks-for-changes-in-web-documents/
+/vokter-a-java-library-that-detects-and-notifies-changes-in-web-documents/*  /vokter-a-library-that-periodically-checks-for-changes-in-web-documents/
+
+/semantic-graph/*  https://github.com/edduarte/semantic-graph
+
+/thumbeo/*  http://www.thumbeo.com/en/
+/thumbeo-a-ride-sharing-mobile-application-where-users-can-find-rides-near-them-schedule-their-own-rides-and-chat-in-real-time/*  http://www.thumbeo.com/en/
+/thumbeo-a-mobile-app-to-finds-cheap-rides-nearby/*  http://www.thumbeo.com/en/
+
+/erlang-poker-ml/*  /knowledge-based-system-for-texas-holdem-outcome-prediction/
+/poker-ml/*  /knowledge-based-system-for-texas-holdem-outcome-prediction/
+/developing-a-knowledge-based-system-for-texas-holdem-outcome-prediction-in-erlang/*  /knowledge-based-system-for-texas-holdem-outcome-prediction/
+
+/protbox/*  /protbox-secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
+/openidentity2014/*  /protbox-secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
+/secure-file-sharing-over-cloud-storage-using-eid-tokens/*  /protbox-secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
+/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/*  /protbox-secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
+
+/about-me/*  /about
+
 /posts                      /
 /post/*                     /:splat
 /posts/*                    /:splat
@@ -21,32 +54,3 @@
 /projects/*                 /:splat
 /talk                       /talks/
 /talks/*                    /:splat
-
-/about-me  /about
-
-/living-globe  /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
-/livingglobe  /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
-/hcii2016  /living-globe-tridimensional-interactive-visualization-of-world-demographic-data/
-
-/vokter  /vokter-a-library-that-periodically-checks-for-changes-in-web-documents/
-/vokter-a-java-library-that-detects-and-notifies-changes-in-web-documents  /vokter-a-library-that-periodically-checks-for-changes-in-web-documents/
-
-/thumbeo  http://www.thumbeo.com/en/
-/thumbeo-a-ride-sharing-mobile-application-where-users-can-find-rides-near-them-schedule-their-own-rides-and-chat-in-real-time  http://www.thumbeo.com/en/
-/thumbeo-a-mobile-app-to-finds-cheap-rides-nearby  http://www.thumbeo.com/en/
-
-/erlang-poker-ml  /knowledge-based-system-for-texas-holdem-outcome-prediction/
-/poker-ml  /knowledge-based-system-for-texas-holdem-outcome-prediction/
-/developing-a-knowledge-based-system-for-texas-holdem-outcome-prediction-in-erlang  /knowledge-based-system-for-texas-holdem-outcome-prediction/
-
-/protbox  /protbox-secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
-/openidentity2014  /protbox-secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
-/secure-file-sharing-over-cloud-storage-using-eid-tokens  /protbox-secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
-
-/living-globe-demo  https://edduarte.github.io/living-globe/
-
-/time-series-analysis-platform  /distributed-and-scalable-platform-for-collaborative-analysis-of-massive-time-series-data-sets/
-
-/primality-tests  https://gist.github.com/EdDuarte/ea564df58d317f98ec0d811c32ca6608
-
-/semantic-graph  https://github.com/edduarte/semantic-graph
