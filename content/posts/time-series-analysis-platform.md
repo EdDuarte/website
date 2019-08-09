@@ -92,116 +92,464 @@ Prague, Czech Republic. Below are the slides (with speaker notes) used for that
 presentation, which are also [hosted on
 Notist](https://noti.st/duarte/CAP51Y/slides).
 
-{{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-1.jpg" alt="Slide 1"  >}}
-{{</ figure >}}
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-2.jpg" alt="Slide 2" >}}
-  <ul><li>In the last few years we have been in the presence of the phenomenon of increased metrification;</li><li>How to derive meaning from huge amounts of complex raw data while it continues to grow every day? The answer: collaborative (human or automated) analysis;</li><li>Analysis is more agile when done within a software solution, especially when collaborators work in a shared network, evolving a mutual knowledgebase without physical presence.</li></ul>
+  src="/posts/time-series-platform/slides/data2019-slide-1.jpg"
+  alt="Slide 1" 
+>}}
 {{</ figure >}}
 
-{{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-3.jpg" alt="Slide 3" >}}
-  <ul><li>Example domains with massive time series data sets: medical diagnosis using EEGs and ECGs, financial technical analysis, monitoring of natural phenomenons, athlete performance monitoring;</li><li>Analysis methodologies have to handle data entropy at storage and visual levels.</li></ul>
-{{</ figure >}}
+
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-4.jpg" alt="Slide 4" >}}
-  <ul><li>In highly heterogeneous use cases, there is a need to compare data from different measurements and source devices;</li><li>Why webapps? Because of recent developments made to web technologies and the near-universal availability of browsers.</li></ul>
+  src="/posts/time-series-platform/slides/data2019-slide-2.jpg"
+  alt="Slide 2"
+>}}
+### Introduction
+- metrification of devices;
+  - e.g. wearable gadgets, real-time IoT sensors, Smart Home devices
+- annual data acquisition rate:
+  - 2016 – 1.2 zb/y;
+  - 2021 – 3.3 zb/y;
+- requirements for digital data processing and storage are increasing
+  exponentially;
+- Volume, Variety and Velocity;
+- <u>Value</u> and <u>Veracity</u>.
 {{</ figure >}}
 
-{{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-5.jpg" alt="Slide 5" >}}
-  <ul><li>Time series alone cannot convey meaning, only allude to it;</li><li>Annotations allow collaborators to critique, create memory-aids, highlight patterns, and circumventing rigid records by adding meta-data that was not originally envisioned by the creators of the input data set;</li><li>Annotations in time series are commonly associated ONLY with segments of time, occupying the full vertical area in the chart;</li><li>Because of this, annotations cannot visually relate to a subset of the visible series in a chart, but rather to all of them.</li></ul>
-{{</ figure >}}
+- In the last few years we have been in the presence of the phenomenon of
+  increased metrification;
+- How to derive meaning from huge amounts of complex raw data while it
+  continues to grow every day? The answer: collaborative (human or automated)
+  analysis;
+- Analysis is more agile when done within a software solution, especially when
+  collaborators work in a shared network, evolving a mutual knowledgebase
+  without physical presence.
+
+
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-6.jpg" alt="Slide 6" >}}
-  <ul><li>The problem: current solutions do not handle realistic scenarios of analysis very well (massive data sets = too slow, unintuitive visualization);</li><li>Additional features include versioning, user management and authentication;</li><li>Focus on consistency for the ontology and availability for the series; Prototype is completely domain-agnostic.</li></ul>
+  src="/posts/time-series-platform/slides/data2019-slide-3.jpg"
+  alt="Slide 3"
+>}}
+### Introduction: Time series analysis
+- some metrics only have meaning when observed as a pattern over time;
+- time series can be found in almost every aspect of human life;
+- most domains produce massive amounts of series data;
+- analysis is more agile when within a software solution.
+
+Fig. 1: Three time series represented in a line graph visualization.
 {{</ figure >}}
 
-{{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-7.jpg" alt="Slide 7" >}}
-  <ul><li>Time series are uniquely identified by source-measurement pairs;</li><li>Annotation types enforce a common dictionary to catalog the annotations, one that is shared by all projects;</li><li>Annotations explicitly mapping a set of series is one of the main differentiators of our model;</li><li>All entities are versioned.</li></ul>
-{{</ figure >}}
+- Example domains with massive time series data sets: medical diagnosis using
+  EEGs and ECGs, financial technical analysis, monitoring of natural
+  phenomenons, athlete performance monitoring;
+- Analysis methodologies have to handle data entropy at storage and visual
+  levels.
+
+
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-8.jpg" alt="Slide 8" >}}
-  <ul><li>InfluxDB was the best candidate for queries and long-term storage of massive time series data sets (due to rollups that summarize data optimized by timestamp);</li><li>InfluxDB has a more limited data model for data that is not series, so another database was required;</li><li>A relational database was better a better fit for the ontology because most queries required (all or part of the) related entities;</li><li>PostgreSQL was the best candidate for the ontology due to its highly consistent and ACID-compliant MVCC model;</li><li>The central backend acts as a stateless broker.</li></ul>
+  src="/posts/time-series-platform/slides/data2019-slide-4.jpg"
+  alt="Slide 4"
+>}}
+### Introduction: Time series visualization
+- can be a very challenging task:
+  - data sets commonly have high cardinality and complexity;
+- <u>comparative visualization tasks</u>:
+  - dashboard applications like Timelion, Grafana and Freeboard;
+- most analysis applications are built as web applications.
+
+Fig. 2: Grafana and Timelion (Kibana) dashboards displaying multiple time
+series charts in simultaneous.
 {{</ figure >}}
 
-{{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-9.jpg" alt="Slide 9" >}}
-  <ul><li>Example of a query that could lead to a bottleneck: querying series (on InfluxDB) by their annotations, types or projects (on PostgreSQL) would require a request to PostgreSQL so that these results (which include annotation’s affected series) could be used to request InfluxDB;</li><li>These ad-hoc links are eventually-consistent: updating an annotation’s affected series with the annotation links takes some time (inconsistency window), so querying during that time will return obsolete results;</li><li>So why not place all of the data in PostgreSQL, allowing series to fetch associated annotations through joins? See “Evaluation” section.</li></ul>
-{{</ figure >}}
+- In highly heterogeneous use cases, there is a need to compare data from
+  different measurements and source devices;
+- Why webapps? Because of recent developments made to web technologies and the
+  near-universal availability of browsers;
+- Time series alone cannot convey meaning, only allude to it.
+
+
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-10.jpg" alt="Slide 10" >}}
-  <ul><li>User sends requests to frontend on the left (or to the REST API directly) -&gt; eventually arrives at the relevant databases on the right;</li><li>Cache: remember the result of expensive queries (e.g. computing annotation’s and their types between a start and an end timestamp) to speed up the following calls.</li></ul>
+  src="/posts/time-series-platform/slides/data2019-slide-5.jpg"
+  alt="Slide 5"
+>}}
+### Introduction: Annotation
+- realistic analysis tasks involve collaboration and knowledge-sharing between
+  human curators;
+- annotations facilitate knowledge-building and decision-making in analysis
+  processes.
+
+Fig. 3: Annotation encoding in Grafana
 {{</ figure >}}
 
-{{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-11.jpg" alt="Slide 11" >}}
-  <ul><li>InfluxDB does not have transactions with atomic writes, and overlapping update propagations can lead to data loss;</li><li>This is fixed with a FIFO queue (only for writes, reads are not queued) -&gt; eventually consistent writes (they already were, but the inconsistency window is increased).</li></ul>
-{{</ figure >}}
+- Annotations allow collaborators to critique, create memory-aids, highlight
+  patterns, and circumventing rigid records by adding meta-data that was not
+  originally envisioned by the creators of the input data set;
+- Annotations in time series are commonly associated ONLY with segments of
+  time, occupying the full vertical area in the chart;
+- Because of this, annotations cannot visually relate to a subset of the
+  visible series in a chart, but rather to all of them.
+
+
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-12.jpg" alt="Slide 12" >}}
-  <ul><li>The backend is replicated;</li><li>Load balancer is the only entry point;</li><li>A load balancer cannot queue requests on its own, so it would keep redirecting requests even if all replicas are under strain;</li><li>The distributed queue allows requests to be queued when all backend replicas are under strain (and if more cannot be spawned on-the-fly).</li></ul>
+  src="/posts/time-series-platform/slides/data2019-slide-6.jpg"
+  alt="Slide 6"
+>}}
+### Proposal
+- data-intensive architecture and web application for collaborative time series
+  analysis;
+- use most appropriate open-source tools for querying, storing and displaying
+  time series and annotations;
+- distributed architecture to handle high quantities of concurrent usage:
+  - E+C for annotations, users and the knowledge base;
+  - E+L for series.
+- prototype tested with HVAC data set from 1000 boilers over 1.3 years.
 {{</ figure >}}
 
-{{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-13.jpg" alt="Slide 13" >}}
-  <p>For an annotation A, a parent annotation-type T, a parent project P, a measurement M, and a source-measurement pair SM that combines any source with M, the relationship constraints that must be validated are as follows:</p><ul><li>P allows T, both being parents of A;</li><li>A is annotating SM, which P is querying;</li><li>A is annotating SM, hence is annotating M, which T allows;</li><li>A is annotating a type of time segment (point or region) that T allows.</li></ul><p>The respective corollaries (in the case of removal operations) are:</p><ul><li>P cannot revoke T if at least one of A is still of type T;</li><li>P cannot revoke SM if at least one of its child A is still annotating SM;</li><li>T cannot revoke M if at least one of its child A is still annotating SM, hence annotating M;</li><li>T cannot revoke a type of time segment (point or region) if at least one of its child A is set with it.</li></ul>
-{{</ figure >}}
+- The problem: current solutions do not handle realistic scenarios of analysis
+  very well (massive data sets = too slow, unintuitive visualization);
+- Additional features include versioning, user management and authentication;
+- Focus on consistency for the ontology and availability for the series;
+- Prototype is completely domain-agnostic.
+
+
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-14.jpg" alt="Slide 14" >}}
-  <p>Another caveat: this opens an inconsistency window at the local level of the requesting user (between they receive the simulated snapshot and until the actual changes are committed to the database). This does NOT affect the actual system nor the other users.</p>
+  src="/posts/time-series-platform/slides/data2019-slide-7.jpg"
+  alt="Slide 7"
+>}}
+### Proposal: Data model
+- time series has a measurement and a data source;
+- annotations have a parent type, a point or ranged segment of time, and <u>a
+  set of affected series</u>;
+- projects restrict a set of collaborators to a segment of time, a set of
+  series, and an annotation scope.
+
+Fig. 4: Relational diagram of entities
 {{</ figure >}}
 
-{{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-15.jpg" alt="Slide 15" >}}
-  <ul><li>The race condition here means that the ordering of events affects the knowledge-base’s correctness;</li><li>The last atomically received write will overlap the previous one, and although the overlapped variant is versioned and can be recovered, the users are not properly notified of this;</li><li>Users must always send the local last-modified date of the edited entity on update requests;</li><li>If the check fails, the user is reading obsolete data and should manually refresh to merge;</li><li>This check should not be done solely at the backend level, as simultaneous operations could still overlap on the database;</li><li>Therefore, the second check occurs at the transactional level (atomic, so it’s not possible to query a “limbo” state in which the check is made and the entity is updated);</li><li>The first check is just to make sure we don’t waste our time doing validations if the last-modified date is already obsolete.</li></ul>
-{{</ figure >}}
+- Time series are uniquely identified by source-measurement pairs;
+- Annotation types enforce a common dictionary to catalog the annotations, one
+  that is shared by all projects;
+- Annotations explicitly mapping a set of series is one of the main
+  differentiators of our model;
+- All entities are versioned.
+
+
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-16.jpg" alt="Slide 16" >}}
-  <ul><li>Separation of Concerns: one repository, one service and one controller for each of the entities in our data model;</li><li>Series queries use a structured object (serialized in JSON) -&gt; query objects follow a deterministic schema that is parseable and that can be constructed using query-builder UIs.</li></ul>
+  src="/posts/time-series-platform/slides/data2019-slide-8.jpg"
+  alt="Slide 8"
+>}}
+### Proposal: Data management
+- polyglot persistence model:
+  - time series are stored in InfluxDB, ontology is stored in PostgreSQL;
+  - central backend enforces data access logic and conceals the real location
+    of the data.
+
+Fig. 5: Data management approach
 {{</ figure >}}
 
-{{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-17.jpg" alt="Slide 17" >}}
-  <ul><li>On left: annotations intersect in the same segment of time, but not over the same series;</li><li>On right: annotations intersect in both segment of time and series;</li><li>Width adjustment to keep both snakes (inner and outer) clickable.</li></ul>
-{{</ figure >}}
+- InfluxDB was the best candidate for queries and long-term storage of massive
+  time series data sets (due to rollups that summarize data optimized by
+  timestamp);
+- InfluxDB has a more limited data model for data that is not series, so
+  another database was required;
+- A relational database was better a better fit for the ontology because most
+  queries required (all or part of the) related entities;
+- PostgreSQL was the best candidate for the ontology due to its highly
+  consistent and ACID-compliant MVCC model;
+- The central backend acts as a stateless broker.
+
+
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-18.jpg" alt="Slide 18" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-9.jpg"
+  alt="Slide 9"
+>}}
+### Proposal: Data management
+- overall traffic workload is distributed, but querying simultaneous data types
+  can lead to bottlenecks;
+- links are added on each data point and propagated to the TSDBMS on ontology
+  updates.
+
+Fig. 6: Data management approach with ad-hoc entity links on each time series
+data point
 {{</ figure >}}
 
-{{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-19.jpg" alt="Slide 19" >}}
-  <p>The end goal is to recognize either an improvement or a negligible drop: if PostgreSQL has an inconsequentially lower performance, it is still worth using it for series for the possible gains (higher system consistency).</p>
-{{</ figure >}}
+- Example of a query that could lead to a bottleneck: querying series (on
+  InfluxDB) by their annotations, types or projects (on PostgreSQL) would
+  require a request to PostgreSQL so that these results (which include
+  annotation’s affected series) could be used to request InfluxDB;
+- These ad-hoc links are eventually-consistent: updating an annotation’s
+  affected series with the annotation links takes some time (inconsistency
+  window), so querying during that time will return obsolete results;
+- So why not place all of the data in PostgreSQL, allowing series to fetch
+  associated annotations through joins? See “Evaluation” slide.
+
+
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-20.jpg" alt="Slide 20" >}}
-  <ul><li>Blue lines are PostgreSQL, Purple lines are InfluxDB;</li><li>For smaller data sets, performance differences are negligible;</li><li>For larger data sets, estimated time and resource usage increase exponentially.</li></ul>
+  src="/posts/time-series-platform/slides/data2019-slide-10.jpg"
+  alt="Slide 10"
+>}}
+### Proposal: Architecture
+Fig. 7: Platform architecture
 {{</ figure >}}
 
-{{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-21.jpg" alt="Slide 21" >}}
-  <ul><li>InfluxDB has better data ingestion rate and data compression (more scalable);</li><li>InfluxDB uses more RAM (to store rollups).</li></ul>
-{{</ figure >}}
+- User sends requests to frontend on the left (or to the REST API directly) ->
+  eventually arrives at the relevant databases on the right;
+- Cache: remember the result of expensive queries (e.g. computing annotation’s
+  and their types between a start and an end timestamp) to speed up the
+  following calls.
+
+
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-22.jpg" alt="Slide 22" >}}
-  <ul><li>The proposed platform enables stronger collaborative framework and eases the process of knowledge discovery/acquisition;</li><li>Annotations occupy smaller areas of the vertical space, increasing intuitiveness and reducing visual noise;</li><li>With this, we have a strong foundation to build stronger collaborative frameworks in other domains;</li><li>Future Work: user permission granularity, multiple parent annotation types (behave like tags), database sharding, snake scrubbing to edit, bezier curves for series in line graphs, streamed transmission of query results (WebSocket).</li></ul>
+  src="/posts/time-series-platform/slides/data2019-slide-11.jpg"
+  alt="Slide 11"
+>}}
+### Proposal: Architecture
+Fig. 8: Platform architecture highlighting a RabbitMQ queue between the backend
+and InfluxDB
 {{</ figure >}}
 
+- InfluxDB does not have transactions with atomic writes, and overlapping
+  update propagations can lead to data loss;
+- This is fixed with a FIFO queue (only for writes, reads are not queued) ->
+  eventually consistent writes (they already were, but the inconsistency window
+  is increased).
+
+
+
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-23.jpg" alt="Slide 23" >}}
+  src="/posts/time-series-platform/slides/data2019-slide-12.jpg"
+  alt="Slide 12"
+>}}
+### Proposal: Architecture
+Fig. 9: Load-balancing strategy
+{{</ figure >}}
+
+- The backend is replicated;
+- Load balancer is the only entry point;
+- A load balancer cannot queue requests on its own, so it would keep
+  redirecting requests even if all replicas are under strain;
+- The distributed queue allows requests to be queued when all backend replicas
+  are under strain (and if more cannot be spawned on-the-fly).
+
+
+
+{{< figure
+  src="/posts/time-series-platform/slides/data2019-slide-13.jpg"
+  alt="Slide 13"
+>}}
+### Proposal: Architecture
+- the backend opens processing pipelines for each request;
+- authentication:
+  - auth. session tokens are JWTs with an expiration date;
+- validation stage checks for invalid contents or constraint violations.
+
+Fig. 10: Processing pipeline for queries and insertions
+{{</ figure >}}
+
+For an annotation A, a parent annotation-type T, a parent project P, a
+measurement M, and a source-measurement pair SM that combines any source with
+M, the relationship constraints that must be validated are as follows:
+- P allows T, both being parents of A;
+- A is annotating SM, which P is querying;
+- A is annotating SM, hence is annotating M, which T allows;
+- A is annotating a type of time segment (point or region) that T allows.
+
+The respective corollaries (in the case of removal operations) are:
+- P cannot revoke T if at least one of A is still of type T;
+- P cannot revoke SM if at least one of its child A is still annotating SM;
+- T cannot revoke M if at least one of its child A is still annotating SM,
+  hence annotating M;
+- T cannot revoke a type of time segment (point or region) if at least one of
+  its child A is set with it.
+
+
+
+{{< figure
+  src="/posts/time-series-platform/slides/data2019-slide-14.jpg"
+  alt="Slide 14"
+>}}
+### Proposal: Architecture
+- updates, deletions and rollbacks are made asynchronously:
+  - user receives a simulated snapshot with proposed changes;
+  - validation stage ensures that the update will likely be committed;
+  - caveat: unexpected errors cannot be sent to the user.
+
+Fig. 11: Processing pipeline for updates, deletions or rollbacks
+{{</ figure >}}
+
+Another caveat: this opens an inconsistency window at the local level of the
+requesting user (between they receive the simulated snapshot and until the
+actual changes are committed to the database). This does **NOT** affect the
+actual system nor the other users.
+
+
+
+{{< figure
+  src="/posts/time-series-platform/slides/data2019-slide-15.jpg"
+  alt="Slide 15"
+>}}
+### Proposal: Architecture
+- users make changes based on the observed data;
+- if two users update the same record at the same time -> race condition!!!;
+- optimistic-locking: last-modified dates checksum.
+
+Fig. 12: Processing pipeline for updates, deletions or rollbacks, with an arrow
+pointing to the location of the two optimistic-locking checks
+{{</ figure >}}
+
+- The race condition here means that the ordering of events affects the
+  knowledge-base’s correctness;
+- The last atomically received write will overlap the previous one, and
+  although the overlapped variant is versioned and can be recovered, the users
+  are not properly notified of this;
+- Users must always send the local last-modified date of the edited entity on
+  update requests;
+- If the check fails, the user is reading obsolete data and should manually
+  refresh to merge;
+- This check should not be done solely at the backend level, as simultaneous
+  operations could still overlap on the database;
+- Therefore, the second check occurs at the transactional level (atomic, so
+  it’s not possible to query a “limbo” state in which the check is made and the
+  entity is updated);
+- The first check is just to make sure we don’t waste our time doing
+  validations if the last-modified date is already obsolete.
+
+
+
+{{< figure
+  src="/posts/time-series-platform/slides/data2019-slide-16.jpg"
+  alt="Slide 16"
+>}}
+### Proposal: Architecture
+- Spring JPA provides abstraction layers for PostgreSQL queries (hot-swap)
+
+Fig. 13: Controller to Service to Repository association
+{{</ figure >}}
+
+- Separation of Concerns: one repository, one service and one controller for
+  each of the entities in our data model;
+- Series queries use a structured object (serialized in JSON) -> query objects
+  follow a deterministic schema that is parseable and that can be constructed
+  using query-builder UIs.
+
+
+
+{{< figure
+  src="/posts/time-series-platform/slides/data2019-slide-17.jpg"
+  alt="Slide 17"
+>}}
+### Proposal: Annotations
+- snakes: arcs traced over series’ curves;
+- paint over existing points, interpolate when in-between;
+- intersection handling (nesting).
+
+Fig. 14: Visual encoding of annotations
+{{</ figure >}}
+
+- On left: annotations intersect in the same segment of time, but not over the
+  same series;
+- On right: annotations intersect in both segment of time and series;
+- Width adjustment to keep both snakes (inner and outer) clickable.
+
+
+
+{{< figure
+  src="/posts/time-series-platform/slides/data2019-slide-18.jpg"
+  alt="Slide 18"
+>}}
+{{</ figure >}}
+
+
+{{< figure
+  src="/posts/time-series-platform/slides/data2019-slide-19.jpg"
+  alt="Slide 19"
+>}}
+### Evaluation: Time series in PostgreSQL
+- as granularity increases, Consistency is harder to attain;
+- put all data in a single ACID-compliant RDBMS:
+  - linking logic is built-in through the relational model;
+  - better Consistency handling.
+- benchmark read-write performance.
+
+Fig. 15: The two data management approaches that were tested
+{{</ figure >}}
+
+The end goal is to recognize either an improvement or a negligible drop: if
+PostgreSQL has an inconsequentially lower performance, it is still worth using
+it for series for the possible gains (higher system consistency).
+
+
+
+{{< figure
+  src="/posts/time-series-platform/slides/data2019-slide-20.jpg"
+  alt="Slide 20"
+>}}
+### Evaluation: Time series in PostgreSQL
+Fig. 16: Average CPU usage and request time observed for queries
+{{</ figure >}}
+
+- Blue lines are PostgreSQL, Purple lines are InfluxDB;
+- For smaller data sets, performance differences are negligible;
+- For larger data sets, estimated time and resource usage increase
+  exponentially.
+
+
+
+{{< figure
+  src="/posts/time-series-platform/slides/data2019-slide-21.jpg"
+  alt="Slide 21"
+>}}
+### Evaluation: Time series in PostgreSQL
+Fig. 17: Average request time, disk usage and RAM usage for insertions
+{{</ figure >}}
+
+- InfluxDB has better data ingestion rate and data compression (more scalable);
+- however, InfluxDB uses more RAM (to store rollups).
+
+
+
+{{< figure
+  src="/posts/time-series-platform/slides/data2019-slide-22.jpg"
+  alt="Slide 22"
+>}}
+### Conclusion
+- improved collaboration workflow:
+  - enhanced model for building smaller scopes of analysis;
+  - better visualization for comparison of data;
+  - stronger annotation readability and flexibility of expression;
+  - scalable architecture that adjusts to data set size and traffic amount;
+  - linearizability and strongly validated contributions;
+- the open REST API enables extensibility: more input and output modules can be
+  added.
+{{</ figure >}}
+
+- The proposed platform enables stronger collaborative framework and eases the
+  process of knowledge discovery/acquisition;
+- Annotations occupy smaller areas of the vertical space, increasing
+  intuitiveness and reducing visual noise;
+- With this, we have a strong foundation to build stronger collaborative
+  frameworks in other domains;
+- Future Work: user permission granularity, multiple parent annotation types
+  (behave like tags), database sharding, snake scrubbing to edit, bezier curves
+  for series in line graphs, streamed transmission of query results
+  (WebSocket).
+
+
+
+{{< figure
+  src="/posts/time-series-platform/slides/data2019-slide-23.jpg"
+  alt="Slide 23"
+>}}
 {{</ figure >}}
 
 
