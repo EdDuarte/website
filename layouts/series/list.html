@@ -29,12 +29,23 @@
     <main>
 
       <ul class="list">
-        {{ range .Data.Pages.ByDate }}
-        {{ if not .Params.hidden }}
-        <li>
-          {{ partial "list-item.html" . }}
-        </li>
-        {{ end }}
+        {{ if .File }}
+          {{ $seriesKey := index (split (path.Dir .File.Dir) "/") 1 }}
+          {{ range .Data.Pages.ByParam $seriesKey }}
+            {{ if not .Params.hidden }}
+            <li>
+              {{ partial "list-item.html" . }}
+            </li>
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          {{ range .Data.Pages }}
+            {{ if not .Params.hidden }}
+            <li>
+              {{ partial "list-item.html" . }}
+            </li>
+            {{ end }}
+          {{ end }}
         {{ end }}
       </ul>
 
