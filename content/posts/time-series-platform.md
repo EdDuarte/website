@@ -19,6 +19,9 @@ authors:
   - name: Rui L. Aguiar
     url: https://www.it.pt/Members/Index/357
 links:
+  - name: Paper on SciTePress
+    icon: paper
+    url: https://www.scitepress.org/PublicationsDetail.aspx?ID=duVELBh/osY=&t=1
   - name: Talk slides as PDF
     icon: slides
     url: /posts/time-series-platform/DATA2019-21-slides-v10.pdf
@@ -58,8 +61,25 @@ benchmarked.
 ## Publication
 
 This research paper was published in _8th International Conference on Data
-Science, Technology and Applications: Proceedings_. Links to this paper will be
-included once available.
+Science, Technology and Applications: Proceedings_. The full text can be read
+on
+[SciTePress](https://www.scitepress.org/PublicationsDetail.aspx?ID=duVELBh/osY=&t=1).
+
+To cite this paper, you may use the following BibTex record:
+
+```bibtex
+@conference{EdDuarte/data2019/time-series-analysis-platform,
+  author = {Eduardo Duarte and Diogo Gomes and David Campos and Rui L. Aguiar},
+  title = {Distributed and scalable platform for collaborative analysis of massive time series data sets},
+  booktitle = {Proceedings of the 8th International Conference on Data Science, Technology and Applications - Volume 1: DATA},
+  pages = {41--52},
+  year = {2019},
+  publisher = {SciTePress},
+  organization = {INSTICC},
+  doi = {10.5220/0007834700410052},
+  isbn = {978-989-758-377-3},
+}
+```
 
 
 {{< line >}}
