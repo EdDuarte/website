@@ -6,7 +6,7 @@
       title='{{ .Get "alt" }}'
       {{ with .Get "class" }} class='{{.}}' {{ end }}
   />
-  <figcaption>{{ .Inner }}</figcaption>
+  <figcaption>{{ .Inner | markdownify }}</figcaption>
 </figure>
 <noscript>
 <figure{{ if $hasCounter }} class="figcounter"{{ end }}>
@@ -16,6 +16,6 @@
       title='{{ .Get "alt" }}'
       {{ with .Get "class" }} class='{{.}}' {{ end }}
   />
-  <figcaption>{{ .Inner }}</figcaption>
+  <figcaption>{{ .Inner | markdownify }}</figcaption>
 </figure>
 </noscript>
