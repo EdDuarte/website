@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+description: "Personal software projects and code excerpts"
 ---
 
 Below are some of my software projects (developed for University classes, my
