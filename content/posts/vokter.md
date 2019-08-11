@@ -1,11 +1,14 @@
 ---
-title: "Vokter: A library that periodically checks for changes in web documents"
-description: "High-performant Java library that uses LSH, DiffMatchPatch and
-Bloom filters to detect inserted and removed keywords from web documents."
+title: "Vokter: A document store that periodically checks for changes in web
+documents"
+description: "Scalable and extensible scheduler & document store that uses
+Locality-Sensitive Hashing, DiffMatchPatch and Bloom filters to detect inserted
+and removed keywords from web documents."
 hasThumbnail: true
-keywords: [java, library, rest, restful architecture, distributed systems, bloom
-filter, hashing, locality sensitive hashing, nearest neighbor search, natural
-language processing, nlp, information retrieval, text mining]
+keywords: [java, rest, restful architecture, distributed systems, bloom filter,
+hashing, locality sensitive hashing, LSH, nearest neighbor search, natural
+language processing, nlp, information retrieval, information extraction, text
+mining, text analytics]
 links:
   - name: Project Hub
     url: https://github.com/vokter
@@ -16,17 +19,17 @@ date: "2016-06-19 19:26:00+01:00"
 mirrors:
   - name: Medium
     url:
-        "https://medium.com/@edduarte/vokter-a-java-library-that-detects-changes-in-web-documents-c4d3d399046d"
+        "https://medium.com/@EdDuarte/c4d3d399046d"
 tags:
   - project
 series:
   - dmproj
 prologue: "This post outlines the architecture and design decisions behind
-Vokter, an open-source Java library that I've been developing since October
-2014. This does **not** address other projects under the 'Vokter' umbrella,
-such as HTTP servers that use the core library to manage a persistent state of
-Vokter on the web instead of locally, but I do hope to address them later in a
-future post."
+Vokter, an open-source document store in Java that I've been developing since
+October 2014. This does **not** address other projects under the 'Vokter'
+umbrella, such as HTTP servers that use the core library to manage a persistent
+state of Vokter on the web instead of locally, but I do hope to address them
+later in a future post."
 ---
 
 {{< dropcap >}}
@@ -37,14 +40,14 @@ Panoptes*](https://en.wikipedia.org/wiki/Argus_Panoptes), the all-seeing giant
 of Greek mythology), it is currently one of my most ambitious and complex
 libraries, now known as Vokter (Norwegian for *watcher*).
 
-[Vokter](https://github.com/vokter/vokter) is a high-performance, scalable Java
-library that combines [Locality-Sensitive Hashing for
+[Vokter](https://github.com/vokter/vokter) is a document store & index that
+combines [Locality-Sensitive Hashing for
 K-Shingles](https://github.com/edduarte/near-neighbor-search), [a fork of
 DiffMatchPatch](https://github.com/edduarte/indexed-diff-match-patch), [Bloom
 filters](https://github.com/google/guava/wiki/HashingExplained#bloomfilter) and
 [Quartz jobs](http://www.quartz-scheduler.org) to detect changes in web
-documents, triggering notifications when specified keywords were either added or
-removed.
+documents, triggering notifications when specified keywords were either added
+or removed.
 
 At a basic level, Vokter fetches web documents on a periodic basis and performs
 **detection** (comparison of occurrences between two snapshots of the same

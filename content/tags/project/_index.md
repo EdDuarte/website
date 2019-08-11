@@ -3,6 +3,6 @@ title: "Projects"
 description: "Personal software projects and code excerpts"
 ---
 
-Below are some of my software projects (developed for University classes, my
-own startups, or during my spare-time) and miscellaneous code excerpts. Most of
-these are open-source and [published on GitHub](https://github.com/edduarte).
+Things that I have developed or contributed to (for work, my own startups,
+University classes, or just during my spare-time). Most of these are
+open-source and [published on GitHub](https://github.com/edduarte).
