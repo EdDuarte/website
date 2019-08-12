@@ -1012,16 +1012,23 @@ details > div {
 }
 
 .metadata-links > li > a,
-.tags > li > a {
+.tags > li > a,
+.tags > li > span {
   border-radius: 5px;
-  cursor: pointer;
   font-size: .54em;
   letter-spacing: -.01em;
   padding: .4em .8em;
+  line-height: .9em;
+}
+
+.metadata-links > li > a,
+.tags > li > a {
+  cursor: pointer;
 }
 
 .font-load-1 .metadata-links > li > a,
-.font-load-1 .tags > li > a {
+.font-load-1 .tags > li > a,
+.font-load-1 .tags > li > span {
   font-size: .6em;
 }
 
@@ -1553,6 +1560,21 @@ figure,
     color: #5a5476;
   }
 
+  .list-item:hover .badge-tech {
+    background-color: #dbdbdf;
+    color: #908aaa;
+  }
+
+  .badge-lang {
+    background-color: #cad1cf;
+    color: #545a58;
+  }
+
+  .list-item:hover .badge-lang {
+    background-color: #d7dcda;
+    color: #909c97;
+  }
+
   .mlt,
   .card-series {
     border: 1px solid #d8d6e1;
@@ -1678,8 +1700,23 @@ figure,
 
   .badge,
   .series-badge {
-    background-color: #5a5476;
-    color: #d0cfd5;
+    background-color: #2b2a30;
+    color: #938db0;
+  }
+
+  .list-item:hover .badge-tech {
+    background-color: #202024;
+    color: #696976;
+  }
+
+  .badge-lang {
+    background-color: #2e3533;
+    color: #8ba09a;
+  }
+
+  .list-item:hover .badge-lang {
+    background-color: #232826;
+    color: #636f6a;
   }
 
   .mlt,
