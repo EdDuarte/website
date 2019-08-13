@@ -5,7 +5,8 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{ .Params.description }}">
-{{ with .Keywords }}
+{{ $keywords := union .Keywords (union .Params.lang .Params.tech) }}
+{{ with $keywords }}
 <meta
     name="keywords"
     content="{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}, Ed Duarte, edduarte, duarte, eddrt"
@@ -115,6 +116,10 @@ ul {
 
 ol {
   list-style: decimal;
+}
+
+.wip {
+  list-style: none;
 }
 
 blockquote,
@@ -421,6 +426,17 @@ ul > li {
 .font-load-1 ol > li,
 .font-load-1 ul > li {
   margin-top: .55em;
+  margin-bottom: .6em;
+}
+
+.list-meta-tags,
+.font-load-1 .list-meta-tags {
+  line-height: 0;
+}
+
+.list-meta-tags > li,
+.font-load-1 .list-meta-tags > li {
+  margin-top: .38em;
   margin-bottom: .6em;
 }
 
@@ -1440,11 +1456,6 @@ h6 {
   letter-spacing: -.02em;
 }
 
-.list-meta-tags,
-.font-load-1 .list-meta-tags {
-  line-height: 0;
-}
-
 .anchor,
 .anchor:hover,
 .home-link a,
@@ -1566,11 +1577,21 @@ figure,
   }
 
   .badge-lang {
+    background-color: #d1cacc;
+    color: #5a5456;
+  }
+
+  .list-item:hover .badge-lang {
+    background-color: #dcd7d9;
+    color: #9c9095;
+  }
+
+  .badge-wip {
     background-color: #cad1cf;
     color: #545a58;
   }
 
-  .list-item:hover .badge-lang {
+  .list-item:hover .badge-wip {
     background-color: #d7dcda;
     color: #909c97;
   }
@@ -1620,6 +1641,28 @@ figure,
     text-decoration-color: #17151f;
   }
 
+  .home-link a,
+  a,
+  html,
+  .title,
+  .title a,
+  b,
+  code,
+  h1,
+  h1 a,
+  h2,
+  h2 a,
+  h3,
+  h3 a,
+  h4,
+  h4 a,
+  h5,
+  h5 a,
+  h6,
+  h6 a {
+    color: #17151f;
+  }
+
   .header-meta,
   .header-meta a,
   .footnotes,
@@ -1642,6 +1685,18 @@ figure,
   .card-item-desc,
   figcaption,
   figcaption a,
+  figcaption h1,
+  figcaption h1 a,
+  figcaption h2,
+  figcaption h2 a,
+  figcaption h3,
+  figcaption h3 a,
+  figcaption h4,
+  figcaption h4 a,
+  figcaption h5,
+  figcaption h5 a,
+  figcaption h6,
+  figcaption h6 a,
   .footer,
   .footer a {
     color: #6b677d;
@@ -1663,28 +1718,6 @@ figure,
 
   .line {
     color: #9794a4;
-  }
-
-  .home-link a,
-  a,
-  html,
-  .title,
-  .title a,
-  b,
-  code,
-  h1,
-  h1 a,
-  h2,
-  h2 a,
-  h3,
-  h3 a,
-  h4,
-  h4 a,
-  h5,
-  h5 a,
-  h6,
-  h6 a {
-    color: #17151f;
   }
 }
 
@@ -1710,11 +1743,21 @@ figure,
   }
 
   .badge-lang {
+    background-color: #352e30;
+    color: #a08b91;
+  }
+
+  .list-item:hover .badge-lang {
+    background-color: #282325;
+    color: #6f6368;
+  }
+
+  .badge-wip {
     background-color: #2e3533;
     color: #8ba09a;
   }
 
-  .list-item:hover .badge-lang {
+  .list-item:hover .badge-wip {
     background-color: #232826;
     color: #636f6a;
   }
@@ -1764,6 +1807,28 @@ figure,
     text-decoration-color: #d0cfd6;
   }
 
+  .home-link a,
+  a,
+  html,
+  .title,
+  .title a,
+  b,
+  code,
+  h1,
+  h1 a,
+  h2,
+  h2 a,
+  h3,
+  h3 a,
+  h4,
+  h4 a,
+  h5,
+  h5 a,
+  h6,
+  h6 a {
+    color: #d0cfd6;
+  }
+
   .header-meta,
   .header-meta a,
   .footnotes,
@@ -1786,6 +1851,18 @@ figure,
   .card-item-desc,
   figcaption,
   figcaption a,
+  figcaption h1,
+  figcaption h1 a,
+  figcaption h2,
+  figcaption h2 a,
+  figcaption h3,
+  figcaption h3 a,
+  figcaption h4,
+  figcaption h4 a,
+  figcaption h5,
+  figcaption h5 a,
+  figcaption h6,
+  figcaption h6 a,
   .footer,
   .footer a {
     color: #7d798e;
@@ -1807,28 +1884,6 @@ figure,
 
   .line {
     color: #4d495e;
-  }
-
-  .home-link a,
-  a,
-  html,
-  .title,
-  .title a,
-  b,
-  code,
-  h1,
-  h1 a,
-  h2,
-  h2 a,
-  h3,
-  h3 a,
-  h4,
-  h4 a,
-  h5,
-  h5 a,
-  h6,
-  h6 a {
-    color: #d0cfd6;
   }
 }
 
@@ -2330,7 +2385,7 @@ pre > code {
 
   .font-load-1 .links {
     margin-top: .15em;
-    margin-bottom: .5em;
+    margin-bottom: .2em;
   }
 
   .metadata-icon {

@@ -28,18 +28,20 @@ Picture modified from the above, used as avatar photo (1000x1000).
 
 Recently worked at [Bosch
 Thermotechnology](https://www.bosch.pt/en/our-company/bosch-in-portugal/),
-where I developed a scalable platform for time series analysis and annotation,
-designing a ReactJS application and deploying a Java + Spring Boot 2 distributed
-architecture with polyglot persistence that handles high amounts of traffic and
-massive multivariate series data sets.
+where I developed a [scalable platform for time series analysis and
+annotation](/distributed-and-scalable-platform-for-collaborative-analysis-of-massive-time-series-data-sets/),
+designing a ReactJS application and deploying a distributed architecture with
+polyglot persistence that handles high amounts of traffic and massive
+multivariate series data sets.
 
 Previously worked at [Ubiwhere](http://www.ubiwhere.com/en/) as a backend
 developer on a business process modeling and integration platform, and as a
 mobile developer in various Android and iOS applications for brands like
-[Vodafone Smart Parking](https://parking.vodafone.citibrain.com/),
+[Citibrain](http://www.citibrain.com/en/solutions/smart-parking/) (in
+particular the Smart Parking app, which is used by Vodafone Portugal),
 [Bewegen](https://www.bewegen.pt/about/app/),
 [Bikeemotion](http://www.bikeemotion.com/), [Anacom](http://www.netmede.pt/app)
-and [Prio](https://app.prioenergy.com/).
+and [Prio](https://www.prio.pt/pt/app_237.html).
 
 I have co-founded two tech startups where I had the chance to act both as a
 creative director and a technical lead, guiding co-workers in the development

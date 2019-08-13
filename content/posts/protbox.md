@@ -6,6 +6,8 @@ description: "Open-source & cross-platform app that performs file encryption
 and user authentication on existing cloud storage services."
 keywords: [information security, cloud storage, file encryption, authentication,
 eID token, dropbox, onedrive, google drive, sugarsync]
+lang: [Java]
+tech: [Swing]
 authors:
   - name: Ed Duarte
     url: https://www.edduarte.com
