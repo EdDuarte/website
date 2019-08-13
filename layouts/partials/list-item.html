@@ -1,39 +1,68 @@
 
-{{ $tags := .Site.Taxonomies.tags }}
+{{ $c := .context }}
+{{ $tags := $c.Site.Taxonomies.tags }}
 
 <div>
   <div class="list-meta">
     <div class="table">
       <time class="col1 list-meta-date">
-        {{ .Date.Format "Jan 02, 2006" }}
+        {{ $c.Date.Format "Jan 02, 2006" }}
       </time>
       <div class="col2">
-        {{ $tagList := .Params.tags }}
+        {{ $tagList := $c.Params.tags }}
         {{ if $tagList }}
         <ul class="links tags list-meta-tags">
-          {{ range .Params.tags }}{{ $tag := index $tags . }}<li><a href="{{ $tag.Page.Permalink }}" class="badge badge-{{ . }}">{{ . }}</a></li>{{ end }}
+          {{ range $tagList }}
+            {{ $tag := index $tags . }}
+            <li><a href="{{ $tag.Page.Permalink }}" class="badge badge-{{ . }}">{{ . }}</a></li>
+          {{ end }}
         </ul>
         {{ end }}
       </div>
     </div>
   </div>
   <hr>
-  {{ if .Params.externalLink }}
-  <a href="{{ .Params.externalLink }}" class="list-item">
+  {{ if $c.Params.externalLink }}
+  <a href="{{ $c.Params.externalLink }}" class="list-item">
   {{ else }}
-  <a href="{{ .Permalink }}" class="list-item">
+  <a href="{{ $c.Permalink }}" class="list-item">
   {{ end }}
     <div class="list-item-container">
+      {{ if $c.Params.wip }}
+      <ul class="links tags list-meta-tags wip">
+        <li><span class="badge badge-wip">Work in Progress</span></li>
+      </ul>
+      {{ end }}
       <div>
-        {{ if .Params.externalLink }}
+        {{ if $c.Params.externalLink }}
         <div class="icon list-icon icon-external-link"></div>
         {{ end }}
-        <h5 class="list-title">{{ .Title }}</h5>
+        <h5 class="list-title">{{ $c.Title }}</h5>
       </div>
-      {{ with .Params.description }}
+      {{ with $c.Params.description }}
       <div class="list-desc">
         <p class="small">{{ . }}</p>
       </div>
+      {{ end }}
+      {{ if eq .renderTechBadges "true" }}
+      {{ $langList := $c.Params.lang }}
+      {{ $techList := $c.Params.tech }}
+      {{ if or $langList $techList }}
+      <div class="list-topics">
+        <ul class="links tags list-meta-tags">
+          {{ if $langList }}
+          {{ range $langList }}
+          <li><span class="badge badge-lang">{{ . }}</span></li>
+          {{ end }}
+          {{ end }}
+          {{ if $techList }}
+          {{ range $techList }}
+          <li><span class="badge badge-tech">{{ . }}</span></li>
+          {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
       {{ end }}
     </div>
   </a>
