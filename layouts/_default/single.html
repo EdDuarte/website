@@ -197,7 +197,7 @@
     {{ range first 1 (after (sub (len $pages) $i) $pages.Reverse) }}
     <div class="mlt mlt-previous">
       <h6 class="mlt-header">Previous</h6>
-      {{ partial "list-item.html" . }}
+      {{ partial "list-item.html" (dict "context" . "renderTechBadges" "false") }}
     </div>
     {{ end }}
     {{ end }}
@@ -206,7 +206,7 @@
     {{ range first 1 (after (add $i 1) $pages) }}
     <div class="mlt mlt-next">
       <h6 class="mlt-header">Next</h6>
-      {{ partial "list-item.html" . }}
+      {{ partial "list-item.html" (dict "context" . "renderTechBadges" "false") }}
     </div>
     {{ end }}
     {{ end }}

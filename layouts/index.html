@@ -68,7 +68,7 @@
           {{ range .Data.Pages.ByDate.Reverse }}
           {{ if not .Params.hidden }}
           <li>
-            {{ partial "list-item.html" . }}
+            {{ partial "list-item.html" (dict "context" . "renderTechBadges" "true") }}
           </li>
           {{ end }}
           {{ end }}
