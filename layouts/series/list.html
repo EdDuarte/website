@@ -31,7 +31,7 @@
       <ul class="list">
         {{ if .File }}
           {{ $seriesKey := index (split (path.Dir .File.Dir) "/") 1 }}
-          {{ range .Data.Pages.ByParam $seriesKey }}
+          {{ range (.Data.Pages.ByDate.Reverse).ByParam $seriesKey }}
             {{ if not .Params.hidden }}
             <li>
               {{ partial "list-item.html" (dict "context" . "renderTechBadges" "true") }}
