@@ -2,13 +2,20 @@
 title: "Distributed and scalable platform for collaborative analysis of massive
 time series data sets"
 subtitle: "DATA 2019, July 26 - 28, Prague, Czech Republic"
-description: "High-performant webapp that allows researchers to annotate time
-series patterns while preventing data loss from overlapping contributions or
-unsanctioned changes."
-keywords: [time series, annotations, annotation systems, collaborative
-software, data analysis, information science, data modeling, knowledge
-management, database management systems, distributed systems, information
-visualization, collaborative software, HVAC]
+description: "High-consistency distributed system and reactive webapp that
+allows researchers to annotate time series patterns while preventing data loss
+from overlapping contributions or unsanctioned changes."
+keywords: [time series, annotations, annotation systems, collaborative software,
+data analysis, information science, data modeling, knowledge management,
+database management systems, distributed systems, information visualization,
+collaborative software, HVAC, backend, REST, REST API, RESTful, Java, Spring
+Boot 2, Spring AOP, JPA, Jackson, Hibernate 5, Hibernate Envers, PostgreSQL,
+InfluxDB, Docker, Docker Swarm, Dropwizard Metrics, Jersey, Redis, JWT, JSON,
+JSON Web Token, jjwt, Spring Security, RabbitMQ, AssertJ, Micrometer, Ant
+Design, Axios, Dygraphs, React, ReactJS, Redux, TypeScript, Mocha, Webpack,
+LESS, PostCSS, Puppeteer]
+lang: [Java, TypeScript]
+tech: [Spring Boot 2, ReactJS, Redux, PostgreSQL, InfluxDB, Redis]
 authors:
   - name: Ed Duarte
     url: https://www.edduarte.com
@@ -41,18 +48,19 @@ time series. To streamline the discovery and sharing of meaningful information
 within time series, a multitude of analysis software tools were developed.
 However, these tools lack appropriate mechanisms to handle massive time series
 data sets and large quantities of simultaneous requests, as well as suitable
-visual representations for annotated data. In this paper we propose a
-distributed, scalable, secure and high-performant architecture that allows a
-group of researchers to curate a mutual knowledge base deployed over a network
-and to annotate patterns while preventing data loss from overlapping
-contributions or unsanctioned changes. Analysts can share annotation projects
-with peers over a reactive web interface with a customizable workspace.
-Annotations can express meaning not only over a segment of time but also over a
-subset of the series that coexist in the same segment. In order to reduce
-visual clutter and improve readability, we propose a novel visual encoding
-where annotations are rendered as arcs traced only over the affected curves.
-The performance of the prototype under different architectural approaches was
-benchmarked.
+visual representations for annotated data.
+
+In this paper we propose a distributed, scalable, secure and high-performant
+architecture that allows a group of researchers to curate a mutual knowledge
+base deployed over a network and to annotate patterns while preventing data
+loss from overlapping contributions or unsanctioned changes. Analysts can share
+annotation projects with peers over a reactive web interface with a
+customizable workspace. Annotations can express meaning not only over a segment
+of time but also over a subset of the series that coexist in the same segment.
+In order to reduce visual clutter and improve readability, we propose a novel
+visual encoding where annotations are rendered as arcs traced only over the
+affected curves. The performance of the prototype under different architectural
+approaches was benchmarked.
 
 
 {{< line >}}
@@ -105,7 +113,7 @@ Notist](https://noti.st/duarte/CAP51Y).
   src="/posts/time-series-platform/slides/data2019-slide-2.jpg"
   alt="Slide 2"
 >}}
-### Introduction
+#### Introduction
 - metrification of devices;
   - e.g. wearable gadgets, real-time IoT sensors, Smart Home devices
 - annual data acquisition rate:
@@ -132,7 +140,7 @@ Notist](https://noti.st/duarte/CAP51Y).
   src="/posts/time-series-platform/slides/data2019-slide-3.jpg"
   alt="Slide 3"
 >}}
-### Introduction: Time series analysis
+#### Introduction: Time series analysis
 - some metrics only have meaning when observed as a pattern over time;
 - time series can be found in almost every aspect of human life;
 - most domains produce massive amounts of series data;
@@ -153,7 +161,7 @@ Fig. 1: Three time series represented in a line graph visualization.
   src="/posts/time-series-platform/slides/data2019-slide-4.jpg"
   alt="Slide 4"
 >}}
-### Introduction: Time series visualization
+#### Introduction: Time series visualization
 - can be a very challenging task:
   - data sets commonly have high cardinality and complexity;
 - <u>comparative visualization tasks</u>:
@@ -176,7 +184,7 @@ series charts in simultaneous.
   src="/posts/time-series-platform/slides/data2019-slide-5.jpg"
   alt="Slide 5"
 >}}
-### Introduction: Annotation
+#### Introduction: Annotation
 - realistic analysis tasks involve collaboration and knowledge-sharing between
   human curators;
 - annotations facilitate knowledge-building and decision-making in analysis
@@ -199,7 +207,7 @@ Fig. 3: Annotation encoding in Grafana
   src="/posts/time-series-platform/slides/data2019-slide-6.jpg"
   alt="Slide 6"
 >}}
-### Proposal
+#### Proposal
 - data-intensive architecture and web application for collaborative time series
   analysis;
 - use most appropriate open-source tools for querying, storing and displaying
@@ -222,7 +230,7 @@ Fig. 3: Annotation encoding in Grafana
   src="/posts/time-series-platform/slides/data2019-slide-7.jpg"
   alt="Slide 7"
 >}}
-### Proposal: Data model
+#### Proposal: Data model
 - time series has a measurement and a data source;
 - annotations have a parent type, a point or ranged segment of time, and <u>a
   set of affected series</u>;
@@ -245,7 +253,7 @@ Fig. 4: Relational diagram of entities
   src="/posts/time-series-platform/slides/data2019-slide-8.jpg"
   alt="Slide 8"
 >}}
-### Proposal: Data management
+#### Proposal: Data management
 - polyglot persistence model:
   - time series are stored in InfluxDB, ontology is stored in PostgreSQL;
   - central backend enforces data access logic and conceals the real location
@@ -271,7 +279,7 @@ Fig. 5: Data management approach
   src="/posts/time-series-platform/slides/data2019-slide-9.jpg"
   alt="Slide 9"
 >}}
-### Proposal: Data management
+#### Proposal: Data management
 - overall traffic workload is distributed, but querying simultaneous data types
   can lead to bottlenecks;
 - links are added on each data point and propagated to the TSDBMS on ontology
@@ -297,7 +305,7 @@ data point
   src="/posts/time-series-platform/slides/data2019-slide-10.jpg"
   alt="Slide 10"
 >}}
-### Proposal: Architecture
+#### Proposal: Architecture
 Fig. 7: Platform architecture
 {{</ figure >}}
 
@@ -313,7 +321,7 @@ Fig. 7: Platform architecture
   src="/posts/time-series-platform/slides/data2019-slide-11.jpg"
   alt="Slide 11"
 >}}
-### Proposal: Architecture
+#### Proposal: Architecture
 Fig. 8: Platform architecture highlighting a RabbitMQ queue between the backend
 and InfluxDB
 {{</ figure >}}
@@ -330,7 +338,7 @@ and InfluxDB
   src="/posts/time-series-platform/slides/data2019-slide-12.jpg"
   alt="Slide 12"
 >}}
-### Proposal: Architecture
+#### Proposal: Architecture
 Fig. 9: Load-balancing strategy
 {{</ figure >}}
 
@@ -347,7 +355,7 @@ Fig. 9: Load-balancing strategy
   src="/posts/time-series-platform/slides/data2019-slide-13.jpg"
   alt="Slide 13"
 >}}
-### Proposal: Architecture
+#### Proposal: Architecture
 - the backend opens processing pipelines for each request;
 - authentication:
   - auth. session tokens are JWTs with an expiration date;
@@ -378,7 +386,7 @@ The respective corollaries (in the case of removal operations) are:
   src="/posts/time-series-platform/slides/data2019-slide-14.jpg"
   alt="Slide 14"
 >}}
-### Proposal: Architecture
+#### Proposal: Architecture
 - updates, deletions and rollbacks are made asynchronously:
   - user receives a simulated snapshot with proposed changes;
   - validation stage ensures that the update will likely be committed;
@@ -398,7 +406,7 @@ actual system nor the other users.
   src="/posts/time-series-platform/slides/data2019-slide-15.jpg"
   alt="Slide 15"
 >}}
-### Proposal: Architecture
+#### Proposal: Architecture
 - users make changes based on the observed data;
 - if two users update the same record at the same time -> race condition!!!;
 - optimistic-locking: last-modified dates checksum.
@@ -430,7 +438,7 @@ pointing to the location of the two optimistic-locking checks
   src="/posts/time-series-platform/slides/data2019-slide-16.jpg"
   alt="Slide 16"
 >}}
-### Proposal: Architecture
+#### Proposal: Architecture
 - Spring JPA provides abstraction layers for PostgreSQL queries (hot-swap)
 
 Fig. 13: Controller to Service to Repository association
@@ -448,7 +456,7 @@ Fig. 13: Controller to Service to Repository association
   src="/posts/time-series-platform/slides/data2019-slide-17.jpg"
   alt="Slide 17"
 >}}
-### Proposal: Annotations
+#### Proposal: Annotations
 - snakes: arcs traced over series’ curves;
 - paint over existing points, interpolate when in-between;
 - intersection handling (nesting).
@@ -474,7 +482,7 @@ Fig. 14: Visual encoding of annotations
   src="/posts/time-series-platform/slides/data2019-slide-19.jpg"
   alt="Slide 19"
 >}}
-### Evaluation: Time series in PostgreSQL
+#### Evaluation: Time series in PostgreSQL
 - as granularity increases, Consistency is harder to attain;
 - put all data in a single ACID-compliant RDBMS:
   - linking logic is built-in through the relational model;
@@ -494,7 +502,7 @@ it for series for the possible gains (higher system consistency).
   src="/posts/time-series-platform/slides/data2019-slide-20.jpg"
   alt="Slide 20"
 >}}
-### Evaluation: Time series in PostgreSQL
+#### Evaluation: Time series in PostgreSQL
 Fig. 16: Average CPU usage and request time observed for queries
 {{</ figure >}}
 
@@ -509,7 +517,7 @@ Fig. 16: Average CPU usage and request time observed for queries
   src="/posts/time-series-platform/slides/data2019-slide-21.jpg"
   alt="Slide 21"
 >}}
-### Evaluation: Time series in PostgreSQL
+#### Evaluation: Time series in PostgreSQL
 Fig. 17: Average request time, disk usage and RAM usage for insertions
 {{</ figure >}}
 
@@ -522,7 +530,7 @@ Fig. 17: Average request time, disk usage and RAM usage for insertions
   src="/posts/time-series-platform/slides/data2019-slide-22.jpg"
   alt="Slide 22"
 >}}
-### Conclusion
+#### Conclusion
 - improved collaboration workflow:
   - enhanced model for building smaller scopes of analysis;
   - better visualization for comparison of data;
@@ -570,7 +578,7 @@ European Regional Development Fund.
 "Adnan, M., Just, M., and Baillie, L. (2016). Investigating time series visualisations to improve the user experience. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems, CHI ’16, pages 5444–5455, New York, NY, USA. ACM.",
 "Bader, A., Kopp, O., and Falkenthal, M. (2017). Survey and comparison of open source time series databases. In Mitschang, B., Nicklas, D., Leymann, F., Schning, H., Herschel, M., Teubner, J., Hrder, T., Kopp, O., and Wieland, M., editors, Datenbanksysteme fr Business, Technologie und Web (BTW 2017) - Workshopband, pages 249–268, Bonn. Gesellschaft fr Informatik e.V.",
 "Bar-Or, A., Healey, J., Kontothanassis, L., and Thong, J. M. V. (2004). Biostream: a system architecture for real-time processing of physiological signals. In The 26th Annual International Conference of the IEEE Engineering in Medicine and Biology Society, volume 2, pages 3101–3104.",
-"Blount, M., Ebling, M., Eklund, J., James, A., Mcgregor, C., Percival, N., Smith, K., and Sow, D. (2010). Real-time analysis for intensive care: Development and deployment of the artemis analytic system. IEEEEngineeringinMedicineandBiologyMagazine, 29(2):110–118.",
+"Blount, M., Ebling, M., Eklund, J., James, A., Mcgregor, C., Percival, N., Smith, K., and Sow, D. (2010). Real-time analysis for intensive care: Development and deployment of the artemis analytic system. IEEE Engineering in Medicine and Biology Magazine, 29(2):110–118.",
 "Cleveland, W. S. and McGill, R. (1984). Graphical perception: Theory, experimentation, and application to the development of graphical methods. Journal of the American Statistical Association, 79(387):531–554.",
 "Eltabakh, M. Y., Aref, W. G., Elmagarmid, A. K., Ouzzani, M., and Silva, Y. N. (2009). Supporting annotations on relations. In Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology, EDBT ’09, pages 379–390, New York, NY, USA. ACM.",
 "Fielding, R. (2000). Representational state transfer. Architectural Styles and the Design of Netowork-based Software Architecture, pages 76–85.",

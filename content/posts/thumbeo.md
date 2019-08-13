@@ -1,7 +1,13 @@
 ---
-description: "Ride-sharing mobile application where users can find rides near
-their location, schedule their own rides and chat in real-time"
-title: "Thumbeo: A mobile app to find rides nearby"
+title: "Thumbeo: A mobile application to find rides nearby"
+description: "Ride-sharing app where users can find rides, schedule their own,
+and chat in real-time. As co-founder I developed core functionality, devised the
+overall UX, and wrote a scheduler that queues asynchronous tasks and caches
+their results in-disk."
+keywords: [rides, ride sharing, ride scheduling, chat, push notification,
+mobile, app]
+lang: [Java]
+tech: [Parse Platform, Firebase, Android SDK, Google Maps SDK]
 slug: "thumbeo"
 date: "2015-05-08 14:57:00+01:00"
 externalLink: "http://www.thumbeo.com/en/"

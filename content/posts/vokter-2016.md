@@ -3,10 +3,12 @@ title: "Vokter v0.2: Software architecture & design philosophy"
 description: "Architectural choices behind Vokter v0.2, a multilingual document
 store with built-in diff detection that I have been working on since
 2014."
-keywords: [java, rest, restful architecture, distributed systems, bloom filter,
-hashing, locality sensitive hashing, LSH, nearest neighbor search, natural
-language processing, nlp, information retrieval, information extraction, text
-mining, text analytics]
+keywords: [backend, REST, REST API, RESTful, distributed systems, bloom filter,
+hashing, LSH, locality sensitive hashing, NNS, nearest neighbor search, NLP,
+natural language processing, information retrieval, information extraction,
+text mining, text analytics]
+lang: [Java]
+tech: [Jersey, Quartz Scheduler, Cache2k, MongoDB]
 links:
   - name: Project Hub
     url: https://github.com/vokter
@@ -19,8 +21,8 @@ mirrors:
     url:
         "https://medium.com/@EdDuarte/c4d3d399046d"
 tags:
-  - project
   - notes
+  - project
 series:
   - dmproj
 prologue: "This post outlines the architectural choices behind Vokter, an
