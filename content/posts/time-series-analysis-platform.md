@@ -113,7 +113,7 @@ Notist](https://noti.st/duarte/CAP51Y).
   src="/posts/time-series-platform/slides/data2019-slide-2.jpg"
   alt="Slide 2"
 >}}
-#### Introduction
+## Introduction
 - metrification of devices;
   - e.g. wearable gadgets, real-time IoT sensors, Smart Home devices
 - annual data acquisition rate:
@@ -140,7 +140,7 @@ Notist](https://noti.st/duarte/CAP51Y).
   src="/posts/time-series-platform/slides/data2019-slide-3.jpg"
   alt="Slide 3"
 >}}
-#### Introduction: Time series analysis
+## Introduction: Time series analysis
 - some metrics only have meaning when observed as a pattern over time;
 - time series can be found in almost every aspect of human life;
 - most domains produce massive amounts of series data;
@@ -161,7 +161,7 @@ Fig. 1: Three time series represented in a line graph visualization.
   src="/posts/time-series-platform/slides/data2019-slide-4.jpg"
   alt="Slide 4"
 >}}
-#### Introduction: Time series visualization
+## Introduction: Time series visualization
 - can be a very challenging task:
   - data sets commonly have high cardinality and complexity;
 - <u>comparative visualization tasks</u>:
@@ -184,7 +184,7 @@ series charts in simultaneous.
   src="/posts/time-series-platform/slides/data2019-slide-5.jpg"
   alt="Slide 5"
 >}}
-#### Introduction: Annotation
+## Introduction: Annotation
 - realistic analysis tasks involve collaboration and knowledge-sharing between
   human curators;
 - annotations facilitate knowledge-building and decision-making in analysis
@@ -207,7 +207,7 @@ Fig. 3: Annotation encoding in Grafana
   src="/posts/time-series-platform/slides/data2019-slide-6.jpg"
   alt="Slide 6"
 >}}
-#### Proposal
+## Proposal
 - data-intensive architecture and web application for collaborative time series
   analysis;
 - use most appropriate open-source tools for querying, storing and displaying
@@ -230,7 +230,7 @@ Fig. 3: Annotation encoding in Grafana
   src="/posts/time-series-platform/slides/data2019-slide-7.jpg"
   alt="Slide 7"
 >}}
-#### Proposal: Data model
+## Proposal: Data model
 - time series has a measurement and a data source;
 - annotations have a parent type, a point or ranged segment of time, and <u>a
   set of affected series</u>;
@@ -253,7 +253,7 @@ Fig. 4: Relational diagram of entities
   src="/posts/time-series-platform/slides/data2019-slide-8.jpg"
   alt="Slide 8"
 >}}
-#### Proposal: Data management
+## Proposal: Data management
 - polyglot persistence model:
   - time series are stored in InfluxDB, ontology is stored in PostgreSQL;
   - central backend enforces data access logic and conceals the real location
@@ -279,7 +279,7 @@ Fig. 5: Data management approach
   src="/posts/time-series-platform/slides/data2019-slide-9.jpg"
   alt="Slide 9"
 >}}
-#### Proposal: Data management
+## Proposal: Data management
 - overall traffic workload is distributed, but querying simultaneous data types
   can lead to bottlenecks;
 - links are added on each data point and propagated to the TSDBMS on ontology
@@ -305,7 +305,7 @@ data point
   src="/posts/time-series-platform/slides/data2019-slide-10.jpg"
   alt="Slide 10"
 >}}
-#### Proposal: Architecture
+## Proposal: Architecture
 Fig. 7: Platform architecture
 {{</ figure >}}
 
@@ -321,7 +321,7 @@ Fig. 7: Platform architecture
   src="/posts/time-series-platform/slides/data2019-slide-11.jpg"
   alt="Slide 11"
 >}}
-#### Proposal: Architecture
+## Proposal: Architecture
 Fig. 8: Platform architecture highlighting a RabbitMQ queue between the backend
 and InfluxDB
 {{</ figure >}}
@@ -338,7 +338,7 @@ and InfluxDB
   src="/posts/time-series-platform/slides/data2019-slide-12.jpg"
   alt="Slide 12"
 >}}
-#### Proposal: Architecture
+## Proposal: Architecture
 Fig. 9: Load-balancing strategy
 {{</ figure >}}
 
@@ -355,7 +355,7 @@ Fig. 9: Load-balancing strategy
   src="/posts/time-series-platform/slides/data2019-slide-13.jpg"
   alt="Slide 13"
 >}}
-#### Proposal: Architecture
+## Proposal: Architecture
 - the backend opens processing pipelines for each request;
 - authentication:
   - auth. session tokens are JWTs with an expiration date;
@@ -386,7 +386,7 @@ The respective corollaries (in the case of removal operations) are:
   src="/posts/time-series-platform/slides/data2019-slide-14.jpg"
   alt="Slide 14"
 >}}
-#### Proposal: Architecture
+## Proposal: Architecture
 - updates, deletions and rollbacks are made asynchronously:
   - user receives a simulated snapshot with proposed changes;
   - validation stage ensures that the update will likely be committed;
@@ -406,7 +406,7 @@ actual system nor the other users.
   src="/posts/time-series-platform/slides/data2019-slide-15.jpg"
   alt="Slide 15"
 >}}
-#### Proposal: Architecture
+## Proposal: Architecture
 - users make changes based on the observed data;
 - if two users update the same record at the same time -> race condition!!!;
 - optimistic-locking: last-modified dates checksum.
@@ -438,7 +438,7 @@ pointing to the location of the two optimistic-locking checks
   src="/posts/time-series-platform/slides/data2019-slide-16.jpg"
   alt="Slide 16"
 >}}
-#### Proposal: Architecture
+## Proposal: Architecture
 - Spring JPA provides abstraction layers for PostgreSQL queries (hot-swap)
 
 Fig. 13: Controller to Service to Repository association
@@ -456,7 +456,7 @@ Fig. 13: Controller to Service to Repository association
   src="/posts/time-series-platform/slides/data2019-slide-17.jpg"
   alt="Slide 17"
 >}}
-#### Proposal: Annotations
+## Proposal: Annotations
 - snakes: arcs traced over series’ curves;
 - paint over existing points, interpolate when in-between;
 - intersection handling (nesting).
@@ -482,7 +482,7 @@ Fig. 14: Visual encoding of annotations
   src="/posts/time-series-platform/slides/data2019-slide-19.jpg"
   alt="Slide 19"
 >}}
-#### Evaluation: Time series in PostgreSQL
+## Evaluation: Time series in PostgreSQL
 - as granularity increases, Consistency is harder to attain;
 - put all data in a single ACID-compliant RDBMS:
   - linking logic is built-in through the relational model;
@@ -502,7 +502,7 @@ it for series for the possible gains (higher system consistency).
   src="/posts/time-series-platform/slides/data2019-slide-20.jpg"
   alt="Slide 20"
 >}}
-#### Evaluation: Time series in PostgreSQL
+## Evaluation: Time series in PostgreSQL
 Fig. 16: Average CPU usage and request time observed for queries
 {{</ figure >}}
 
@@ -517,7 +517,7 @@ Fig. 16: Average CPU usage and request time observed for queries
   src="/posts/time-series-platform/slides/data2019-slide-21.jpg"
   alt="Slide 21"
 >}}
-#### Evaluation: Time series in PostgreSQL
+## Evaluation: Time series in PostgreSQL
 Fig. 17: Average request time, disk usage and RAM usage for insertions
 {{</ figure >}}
 
@@ -530,7 +530,7 @@ Fig. 17: Average request time, disk usage and RAM usage for insertions
   src="/posts/time-series-platform/slides/data2019-slide-22.jpg"
   alt="Slide 22"
 >}}
-#### Conclusion
+## Conclusion
 - improved collaboration workflow:
   - enhanced model for building smaller scopes of analysis;
   - better visualization for comparison of data;

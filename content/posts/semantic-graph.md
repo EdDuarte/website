@@ -1,10 +1,9 @@
 ---
-title: "Semantic search webapp with graph visualization"
-description: "Semantic search webapp that stores N-Triples, N3 and RDF/XML
-documents, infers new data using SPARQL queries, and displays relationships in
-GraphViz graphs."
-keywords: [semantic web, webapp, N-Triples, N3, RDF, XML, SPARQL, triples, data
-inference]
+title: "Semantic search with graph visualization"
+description: "Webapp that collects N-Triples, N3 and RDF/XML documents, infers
+new data using SPARQL queries, and displays relationships in GraphViz graphs."
+keywords: [backend, REST, REST API, RESTful, web service, semantic web, webapp,
+N-Triples, N3, RDF, XML, SPARQL, triples, data inference]
 lang: [Python]
 tech: [Django, RDF4J / Sesame]
 slug: "semantic-graph"
