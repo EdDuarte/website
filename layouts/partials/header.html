@@ -314,7 +314,7 @@ strong em {
 .subtitle,
 .footer > ul > li,
 .font-load-1 .footnotes:before,
-.tags,
+.tags .badge,
 .series-badge,
 h1,
 h2,
@@ -582,7 +582,8 @@ img.logoicon {
   margin-top: .17em;
 }
 
-.font-load-1 .metadata {
+.font-load-1 .metadata,
+.font-load-1 .metadata-techstack {
   margin-top: .85em;
 }
 
@@ -1448,6 +1449,7 @@ strong,
 .mlt-table,
 .font-load-1 blockquote .footer,
 .metadata,
+.metadata-techstack,
 blockquote .footer {
   margin-top: 1em;
 }
@@ -1543,12 +1545,21 @@ figure,
   margin-bottom: 1.2em;
 }
 
+.metadata-techstack-label {
+  font-size: .8rem !important;
+  letter-spacing: .03rem !important;
+}
+
+.tags > .metadata-techstack-label > span {
+  padding: 0;
+}
+
 @media screen {
   .font-load-2 .home-link,
   .font-load-2 .subtitle,
   .font-load-2 .title,
   .font-load-2 .footer > ul > li,
-  .font-load-2 .tags,
+  .font-load-2 .tags .badge,
   .font-load-2 .series-badge,
   .font-load-2 h1,
   .font-load-2 h2,
@@ -1615,7 +1626,7 @@ figure,
 
   .mlt,
   .card-series {
-    border: 1px solid #d8d6e1;
+    border: 2px solid #d8d6e1;
   }
 
   hr {
@@ -1623,7 +1634,7 @@ figure,
   }
 
   .metadata-links > li > a {
-    border: 1px #b9b5ca solid;
+    border: 1px solid #c7c4d2;
   }
 
   .footnote-ref a,
@@ -1781,7 +1792,7 @@ figure,
 
   .mlt,
   .card-series {
-    border: 1px solid #18191c;
+    border: 2px solid #201e29;
   }
 
   hr {
@@ -1789,7 +1800,7 @@ figure,
   }
 
   .metadata-links > li > a {
-    border: 1px #18191c solid;
+    border: 1px solid #302d3b;
   }
 
   .footnote-ref a,
@@ -2016,12 +2027,14 @@ pre > code {
     margin-bottom: .2em;
   }
 
-  .metadata {
+  .metadata,
+  .metadata-techstack {
     margin-top: .65em;
     margin-bottom: 0;
   }
 
-  .font-load-1 .metadata {
+  .font-load-1 .metadata,
+  .font-load-1 .metadata-techstack {
     margin-top: .5em;
     margin-bottom: 0;
   }
@@ -2396,13 +2409,15 @@ pre > code {
     margin-top: .25em;
   }
 
-  .metadata {
+  .metadata,
+  .metadata-techstack {
     margin-top: .65em;
     margin-bottom: 0;
   }
 
-  .font-load-1 .metadata {
-    margin-top: 0;
+  .font-load-1 .metadata,
+  .font-load-1 .metadata-techstack {
+    margin-top: .3em;
     margin-bottom: 0;
   }
 

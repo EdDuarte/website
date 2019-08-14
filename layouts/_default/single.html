@@ -115,24 +115,40 @@
             </li>
             {{ end }}
 
-            {{ $knList := .Params.knowledge }}
-            {{ with $knList }}
-            <li class="metadata-item">
-              <span>
-                Recommended knowledge:
-                {{ $len := (len $knList) }}
-                {{ if eq $len 1 }}
-                {{ $kn := index $knList 0 }}
-                {{ $kn }}
-                {{ else }}
-                {{ range $i, $temp := $knList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $kn := index $knList $i }}{{ $kn }}{{ end }}
-                {{ end }}
-              </span>
-            </li>
-            {{ end }}
-
           </ul>
         </section>
+
+        {{ $knList := .Params.knowledge }}
+        {{ with $knList }}
+        <section class="metadata-techstack">
+          <ul class="links tags list-meta-tags">
+            <li class="mlt-title metadata-techstack-label">Prior knowledge:</li>
+            {{ range $knList }}
+            <li><span class="badge badge-tech">{{ . }}</span></li>
+            {{ end }}
+          </ul>
+        </section>
+        {{ end }}
+
+        {{ $langList := .Params.lang }}
+        {{ $techList := .Params.tech }}
+        {{ if or $langList $techList }}
+        <section class="metadata-techstack">
+          <ul class="links tags list-meta-tags">
+            <li class="mlt-title metadata-techstack-label">Tech stack:</li>
+            {{ if $langList }}
+            {{ range $langList }}
+            <li><span class="badge badge-lang">{{ . }}</span></li>
+            {{ end }}
+            {{ end }}
+            {{ if $techList }}
+            {{ range $techList }}
+            <li><span class="badge badge-tech">{{ . }}</span></li>
+            {{ end }}
+            {{ end }}
+          </ul>
+        </section>
+        {{ end }}
 
         {{ $linkList := .Params.links }}
         {{ if $linkList }}
@@ -164,22 +180,24 @@
 
       </aside>
 
-      <main class="card card-article">
-        <section class="content">
-          {{ if .Params.deprecated }}
-          <div class="mlt deprecated-warning">
-            <h4 class="mlt-header">WARNING</h4>
-            <h6 class="list-title">
-              This post may be outdated or no longer accurate.
-            </h6>
-          </div>
-          {{ end }}
-          {{ if .Params.prologue }}
-          <div class="prologue">{{ .Params.prologue | markdownify }}</div>
-          {{ end }}
+      <main>
+        {{ if .Params.deprecated }}
+        <div class="mlt deprecated-warning">
+          <h4 class="mlt-header">WARNING</h4>
+          <h6 class="list-title">
+            This post may be outdated or no longer accurate.
+          </h6>
+        </div>
+        {{ end }}
+        <div class="card card-article">
+          <section class="content">
+            {{ if .Params.prologue }}
+            <div class="prologue">{{ .Params.prologue | markdownify }}</div>
+            {{ end }}
 
-          {{ .Content }}
-        </section>
+            {{ .Content }}
+          </section>
+        </div>
       </main>
 
     </div>

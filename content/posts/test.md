@@ -17,7 +17,7 @@ discussions:
     url: https://reddit.com/
 knowledge:
   - HTML5
-  - Javascript
+  - JavaScript
   - CSS
 tags:
   - notes
@@ -174,4 +174,5 @@ public class RawReader extends BaseReader {
 # Quote
 
 > Ability is nothing without opportunity.
-Quote: Napoleon Bonaparte --
+
+Napoleon Bonaparte --
