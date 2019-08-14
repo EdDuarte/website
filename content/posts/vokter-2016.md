@@ -28,9 +28,8 @@ series:
 prologue: "This post outlines the architectural choices behind Vokter, an
 open-source document store in Java that I've been developing since
 October 2014. This does **not** address other projects under the 'Vokter'
-umbrella, such as for example the HTTP server that uses the core library to
-manage a persistent state of Vokter on the web instead of locally, but I do
-hope to address them later in a future post."
+umbrella (such as Vokter HTTP server), but I do hope to address them later in a
+future post."
 ---
 
 {{< dropcap >}}

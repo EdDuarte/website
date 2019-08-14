@@ -166,6 +166,14 @@
 
       <main class="card card-article">
         <section class="content">
+          {{ if .Params.deprecated }}
+          <div class="mlt deprecated-warning">
+            <h4 class="mlt-header">WARNING</h4>
+            <h6 class="list-title">
+              This post may be outdated or no longer accurate.
+            </h6>
+          </div>
+          {{ end }}
           {{ if .Params.prologue }}
           <div class="prologue">{{ .Params.prologue | markdownify }}</div>
           {{ end }}
