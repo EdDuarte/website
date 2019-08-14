@@ -367,12 +367,14 @@ Fig. 10: Processing pipeline for queries and insertions
 For an annotation A, a parent annotation-type T, a parent project P, a
 measurement M, and a source-measurement pair SM that combines any source with
 M, the relationship constraints that must be validated are as follows:
+
 - P allows T, both being parents of A;
 - A is annotating SM, which P is querying;
 - A is annotating SM, hence is annotating M, which T allows;
 - A is annotating a type of time segment (point or region) that T allows.
 
 The respective corollaries (in the case of removal operations) are:
+
 - P cannot revoke T if at least one of A is still of type T;
 - P cannot revoke SM if at least one of its child A is still annotating SM;
 - T cannot revoke M if at least one of its child A is still annotating SM,
