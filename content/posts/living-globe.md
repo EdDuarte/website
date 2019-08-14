@@ -28,6 +28,9 @@ links:
   - name: Paper on Springer
     icon: paper
     url: https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2
+  - name: Paper on ResearchGate
+    icon: paper
+    url: https://www.researchgate.net/publication/305471183_Living_Globe_Tridimensional_Interactive_Visualization_of_World_Demographic_Data
   - name: Paper on arXiv
     icon: paper
     url: https://arxiv.org/abs/1607.05946
