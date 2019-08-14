@@ -31,39 +31,39 @@ function matchAndLoad(f, q, before, className, listenerCache) {
 function loadElegantTheme() {
   var titleElem = document.getElementsByTagName("title")[0];
   // setTimeout(function () {
-  loadCSS("/css/defer-elegant.css", titleElem, "all", { "class": ELEGANT_MODE_CLASS_NAME });
+  loadCSS("/css/defer-elegant.css?v=2", titleElem, "all", { "class": ELEGANT_MODE_CLASS_NAME });
   // }, 2000);
 
   matchAndLoad(
-      "/css/defer-elegant-min-width-2750.css",
+      "/css/defer-elegant-min-width-2750.css?v=2",
       "screen and (min-width:2750px)",
       titleElem,
       ELEGANT_MODE_CLASS_NAME,
       elegantCssListenerCache
   );
   matchAndLoad(
-      "/css/defer-elegant-min-width-1100.css",
+      "/css/defer-elegant-min-width-1100.css?v=2",
       "screen and (min-width:1100px)",
       titleElem,
       ELEGANT_MODE_CLASS_NAME,
       elegantCssListenerCache
   );
   matchAndLoad(
-      "/css/defer-elegant-max-width-1099.css",
+      "/css/defer-elegant-max-width-1099.css?v=2",
       "screen and (max-width: 1099px)",
       titleElem,
       ELEGANT_MODE_CLASS_NAME,
       elegantCssListenerCache
   );
   matchAndLoad(
-      "/css/defer-elegant-min-width-785.css",
+      "/css/defer-elegant-min-width-785.css?v=2",
       "screen and (min-width: 785px)",
       titleElem,
       ELEGANT_MODE_CLASS_NAME,
       elegantCssListenerCache
   );
   matchAndLoad(
-      "/css/defer-elegant-max-width-784.css",
+      "/css/defer-elegant-max-width-784.css?v=2",
       "screen and (max-width: 784px)",
       titleElem,
       ELEGANT_MODE_CLASS_NAME,
@@ -135,22 +135,22 @@ function init() {
 
   var titleElem = document.getElementsByTagName("title")[0];
   // setTimeout(function () {
-  loadCSS("/css/defer.css", titleElem);
+  loadCSS("/css/defer.css?v=2", titleElem);
   // }, 1000);
 
   // setTimeout(function () {
   matchAndLoad(
-      "/css/defer-min-width-1100.css",
+      "/css/defer-min-width-1100.css?v=2",
       "screen and (min-width:1100px)",
       titleElem,
   );
   matchAndLoad(
-      "/css/defer-max-width-1099.css",
+      "/css/defer-max-width-1099.css?v=2",
       "screen and (max-width: 1099px)",
       titleElem,
   );
   matchAndLoad(
-      "/css/defer-max-width-784.css",
+      "/css/defer-max-width-784.css?v=2",
       "screen and (max-width: 784px)",
       titleElem,
   );
