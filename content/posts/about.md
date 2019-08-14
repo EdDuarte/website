@@ -2,7 +2,6 @@
 title: "About me"
 description: "I'm Ed Duarte, a Full-Stack Software Engineer from Portugal."
 slug: "about"
-image: "thumbnail/ed-duarte.jpg"
 hidden: true
 ---
 
