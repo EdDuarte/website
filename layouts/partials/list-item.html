@@ -2,7 +2,7 @@
 {{ $c := .context }}
 {{ $tags := $c.Site.Taxonomies.tags }}
 
-<div>
+<div {{ if $c.Params.deprecated }}class="deprecated"{{ end }}>
   <div class="list-meta">
     <div class="table">
       <time class="col1 list-meta-date">
@@ -28,9 +28,14 @@
   <a href="{{ $c.Permalink }}" class="list-item">
   {{ end }}
     <div class="list-item-container">
-      {{ if $c.Params.wip }}
+      {{ if or $c.Params.wip $c.Params.deprecated }}
       <ul class="links tags list-meta-tags wip">
+        {{ if $c.Params.wip }}
         <li><span class="badge badge-wip">Work in Progress</span></li>
+        {{ end }}
+        {{ if $c.Params.deprecated }}
+        <li><span class="badge badge-tech">Deprecated</span></li>
+        {{ end }}
       </ul>
       {{ end }}
       <div>
