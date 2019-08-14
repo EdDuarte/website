@@ -26,32 +26,32 @@ draft: true
 ---
 
 # Heading 1
-# {{< anchor link="#heading-1" >}}Heading 1 {#heading-1}
+{{< anchor "h1" "Heading 1" >}}
 
 Normal roman text. __Bold text.__ _Italic text._ **_Bold Italic Text._** &#@$%.
 
 ## Heading 2
-## {{< anchor link="#heading-2" >}}Heading 2 {#heading-2}
+{{< anchor "h2" "Heading 2" >}}
 
 Normal roman text. __Bold text.__ _Italic text._ **_Bold Italic Text._** &#@$%.
 
 ### Heading 3
-### {{< anchor link="#heading-3" >}}Heading 3 {#heading-3}
+{{< anchor "h3" "Heading 3" >}}
 
 Normal roman text. __Bold text.__ _Italic text._ **_Bold Italic Text._** &#@$%.
 
 #### Heading 4
-#### {{< anchor link="#heading-4" >}}Heading 4 {#heading-4}
+{{< anchor "h4" "Heading 4" >}}
 
 Normal roman text. __Bold text.__ _Italic text._ **_Bold Italic Text._** &#@$%.
 
 ##### Heading 5
-##### {{< anchor link="#heading-5" >}}Heading 5 {#heading-5}
+{{< anchor "h5" "Heading 5" >}}
 
 Normal roman text. __Bold text.__ _Italic text._ **_Bold Italic Text._** &#@$%.
 
 ###### Heading 6
-###### {{< anchor link="#heading-6" >}}Heading 6 {#heading-6}
+{{< anchor "h6" "Heading 6" >}}
 
 Normal roman text. __Bold text.__ _Italic text._ **_Bold Italic Text._** &#@$%.
 

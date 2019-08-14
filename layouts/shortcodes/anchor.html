@@ -1,1 +1,11 @@
-<a class="anchor" href='{{.Get "link" }}'></a>
+{{ $elem := .Get 0 }}
+{{ $title := .Get 1 }}
+{{ $idArg := .Get 2 }} <!-- optional -->
+{{ if $idArg }}
+  {{ .Scratch.Set "id" $idArg }}
+{{ else }}
+  {{ .Scratch.Set "id" ($title | urlize) }}
+{{ end }}
+{{ $id := .Scratch.Get "id" }}
+{{ $h := "<{HEADING} id='{ID}'><a class='anchor' href='#{ID}'></a>{TITLE}</{HEADING}>" }}
+{{ $h | replaceRE "{HEADING}" $elem | replaceRE "{ID}" $id | replaceRE "{TITLE}" $title | safeHTML }}
