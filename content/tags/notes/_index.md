@@ -1,7 +1,7 @@
 ---
 title: "Notes"
-description: "Research notes on Computer Science and Software Engineering"
+description: "Notes on Computing and Software Engineering"
 ---
 
-Miscellaneous notes on Computer Science and Software that I have collected over
-the years.
+Miscellaneous notes on Computing and Software Engineering that I have collected
+over the years.

@@ -29,6 +29,9 @@ links:
   - name: Paper on SciTePress
     icon: paper
     url: https://www.scitepress.org/PublicationsDetail.aspx?ID=duVELBh/osY=&t=1
+  - name: Paper on ResearchGate
+    icon: paper
+    url: https://www.researchgate.net/publication/335068460_Distributed_and_scalable_platform_for_collaborative_analysis_of_massive_time_series_data_sets
   - name: Talk slides as PDF
     icon: slides
     url: /posts/time-series-platform/DATA2019-21-slides-v10.pdf
