@@ -2,7 +2,6 @@
 title: "Ed Duarte"
 description: "Software engineer & researcher. Philonoist, cinephile and
 electronic music aficionado."
-image: "thumbnail/ed-duarte.jpg"
 keywords: [REST, RESTful, Distributed Systems, Backend, Frontend, Software
 Engineer, Software Engineering, Software Developer, Software Development,
 Software Architect, Software Architecture, UI, UX, User Experience Design, User
