@@ -181,12 +181,22 @@
       </aside>
 
       <main>
+        {{ if .Params.updates }}
+        {{ range .Params.updates }}
+        <div class="mlt article-callout">
+          <h4 class="mlt-header">UPDATE - {{ dateFormat "Jan 2, 2006" .date }}</h4>
+          <p class="list-title">
+            {{ .text | markdownify }}
+          </p>
+        </div>
+        {{ end }}
+        {{ end }}
         {{ if .Params.deprecated }}
-        <div class="mlt deprecated-warning">
+        <div class="mlt article-callout">
           <h4 class="mlt-header">WARNING</h4>
-          <h6 class="list-title">
+          <p class="list-title">
             This post is deprecated and may be outdated.
-          </h6>
+          </p>
         </div>
         {{ end }}
         <div class="card card-article">

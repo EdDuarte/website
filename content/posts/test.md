@@ -1,6 +1,13 @@
 ---
 title: "Testing page for multiple CSS parameters"
 subtitle: "Normal roman text"
+updates:
+  - date: "2019-08-15 19:21:50+01:00"
+    text: "At a basic level, Vokter fetches web documents on a periodic basis
+    and performs **detection** (comparison of occurrences between two snapshots
+    of the same document) and **matching** (finding out if one of the detected
+    differences matches a [registered keyword](#), sending messages to attached
+    consumers if so)."
 links:
   - name: Demo
     url: /
