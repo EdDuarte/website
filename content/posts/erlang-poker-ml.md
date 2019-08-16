@@ -9,18 +9,20 @@ machine learning, data mining, prediction system, decision tree, bayesian,
 bayesian network, probability, poker, texas hold'em]
 lang: [Erlang]
 tech: [Eresye]
-links:
-  - name: Source code
-    icon: github
-    url: https://github.com/edduarte/erlang-poker-ml
 date: "2015-03-31 17:25:00+01:00"
 mirrors:
   - name: Medium
     url:
         "https://medium.com/@EdDuarte/developing-a-knowledge-management-system-for-texas-holdem-outcome-prediction-in-erlang-cf3440ab806b"
-tags:
+links:
+  - name: Fork me on GitHub
+    icon: github
+    url: https://github.com/edduarte/erlang-poker-ml
+types:
   - notes
   - project
+tags:
+  - open-source
 series:
   - dmproj
 ---

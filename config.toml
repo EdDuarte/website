@@ -38,9 +38,11 @@ notAlternative = true
 
 [taxonomies]
   tag = "tags"
+  type = "types"
   series = "series"
 
 [permalinks]
   tags = "/:slug/"
+  types = "/:slug/"
   series = "/:slug/"
   posts = "/:slug/"

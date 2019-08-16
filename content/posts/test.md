@@ -26,7 +26,7 @@ knowledge:
   - HTML5
   - JavaScript
   - CSS
-tags:
+types:
   - notes
   - essay
 draft: true

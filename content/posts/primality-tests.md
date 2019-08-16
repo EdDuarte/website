@@ -8,7 +8,9 @@ slug: "primality-tests"
 date: "2019-07-22 18:51:00+01:00"
 externalLink: "https://gist.github.com/EdDuarte/ea564df58d317f98ec0d811c32ca6608"
 weight: -1
-tags:
+types:
   - notes
   - project
+tags:
+  - open-source
 ---

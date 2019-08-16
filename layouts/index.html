@@ -4,7 +4,7 @@
 
 <body>
 
-{{ $tags := .Site.Taxonomies.tags }}
+{{ $types := .Site.Taxonomies.types }}
 
 <div class="blob-container">
   <div class="blob blob-home-top"></div>
@@ -48,7 +48,13 @@
   </div>
   <section class="tags-container fade-in">
     <ul class="links tags">
-      {{ range $key, $value := $tags }}<li><a href="{{ $value.Page.Permalink }}" class="badge badge-{{ $key }}">{{ lower $value.Page.Title }}</a></li>{{ end }}
+      {{ range $key, $value := $types }}
+      <li>
+        <a href="{{ $value.Page.Permalink }}" class="badge badge-type badge-{{ $key }}">
+          {{ lower $value.Page.Title }}
+        </a>
+      </li>
+      {{ end }}
     </ul>
   </section>
   <div class="header-meta bio">
@@ -93,7 +99,7 @@
               <a href="{{ .Page.Permalink }}">
                 <div class="card-item-desc">
                   {{ if .Page.Params.popular }}
-                  <span class="series-badge">Popular</span>
+                  <span class="series-label">Popular</span>
                   {{ end }}
                   <span class="card-item-title">{{ .Page.Title }}</span>
                 </div>

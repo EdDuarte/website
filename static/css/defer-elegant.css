@@ -78,28 +78,31 @@ html,
   animation-delay: .4s;
 }
 
-.badge-notes {
+.badge-type {
   color: #ebeaf1;
+}
+
+.badge-type:hover {
+  color: #ebeaf1;
+}
+
+.badge-notes {
   background: #f4756f linear-gradient(-45deg, #ef2e87 0, #f4756f 100%) !important;
 }
 
 .badge-essay {
-  color: #ebeaf1;
   background: #d680ff linear-gradient(-45deg, #c755fd 0, #d680ff 100%) !important;
 }
 
 .badge-paper {
-  color: #ebeaf1;
   background: #ffc45f linear-gradient(-45deg, #ff855a 0, #ffc45f 100%) !important;
 }
 
 .badge-project {
-  color: #ebeaf1;
   background: #51d7f8 linear-gradient(-45deg, #38a2e8 0, #51d7f8 100%) !important;
 }
 
 .badge-talk {
-  color: #ebeaf1;
   background: #73d9c5 linear-gradient(-45deg, #6ac2c1 0, #73d9c5 100%) !important;
 }
 

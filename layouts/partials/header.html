@@ -315,7 +315,8 @@ strong em {
 .footer > ul > li,
 .font-load-1 .footnotes:before,
 .tags .badge,
-.series-badge,
+.tags .label,
+.series-label,
 h1,
 h2,
 h3,
@@ -434,19 +435,21 @@ ul > li {
   line-height: 0;
 }
 
+/*
 .list-meta-tags > li,
 .font-load-1 .list-meta-tags > li {
   margin-top: .38em;
   margin-bottom: .6em;
 }
+*/
 
-.wip > li,
-.font-load-1 .wip > li {
-  margin-bottom: .65em;
+.tech-labels,
+.font-load-1 .tech-labels {
+  line-height: 1.6em;
 }
 
 .list-topics {
-  margin-top: .4em;
+  margin-top: .1em;
 }
 
 .highlight span,
@@ -582,11 +585,6 @@ img.logoicon {
   margin-top: .17em;
 }
 
-.font-load-1 .metadata,
-.font-load-1 .metadata-techstack {
-  margin-top: .85em;
-}
-
 .metadata-title {
   margin-left: .3em;
 }
@@ -639,6 +637,11 @@ figcaption ul {
   font-size: .8rem;
   letter-spacing: .04em;
   line-height: 2em;
+}
+
+.metadata .metadata-title,
+.font-load-1 .metadata .metadata-title {
+  margin-bottom: .3em;
 }
 
 .small {
@@ -1058,8 +1061,12 @@ details > div {
   font-size: .6em;
 }
 
-.metadata-links > li > a {
+.series-label,
+.tags > li > .label {
   border-radius: 30px;
+}
+
+.metadata-links > li > a {
   margin-right: 5px;
   padding: .8em 1em;
 }
@@ -1139,8 +1146,7 @@ figcaption a,
   text-transform: uppercase;
 }
 
-.series-badge {
-  border-radius: 4px;
+.series-label {
   font-size: .7em;
   margin: 0 5px 0 0;
   padding: .3em .5em;
@@ -1276,6 +1282,10 @@ img.centered:empty {
 .table > .col2 {
   flex: 1;
   order: 2;
+}
+
+.table > .col3 {
+  order: 3;
 }
 
 .metadata > .table {
@@ -1448,10 +1458,13 @@ strong,
 
 .mlt-table,
 .font-load-1 blockquote .footer,
-.metadata,
-.metadata-techstack,
 blockquote .footer {
   margin-top: 1em;
+}
+
+.metadata,
+.metadata-techstack {
+  margin-top: 0;
 }
 
 h2,
@@ -1537,6 +1550,10 @@ figure,
   margin: 0;
 }
 
+.metadata > .table li {
+  margin-top: .3em;
+}
+
 .deprecated {
   opacity: .6;
 }
@@ -1555,13 +1572,57 @@ figure,
   padding: 0;
 }
 
+.article-tags,
+.font-load-1 .article-tags {
+  padding: 0;
+  margin: .15em 0 0;
+}
+
+.article-tags > li,
+.font-load-1 .article-tags > li {
+  display: block;
+}
+
+.tags > li,
+.font-load-1 .tags > li {
+  line-height: 0;
+  padding: 0;
+  margin: 0 .4em .4em 0;
+}
+
+.tags > li:last-child,
+.font-load-1 .tags > li:last-child {
+  margin-right: 0;
+}
+
+.tags > li > .badge,
+.font-load-1 .tags > li > .badge {
+  margin: 0;
+}
+
+.badge,
+.font-load-1 .badge {
+  display: inline-block;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 2.2em;
+  height: 2.2em;
+  min-height: 2.2em;
+}
+
+.metadata-links > li > a:hover > .icon {
+  opacity: .5;
+  transition: .2s;
+}
+
 @media screen {
   .font-load-2 .home-link,
   .font-load-2 .subtitle,
   .font-load-2 .title,
   .font-load-2 .footer > ul > li,
   .font-load-2 .tags .badge,
-  .font-load-2 .series-badge,
+  .font-load-2 .tags .label,
+  .font-load-2 .series-label,
   .font-load-2 h1,
   .font-load-2 h2,
   .font-load-2 h3,
@@ -1583,7 +1644,7 @@ figure,
   }
 }
 
-/* @media not (prefers-color-scheme: dark) { */
+/* @media not (prefers-color-scheme: light) { */
 @media all {
 
   html {
@@ -1594,35 +1655,69 @@ figure,
     background-color: #ebeaf1;
   }
 
-  .badge,
-  .series-badge {
+  .label-lang {
+    border: 1px solid #d1cacc;
+    color: #8e7a80;
+  }
+
+  .list-item:hover .label-lang {
+    color: #b1a0a5;
+  }
+
+  .series-label,
+  .label-tech {
+    border: 1px solid #d0cfd5;
+    color: #847f9b;
+  }
+
+  .list-item:hover .series-label,
+  .list-item:hover .label-tech {
+    color: #a9a5b7;
+  }
+
+  .label-db {
+    border: 1px solid #cad1cf;
+    color: #75948b;
+  }
+
+  .badge-type {
     background-color: #d0cfd5;
     color: #5a5476;
   }
 
-  .list-item:hover .badge-tech {
+  .badge-type:hover {
     background-color: #dbdbdf;
     color: #908aaa;
   }
 
-  .badge-lang {
+  .badge-tag {
     background-color: #d1cacc;
     color: #5a5456;
   }
 
-  .list-item:hover .badge-lang {
+  .badge-tag:hover {
     background-color: #dcd7d9;
     color: #9c9095;
   }
 
-  .badge-wip {
+  .badge-link {
     background-color: #cad1cf;
     color: #545a58;
   }
 
-  .list-item:hover .badge-wip {
+  .badge-link:hover {
     background-color: #d7dcda;
     color: #909c97;
+  }
+
+  .metadata-links > li > a {
+    background-color: #d6d4df;
+    color: #6b677d;
+  }
+
+  .metadata-links > li > a:hover {
+    background-color: #e4e2eb;
+    color: #a9a5b7;
   }
 
   .mlt,
@@ -1632,11 +1727,6 @@ figure,
 
   hr {
     background-color: #17151f;
-  }
-
-  .metadata-links > li > a {
-    border: 1px solid #c7c4d2;
-    background-color: #ebeaf1;
   }
 
   .footnote-ref a,
@@ -1652,7 +1742,7 @@ figure,
     text-decoration-color: #8f89ab;
   }
 
-  .series-badge,
+  .series-label,
   .title,
   .title a,
   code,
@@ -1761,35 +1851,69 @@ figure,
     background-color: #0f0e15;
   }
 
-  .badge,
-  .series-badge {
+  .label-lang {
+    border: 1px solid #352e30;
+    color: #695c60;
+  }
+
+  .list-item:hover .label-lang {
+    color: #564d50;
+  }
+
+  .series-label,
+  .label-tech {
+    border: 1px solid #2b2a30;
+    color: #6d6b78;
+  }
+
+  .list-item:hover .series-label,
+  .list-item:hover .label-tech {
+    color: #53505f;
+  }
+
+  .label-db {
+    border: 1px solid #2e3533;
+    color: #6a7673;
+  }
+
+  .badge-type {
     background-color: #2b2a30;
     color: #938db0;
   }
 
-  .list-item:hover .badge-tech {
+  .badge-type:hover {
     background-color: #202024;
     color: #696976;
   }
 
-  .badge-lang {
+  .badge-tag {
     background-color: #352e30;
     color: #a69398;
   }
 
-  .list-item:hover .badge-lang {
+  .badge-tag:hover {
     background-color: #282325;
     color: #6f6368;
   }
 
-  .badge-wip {
+  .badge-link {
     background-color: #2e3533;
     color: #8ba09a;
   }
 
-  .list-item:hover .badge-wip {
+  .badge-link:hover {
     background-color: #232826;
     color: #636f6a;
+  }
+
+  .metadata-links > li > a {
+    background-color: #22202b;
+    color: #7d798e;
+  }
+
+  .metadata-links > li > a:hover {
+    background-color: #16141d;
+    color: #4a4757;
   }
 
   .mlt,
@@ -1799,11 +1923,6 @@ figure,
 
   hr {
     background-color: #d0cfd6;
-  }
-
-  .metadata-links > li > a {
-    border: 1px solid #302d3b;
-    background-color: #0f0e15;
   }
 
   .footnote-ref a,
@@ -1819,7 +1938,7 @@ figure,
     text-decoration-color: #18191c;
   }
 
-  .series-badge,
+  .series-label,
   .title,
   .title a,
   code,
@@ -1930,6 +2049,11 @@ pre > code {
 
 @media screen and (max-width: 1099px), print {
 
+  .article-tags > li,
+  .font-load-1 .article-tags > li {
+    display: inline-block;
+  }
+
   .bio-container {
     margin-top: 140px;
   }
@@ -2030,18 +2154,6 @@ pre > code {
     margin-bottom: .2em;
   }
 
-  .metadata,
-  .metadata-techstack {
-    margin-top: .65em;
-    margin-bottom: 0;
-  }
-
-  .font-load-1 .metadata,
-  .font-load-1 .metadata-techstack {
-    margin-top: .5em;
-    margin-bottom: 0;
-  }
-
   .metadata-title {
     margin-left: 0;
   }
@@ -2053,6 +2165,12 @@ pre > code {
   .links,
   .font-load-1 .links {
     margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .metadata-links,
+  .font-load-1 .metadata-links {
+    margin-top: .2em;
     margin-bottom: 0;
   }
 
@@ -2191,7 +2309,7 @@ pre > code {
   }
 
   .font-load-1 .main-container main {
-    margin-top: .2em;
+    margin-top: .4em;
   }
 
   .card-article {
@@ -2250,6 +2368,22 @@ pre > code {
 
   .font-load-1 .list > li {
     margin-bottom: 1.5rem;
+  }
+
+  .list-meta > .table {
+    flex-wrap: wrap;
+  }
+
+  .list-meta > .table > .col1 {
+    flex: 0 0 auto;
+  }
+
+  .list-meta > .table > .col2 {
+    flex: 1 2 auto;
+  }
+
+  .list-meta > .table > .col3 {
+    flex: 2 1 100%;
   }
 
   .table > .list-meta-date {
@@ -2316,9 +2450,8 @@ pre > code {
     letter-spacing: -.021em;
   }
 
-  .wip > li,
-  .font-load-1 .wip > li {
-    margin-bottom: .4em;
+  .metadata > .table li {
+    margin-top: 0;
   }
 
   h1,
@@ -2416,18 +2549,6 @@ pre > code {
     margin-top: .25em;
   }
 
-  .metadata,
-  .metadata-techstack {
-    margin-top: .65em;
-    margin-bottom: 0;
-  }
-
-  .font-load-1 .metadata,
-  .font-load-1 .metadata-techstack {
-    margin-top: .3em;
-    margin-bottom: 0;
-  }
-
   .links {
     margin-top: .3em;
     margin-bottom: .25em;
@@ -2502,6 +2623,11 @@ pre > code {
     margin-left: 0;
     margin-right: 0;
     padding: 0;
+  }
+
+  .tags > li,
+  .font-load-1 .tags > li {
+    margin-right: .3em;
   }
 }
 

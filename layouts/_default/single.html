@@ -45,15 +45,28 @@
 
       <aside class="aside-article">
 
+        {{ $types := .Site.Taxonomies.types }}
         {{ $tags := .Site.Taxonomies.tags }}
+        {{ $typeList := .Params.types }}
         {{ $tagList := .Params.tags }}
+        {{ if $typeList }}
+        <section>
+          <ul class="links tags article-tags">
+            {{ range .Params.types }}
+            {{ $t := index $types . }}
+            <li><a href="{{ $t.Page.Permalink }}" class="badge badge-type badge-{{ . }}">{{ . }}</a></li>
+            {{ end }}
+            {{ range .Params.tags }}
+            {{ $t := index $tags . }}
+            <li><a href="{{ $t.Page.Permalink }}" class="badge badge-tag badge-{{ . }}">{{ . }}</a></li>
+            {{ end }}
+          </ul>
+        </section>
+        {{ end }}
+
         {{ if $tagList }}
         <section>
           <ul class="links tags">
-            {{ range .Params.tags }}
-            {{ $tag := index $tags . }}
-            <li><a href="{{ $tag.Page.Permalink }}" class="badge badge-{{ . }}">{{ . }}</a></li>
-            {{ end }}
           </ul>
         </section>
         {{ end }}
@@ -77,6 +90,40 @@
               <span class="screen-reader">Reading time: </span>
               <span class="metadata-title">
                 {{ .ReadingTime }} min read
+              </span>
+            </li>
+            {{ end }}
+
+            {{ $paperList := .Params.papers }}
+            {{ if $paperList }}
+            <li class="metadata-item">
+              <div class="icon metadata-icon icon-paper"></div>
+              <span class="screen-reader">Publication links: </span>
+              <span class="metadata-title">
+              {{ $len := (len $paperList) }}
+              {{ if eq $len 1 }}
+              {{ $paper := index $paperList 0 }}
+              Published on <a href="{{ $paper.url }}">{{ $paper.name }}</a>
+              {{ else }}
+              Published on {{ range $i, $temp := $paperList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $paper := index $paperList $i }}{{ if $paper.url }}<a href='{{ $paper.url }}'>{{ $paper.name }}</a>{{ else }}{{ $paper.name }}{{ end }}{{ end }}
+              {{ end }}
+              </span>
+            </li>
+            {{ end }}
+
+            {{ $slideList := .Params.slides }}
+            {{ if $slideList }}
+            <li class="metadata-item">
+              <div class="icon metadata-icon icon-slides"></div>
+              <span class="screen-reader">Article slides: </span>
+              <span class="metadata-title">
+              {{ $len := (len $slideList) }}
+              {{ if eq $len 1 }}
+              {{ $slide := index $slideList 0 }}
+              Talk slides on <a href="{{ $slide.url }}">{{ $slide.name }}</a>
+              {{ else }}
+              Talk slides on {{ range $i, $temp := $slideList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $slide := index $slideList $i }}{{ if $slide.url }}<a href='{{ $slide.url }}'>{{ $slide.name }}</a>{{ else }}{{ $slide.name }}{{ end }}{{ end }}
+              {{ end }}
               </span>
             </li>
             {{ end }}
@@ -121,10 +168,10 @@
         {{ $knList := .Params.knowledge }}
         {{ with $knList }}
         <section class="metadata-techstack">
-          <ul class="links tags list-meta-tags">
+          <ul class="links tags tech-labels">
             <li class="mlt-title metadata-techstack-label">Prior knowledge:</li>
             {{ range $knList }}
-            <li><span class="badge badge-tech">{{ . }}</span></li>
+            <li><span class="label label-tech">{{ . }}</span></li>
             {{ end }}
           </ul>
         </section>
@@ -134,16 +181,16 @@
         {{ $techList := .Params.tech }}
         {{ if or $langList $techList }}
         <section class="metadata-techstack">
-          <ul class="links tags list-meta-tags">
+          <ul class="links tags tech-labels">
             <li class="mlt-title metadata-techstack-label">Tech stack:</li>
             {{ if $langList }}
             {{ range $langList }}
-            <li><span class="badge badge-lang">{{ . }}</span></li>
+            <li><span class="label label-lang">{{ . }}</span></li>
             {{ end }}
             {{ end }}
             {{ if $techList }}
             {{ range $techList }}
-            <li><span class="badge badge-tech">{{ . }}</span></li>
+            <li><span class="label label-tech">{{ . }}</span></li>
             {{ end }}
             {{ end }}
           </ul>
