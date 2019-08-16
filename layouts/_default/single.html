@@ -56,6 +56,8 @@
             {{ $t := index $types . }}
             <li><a href="{{ $t.Page.Permalink }}" class="badge badge-type badge-{{ . }}">{{ . }}</a></li>
             {{ end }}
+          </ul>
+          <ul class="links tags article-tags">
             {{ range .Params.tags }}
             {{ $t := index $tags . }}
             <li><a href="{{ $t.Page.Permalink }}" class="badge badge-tag badge-{{ . }}">{{ . }}</a></li>
