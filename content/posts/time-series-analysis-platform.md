@@ -28,8 +28,6 @@ authors:
 papers:
   - name: SciTePress
     url: https://www.scitepress.org/PublicationsDetail.aspx?ID=duVELBh/osY=&t=1
-  - name: ResearchGate
-    url: https://www.researchgate.net/publication/335068460_Distributed_and_scalable_platform_for_collaborative_analysis_of_massive_time_series_data_sets
 slides:
   - name: Notist
     url: https://noti.st/duarte/CAP51Y

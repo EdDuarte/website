@@ -23,8 +23,6 @@ date: "2016-06-21 19:58:00+01:00"
 papers:
   - name: Springer
     url: https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2
-  - name: ResearchGate
-    url: https://www.researchgate.net/publication/305471183_Living_Globe_Tridimensional_Interactive_Visualization_of_World_Demographic_Data
   - name: arXiv
     url: https://arxiv.org/abs/1607.05946
 slides:
