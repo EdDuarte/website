@@ -1,9 +1,9 @@
 ---
 title: "Thumbeo: A mobile application to find rides nearby"
 description: "Ride-sharing app where users can find rides, schedule their own,
-and chat in real-time. As co-founder I developed core functionality, devised the
-overall UX, and wrote a scheduler that queues asynchronous tasks and caches
-their results in-disk."
+and chat in real-time. As co-founder and lead developer I implemented core
+functionality, devised the overall UX, and managed a team of developers and
+designers with Agile methodologies."
 keywords: [rides, ride sharing, ride scheduling, chat, push notification,
 mobile, app]
 lang: [Java]

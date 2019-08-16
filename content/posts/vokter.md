@@ -18,7 +18,7 @@ types:
   - project
 tags:
   - work-in-progress
-  - open-source
 series:
-  - dmproj
+  - open-source
+  - data-mining
 ---

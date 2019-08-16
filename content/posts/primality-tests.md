@@ -11,6 +11,6 @@ weight: -1
 types:
   - notes
   - project
-tags:
+series:
   - open-source
 ---

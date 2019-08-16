@@ -36,6 +36,8 @@ types:
   - project
   - paper
   - talk
+series:
+  - time-series
 ---
 
 The recent expansion of metrification on a daily basis has led to the

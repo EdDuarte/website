@@ -46,3 +46,14 @@ notAlternative = true
   types = "/:slug/"
   series = "/:slug/"
   posts = "/:slug/"
+
+[related]
+includeNewer = true
+
+[[related.indices]]
+name = "parents"
+weight = 1
+
+[[related.indices]]
+name = "id"
+weight = 1

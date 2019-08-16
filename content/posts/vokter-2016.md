@@ -8,6 +8,8 @@ natural language processing, information retrieval, information extraction,
 text mining, text analytics]
 lang: [Java]
 tech: [Jersey, Quartz Scheduler, Cache2k, MongoDB]
+parents:
+  - vokter
 links:
   - name: Project Hub
     icon: external-link
@@ -22,11 +24,11 @@ mirrors:
         "https://medium.com/@EdDuarte/c4d3d399046d"
 types:
   - notes
-  - project
 tags:
-  - open-source
+  - deprecated
 series:
-  - dmproj
+  - open-source
+  - data-mining
 prologue: "This post outlines the architectural choices behind Vokter, an
 open-source document store in Java that I've been developing since
 October 2014. This does **not** address other projects under the 'Vokter'

@@ -42,13 +42,14 @@
     </header>
 
     <div class="article-table">
+      {{ $types := .Site.Taxonomies.types }}
+      {{ $tags := .Site.Taxonomies.tags }}
+      {{ $typeList := .Params.types }}
+      {{ $tagList := .Params.tags }}
+      {{ $hasDeprecatedTag := in $tagList "deprecated" }}
 
       <aside class="aside-article">
 
-        {{ $types := .Site.Taxonomies.types }}
-        {{ $tags := .Site.Taxonomies.tags }}
-        {{ $typeList := .Params.types }}
-        {{ $tagList := .Params.tags }}
         {{ if $typeList }}
         <section>
           <ul class="links tags article-tags">
@@ -240,9 +241,9 @@
         </div>
         {{ end }}
         {{ end }}
-        {{ if .Params.deprecated }}
+        {{ if $hasDeprecatedTag }}
         <div class="mlt article-callout">
-          <h4 class="mlt-header">WARNING</h4>
+          <h5 class="mlt-header">WARNING</h5>
           <p class="list-title">
             This post is deprecated and may be outdated.
           </p>

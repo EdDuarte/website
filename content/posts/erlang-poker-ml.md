@@ -21,10 +21,9 @@ links:
 types:
   - notes
   - project
-tags:
-  - open-source
 series:
-  - dmproj
+  - open-source
+  - data-mining
 ---
 
 For a University class project we were asked to implement a decision-tree

@@ -43,9 +43,8 @@ types:
   - project
   - paper
   - talk
-tags:
-  - open-source
 series:
+  - open-source
 #  - infovisproj
 ---
 
