@@ -264,45 +264,63 @@
 
   </article>
 
-  {{ $current := . }}
+  {{ $this := . }}
   {{ $series := .Site.Taxonomies.series }}
   {{ $seriesList := .Params.series }}
+  {{ $prevKey := "previous" }}
+  {{ $nextKey := "next" }}
+  {{ $this.Scratch.Set $prevKey dict }}
 
   {{ if $seriesList }}
-  <div class="mlt-container">
-  {{ range $seriesList }}
-  {{ $it := . }}
-  {{ $s := index $series $it }}
-  {{ $pages := $s.Pages.ByDate }}
-  {{ range $i, $v := $pages }}
-  {{ if eq $current.File $v.File }}
-  <h4 class="mlt-header">Part of the <a href="{{ $s.Page.Permalink }}">{{ $s.Page.Title }}</a> collection</h4>
-  <div class="mlt-table">
+    <div class="mlt-container">
+      {{ range $seriesList }}
+        {{ $it := . }}
+        {{ $s := index $series $it }}
+        {{ $seriesName := $s.Page.Data.Term | string }}
+        {{ $pages := $s.Pages.ByDate }}
+        {{ range $i, $v := $pages }}
+          {{ if eq $this.File $v.File }}
+            <h4 class="mlt-header">Part of the <a href="{{ $s.Page.Permalink }}">{{ $s.Page.Title }}</a> series</h4>
+            <div class="mlt-table">
 
-    {{ if ne $i 0 }}
-    {{ range first 1 (after (sub (len $pages) $i) $pages.Reverse) }}
-    <div class="mlt mlt-previous">
-      <h6 class="mlt-header">Previous</h6>
-      {{ partial "list-item.html" (dict "context" . "renderTechBadges" "false") }}
+              {{ if ne $i 0 }}
+                {{ range (after (sub (len $pages) $i) $pages.Reverse) }}
+                  {{ $prevKeysMap := ($this.Scratch.Get $prevKey) }}
+                  {{ if and (not (.Params.externalLink)) (not (isset $prevKeysMap $seriesName)) }}
+                    {{ $currentKey := .File.BaseFileName }}
+                    {{ if and (not (in ($this.Scratch.GetSortedMapValues $prevKey) $currentKey)) (not (in ($this.Scratch.GetSortedMapValues $nextKey) $currentKey)) }}
+                      <div class="mlt mlt-previous">
+                        <h6 class="mlt-header">Previous</h6>
+                        {{ partial "list-item.html" (dict "context" . "renderTechLabels" "false") }}
+                      </div>
+                      {{ $this.Scratch.SetInMap $prevKey $seriesName $currentKey }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+
+              {{ if ne (len $pages) (add $i 1) }}
+                {{ range (after (add $i 1) $pages) }}
+                  {{ $nextKeysMap := ($this.Scratch.Get $nextKey) }}
+                  {{ if and (not (.Params.externalLink)) (not (isset $nextKeysMap $seriesName)) }}
+                    {{ $currentKey := .File.BaseFileName }}
+                    {{ if and (not (in ($this.Scratch.GetSortedMapValues $prevKey) $currentKey)) (not (in ($this.Scratch.GetSortedMapValues $nextKey) $currentKey)) }}
+                      <div class="mlt mlt-next">
+                        <h6 class="mlt-header">Next</h6>
+                        {{ partial "list-item.html" (dict "context" . "renderTechLabels" "false") }}
+                      </div>
+                      {{ $this.Scratch.SetInMap $nextKey $seriesName $currentKey }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+
+            </div>
+          {{ end }}
+        {{ end }}
+
+      {{ end }}
     </div>
-    {{ end }}
-    {{ end }}
-
-    {{ if ne (len $pages) (add $i 1) }}
-    {{ range first 1 (after (add $i 1) $pages) }}
-    <div class="mlt mlt-next">
-      <h6 class="mlt-header">Next</h6>
-      {{ partial "list-item.html" (dict "context" . "renderTechBadges" "false") }}
-    </div>
-    {{ end }}
-    {{ end }}
-
-  </div>
-  {{ end }}
-  {{ end }}
-
-  {{ end }}
-  </div>
   {{ end }}
 
 </main>
