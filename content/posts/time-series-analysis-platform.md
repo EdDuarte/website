@@ -25,24 +25,21 @@ authors:
     url: http://davidcampos.org/
   - name: Rui L. Aguiar
     url: https://www.it.pt/Members/Index/357
-links:
-  - name: Paper on SciTePress
-    icon: paper
+papers:
+  - name: SciTePress
     url: https://www.scitepress.org/PublicationsDetail.aspx?ID=duVELBh/osY=&t=1
-  - name: Paper on ResearchGate
-    icon: paper
+  - name: ResearchGate
     url: https://www.researchgate.net/publication/335068460_Distributed_and_scalable_platform_for_collaborative_analysis_of_massive_time_series_data_sets
-  - name: Talk slides as PDF
-    icon: slides
-    url: /posts/time-series-platform/DATA2019-21-slides-v10.pdf
-  - name: Talk slides on Notist
-    icon: slides
-    url: https://noti.st/duarte/CAP51Y/slides
+slides:
+  - name: Notist
+    url: https://noti.st/duarte/CAP51Y
 date: "2019-07-28 11:32:00+01:00"
-tags:
+types:
   - project
   - paper
   - talk
+series:
+  - time-series
 ---
 
 The recent expansion of metrification on a daily basis has led to the

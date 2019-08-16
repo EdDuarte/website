@@ -1,20 +1,33 @@
 
 {{ $c := .context }}
+{{ $types := $c.Site.Taxonomies.types }}
 {{ $tags := $c.Site.Taxonomies.tags }}
+{{ $tagList := $c.Params.tags }}
+{{ $hasDeprecatedTag := in $tagList "deprecated" }}
 
-<div {{ if $c.Params.deprecated }}class="deprecated"{{ end }}>
+<div>
   <div class="list-meta">
     <div class="table">
       <time class="col1 list-meta-date">
         {{ $c.Date.Format "Jan 02, 2006" }}
       </time>
       <div class="col2">
-        {{ $tagList := $c.Params.tags }}
+        {{ $typeList := $c.Params.types }}
+        {{ if $typeList }}
+        <ul class="links tags list-meta-tags">
+          {{ range $typeList }}
+            {{ $t := index $types . }}
+            <li><a href="{{ $t.Page.Permalink }}" class="badge badge-type badge-{{ . }}">{{ . }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+      <div class="col3">
         {{ if $tagList }}
         <ul class="links tags list-meta-tags">
           {{ range $tagList }}
-            {{ $tag := index $tags . }}
-            <li><a href="{{ $tag.Page.Permalink }}" class="badge badge-{{ . }}">{{ . }}</a></li>
+            {{ $t := index $tags . }}
+            <li><a href="{{ $t.Page.Permalink }}" class="badge badge-tag badge-{{ . }}">{{ . }}</a></li>
           {{ end }}
         </ul>
         {{ end }}
@@ -22,22 +35,13 @@
     </div>
   </div>
   <hr>
+
   {{ if $c.Params.externalLink }}
   <a href="{{ $c.Params.externalLink }}" class="list-item">
   {{ else }}
   <a href="{{ $c.Permalink }}" class="list-item">
   {{ end }}
-    <div class="list-item-container">
-      {{ if or $c.Params.wip $c.Params.deprecated }}
-      <ul class="links tags list-meta-tags wip">
-        {{ if $c.Params.wip }}
-        <li><span class="badge badge-wip">Work in Progress</span></li>
-        {{ end }}
-        {{ if $c.Params.deprecated }}
-        <li><span class="badge badge-tech">Deprecated</span></li>
-        {{ end }}
-      </ul>
-      {{ end }}
+    <div class="list-item-container {{ if $hasDeprecatedTag }} deprecated{{ end }}">
       <div>
         {{ if $c.Params.externalLink }}
         <div class="icon list-icon icon-external-link"></div>
@@ -54,15 +58,15 @@
       {{ $techList := $c.Params.tech }}
       {{ if or $langList $techList }}
       <div class="list-topics">
-        <ul class="links tags list-meta-tags">
+        <ul class="links tags tech-labels">
           {{ if $langList }}
           {{ range $langList }}
-          <li><span class="badge badge-lang">{{ . }}</span></li>
+          <li><span class="label label-lang">{{ . }}</span></li>
           {{ end }}
           {{ end }}
           {{ if $techList }}
           {{ range $techList }}
-          <li><span class="badge badge-tech">{{ . }}</span></li>
+          <li><span class="label label-tech">{{ . }}</span></li>
           {{ end }}
           {{ end }}
         </ul>

@@ -17,32 +17,30 @@ authors:
     url: http://sweet.ua.pt/andre.zuquete/public_html/
   - name: Hélder Gomes
     url: http://wiki.ieeta.pt/wiki/index.php/Hélder_Gomes
+papers:
+  - name: LNI
+    url: http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html
+  - name: ResearchGate
+    url: https://www.researchgate.net/publication/267910262_Secure_and_trustworthy_file_sharing_over_cloud_storage_using_eID_tokens
+  - name: arXiv
+    url: http://arxiv.org/abs/1501.03139
+slides:
+  - name: Speaker Deck
+    url: https://speakerdeck.com/duarte/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens
 links:
   - name: Download app
+    icon: external-link
     url: https://github.com/edduarte/protbox/releases/tag/3.0.2
-  - name: Source code
+  - name: Fork me on GitHub
     icon: github
     url: https://github.com/edduarte/protbox
-  - name: Paper on LNI
-    icon: paper
-    url: http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html
-  - name: Paper on ResearchGate
-    icon: paper
-    url: https://www.researchgate.net/publication/267910262_Secure_and_trustworthy_file_sharing_over_cloud_storage_using_eID_tokens
-  - name: Paper on arXiv
-    icon: paper
-    url: http://arxiv.org/abs/1501.03139
-  - name: Talk slides as PDF
-    icon: slides
-    url: /posts/protbox/slides.pdf
-  - name: Talk slides on Speaker Deck
-    icon: slides
-    url: https://speakerdeck.com/duarte/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens
 date: "2014-11-05 11:03:00+01:00"
-tags:
+types:
   - project
   - paper
   - talk
+tags:
+  - open-source
 ---
 
 Protbox is an open-source, cross-platform application for securely sharing files

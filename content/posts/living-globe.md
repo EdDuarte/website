@@ -19,36 +19,34 @@ authors:
     url: http://sweet.ua.pt/paulo.dias/
   - name: Beatriz Sousa Santos
     url: http://sweet.ua.pt/bss/
-links:
-  - name: Open app
-    url: https://edduarte.github.io/living-globe
-  - name: Source code
-    icon: github
-    url: https://github.com/edduarte/living-globe
-  - name: Paper on Springer
-    icon: paper
-    url: https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2
-  - name: Paper on ResearchGate
-    icon: paper
-    url: https://www.researchgate.net/publication/305471183_Living_Globe_Tridimensional_Interactive_Visualization_of_World_Demographic_Data
-  - name: Paper on arXiv
-    icon: paper
-    url: https://arxiv.org/abs/1607.05946
-  - name: Talk slides as PDF
-    icon: slides
-    url: /posts/living-globe/slides.pdf
-  - name: Talk slides on Speaker Deck
-    icon: slides
-    url: https://speakerdeck.com/duarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data
 date: "2016-06-21 19:58:00+01:00"
+papers:
+  - name: Springer
+    url: https://link.springer.com/chapter/10.1007%2F978-3-319-40349-6_2
+  - name: ResearchGate
+    url: https://www.researchgate.net/publication/305471183_Living_Globe_Tridimensional_Interactive_Visualization_of_World_Demographic_Data
+  - name: arXiv
+    url: https://arxiv.org/abs/1607.05946
+slides:
+  - name: Speaker Deck
+    url: https://speakerdeck.com/duarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data
 mirrors:
   - name: Medium
     url:
         "https://medium.com/@EdDuarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data-c3eeb1845c51"
-tags:
+links:
+  - name: App Website
+    icon: external-link
+    url: https://edduarte.github.io/living-globe
+  - name: Fork me on GitHub
+    icon: github
+    url: https://github.com/edduarte/living-globe
+types:
   - project
   - paper
   - talk
+tags:
+  - open-source
 series:
 #  - infovisproj
 ---

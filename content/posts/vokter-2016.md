@@ -10,8 +10,9 @@ lang: [Java]
 tech: [Jersey, Quartz Scheduler, Cache2k, MongoDB]
 links:
   - name: Project Hub
+    icon: external-link
     url: https://github.com/vokter
-  - name: Source code
+  - name: Fork me on GitHub
     icon: github
     url: https://github.com/vokter/vokter
 date: "2016-06-19 19:21:50+01:00"
@@ -19,9 +20,11 @@ mirrors:
   - name: Medium
     url:
         "https://medium.com/@EdDuarte/c4d3d399046d"
-tags:
+types:
   - notes
   - project
+tags:
+  - open-source
 series:
   - dmproj
 prologue: "This post outlines the architectural choices behind Vokter, an
