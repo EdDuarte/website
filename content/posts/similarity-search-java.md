@@ -10,8 +10,7 @@ externalLink: "https://github.com/edduarte/similarity-search-java"
 weight: -1
 types:
   - project
-tags:
-  - open-source
 series:
-  - dmproj
+  - open-source
+  - data-mining
 ---

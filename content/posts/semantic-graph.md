@@ -12,6 +12,6 @@ externalLink: "https://github.com/edduarte/semantic-graph"
 weight: -1
 types:
   - project
-tags:
+series:
   - open-source
 ---

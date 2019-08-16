@@ -71,9 +71,22 @@
 
         <ul class="list">
           {{ range .Data.Pages.ByDate.Reverse }}
-          {{ if not .Params.hidden }}
+          {{ if and (not .Params.hidden) (not (isset .Params "parents")) }}
           <li>
-            {{ partial "list-item.html" (dict "context" . "renderTechBadges" "true") }}
+            {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
+
+            {{ $requiredBy := where .Site.Pages ".Params.parents" "intersect" (slice .File.BaseFileName) }}
+            {{ if not (eq (len $requiredBy) 0) }}
+            <section>
+              <ul class="children-list">
+                {{ range $requiredBy }}
+                <li>
+                  {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
+                </li>
+                {{ end }}
+              </ul>
+            </section>
+            {{ end }}
           </li>
           {{ end }}
           {{ end }}

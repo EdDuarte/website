@@ -37,7 +37,7 @@ types:
   - project
   - paper
   - talk
-tags:
+series:
   - open-source
 ---
 
