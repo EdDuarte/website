@@ -20,8 +20,6 @@ authors:
 papers:
   - name: LNI
     url: http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html
-  - name: ResearchGate
-    url: https://www.researchgate.net/publication/267910262_Secure_and_trustworthy_file_sharing_over_cloud_storage_using_eID_tokens
   - name: arXiv
     url: http://arxiv.org/abs/1501.03139
 slides:
