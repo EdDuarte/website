@@ -24,8 +24,6 @@ mirrors:
         "https://medium.com/@EdDuarte/c4d3d399046d"
 types:
   - notes
-tags:
-  - deprecated
 series:
   - open-source
   - data-mining
