@@ -2766,10 +2766,11 @@ pre > code {
   display: none;
 }
 </style>
-<link rel="stylesheet" href="/css/defer.css?v=2">
-<link rel="stylesheet" href="/css/defer-min-width-1100.css?v=2">
-<link rel="stylesheet" href="/css/defer-max-width-1099.css?v=2">
-<link rel="stylesheet" href="/css/defer-max-width-784.css?v=2">
+{{ $v := "3" }}
+<link rel="stylesheet" href="/css/defer.css?v={{ $v }}">
+<link rel="stylesheet" href="/css/defer-min-width-1100.css?v={{ $v }}">
+<link rel="stylesheet" href="/css/defer-max-width-1099.css?v={{ $v }}">
+<link rel="stylesheet" href="/css/defer-max-width-784.css?v={{ $v }}">
 <div class="font-load-1 font-load-2">
 </noscript>
 <script type="text/javascript">
@@ -2832,5 +2833,5 @@ if (sessionStorage.fontsLoaded1 && sessionStorage.fontsLoaded2) {
   });
 }
 </script>
-<script defer src="/js/defer.js?v=2"></script>
+<script defer src="/js/defer.js?v={{ $v }}"></script>
 <script defer src="https://www.google-analytics.com/analytics.js"></script>
