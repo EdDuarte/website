@@ -72,24 +72,24 @@
 
         <ul class="list">
           {{ range .Data.Pages.ByDate.Reverse }}
-          {{ if and (not .Params.hidden) (not (isset .Params "parents")) }}
-          <li>
-            {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
+            {{ if and (not .Params.hidden) (not (isset .Params "parents")) }}
+              <li>
+                {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
 
-            {{ $requiredBy := where .Site.Pages ".Params.parents" "intersect" (slice .File.BaseFileName) }}
-            {{ if not (eq (len $requiredBy) 0) }}
-            <section>
-              <ul class="children-list">
-                {{ range $requiredBy }}
-                <li>
-                  {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
-                </li>
+                {{ $requiredBy := where .Site.Pages ".Params.parents" "intersect" (slice .File.BaseFileName) }}
+                {{ if not (eq (len $requiredBy) 0) }}
+                  <section>
+                    <ul class="children-list">
+                      {{ range $requiredBy }}
+                        <li>
+                          {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
+                        </li>
+                      {{ end }}
+                    </ul>
+                  </section>
                 {{ end }}
-              </ul>
-            </section>
+              </li>
             {{ end }}
-          </li>
-          {{ end }}
           {{ end }}
         </ul>
 
@@ -104,21 +104,21 @@
           <hr>
           <ul class="series">
             {{ range $i, $e := (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
-            {{ if $i }}
-            <li>
-              <hr>
-            </li>
-            {{ end }}
-            <li>
-              <a href="{{ .Page.Permalink }}">
-                <div class="card-item-desc">
-                  {{ if .Page.Params.popular }}
-                  <span class="series-label">Popular</span>
-                  {{ end }}
-                  <span class="card-item-title">{{ .Page.Title }}</span>
-                </div>
-              </a>
-            </li>
+              {{ if $i }}
+                <li>
+                  <hr>
+                </li>
+              {{ end }}
+              <li>
+                <a href="{{ .Page.Permalink }}">
+                  <div class="card-item-desc">
+                    {{ if .Page.Params.popular }}
+                      <span class="series-label">Popular</span>
+                    {{ end }}
+                    <span class="card-item-title">{{ .Page.Title }}</span>
+                  </div>
+                </a>
+              </li>
             {{ end }}
           </ul>
           <!--

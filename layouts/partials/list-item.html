@@ -14,22 +14,22 @@
       <div class="col2">
         {{ $typeList := $c.Params.types }}
         {{ if $typeList }}
-        <ul class="links tags list-meta-tags">
-          {{ range $typeList }}
-            {{ $t := index $types . }}
-            <li><a href="{{ $t.Page.Permalink }}" class="badge badge-type badge-{{ . }}">{{ . }}</a></li>
-          {{ end }}
-        </ul>
+          <ul class="links tags list-meta-tags">
+            {{ range $typeList }}
+              {{ $t := index $types . }}
+              <li><a href="{{ $t.Page.Permalink }}" class="badge badge-type badge-{{ . }}">{{ . }}</a></li>
+            {{ end }}
+          </ul>
         {{ end }}
       </div>
       <div class="col3">
         {{ if $tagList }}
-        <ul class="links tags list-meta-tags">
-          {{ range $tagList }}
-            {{ $t := index $tags . }}
-            <li><a href="{{ $t.Page.Permalink }}" class="badge badge-tag badge-{{ . }}">{{ . }}</a></li>
-          {{ end }}
-        </ul>
+          <ul class="links tags list-meta-tags">
+            {{ range $tagList }}
+              {{ $t := index $tags . }}
+              <li><a href="{{ $t.Page.Permalink }}" class="badge badge-tag badge-{{ . }}">{{ . }}</a></li>
+            {{ end }}
+          </ul>
         {{ end }}
       </div>
     </div>
@@ -40,34 +40,34 @@
     <div class="list-item-container {{ if $hasDeprecatedTag }} deprecated{{ end }}">
       <div>
         {{ if $c.Params.externalLink }}
-        <div class="icon list-icon icon-external-link"></div>
+          <div class="icon list-icon icon-external-link"></div>
         {{ end }}
         <h5 class="list-title">{{ $c.Title }}</h5>
       </div>
       {{ with $c.Params.description }}
-      <div class="list-desc">
-        <p class="small">{{ . }}</p>
-      </div>
+        <div class="list-desc">
+          <p class="small">{{ . }}</p>
+        </div>
       {{ end }}
       {{ if eq .renderTechBadges "true" }}
-      {{ $langList := $c.Params.lang }}
-      {{ $techList := $c.Params.tech }}
-      {{ if or $langList $techList }}
-      <div class="list-topics">
-        <ul class="links tags tech-labels">
-          {{ if $langList }}
-          {{ range $langList }}
-          <li><span class="label label-lang">{{ . }}</span></li>
-          {{ end }}
-          {{ end }}
-          {{ if $techList }}
-          {{ range $techList }}
-          <li><span class="label label-tech">{{ . }}</span></li>
-          {{ end }}
-          {{ end }}
-        </ul>
-      </div>
-      {{ end }}
+        {{ $langList := $c.Params.lang }}
+        {{ $techList := $c.Params.tech }}
+        {{ if or $langList $techList }}
+          <div class="list-topics">
+            <ul class="links tags tech-labels">
+              {{ if $langList }}
+                {{ range $langList }}
+                  <li><span class="label label-lang">{{ . }}</span></li>
+                {{ end }}
+              {{ end }}
+              {{ if $techList }}
+                {{ range $techList }}
+                  <li><span class="label label-tech">{{ . }}</span></li>
+                {{ end }}
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
       {{ end }}
     </div>
   </a>

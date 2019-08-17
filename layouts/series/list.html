@@ -17,9 +17,9 @@
   <div class="title">{{ .Title }}</div>
 
   {{ with .Content }}
-  <div class="header-meta">
-    {{ . }}
-  </div>
+    <div class="header-meta">
+      {{ . }}
+    </div>
   {{ end }}
 </div>
 
@@ -34,17 +34,17 @@
           {{ $seriesKey := index (split (path.Dir .File.Dir) "/") 1 }}
           {{ range (.Data.Pages.ByDate.Reverse).ByParam $seriesKey }}
             {{ if not .Params.hidden }}
-            <li>
-              {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
-            </li>
+              <li>
+                {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
+              </li>
             {{ end }}
           {{ end }}
         {{ else }}
           {{ range .Data.Pages }}
             {{ if not .Params.hidden }}
-            <li>
-              {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
-            </li>
+              <li>
+                {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
+              </li>
             {{ end }}
           {{ end }}
         {{ end }}

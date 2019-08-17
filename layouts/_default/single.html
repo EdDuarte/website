@@ -23,22 +23,22 @@
       <div class="title">{{ .Title }}</div>
       {{ $subtitle := .Params.subtitle }}
       {{ if $subtitle }}
-      <div class="subtitle">{{ $subtitle }}</div>
+        <div class="subtitle">{{ $subtitle }}</div>
       {{ end }}
 
       {{ $authorList := .Params.authors }}
       {{ if $authorList }}
-      <div class="header-meta">
-        <p>
-          {{ $len := (len $authorList) }}
-          {{ if eq $len 1 }}
-          {{ $author := index $authorList 0 }}
-          <a href="{{ $author.url }}">{{ $author.name }}</a>
-          {{ else }}
-          {{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $author := index $authorList $i }}{{ if $author.url }}<a href='{{ $author.url }}'>{{ $author.name }}</a>{{ else }}{{ $author.name }}{{ end }}{{ end }}
-          {{ end }}
-        </p>
-      </div>
+        <div class="header-meta">
+          <p>
+            {{ $len := (len $authorList) }}
+            {{ if eq $len 1 }}
+              {{ $author := index $authorList 0 }}
+              <a href="{{ $author.url }}">{{ $author.name }}</a>
+            {{ else }}
+              {{ range $i, $temp := $authorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $author := index $authorList $i }}{{ if $author.url }}<a href='{{ $author.url }}'>{{ $author.name }}</a>{{ else }}{{ $author.name }}{{ end }}{{ end }}
+            {{ end }}
+          </p>
+        </div>
       {{ end }}
     </header>
 
@@ -52,118 +52,118 @@
       <aside class="aside-article">
 
         {{ if $typeList }}
-        <section>
-          <ul class="links tags article-tags">
-            {{ range .Params.types }}
-            {{ $t := index $types . }}
-            <li><a href="{{ $t.Page.Permalink }}" class="badge badge-type badge-{{ . }}">{{ . }}</a></li>
-            {{ end }}
-          </ul>
-          <ul class="links tags article-tags">
-            {{ range .Params.tags }}
-            {{ $t := index $tags . }}
-            <li><a href="{{ $t.Page.Permalink }}" class="badge badge-tag badge-{{ . }}">{{ . }}</a></li>
-            {{ end }}
-          </ul>
-        </section>
+          <section>
+            <ul class="links tags article-tags">
+              {{ range .Params.types }}
+                {{ $t := index $types . }}
+                <li><a href="{{ $t.Page.Permalink }}" class="badge badge-type badge-{{ . }}">{{ . }}</a></li>
+              {{ end }}
+            </ul>
+            <ul class="links tags article-tags">
+              {{ range .Params.tags }}
+                {{ $t := index $tags . }}
+                <li><a href="{{ $t.Page.Permalink }}" class="badge badge-tag badge-{{ . }}">{{ . }}</a></li>
+              {{ end }}
+            </ul>
+          </section>
         {{ end }}
 
         {{ if $tagList }}
-        <section>
-          <ul class="links tags">
-          </ul>
-        </section>
+          <section>
+            <ul class="links tags">
+            </ul>
+          </section>
         {{ end }}
 
         <section class="metadata">
           <ul class="table">
 
             {{ if .Params.date }}
-            <li class="metadata-item">
-              <div class="icon metadata-icon icon-published-date"></div>
-              <span class="screen-reader">Published on </span>
-              <time class="metadata-title" datetime="{{ .Date }}">
-                {{ .Date.Format "Jan 2, 2006" }}
-              </time>
-            </li>
+              <li class="metadata-item">
+                <div class="icon metadata-icon icon-published-date"></div>
+                <span class="screen-reader">Published on </span>
+                <time class="metadata-title" datetime="{{ .Date }}">
+                  {{ .Date.Format "Jan 2, 2006" }}
+                </time>
+              </li>
             {{ end }}
 
             {{ if not .Params.hidden }}
-            <li class="metadata-item">
-              <div class="icon metadata-icon icon-reading-time"></div>
-              <span class="screen-reader">Reading time: </span>
-              <span class="metadata-title">
+              <li class="metadata-item">
+                <div class="icon metadata-icon icon-reading-time"></div>
+                <span class="screen-reader">Reading time: </span>
+                <span class="metadata-title">
                 {{ .ReadingTime }} min read
               </span>
-            </li>
+              </li>
             {{ end }}
 
             {{ $paperList := .Params.papers }}
             {{ if $paperList }}
-            <li class="metadata-item">
-              <div class="icon metadata-icon icon-paper"></div>
-              <span class="screen-reader">Publication links: </span>
-              <span class="metadata-title">
+              <li class="metadata-item">
+                <div class="icon metadata-icon icon-paper"></div>
+                <span class="screen-reader">Publication links: </span>
+                <span class="metadata-title">
               {{ $len := (len $paperList) }}
-              {{ if eq $len 1 }}
-              {{ $paper := index $paperList 0 }}
-              Published on <a href="{{ $paper.url }}">{{ $paper.name }}</a>
-              {{ else }}
-              Published on {{ range $i, $temp := $paperList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $paper := index $paperList $i }}{{ if $paper.url }}<a href='{{ $paper.url }}'>{{ $paper.name }}</a>{{ else }}{{ $paper.name }}{{ end }}{{ end }}
-              {{ end }}
+                  {{ if eq $len 1 }}
+                    {{ $paper := index $paperList 0 }}
+                    Published on <a href="{{ $paper.url }}">{{ $paper.name }}</a>
+                  {{ else }}
+                    Published on {{ range $i, $temp := $paperList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $paper := index $paperList $i }}{{ if $paper.url }}<a href='{{ $paper.url }}'>{{ $paper.name }}</a>{{ else }}{{ $paper.name }}{{ end }}{{ end }}
+                  {{ end }}
               </span>
-            </li>
+              </li>
             {{ end }}
 
             {{ $slideList := .Params.slides }}
             {{ if $slideList }}
-            <li class="metadata-item">
-              <div class="icon metadata-icon icon-slides"></div>
-              <span class="screen-reader">Article slides: </span>
-              <span class="metadata-title">
+              <li class="metadata-item">
+                <div class="icon metadata-icon icon-slides"></div>
+                <span class="screen-reader">Article slides: </span>
+                <span class="metadata-title">
               {{ $len := (len $slideList) }}
-              {{ if eq $len 1 }}
-              {{ $slide := index $slideList 0 }}
-              Talk slides on <a href="{{ $slide.url }}">{{ $slide.name }}</a>
-              {{ else }}
-              Talk slides on {{ range $i, $temp := $slideList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $slide := index $slideList $i }}{{ if $slide.url }}<a href='{{ $slide.url }}'>{{ $slide.name }}</a>{{ else }}{{ $slide.name }}{{ end }}{{ end }}
-              {{ end }}
+                  {{ if eq $len 1 }}
+                    {{ $slide := index $slideList 0 }}
+                    Talk slides on <a href="{{ $slide.url }}">{{ $slide.name }}</a>
+                  {{ else }}
+                    Talk slides on {{ range $i, $temp := $slideList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $slide := index $slideList $i }}{{ if $slide.url }}<a href='{{ $slide.url }}'>{{ $slide.name }}</a>{{ else }}{{ $slide.name }}{{ end }}{{ end }}
+                  {{ end }}
               </span>
-            </li>
+              </li>
             {{ end }}
 
             {{ $discussionList := .Params.discussions }}
             {{ if $discussionList }}
-            <li class="metadata-item">
-              <div class="icon metadata-icon icon-discussion"></div>
-              <span class="screen-reader">Article discussions: </span>
-              <span class="metadata-title">
+              <li class="metadata-item">
+                <div class="icon metadata-icon icon-discussion"></div>
+                <span class="screen-reader">Article discussions: </span>
+                <span class="metadata-title">
               {{ $len := (len $discussionList) }}
-              {{ if eq $len 1 }}
-              {{ $discussion := index $discussionList 0 }}
-              Discuss on <a href="{{ $discussion.url }}">{{ $discussion.name }}</a>
-              {{ else }}
-              Discuss on {{ range $i, $temp := $discussionList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $discussion := index $discussionList $i }}{{ if $discussion.url }}<a href='{{ $discussion.url }}'>{{ $discussion.name }}</a>{{ else }}{{ $discussion.name }}{{ end }}{{ end }}
-              {{ end }}
+                  {{ if eq $len 1 }}
+                    {{ $discussion := index $discussionList 0 }}
+                    Discuss on <a href="{{ $discussion.url }}">{{ $discussion.name }}</a>
+                  {{ else }}
+                    Discuss on {{ range $i, $temp := $discussionList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $discussion := index $discussionList $i }}{{ if $discussion.url }}<a href='{{ $discussion.url }}'>{{ $discussion.name }}</a>{{ else }}{{ $discussion.name }}{{ end }}{{ end }}
+                  {{ end }}
               </span>
-            </li>
+              </li>
             {{ end }}
 
             {{ $mirrorList := .Params.mirrors }}
             {{ if $mirrorList }}
-            <li class="metadata-item">
-              <div class="icon metadata-icon icon-mirror"></div>
-              <span class="screen-reader">Article mirrors: </span>
-              <span class="metadata-title">
+              <li class="metadata-item">
+                <div class="icon metadata-icon icon-mirror"></div>
+                <span class="screen-reader">Article mirrors: </span>
+                <span class="metadata-title">
               {{ $len := (len $mirrorList) }}
-              {{ if eq $len 1 }}
-              {{ $mirror := index $mirrorList 0 }}
-              Also on <a href="{{ $mirror.url }}">{{ $mirror.name }}</a>
-              {{ else }}
-              Also on {{ range $i, $temp := $mirrorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $mirror := index $mirrorList $i }}{{ if $mirror.url }}<a href='{{ $mirror.url }}'>{{ $mirror.name }}</a>{{ else }}{{ $mirror.name }}{{ end }}{{ end }}
-              {{ end }}
+                  {{ if eq $len 1 }}
+                    {{ $mirror := index $mirrorList 0 }}
+                    Also on <a href="{{ $mirror.url }}">{{ $mirror.name }}</a>
+                  {{ else }}
+                    Also on {{ range $i, $temp := $mirrorList }}{{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}{{ $mirror := index $mirrorList $i }}{{ if $mirror.url }}<a href='{{ $mirror.url }}'>{{ $mirror.name }}</a>{{ else }}{{ $mirror.name }}{{ end }}{{ end }}
+                  {{ end }}
               </span>
-            </li>
+              </li>
             {{ end }}
 
           </ul>
@@ -171,89 +171,89 @@
 
         {{ $knList := .Params.knowledge }}
         {{ with $knList }}
-        <section class="metadata-techstack">
-          <ul class="links tags tech-labels">
-            <li class="mlt-title metadata-techstack-label">Prior knowledge:</li>
-            {{ range $knList }}
-            <li><span class="label label-tech">{{ . }}</span></li>
-            {{ end }}
-          </ul>
-        </section>
+          <section class="metadata-techstack">
+            <ul class="links tags tech-labels">
+              <li class="mlt-title metadata-techstack-label">Prior knowledge:</li>
+              {{ range $knList }}
+                <li><span class="label label-tech">{{ . }}</span></li>
+              {{ end }}
+            </ul>
+          </section>
         {{ end }}
 
         {{ $langList := .Params.lang }}
         {{ $techList := .Params.tech }}
         {{ if or $langList $techList }}
-        <section class="metadata-techstack">
-          <ul class="links tags tech-labels">
-            <li class="mlt-title metadata-techstack-label">Tech stack:</li>
-            {{ if $langList }}
-            {{ range $langList }}
-            <li><span class="label label-lang">{{ . }}</span></li>
-            {{ end }}
-            {{ end }}
-            {{ if $techList }}
-            {{ range $techList }}
-            <li><span class="label label-tech">{{ . }}</span></li>
-            {{ end }}
-            {{ end }}
-          </ul>
-        </section>
+          <section class="metadata-techstack">
+            <ul class="links tags tech-labels">
+              <li class="mlt-title metadata-techstack-label">Tech stack:</li>
+              {{ if $langList }}
+                {{ range $langList }}
+                  <li><span class="label label-lang">{{ . }}</span></li>
+                {{ end }}
+              {{ end }}
+              {{ if $techList }}
+                {{ range $techList }}
+                  <li><span class="label label-tech">{{ . }}</span></li>
+                {{ end }}
+              {{ end }}
+            </ul>
+          </section>
         {{ end }}
 
         {{ $linkList := .Params.links }}
         {{ if $linkList }}
-        <section>
-          <ul class="links metadata-links">
-            {{ range $i, $temp := $linkList }}
-            {{ $link := index $linkList $i }}
-            {{ if $link.url }}
-            <li class="metadata-link">
-              <a href="{{ $link.url }}">
-                {{ with $link.icon }}
-                <div class="icon metadata-icon icon-{{ $link.icon }}"></div>
-                <span class="screen-reader">{{ $link.icon }}: </span>
-                {{ end }}
-                <span class="metadata-title">
+          <section>
+            <ul class="links metadata-links">
+              {{ range $i, $temp := $linkList }}
+                {{ $link := index $linkList $i }}
+                {{ if $link.url }}
+                  <li class="metadata-link">
+                    <a href="{{ $link.url }}">
+                      {{ with $link.icon }}
+                        <div class="icon metadata-icon icon-{{ $link.icon }}"></div>
+                        <span class="screen-reader">{{ $link.icon }}: </span>
+                      {{ end }}
+                      <span class="metadata-title">
                   {{ $link.name }}
                 </span>
-              </a>
-            </li>
-            {{ else }}
-            <li>
-              {{ $link.name }}
-            </li>
-            {{ end }}
-            {{ end }}
-          </ul>
-        </section>
+                    </a>
+                  </li>
+                {{ else }}
+                  <li>
+                    {{ $link.name }}
+                  </li>
+                {{ end }}
+              {{ end }}
+            </ul>
+          </section>
         {{ end }}
 
       </aside>
 
       <main>
         {{ if .Params.updates }}
-        {{ range .Params.updates }}
-        <div class="mlt article-callout">
-          <h4 class="mlt-header">UPDATE - {{ dateFormat "Jan 2, 2006" .date }}</h4>
-          <p class="list-title">
-            {{ .text | markdownify }}
-          </p>
-        </div>
-        {{ end }}
+          {{ range .Params.updates }}
+            <div class="mlt article-callout">
+              <h4 class="mlt-header">UPDATE - {{ dateFormat "Jan 2, 2006" .date }}</h4>
+              <p class="list-title">
+                {{ .text | markdownify }}
+              </p>
+            </div>
+          {{ end }}
         {{ end }}
         {{ if $hasDeprecatedTag }}
-        <div class="mlt article-callout">
-          <h5 class="mlt-header">WARNING</h5>
-          <p class="list-title">
-            This post is deprecated and may be outdated.
-          </p>
-        </div>
+          <div class="mlt article-callout">
+            <h5 class="mlt-header">WARNING</h5>
+            <p class="list-title">
+              This post is deprecated and may be outdated.
+            </p>
+          </div>
         {{ end }}
         <div class="card card-article">
           <section class="content">
             {{ if .Params.prologue }}
-            <div class="prologue">{{ .Params.prologue | markdownify }}</div>
+              <div class="prologue">{{ .Params.prologue | markdownify }}</div>
             {{ end }}
 
             {{ .Content }}
