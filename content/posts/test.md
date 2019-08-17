@@ -28,7 +28,6 @@ knowledge:
   - CSS
 types:
   - notes
-  - essay
 draft: true
 ---
 

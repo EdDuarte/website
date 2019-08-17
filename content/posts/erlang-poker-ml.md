@@ -19,8 +19,8 @@ links:
     icon: github
     url: https://github.com/edduarte/erlang-poker-ml
 types:
-  - notes
   - project
+  - notes
 series:
   - open-source
   - data-mining
