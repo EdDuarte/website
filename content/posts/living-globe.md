@@ -41,7 +41,7 @@ links:
     url: https://github.com/edduarte/living-globe
 types:
   - project
-  - paper
+  - research
   - talk
 series:
   - open-source

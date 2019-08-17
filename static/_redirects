@@ -1,4 +1,7 @@
 
+/interview-with-radio-liz/*  https://www.mixcloud.com/radiolizfm/eduardo-duarte-thumbeo-boleia-para-festivais/
+/interview-with-publico/*  https://www.publico.pt/2015/07/09/p3/noticia/thumbeo-a-app-de-boleias-personalizadas-criada-por-dois-universitarios-1823980
+
 /time-series-analysis-platform/*  /distributed-and-scalable-platform-for-collaborative-analysis-of-massive-time-series-data-sets/
 /data2019/*  /distributed-and-scalable-platform-for-collaborative-analysis-of-massive-time-series-data-sets/
 
@@ -57,8 +60,9 @@
 /articles/*                 /:splat
 /essay                      /essays/
 /essays/*                   /:splat
-/paper                      /papers/
-/papers/*                   /:splat
+/paper                      /research/
+/papers/*                   /research/
+/research/*                 /:splat
 /project                    /projects/
 /projects/*                 /:splat
 /talk                       /talks/

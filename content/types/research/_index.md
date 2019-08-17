@@ -1,6 +1,7 @@
 ---
-title: "Papers"
-description: "Research papers and academic profile"
+title: "Research"
+description: "Publications and academic profile"
+weight: 2
 ---
 
 Below are the research papers I've authored. You can also view my academic

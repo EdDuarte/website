@@ -34,7 +34,7 @@ slides:
 date: "2019-07-28 11:32:00+01:00"
 types:
   - project
-  - paper
+  - research
   - talk
 ---
 
