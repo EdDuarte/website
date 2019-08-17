@@ -7,12 +7,12 @@
 <meta name="description" content="{{ .Params.description }}">
 {{ $keywords := union .Keywords (union .Params.lang .Params.tech) }}
 {{ with $keywords }}
-<meta
-    name="keywords"
-    content="{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}, Ed Duarte, edduarte, duarte, eddrt"
->
+  <meta
+      name="keywords"
+      content="{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}, Ed Duarte, edduarte, duarte, eddrt"
+  >
 {{ else }}
-<meta name="keywords" content="Ed Duarte, edduarte, duarte, eddrt">
+  <meta name="keywords" content="Ed Duarte, edduarte, duarte, eddrt">
 {{ end }}
 <meta name="author" content="{{ .Site.Author.name }}">
 
@@ -27,37 +27,37 @@
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 {{ if .Params.image }}
-<meta name="twitter:card" content="summary_large_image">
-<meta
-    name="twitter:image"
-    content="{{ .Site.BaseURL }}{{ .Params.image }}"
-/>
-<meta
-    property="og:image"
-    content="{{ .Site.BaseURL }}{{ .Params.image }}"
->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta
+      name="twitter:image"
+      content="{{ .Site.BaseURL }}{{ .Params.image }}"
+  />
+  <meta
+      property="og:image"
+      content="{{ .Site.BaseURL }}{{ .Params.image }}"
+  >
 {{ else }}
-{{ if .Params.hasThumbnail }}
-<meta name="twitter:card" content="summary_large_image">
-<meta
-    name="twitter:image"
-    content="{{ .Site.BaseURL }}thumbnail/{{ .File.BaseFileName }}.png"
-/>
-<meta
-    property="og:image"
-    content="{{ .Site.BaseURL }}thumbnail/{{ .File.BaseFileName }}.png"
->
-{{ else }}
-<meta name="twitter:card" content="summary">
-<meta
-    name="twitter:image"
-    content="{{ .Site.BaseURL }}rss-icon.png"
-/>
-<meta
-    property="og:image"
-    content="{{ .Site.BaseURL }}rss-icon.png"
->
-{{ end }}
+  {{ if .Params.hasThumbnail }}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta
+        name="twitter:image"
+        content="{{ .Site.BaseURL }}thumbnail/{{ .File.BaseFileName }}.png"
+    />
+    <meta
+        property="og:image"
+        content="{{ .Site.BaseURL }}thumbnail/{{ .File.BaseFileName }}.png"
+    >
+  {{ else }}
+    <meta name="twitter:card" content="summary">
+    <meta
+        name="twitter:image"
+        content="{{ .Site.BaseURL }}rss-icon.png"
+    />
+    <meta
+        property="og:image"
+        content="{{ .Site.BaseURL }}rss-icon.png"
+    >
+  {{ end }}
 {{ end }}
 <meta name="theme-color" content="#0f0e15">
 <meta name="msapplication-TileColor" content="#0f0e15">
