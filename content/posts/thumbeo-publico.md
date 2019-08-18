@@ -10,4 +10,6 @@ externalLink: "https://www.publico.pt/2015/07/09/p3/noticia/thumbeo-a-app-de-bol
 weight: -1
 types:
   - other
+subsections:
+  - article
 ---

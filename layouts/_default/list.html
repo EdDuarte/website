@@ -28,15 +28,114 @@
 
     <main>
 
-      <ul class="list">
-        {{ range .Data.Pages.ByDate.Reverse }}
-          {{ if not .Params.hidden }}
+      {{ $this := . }}
+      {{ $thisSection := .Data.Term | string }}
+
+      {{ $subsections := .Site.Taxonomies.subsections }}
+      {{ $subSectionListKey := "thisSubSections" }}
+      {{ $pagesBySubSectionKey := "pagesBySubSection" }}
+      {{ $otherSubSectionName := "other" }}
+      {{ $breakCycleKey := "break" }}
+
+      {{ $this.Scratch.Set $pagesBySubSectionKey dict }}
+      {{ $this.Scratch.Set $subSectionListKey slice }}
+
+      {{ range .Data.Pages.ByDate.Reverse }}
+        {{ $page := . }}
+        {{ if not .Params.hidden }}
+          {{ if isset .Params "subsections" }}
+            {{/* find the first subsection of this page that is "on" this
+              section */}}
+            {{ $this.Scratch.Delete $breakCycleKey }}
+            {{ range .Params.subsections }}
+              {{ if not (eq ($this.Scratch.Get $breakCycleKey) "true")}}
+                {{ $pageSubSectionName := . }}
+                {{ $pageSubSection := index $subsections $pageSubSectionName }}
+                {{ if in $pageSubSection.Page.Params.on $thisSection }}
+                  {{ $this.Scratch.Set $breakCycleKey "true" }}
+                  {{/* we found it! */}}
+                  {{ $pagesBySubSectionMap := $this.Scratch.Get $pagesBySubSectionKey }}
+                  {{ if isset $pagesBySubSectionMap $pageSubSectionName }}
+                    {{/* a page with this subsection already exists, so append
+                    the current page it */}}
+                    {{ $list := (index $pagesBySubSectionMap $pageSubSectionName) | append $page }}
+                    {{ $this.Scratch.SetInMap $pagesBySubSectionKey $pageSubSectionName $list }}
+                  {{ else }}
+                    {{/* there are no pages with this subsection yet */}}
+                    {{ $this.Scratch.SetInMap $pagesBySubSectionKey $pageSubSectionName (slice $page) }}
+                    {{ $this.Scratch.Add $subSectionListKey (slice $pageSubSection) }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            {{ if not (eq ($this.Scratch.Get $breakCycleKey) "true")}}
+              {{/* we could not find a subsection of this page that is "on"
+                this section, so add it to "other" */}}
+              {{ $pagesBySubSectionMap := $this.Scratch.Get $pagesBySubSectionKey }}
+              {{ if isset $pagesBySubSectionMap $otherSubSectionName }}
+                {{/* a page with the "other" subsection already exists, so
+                append the current page it */}}
+                {{ $list := (index $pagesBySubSectionMap $otherSubSectionName) | append $page }}
+                {{ $this.Scratch.SetInMap $pagesBySubSectionKey $otherSubSectionName $list }}
+              {{ else }}
+                {{/* there are no pages with the "other" subsection yet */}}
+                {{ $this.Scratch.SetInMap $pagesBySubSectionKey $otherSubSectionName (slice $page) }}
+              {{ end }}
+            {{ end }}
+          {{ else }}
+            {{/* this page has no subsections, so add it to "other" */}}
+            {{ $pagesBySubSectionMap := $this.Scratch.Get $pagesBySubSectionKey }}
+            {{ if isset $pagesBySubSectionMap $otherSubSectionName }}
+              {{/* a page with the "other" subsection already exists, so
+                append the current page it */}}
+              {{ $list := (index $pagesBySubSectionMap $otherSubSectionName) | append $page }}
+              {{ $this.Scratch.SetInMap $pagesBySubSectionKey $otherSubSectionName $list }}
+            {{ else }}
+              {{/* there are no pages with the "other" subsection yet */}}
+              {{ $this.Scratch.SetInMap $pagesBySubSectionKey $otherSubSectionName (slice $page) }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+      {{ $subSectionList := $this.Scratch.Get $subSectionListKey }}
+      {{ $pagesBySubSectionMap := $this.Scratch.Get $pagesBySubSectionKey }}
+
+
+      {{ $otherList := (index $pagesBySubSectionMap $otherSubSectionName) }}
+      {{ if gt (len $subSectionList) 0 }}
+        <div class="list-padding-first"></div>
+        {{ range $i, $v := sort $subSectionList "Page.Params.weight" "desc" }}
+          {{ $id := $v.Page.Data.Term | urlize }}
+          <h2 class="list-header" id="{{ $id }}">{{ $v.Page.Title }}</h2>
+          <ul class="list">
+            {{ range (index $pagesBySubSectionMap $v.Page.Data.Term) }}
+              <li>
+                {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
+              </li>
+            {{ end}}
+          </ul>
+          {{ if ne (len $subSectionList) (add $i 1) }}
+            <div class="line"></div>
+          {{ end }}
+        {{ end }}
+        {{ if $otherList }}
+          <div class="line"></div>
+          <h2 class="list-header" id="other">Other</h2>
+        {{ end }}
+      {{ else }}
+        <div class="list-padding-first"></div>
+      {{ end }}
+
+      {{ if $otherList }}
+        <ul class="list">
+          {{ range $otherList }}
             <li>
               {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
             </li>
-          {{ end }}
-        {{ end }}
-      </ul>
+          {{ end}}
+        </ul>
+      {{ end }}
 
     </main>
 

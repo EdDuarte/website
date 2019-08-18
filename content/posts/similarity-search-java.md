@@ -12,5 +12,6 @@ types:
   - project
 series:
   - open-source
+subsections:
   - data-mining
 ---

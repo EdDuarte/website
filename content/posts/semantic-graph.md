@@ -1,8 +1,8 @@
 ---
 title: "Semantic search with graph visualization"
-description: "Webapp that collects N-Triples, N3 and RDF/XML documents, infers
+description: "Web app that collects N-Triples, N3 and RDF/XML documents, infers
 new data using SPARQL queries, and displays relationships in GraphViz graphs."
-keywords: [backend, REST, REST API, RESTful, web service, semantic web, webapp,
+keywords: [backend, REST, REST API, RESTful, web service, semantic web, web app,
 N-Triples, N3, RDF, XML, SPARQL, triples, data inference]
 lang: [Python]
 tech: [Django, RDF4J / Sesame]
@@ -14,4 +14,6 @@ types:
   - project
 series:
   - open-source
+subsections:
+  - full-stack
 ---

@@ -1,5 +1,23 @@
 
+/master-thesis/*  https://ria.ua.pt/handle/10773/26170
+/collaborative-analysis-over-massive-time-series-data-sets/*  https://ria.ua.pt/handle/10773/26170
+
+/data-mining-projects/*  /projects/#data-mining
+/mobile-apps/*  /projects/#mobile
+
+/bikeemotion/*  http://www.bikeemotion.com/
+/bikeemotion-bike-sharing-platform/*  http://www.bikeemotion.com/
+
+/riadeaveiro/*  https://apps.apple.com/pt/app/ria-de-aveiro/id1006659023
+/ria-de-aveiro-tourist-information-apps/*  https://apps.apple.com/pt/app/ria-de-aveiro/id1006659023
+
+/umeter/*  https://www.ubiwhere.com/en/news-e-articles/1-general/44-umeter-collaborative-platform-for-monitoring-quality-of-service-qos-for-internet-access
+/umeter-qos-measurement-system-for-internet-access/*  https://www.ubiwhere.com/en/news-e-articles/1-general/44-umeter-collaborative-platform-for-monitoring-quality-of-service-qos-for-internet-access
+
+/thumbeo-radiolizfm/*  https://www.mixcloud.com/radiolizfm/eduardo-duarte-thumbeo-boleia-para-festivais/
 /interview-with-radio-liz/*  https://www.mixcloud.com/radiolizfm/eduardo-duarte-thumbeo-boleia-para-festivais/
+
+/thumbeo-publico/*  https://www.publico.pt/2015/07/09/p3/noticia/thumbeo-a-app-de-boleias-personalizadas-criada-por-dois-universitarios-1823980
 /interview-with-publico/*  https://www.publico.pt/2015/07/09/p3/noticia/thumbeo-a-app-de-boleias-personalizadas-criada-por-dois-universitarios-1823980
 
 /time-series-analysis-platform/*  /distributed-and-scalable-platform-for-collaborative-analysis-of-massive-time-series-data-sets/
@@ -60,9 +78,11 @@
 /articles/*                 /:splat
 /essay                      /essays/
 /essays/*                   /:splat
-/paper                      /research/
-/papers/*                   /research/
-/research/*                 /:splat
+/paper                      /publications/
+/papers/*                   /publications/
+/research/*                 /publications/
+/publication                /publications/
+/publications/*             /:splat
 /project                    /projects/
 /projects/*                 /:splat
 /talk                       /talks/

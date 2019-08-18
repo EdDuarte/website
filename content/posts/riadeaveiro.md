@@ -12,6 +12,6 @@ externalLink: "https://apps.apple.com/pt/app/ria-de-aveiro/id1006659023"
 weight: -1
 types:
   - project
-series:
+subsections:
   - mobile
 ---

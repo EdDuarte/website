@@ -2,7 +2,7 @@
 title: "Distributed and scalable platform for collaborative analysis of massive
 time series data sets"
 subtitle: "DATA 2019, July 26 - 28, Prague, Czech Republic"
-description: "High-consistency distributed system and reactive webapp that
+description: "High-consistency distributed system and reactive web app that
 allows researchers to annotate time series patterns while preventing data loss
 from overlapping contributions or unsanctioned changes."
 keywords: [time series, annotations, annotation systems, collaborative software,
@@ -16,6 +16,8 @@ Design, Axios, Dygraphs, React, ReactJS, Redux, TypeScript, Mocha, Webpack,
 LESS, PostCSS, Puppeteer]
 lang: [Java, TypeScript]
 tech: [Spring Boot 2, ReactJS, Redux, PostgreSQL, InfluxDB, Redis]
+parents:
+  - master-thesis
 authors:
   - name: Ed Duarte
     url: https://www.edduarte.com
@@ -34,8 +36,11 @@ slides:
 date: "2019-07-28 11:32:00+01:00"
 types:
   - project
-  - research
+  - publication
   - talk
+subsections:
+  - conference-paper
+  - full-stack
 ---
 
 The recent expansion of metrification on a daily basis has led to the
@@ -170,7 +175,7 @@ series charts in simultaneous.
 
 - In highly heterogeneous use cases, there is a need to compare data from
   different measurements and source devices;
-- Why webapps? Because of recent developments made to web technologies and the
+- Why web apps? Because of recent developments made to web technologies and the
   near-universal availability of browsers;
 - Time series alone cannot convey meaning, only allude to it.
 

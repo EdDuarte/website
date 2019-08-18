@@ -256,7 +256,7 @@
               <div class="prologue">{{ .Params.prologue | markdownify }}</div>
             {{ end }}
 
-            {{ .Content }}
+            {{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".)(.*?)(</h[1-9]+>)" "${1}<a class='anchor' href='#${2}'></a> ${3} ${4}" | safeHTML }}
           </section>
         </div>
       </main>
