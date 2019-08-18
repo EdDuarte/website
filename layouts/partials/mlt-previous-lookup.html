@@ -1,0 +1,26 @@
+
+{{ $c := .context }}
+{{ $pages := .pages }}
+{{ $i := .i }}
+{{ $termName := .termName }}
+{{ $prevKey := .prevKey }}
+{{ $nextKey := .nextKey }}
+{{ $lookupKey := .lookupKey }}
+{{ $resultKey := .resultKey }}
+
+{{ $c.Scratch.Delete $resultKey }}
+{{ if ne $i 0 }}
+  {{ range (after (sub (len $pages) $i) $pages.Reverse) }}
+    {{ if not ($c.Scratch.Get $resultKey) }}
+      {{ $lookupMap := ($c.Scratch.Get $lookupKey) }}
+      {{ if and (not (.Params.externalLink)) (not (isset $lookupMap $termName)) }}
+        {{ $currentKey := .File.BaseFileName }}
+        {{ if and (not (in ($c.Scratch.GetSortedMapValues $prevKey) $currentKey)) (not (in ($c.Scratch.GetSortedMapValues $nextKey) $currentKey)) }}
+          {{ $c.Scratch.Set $resultKey . }}
+          {{ $termKey := printf "%s %s" $termName $lookupKey }}
+          {{ $c.Scratch.SetInMap $prevKey $termKey $currentKey }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
