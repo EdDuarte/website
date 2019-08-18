@@ -1,7 +1,10 @@
 ---
 title: "Mobile apps"
-description: "Mobile applications (Android or iOS) I worked on."
+description: "Android or iOS applications I worked on."
 weight: 1
 ---
 
-Mobile applications (Android or iOS) I worked on.
+Android or iOS applications I worked on.
+
+Show: [all](/projects/) / [open-source](/open-source-projects/) /
+[data-mining](/data-mining-projects/) / mobile-apps

@@ -49,7 +49,7 @@
   </div>
   <section class="tags-container fade-in">
     <ul class="links tags">
-      {{ range sort $types "Page.Params.weight" }}
+      {{ range sort $types "Page.Params.weight" "desc" }}
         <li>
           <a href="{{ .Page.Permalink }}" class="badge badge-type badge-{{ .Page.Data.Term }}">
             {{ lower .Page.Title }}

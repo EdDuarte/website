@@ -1,8 +1,7 @@
 ---
 title: "Notes"
 description: "Notes on Computing and Software Engineering"
-weight: 4
+weight: 2
 ---
 
-Miscellaneous notes on Computing and Software Engineering that I have collected
-over the years.
+Miscellaneous notes on Computing and Software Engineering.
