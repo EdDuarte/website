@@ -11,6 +11,6 @@ externalLink: "https://www.ubiwhere.com/en/news-e-articles/1-general/44-umeter-c
 weight: -1
 types:
   - project
-series:
+subsections:
   - mobile
 ---

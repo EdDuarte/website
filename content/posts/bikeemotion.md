@@ -12,6 +12,6 @@ externalLink: "http://www.bikeemotion.com/"
 weight: -1
 types:
   - project
-series:
+subsections:
   - mobile
 ---

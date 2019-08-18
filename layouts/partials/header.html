@@ -118,14 +118,6 @@ ol {
   list-style: decimal;
 }
 
-.children-list,
-.font-load-1 .children-list {
-  list-style: none;
-  margin: .5em 0 0 2em;
-  padding: 1px .5em;
-  border-radius: 8px;
-}
-
 blockquote,
 q {
   quotes: none;
@@ -639,13 +631,34 @@ figcaption ul {
 .small {
   font-size: .8em;
   letter-spacing: .015em;
-  margin-top: .25rem;
 }
 
 .font-load-1 .small {
   font-size: .8em;
   letter-spacing: -.025em;
+}
+
+.small,
+.font-load-1 .small {
   margin-top: .25rem;
+}
+
+.list-subtitle,
+.font-load-1 .list-subtitle {
+  margin-top: .35rem;
+  margin-bottom: 0;
+}
+
+.mlt .list-subtitle,
+.mlt .font-load-1 .list-subtitle {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.list-subtitle h6,
+.font-load-1 .list-subtitle h6 {
+  margin: 0;
+  padding: 0;
 }
 
 sup {
@@ -1386,16 +1399,54 @@ h6 > .anchor:hover {
   margin-left: 0;
 }
 
+.children-list,
+.font-load-1 .children-list {
+  list-style: none;
+  padding: 1px .5em;
+  border-radius: 8px;
+}
+
+.children-list,
+.font-load-1 .children-list {
+  margin: .5em 0 0 2em;
+}
+
+.list-header {
+  margin-bottom: .6em;
+}
+
+.font-load-1 .list-header {
+  margin-bottom: .6em;
+}
+
 .list {
   list-style-type: none;
-  margin-top: 5em;
+  margin-top: 0;
+  margin-bottom: 0;
   max-width: 100%;
   padding: 0;
 }
 
 .font-load-1 .list {
-  margin-top: 5.1em;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0;
+}
+
+.list-padding-first {
+  margin-top: 5em;
+}
+
+.font-load-1 .list-padding-first {
+  margin-top: 5.1em;
+}
+
+.list-padding {
+  margin-top: 7em;
+}
+
+.font-load-1 .list-padding {
+  margin-top: 7.1em;
 }
 
 .list > li > .table {
@@ -1406,12 +1457,12 @@ h6 > .anchor:hover {
 
 .list > li {
   margin-top: 0;
-  margin-bottom: 2.6rem;
+  margin-bottom: 1.6rem;
 }
 
 .font-load-1 .list > li {
   margin-top: 0;
-  margin-bottom: 2.5em;
+  margin-bottom: 1.5em;
 }
 
 .list-meta {
@@ -1790,6 +1841,7 @@ figure,
   .footnotes,
   .footnotes a,
   .list-desc,
+  .list-subtitle h6,
   .list-item:hover .list-title,
   .list-meta-date,
   .mlt .list-title,
@@ -1826,7 +1878,8 @@ figure,
   }
 
   .mlt .list-item:hover .list-title,
-  .list-item:hover .list-desc {
+  .list-item:hover .list-desc,
+  .list-item:hover .list-subtitle h6 {
     color: #9794a4;
   }
 
@@ -1991,6 +2044,7 @@ figure,
   .footnotes,
   .footnotes a,
   .list-desc,
+  .list-subtitle h6,
   .list-item:hover .list-title,
   .list-meta-date,
   .mlt .list-title,
@@ -2027,7 +2081,8 @@ figure,
   }
 
   .mlt .list-item:hover .list-title,
-  .list-item:hover .list-desc {
+  .list-item:hover .list-desc,
+  .list-item:hover .list-subtitle h6 {
     color: #4d495e;
   }
 
@@ -2147,12 +2202,20 @@ pre > code {
     margin-top: .6em;
   }
 
-  .list {
+  .list-padding-first {
     margin-top: 1.9em;
   }
 
-  .font-load-1 .list {
+  .font-load-1 .list-padding-first {
     margin-top: 2em;
+  }
+
+  .list-padding {
+    margin-top: 5em;
+  }
+
+  .font-load-1 .list-padding {
+    margin-top: 5.1em;
   }
 
   .tags {
@@ -2656,6 +2719,14 @@ pre > code {
   .font-load-1 .children-list {
     margin-left: 1em;
   }
+
+  .list-padding {
+    margin-top: 3em;
+  }
+
+  .font-load-1 .list-padding {
+    margin-top: 3.1em;
+  }
 }
 
 /* STAGE 1 FONTS */
@@ -2766,7 +2837,7 @@ pre > code {
   display: none;
 }
 </style>
-{{ $v := "4" }}
+{{ $v := "5" }}
 <link rel="stylesheet" href="/css/defer.css?v={{ $v }}">
 <link rel="stylesheet" href="/css/defer-min-width-1100.css?v={{ $v }}">
 <link rel="stylesheet" href="/css/defer-max-width-1099.css?v={{ $v }}">

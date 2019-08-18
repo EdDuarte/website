@@ -27,25 +27,15 @@
 
   <div class="article-table">
 
-    <main>
+    <main class="list-padding-first">
 
       <ul class="list">
-        {{ if .File }}
-          {{ $seriesKey := index (split (path.Dir .File.Dir) "/") 1 }}
-          {{ range (.Data.Pages.ByDate.Reverse).ByParam $seriesKey }}
-            {{ if not .Params.hidden }}
-              <li>
-                {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
-              </li>
-            {{ end }}
-          {{ end }}
-        {{ else }}
-          {{ range .Data.Pages }}
-            {{ if not .Params.hidden }}
-              <li>
-                {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
-              </li>
-            {{ end }}
+        {{ $seriesKey := .Page.Data.Term }}
+        {{ range (.Data.Pages.ByDate.Reverse).ByParam $seriesKey }}
+          {{ if not .Params.hidden }}
+            <li>
+              {{ partial "list-item.html" (dict "context" . "renderTechLabels" "true") }}
+            </li>
           {{ end }}
         {{ end }}
       </ul>

@@ -41,8 +41,10 @@ links:
     url: https://github.com/edduarte/living-globe
 types:
   - project
-  - research
+  - publication
   - talk
+subsections:
+  - conference-paper
 series:
   - open-source
 #  - infovisproj

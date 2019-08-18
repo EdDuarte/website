@@ -40,6 +40,7 @@ notAlternative = true
   tag = "tags"
   type = "types"
   series = "series"
+  subsection = "subsections"
 
 [permalinks]
   tags = "/:slug/"

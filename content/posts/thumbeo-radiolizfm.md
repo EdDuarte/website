@@ -9,4 +9,6 @@ externalLink: "https://www.mixcloud.com/radiolizfm/eduardo-duarte-thumbeo-boleia
 weight: -1
 types:
   - other
+subsections:
+  - podcast
 ---

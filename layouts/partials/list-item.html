@@ -44,12 +44,17 @@
         {{ end }}
         <h5 class="list-title">{{ $c.Title }}</h5>
       </div>
+      {{ with $c.Params.subtitle }}
+        <div class="list-subtitle">
+          <h6>{{ . }}</h6>
+        </div>
+      {{ end }}
       {{ with $c.Params.description }}
         <div class="list-desc">
           <p class="small">{{ . }}</p>
         </div>
       {{ end }}
-      {{ if eq .renderTechBadges "true" }}
+      {{ if eq .renderTechLabels "true" }}
         {{ $langList := $c.Params.lang }}
         {{ $techList := $c.Params.tech }}
         {{ if or $langList $techList }}

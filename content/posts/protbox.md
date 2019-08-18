@@ -35,8 +35,10 @@ links:
 date: "2014-11-05 11:03:00+01:00"
 types:
   - project
-  - research
+  - publication
   - talk
+subsections:
+  - conference-paper
 series:
   - open-source
 ---

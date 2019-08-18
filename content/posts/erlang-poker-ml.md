@@ -23,6 +23,7 @@ types:
   - notes
 series:
   - open-source
+subsections:
   - data-mining
 ---
 
@@ -60,7 +61,7 @@ This application is composed of three modules:
   calculation methods.
 
 
-{{< anchor "h2" "Preliminaries" >}}
+## Preliminaries
 
 A match is considered a result of seven cards that showed up throughout four
 rounds. The four rounds are numbered from 0 to 3:
@@ -81,7 +82,7 @@ Kind; 4. Full House; 5. Flush; 6. Straight; 7. Three Of A Kind; 8. Two Pair; 9.
 Pair; 10. High Card.
 
 
-{{< anchor "h2" "Main module" >}}
+## Main module
 
 The main module uses the rule-based engine Eresye to store variables per match
 and Texas Hold'em hand rankings. For each match, the user is prompted to input:
@@ -113,7 +114,7 @@ instead.
 {{</ sidenote >}}
 
 
-{{< anchor "h2" "Decision tree module" >}}
+## Decision tree module
 
 The decision tree module implements a Decision tree where each node corresponds
 to a round, and each round has 3 branches pointing to 3 child nodes. Each branch
@@ -156,7 +157,7 @@ take corresponds to the one that has the higher expected profit.
 
 
 
-{{< anchor "h2" "History module" >}}
+## History module
 
 The history module is a data history, implemented using an alternative Eresye
 engine (different from the one used in the main module). Essentially, using
@@ -211,7 +212,7 @@ Round 2:
 This lets us know if the chance to get other more valuable ranks is high enough
 for it to be worth a raise or a call.
 
-{{< anchor "h2" "Final thoughts" >}}
+## Final thoughts
 
 That's all! With all these modules, our knowledge management system for Texas
 Hold'em outcome prediction is complete! In a way, we used Eresye to store state,

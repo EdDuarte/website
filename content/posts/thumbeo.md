@@ -14,6 +14,6 @@ externalLink: "http://www.thumbeo.com/en/"
 weight: -1
 types:
   - project
-series:
+subsections:
   - mobile
 ---
