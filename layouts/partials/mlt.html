@@ -1,0 +1,74 @@
+
+{{ $c := .context }}
+{{ $termList := .list }}
+{{ $allTerms := .all }}
+{{ $suffix := .suffix }}
+
+{{ $prevKey := "previous" }}
+{{ $nextKey := "next" }}
+{{ $prevItemKey := "previousItem" }}
+{{ $nextItemKey := "nextItem" }}
+
+{{ if $termList }}
+  <div class="mlt-container">
+    {{ range $termList }}
+      {{ $it := . }}
+      {{ $s := index $allTerms $it }}
+      {{ $termName := $s.Page.Data.Term | string }}
+      {{ $pages := $s.Pages.ByDate }}
+      {{ range $i, $v := $pages }}
+        {{ if eq $c.File $v.File }}
+          {{ $c.Scratch.Delete $prevItemKey }}
+          {{ $c.Scratch.Delete $nextItemKey }}
+
+          {{ if ne $i 0 }}
+            {{ range (after (sub (len $pages) $i) $pages.Reverse) }}
+              {{ $prevKeysMap := ($c.Scratch.Get $prevKey) }}
+              {{ if and (not (.Params.externalLink)) (not (isset $prevKeysMap $termName)) }}
+                {{ $currentKey := .File.BaseFileName }}
+                {{ if and (not (in ($c.Scratch.GetSortedMapValues $prevKey) $currentKey)) (not (in ($c.Scratch.GetSortedMapValues $nextKey) $currentKey)) }}
+                  {{ $c.Scratch.Set $prevItemKey . }}
+                  {{ $c.Scratch.SetInMap $prevKey $termName $currentKey }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+
+          {{ if ne (len $pages) (add $i 1) }}
+            {{ range (after (add $i 1) $pages) }}
+              {{ $nextKeysMap := ($c.Scratch.Get $nextKey) }}
+              {{ if and (not (.Params.externalLink)) (not (isset $nextKeysMap $termName)) }}
+                {{ $currentKey := .File.BaseFileName }}
+                {{ if and (not (in ($c.Scratch.GetSortedMapValues $prevKey) $currentKey)) (not (in ($c.Scratch.GetSortedMapValues $nextKey) $currentKey)) }}
+                  {{ $c.Scratch.Set $nextItemKey . }}
+                  {{ $c.Scratch.SetInMap $nextKey $termName $currentKey }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+
+          {{ $prevItem := $c.Scratch.Get $prevItemKey }}
+          {{ $nextItem := $c.Scratch.Get $nextItemKey }}
+          {{ if or $prevItem $nextItem }}
+            <h4 class="mlt-header">Other posts in the <a href="{{ $s.Page.Permalink }}">{{ lower $s.Page.Title }}</a> {{ $suffix }}</h4>
+            <div class="mlt-table">
+              {{ with $prevItem }}
+                <div class="mlt mlt-previous">
+                  <h6 class="mlt-header">Previous</h6>
+                  {{ partial "list-item.html" (dict "context" . "renderTechLabels" "false") }}
+                </div>
+              {{ end }}
+              {{ with $nextItem }}
+                <div class="mlt mlt-next">
+                  <h6 class="mlt-header">Next</h6>
+                  {{ partial "list-item.html" (dict "context" . "renderTechLabels" "false") }}
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+    {{ end }}
+  </div>
+{{ end }}
