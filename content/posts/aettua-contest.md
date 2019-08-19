@@ -1,6 +1,6 @@
 ---
 title: "AETTUA Mobile Computing Contest 2014"
-subtitle: "1st Prize Team"
+description: "1st Prize Team"
 hasThumbnail: true
 keywords: [contest, competition, taxi, map, schedule, scheduling, Uber, NFC,
 payment, rides, ride sharing, ride scheduling, chat, push notification, mobile,

@@ -1,6 +1,6 @@
 ---
 title: "Other"
-description: "Me, elsewhere on the web."
+description: "Me, elsewhere on the web"
 weight: 1
 ---
 

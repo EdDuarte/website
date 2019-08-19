@@ -1,7 +1,11 @@
 ---
 title: "Living Globe: Tridimensional interactive visualization of world
 demographic data"
-subtitle: "HCI International 2016, 17 - 22 July, Toronto, Canada"
+subtitles:
+  publication: "HIMI 2016: Human Interface and the Management of Information:
+  Information, Design and Interaction"
+  talk: "HCI International 2016, July 17-22, The Westin Harbour Castle Hotel,
+  Toronto, Canada"
 description: "Open-source WebGL app for tri-dimensional worldwide data
 visualization, with customizable data-to-visual mapping and filtering with
 adjustable scales."
@@ -156,12 +160,12 @@ To cite this paper, you may use the following BibTex record:
 
 ## Talk
 
-The paper and prototype described in this page were presented at the
-[HCI International 2016](http://www.hci.international/) in The Westin Harbour
-Castle Hotel, Toronto, Canada. It was originally presented in portuguese at
-[SciTecIN 2015](https://scitecin.isr.uc.pt/index.php/pt/), University of
-Coimbra, Portugal. Below are the slides used for those presentations, [hosted on
-Speaker
+The paper and prototype described in this page were presented on the 20th of
+July 2016 at the [HCI International 2016](http://www.hci.international/) in
+Toronto, Canada. It was originally presented in portuguese on the 13rd of
+November 2015 at [SciTecIN 2015](https://scitecin.isr.uc.pt/index.php/pt/),
+University of Coimbra, Portugal. Below are the slides used for those
+presentations, [hosted on Speaker
 Deck](https://speakerdeck.com/duarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data).
 
 {{< sd bf04a6e0d58a4dfaa7ce97e9c08c309b >}}
