@@ -107,7 +107,7 @@
         <div class="top-padding"></div>
         {{ range $i, $v := sort $subSectionList "Page.Params.weight" "desc" }}
           {{ $id := $v.Page.Data.Term | urlize }}
-          <h2 class="list-header" id="{{ $id }}">{{ $v.Page.Title }}</h2>
+          <h3 class="list-header" id="{{ $id }}">{{ $v.Page.Title }}</h3>
           <ul class="list">
             {{ range (index $pagesBySubSectionMap $v.Page.Data.Term) }}
               <li>
@@ -121,7 +121,7 @@
         {{ end }}
         {{ if $otherList }}
           <div class="line"></div>
-          <h2 class="list-header" id="other">Other</h2>
+          <h3 class="list-header" id="other">Other</h3>
         {{ end }}
       {{ else }}
         <div class="top-padding"></div>

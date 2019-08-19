@@ -52,7 +52,7 @@
       <aside class="aside-article">
 
         {{ if $typeList }}
-          <section>
+          <section class="tags-container">
             <ul class="links tags article-tags">
               {{ range .Params.types }}
                 {{ $t := index $types . }}
