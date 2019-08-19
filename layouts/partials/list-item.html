@@ -44,10 +44,12 @@
         {{ end }}
         <h5 class="list-title">{{ $c.Title }}</h5>
       </div>
-      {{ with $c.Params.subtitle }}
-        <div class="list-subtitle">
-          <h6>{{ . }}</h6>
-        </div>
+      {{ if eq .renderSubtitle "true" }}
+        {{ with $c.Params.subtitle }}
+          <div class="list-subtitle">
+            <h6>{{ . }}</h6>
+          </div>
+        {{ end }}
       {{ end }}
       {{ with $c.Params.description }}
         <div class="list-desc">
