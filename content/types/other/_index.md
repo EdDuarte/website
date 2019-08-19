@@ -1,6 +1,6 @@
 ---
 title: "Other"
-description: "Writings, essays or interviews."
+description: "Me, elsewhere on the web."
 weight: 1
 ---
 

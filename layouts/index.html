@@ -67,36 +67,6 @@
 
   <div class="article-table">
 
-    <main class="home-list-container">
-      <div class="home-list">
-        <div class="top-padding"></div>
-
-        <ul class="list">
-          {{ range .Data.Pages.ByDate.Reverse }}
-            {{ if and (not .Params.hidden) (not (isset .Params "parents")) }}
-              <li>
-                {{ partial "list-item.html" (dict "context" . "renderSubtitle" "true" "renderTechLabels" "true") }}
-
-                {{ $requiredBy := where .Site.Pages ".Params.parents" "intersect" (slice .File.BaseFileName) }}
-                {{ if not (eq (len $requiredBy) 0) }}
-                  <section>
-                    <ul class="children-list">
-                      {{ range $requiredBy }}
-                        <li>
-                          {{ partial "list-item.html" (dict "context" . "renderSubtitle" "true" "renderTechLabels" "true") }}
-                        </li>
-                      {{ end }}
-                    </ul>
-                  </section>
-                {{ end }}
-              </li>
-            {{ end }}
-          {{ end }}
-        </ul>
-
-      </div>
-    </main>
-
     <aside class="aside-home">
 
       <div class="sticky">
@@ -133,6 +103,36 @@
       </div>
 
     </aside>
+
+    <main class="home-list-container">
+      <div class="home-list">
+        <div class="top-padding"></div>
+
+        <ul class="list">
+          {{ range .Data.Pages.ByDate.Reverse }}
+            {{ if and (not .Params.hidden) (not (isset .Params "parents")) }}
+              <li>
+                {{ partial "list-item.html" (dict "context" . "renderSubtitle" "true" "renderTechLabels" "true") }}
+
+                {{ $requiredBy := where .Site.Pages ".Params.parents" "intersect" (slice .File.BaseFileName) }}
+                {{ if not (eq (len $requiredBy) 0) }}
+                  <section>
+                    <ul class="children-list">
+                      {{ range $requiredBy }}
+                        <li>
+                          {{ partial "list-item.html" (dict "context" . "renderSubtitle" "true" "renderTechLabels" "true") }}
+                        </li>
+                      {{ end }}
+                    </ul>
+                  </section>
+                {{ end }}
+              </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+
+      </div>
+    </main>
 
   </div>
 
