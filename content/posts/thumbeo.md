@@ -5,7 +5,7 @@ and chat in real-time. As co-founder and lead developer I implemented core
 functionality, devised the overall UX, and managed a team of developers and
 designers."
 keywords: [rides, ride sharing, ride scheduling, chat, push notification,
-mobile, app]
+mobile, app, mobile application, Android]
 lang: [Java]
 tech: [Parse Platform, Firebase, Android SDK, Google Maps SDK]
 slug: "thumbeo"
