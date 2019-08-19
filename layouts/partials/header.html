@@ -1746,8 +1746,8 @@ figure,
     color: #5a5476;
   }
 
-  .badge-type:hover,
-  .badge-type:focus {
+  a.badge-type:hover,
+  a.badge-type:focus {
     background-color: #dbdbdf;
     color: #908aaa;
   }
@@ -1757,8 +1757,8 @@ figure,
     color: #5a5456;
   }
 
-  .badge-tag:hover,
-  .badge-tag:focus {
+  a.badge-tag:hover,
+  a.badge-tag:focus {
     background-color: #dcd7d9;
     color: #9c9095;
   }
@@ -1768,8 +1768,8 @@ figure,
     color: #545a58;
   }
 
-  .badge-work-in-progress:hover,
-  .badge-work-in-progress:focus {
+  a.badge-work-in-progress:hover,
+  a.badge-work-in-progress:focus {
     background-color: #d7dcda;
     color: #909c97;
   }
@@ -1918,6 +1918,10 @@ figure,
     text-shadow: 1px 1px rgba(255, 255, 255, .6);
   }
 
+  .badge {
+    text-shadow: 1px 1px rgba(220, 220, 220, 0.6);
+  }
+
   .line {
     color: #9794a4;
   }
@@ -1966,8 +1970,8 @@ figure,
     color: #938db0;
   }
 
-  .badge-type:hover,
-  .badge-type:focus {
+  a.badge-type:hover,
+  a.badge-type:focus {
     background-color: #202024;
     color: #696976;
   }
@@ -1977,8 +1981,8 @@ figure,
     color: #a69398;
   }
 
-  .badge-tag:hover,
-  .badge-tag:focus {
+  a.badge-tag:hover,
+  a.badge-tag:focus {
     background-color: #282325;
     color: #6f6368;
   }
@@ -1988,8 +1992,8 @@ figure,
     color: #8ba09a;
   }
 
-  .badge-work-in-progress:hover,
-  .badge-work-in-progress:focus {
+  a.badge-work-in-progress:hover,
+  a.badge-work-in-progress:focus {
     background-color: #232826;
     color: #636f6a;
   }
@@ -2134,6 +2138,7 @@ figure,
     background-color: #1a1726;
   }
 
+  .badge,
   .list-title {
     text-shadow: 1px 1px rgba(0, 0, 0, .6);
   }
@@ -2244,22 +2249,6 @@ pre > code {
   .content > .font-load-1 h1:first-child,
   .content > h1:first-child {
     margin-top: .6em;
-  }
-
-  .top-padding {
-    margin-top: 1.9em;
-  }
-
-  .font-load-1 .top-padding {
-    margin-top: 2em;
-  }
-
-  .list-padding {
-    margin-top: 5em;
-  }
-
-  .font-load-1 .list-padding {
-    margin-top: 5.1em;
   }
 
   .tags {
@@ -2437,6 +2426,22 @@ pre > code {
 
   figure.myphoto {
     margin-top: 3.5em;
+  }
+
+  .top-padding {
+    margin-top: 1.9em;
+  }
+
+  .font-load-1 .top-padding {
+    margin-top: 2em;
+  }
+
+  .list-padding {
+    margin-top: 5em;
+  }
+
+  .font-load-1 .list-padding {
+    margin-top: 5.1em;
   }
 
   ol,
@@ -2881,7 +2886,7 @@ pre > code {
   display: none;
 }
 </style>
-{{ $v := "7" }}
+{{ $v := "8" }}
 <link rel="stylesheet" href="/css/defer.css?v={{ $v }}">
 <link rel="stylesheet" href="/css/defer-min-width-1100.css?v={{ $v }}">
 <link rel="stylesheet" href="/css/defer-max-width-1099.css?v={{ $v }}">
