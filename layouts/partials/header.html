@@ -725,6 +725,7 @@ sup {
   width: 16px;
 }
 
+/* headings follow a modular scale with ratio 1.1486 */
 h1 {
   font-size: 2em;
   letter-spacing: -.078em;
@@ -780,12 +781,12 @@ h3 {
 }
 
 h2 {
-  font-size: 1.588em;
+  font-size: 1.741em;
   margin-bottom: -.16em;
 }
 
 .font-load-1 h2 {
-  font-size: 1.588em;
+  font-size: 1.741em;
   letter-spacing: -.031em;
   margin-bottom: -.15em;
 }
@@ -817,7 +818,7 @@ h4 {
 
 .font-load-1 h3,
 h3 {
-  font-size: 1.414em;
+  font-size: 1.516em;
 }
 
 .sidenote-container + h3,
@@ -843,12 +844,12 @@ p + h3 {
 }
 
 h4 {
-  font-size: 1.24em;
+  font-size: 1.32em;
   letter-spacing: -.09rem;
 }
 
 .font-load-1 h4 {
-  font-size: 1.26em;
+  font-size: 1.32em;
   letter-spacing: -.024rem;
 }
 
@@ -875,7 +876,7 @@ p + h4 {
 }
 
 h5 {
-  font-size: 1.133em;
+  font-size: 1.149em;
   letter-spacing: -.08em;
   line-height: 1.4em;
   margin-bottom: -.37em;
@@ -1122,12 +1123,14 @@ a {
 .footnotes a,
 .metadata a,
 .mlt-link:hover > .mlt-title,
+.mlt-link:focus > .mlt-title,
 .sidenote a,
 .table > .list-meta > a,
 .title a,
 a.footnote-return,
 figcaption a,
-.footer a:hover {
+.footer a:hover,
+.footer a:focus {
   text-decoration-line: underline;
 }
 
@@ -1433,20 +1436,12 @@ h6 > .anchor:hover {
   padding: 0;
 }
 
-.list-padding-first {
+.top-padding {
   margin-top: 5em;
 }
 
-.font-load-1 .list-padding-first {
+.font-load-1 .top-padding {
   margin-top: 5.1em;
-}
-
-.list-padding {
-  margin-top: 7em;
-}
-
-.font-load-1 .list-padding {
-  margin-top: 7.1em;
 }
 
 .list > li > .table {
@@ -1653,7 +1648,8 @@ figure,
   min-height: 2.2em;
 }
 
-.metadata-links > li > a:hover > .icon {
+.metadata-links > li > a:hover > .icon,
+.metadata-links > li > a:focus > .icon {
   opacity: .5;
   transition: .2s;
 }
@@ -1708,7 +1704,8 @@ figure,
     color: #8e7a80;
   }
 
-  .list-item:hover .label-lang {
+  .list-item:hover .label-lang,
+  .list-item:focus .label-lang {
     color: #b1a0a5;
   }
 
@@ -1719,7 +1716,9 @@ figure,
   }
 
   .list-item:hover .series-label,
-  .list-item:hover .label-tech {
+  .list-item:hover .label-tech,
+  .list-item:focus .series-label,
+  .list-item:focus .label-tech {
     color: #a9a5b7;
   }
 
@@ -1733,7 +1732,8 @@ figure,
     color: #5a5476;
   }
 
-  .badge-type:hover {
+  .badge-type:hover,
+  .badge-type:focus {
     background-color: #dbdbdf;
     color: #908aaa;
   }
@@ -1743,7 +1743,8 @@ figure,
     color: #5a5456;
   }
 
-  .badge-tag:hover {
+  .badge-tag:hover,
+  .badge-tag:focus {
     background-color: #dcd7d9;
     color: #9c9095;
   }
@@ -1753,7 +1754,8 @@ figure,
     color: #545a58;
   }
 
-  .badge-work-in-progress:hover {
+  .badge-work-in-progress:hover,
+  .badge-work-in-progress:focus {
     background-color: #d7dcda;
     color: #909c97;
   }
@@ -1763,7 +1765,8 @@ figure,
     color: #6b677d;
   }
 
-  .metadata-links > li > a:hover {
+  .metadata-links > li > a:hover,
+  .metadata-links > li > a:focus {
     background-color: #e4e2eb;
     color: #a9a5b7;
   }
@@ -1786,12 +1789,14 @@ figure,
   .footnotes a,
   .metadata a,
   .mlt-link:hover > .mlt-title,
+  .mlt-link:focus > .mlt-title,
   .sidenote a,
   .table > .list-meta > a,
   .title a,
   a.footnote-return,
   figcaption a,
-  .footer a:hover {
+  .footer a:hover,
+  .footer a:focus {
     text-decoration-color: #8f89ab;
   }
 
@@ -1843,6 +1848,7 @@ figure,
   .list-desc,
   .list-subtitle h6,
   .list-item:hover .list-title,
+  .list-item:focus .list-title,
   .list-meta-date,
   .mlt .list-title,
   .metadata,
@@ -1878,12 +1884,16 @@ figure,
   }
 
   .mlt .list-item:hover .list-title,
+  .mlt .list-item:focus .list-title,
   .list-item:hover .list-desc,
-  .list-item:hover .list-subtitle h6 {
+  .list-item:focus .list-desc,
+  .list-item:hover .list-subtitle h6,
+  .list-item:focus .list-subtitle h6 {
     color: #9794a4;
   }
 
-  .series a:hover .card-item-desc {
+  .series a:hover .card-item-desc,
+  .series a:focus .card-item-desc {
     background-color: #e0dfe3;
   }
 
@@ -1911,7 +1921,8 @@ figure,
     color: #695c60;
   }
 
-  .list-item:hover .label-lang {
+  .list-item:hover .label-lang,
+  .list-item:focus .label-lang {
     color: #564d50;
   }
 
@@ -1922,7 +1933,9 @@ figure,
   }
 
   .list-item:hover .series-label,
-  .list-item:hover .label-tech {
+  .list-item:focus .series-label,
+  .list-item:hover .label-tech,
+  .list-item:focus .label-tech {
     color: #53505f;
   }
 
@@ -1936,7 +1949,8 @@ figure,
     color: #938db0;
   }
 
-  .badge-type:hover {
+  .badge-type:hover,
+  .badge-type:focus {
     background-color: #202024;
     color: #696976;
   }
@@ -1946,7 +1960,8 @@ figure,
     color: #a69398;
   }
 
-  .badge-tag:hover {
+  .badge-tag:hover,
+  .badge-tag:focus {
     background-color: #282325;
     color: #6f6368;
   }
@@ -1956,7 +1971,8 @@ figure,
     color: #8ba09a;
   }
 
-  .badge-work-in-progress:hover {
+  .badge-work-in-progress:hover,
+  .badge-work-in-progress:focus {
     background-color: #232826;
     color: #636f6a;
   }
@@ -1966,7 +1982,8 @@ figure,
     color: #7d798e;
   }
 
-  .metadata-links > li > a:hover {
+  .metadata-links > li > a:hover,
+  .metadata-links > li > a:focus {
     background-color: #16141d;
     color: #4a4757;
   }
@@ -1989,12 +2006,14 @@ figure,
   .footnotes a,
   .metadata a,
   .mlt-link:hover > .mlt-title,
+  .mlt-link:focus > .mlt-title,
   .sidenote a,
   .table > .list-meta > a,
   .title a,
   a.footnote-return,
   figcaption a,
-  .footer a:hover {
+  .footer a:hover,
+  .footer a:focus {
     text-decoration-color: #18191c;
   }
 
@@ -2046,6 +2065,7 @@ figure,
   .list-desc,
   .list-subtitle h6,
   .list-item:hover .list-title,
+  .list-item:focus .list-title,
   .list-meta-date,
   .mlt .list-title,
   .metadata,
@@ -2081,12 +2101,16 @@ figure,
   }
 
   .mlt .list-item:hover .list-title,
+  .mlt .list-item:focus .list-title,
   .list-item:hover .list-desc,
-  .list-item:hover .list-subtitle h6 {
+  .list-item:focus .list-desc,
+  .list-item:hover .list-subtitle h6,
+  .list-item:focus .list-subtitle h6 {
     color: #4d495e;
   }
 
-  .series a:hover .card-item-desc {
+  .series a:hover .card-item-desc,
+  .series a:focus .card-item-desc {
     background-color: #1a1726;
   }
 
@@ -2202,11 +2226,11 @@ pre > code {
     margin-top: .6em;
   }
 
-  .list-padding-first {
+  .top-padding {
     margin-top: 1.9em;
   }
 
-  .font-load-1 .list-padding-first {
+  .font-load-1 .top-padding {
     margin-top: 2em;
   }
 
@@ -2529,6 +2553,7 @@ pre > code {
     margin-top: 0;
   }
 
+  /* headings follow a modular scale with ratio 1.0845 */
   h1,
   .font-load-1 h1 {
     font-size: 1.5em;
@@ -2541,7 +2566,7 @@ pre > code {
 
   h3,
   .font-load-1 h3 {
-    font-size: 1.276em;
+    font-size: 1.275em;
   }
 
   h4,
@@ -2551,7 +2576,7 @@ pre > code {
 
   h5,
   .font-load-1 h5 {
-    font-size: 1.085em;
+    font-size: 1.084em;
   }
 
   h6,
