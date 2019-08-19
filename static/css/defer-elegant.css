@@ -82,7 +82,8 @@ html,
   color: #ebeaf1;
 }
 
-.badge-type:hover {
+.badge-type:hover,
+.badge-type:focus {
   color: #ebeaf1;
 }
 
@@ -109,7 +110,8 @@ html,
 /* @media not (prefers-color-scheme: light) { */
 @media all {
 
-  .series a:hover .card-item-desc {
+  .series a:hover .card-item-desc,
+  .series a:focus .card-item-desc {
     background-color: #f6f8fa;
   }
 
@@ -165,7 +167,8 @@ html,
 
 @media (prefers-color-scheme: dark) {
 
-  .series a:hover .card-item-desc {
+  .series a:hover .card-item-desc,
+  .series a:focus .card-item-desc {
     background-color: #14121a;
   }
 

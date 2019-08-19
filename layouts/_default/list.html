@@ -104,7 +104,7 @@
 
       {{ $otherList := (index $pagesBySubSectionMap $otherSubSectionName) }}
       {{ if gt (len $subSectionList) 0 }}
-        <div class="list-padding-first"></div>
+        <div class="top-padding"></div>
         {{ range $i, $v := sort $subSectionList "Page.Params.weight" "desc" }}
           {{ $id := $v.Page.Data.Term | urlize }}
           <h2 class="list-header" id="{{ $id }}">{{ $v.Page.Title }}</h2>
@@ -124,7 +124,7 @@
           <h2 class="list-header" id="other">Other</h2>
         {{ end }}
       {{ else }}
-        <div class="list-padding-first"></div>
+        <div class="top-padding"></div>
       {{ end }}
 
       {{ if $otherList }}

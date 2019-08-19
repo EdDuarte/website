@@ -13,7 +13,7 @@
 </header>
 
 <div class="article-container">
-  <h4 class="series-header mlt-header">Collection</h4>
+  <h5 class="series-header mlt-header">Collection</h5>
   <div class="title">{{ .Title }}</div>
 
   {{ with .Content }}
@@ -27,7 +27,8 @@
 
   <div class="article-table">
 
-    <main class="list-padding-first">
+    <main>
+      <div class="top-padding"></div>
 
       <ul class="list">
         {{ $seriesKey := .Page.Data.Term }}
