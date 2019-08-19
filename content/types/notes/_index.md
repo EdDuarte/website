@@ -1,6 +1,6 @@
 ---
 title: "Notes"
-description: "Notes on Computing and Software Engineering"
+description: "Writings, articles and essays"
 weight: 2
 ---
 

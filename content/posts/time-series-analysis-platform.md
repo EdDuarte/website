@@ -1,7 +1,10 @@
 ---
 title: "Distributed and scalable platform for collaborative analysis of massive
 time series data sets"
-subtitle: "DATA 2019, July 26 - 28, Prague, Czech Republic"
+subtitles:
+  publication: "Proceedings of the 8th International Conference on Data Science,
+  Technology and Applications"
+  talk: "DATA 2019, July 26-28, Vienna House Diplomat, Prague, Czech Republic"
 description: "High-consistency distributed system and reactive web app that
 allows researchers to annotate time series patterns while preventing data loss
 from overlapping contributions or unsanctioned changes."
@@ -94,12 +97,11 @@ To cite this paper, you may use the following BibTex record:
 
 ## Talk
 
-The paper described in this page was presented at the [DATA 2019: International
-Conference on Data Science, E-learning and Information
-Systems](http://www.dataconference.org) in Vienna House Diplomat Prague,
-Prague, Czech Republic. Below are the slides (with speaker notes) used for that
-presentation, which are also [hosted on
-Notist](https://noti.st/duarte/CAP51Y).
+The paper described in this page was presented on the 27th of July 2019 at the
+[DATA 2019: International Conference on Data Science, E-learning and Information
+Systems](http://www.dataconference.org) in Prague, Czech Republic. Below are the
+slides (with speaker notes) used for that presentation, which are also [hosted
+on Notist](https://noti.st/duarte/CAP51Y).
 
 
 {{< figure

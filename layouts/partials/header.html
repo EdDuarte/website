@@ -638,24 +638,6 @@ figcaption ul {
   margin-top: .25rem;
 }
 
-.list-subtitle,
-.font-load-1 .list-subtitle {
-  margin-top: .2rem;
-  margin-bottom: 0;
-}
-
-.mlt .list-subtitle,
-.mlt .font-load-1 .list-subtitle {
-  margin-top: .5rem;
-  margin-bottom: .5rem;
-}
-
-.list-subtitle h6,
-.font-load-1 .list-subtitle h6 {
-  margin: 0;
-  padding: 0;
-}
-
 sup {
   font-size: .9rem;
   vertical-align: baseline;
@@ -948,6 +930,27 @@ p + h6 {
 .font-load-1 p + h6 {
   margin-top: .613em;
   padding-top: .2em;
+}
+
+.list-subtitle,
+.font-load-1 .list-subtitle {
+  margin-top: .2rem;
+  margin-bottom: 0;
+}
+
+.mlt .list-subtitle,
+.mlt .font-load-1 .list-subtitle {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.list-subtitle h6,
+.font-load-1 .list-subtitle h6 {
+  font-size: .8em;
+  letter-spacing: -.01em;
+  line-height: 1.7em;
+  margin: 0;
+  padding: 0;
 }
 
 .sidenote-container {
@@ -2878,7 +2881,7 @@ pre > code {
   display: none;
 }
 </style>
-{{ $v := "6" }}
+{{ $v := "7" }}
 <link rel="stylesheet" href="/css/defer.css?v={{ $v }}">
 <link rel="stylesheet" href="/css/defer-min-width-1100.css?v={{ $v }}">
 <link rel="stylesheet" href="/css/defer-max-width-1099.css?v={{ $v }}">

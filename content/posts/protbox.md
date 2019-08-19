@@ -1,7 +1,9 @@
 ---
 title: "Protbox: Secure and trustworthy file sharing over cloud storage using
 eID tokens"
-subtitle: "Open Identity Summit 2014, November 4 - 6, Stuttgart, Germany"
+subtitles:
+  publication: "Proceedings of the Open Identity Summit 2014"
+  talk: "Open Identity Summit 2014, November 4-6, Fraunhofer IAO Institute Center, Stuttgart, Germany"
 description: "Open-source & cross-platform app that performs file encryption
 and user authentication on existing cloud storage services."
 keywords: [information security, cloud storage, file encryption, authentication,
@@ -98,7 +100,8 @@ applications out-of-the-box.
 ## Publication
 
 A research paper describing the architecture of Protbox was published in
-_Proceedings - Open Identity Summit 2014_, volume P-237, pages 73-84. The full text can be read on
+_Proceedings of the Open Identity Summit 2014_, volume P-237, pages 73-84. The
+full text can be read on
 [LNI](http://subs.emis.de/LNI/Proceedings/Proceedings237/article15.html) or
 [arXiv](http://arxiv.org/abs/1501.03139).
 
@@ -121,10 +124,10 @@ To cite this paper, you may use the following BibTex record:
 
 ## Talk
 
-The paper and desktop application described in this page were presented at [Open
-Identity Summit 2014](https://go.eid.as/summit/) in Fraunhofer IAO Institute
-Center, Stuttgart, Germany. Below are the slides used for that presentation,
-[hosted on Speaker
+The paper and desktop application described in this page were presented on the
+6th of November 2014 at [Open Identity Summit 2014](https://go.eid.as/summit/)
+in Stuttgart, Germany. Below are the slides used for that presentation, [hosted
+on Speaker
 Deck](https://speakerdeck.com/duarte/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens).
 
 {{< sd 18f78dd7b1cf493aaf7b817d76f36383 >}}
