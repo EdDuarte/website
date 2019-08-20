@@ -946,8 +946,8 @@ p + h6 {
 
 .list-subtitle h6,
 .font-load-1 .list-subtitle h6 {
-  font-size: .9em;
-  letter-spacing: -.01em;
+  font-size: .8em;
+  letter-spacing: .005em;
   line-height: 1.7em;
   margin: 0;
   padding: 0;
@@ -1106,14 +1106,21 @@ details > div {
   float: right;
 }
 
-.footer > ul > li {
+.footer .table > li {
   font-size: .67em;
   letter-spacing: -.077em;
 }
 
-.font-load-1 .footer > ul > li {
+.font-load-1 .footer .table > li {
   font-size: .65em;
   letter-spacing: 0;
+}
+
+.footer .footer-name,
+.font-load-1 .footer .footer-name,
+.footer .footer-links,
+.font-load-1 .footer .footer-links {
+  line-height: 2.2em;
 }
 
 .subtitle,
@@ -1136,8 +1143,8 @@ a {
 .title a,
 a.footnote-return,
 figcaption a,
-.footer a:hover,
-.footer a:focus {
+.footer-links a:hover,
+.footer-links a:focus {
   text-decoration-line: underline;
 }
 
@@ -1532,7 +1539,7 @@ h6 {
 .mlt-link,
 .list-item,
 .series a,
-.footer a {
+.footer-links a {
   text-decoration: none;
 }
 
@@ -1639,6 +1646,11 @@ figure,
   line-height: 0;
   padding: 0;
   margin: 0 .4em .4em 0;
+}
+
+.footer .tags > li,
+.font-load-1 .footer .tags > li {
+  margin-bottom: 0;
 }
 
 .badges-container {
@@ -1824,9 +1836,7 @@ figure,
   .table > .list-meta > a,
   .title a,
   a.footnote-return,
-  figcaption a,
-  .footer a:hover,
-  .footer a:focus {
+  figcaption a {
     text-decoration-color: #8f89ab;
   }
 
@@ -1910,7 +1920,7 @@ figure,
   figcaption h6,
   figcaption h6 a,
   .footer,
-  .footer a {
+  .footer-links a {
     color: #6b677d;
     text-decoration-color: #9794a4;
   }
@@ -2048,9 +2058,7 @@ figure,
   .table > .list-meta > a,
   .title a,
   a.footnote-return,
-  figcaption a,
-  .footer a:hover,
-  .footer a:focus {
+  figcaption a {
     text-decoration-color: #18191c;
   }
 
@@ -2134,7 +2142,7 @@ figure,
   figcaption h6,
   figcaption h6 a,
   .footer,
-  .footer a {
+  .footer-links a {
     color: #7d798e;
     text-decoration-color: #4d495e;
   }
@@ -2533,7 +2541,7 @@ pre > code {
     font-size: .72em;
   }
 
-  .footer > .table li {
+  .footer .table > li {
     padding: 0 0 .625em;
   }
 
@@ -2797,6 +2805,13 @@ pre > code {
     border-radius: 5px;
     margin-bottom: .2em;
   }
+
+  .footer .footer-name,
+  .font-load-1 .footer .footer-name,
+  .footer .footer-links,
+  .font-load-1 .footer .footer-links {
+    line-height: 2em;
+  }
 }
 
 /* STAGE 1 FONTS */
@@ -2907,7 +2922,7 @@ pre > code {
   display: none;
 }
 </style>
-{{ $v := "9" }}
+{{ $v := "10" }}
 <link rel="stylesheet" href="/css/defer.css?v={{ $v }}">
 <link rel="stylesheet" href="/css/defer-min-width-1100.css?v={{ $v }}">
 <link rel="stylesheet" href="/css/defer-max-width-1099.css?v={{ $v }}">

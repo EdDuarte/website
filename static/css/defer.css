@@ -76,9 +76,9 @@ p {
   .table > .list-meta > a,
   a.footnote-return,
   footer,
-  footer a,
-  footer a:hover,
-  footer a:focus {
+  .footer-links a,
+  .footer-links a:hover,
+  .footer-links a:focus {
     background-image: none;
   }
 
@@ -95,8 +95,8 @@ p {
   .bio a,
   .table > .list-meta > a,
   a.footnote-return,
-  footer a:hover,
-  footer a:focus {
+  .footer-links a:hover,
+  .footer-links a:focus {
     text-decoration-line: underline !important;
   }
 
@@ -530,9 +530,9 @@ feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0
   .table > .list-meta > a,
   .title a,
   a,
-  footer a,
-  footer a:hover,
-  footer a:focus,
+  .footer-links a,
+  .footer-links a:hover,
+  .footer-links a:focus,
   h1 a,
   h2 a,
   h3 a,
