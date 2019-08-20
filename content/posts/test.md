@@ -105,6 +105,19 @@ _ff fi fl ffi ffl fk fh ft_
   </div>
 </details>
 
+# Tables
+
+This is a table right here:
+
+| CEP    | Throughput | System Latency | CPU | Memory  |
+|--------|------------|----------------|-----|---------|
+| Esper  | 8 event/s  | 1 ms           | 4%  | 27 MB   |
+| WSO2   | 8 event/s  | 0.9 ms         | 5%  | 29.6 MB |
+| Spark  | 9 event/s  | 1 ms           | 2%  | 33.9 MB |
+| Flink  | 8 event/s  | 1 ms           | 4%  | 30 MB   |
+| Ignite | 8 event/s  | 0.9 ms         | 4%  | 24 MB   |
+
+I hope you like it!
 
 # Images
 

@@ -251,6 +251,8 @@ ul {
   font-family: Lato, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
 }
 
+table td,
+table th,
 .prologue,
 blockquote p,
 dfn,
@@ -270,6 +272,8 @@ strong em {
   font-style: italic;
 }
 
+.font-load-1 table td,
+.font-load-1 table th,
 .font-load-1 .prologue,
 .font-load-1 blockquote p,
 .font-load-1 dfn,
@@ -287,11 +291,13 @@ strong em {
   font-style: normal;
 }
 
+.font-load-2 table th,
 .font-load-2 b,
 .font-load-2 p strong,
 .font-load-2 ul strong,
 .font-load-2 ol strong {
   font-family: Spectral-Bold, Spectral, "Times New Roman", Times, serif;
+  font-style: normal;
   letter-spacing: -.05em;
 }
 
@@ -313,6 +319,7 @@ strong em {
 .tags .badge,
 .tags .label,
 .series-label,
+table th,
 h1,
 h2,
 h3,
@@ -327,6 +334,7 @@ strong em {
 }
 
 @-moz-document url-prefix() {
+  /* on firefox, some bolder text is rendered as TOO bold */
   .font-load-1 .title,
   .font-load-1 .subtitle,
   .font-load-1 footer > ul > li,
@@ -444,8 +452,9 @@ ul {
 
 p,
 figure,
-.highlight {
-  margin-top: .55em;
+.highlight,
+table {
+  margin-top: .65em;
   margin-bottom: 0;
 }
 
@@ -465,8 +474,9 @@ figure,
 
 .font-load-1 p,
 .font-load-1 figure,
-.font-load-1 .highlight {
-  margin-top: .6em;
+.font-load-1 .highlight,
+.font-load-1 table {
+  margin-top: .7em;
 }
 
 .font-load-1 p,
@@ -720,6 +730,7 @@ h1 {
   margin-bottom: -.1em;
 }
 
+table + h1,
 .sidenote-container + h1,
 .highlight + h1,
 noscript + h1,
@@ -732,6 +743,7 @@ ul + h1 {
   padding-top: .2em;
 }
 
+.font-load-1 table + h1,
 .font-load-1 .sidenote-container + h1,
 .font-load-1 .highlight + h1,
 .font-load-1 noscript + h1,
@@ -744,6 +756,7 @@ ul + h1 {
   padding-top: .2em;
 }
 
+.font-load-1 table + h2,
 .font-load-1 .sidenote-container + h2,
 .font-load-1 .highlight + h2,
 .font-load-1 noscript + h2,
@@ -772,6 +785,7 @@ h2 {
   margin-bottom: -.15em;
 }
 
+table + h2,
 .sidenote-container + h2,
 .highlight + h2,
 noscript + h2,
@@ -802,6 +816,7 @@ h3 {
   font-size: 1.516em;
 }
 
+table + h3,
 .sidenote-container + h3,
 .highlight + h3,
 noscript + h3,
@@ -813,6 +828,7 @@ p + h3 {
   padding-top: .2em;
 }
 
+.font-load-1 table + h3,
 .font-load-1 .sidenote-container + h3,
 .font-load-1 .highlight + h3,
 .font-load-1 noscript + h3,
@@ -834,6 +850,7 @@ h4 {
   letter-spacing: -.024rem;
 }
 
+table + h4,
 .sidenote-container + h4,
 .highlight + h4,
 noscript + h4,
@@ -845,6 +862,7 @@ p + h4 {
   padding-top: .2em;
 }
 
+.font-load-1 table + h4,
 .font-load-1 .sidenote-container + h4,
 .font-load-1 .highlight + h4,
 .font-load-1 noscript + h4,
@@ -874,6 +892,7 @@ h5 {
   letter-spacing: -.01em;
 }
 
+table + h5,
 .sidenote-container + h5,
 .highlight + h5,
 noscript + h5,
@@ -885,6 +904,7 @@ p + h5 {
   padding-top: .2em;
 }
 
+.font-load-1 table + h5,
 .font-load-1 .sidenote-container + h5,
 .font-load-1 .highlight + h5,
 .font-load-1 noscript + h5,
@@ -910,6 +930,7 @@ h6,
   margin-bottom: -.35em;
 }
 
+table + h6,
 .sidenote-container + h6,
 .highlight + h6,
 noscript + h6,
@@ -921,6 +942,7 @@ p + h6 {
   padding-top: .2em;
 }
 
+.font-load-1 table + h6,
 .font-load-1 .sidenote-container + h6,
 .font-load-1 .highlight + h6,
 .font-load-1 noscript + h6,
@@ -1700,6 +1722,25 @@ figure,
   line-height: 1.6em;
 }
 
+td,
+th {
+  font-size: .9em;
+  padding: .4em;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+}
+
+/*
+th:not(:first-child),
+td:not(:first-child) {
+  text-align: center;
+}
+*/
+
 @media screen {
   .font-load-2 .home-link,
   .font-load-2 .subtitle,
@@ -1950,6 +1991,15 @@ figure,
   .line {
     color: #9794a4;
   }
+
+  table thead th {
+    border-bottom: 2px solid #d8d6e1;
+  }
+
+  th:first-child,
+  td:first-child {
+    border-right: 2px solid #d8d6e1;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2174,6 +2224,15 @@ figure,
   .bio a,
   .section-name {
     color: #ebeaf1;
+  }
+
+  table thead th {
+    border-bottom-color: #201e29;
+  }
+
+  th:first-child,
+  td:first-child {
+    border-right-color: #201e29;
   }
 }
 

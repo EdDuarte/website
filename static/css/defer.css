@@ -186,25 +186,6 @@ p {
   height: 18px;
 }
 
-table {
-  border-bottom: 1px solid rgba(14, 17, 21, .15);
-  border-top: 1px solid rgba(14, 17, 21, .15);
-  margin: auto;
-}
-
-table thead th {
-  border-bottom: 1px solid rgba(14, 17, 21, .9);
-}
-
-td,
-th {
-  padding: .4em;
-}
-
-tr:nth-child(even) {
-  background: rgba(14, 17, 21, .9);
-}
-
 .mjx-math {
   font-size: .9em;
 }

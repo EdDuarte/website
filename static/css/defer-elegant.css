@@ -123,6 +123,10 @@ a.badge-other:focus {
 /* @media not (prefers-color-scheme: light) { */
 @media all {
 
+  tbody tr:nth-child(odd) {
+    background-color: #ebeaf1;
+  }
+
   .series a:hover .card-item-desc,
   .series a:focus .card-item-desc {
     background-color: #f6f8fa;
@@ -179,6 +183,10 @@ a.badge-other:focus {
 }
 
 @media (prefers-color-scheme: dark) {
+
+  tbody tr:nth-child(odd) {
+    background-color: #0f0e15;
+  }
 
   .series a:hover .card-item-desc,
   .series a:focus .card-item-desc {

@@ -235,7 +235,7 @@
         {{ if .Params.updates }}
           {{ range .Params.updates }}
             <div class="mlt article-callout">
-              <h4 class="mlt-header">UPDATE - {{ dateFormat "Jan 2, 2006" .date }}</h4>
+              <h5 class="mlt-header">UPDATE - {{ dateFormat "Jan 2, 2006" .date }}</h5>
               <p class="list-title">
                 {{ .text | markdownify }}
               </p>
