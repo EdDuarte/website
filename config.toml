@@ -13,6 +13,9 @@ pygmentsUseClassic=true
 PygmentsCodeFences = true
 PygmentsStyle = "solarizeddark"
 
+[Params]
+cacheBuster = "10"
+
 [author]
 name = "Ed Duarte"
 email = "hi@edduarte.com"
