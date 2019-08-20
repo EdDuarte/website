@@ -1,4 +1,4 @@
-var v = "10";
+var v = {{ $.Site.Params.cachebuster }};
 var SIMPLE_MODE_KEY = "simpleModeActive";
 var ELEGANT_MODE_CLASS_NAME = "elegant";
 var TOOLTIP_ELEGANT = "Switch to elegant theme";

@@ -2922,7 +2922,7 @@ pre > code {
   display: none;
 }
 </style>
-{{ $v := "10" }}
+{{ $v := $.Site.Params.cachebuster }}
 <link rel="stylesheet" href="/css/defer.css?v={{ $v }}">
 <link rel="stylesheet" href="/css/defer-min-width-1100.css?v={{ $v }}">
 <link rel="stylesheet" href="/css/defer-max-width-1099.css?v={{ $v }}">
@@ -2989,5 +2989,7 @@ if (sessionStorage.fontsLoaded1 && sessionStorage.fontsLoaded2) {
   });
 }
 </script>
-<script defer src="/js/defer.js?v={{ $v }}"></script>
+{{ $js := resources.Get "js/defer.js" }}
+{{ $jsProc:= $js | resources.ExecuteAsTemplate "/js/defer.js" . }}
+<script defer src="{{ $jsProc.Permalink }}?v={{ $v }}"></script>
 <script defer src="https://www.google-analytics.com/analytics.js"></script>
