@@ -12,8 +12,12 @@
   </div>
 </header>
 
+{{ $thisSection := .Data.Term | string }}
+
 <div class="article-container">
-  <div class="title">{{ .Title }}</div>
+  <div class="list-title">
+    <h1 class="badge badge-type badge-{{ $thisSection }}">{{ .Title }}</h1>
+  </div>
 
   {{ with .Content }}
     <div class="header-meta">
@@ -29,7 +33,6 @@
     <main>
 
       {{ $this := . }}
-      {{ $thisSection := .Data.Term | string }}
 
       {{ $subsections := .Site.Taxonomies.subsections }}
       {{ $subSectionListKey := "thisSubSections" }}
