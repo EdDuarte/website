@@ -27,6 +27,8 @@ papers:
 slides:
   - name: Speaker Deck
     url: https://speakerdeck.com/duarte/secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens
+  - name: as PDF
+    url: /posts/protbox/slides.pdf
 links:
   - name: Download app
     icon: external-link
