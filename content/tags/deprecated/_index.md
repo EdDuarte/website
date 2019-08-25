@@ -1,6 +1,7 @@
 ---
 title: "Deprecated"
-description: "Outdated notes or projects that are no longer relevant"
+description: "Outdated notes, broken links or projects that are no longer
+relevant"
 ---
 
-Outdated notes or projects that are no longer relevant.
+Outdated notes, broken links or projects that are no longer relevant.

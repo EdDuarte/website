@@ -28,7 +28,15 @@
           <ul class="links tags list-meta-tags">
             {{ range $tagList }}
               {{ $t := index $tags . }}
-              <li><a href="{{ $t.Page.Permalink }}" class="badge badge-tag badge-{{ . }}">{{ . }}</a></li>
+              <li>
+                <a href="{{ $t.Page.Permalink }}" class="badge badge-tag badge-{{ . }}">
+                  {{ if eq . "deprecated"}}
+                    {{ $c.Params.deprecatedText }}
+                  {{ else }}
+                    {{ . }}
+                  {{ end }}
+                </a>
+              </li>
             {{ end }}
           </ul>
         {{ end }}

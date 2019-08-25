@@ -23,6 +23,7 @@ mirrors:
     url:
         "https://medium.com/@EdDuarte/c4d3d399046d"
 types:
+  - project
   - notes
 series:
   - open-source
