@@ -96,7 +96,12 @@ a.badge-other:focus {
   color: #ebeaf1;
 }
 
-.badge-type {
+.badge-type,
+.list-title h1.badge-project,
+.list-title h1.badge-publication,
+.list-title h1.badge-talk,
+.list-title h1.badge-notes,
+.list-title h1.badge-other {
   text-shadow: 0 0 rgba(0, 0, 0, 0);
 }
 

@@ -45,5 +45,6 @@ The Travis group with a Ubiwhere representative. Photo taken during the award
 ceremony.
 {{</ figure >}}
 
-Under this incubation period, Travis became [Thumbeo](https://www.thumbeo.com/),
-changing its scope from taxis to rides that could be posted by anyone.
+Under this incubation period, Travis became
+[Thumbeo](http://www.thumbeo.com/en/), changing its scope from taxis to rides
+that could be posted by anyone.
