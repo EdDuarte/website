@@ -6,9 +6,8 @@ subtitles:
   Information, Design and Interaction"
   talk: "HCI International 2016, July 17-22, The Westin Harbour Castle Hotel,
   Toronto, Canada"
-description: "Open-source WebGL app for tri-dimensional worldwide data
-visualization, with customizable data-to-visual mapping and filtering with
-adjustable scales."
+description: "WebGL app for tri-dimensional worldwide data visualization, with
+customizable data-to-visual mapping and filtering with adjustable scales."
 keywords: [visualization, infovis, interactive, human computer interaction,
 usability, spatial, demographic data, demography, tri-dimensional, 3d, WebGL]
 lang: [JavaScript]

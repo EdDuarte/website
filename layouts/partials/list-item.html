@@ -30,7 +30,7 @@
               {{ $t := index $tags . }}
               <li>
                 <a href="{{ $t.Page.Permalink }}" class="badge badge-tag badge-{{ . }}">
-                  {{ if eq . "deprecated"}}
+                  {{ if and (eq . "deprecated") ($c.Params.deprecatedText) }}
                     {{ $c.Params.deprecatedText }}
                   {{ else }}
                     {{ . }}

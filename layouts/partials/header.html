@@ -1628,7 +1628,7 @@ figure,
 }
 
 .deprecated {
-  opacity: .6;
+  opacity: .7;
 }
 
 .article-callout {
@@ -1719,6 +1719,11 @@ figure,
 .tech-labels,
 .font-load-1 .tech-labels {
   line-height: 1.6em;
+}
+
+.tech-labels > li,
+.font-load-1 .tech-labels > li {
+  margin-right: .35em;
 }
 
 td,
@@ -1979,12 +1984,16 @@ td:not(:first-child) {
     background-color: #e0dfe3;
   }
 
-  .list-title {
-    text-shadow: 1px 1px rgba(255, 255, 255, .6);
+  .list-title h1 {
+    text-shadow: 2px 2px rgba(255, 255, 255, .3);
+  }
+
+  h5.list-title {
+    text-shadow: 1px 1px rgba(255, 255, 255, .7);
   }
 
   .badge {
-    text-shadow: 1px 1px rgba(220, 220, 220, 0.6);
+    text-shadow: 1px 1px rgba(255, 255, 255, .4);
   }
 
   .line {
@@ -2210,8 +2219,12 @@ td:not(:first-child) {
     background-color: #1a1726;
   }
 
-  .badge,
-  .list-title {
+  .list-title h1 {
+    text-shadow: 2px 2px rgba(0, 0, 0, .4);
+  }
+
+  h5.list-title,
+  .badge {
     text-shadow: 1px 1px rgba(0, 0, 0, .6);
   }
 
