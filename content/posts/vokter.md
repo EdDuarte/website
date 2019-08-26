@@ -9,7 +9,8 @@ hashing, LSH, locality sensitive hashing, NNS, nearest neighbor search, NLP,
 natural language processing, information retrieval, information extraction,
 text mining, text analytics]
 lang: [Java]
-tech: [Dropwizard, Quartz Scheduler, Cassandra, Redis, Hazelcast]
+tech: [Dropwizard, Quartz Scheduler]
+db: [Cassandra, Redis, Hazelcast]
 slug: "vokter"
 date: "2016-06-19 16:39:17+01:00"
 externalLink: "https://github.com/vokter/vokter"

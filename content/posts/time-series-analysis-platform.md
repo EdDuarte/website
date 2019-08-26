@@ -18,7 +18,8 @@ JSON Web Token, jjwt, Spring Security, RabbitMQ, AssertJ, Micrometer, Ant
 Design, Axios, Dygraphs, React, ReactJS, Redux, TypeScript, Mocha, Webpack,
 LESS, PostCSS, Puppeteer]
 lang: [Java, TypeScript]
-tech: [Spring Boot 2, ReactJS, Redux, PostgreSQL, InfluxDB, Redis]
+tech: [Spring Boot 2, ReactJS, Redux]
+db: [PostgreSQL, InfluxDB, Redis]
 parents:
   - master-thesis
 authors:
