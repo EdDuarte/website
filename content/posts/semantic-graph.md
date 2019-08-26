@@ -12,7 +12,7 @@ slug: "semantic-graph"
 date: "2015-06-30 12:24:56+01:00"
 externalLink: "https://github.com/edduarte/semantic-graph"
 weight: -1
-types: [project]
+sections: [project]
 subsections: [full-stack]
-series: [open-source]
+collections: [open-source]
 ---

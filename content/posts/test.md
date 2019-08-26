@@ -27,7 +27,7 @@ knowledge:
   - JavaScript
   - CSS
 draft: true
-types: [notes]
+sections: [notes]
 ---
 
 # Heading 1

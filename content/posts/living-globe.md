@@ -44,9 +44,9 @@ links:
   - name: Fork me on GitHub
     icon: github
     url: https://github.com/edduarte/living-globe
-types: [project, publication, talk]
+sections: [project, publication, talk]
 subsections: [conference-paper]
-series: [open-source]
+collections: [open-source]
 ---
 
 Living Globe is a WebGL application for tri-dimensional worldwide data

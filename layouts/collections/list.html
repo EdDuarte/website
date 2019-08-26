@@ -13,7 +13,7 @@
 </header>
 
 <div class="article-container">
-  <h5 class="series-header mlt-header">Collection</h5>
+  <h5 class="collections-header mlt-header">Collection</h5>
   <div class="title">{{ .Title }}</div>
 
   {{ with .Content }}
@@ -31,8 +31,8 @@
       <div class="top-padding"></div>
 
       <ul class="list">
-        {{ $seriesKey := .Page.Data.Term }}
-        {{ range (.Data.Pages.ByDate.Reverse).ByParam $seriesKey }}
+        {{ $collectionKey := .Page.Data.Term }}
+        {{ range (.Data.Pages.ByDate.Reverse).ByParam $collectionKey }}
           {{ if not .Params.hidden }}
             <li>
               {{ partial "list-item.html" (dict "context" . "renderSubtitle" "true" "renderTechLabels" "true") }}

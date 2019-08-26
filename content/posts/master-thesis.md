@@ -15,6 +15,6 @@ authors:
     url: https://www.edduarte.com
   - name: Diogo Gomes
     url: https://diogogomes.com/
-types: [publication]
+sections: [publication]
 subsections: [book]
 ---

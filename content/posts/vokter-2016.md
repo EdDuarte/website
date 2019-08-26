@@ -21,9 +21,9 @@ date: "2016-06-19 19:21:50+01:00"
 mirrors:
   - name: Medium
     url: "https://medium.com/@EdDuarte/c4d3d399046d"
-types: [project, notes]
+sections: [project, notes]
 subsections: [data-mining]
-series: [open-source]
+collections: [open-source]
 prologue: "This post outlines the architectural choices behind Vokter, an
 open-source document store in Java that I've been developing since
 October 2014. This does **not** address other projects under the 'Vokter'

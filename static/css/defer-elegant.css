@@ -109,7 +109,7 @@ a.badge-other:focus {
   opacity: .77;
 }
 
-.badge-type,
+.badge-section,
 .list-title h1.badge-project,
 .list-title h1.badge-publication,
 .list-title h1.badge-talk,
@@ -145,8 +145,8 @@ a.badge-other:focus {
     background-color: #ebeaf1;
   }
 
-  .series a:hover .card-item-desc,
-  .series a:focus .card-item-desc {
+  .collections a:hover .card-item-desc,
+  .collections a:focus .card-item-desc {
     background-color: #f6f8fa;
   }
 
@@ -206,8 +206,8 @@ a.badge-other:focus {
     background-color: #0f0e15;
   }
 
-  .series a:hover .card-item-desc,
-  .series a:focus .card-item-desc {
+  .collections a:hover .card-item-desc,
+  .collections a:focus .card-item-desc {
     background-color: #14121a;
   }
 

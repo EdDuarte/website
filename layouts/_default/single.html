@@ -17,11 +17,11 @@
   </div>
 </header>
 
-{{ $types := .Site.Taxonomies.types }}
-{{ $typeList := .Params.types }}
+{{ $sections := .Site.Taxonomies.sections }}
+{{ $postSectionNames := .Params.sections }}
 {{ $tags := .Site.Taxonomies.tags }}
-{{ $tagList := .Params.tags }}
-{{ $hasDeprecatedTag := in $tagList "deprecated" }}
+{{ $postTagNames := .Params.tags }}
+{{ $hasDeprecatedTag := in $postTagNames "deprecated" }}
 
 <main class="main-container article-container">
   <article>
@@ -51,12 +51,12 @@
     <div class="article-table">
       <aside class="aside-article">
 
-        {{ if $typeList }}
+        {{ if $postSectionNames }}
           <section class="badges-container">
             <ul class="links tags article-tags">
-              {{ range .Params.types }}
-                {{ $t := index $types . }}
-                <li><a href="{{ $t.Page.Permalink }}" class="badge badge-type badge-{{ . }}">{{ . }}</a></li>
+              {{ range .Params.sections }}
+                {{ $t := index $sections . }}
+                <li><a href="{{ $t.Page.Permalink }}" class="badge badge-section badge-{{ . }}">{{ . }}</a></li>
               {{ end }}
             </ul>
             <ul class="links tags article-tags">
@@ -68,7 +68,7 @@
           </section>
         {{ end }}
 
-        {{ if $tagList }}
+        {{ if $postTagNames }}
           <section>
             <ul class="links tags">
             </ul>
@@ -272,11 +272,11 @@
   </article>
 
   {{ $this := . }}
-  {{ $series := .Site.Taxonomies.series }}
-  {{ $seriesList := .Params.series }}
+  {{ $collections := .Site.Taxonomies.collections }}
+  {{ $postCollectionNames := .Params.collections }}
 
-  {{ partial "mlt.html" (dict "context" . "list" $seriesList "all" $series "suffix" "series") }}
-  {{ partial "mlt.html" (dict "context" . "list" $typeList "all" $types "suffix" "section") }}
+  {{ partial "mlt.html" (dict "context" . "list" $postCollectionNames "all" $collections "suffix" "collection") }}
+  {{ partial "mlt.html" (dict "context" . "list" $postSectionNames "all" $sections "suffix" "section") }}
 
 
 </main>
