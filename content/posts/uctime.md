@@ -9,13 +9,9 @@ db: [MySQL]
 slug: "uctime"
 date: "2016-08-27 17:04:01+01:00"
 externalLink: "https://time.uc.pt"
-brokenLink: true
 weight: -1
-tags:
-  - deprecated
-deprecatedText: broken-link
-types:
-  - project
-subsections:
-  - full-stack
+types: [project]
+subsections: [full-stack]
+tags: [deprecated]
+deprecatedText: "broken-link"
 ---

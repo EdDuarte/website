@@ -11,7 +11,7 @@ updates:
 links:
   - name: Demo
     url: /
-date: "2017-09-10 12:24:56+01:00"
+date: "1999-09-10 12:24:56+01:00"
 mirrors:
   - name: dev.to
     url: https://dev.to/
@@ -26,9 +26,8 @@ knowledge:
   - HTML5
   - JavaScript
   - CSS
-types:
-  - notes
 draft: true
+types: [notes]
 ---
 
 # Heading 1

@@ -106,7 +106,7 @@ a.badge-notes:hover,
 a.badge-notes:focus,
 a.badge-other:hover,
 a.badge-other:focus {
-  opacity: .7;
+  opacity: .77;
 }
 
 .badge-type,
@@ -119,23 +119,23 @@ a.badge-other:focus {
 }
 
 .badge-project {
-  background: #51d7f8 linear-gradient(-45deg, #38a2e8 0, #51d7f8 100%) !important;
+  background: #51d7f8 linear-gradient(-45deg, #38a2e8 0, #51d7f8 100%);
 }
 
 .badge-publication {
-  background: #e7a639 linear-gradient(-45deg, #e96234 0, #e7a639 100%) !important;
+  background: #e7a639 linear-gradient(-45deg, #e96234 0, #e7a639 100%);
 }
 
 .badge-talk {
-  background: #73d9c5 linear-gradient(-45deg, #6ac2c1 0, #73d9c5 100%) !important;
+  background: #73d9c5 linear-gradient(-45deg, #6ac2c1 0, #73d9c5 100%);
 }
 
 .badge-notes {
-  background: #f4756f linear-gradient(-45deg, #ef2e87 0, #f4756f 100%) !important;
+  background: #f4756f linear-gradient(-45deg, #ef2e87 0, #f4756f 100%);
 }
 
 .badge-other {
-  background: #b6afb1 linear-gradient(-45deg, #837b7e 0, #b6afb1 100%) !important;
+  background: #b6afb1 linear-gradient(-45deg, #837b7e 0, #b6afb1 100%);
 }
 
 /* @media not (prefers-color-scheme: light) { */

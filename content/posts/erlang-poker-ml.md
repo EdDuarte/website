@@ -18,13 +18,9 @@ links:
   - name: Fork me on GitHub
     icon: github
     url: https://github.com/edduarte/erlang-poker-ml
-types:
-  - project
-  - notes
-series:
-  - open-source
-subsections:
-  - data-mining
+types: [project, notes]
+subsections: [data-mining]
+series: [open-source]
 ---
 
 For a University class project we were asked to implement a decision-tree
