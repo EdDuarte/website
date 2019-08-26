@@ -14,7 +14,7 @@ PygmentsCodeFences = true
 PygmentsStyle = "solarizeddark"
 
 [Params]
-cacheBuster = "13"
+cacheBuster = "14"
 
 [author]
 name = "Ed Duarte"
@@ -40,16 +40,16 @@ isPlainText = true
 notAlternative = true
 
 [taxonomies]
-  tag = "tags"
-  type = "types"
-  series = "series"
+  collection = "collections"
+  section = "sections"
   subsection = "subsections"
+  tag = "tags"
 
 [permalinks]
-  tags = "/:slug/"
-  types = "/:slug/"
-  series = "/:slug/"
   posts = "/:slug/"
+  collections = "/:slug/"
+  sections = "/:slug/"
+  tags = "/:slug/"
 
 [related]
 includeNewer = true

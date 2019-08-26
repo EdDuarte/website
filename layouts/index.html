@@ -5,7 +5,7 @@
 
 <body>
 
-{{ $types := .Site.Taxonomies.types }}
+{{ $sections := .Site.Taxonomies.sections }}
 
 <div class="blob-container">
   <div class="blob blob-home-top"></div>
@@ -49,9 +49,9 @@
   </div>
   <section class="tags-container fade-in">
     <ul class="links tags">
-      {{ range sort $types "Page.Params.weight" "desc" }}
+      {{ range sort $sections "Page.Params.weight" "desc" }}
         <li>
-          <a href="{{ .Page.Permalink }}" class="badge badge-type badge-{{ .Page.Data.Term }}">
+          <a href="{{ .Page.Permalink }}" class="badge badge-section badge-{{ .Page.Data.Term }}">
             {{ lower .Page.Title }}
           </a>
         </li>
@@ -70,11 +70,11 @@
     <aside class="aside-home">
 
       <div class="sticky">
-        <section class="card card-series">
+        <section class="card card-collections">
           <div class="card-title">Collections</div>
           <hr>
-          <ul class="series">
-            {{ range $i, $e := (sort .Site.Taxonomies.series ".Page.Params.weight" "desc") }}
+          <ul class="collections">
+            {{ range $i, $e := (sort .Site.Taxonomies.collections ".Page.Params.weight" "desc") }}
               {{ if $i }}
                 <li>
                   <hr>
@@ -84,7 +84,7 @@
                 <a href="{{ .Page.Permalink }}">
                   <div class="card-item-desc">
                     {{ if .Page.Params.popular }}
-                      <span class="series-label">Popular</span>
+                      <span class="collections-label">Popular</span>
                     {{ end }}
                     <span class="card-item-title">{{ .Page.Title }}</span>
                   </div>
@@ -94,8 +94,8 @@
           </ul>
           <!--
           <div class="card-item-metadata">
-            <a href="/series">
-              More series »
+            <a href="/collections">
+              More collections »
             </a>
           </div>
           -->

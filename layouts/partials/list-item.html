@@ -1,9 +1,9 @@
 
 {{ $c := .context }}
-{{ $types := $c.Site.Taxonomies.types }}
+{{ $sections := $c.Site.Taxonomies.sections }}
 {{ $tags := $c.Site.Taxonomies.tags }}
-{{ $tagList := $c.Params.tags }}
-{{ $hasDeprecatedTag := in $tagList "deprecated" }}
+{{ $itemTagNames := $c.Params.tags }}
+{{ $hasDeprecatedTag := in $itemTagNames "deprecated" }}
 {{ $parentSection := .parentSection }}
 
 <div>
@@ -13,20 +13,20 @@
         {{ $c.Date.Format "Jan 02, 2006" }}
       </time>
       <div class="col2">
-        {{ $typeList := $c.Params.types }}
-        {{ if $typeList }}
+        {{ $itemSectionNames := $c.Params.sections }}
+        {{ if $itemSectionNames }}
           <ul class="links tags list-meta-tags">
-            {{ range $typeList }}
-              {{ $t := index $types . }}
-              <li><a href="{{ $t.Page.Permalink }}" class="badge badge-type badge-{{ . }}">{{ . }}</a></li>
+            {{ range $itemSectionNames }}
+              {{ $t := index $sections . }}
+              <li><a href="{{ $t.Page.Permalink }}" class="badge badge-section badge-{{ . }}">{{ . }}</a></li>
             {{ end }}
           </ul>
         {{ end }}
       </div>
       <div class="col3">
-        {{ if $tagList }}
+        {{ if $itemTagNames }}
           <ul class="links tags list-meta-tags">
-            {{ range $tagList }}
+            {{ range $itemTagNames }}
               {{ $t := index $tags . }}
               <li>
                 <a href="{{ $t.Page.Permalink }}" class="badge badge-tag badge-{{ . }}">

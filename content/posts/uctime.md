@@ -10,7 +10,7 @@ slug: "uctime"
 date: "2016-08-27 17:04:01+01:00"
 externalLink: "https://time.uc.pt"
 weight: -1
-types: [project]
+sections: [project]
 subsections: [full-stack]
 tags: [deprecated]
 deprecatedText: "broken-link"

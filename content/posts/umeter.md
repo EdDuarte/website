@@ -9,6 +9,6 @@ slug: "umeter"
 date: "2015-10-07 15:11:13+01:00"
 externalLink: "https://www.ubiwhere.com/en/news-e-articles/1-general/44-umeter-collaborative-platform-for-monitoring-quality-of-service-qos-for-internet-access"
 weight: -1
-types: [project]
+sections: [project]
 subsections: [mobile]
 ---

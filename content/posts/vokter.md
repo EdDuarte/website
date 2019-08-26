@@ -15,8 +15,8 @@ slug: "vokter"
 date: "2016-06-19 16:39:17+01:00"
 externalLink: "https://github.com/vokter/vokter"
 weight: -1
-types: [project]
+sections: [project]
 subsections: [data-mining]
 tags: [work-in-progress]
-series: [open-source]
+collections: [open-source]
 ---
