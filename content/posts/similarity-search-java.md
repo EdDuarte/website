@@ -8,10 +8,7 @@ slug: "similarity-search-java"
 date: "2017-04-19 15:26:00+01:00"
 externalLink: "https://github.com/edduarte/similarity-search-java"
 weight: -1
-types:
-  - project
-series:
-  - open-source
-subsections:
-  - data-mining
+types: [project]
+subsections: [data-mining]
+series: [open-source]
 ---

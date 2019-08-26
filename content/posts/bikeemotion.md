@@ -10,8 +10,6 @@ slug: "bikeemotion"
 date: "2016-05-11 15:11:13+01:00"
 externalLink: "http://www.bikeemotion.com/"
 weight: -1
-types:
-  - project
-subsections:
-  - mobile
+types: [project]
+subsections: [mobile]
 ---

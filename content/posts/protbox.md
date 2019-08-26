@@ -37,14 +37,9 @@ links:
     icon: github
     url: https://github.com/edduarte/protbox
 date: "2014-11-05 11:03:00+01:00"
-types:
-  - project
-  - publication
-  - talk
-subsections:
-  - conference-paper
-series:
-  - open-source
+types: [project, publication, talk]
+subsections: [conference-paper]
+series: [open-source]
 ---
 
 Protbox is an open-source, cross-platform application for securely sharing files

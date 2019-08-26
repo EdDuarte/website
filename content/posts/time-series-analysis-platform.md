@@ -20,8 +20,7 @@ LESS, PostCSS, Puppeteer]
 lang: [Java, TypeScript]
 tech: [Spring Boot 2, ReactJS, Redux]
 db: [PostgreSQL, InfluxDB, Redis]
-parents:
-  - master-thesis
+parents: [master-thesis]
 authors:
   - name: Ed Duarte
     url: https://www.edduarte.com
@@ -40,13 +39,8 @@ slides:
   - name: as PDF
     url: /posts/time-series-platform/DATA2019-21-slides-v10.pdf
 date: "2019-07-28 11:32:00+01:00"
-types:
-  - project
-  - publication
-  - talk
-subsections:
-  - conference-paper
-  - full-stack
+types: [project, publication, talk]
+subsections: [conference-paper, full-stack]
 ---
 
 The recent expansion of metrification on a daily basis has led to the

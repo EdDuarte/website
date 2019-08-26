@@ -8,10 +8,8 @@ keywords: [contest, competition, taxi, map, schedule, scheduling, Uber, NFC,
 payment, rides, ride sharing, ride scheduling, chat, push notification, mobile,
 app, mobile application, Android]
 date: "2014-06-13 15:23:00+01:00"
-types:
-  - other
-subsections:
-  - award
+types: [other]
+subsections: [award]
 ---
 
 The [Mobile Computing Contest](http://concursocomputacaomovel.com/), organised
