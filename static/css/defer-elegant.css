@@ -96,6 +96,19 @@ a.badge-other:focus {
   color: #ebeaf1;
 }
 
+a.badge-project:hover,
+a.badge-project:focus,
+a.badge-publication:hover,
+a.badge-publication:focus,
+a.badge-talk:hover,
+a.badge-talk:focus,
+a.badge-notes:hover,
+a.badge-notes:focus,
+a.badge-other:hover,
+a.badge-other:focus {
+  opacity: .7;
+}
+
 .badge-type,
 .list-title h1.badge-project,
 .list-title h1.badge-publication,
