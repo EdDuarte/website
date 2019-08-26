@@ -7,7 +7,8 @@ hashing, LSH, locality sensitive hashing, NNS, nearest neighbor search, NLP,
 natural language processing, information retrieval, information extraction,
 text mining, text analytics]
 lang: [Java]
-tech: [Jersey, Quartz Scheduler, Cache2k, MongoDB]
+tech: [Jersey, Quartz Scheduler, Cache2k]
+db: [MongoDB]
 parents:
   - vokter
 links:

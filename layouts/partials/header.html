@@ -5,7 +5,7 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{ .Params.description }}">
-{{ $keywords := union .Keywords (union .Params.lang .Params.tech) }}
+{{ $keywords := union .Keywords (union .Params.lang (union .Params.tech .Params.db)) }}
 {{ with $keywords }}
   <meta
       name="keywords"
@@ -1810,7 +1810,12 @@ td:not(:first-child) {
 
   .label-db {
     border: 1px solid #cad1cf;
-    color: #75948b;
+    color: #7e918c;
+  }
+
+  .list-item:hover .label-db,
+  .list-item:focus .label-db {
+    color: #a3aeab;
   }
 
   .badge-type {
@@ -2046,6 +2051,11 @@ td:not(:first-child) {
   .label-db {
     border: 1px solid #2e3533;
     color: #6a7673;
+  }
+
+  .list-item:hover .label-db,
+  .list-item:focus .label-db {
+    color: #4c5654;
   }
 
   .badge-type {

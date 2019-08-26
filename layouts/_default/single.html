@@ -183,7 +183,8 @@
 
         {{ $langList := .Params.lang }}
         {{ $techList := .Params.tech }}
-        {{ if or $langList $techList }}
+        {{ $dbList := .Params.db }}
+        {{ if or (or $langList $techList) $dbList }}
           <section class="metadata-techstack">
             <ul class="links tags tech-labels">
               <li class="mlt-title metadata-techstack-label">Tech stack:</li>
@@ -195,6 +196,11 @@
               {{ if $techList }}
                 {{ range $techList }}
                   <li><span class="label label-tech">{{ . }}</span></li>
+                {{ end }}
+              {{ end }}
+              {{ if $dbList }}
+                {{ range $dbList }}
+                  <li><span class="label label-db">{{ . }}</span></li>
                 {{ end }}
               {{ end }}
             </ul>

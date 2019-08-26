@@ -81,7 +81,8 @@
       {{ if eq .renderTechLabels "true" }}
         {{ $langList := $c.Params.lang }}
         {{ $techList := $c.Params.tech }}
-        {{ if or $langList $techList }}
+        {{ $dbList := $c.Params.db }}
+        {{ if or (or $langList $techList) $dbList }}
           <div class="list-topics">
             <ul class="links tags tech-labels">
               {{ if $langList }}
@@ -92,6 +93,11 @@
               {{ if $techList }}
                 {{ range $techList }}
                   <li><span class="label label-tech">{{ . }}</span></li>
+                {{ end }}
+              {{ end }}
+              {{ if $dbList }}
+                {{ range $dbList }}
+                  <li><span class="label label-db">{{ . }}</span></li>
                 {{ end }}
               {{ end }}
             </ul>

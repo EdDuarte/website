@@ -7,7 +7,8 @@ designers."
 keywords: [rides, ride sharing, ride scheduling, chat, push notification,
 mobile, app, mobile application, Android]
 lang: [Java]
-tech: [Parse Platform, Firebase, Android SDK, Google Maps SDK]
+tech: [Android SDK, Google Maps SDK]
+db: [Parse Platform, Firebase]
 slug: "thumbeo"
 date: "2015-05-08 14:57:00+01:00"
 externalLink: "http://www.thumbeo.com/en/"
