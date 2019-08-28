@@ -1,8 +1,8 @@
 ---
-title: "AETTUA Mobile Computing Contest 2014"
-subtitle: "1st Prize Team"
+title: "AETTUA Mobile Computing Contest 2014 - 1st Prize Team"
 description: "Competition organised by IEEE and AETTUA where groups had to
 design and develop mobile applications."
+image: "posts/aettua-contest/3.jpg"
 keywords: [contest, competition, taxi, map, schedule, scheduling, Uber, NFC,
 payment, rides, ride sharing, ride scheduling, chat, push notification, mobile,
 app, mobile application, Android]

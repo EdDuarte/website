@@ -88,7 +88,7 @@ nocite:
 - "L. O. Batista and C. B. Medeiros, “Supporting the study of correlations between time series via semantic annotations”, 2014."
 - "L. O. Batista and C. B. Medeiros, “Searching time series via semantic annotations”, 2013."
 - "J. Park, D. Nguyen, and R. Sandhu, “A provenance-based access control model”, in 2012 Tenth Annual International Conference on Privacy, Security and Trust, 2012, pp. 137–144. doi: https://doi.org/10.1109/PST.2012. 6297930."
-- "T. Pifferi. (2018). How to efficiently store and query time-series data. Available: https://medium.com/@neslinesli93/efficiently-store-time-series-data-90313ff0ec20."
+- "T. Pifferi. (2018). How to efficiently store and query time-series data. Available: https://medium.com/@neslinesli93/how-to-efficiently-store-and-query-time-series-data-90313ff0ec20."
 - "M. Freedman. (2018). Timescaledb vs. influxdb: Purpose built differently for time-series data. Available: https://blog.timescale.com/timescaledb-vs-influxdb-36489299877."
 - "L. Hampton. (2018). Eye or the tiger: Benchmarking cassandra vs. timescaledb for time-series data. Available: https://blog.timescale.com/timescaledb-vs-cassandra-7c2cc50a89ce."
 - "R. Kiefer. (2017). Timescaledb vs. postgres for time-series: 20x higher inserts, 2000x faster deletes, 1.2x-14,000x faster queries. Available: https://blog.timescale.com/timescaledb-vspostgresql-6a696248104e."
