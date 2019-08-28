@@ -6,6 +6,7 @@ subtitles:
   talk: "Open Identity Summit 2014, November 4-6, Fraunhofer IAO Institute Center, Stuttgart, Germany"
 description: "Open-source & cross-platform app that performs file encryption
 and user authentication on existing cloud storage services."
+hasThumbnail: true
 keywords: [information security, cloud storage, file encryption, authentication,
 eID token, dropbox, onedrive, google drive, sugarsync]
 lang: [Java]

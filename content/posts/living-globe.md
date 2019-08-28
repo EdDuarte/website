@@ -8,11 +8,11 @@ subtitles:
   Toronto, Canada"
 description: "WebGL app for tri-dimensional worldwide data visualization, with
 customizable data-to-visual mapping and filtering with adjustable scales."
+image: "posts/living-globe/screenshot-01.png"
 keywords: [visualization, infovis, interactive, human computer interaction,
 usability, spatial, demographic data, demography, tri-dimensional, 3d, WebGL]
 lang: [JavaScript]
 tech: [Three.js]
-image: "posts/living-globe/screenshot-01.png"
 authors:
   - name: Ed Duarte
     url: https://www.edduarte.com

@@ -26,8 +26,8 @@ knowledge:
   - HTML5
   - JavaScript
   - CSS
-draft: true
 sections: [notes]
+draft: true
 ---
 
 # Heading 1
