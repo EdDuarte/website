@@ -27,9 +27,8 @@
   <article>
     <header>
       <div class="title">{{ .Title }}</div>
-      {{ $subtitle := .Params.subtitle }}
-      {{ if $subtitle }}
-        <div class="subtitle">{{ $subtitle }}</div>
+      {{ with .Params.subtitle }}
+        <div class="subtitle">{{ . }}</div>
       {{ end }}
 
       {{ $authorList := .Params.authors }}
