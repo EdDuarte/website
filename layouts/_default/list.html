@@ -13,6 +13,7 @@
 </header>
 
 {{ $thisSection := .Data.Term | string }}
+{{ $shouldRenderTechLabels := (eq $thisSection "project") | string }}
 
 <div class="article-container">
   <div class="list-title">
@@ -114,7 +115,7 @@
           <ul class="list">
             {{ range (index $pagesBySubSectionMap $v.Page.Data.Term) }}
               <li>
-                {{ partial "list-item.html" (dict "context" . "parentSection" $thisSection "renderSubtitle" "true" "renderTechLabels" "true") }}
+                {{ partial "list-item.html" (dict "context" . "parentSection" $thisSection "renderSubtitle" "true" "renderTechLabels" $shouldRenderTechLabels) }}
               </li>
             {{ end}}
           </ul>
@@ -134,7 +135,7 @@
         <ul class="list">
           {{ range $otherList }}
             <li>
-              {{ partial "list-item.html" (dict "context" . "parentSection" $thisSection "renderSubtitle" "true" "renderTechLabels" "true") }}
+              {{ partial "list-item.html" (dict "context" . "parentSection" $thisSection "renderSubtitle" "true" "renderTechLabels" $shouldRenderTechLabels) }}
             </li>
           {{ end}}
         </ul>
