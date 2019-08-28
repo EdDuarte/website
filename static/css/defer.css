@@ -94,6 +94,9 @@ p {
   .metadata a,
   .bio a,
   .table > .list-meta > a,
+  .footnote-ref a,
+  .footnotes a,
+  .footnotes ol a,
   a.footnote-return,
   .footer-links a:hover,
   .footer-links a:focus {

@@ -262,6 +262,19 @@
             {{ end }}
 
             {{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".)(.*?)(</h[1-9]+>)" "${1}<a class='anchor' href='#${2}'></a> ${3} ${4}" | safeHTML }}
+            {{ $nocite := .Params.nocite }}
+            {{ if $nocite }}
+              {{ if gt (len $nocite) 0 }}
+                <div class="footnotes">
+                  <hr>
+                  <ol>
+                    {{ range $nocite }}
+                      <li>{{ . | markdownify }}</li>
+                    {{ end }}
+                  </ol>
+                </div>
+              {{ end }}
+            {{ end }}
           </section>
         </div>
       </main>

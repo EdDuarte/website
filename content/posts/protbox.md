@@ -40,6 +40,10 @@ date: "2014-11-05 11:03:00+01:00"
 sections: [project, publication, talk]
 subsections: [conference-paper]
 collections: [open-source]
+nocite:
+- "Moritz Borgmann, Tobias Hahn, Michael Herfert, Thomas Kunz, Marcel Richter, Ursula Viebeg, and Sven Vowé. On the Security of Cloud Storage Services. Technical report, Fraunhofer Institute for Secure Information Technology, 2012."
+- "Stephen Geerlings. Measurements for the Paranoid: The Effect of Encrypting Files in Cloud Storage. 2013."
+- "Bernd Zwattendorfer, Bojan Suzic, Peter Teufl, and Andreas Derler. Secure Hardware-Based Public Cloud Storage. Open Identity Summit, 2013."
 ---
 
 Protbox is an open-source, cross-platform application for securely sharing files
@@ -129,10 +133,3 @@ Deck](https://speakerdeck.com/duarte/secure-and-trustworthy-file-sharing-over-cl
 
 {{< sd 18f78dd7b1cf493aaf7b817d76f36383 >}}
 
-{{< footnotes >}}
-{"list":[
-"Moritz Borgmann, Tobias Hahn, Michael Herfert, Thomas Kunz, Marcel Richter, Ursula Viebeg, and Sven Vowé. On the Security of Cloud Storage Services. Technical report, Fraunhofer Institute for Secure Information Technology, 2012.",
-"Stephen Geerlings. Measurements for the Paranoid: The Effect of Encrypting Files in Cloud Storage. 2013.",
-"Bernd Zwattendorfer, Bojan Suzic, Peter Teufl, and Andreas Derler. Secure Hardware-Based Public Cloud Storage. Open Identity Summit, 2013."
-]}
-{{</ footnotes >}}
