@@ -194,7 +194,7 @@ series annotation platform that streamlines the knowledge-discovery workflow.
 
 {{< line >}}
 
-## Dissertation outline
+## Outline
 
 1. **Introduction** overviews the various concepts surrounding time series
 analysis, time series visualization techniques, digital annotations (and how
@@ -232,12 +232,12 @@ quality.
 
 ## Publication
 
-This study was submitted as my thesis for the Master's degree in Software
-Engineering at the [University of Aveiro](https://www.ua.pt), passing with
-distinction with a grade of 19 out of 20, which in the US grading system
-corresponds to A (with A+ being the highest and F being lowest). The full text
-can be read on the [institutional repository of the University of
-Aveiro](https://ria.ua.pt/handle/10773/26170).
+I submitted this study as a dissertation (equivalent to a Master's Thesis in the
+US) for the Master's degree in Software Engineering at the [University of
+Aveiro](https://www.ua.pt), passing with distinction with a grade of 19 out of
+20, which in the US grading system corresponds to A (with A+ being the highest
+and F being lowest). The full text can be read on the [institutional repository
+of the University of Aveiro](https://ria.ua.pt/handle/10773/26170).
 
 To cite this research, you may use the following BibTex record:
 
