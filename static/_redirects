@@ -74,12 +74,16 @@
 /talk                       /talks/
 
 /post/*                     /:splat
-/posts/*                    /:splat
+/posts/*                    /:splat  302!
 /tag/*                      /:splat
-/tags/*                     /:splat
+/tags/*                     /:splat  302!
 /series/*                   /:splat
 /collection/*               /:splat
-/collections/*              /:splat
+/collections/*              /:splat  302!
+/section/*                  /:splat
+/sections/*                 /:splat  302!
+/subsection/*               /:splat
+/subsections/*              /:splat  302!
 /blog/*                     /:splat
 /note/*                     /:splat
 /notes/*                    /:splat

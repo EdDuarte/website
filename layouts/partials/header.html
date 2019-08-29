@@ -195,7 +195,7 @@ pre {
 }
 
 .header-meta p,
-.card-collections,
+.card-aside,
 .footnotes li,
 .home-link,
 .links,
@@ -203,12 +203,14 @@ pre {
 .metadata > ul > li,
 details strong,
 .collections li,
-.sidenote,
 .subtitle,
 .title,
 figcaption,
 figcaption > p,
 figcaption > ul li,
+.sidenote,
+.sidenote > p,
+.sidenote > ul li,
 .footnotes:before,
 .footer > ul > li,
 h1,
@@ -226,7 +228,7 @@ ul {
 }
 
 .font-load-1 .header-meta p,
-.font-load-1 .card-collections,
+.font-load-1 .card-aside,
 .font-load-1 .footnotes li,
 .font-load-1 .home-link,
 .font-load-1 .links,
@@ -234,12 +236,14 @@ ul {
 .font-load-1 .metadata > ul > li,
 .font-load-1 details strong,
 .font-load-1 .collections li,
-.font-load-1 .sidenote,
 .font-load-1 .subtitle,
 .font-load-1 .title,
 .font-load-1 figcaption,
 .font-load-1 figcaption > p,
 .font-load-1 figcaption > ul li,
+.font-load-1 .sidenote,
+.font-load-1 .sidenote > p,
+.font-load-1 .sidenote > ul li,
 .font-load-1 .footnotes:before,
 .font-load-1 .footer > ul > li,
 .font-load-1 h1,
@@ -597,16 +601,19 @@ img.logoicon {
 .metadata > .table,
 .metadata > p,
 .collections li,
-.sidenote,
 figcaption,
 figcaption > p,
-figcaption > ul li {
+figcaption > ul li,
+.sidenote,
+.sidenote > p,
+.sidenote > ul li {
   font-size: .72rem;
   letter-spacing: .035em;
   line-height: 2.2em;
 }
 
-figcaption ul {
+figcaption ul,
+.sidenote ul {
   margin: 0 !important;
   list-style-type: disc;
   list-style-position: outside;
@@ -618,10 +625,12 @@ figcaption ul {
 .font-load-1 .metadata > .table,
 .font-load-1 .metadata > p,
 .font-load-1 .collections li,
-.font-load-1 .sidenote,
 .font-load-1 figcaption,
 .font-load-1 figcaption > p,
-.font-load-1 figcaption > ul li {
+.font-load-1 figcaption > ul li,
+.font-load-1 .sidenote,
+.font-load-1 .sidenote > p,
+.font-load-1 .sidenote > ul li {
   font-size: .8rem;
   letter-spacing: .04em;
   line-height: 1.8em;
@@ -1159,11 +1168,11 @@ a {
 .metadata a,
 .mlt-link:hover > .mlt-title,
 .mlt-link:focus > .mlt-title,
-.sidenote a,
 .table > .list-meta > a,
 .title a,
 a.footnote-return,
 figcaption a,
+.sidenote a,
 .footer-links a:hover,
 .footer-links a:focus {
   text-decoration-line: underline;
@@ -1183,6 +1192,16 @@ figcaption a,
 
 .footnotes:before {
   content: 'References';
+}
+
+.footnotes li {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .list-meta-date {
@@ -1260,7 +1279,7 @@ img.centered:empty {
   left: 50%;
 }
 
-.card-collections,
+.card-aside,
 .card-title {
   display: flex;
   flex-direction: column;
@@ -1429,7 +1448,7 @@ h6 > .anchor:hover {
 .sticky {
   position: sticky;
   top: 0;
-  padding-top: 2em;
+  padding-top: 1em;
 }
 
 .list,
@@ -1595,7 +1614,7 @@ h6 {
   margin-bottom: 2em;
 }
 
-.card-collections {
+.card-aside {
   -webkit-box-pack: justify;
   justify-content: space-between;
   overflow: hidden;
@@ -1603,10 +1622,12 @@ h6 {
   min-width: 300px;
   width: 100%;
   height: auto;
+  margin-top: 1em;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
   border-radius: 8px;
+  border: 2px solid transparent;
 }
 
 .content .prologue + p,
@@ -1881,12 +1902,12 @@ td:not(:first-child) {
   .metadata a,
   .mlt-link:hover > .mlt-title,
   .mlt-link:focus > .mlt-title,
-  .sidenote a,
   .list-header a,
   .table > .list-meta > a,
   .title a,
   a.footnote-return,
-  figcaption a {
+  figcaption a,
+  .sidenote a {
     text-decoration-color: #8f89ab;
   }
 
@@ -1949,8 +1970,6 @@ td:not(:first-child) {
   .mlt-header a,
   .mlt-summary,
   .mlt-title,
-  .sidenote,
-  .sidenote a,
   .list-header,
   .list-header a,
   .social a,
@@ -1969,6 +1988,20 @@ td:not(:first-child) {
   figcaption h5 a,
   figcaption h6,
   figcaption h6 a,
+  .sidenote,
+  .sidenote a,
+  .sidenote h1,
+  .sidenote h1 a,
+  .sidenote h2,
+  .sidenote h2 a,
+  .sidenote h3,
+  .sidenote h3 a,
+  .sidenote h4,
+  .sidenote h4 a,
+  .sidenote h5,
+  .sidenote h5 a,
+  .sidenote h6,
+  .sidenote h6 a,
   .footer,
   .footer-links a {
     color: #6b677d;
@@ -2121,12 +2154,12 @@ td:not(:first-child) {
   .metadata a,
   .mlt-link:hover > .mlt-title,
   .mlt-link:focus > .mlt-title,
-  .sidenote a,
   .list-header a,
   .table > .list-meta > a,
   .title a,
   a.footnote-return,
-  figcaption a {
+  figcaption a,
+  .sidenote a {
     text-decoration-color: #18191c;
   }
 
@@ -2189,8 +2222,6 @@ td:not(:first-child) {
   .mlt-header a,
   .mlt-summary,
   .mlt-title,
-  .sidenote,
-  .sidenote a,
   .list-header,
   .list-header a,
   .social a,
@@ -2209,6 +2240,20 @@ td:not(:first-child) {
   figcaption h5 a,
   figcaption h6,
   figcaption h6 a,
+  .sidenote,
+  .sidenote a,
+  .sidenote h1,
+  .sidenote h1 a,
+  .sidenote h2,
+  .sidenote h2 a,
+  .sidenote h3,
+  .sidenote h3 a,
+  .sidenote h4,
+  .sidenote h4 a,
+  .sidenote h5,
+  .sidenote h5 a,
+  .sidenote h6,
+  .sidenote h6 a,
   .footer,
   .footer-links a {
     color: #7d798e;
@@ -2462,7 +2507,7 @@ pre > code {
     margin-top: 0;
   }
 
-  .card-collections {
+  .card-aside {
     min-width: initial;
   }
 }
