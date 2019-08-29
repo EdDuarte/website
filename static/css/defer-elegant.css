@@ -109,7 +109,11 @@ a.badge-other:focus {
   opacity: .6;
 }
 
-.badge-section,
+.badge-project,
+.badge-publication,
+.badge-talk,
+.badge-notes,
+.badge-other,
 .list-title h1.badge-project,
 .list-title h1.badge-publication,
 .list-title h1.badge-talk,
