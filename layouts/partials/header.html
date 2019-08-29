@@ -1448,7 +1448,22 @@ h6 > .anchor:hover {
 .sticky {
   position: sticky;
   top: 0;
-  padding-top: 1em;
+  padding-top: 0;
+}
+
+.aside-block-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: unset;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aside-block {
+  max-width: 300px;
+  min-width: 300px;
 }
 
 .list,
@@ -1491,11 +1506,11 @@ h6 > .anchor:hover {
 }
 
 .top-padding {
-  margin-top: 5em;
+  margin-top: 2em;
 }
 
 .font-load-1 .top-padding {
-  margin-top: 5.1em;
+  margin-top: 2.1em;
 }
 
 .list > li > .table {
@@ -1618,14 +1633,9 @@ h6 {
   -webkit-box-pack: justify;
   justify-content: space-between;
   overflow: hidden;
-  max-width: 405px;
-  min-width: 300px;
   width: 100%;
   height: auto;
-  margin-top: 1em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0;
+  margin: 1.2em auto 0;
   border-radius: 8px;
   border: 2px solid transparent;
 }
@@ -2502,17 +2512,54 @@ pre > code {
     padding-top: 0;
   }
 
+  .aside-block-container {
+    flex-direction: row;
+    max-width: 650px;
+  }
+
   .main-container header,
   .font-load-1 .home-list-container {
     margin-top: 0;
   }
 
-  .card-aside {
-    min-width: initial;
+  .bio-container {
+    margin-top: 0;
+    margin-bottom: .5em;
+  }
+
+  .section-name,
+  .social,
+  .tags-container {
+    text-align: center;
+  }
+
+  .bio {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
   }
 }
 
 @media screen and (max-width: 784px) {
+
+  .aside-block-container {
+    display: initial;
+  }
+
+  .aside-block {
+    max-width: 560px;
+    min-width: initial;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-aside {
+    margin-top: 1em;
+  }
+
+  .card-collections {
+    max-width: 405px;
+  }
 
   .main-container main .content {
     max-width: initial;
@@ -2522,25 +2569,12 @@ pre > code {
     max-width: initial;
   }
 
-  .bio-container {
-    margin-top: 0;
-    max-width: 580px;
-  }
-
-  .section-name,
-  .social,
-  .tags-container {
-    text-align: center;
-  }
-
   .social {
     margin-top: .7em;
     margin-bottom: .5em;
   }
 
   .bio {
-    margin-left: auto;
-    margin-right: auto;
     max-width: 320px;
   }
 
