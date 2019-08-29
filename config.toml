@@ -14,7 +14,7 @@ PygmentsCodeFences = true
 PygmentsStyle = "solarizeddark"
 
 [Params]
-cacheBuster = "15"
+cacheBuster = "16"
 
 [author]
 name = "Ed Duarte"

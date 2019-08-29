@@ -69,36 +69,46 @@
 
     <aside class="aside-home">
 
-      <div class="sticky">
-        <section class="card card-aside card-collections">
-          <div class="card-title">Collections</div>
-          <hr>
-          <ul class="collections">
-            {{ range $i, $e := (sort .Site.Taxonomies.collections ".Page.Params.weight" "desc") }}
-              {{ if $i }}
+      <div class="sticky aside-block-container">
+        <section class="aside-block">
+          <div class="card card-aside card-collections">
+            <div class="card-title">Collections</div>
+            <hr>
+            <ul class="collections">
+              {{ range $i, $e := (sort .Site.Taxonomies.collections ".Page.Params.weight" "desc") }}
+                {{ if $i }}
+                  <li>
+                    <hr>
+                  </li>
+                {{ end }}
                 <li>
-                  <hr>
+                  <a href="{{ .Page.Permalink }}">
+                    <div class="card-item-desc">
+                      {{ if .Page.Params.popular }}
+                        <span class="collections-label">Popular</span>
+                      {{ end }}
+                      <span class="card-item-title">{{ .Page.Title }}</span>
+                    </div>
+                  </a>
                 </li>
               {{ end }}
-              <li>
-                <a href="{{ .Page.Permalink }}">
-                  <div class="card-item-desc">
-                    {{ if .Page.Params.popular }}
-                      <span class="collections-label">Popular</span>
-                    {{ end }}
-                    <span class="card-item-title">{{ .Page.Title }}</span>
-                  </div>
-                </a>
-              </li>
-            {{ end }}
-          </ul>
-          <!--
-          <div class="card-item-metadata">
-            <a href="/collections">
-              More collections »
-            </a>
+            </ul>
           </div>
-          -->
+        </section>
+        <section class="aside-block">
+          <div class="card-aside">
+            <div class="card-title">Currently</div>
+            <hr>
+            <div class="sidenote">
+              <ul>
+                {{ range .Params.currently }}
+                  <li>
+                    {{ . | markdownify }}
+                  </li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
         </section>
       </div>
 
