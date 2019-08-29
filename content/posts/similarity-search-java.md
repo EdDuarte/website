@@ -9,6 +9,6 @@ date: "2017-04-19 15:26:00+01:00"
 externalLink: "https://github.com/edduarte/similarity-search-java"
 weight: -1
 sections: [project]
-subsections: [data-mining]
-collections: [open-source]
+subsections: [lib]
+collections: [open-source, data-mining]
 ---

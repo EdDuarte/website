@@ -1,10 +1,11 @@
 ---
-title: "Data Mining and Text Analytics"
+title: "Data Mining projects"
 description: "Software projects that use Data Mining methods and techniques"
 weight: 2
-on:
-  - project
 ---
 
 Projects that implement and use Data Clustering, Text Analytics, Information
 Retrieval and Information Extraction methods.
+
+View: [all projects](/projects/) / [open-source](/open-source-projects/) /
+data-mining related

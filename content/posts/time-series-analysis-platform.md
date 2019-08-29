@@ -17,9 +17,9 @@ Boot 2, Spring AOP, JPA, Jackson, Hibernate 5, Hibernate Envers, PostgreSQL,
 InfluxDB, Docker, Docker Swarm, Dropwizard Metrics, Jersey, Redis, JWT, JSON,
 JSON Web Token, jjwt, Spring Security, RabbitMQ, AssertJ, Micrometer, Ant
 Design, Axios, Dygraphs, React, ReactJS, Redux, TypeScript, Mocha, Webpack,
-LESS, PostCSS, Puppeteer]
+LESS, PostCSS, Puppeteer, Spring Boot 2, Spring Boot v2]
 lang: [Java, TypeScript]
-tech: [Spring Boot 2, ReactJS, Redux]
+tech: [Spring Boot, ReactJS, Redux]
 db: [PostgreSQL, InfluxDB, Redis]
 parents: [master-thesis]
 authors:

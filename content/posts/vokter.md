@@ -16,7 +16,7 @@ date: "2016-06-19 16:39:17+01:00"
 externalLink: "https://github.com/vokter/vokter"
 weight: -1
 sections: [project]
-subsections: [data-mining]
+subsections: [lib]
 tags: [work-in-progress]
-collections: [open-source]
+collections: [open-source, data-mining]
 ---

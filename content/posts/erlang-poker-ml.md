@@ -19,8 +19,7 @@ links:
     icon: github
     url: https://github.com/edduarte/erlang-poker-ml
 sections: [project, notes]
-subsections: [data-mining]
-collections: [open-source]
+collections: [open-source, data-mining]
 ---
 
 For a University class project we were asked to implement a decision-tree

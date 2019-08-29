@@ -1,6 +1,6 @@
 ---
-title: "Full-stack web apps"
-weight: 3
+title: "Full-stack"
+weight: 4
 on:
   - project
 ---
