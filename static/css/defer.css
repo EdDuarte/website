@@ -161,7 +161,7 @@ p {
   }
 }
 
-@-moz-document url-prefix() {
+@supports (-moz-appearance:none) {
   .font-load-1 .header-meta a,
   .font-load-1 .mlt-header a {
     background-position: 0 .91em;

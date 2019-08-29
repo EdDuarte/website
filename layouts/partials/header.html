@@ -333,7 +333,7 @@ strong em {
   font-weight: 700;
 }
 
-@-moz-document url-prefix() {
+@supports (-moz-appearance:none) {
   /* on firefox, some bolder text is rendered as TOO bold */
   .font-load-1 .title,
   .font-load-1 .subtitle,
@@ -2778,14 +2778,7 @@ pre > code {
 
   .article-tags,
   .font-load-1 .article-tags {
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 0;
-    margin-before: 0;
-    margin-after: 0;
-    margin-start: 0;
-    margin-end: 0;
+    margin: 0;
   }
 
   .metadata-icon {
@@ -2885,6 +2878,7 @@ pre > code {
     font-size: 1em;
     border-radius: 5px;
     margin-bottom: .2em;
+    text-shadow: 1px 1px rgba(255, 255, 255, .3);
   }
 
   .footer .footer-name,
@@ -2892,6 +2886,12 @@ pre > code {
   .footer .footer-links,
   .font-load-1 .footer .footer-links {
     line-height: 2em;
+  }
+}
+
+@media screen and (max-width: 784px) and (prefers-color-scheme: dark) {
+  .list-title h1 {
+    text-shadow: 1px 1px rgba(0, 0, 0, .4);
   }
 }
 
