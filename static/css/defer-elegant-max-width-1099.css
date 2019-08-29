@@ -15,19 +15,19 @@
   .blob-home-bottom {
     height: 100px;
     left: 50%;
-    top: 630px;
+    top: 690px;
   }
 
   .blob-home-bottom-cut {
     border-top-right-radius: 35% 50px;
     height: 100px;
-    top: 630px;
+    top: 690px;
   }
 
   .blob-home-corner {
     left: -50px;
     width: 150%;
-    height: 630px;
+    height: 690px;
     border-bottom-left-radius: 35% 50px;
   }
 
