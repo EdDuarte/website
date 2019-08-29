@@ -53,7 +53,7 @@
     background-position: 0 1.1em;
   }
 
-  @-moz-document url-prefix() {
+  @supports (-moz-appearance:none) {
     .header-meta a,
     .mlt-header a,
     .font-load-1 .header-meta a,
