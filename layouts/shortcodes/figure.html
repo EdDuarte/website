@@ -15,6 +15,7 @@
       alt='{{ .Get "alt" }}'
       title='{{ .Get "alt" }}'
       {{ with .Get "class" }} class='{{.}}' {{ end }}
+      loading='lazy'
   />
   <figcaption>{{ .Inner | markdownify }}</figcaption>
 </figure>

@@ -9,6 +9,7 @@ description: "High-consistency distributed system and reactive web app that
 allows researchers to annotate time series patterns while preventing data loss
 from overlapping contributions or unsanctioned changes."
 image: "thumbnail/time-series-analysis-platform.png?v=2"
+cachebuster: "v=2"
 keywords: [time series, annotations, annotation systems, collaborative software,
 data analysis, information science, data modeling, knowledge management,
 database management systems, distributed systems, information visualization,
