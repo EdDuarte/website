@@ -26,8 +26,8 @@ links:
     url: https://ria.ua.pt/bitstream/10773/26170/1/documento.pdf
 sections: [publication]
 subsections: [book]
-prologue: "The full text of this thesis is currently under embargo until the
-21st of December 2021, but can still be provided under some circumstances by
+prologue: "The full text of this dissertation is currently under embargo until
+the 21st of December 2021, but can still be provided under some circumstances by
 requesting it [here](https://ria.ua.pt/bitstream/10773/26170/1/documento.pdf)."
 nocite:
 - "S. K. Jensen, T. B. Pedersen, and C. Thomsen, “Time series management systems: A survey”, IEEE Transactions on Knowledge and Data Engineering, vol. 29, no. 11, pp. 2581–2600, 2017, issn: 1041-4347. doi: https://doi.org/10.1109/TKDE.2017.2740932."

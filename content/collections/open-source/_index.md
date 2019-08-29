@@ -7,4 +7,5 @@ weight: 1
 Projects with open source code that I've authored or contributed to, [published
 on GitHub](https://github.com/edduarte).
 
-[View all projects](/projects/)
+View: [all projects](/projects/) / open-source / [data-mining
+related](/data-mining-projects/)
