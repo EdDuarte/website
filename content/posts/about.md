@@ -4,7 +4,7 @@ description: "I'm Ed Duarte, a Full-Stack Software Engineer from Portugal."
 slug: "about"
 hidden: true
 sitemap:
-  Priority: 0.4
+  Priority: 0.9
 ---
 
 Hi! I'm Ed Duarte, a Full-Stack Software Engineer from Portugal with over five

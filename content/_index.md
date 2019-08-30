@@ -15,7 +15,7 @@ currently:
 - Learning golang
 - Self-studying formal methods and reasoning systems
 sitemap:
-  ChangeFreq: monthly
+  ChangeFreq: weekly
   Priority: 1.0
 ---
 

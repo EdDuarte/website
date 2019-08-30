@@ -25,8 +25,6 @@ mirrors:
 sections: [project, notes]
 subsections: [lib]
 collections: [open-source, data-mining]
-sitemap:
-  Priority: 0.7
 prologue: "This post outlines the architectural choices behind Vokter, an
 open-source document store in Java that I've been developing since
 October 2014. This does **not** address other projects under the 'Vokter'
