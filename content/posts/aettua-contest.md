@@ -9,6 +9,8 @@ app, mobile application, Android]
 date: "2014-06-13 15:23:00+01:00"
 sections: [other]
 subsections: [award]
+sitemap:
+  Priority: 0.5
 ---
 
 The [Mobile Computing Contest](http://concursocomputacaomovel.com/), organised

@@ -18,7 +18,7 @@ cacheBuster = "17"
 
 [sitemap]
 changefreq = "yearly"
-priority = 0.5
+priority = 0.8
 
 [author]
 name = "Ed Duarte"

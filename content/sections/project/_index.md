@@ -4,7 +4,7 @@ description: "Software projects and code excerpts"
 weight: 5
 sitemap:
   ChangeFreq: monthly
-  Priority: 0.8
+  Priority: 0.9
 ---
 
 Things that I have developed or contributed to (for work, my own startups,
