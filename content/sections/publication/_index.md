@@ -2,6 +2,8 @@
 title: "Publications"
 description: "Published research and academic profile"
 weight: 4
+sitemap:
+  Priority: 0.7
 ---
 
 Academic profile and indexed publications, also on

@@ -2,6 +2,9 @@
 title: "Projects"
 description: "Software projects and code excerpts"
 weight: 5
+sitemap:
+  ChangeFreq: monthly
+  Priority: 0.8
 ---
 
 Things that I have developed or contributed to (for work, my own startups,
