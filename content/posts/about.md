@@ -3,6 +3,8 @@ title: "About me"
 description: "I'm Ed Duarte, a Full-Stack Software Engineer from Portugal."
 slug: "about"
 hidden: true
+sitemap:
+  Priority: 0.4
 ---
 
 Hi! I'm Ed Duarte, a Full-Stack Software Engineer from Portugal with over five

@@ -14,6 +14,9 @@ currently:
 - Looking for a job! [Talk to me](mailto:hi@edduarte.com)!
 - Learning golang
 - Self-studying formal methods and reasoning systems
+sitemap:
+  ChangeFreq: monthly
+  Priority: 1.0
 ---
 
 Software engineer and researcher. Co-founded two tech startups, published four

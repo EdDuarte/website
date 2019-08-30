@@ -43,6 +43,8 @@ slides:
 date: "2019-07-28 11:32:00+01:00"
 sections: [project, publication, talk]
 subsections: [conference-paper, full-stack]
+sitemap:
+  Priority: 0.9
 nocite:
 - "Abadi, D. (2012). Consistency tradeoffs in modern distributed database system design: Cap is only part of the story. Computer, 45(2):37–42."
 - "Adnan, M., Just, M., and Baillie, L. (2016). Investigating time series visualisations to improve the user experience. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems, CHI ’16, pages 5444–5455, New York, NY, USA. ACM."

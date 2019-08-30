@@ -26,6 +26,8 @@ links:
     url: https://ria.ua.pt/bitstream/10773/26170/1/documento.pdf
 sections: [publication]
 subsections: [book]
+sitemap:
+  Priority: 0.9
 prologue: "The full text of this dissertation is currently under embargo until
 the 21st of December 2021, but can still be provided under some circumstances by
 requesting it [here](https://ria.ua.pt/bitstream/10773/26170/1/documento.pdf)."
