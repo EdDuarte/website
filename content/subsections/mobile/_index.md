@@ -1,6 +1,6 @@
 ---
-title: "Mobile apps"
-weight: 1
+title: "Mobile App"
+weight: 3
 on:
   - project
 ---

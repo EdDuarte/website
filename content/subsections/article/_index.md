@@ -1,5 +1,5 @@
 ---
-title: "Articles"
+title: "Article"
 on:
   - other
 weight: 1

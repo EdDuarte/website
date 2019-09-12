@@ -39,7 +39,7 @@ links:
     url: https://github.com/edduarte/protbox
 date: "2014-11-05 11:03:00+01:00"
 sections: [project, publication, talk]
-subsections: [conference-paper]
+subsections: [conference-paper, desktop]
 collections: [open-source]
 nocite:
 - "Moritz Borgmann, Tobias Hahn, Michael Herfert, Thomas Kunz, Marcel Richter, Ursula Viebeg, and Sven Vowé. On the Security of Cloud Storage Services. Technical report, Fraunhofer Institute for Secure Information Technology, 2012."

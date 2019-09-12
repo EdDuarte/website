@@ -1,5 +1,5 @@
 ---
-title: "Books"
+title: "Book"
 on:
   - publication
 weight: 3

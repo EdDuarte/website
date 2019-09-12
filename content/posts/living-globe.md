@@ -45,7 +45,7 @@ links:
     icon: github
     url: https://github.com/edduarte/living-globe
 sections: [project, publication, talk]
-subsections: [conference-paper]
+subsections: [conference-paper, desktop]
 collections: [open-source]
 nocite:
 - "Dubel, S., Rohlig, M., Schumann, H., Trapp, M.: 2D and 3D Presentation of Spatial Data: A Systematic Review. In Proceedings of 3DVis@IEEEVIS2014: Does 3D really make sense for Data Visualization? pp. 11-18 (2014)"
