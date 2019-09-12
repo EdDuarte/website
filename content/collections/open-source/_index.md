@@ -3,6 +3,7 @@ title: "Open Source projects"
 description: "Software projects with open source code"
 weight: 1
 sitemap:
+  ChangeFreq: monthly
   Priority: 0.9
 ---
 
