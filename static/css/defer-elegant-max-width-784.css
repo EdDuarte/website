@@ -31,8 +31,8 @@
   }
 
   .blob-photo {
-    background-image: url("/header_v1.2_small.webp");
-    background-repeat: no-repeat;
+    /* background-image: url("/header_v1.2_small.webp"); */
+    /* background-repeat: no-repeat; */
     max-width: 915px;
     margin-top: -50px;
     margin-left: calc(50% - (570px - 25%));

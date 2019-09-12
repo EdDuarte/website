@@ -1776,6 +1776,10 @@ td:not(:first-child) {
 }
 */
 
+figcaption .anchor {
+  display: none;
+}
+
 @media screen {
   .font-load-2 .home-link,
   .font-load-2 .subtitle,
@@ -2318,6 +2322,11 @@ pre > code {
 }
 
 @media screen and (max-width: 1099px), print {
+
+  figcaption {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+  }
 
   .top-padding {
     margin-top: .9em;
