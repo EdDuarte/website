@@ -4,8 +4,8 @@ subtitles:
   publication: "Master's Thesis"
 description: "Comprehensive study of time series analysis technologies and
 in-depth specification of a domain-agnostic, secure and distributed architecture
-for time series analysis and annotation that handles massive quantities of data
-points and intensive workloads."
+for time series analysis that handles massive quantities of data points and
+intensive workloads."
 hasThumbnail: true
 keywords: [time series, annotations, annotation systems, collaborative software,
 data analysis, information science, data modeling, knowledge management,

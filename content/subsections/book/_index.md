@@ -2,5 +2,5 @@
 title: "Books"
 on:
   - publication
-weight: 2
+weight: 3
 ---
