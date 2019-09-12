@@ -1,7 +1,5 @@
 ---
 title: "Collaborative analysis over massive time series data sets"
-subtitles:
-  publication: "Master's Thesis"
 description: "Comprehensive study of time series analysis technologies and
 in-depth specification of a domain-agnostic, secure and distributed architecture
 for time series analysis that handles massive quantities of data points and
@@ -28,8 +26,8 @@ sections: [publication]
 subsections: [book]
 sitemap:
   Priority: 0.9
-prologue: "The full text of this dissertation is currently under embargo until
-the 21st of December 2021, but can still be provided under some circumstances by
+prologue: "The full text of this thesis is currently under embargo until the
+21st of December 2021, but can still be provided under some circumstances by
 requesting it [here](https://ria.ua.pt/bitstream/10773/26170/1/documento.pdf)."
 nocite:
 - "S. K. Jensen, T. B. Pedersen, and C. Thomsen, “Time series management systems: A survey”, IEEE Transactions on Knowledge and Data Engineering, vol. 29, no. 11, pp. 2581–2600, 2017, issn: 1041-4347. doi: https://doi.org/10.1109/TKDE.2017.2740932."
@@ -234,8 +232,8 @@ quality.
 
 ## Publication
 
-I submitted this study as a dissertation (equivalent to a Master's Thesis in the
-US) for the Master's degree in Software Engineering at the [University of
+I submitted this study as a dissertation (equivalent to a thesis in the US) for
+the Master's degree in Software Engineering at the [University of
 Aveiro](https://www.ua.pt), passing with distinction with a grade of 19 out of
 20, which in the US grading system corresponds to A (with A+ being the highest
 and F being lowest). The full text can be read on the [institutional repository
