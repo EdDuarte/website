@@ -17,7 +17,10 @@
   </div>
 </header>
 
+{{ $this := . }}
+{{ $subSectionListKey := "thisSubSections" }}
 {{ $sections := .Site.Taxonomies.sections }}
+{{ $subsections := .Site.Taxonomies.subsections }}
 {{ $postSectionNames := .Params.sections }}
 {{ $tags := .Site.Taxonomies.tags }}
 {{ $postTagNames := .Params.tags }}
@@ -26,6 +29,29 @@
 <main class="main-container article-container">
   <article>
     <header>
+      {{ $subsectionKeyList := .Params.subsections }}
+      {{ if $subsectionKeyList }}
+        {{ $len := (len $subsectionKeyList) }}
+        {{ if eq $len 1 }}
+          {{ $subsectionKey := index $subsectionKeyList 0 }}
+          {{ $subsection := index $subsections $subsectionKey}}
+          <h3 class="collections-header mlt-header">{{ $subsection.Page.Title }}</h3>
+        {{ else }}
+          <h3 class="collections-header mlt-header">
+            {{ $this.Scratch.Set $subSectionListKey slice }}
+            {{ range $i, $temp := $subsectionKeyList }}
+              {{ $subsectionKey := index $subsectionKeyList $i }}
+              {{ $subsection := index $subsections $subsectionKey}}
+              {{ $this.Scratch.Add $subSectionListKey (slice $subsection.Page) }}
+            {{ end }}
+            {{ $subSectionList := $this.Scratch.Get $subSectionListKey }}
+            {{ range $i, $temp := sort $subSectionList "Params.weight" "desc" }}
+              {{ if eq (add $i 1) $len }} and {{ else if eq $i 0 }}{{ else }}, {{ end }}
+              {{ $temp.Title }}
+            {{ end }}
+          </h3>
+        {{ end }}
+      {{ end }}
       <div class="title">{{ .Title }}</div>
       {{ with .Params.subtitle }}
         <div class="subtitle">{{ . }}</div>

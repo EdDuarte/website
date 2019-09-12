@@ -6,4 +6,4 @@ sitemap:
   Priority: 0.7
 ---
 
-Awards, articles, or places where I've said words elsewhere on the web.
+Me elsewhere on the web.
