@@ -8,7 +8,7 @@ payment, rides, ride sharing, ride scheduling, chat, push notification, mobile,
 app, mobile application, Android]
 date: "2014-06-13 15:23:00+01:00"
 sections: [other]
-subsections: [award]
+subsections: [contest]
 sitemap:
   Priority: 0.5
 ---
@@ -25,7 +25,7 @@ secure payment transactions using NFC.
 
 {{< figure
   src="/posts/aettua-contest/5.jpg"
-  alt="The Travis group, taken during the Final Session of the contest."
+  alt="Travis group - photo taken during the Final Session of the contest."
   counter="true" >}}
 The Travis group, from left to right: Tiago Marabuto, Ricardo Silva, Eduardo
 Duarte (me!), João Pedrosa and Pedro Fernandes. Photo taken during the Final
@@ -38,7 +38,7 @@ to develop the application further and to enter the market as a startup.
 
 {{< figure
   src="/posts/aettua-contest/3.jpg"
-  alt="The Travis group with a Ubiwhere representative."
+  alt="Travis group - photo taken during the award ceremony."
   counter="true" >}}
 The Travis group with a Ubiwhere representative. Photo taken during the award
 ceremony.

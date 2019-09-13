@@ -283,8 +283,22 @@
         {{ end }}
         <div class="card card-article">
           <section class="content">
-            {{ if .Params.prologue }}
-              <div class="prologue">{{ .Params.prologue | markdownify }}</div>
+            {{ with .Params.parents }}
+              {{ $parents := where $this.Site.Pages ".File.BaseFileName" "in" . }}
+              <div class="mlt-container parent-posts">
+                <h5 class="mlt-header">
+                  This post is based on...
+                </h5>
+                {{ range $parents }}
+                  <div class="mlt-padding">
+                    {{ partial "list-item.html" (dict "context" . ) }}
+                  </div>
+                {{ end}}
+              </div>
+            {{ end }}
+
+            {{ with .Params.prologue }}
+              <div class="prologue">{{ . | markdownify }}</div>
             {{ end }}
 
             {{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".)(.*?)(</h[1-9]+>)" "${1}<a class='anchor' href='#${2}'></a> ${3} ${4}" | safeHTML }}
@@ -309,7 +323,6 @@
 
   </article>
 
-  {{ $this := . }}
   {{ $collections := .Site.Taxonomies.collections }}
   {{ $postCollectionNames := .Params.collections }}
 

@@ -125,7 +125,7 @@
                 {{ partial "list-item.html" (dict "context" . "renderSubtitle" "true" "renderTechLabels" "false") }}
 
                 {{ $requiredBy := where .Site.Pages ".Params.parents" "intersect" (slice .File.BaseFileName) }}
-                {{ if not (eq (len $requiredBy) 0) }}
+                {{ if gt (len $requiredBy) 0 }}
                   <section>
                     <ul class="children-list">
                       {{ range $requiredBy }}
