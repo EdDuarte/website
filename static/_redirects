@@ -1,4 +1,5 @@
 
+/aettua-mobile-computing-contest-2014-1st-prize-team/*  https://www.edduarte.com/aettua-mobile-computing-contest-2014-1st-prize-team/
 /aettua-mobile-computing-contest-2014/*  https://www.edduarte.com/aettua-mobile-computing-contest-2014-1st-prize-team/
 
 /uctime/*  https://time.uc.pt  301!
@@ -61,7 +62,10 @@
 /secure-file-sharing-over-cloud-storage-using-eid-tokens/*  /protbox-secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
 /secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/*  /protbox-secure-and-trustworthy-file-sharing-over-cloud-storage-using-eid-tokens/
 
-/about-me/*  /about
+/about-me/*  /about/
+
+/outdated/*  /deprecated/
+/broken-link/*  /deprecated/
 
 /note                       /notes/
 /article                    /notes/

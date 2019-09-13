@@ -1,5 +1,5 @@
 ---
-title: "Award"
+title: "Contest"
 on:
   - other
 weight: 3
