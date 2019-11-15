@@ -284,7 +284,7 @@
         <div class="card card-article">
           <section class="content">
             {{ with .Params.parents }}
-              {{ $parents := where $this.Site.Pages ".File.BaseFileName" "in" . }}
+              {{ $parents := sort (where $this.Site.Pages ".File.BaseFileName" "in" .) ".Date" }}
               <div class="mlt-container parent-posts">
                 <h5 class="mlt-header">
                   This post is based on...

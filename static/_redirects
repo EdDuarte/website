@@ -67,6 +67,8 @@
 /outdated/*  /deprecated/
 /broken-link/*  /deprecated/
 
+/wip/*  /work-in-progress/
+
 /note                       /notes/
 /article                    /notes/
 /articles                   /notes/
