@@ -78,6 +78,7 @@ html,
   animation-delay: .4s;
 }
 
+/*
 .badge-project,
 a.badge-project:hover,
 a.badge-project:focus,
@@ -141,6 +142,7 @@ a.badge-other:focus {
 .badge-other {
   background: #b6afb1 linear-gradient(-45deg, #837b7e 0, #b6afb1 100%);
 }
+*/
 
 /* @media not (prefers-color-scheme: light) { */
 @media all {
