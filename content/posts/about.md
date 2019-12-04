@@ -65,8 +65,7 @@ colleagues and leading teams of talented developers and designers, assimilating
 experience from various domains ranging all aspects of the product development
 life cycle.
 
-I tend to prefer projects that allow me to step out of my comfort zone, as I
-firmly believe that having a wide breadth of understanding is vital to gain
+I firmly believe that having a wide breadth of understanding is vital to gain
 perspective when approaching specific challenges and to grow as an engineer.
 More than simply focusing on coding, I have always pushed myself to complete my
 tasks with a high standard of quality and polish, applying best practices and

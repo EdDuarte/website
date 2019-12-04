@@ -41,7 +41,7 @@
           {{ $prevItem := $c.Scratch.Get $prevItemKey }}
           {{ $nextItem := $c.Scratch.Get $nextItemKey }}
           {{ if or $prevItem $nextItem }}
-            <h4 class="mlt-header">Other posts in the <a href="{{ $term.Page.Permalink }}">{{ lower $term.Page.Title }}</a> {{ $suffix }}</h4>
+            <h4 class="mlt-header">Other <a href="{{ $term.Page.Permalink }}">{{ lower $term.Page.Title }}</a>{{ with $suffix }} {{ . }}{{ end }}</h4>
             <div class="mlt-table">
               {{ with $prevItem }}
                 <div class="mlt mlt-previous">
