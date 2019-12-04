@@ -323,11 +323,27 @@
 
   </article>
 
+  {{ $requiredBy := where .Site.Pages ".Params.parents" "intersect" (slice .File.BaseFileName) }}
+  {{ if gt (len $requiredBy) 0 }}
+    <div class="mlt-container parent-posts">
+      <h4 class="mlt-header">
+      Based on this post
+      </h4>
+      {{ range $requiredBy }}
+        <div class="mlt-table">
+          <div class="mlt mlt-previous">
+            {{ partial "list-item.html" (dict "context" . ) }}
+          </div>
+        </div>
+      {{ end}}
+    </div>
+  {{ end }}
+
   {{ $collections := .Site.Taxonomies.collections }}
   {{ $postCollectionNames := .Params.collections }}
 
-  {{ partial "mlt.html" (dict "context" . "list" $postCollectionNames "all" $collections "suffix" "collection") }}
-  {{ partial "mlt.html" (dict "context" . "list" $postSectionNames "all" $sections "suffix" "section") }}
+  {{ partial "mlt.html" (dict "context" . "list" $postCollectionNames "all" $collections) }}
+  {{ partial "mlt.html" (dict "context" . "list" $postSectionNames "all" $sections) }}
 
 
 </main>
