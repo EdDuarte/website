@@ -31,7 +31,7 @@ Recently worked at [Bosch
 Thermotechnology](https://www.bosch.pt/en/our-company/bosch-in-portugal/),
 where I developed a [scalable platform for time series analysis and
 annotation](/distributed-and-scalable-platform-for-collaborative-analysis-of-massive-time-series-data-sets/),
-designing a ReactJS application and deploying a distributed architecture with
+creating a ReactJS application and designing a distributed architecture with
 polyglot persistence that handles high amounts of traffic and massive
 multivariate series data sets.
 
@@ -53,17 +53,16 @@ I also have a strong background in academia: earned a Master's degree in
 Software Engineering and a Bachelor's in Information Technology; worked with
 [bioinformatics](http://bioinformatics.ua.pt/) and [marine
 life](http://www.oceano21.org/info.asp?id=46&idpai=3&LN=EN) research groups; and
-[published papers](/papers/) in various fields, including Data Analysis,
+[published papers](/publications/) in various fields, including Data Analysis,
 Information Visualization and Information Security.
 
 
 ## Ethos
 
 Throughout the few years of academic and professional career I have had, I was
-lucky to have the opportunity of working in ambitious projects with fantastic
-colleagues and leading teams of talented developers and designers, assimilating
-experience from various domains ranging all aspects of the product development
-life cycle.
+lucky to have the opportunity to work in ambitious projects with fantastic
+people, assimilating experience from various domains ranging all aspects of the
+product development life cycle.
 
 I firmly believe that having a wide breadth of understanding is vital to gain
 perspective when approaching specific challenges and to grow as an engineer.
