@@ -2,7 +2,7 @@
 title: "Vokter: A document store that periodically checks for changes in web
 documents"
 description: "Multilingual parser & indexer that uses Locality-Sensitive
-Hashing, DiffMatchPatch, Bloom filters and Quartz jobs to detect inserted and
+Hashing, DiffMatchPatch, Bloom filters and cronjobs to detect inserted and
 removed keywords from webpages."
 keywords: [backend, REST, REST API, RESTful, distributed systems, bloom filter,
 hashing, LSH, locality sensitive hashing, NNS, nearest neighbor search, NLP,

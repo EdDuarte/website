@@ -44,7 +44,7 @@ combines [Locality-Sensitive Hashing for
 K-Shingles](https://github.com/edduarte/near-neighbor-search), [a fork of
 DiffMatchPatch](https://github.com/edduarte/indexed-diff-match-patch), [Bloom
 filters](https://github.com/google/guava/wiki/HashingExplained#bloomfilter) and
-[Quartz jobs](http://www.quartz-scheduler.org) to detect changes in web
+[Quartz cronjobs](http://www.quartz-scheduler.org) to detect changes in web
 documents, triggering notifications when specified keywords were either added
 or removed.
 
