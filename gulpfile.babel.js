@@ -4,6 +4,7 @@ import cleanCSS from 'gulp-clean-css'
 import minify from 'gulp-babel-minify'
 import runSequence from 'run-sequence'
 import shell from 'gulp-shell'
+import purgecss from 'gulp-purgecss'
 
 gulp.task('hugo-build', shell.task(['hugo']))
 
@@ -19,8 +20,16 @@ gulp.task('minify-html', () => {
     .pipe(gulp.dest('./public'));
 })
 
-gulp.task('minify-css', () => {
+gulp.task('purgecss', () => {
   return gulp.src('public/**/*.css')
+    .pipe(purgecss({
+      content: ['public/**/*.html']
+    }))
+    .pipe(gulp.dest('build/css'))
+})
+
+gulp.task('minify-css', () => {
+  return gulp.src('build/css/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('./public'));
 });
@@ -36,5 +45,5 @@ gulp.task('minify-js', () => {
 });
 
 gulp.task('build', ['hugo-build'], (callback) => {
-  runSequence('minify-html', 'minify-css', 'minify-js', callback);
+  runSequence('minify-html', 'purgecss', 'minify-css', 'minify-js', callback);
 })
