@@ -8,6 +8,14 @@ import purgecss from 'gulp-purgecss'
 
 gulp.task('hugo-build', shell.task(['hugo']))
 
+gulp.task('purgecss', () => {
+  return gulp.src('public/**/*.css')
+    .pipe(purgecss({
+      content: ['public/**/*.html']
+    }))
+    .pipe(gulp.dest('build/css'))
+})
+
 gulp.task('minify-html', () => {
   return gulp.src('public/**/*.html')
     .pipe(htmlmin({
@@ -18,14 +26,6 @@ gulp.task('minify-html', () => {
       useShortDoctype: true,
     }))
     .pipe(gulp.dest('./public'));
-})
-
-gulp.task('purgecss', () => {
-  return gulp.src('public/**/*.css')
-    .pipe(purgecss({
-      content: ['public/**/*.html']
-    }))
-    .pipe(gulp.dest('build/css'))
 })
 
 gulp.task('minify-css', () => {
