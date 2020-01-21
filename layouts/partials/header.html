@@ -84,6 +84,13 @@
 <style type="text/css">
 <!-- INLINE_CSS -->
 </style>
+
+<noscript>
+<style type="text/css">
+.js-lazy-image {
+  display: none;
+}
+</style>
 {{ $v := $.Site.Params.cachebuster }}
 <link rel="stylesheet" href="/css/defer.css?v={{ $v }}">
 <link rel="stylesheet" href="/css/defer-min-width-1100.css?v={{ $v }}">
