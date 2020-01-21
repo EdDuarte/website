@@ -5,6 +5,7 @@ import minify from 'gulp-babel-minify'
 import runSequence from 'run-sequence'
 import shell from 'gulp-shell'
 import purgecss from 'gulp-purgecss'
+import replace from 'gulp-replace'
 
 gulp.task('hugo-build', shell.task(['hugo']))
 
@@ -13,8 +14,15 @@ gulp.task('purgecss', () => {
     .pipe(purgecss({
       content: ['public/**/*.html']
     }))
-    .pipe(gulp.dest('./public'))
-})
+    .pipe(gulp.dest('./public'));
+});
+
+gulp.task('templates', () => {
+  const fileContent = fs.readFileSync("public/css/main.css", "utf8");
+  return gulp.src('public/**/*.html')
+    .pipe(replace('/*INLINE_CSS*/', fileContent))
+    .pipe(gulp.dest('./public'));
+});
 
 gulp.task('minify-html', () => {
   return gulp.src('public/**/*.html')
@@ -26,7 +34,7 @@ gulp.task('minify-html', () => {
       useShortDoctype: true,
     }))
     .pipe(gulp.dest('./public'));
-})
+});
 
 gulp.task('minify-css', () => {
   return gulp.src('public/**/*.css')
@@ -45,5 +53,5 @@ gulp.task('minify-js', () => {
 });
 
 gulp.task('build', ['hugo-build'], (callback) => {
-  runSequence('purgecss', 'minify-html', 'minify-css', 'minify-js', callback);
-})
+  runSequence('purgecss', 'templates', 'minify-html', 'minify-css', 'minify-js', callback);
+});
