@@ -6,6 +6,7 @@ import runSequence from 'run-sequence'
 import shell from 'gulp-shell'
 import purgecss from 'gulp-purgecss'
 import replace from 'gulp-replace'
+import fs from 'fs'
 
 gulp.task('hugo-build', shell.task(['hugo']))
 
