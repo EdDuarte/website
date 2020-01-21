@@ -13,7 +13,7 @@ gulp.task('purgecss', () => {
     .pipe(purgecss({
       content: ['public/**/*.html']
     }))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('./public'))
 })
 
 gulp.task('minify-html', () => {
@@ -29,7 +29,7 @@ gulp.task('minify-html', () => {
 })
 
 gulp.task('minify-css', () => {
-  return gulp.src('build/css/*.css')
+  return gulp.src('public/**/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('./public'));
 });
