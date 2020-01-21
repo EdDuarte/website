@@ -18,7 +18,7 @@ gulp.task('purgecss', () => {
     .pipe(gulp.dest('./public'));
 });
 
-gulp.task('templates', () => {
+gulp.task('add-inline-css', () => {
   const fileContent = fs.readFileSync("public/css/main.css", "utf8");
   return gulp.src('public/**/*.html')
     .pipe(replace('<!-- INLINE_CSS -->', fileContent))
@@ -54,5 +54,5 @@ gulp.task('minify-js', () => {
 });
 
 gulp.task('build', ['hugo-build'], (callback) => {
-  runSequence('minify-css', 'purgecss', 'templates', 'minify-html', 'minify-js', callback);
+  runSequence('minify-css', 'purgecss', 'add-inline-css', 'minify-html', 'minify-js', callback);
 });
