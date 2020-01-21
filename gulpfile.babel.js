@@ -45,5 +45,5 @@ gulp.task('minify-js', () => {
 });
 
 gulp.task('build', ['hugo-build'], (callback) => {
-  runSequence('minify-html', 'purgecss', 'minify-css', 'minify-js', callback);
+  runSequence('purgecss', 'minify-html', 'minify-css', 'minify-js', callback);
 })
