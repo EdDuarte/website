@@ -1,4 +1,3 @@
-
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote,
 body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt,
 em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6,
@@ -49,6 +48,8 @@ q:before {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 html {
@@ -637,13 +638,9 @@ sup {
 .list-icon {
   float: left;
   height: 14px;
-  margin-top: 10px;
+  margin-top: 7px;
   padding-right: 3px;
   width: 14px;
-}
-
-.list-icon {
-  margin-top: 7px;
 }
 
 .icon-external-link {
@@ -937,6 +934,7 @@ samp {
 
 .highlight {
   background-color: #0f0e15 !important;
+  border-radius: 3px;
 }
 
 .speakerdeck-embed-wrapper,
@@ -1159,10 +1157,6 @@ h4 {
   letter-spacing: .01em;
 }
 
-.highlight {
-  border-radius: 3px;
-}
-
 figure,
 iframe,
 img,
@@ -1180,7 +1174,7 @@ figcaption {
 }
 
 .figcounter > figcaption:before {
-  content: 'Fig. 'counter(figures) ': ';
+  content: 'Fig. ' counter(figures) ': ';
 }
 
 blockquote {
@@ -1404,10 +1398,6 @@ h6 > .anchor:hover {
   list-style: none;
   padding: 1px .5em;
   border-radius: 8px;
-}
-
-.children-list,
-.font-load-1 .children-list {
   margin: .5em 0 0 2em;
 }
 
@@ -1618,11 +1608,6 @@ figure,
 
 .tags > li,
 .font-load-1 .tags > li {
-  margin-right: 7px;
-}
-
-.tags > li,
-.font-load-1 .tags > li {
   line-height: 0;
   padding: 0;
   margin: 0 .4em .4em 0;
@@ -1658,7 +1643,7 @@ figure,
 }
 
 .list-title .badge,
-.font-load-1 .list-title .badge{
+.font-load-1 .list-title .badge {
   line-height: 1.8em;
   height: 1.8em;
   min-height: 1.8em;
@@ -1690,11 +1675,6 @@ th {
   font-size: .9em;
   padding: .4em;
   text-align: left;
-}
-
-table {
-  width: 100%;
-  max-width: 100%;
 }
 
 /*
@@ -2275,7 +2255,8 @@ pre > code {
   }
 
   .bio-container {
-    margin-top: 140px;
+    margin-top: 0;
+    margin-bottom: .5em;
   }
 
   .home-container {
@@ -2467,11 +2448,6 @@ pre > code {
     margin-top: 0;
   }
 
-  .bio-container {
-    margin-top: 0;
-    margin-bottom: .5em;
-  }
-
   .section-name,
   .social,
   .tags-container {
@@ -2564,11 +2540,11 @@ pre > code {
   }
 
   .list-padding {
-    margin-top: 5em;
+    margin-top: 3em;
   }
 
   .font-load-1 .list-padding {
-    margin-top: 5.1em;
+    margin-top: 3.1em;
   }
 
   ol,
@@ -2878,14 +2854,6 @@ pre > code {
   .children-list,
   .font-load-1 .children-list {
     margin-left: 1em;
-  }
-
-  .list-padding {
-    margin-top: 3em;
-  }
-
-  .font-load-1 .list-padding {
-    margin-top: 3.1em;
   }
 
   .tech-labels,
