@@ -61,7 +61,7 @@
                   {{ $pagesBySubSectionMap := $this.Scratch.Get $pagesBySubSectionKey }}
                   {{ if isset $pagesBySubSectionMap $pageSubSectionName }}
                     {{/* a page with this subsection already exists, so append
-                    the current page it */}}
+                    the current page to it */}}
                     {{ $list := (index $pagesBySubSectionMap $pageSubSectionName) | append $page }}
                     {{ $this.Scratch.SetInMap $pagesBySubSectionKey $pageSubSectionName $list }}
                   {{ else }}
