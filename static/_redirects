@@ -69,15 +69,15 @@
 
 /wip/*  /work-in-progress/
 
-/note                       /notes/
-/article                    /notes/
-/articles                   /notes/
-/paper                      /publications/
-/papers                     /publications/
-/research                   /publications/
-/publication                /publications/
-/project                    /projects/
-/talk                       /talks/
+/note                       /notes/         301!
+/article                    /notes/         301!
+/articles                   /notes/         301!
+/paper                      /publications/  301!
+/papers                     /publications/  301!
+/research                   /publications/  301!
+/publication                /publications/  301!
+/project                    /projects/      301!
+/talk                       /talks/         301!
 
 /post/*                     /:splat
 /posts/*                    /:splat  302!
