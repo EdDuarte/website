@@ -289,7 +289,7 @@ Fig. 4: Relational diagram of entities
   src="/posts/time-series-platform/slides/data2019-slide-8.jpg"
   alt="Slide 8"
 >}}
-### Proposal: Data management
+### Proposal: Data management (1/2)
 - polyglot persistence model:
   - time series are stored in InfluxDB, ontology is stored in PostgreSQL;
   - central backend enforces data access logic and conceals the real location
@@ -315,7 +315,7 @@ Fig. 5: Data management approach
   src="/posts/time-series-platform/slides/data2019-slide-9.jpg"
   alt="Slide 9"
 >}}
-### Proposal: Data management
+### Proposal: Data management (2/2)
 - overall traffic workload is distributed, but querying simultaneous data types
   can lead to bottlenecks;
 - links are added on each data point and propagated to the TSDBMS on ontology
@@ -341,7 +341,7 @@ data point
   src="/posts/time-series-platform/slides/data2019-slide-10.jpg"
   alt="Slide 10"
 >}}
-### Proposal: Architecture
+### Proposal: Architecture (1/7)
 Fig. 7: Platform architecture
 {{</ figure >}}
 
@@ -357,7 +357,7 @@ Fig. 7: Platform architecture
   src="/posts/time-series-platform/slides/data2019-slide-11.jpg"
   alt="Slide 11"
 >}}
-### Proposal: Architecture
+### Proposal: Architecture (2/7)
 Fig. 8: Platform architecture highlighting a RabbitMQ queue between the backend
 and InfluxDB
 {{</ figure >}}
@@ -374,7 +374,7 @@ and InfluxDB
   src="/posts/time-series-platform/slides/data2019-slide-12.jpg"
   alt="Slide 12"
 >}}
-### Proposal: Architecture
+### Proposal: Architecture (3/7)
 Fig. 9: Load-balancing strategy
 {{</ figure >}}
 
@@ -391,7 +391,7 @@ Fig. 9: Load-balancing strategy
   src="/posts/time-series-platform/slides/data2019-slide-13.jpg"
   alt="Slide 13"
 >}}
-### Proposal: Architecture
+### Proposal: Architecture (4/7)
 - the backend opens processing pipelines for each request;
 - authentication:
   - auth. session tokens are JWTs with an expiration date;
@@ -424,7 +424,7 @@ The respective corollaries (in the case of removal operations) are:
   src="/posts/time-series-platform/slides/data2019-slide-14.jpg"
   alt="Slide 14"
 >}}
-### Proposal: Architecture
+### Proposal: Architecture (5/7)
 - updates, deletions and rollbacks are made asynchronously:
   - user receives a simulated snapshot with proposed changes;
   - validation stage ensures that the update will likely be committed;
@@ -444,7 +444,7 @@ actual system nor the other users.
   src="/posts/time-series-platform/slides/data2019-slide-15.jpg"
   alt="Slide 15"
 >}}
-### Proposal: Architecture
+### Proposal: Architecture (6/7)
 - users make changes based on the observed data;
 - if two users update the same record at the same time -> race condition!!!;
 - optimistic-locking: last-modified dates checksum.
@@ -476,7 +476,7 @@ pointing to the location of the two optimistic-locking checks
   src="/posts/time-series-platform/slides/data2019-slide-16.jpg"
   alt="Slide 16"
 >}}
-## Proposal: Architecture
+## Proposal: Architecture (7/7)
 - Spring JPA provides abstraction layers for PostgreSQL queries (hot-swap)
 
 Fig. 13: Controller to Service to Repository association
@@ -520,7 +520,7 @@ Fig. 14: Visual encoding of annotations
   src="/posts/time-series-platform/slides/data2019-slide-19.jpg"
   alt="Slide 19"
 >}}
-### Evaluation: Time series in PostgreSQL
+### Evaluation: Time series in PostgreSQL (1/3)
 - as granularity increases, Consistency is harder to attain;
 - put all data in a single ACID-compliant RDBMS:
   - linking logic is built-in through the relational model;
@@ -540,7 +540,7 @@ it for series for the possible gains (higher system consistency).
   src="/posts/time-series-platform/slides/data2019-slide-20.jpg"
   alt="Slide 20"
 >}}
-### Evaluation: Time series in PostgreSQL
+### Evaluation: Time series in PostgreSQL (2/3)
 Fig. 16: Average CPU usage and request time observed for queries
 {{</ figure >}}
 
@@ -555,7 +555,7 @@ Fig. 16: Average CPU usage and request time observed for queries
   src="/posts/time-series-platform/slides/data2019-slide-21.jpg"
   alt="Slide 21"
 >}}
-### Evaluation: Time series in PostgreSQL
+### Evaluation: Time series in PostgreSQL (3/3)
 Fig. 17: Average request time, disk usage and RAM usage for insertions
 {{</ figure >}}
 
