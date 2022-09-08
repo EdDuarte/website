@@ -1,8 +1,11 @@
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.83.1"
+  PYTHON_VERSION = "3.8.2"
 
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.83.1"
+  PYTHON_VERSION = "3.8.2"
 
 [context.production.environment]
   HUGO_VERSION = "0.83.1"
+  PYTHON_VERSION = "3.8.2"
