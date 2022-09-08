@@ -44,16 +44,16 @@ isPlainText = true
 notAlternative = true
 
 [taxonomies]
-  collection = "collections"
-  section = "sections"
-  subsection = "subsections"
-  tag = "tags"
+collection = "collections"
+section = "sections"
+subsection = "subsections"
+tag = "tags"
 
 [permalinks]
-  posts = "/:slug/"
-  collections = "/:slug/"
-  sections = "/:slug/"
-  tags = "/:slug/"
+posts = "/:slug/"
+collections = "/:slug/"
+sections = "/:slug/"
+tags = "/:slug/"
 
 [related]
 includeNewer = true

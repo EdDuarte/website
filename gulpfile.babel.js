@@ -6,7 +6,7 @@ import purgecss from 'gulp-purgecss'
 import replace from 'gulp-replace'
 import fs from 'fs'
 
-const purgeCSS = () => {
+const removeUnusedCSS = () => {
   return gulp.src('public/**/*.css')
     .pipe(purgecss({
       content: ['public/**/*.html']
@@ -49,6 +49,6 @@ const minifyJS = () => {
     .pipe(gulp.dest('./public'));
 };
 
-const build = gulp.series(minifyCSS, purgeCSS, addInlineCSS, gulp.parallel(minifyHTML, minifyJS));
+const build = gulp.series(minifyCSS, removeUnusedCSS, addInlineCSS, gulp.parallel(minifyHTML, minifyJS));
 exports.build = build;
 exports.default = build;
