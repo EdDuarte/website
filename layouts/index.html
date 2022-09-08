@@ -119,8 +119,8 @@
         <div class="top-padding"></div>
 
         <ul class="list">
-          {{ range .Data.Pages.ByDate.Reverse }}
-            {{ if and (not .Params.hidden) (not (isset .Params "parents")) }}
+          {{ range where $.Site.Pages.ByDate.Reverse "Section" "posts" }}
+            {{ if and (and (not .Params.hidden) (not (isset .Params "parents"))) (not (eq .Title "Posts")) }}
               <li>
                 {{ partial "list-item.html" (dict "context" . "renderSubtitle" "true" "renderTechLabels" "false") }}
 
