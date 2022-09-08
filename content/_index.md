@@ -12,10 +12,8 @@ Google App Engine, Parse, Firebase, Quartz, jQuery, HTML]
 date: "2018-02-07 20:31:00+01:00"
 currently:
 - Looking for a job! [Talk to me](mailto:hi@edduarte.com)!
-- Learning golang
-- Self-studying formal methods and reasoning systems
 sitemap:
-  ChangeFreq: weekly
+  ChangeFreq: monthly
   Priority: 1.0
 ---
 

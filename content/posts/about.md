@@ -7,7 +7,7 @@ sitemap:
   Priority: 0.9
 ---
 
-Hi! I'm Ed Duarte, a Full-Stack Software Engineer from Portugal with over five
+Hi! I'm Ed Duarte, a Full-Stack Software Engineer from Portugal with over seven
 years of hands-on experience in Backend Architecture, Distributed Systems, Web &
 Mobile Frontend Development and UI/UX Design. I've worked extensively with
 languages such as Java, Kotlin, Typescript, Javascript ES6 and Swift.
