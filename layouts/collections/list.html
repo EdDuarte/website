@@ -32,7 +32,7 @@
 
       <ul class="list">
         {{ $collectionKey := .Page.Data.Term }}
-        {{ range (.Data.Pages.ByDate.Reverse).ByParam $collectionKey }}
+        {{ range sort .Data.Pages.ByDate.Reverse }}
           {{ if not .Params.hidden }}
             <li>
               {{ partial "list-item.html" (dict "context" . "renderSubtitle" "true" "renderTechLabels" "true") }}
