@@ -1,34 +1,33 @@
 ---
-title: "Collaborative analysis over massive time series data sets"
+title: "Collaborative Analysis over Massive Time Series Data Sets"
 description: "Comprehensive study of time series analysis technologies and
 in-depth specification of a domain-agnostic, secure and distributed architecture
-for time series analysis that handles massive quantities of data points and
-intensive workloads."
+for time series analysis."
 hasThumbnail: true
-keywords: [time series, annotations, annotation systems, collaborative software,
-data analysis, information science, data modeling, knowledge management,
-database management systems, distributed systems, information visualization,
-HVAC, backend, REST, REST API, RESTful, Java, Spring, Boot 2, Spring AOP, JPA,
-Jackson, Hibernate 5, Hibernate Envers, PostgreSQL, InfluxDB, Docker, Docker
-Swarm, Dropwizard Metrics, Jersey, Redis, JWT, JSON, JSON Web Token, jjwt,
-Spring Security, RabbitMQ, AssertJ, Micrometer, Ant, Design, Axios, Dygraphs,
-React, ReactJS, Redux, TypeScript, Mocha, Webpack, LESS, PostCSS, Puppeteer,
-Spring Boot 2]
+keywords: [time series, annotations, annotation systems, collaborative software, data analysis,
+information science, data modeling, knowledge management, database management systems, distributed
+systems, information visualization, HVAC, backend, REST, REST API, RESTful, Java, Spring, Boot 2,
+Spring AOP, JPA, Jackson, Hibernate 5, Hibernate Envers, PostgreSQL, InfluxDB, Docker, Docker Swarm,
+Dropwizard Metrics, Jersey, JWT, JSON, JSON Web Token, jjwt, Spring Security, RabbitMQ, AssertJ,
+Micrometer, Ant, Design, Axios, Dygraphs, React, ReactJS, Redux, TypeScript, Mocha, Webpack, LESS,
+PostCSS, Puppeteer, Spring Boot, Redis]
 date: "2018-12-21 11:22:00+01:00"
 papers:
   - name: RIA UA
     url: "https://ria.ua.pt/handle/10773/26170"
-links:
-  - name: Request a copy
-    icon: external-link
-    url: https://ria.ua.pt/bitstream/10773/26170/1/documento.pdf
+# links:
+#   - name: Request a copy
+#     icon: external-link
+#     url: https://ria.ua.pt/bitstream/10773/26170/1/documento.pdf
 sections: [publication]
 subsections: [book]
+collections: [time-series]
+weight: 3
 sitemap:
   Priority: 0.9
-prologue: "The full text of this thesis is currently under embargo until the
-21st of December 2021, but can still be provided under some circumstances by
-requesting it [here](https://ria.ua.pt/bitstream/10773/26170/1/documento.pdf)."
+# prologue: "The full text of this thesis is currently under embargo until the
+# 21st of December 2021, but can still be provided under some circumstances by
+# requesting it [here](https://ria.ua.pt/bitstream/10773/26170/1/documento.pdf)."
 nocite:
 - "S. K. Jensen, T. B. Pedersen, and C. Thomsen, “Time series management systems: A survey”, IEEE Transactions on Knowledge and Data Engineering, vol. 29, no. 11, pp. 2581–2600, 2017, issn: 1041-4347. doi: https://doi.org/10.1109/TKDE.2017.2740932."
 - "A. Bader, O. Kopp, and M. Falkenthal, “Survey and comparison of open source time series databases”, in Datenbanksysteme für Business, Technologie und Web (BTW 2017) Workshopband, B. Mitschang, D. Nicklas, F. Leymann, H. Schöning, M. Herschel, J. Teubner, T. Härder, O. Kopp, and M. Wieland, Eds., Bonn: Gesellschaft für Informatik e.V., 2017, pp. 249–268."
