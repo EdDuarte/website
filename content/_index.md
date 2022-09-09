@@ -17,6 +17,6 @@ sitemap:
   Priority: 1.0
 ---
 
-Software engineer and researcher. Co-founded two tech startups, published four
+Software engineer and researcher. Co-founded two tech startups, published five
 research papers, and spoken at various conferences around the globe. [More about
 me »](/about/)
