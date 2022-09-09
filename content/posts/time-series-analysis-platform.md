@@ -1,6 +1,6 @@
 ---
-title: "Distributed and scalable platform for collaborative analysis of massive
-time series data sets"
+title: "Distributed and Scalable Platform for Collaborative Analysis of Massive Time Series Data
+Sets"
 subtitles:
   publication: "Proceedings of the 8th International Conference on Data Science,
   Technology and Applications"
@@ -10,15 +10,13 @@ allows researchers to annotate time series patterns while preventing data loss
 from overlapping contributions or unsanctioned changes."
 image: "thumbnail/time-series-analysis-platform.png?v=2"
 cachebuster: "v=2"
-keywords: [time series, annotations, annotation systems, collaborative software,
-data analysis, information science, data modeling, knowledge management,
-database management systems, distributed systems, information visualization,
-collaborative software, HVAC, backend, REST, REST API, RESTful, Java, Spring
-Boot 2, Spring AOP, JPA, Jackson, Hibernate 5, Hibernate Envers, PostgreSQL,
-InfluxDB, Docker, Docker Swarm, Dropwizard Metrics, Jersey, Redis, JWT, JSON,
-JSON Web Token, jjwt, Spring Security, RabbitMQ, AssertJ, Micrometer, Ant
-Design, Axios, Dygraphs, React, ReactJS, Redux, TypeScript, Mocha, Webpack,
-LESS, PostCSS, Puppeteer, Spring Boot 2, Spring Boot v2]
+keywords: [time series, annotations, annotation systems, collaborative software, data analysis,
+information science, data modeling, knowledge management, database management systems, distributed
+systems, information visualization, HVAC, backend, REST, REST API, RESTful, Java, Spring, Boot 2,
+Spring AOP, JPA, Jackson, Hibernate 5, Hibernate Envers, PostgreSQL, InfluxDB, Docker, Docker Swarm,
+Dropwizard Metrics, Jersey, JWT, JSON, JSON Web Token, jjwt, Spring Security, RabbitMQ, AssertJ,
+Micrometer, Ant, Design, Axios, Dygraphs, React, ReactJS, Redux, TypeScript, Mocha, Webpack, LESS,
+PostCSS, Puppeteer, Spring Boot, Redis]
 lang: [Java, TypeScript]
 tech: [Spring Boot, ReactJS, Redux]
 db: [PostgreSQL, InfluxDB, Redis]
@@ -43,6 +41,7 @@ slides:
 date: "2019-07-28 11:32:00+01:00"
 sections: [project, publication, talk]
 subsections: [conference-paper, full-stack]
+collections: [time-series]
 sitemap:
   Priority: 0.9
 nocite:
