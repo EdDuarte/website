@@ -1,11 +1,11 @@
 @keyframes a {
   0% {
     opacity: 0;
-    /* transform: translate3d(0, 10%, 0); */
+    /*transform: translate3d(0, 10%, 0);*/
   }
   to {
     opacity: 1;
-    /* transform: translateZ(0); */
+    /*transform: translateZ(0);*/
   }
 }
 
@@ -26,7 +26,7 @@ html,
 @media not (prefers-reduced-motion: reduce) {
   .fade-in {
     opacity: 0;
-    animation: a .4s ease-in-out forwards;
+    animation: a .8s ease-in-out forwards;
     animation-delay: 0s;
   }
 }

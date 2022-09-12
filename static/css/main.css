@@ -1423,11 +1423,11 @@ h6 > .anchor:hover {
 }
 
 .top-padding {
-  margin-top: 3em;
+  margin-top: 1.5em;
 }
 
 .font-load-1 .top-padding {
-  margin-top: 3.1em;
+  margin-top: 1.5em;
 }
 
 .list > li > .table {
@@ -1552,7 +1552,7 @@ h6 {
   overflow: hidden;
   width: 100%;
   height: auto;
-  margin: 1.2em auto 0;
+  margin: 1.2em 0 0;
   border-radius: 8px;
   border: 2px solid transparent;
 }
@@ -1809,6 +1809,10 @@ figcaption .anchor {
     border: 2px solid #d8d6e1;
   }
 
+  .card-collections .card-title {
+    background-color: #d8d6e1;
+  }
+
   hr {
     background-color: #17151f;
   }
@@ -2059,6 +2063,10 @@ figcaption .anchor {
   .mlt,
   .card-collections {
     border: 2px solid #201e29;
+  }
+
+  .card-collections .card-title {
+    background-color: #201e29;
   }
 
   hr {
@@ -2470,18 +2478,6 @@ pre > code {
     min-width: initial;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .card-aside {
-    margin-top: 1em;
-  }
-
-  .card-collections {
-    max-width: 405px;
-  }
-
-  .card-currently {
-    max-width: 405px;
   }
 
   .main-container main .content {

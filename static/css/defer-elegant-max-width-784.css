@@ -16,16 +16,16 @@
   }
 
   .blob-home-bottom {
-    top: 450px;
+    top: 150px;
     border-top-right-radius: 35% 30px;
   }
 
   .blob-home-bottom-cut {
-    top: 450px;
+    top: 150px;
   }
 
   .blob-home-corner {
-    height: 450px;
+    height: 200px;
     border-bottom-left-radius: 35% 30px;
   }
 
