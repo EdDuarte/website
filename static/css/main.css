@@ -1543,7 +1543,7 @@ h6 {
 
 .bio-container {
   margin-top: 220px;
-  margin-bottom: 2em;
+  margin-bottom: 120px;
 }
 
 .card-aside {
@@ -1555,6 +1555,10 @@ h6 {
   margin: 1.2em 0 0;
   border-radius: 8px;
   border: 2px solid transparent;
+}
+
+.sidenote p {
+  margin: 0;
 }
 
 .content .prologue + p,
