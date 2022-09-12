@@ -17,6 +17,5 @@ externalLink: "https://github.com/vokter/vokter"
 weight: -1
 sections: [project]
 subsections: [lib]
-tags: [work-in-progress]
 collections: [open-source, data-mining]
 ---
