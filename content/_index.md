@@ -10,13 +10,10 @@ Mining, Java, Kotlin, Typescript, JavaScript, ES6, iOS, Swift, Objective-C,
 Android, Jersey, Jetty, Tomcat, Spring Framework, Hibernate, SAAJ, JAXB, XSLT,
 Google App Engine, Parse, Firebase, Quartz, jQuery, HTML]
 date: "2018-02-07 20:31:00+01:00"
-currently:
-- Looking for a job! [Talk to me](mailto:hi@edduarte.com)!
 sitemap:
   ChangeFreq: monthly
   Priority: 1.0
 ---
 
-Software engineer and researcher. Co-founded two tech startups, published five
-research papers, and spoken at various conferences around the globe. [More about
-me »](/about/)
+Software Engineer with over seven years of experience. Co-founder of two tech
+startups and author of five research papers. [More »](/about/)

@@ -47,7 +47,7 @@
       <span class="screen-reader">RSS feed</span>
     </a>
   </div>
-  <section class="tags-container fade-in">
+  <section class="tags-container">
     <ul class="links tags">
       {{ range sort $sections "Page.Params.weight" "desc" }}
         <li>
@@ -58,9 +58,6 @@
       {{ end }}
     </ul>
   </section>
-  <div class="header-meta bio">
-    {{ .Content }}
-  </div>
 </div>
 
 <main class="main-container article-container">
@@ -71,7 +68,7 @@
 
       <div class="sticky aside-block-container">
         <section class="aside-block">
-          <div class="card card-aside card-collections">
+          <div class="card-aside card-collections">
             <div class="card-title">Collections</div>
             <hr>
             <ul class="collections">
@@ -97,16 +94,10 @@
         </section>
         <section class="aside-block">
           <div class="card-aside card-currently">
-            <div class="card-title">Currently</div>
+            <div class="card-title">About me</div>
             <hr>
-            <div class="sidenote">
-              <ul>
-                {{ range .Params.currently }}
-                  <li>
-                    {{ . | markdownify }}
-                  </li>
-                {{ end }}
-              </ul>
+            <div class="card-item-desc sidenote">
+              {{ .Content }}
             </div>
           </div>
         </section>

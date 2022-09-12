@@ -3,7 +3,7 @@
   .blob-home-top {
     width: 56%;
     height: calc(60vw - 400px - 2px);
-    top: 698px;
+    top: 548px;
     right: 0;
   }
 
@@ -11,7 +11,7 @@
     border-top-right-radius: 55% calc(60vw - 400px);
     width: 150%;
     height: calc(60vw - 400px);
-    top: 700px;
+    top: 550px;
     right: -25%;
   }
 
@@ -26,7 +26,7 @@
   .blob-home-corner {
     left: -15%;
     width: 130%;
-    height: 700px;
+    height: 550px;
     border-bottom-left-radius: 45% calc(40vw - 400px);
   }
 
