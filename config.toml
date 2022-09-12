@@ -14,7 +14,7 @@ PygmentsCodeFences = true
 PygmentsStyle = "solarizeddark"
 
 [Params]
-cacheBuster = "19"
+cacheBuster = "20"
 
 [sitemap]
 changefreq = "yearly"
