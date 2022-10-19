@@ -1430,6 +1430,14 @@ h6 > .anchor:hover {
   margin-top: 1.5em;
 }
 
+.list-top-padding {
+  margin-top: 1.9em;
+}
+
+.list-font-load-1 .top-padding {
+  margin-top: 2em;
+}
+
 .list > li > .table {
   align-items: normal;
   flex-direction: column;
