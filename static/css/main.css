@@ -1431,11 +1431,11 @@ h6 > .anchor:hover {
 }
 
 .list-top-padding {
-  margin-top: 1.9em;
+  margin-top: 2.9em;
 }
 
 .list-font-load-1 .top-padding {
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
 .list > li > .table {
@@ -2548,6 +2548,14 @@ pre > code {
 
   .font-load-1 .top-padding {
     margin-top: 2em;
+  }
+
+  .list-top-padding {
+    margin-top: 1.4em;
+  }
+
+  .list-font-load-1 .top-padding {
+    margin-top: 1.5em;
   }
 
   .list-padding {
