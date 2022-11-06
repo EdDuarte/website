@@ -51,7 +51,7 @@ product, and devising unique interface ideas in the consumer space.
 I also have a strong background in academia: earned a Master's degree in
 Software Engineering and a Bachelor's in Information Technology; worked with
 [bioinformatics](http://bioinformatics.ua.pt/) and [marine
-life](http://www.oceano21.org/info.asp?id=46&idpai=3&LN=EN) research groups; and
+life](http://www.cesam.ua.pt/?menu=3429&language=eng&tabela=post) research groups; and
 [published papers](/publications/) in various fields, including Data Analysis,
 Information Visualization and Information Security.
 
