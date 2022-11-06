@@ -8,7 +8,7 @@ lang: [Swift]
 tech: [iOS SDK, Realm, Mantle]
 slug: "riadeaveiro"
 date: "2015-11-17 17:04:01+01:00"
-externalLink: "https://apps.apple.com/pt/app/ria-de-aveiro/id1006659023"
+externalLink: "https://apps.apple.com/us/app/grande-rota-da-ria-de-aveiro/id1553503482"
 weight: -1
 sections: [project]
 subsections: [mobile]
