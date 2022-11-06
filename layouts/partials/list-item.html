@@ -45,7 +45,7 @@
   </div>
   <hr>
 
-  <a href="{{ with $c.Params.externalLink }}{{ . }}{{ else }}{{ $c.Permalink }}{{ end }}" class="list-item">
+  <a href="{{ if $hasDeprecatedTag }}#{{ else if $c.Params.externalLink }}{{ $c.Params.externalLink }}{{ else }}{{ $c.Permalink }}{{ end }}" class="list-item"{{ if $hasDeprecatedTag }} style="pointer-events: none;"{{ end }}>
     <div class="list-item-container{{ if $hasDeprecatedTag }} deprecated{{ end }}">
       <div>
         {{ if $c.Params.externalLink }}
