@@ -15,4 +15,6 @@ externalLink: "http://www.thumbeo.com/en/"
 weight: -1
 sections: [project]
 subsections: [mobile]
+tags: [deprecated]
+deprecatedText: "broken-link"
 ---
