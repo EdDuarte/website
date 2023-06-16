@@ -161,4 +161,11 @@ if (sessionStorage.fontsLoaded1 && sessionStorage.fontsLoaded2) {
 {{ $js := resources.Get "js/defer.js" }}
 {{ $jsProc:= $js | resources.ExecuteAsTemplate "/js/defer.js" . }}
 <script defer src="{{ $jsProc.Permalink }}?v={{ $v }}"></script>
-<script defer src="https://www.google-analytics.com/analytics.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TK2V19HC1K"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-TK2V19HC1K');
+</script>
