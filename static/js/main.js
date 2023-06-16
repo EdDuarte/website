@@ -63,12 +63,3 @@ if (sessionStorage.fontsLoaded1 && sessionStorage.fontsLoaded2) {
 // setTimeout(function () {
 loadJS("/js/defer.js");
 // }, 1000);
-
-loadJS("https://www.google-analytics.com/analytics.js", function() {
-  window.ga = window.ga || function () {
-    (ga.q = ga.q || []).push(arguments)
-  };
-  ga.l = +new Date;
-  ga('create', 'UA-103779128-1', 'auto');
-  ga('send', 'pageview');
-});
