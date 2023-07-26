@@ -1,2 +1,2 @@
-Pygments==2.13.0
+Pygments==2.15.0
 pygments-solarized-style==0.1
