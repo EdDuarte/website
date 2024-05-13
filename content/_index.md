@@ -1,6 +1,6 @@
 ---
 title: "Ed Duarte"
-description: "Senior Software Engineer"
+description: "Senior Software Engineer based in Zurich, Switzerland. Co-founder of two tech startups and author of five research papers."
 keywords: [REST, RESTful, Distributed Systems, Backend, Frontend, Software
 Engineer, Software Engineering, Software Developer, Software Development,
 Software Architect, Software Architecture, UI, UX, User Experience Design, User
@@ -14,5 +14,4 @@ sitemap:
   Priority: 1.0
 ---
 
-Software Engineer with over seven years of experience. Co-founder of two tech
-startups and author of five research papers. [More »](/about/)
+Senior Software Engineer based in Zurich, Switzerland. Co-founder of two tech startups and author of five research papers. [More »](/about/)
