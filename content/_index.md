@@ -14,4 +14,4 @@ sitemap:
   Priority: 1.0
 ---
 
-Senior Software Engineer based in Zurich, Switzerland. Co-founder of two tech startups and author of five research papers. [More »](/about/)
+Senior Software Engineer based in Zurich, Switzerland. [More »](/about/)
