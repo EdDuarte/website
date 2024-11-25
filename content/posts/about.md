@@ -1,6 +1,6 @@
 ---
 title: "About me"
-description: "I'm Ed Duarte, a Full-Stack Software Engineer from Portugal."
+description: "I'm Ed Duarte, a Full-Stack Software Engineer living in Zürich."
 slug: "about"
 hidden: true
 sitemap:
