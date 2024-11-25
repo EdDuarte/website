@@ -7,11 +7,15 @@ sitemap:
   Priority: 0.9
 ---
 
-Hi! I'm Ed Duarte, a Full-Stack Software Engineer from Portugal with hands-on experience in Backend
-Architecture, Distributed Systems, Web & Mobile Frontend Development and UI/UX Design. I've worked
-extensively with languages such as Java, Kotlin, Typescript, Javascript ES6 and Swift.
+Hi! I'm Ed Duarte, a Full-Stack Software Engineer from Portugal currently living in Zürich,
+Switzerland. I am highly experienced in Backend Architecture, API Development, Distributed Systems,
+Continuous Integration / Continuous Deployment, and Web & Mobile Frontend Development.
 
 ## Experience
+
+Currently working at [SwissSign](https://www.swisssign.com/) as a backend engineer and tech lead on
+a login and user management platform with qualified digital identities and signatures, integrated
+with 3rd parties such as Swiss Post.
 
 Recently worked at [Bosch
 Thermotechnology](https://www.bosch.pt/en/our-company/bosch-in-portugal/),
@@ -35,17 +39,17 @@ creative director and a technical lead, guiding co-workers in the development
 and marketing of mobile apps, overseeing the interactive design of the final
 product, and devising unique interface ideas in the consumer space.
 
-I also have a strong background in academia: earned a Master's degree in
-Software Engineering and a Bachelor's in Information Technology; worked with
-[bioinformatics](http://bioinformatics.ua.pt/) and [marine
-life](http://www.cesam.ua.pt/?menu=3429&language=eng&tabela=post) research groups; and
-[published papers](/publications/) in various fields, including Data Analysis,
-Information Visualization and Information Security.
+I also have a strong background in academia: earned a Master's degree in Software Engineering and a
+Bachelor's in Information Technology; worked with [bioinformatics](http://bioinformatics.ua.pt/) and
+[marine life](http://www.cesam.ua.pt/?menu=3429&language=eng&tabela=post) research groups; and
+[published papers](/publications/) in various fields, including Data Analysis, Information
+Visualization and Information Security. I have also published five papers on these fields, and
+spoken at various conferences around the globe.
 
 
 ## Ethos
 
-Throughout the few years of academic and professional career I have had, I was
+Throughout my academic and professional career, I was
 lucky to have the opportunity to work in ambitious projects with fantastic
 people, assimilating experience from various domains ranging all aspects of the
 product development life cycle.
@@ -60,10 +64,5 @@ over-thinking systems to achieve optimized solutions.
 
 ## Work with me
 
-I am currently looking for a job that merges the technical aspects of Software
-Engineering (e.g. Distributed Systems, Data Management, Frontend Development)
-with more creative domains (e.g. Interaction Design, Computer Graphics,
-Information Visualization).
-
-Feel free to [send me an email](mailto:hi@edduarte.com).
+Feel free to [send me an email and say hi](mailto:hi@edduarte.com)!
 
