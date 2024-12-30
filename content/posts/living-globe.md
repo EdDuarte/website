@@ -31,8 +31,6 @@ papers:
 slides:
   - name: Speaker Deck
     url: https://speakerdeck.com/duarte/living-globe-tridimensional-interactive-visualization-of-world-demographic-data
-  - name: as PDF
-    url: /posts/living-globe/slides.pdf
 mirrors:
   - name: Medium
     url:
