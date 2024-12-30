@@ -8,4 +8,6 @@ externalLink: "https://www.mixcloud.com/radiolizfm/eduardo-duarte-thumbeo-boleia
 weight: -1
 sections: [other]
 subsections: [podcast]
+tags: [deprecated]
+deprecatedText: "broken-link"
 ---
