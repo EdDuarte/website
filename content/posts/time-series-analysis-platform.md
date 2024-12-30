@@ -36,8 +36,6 @@ papers:
 slides:
   - name: Notist
     url: https://noti.st/duarte/CAP51Y
-  - name: as PDF
-    url: /posts/time-series-platform/DATA2019-21-slides-v10.pdf
 date: "2019-07-28 11:32:00+01:00"
 sections: [project, publication, talk]
 subsections: [conference-paper, full-stack]
