@@ -12,4 +12,6 @@ externalLink: "http://www.bikeemotion.com/"
 weight: -1
 sections: [project]
 subsections: [mobile]
+tags: [deprecated]
+deprecatedText: "broken-link"
 ---
