@@ -6,11 +6,11 @@ subtitles:
   Information, Design and Interaction"
   talk: "HCI International 2016, July 17-22, The Westin Harbour Castle Hotel,
   Toronto, Canada"
-description: "WebGL app for tri-dimensional worldwide data visualization, with
+description: "Three.js app for tri-dimensional worldwide data visualization, with
 customizable data-to-visual mapping and filtering with adjustable scales."
 image: "resource/living-globe/screenshot-01.png"
 keywords: [visualization, infovis, interactive, human computer interaction,
-usability, spatial, demographic data, demography, tri-dimensional, 3d, WebGL]
+usability, spatial, demographic data, demography, tri-dimensional, 3d, webgl, three.js]
 lang: [JavaScript]
 tech: [Three.js]
 authors:
@@ -61,7 +61,7 @@ nocite:
 - "Forsell, C., Johanson, J.: An heuristic set for evaluation in information visualization. In: Proc. of AVI 2010, pp. 199–206. ACM, New York (2010)"
 ---
 
-Living Globe is a WebGL application for tri-dimensional worldwide data
+Living Globe is a Three.js application for tri-dimensional worldwide data
 visualization. It allows the simultaneous representation of multiple indicators
 as spatial structures (bars and other objects located in a specific
 latitude-longitude on the globe). The mapping of data to the provided visual
