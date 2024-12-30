@@ -121,7 +121,7 @@ I hope you like it!
 # Images
 
 {{< figure
-  src="/posts/living-globe/screenshot-01.png"
+  src="/resource/living-globe/screenshot-01.png"
   alt="Current prototype of Living Globe" >}}
 Current prototype of Living Globe, showing population growth mapped to the
 bars/pilars height, total life expectancy at birth to bar color, and birth/death

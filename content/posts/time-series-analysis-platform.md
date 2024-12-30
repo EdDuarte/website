@@ -135,7 +135,7 @@ on Notist](https://noti.st/duarte/CAP51Y).
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-1.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-1.jpg"
   alt="Slide 1" 
 >}}
 {{</ figure >}}
@@ -143,7 +143,7 @@ on Notist](https://noti.st/duarte/CAP51Y).
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-2.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-2.jpg"
   alt="Slide 2"
 >}}
 ### Introduction
@@ -170,7 +170,7 @@ on Notist](https://noti.st/duarte/CAP51Y).
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-3.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-3.jpg"
   alt="Slide 3"
 >}}
 ### Introduction: Time series analysis
@@ -191,7 +191,7 @@ Fig. 1: Three time series represented in a line graph visualization.
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-4.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-4.jpg"
   alt="Slide 4"
 >}}
 ### Introduction: Time series visualization
@@ -214,7 +214,7 @@ series charts in simultaneous.
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-5.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-5.jpg"
   alt="Slide 5"
 >}}
 ### Introduction: Annotation
@@ -237,7 +237,7 @@ Fig. 3: Annotation encoding in Grafana
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-6.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-6.jpg"
   alt="Slide 6"
 >}}
 ### Proposal
@@ -260,7 +260,7 @@ Fig. 3: Annotation encoding in Grafana
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-7.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-7.jpg"
   alt="Slide 7"
 >}}
 ### Proposal: Data model
@@ -283,7 +283,7 @@ Fig. 4: Relational diagram of entities
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-8.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-8.jpg"
   alt="Slide 8"
 >}}
 ### Proposal: Data management (1/2)
@@ -309,7 +309,7 @@ Fig. 5: Data management approach
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-9.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-9.jpg"
   alt="Slide 9"
 >}}
 ### Proposal: Data management (2/2)
@@ -335,7 +335,7 @@ data point
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-10.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-10.jpg"
   alt="Slide 10"
 >}}
 ### Proposal: Architecture (1/7)
@@ -351,7 +351,7 @@ Fig. 7: Platform architecture
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-11.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-11.jpg"
   alt="Slide 11"
 >}}
 ### Proposal: Architecture (2/7)
@@ -368,7 +368,7 @@ and InfluxDB
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-12.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-12.jpg"
   alt="Slide 12"
 >}}
 ### Proposal: Architecture (3/7)
@@ -385,7 +385,7 @@ Fig. 9: Load-balancing strategy
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-13.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-13.jpg"
   alt="Slide 13"
 >}}
 ### Proposal: Architecture (4/7)
@@ -418,7 +418,7 @@ The respective corollaries (in the case of removal operations) are:
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-14.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-14.jpg"
   alt="Slide 14"
 >}}
 ### Proposal: Architecture (5/7)
@@ -438,7 +438,7 @@ actual system nor the other users.
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-15.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-15.jpg"
   alt="Slide 15"
 >}}
 ### Proposal: Architecture (6/7)
@@ -470,7 +470,7 @@ pointing to the location of the two optimistic-locking checks
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-16.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-16.jpg"
   alt="Slide 16"
 >}}
 ## Proposal: Architecture (7/7)
@@ -488,7 +488,7 @@ Fig. 13: Controller to Service to Repository association
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-17.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-17.jpg"
   alt="Slide 17"
 >}}
 ### Proposal: Annotations
@@ -507,14 +507,14 @@ Fig. 14: Visual encoding of annotations
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-18.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-18.jpg"
   alt="Slide 18"
 >}}
 {{</ figure >}}
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-19.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-19.jpg"
   alt="Slide 19"
 >}}
 ### Evaluation: Time series in PostgreSQL (1/3)
@@ -534,7 +534,7 @@ it for series for the possible gains (higher system consistency).
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-20.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-20.jpg"
   alt="Slide 20"
 >}}
 ### Evaluation: Time series in PostgreSQL (2/3)
@@ -549,7 +549,7 @@ Fig. 16: Average CPU usage and request time observed for queries
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-21.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-21.jpg"
   alt="Slide 21"
 >}}
 ### Evaluation: Time series in PostgreSQL (3/3)
@@ -562,7 +562,7 @@ Fig. 17: Average request time, disk usage and RAM usage for insertions
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-22.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-22.jpg"
   alt="Slide 22"
 >}}
 ### Conclusion
@@ -590,7 +590,7 @@ Fig. 17: Average request time, disk usage and RAM usage for insertions
 
 
 {{< figure
-  src="/posts/time-series-platform/slides/data2019-slide-23.jpg"
+  src="/resource/time-series-platform/slides/data2019-slide-23.jpg"
   alt="Slide 23"
 >}}
 {{</ figure >}}

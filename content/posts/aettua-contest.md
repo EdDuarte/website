@@ -2,7 +2,7 @@
 title: "AETTUA Mobile Computing Contest 2014 - 1st Prize Team"
 description: "Competition organised by IEEE and AETTUA where groups had to
 design and develop mobile applications."
-image: "posts/aettua-contest/3.jpg"
+image: "resource/aettua-contest/3.jpg"
 keywords: [contest, competition, taxi, map, schedule, scheduling, Uber, NFC,
 payment, rides, ride sharing, ride scheduling, chat, push notification, mobile,
 app, mobile application, Android]
@@ -24,7 +24,7 @@ vicinity and schedule rides with them (similarly to Uber), as well as perform
 secure payment transactions using NFC.
 
 {{< figure
-  src="/posts/aettua-contest/5.jpg"
+  src="/resource/aettua-contest/5.jpg"
   alt="Travis group - photo taken during the Final Session of the contest."
   counter="true" >}}
 The Travis group, from left to right: Tiago Marabuto, Ricardo Silva, Eduardo
@@ -37,7 +37,7 @@ the 1st Prize: an incubation period with [Ubiwhere](https://www.ubiwhere.com/)
 to develop the application further and to enter the market as a startup.
 
 {{< figure
-  src="/posts/aettua-contest/3.jpg"
+  src="/resource/aettua-contest/3.jpg"
   alt="Travis group - photo taken during the award ceremony."
   counter="true" >}}
 The Travis group with a Ubiwhere representative. Photo taken during the award

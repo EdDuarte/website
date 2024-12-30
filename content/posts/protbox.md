@@ -58,7 +58,7 @@ SugarSync.
   identity tokens (eIDs for short).
 
 {{< figure
-  src="/posts/protbox/screenshot_main.png"
+  src="/resource/protbox/screenshot_main.png"
   alt="Protbox desktop application" >}}
 Protbox desktop application running in the background, protecting two shared
 folders from Dropbox.

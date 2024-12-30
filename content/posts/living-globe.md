@@ -8,7 +8,7 @@ subtitles:
   Toronto, Canada"
 description: "WebGL app for tri-dimensional worldwide data visualization, with
 customizable data-to-visual mapping and filtering with adjustable scales."
-image: "posts/living-globe/screenshot-01.png"
+image: "resource/living-globe/screenshot-01.png"
 keywords: [visualization, infovis, interactive, human computer interaction,
 usability, spatial, demographic data, demography, tri-dimensional, 3d, WebGL]
 lang: [JavaScript]
@@ -81,7 +81,7 @@ structured in JSON by year and by country. We provide two example input files:
 and employment between the years 1960 and 2014).
 
 {{< figure
-  src="/posts/living-globe/screenshot-01.png"
+  src="/resource/living-globe/screenshot-01.png"
   alt="Current prototype of Living Globe"
   counter="true" >}}
 Current prototype of Living Globe, showing population growth mapped to the
@@ -116,7 +116,7 @@ interpretation of data in countries with small samples (eg. Portugal) by
 filtering out countries with large samples (e.g. China).
 
 {{< figure
-  src="/posts/living-globe/screenshot-02-transparent.png"
+  src="/resource/living-globe/screenshot-02-transparent.png"
   alt="Living Globe when using the filtering feature with data normalization"
   counter="true" >}}
 Living Globe showing total population mapped to the country color: the data from
