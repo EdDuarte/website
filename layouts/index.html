@@ -24,6 +24,7 @@
 <div class="article-container bio-container">
 
   <div class="title section-name">{{ .Title }}</div>
+  <!--
   <div class="social">
     <a
         href="https://github.com/EdDuarte"
@@ -32,7 +33,15 @@
     >
       <span class="screen-reader">GitHub</span>
     </a>
+    <a
+        href="https://linkedin.com/in/Ed-Duarte"
+        title="LinkedIn"
+        class="icon social-icon social-icon-linkedin"
+    >
+      <span class="screen-reader">LinkedIn</span>
+    </a>
   </div>
+  -->
   <section class="tags-container">
     <ul class="links tags">
       {{ range sort $sections "Page.Params.weight" "desc" }}
